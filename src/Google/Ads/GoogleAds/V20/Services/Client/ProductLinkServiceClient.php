@@ -91,7 +91,7 @@ class ProductLinkServiceClient
     {
         return [
             'serviceName' => self::SERVICE_NAME,
-            'apiEndpoint' => self::SERVICE_ADDRESS . ':' . self::DEFAULT_SERVICE_PORT,
+            'apiEndpoint' => self::SERVICE_ADDRESS_TEMPLATE . ':' . self::DEFAULT_SERVICE_PORT,
             'clientConfig' => __DIR__ . '/../resources/product_link_service_client_config.json',
             'descriptorsConfigPath' => __DIR__ . '/../resources/product_link_service_descriptor_config.php',
             'gcpApiConfigPath' => __DIR__ . '/../resources/product_link_service_grpc_config.json',

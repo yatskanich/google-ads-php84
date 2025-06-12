@@ -63,12 +63,6 @@ class CampaignBidModifierServiceClient
     /** The name of the service. */
     private const string SERVICE_NAME = 'google.ads.googleads.v20.services.CampaignBidModifierService';
 
-    /**
-     * The default address of the service.
-     */
-    #[\Deprecated(message: 'SERVICE_ADDRESS_TEMPLATE should be used instead.')]
-    private const string SERVICE_ADDRESS = 'googleads.googleapis.com';
-
     /** The address template of the service. */
     private const string SERVICE_ADDRESS_TEMPLATE = 'googleads.UNIVERSE_DOMAIN';
 
@@ -87,7 +81,7 @@ class CampaignBidModifierServiceClient
     {
         return [
             'serviceName' => self::SERVICE_NAME,
-            'apiEndpoint' => self::SERVICE_ADDRESS . ':' . self::DEFAULT_SERVICE_PORT,
+            'apiEndpoint' => self::SERVICE_ADDRESS_TEMPLATE . ':' . self::DEFAULT_SERVICE_PORT,
             'clientConfig' => __DIR__ . '/../resources/campaign_bid_modifier_service_client_config.json',
             'descriptorsConfigPath' => __DIR__ . '/../resources/campaign_bid_modifier_service_descriptor_config.php',
             'gcpApiConfigPath' => __DIR__ . '/../resources/campaign_bid_modifier_service_grpc_config.json',

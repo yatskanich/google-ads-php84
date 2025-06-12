@@ -87,7 +87,7 @@ class CustomerSkAdNetworkConversionValueSchemaServiceClient
     {
         return [
             'serviceName' => self::SERVICE_NAME,
-            'apiEndpoint' => self::SERVICE_ADDRESS . ':' . self::DEFAULT_SERVICE_PORT,
+            'apiEndpoint' => self::SERVICE_ADDRESS_TEMPLATE . ':' . self::DEFAULT_SERVICE_PORT,
             'clientConfig' => __DIR__ . '/../resources/customer_sk_ad_network_conversion_value_schema_service_client_config.json',
             'descriptorsConfigPath' => __DIR__ . '/../resources/customer_sk_ad_network_conversion_value_schema_service_descriptor_config.php',
             'gcpApiConfigPath' => __DIR__ . '/../resources/customer_sk_ad_network_conversion_value_schema_service_grpc_config.json',
