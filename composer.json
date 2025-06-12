@@ -48,6 +48,16 @@
       "homepage": "https://github.com/googleads/google-ads-php/contributors"
     }
   ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/yatskanich/google-ads-php84"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
   "scripts": {
     "test": [
       "phpunit tests"
