@@ -64,12 +64,6 @@ class ThirdPartyAppAnalyticsLinkServiceClient
     /** The name of the service. */
     private const string SERVICE_NAME = 'google.ads.googleads.v20.services.ThirdPartyAppAnalyticsLinkService';
 
-    /**
-     * The default address of the service.
-     */
-    #[\Deprecated(message: 'SERVICE_ADDRESS_TEMPLATE should be used instead.')]
-    private const string SERVICE_ADDRESS = 'googleads.googleapis.com';
-
     /** The address template of the service. */
     private const string SERVICE_ADDRESS_TEMPLATE = 'googleads.UNIVERSE_DOMAIN';
 
