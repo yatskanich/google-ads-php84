@@ -1,7 +1,7 @@
 {
   "name": "yatskanich/google-ads-php84",
   "homepage": "https://github.com/googleads/google-ads-php",
-  "description": "Google Ads API client for PHP",
+  "description": "Google Ads API client for PHP 8.4 support",
   "require": {
     "php": ">=8.4",
     "google/gax": "^1.19.1",
