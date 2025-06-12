@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\AdGroupLabelServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupLabelsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupLabelsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AdGroupLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupLabelsRequest())
+        $request = new MutateAdGroupLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupLabels($request);
@@ -112,7 +111,7 @@ class AdGroupLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupLabelsRequest())
+        $request = new MutateAdGroupLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AdGroupLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupLabelsRequest())
+        $request = new MutateAdGroupLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupLabelsAsync($request)->wait();

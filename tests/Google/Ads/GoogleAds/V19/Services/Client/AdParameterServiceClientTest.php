@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\AdParameterServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateAdParametersRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateAdParametersResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AdParameterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdParametersRequest())
+        $request = new MutateAdParametersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdParameters($request);
@@ -112,7 +111,7 @@ class AdParameterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdParametersRequest())
+        $request = new MutateAdParametersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AdParameterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdParametersRequest())
+        $request = new MutateAdParametersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdParametersAsync($request)->wait();

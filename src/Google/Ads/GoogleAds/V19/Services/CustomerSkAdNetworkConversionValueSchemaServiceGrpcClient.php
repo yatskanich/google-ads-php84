@@ -52,7 +52,10 @@ class CustomerSkAdNetworkConversionValueSchemaServiceGrpcClient extends \Grpc\Ba
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.CustomerSkAdNetworkConversionValueSchemaService/MutateCustomerSkAdNetworkConversionValueSchema',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateCustomerSkAdNetworkConversionValueSchemaResponse', 'decode'],
+            [
+                \Google\Ads\GoogleAds\V19\Services\MutateCustomerSkAdNetworkConversionValueSchemaResponse::class,
+                'decode'
+            ],
         $metadata, $options);
     }
 

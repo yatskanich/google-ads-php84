@@ -48,12 +48,12 @@ class GetAccountHierarchy
     // Optional: You may pass the manager customer ID on the command line or specify it here. If
     // neither are set, a null value will be passed to the runExample() method, and the example
     // will print the hierarchies of all accessible customer IDs.
-    private const MANAGER_CUSTOMER_ID = null;
+    private const null MANAGER_CUSTOMER_ID = null;
     // Optional: You may pass the login customer ID on the command line or specify it here if and
     // only if the manager customer ID is set. If the login customer ID is set neither on the
     // command line nor below, a null value will be passed to the runExample() method, and the
     // example will use each accessible customer ID as the login customer ID.
-    private const LOGIN_CUSTOMER_ID = null;
+    private const null LOGIN_CUSTOMER_ID = null;
 
     // Stores the mapping from the root customer IDs (the ones that will be used as a start point
     // for printing each hierarchy) to their `CustomerClient` objects.
@@ -63,7 +63,7 @@ class GetAccountHierarchy
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::MANAGER_CUSTOMER_ID => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::LOGIN_CUSTOMER_ID => GetOpt::OPTIONAL_ARGUMENT
         ]);
@@ -79,11 +79,11 @@ class GetAccountHierarchy
         }
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -198,10 +198,10 @@ class GetAccountHierarchy
         // https://developers.google.com/google-ads/api/docs/concepts/call-structure#cid for more
         // information.
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->withLoginCustomerId($loginCustomerId ?? $rootCustomerId)
             ->build();

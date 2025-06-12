@@ -40,30 +40,30 @@ use Google\ApiCore\ApiException;
  */
 class InviteUserWithAccessRole
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Email address of the user to send the invitation to.
-    private const EMAIL_ADDRESS = 'INSERT_EMAIL_ADDRESS_HERE';
+    private const string EMAIL_ADDRESS = 'INSERT_EMAIL_ADDRESS_HERE';
 
     // The access role for which the user is invited, such as 'ADMIN'. Must be one of the names of
     // the constants defined in AccessRoleEnum/AccessRole.php.
-    private const ACCESS_ROLE = 'INSERT_ACCESS_ROLE_HERE';
+    private const string ACCESS_ROLE = 'INSERT_ACCESS_ROLE_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::EMAIL_ADDRESS => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::ACCESS_ROLE => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

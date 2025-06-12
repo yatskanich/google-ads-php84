@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\ListingGroupFilterDimension;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class ProductCustomAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()

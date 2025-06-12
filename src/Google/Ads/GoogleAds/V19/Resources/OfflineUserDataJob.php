@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -135,7 +133,7 @@ class OfflineUserDataJob extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -171,7 +169,7 @@ class OfflineUserDataJob extends \Google\Protobuf\Internal\Message
      */
     public function getExternalId()
     {
-        return isset($this->external_id) ? $this->external_id : 0;
+        return $this->external_id ?? 0;
     }
 
     public function hasExternalId()

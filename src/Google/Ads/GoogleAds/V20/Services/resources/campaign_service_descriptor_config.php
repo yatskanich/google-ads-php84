@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.CampaignService' => [
             'EnablePMaxBrandGuidelines' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\EnablePMaxBrandGuidelinesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\EnablePMaxBrandGuidelinesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'MutateCampaigns' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateCampaignsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateCampaignsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

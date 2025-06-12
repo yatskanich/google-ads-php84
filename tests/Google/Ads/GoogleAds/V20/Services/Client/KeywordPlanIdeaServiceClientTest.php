@@ -25,7 +25,6 @@ namespace Google\Ads\GoogleAds\V20\Services\Client;
 use Google\Ads\GoogleAds\V20\Enums\KeywordPlanNetworkEnum\KeywordPlanNetwork;
 use Google\Ads\GoogleAds\V20\Services\CampaignToForecast;
 use Google\Ads\GoogleAds\V20\Services\CampaignToForecast\CampaignBiddingStrategy;
-use Google\Ads\GoogleAds\V20\Services\Client\KeywordPlanIdeaServiceClient;
 use Google\Ads\GoogleAds\V20\Services\GenerateAdGroupThemesRequest;
 use Google\Ads\GoogleAds\V20\Services\GenerateAdGroupThemesResponse;
 use Google\Ads\GoogleAds\V20\Services\GenerateKeywordForecastMetricsRequest;
@@ -85,7 +84,7 @@ class KeywordPlanIdeaServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $keywords = [];
         $adGroups = [];
-        $request = (new GenerateAdGroupThemesRequest())
+        $request = new GenerateAdGroupThemesRequest()
             ->setCustomerId($customerId)
             ->setKeywords($keywords)
             ->setAdGroups($adGroups);
@@ -127,7 +126,7 @@ class KeywordPlanIdeaServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $keywords = [];
         $adGroups = [];
-        $request = (new GenerateAdGroupThemesRequest())
+        $request = new GenerateAdGroupThemesRequest()
             ->setCustomerId($customerId)
             ->setKeywords($keywords)
             ->setAdGroups($adGroups);
@@ -161,7 +160,7 @@ class KeywordPlanIdeaServiceClientTest extends GeneratedTest
         $campaign->setKeywordPlanNetwork($campaignKeywordPlanNetwork);
         $campaignBiddingStrategy = new CampaignBiddingStrategy();
         $campaign->setBiddingStrategy($campaignBiddingStrategy);
-        $request = (new GenerateKeywordForecastMetricsRequest())
+        $request = new GenerateKeywordForecastMetricsRequest()
             ->setCampaign($campaign);
         $response = $gapicClient->generateKeywordForecastMetrics($request);
         $this->assertEquals($expectedResponse, $response);
@@ -199,7 +198,7 @@ class KeywordPlanIdeaServiceClientTest extends GeneratedTest
         $campaign->setKeywordPlanNetwork($campaignKeywordPlanNetwork);
         $campaignBiddingStrategy = new CampaignBiddingStrategy();
         $campaign->setBiddingStrategy($campaignBiddingStrategy);
-        $request = (new GenerateKeywordForecastMetricsRequest())
+        $request = new GenerateKeywordForecastMetricsRequest()
             ->setCampaign($campaign);
         try {
             $gapicClient->generateKeywordForecastMetrics($request);
@@ -349,7 +348,7 @@ class KeywordPlanIdeaServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $keywords = [];
         $adGroups = [];
-        $request = (new GenerateAdGroupThemesRequest())
+        $request = new GenerateAdGroupThemesRequest()
             ->setCustomerId($customerId)
             ->setKeywords($keywords)
             ->setAdGroups($adGroups);

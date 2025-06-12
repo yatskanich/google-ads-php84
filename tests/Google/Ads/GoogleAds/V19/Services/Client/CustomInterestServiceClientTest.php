@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CustomInterestServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCustomInterestsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCustomInterestsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CustomInterestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomInterestsRequest())
+        $request = new MutateCustomInterestsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomInterests($request);
@@ -112,7 +111,7 @@ class CustomInterestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomInterestsRequest())
+        $request = new MutateCustomInterestsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CustomInterestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomInterestsRequest())
+        $request = new MutateCustomInterestsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomInterestsAsync($request)->wait();

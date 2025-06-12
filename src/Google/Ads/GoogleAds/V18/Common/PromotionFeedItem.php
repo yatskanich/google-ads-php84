@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -154,7 +152,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getPromotionTarget()
     {
-        return isset($this->promotion_target) ? $this->promotion_target : '';
+        return $this->promotion_target ?? '';
     }
 
     public function hasPromotionTarget()
@@ -217,7 +215,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getPromotionStartDate()
     {
-        return isset($this->promotion_start_date) ? $this->promotion_start_date : '';
+        return $this->promotion_start_date ?? '';
     }
 
     public function hasPromotionStartDate()
@@ -253,7 +251,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getPromotionEndDate()
     {
-        return isset($this->promotion_end_date) ? $this->promotion_end_date : '';
+        return $this->promotion_end_date ?? '';
     }
 
     public function hasPromotionEndDate()
@@ -373,7 +371,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -438,7 +436,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -476,7 +474,7 @@ class PromotionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return isset($this->language_code) ? $this->language_code : '';
+        return $this->language_code ?? '';
     }
 
     public function hasLanguageCode()

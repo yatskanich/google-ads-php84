@@ -26,7 +26,6 @@ use Google\Ads\GoogleAds\V20\Services\AddBatchJobOperationsRequest;
 use Google\Ads\GoogleAds\V20\Services\AddBatchJobOperationsResponse;
 use Google\Ads\GoogleAds\V20\Services\BatchJobOperation;
 use Google\Ads\GoogleAds\V20\Services\BatchJobResult;
-use Google\Ads\GoogleAds\V20\Services\Client\BatchJobServiceClient;
 use Google\Ads\GoogleAds\V20\Services\ListBatchJobResultsRequest;
 use Google\Ads\GoogleAds\V20\Services\ListBatchJobResultsResponse;
 use Google\Ads\GoogleAds\V20\Services\MutateBatchJobRequest;
@@ -90,7 +89,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
         $mutateOperations = [];
-        $request = (new AddBatchJobOperationsRequest())
+        $request = new AddBatchJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setMutateOperations($mutateOperations);
         $response = $gapicClient->addBatchJobOperations($request);
@@ -128,7 +127,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
         $mutateOperations = [];
-        $request = (new AddBatchJobOperationsRequest())
+        $request = new AddBatchJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setMutateOperations($mutateOperations);
         try {
@@ -164,7 +163,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
-        $request = (new ListBatchJobResultsRequest())
+        $request = new ListBatchJobResultsRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->listBatchJobResults($request);
         $this->assertEquals($expectedResponse, $response->getPage()->getResponseObject());
@@ -201,7 +200,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
-        $request = (new ListBatchJobResultsRequest())
+        $request = new ListBatchJobResultsRequest()
             ->setResourceName($formattedResourceName);
         try {
             $gapicClient->listBatchJobResults($request);
@@ -230,7 +229,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BatchJobOperation();
-        $request = (new MutateBatchJobRequest())
+        $request = new MutateBatchJobRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateBatchJob($request);
@@ -268,7 +267,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BatchJobOperation();
-        $request = (new MutateBatchJobRequest())
+        $request = new MutateBatchJobRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -315,7 +314,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse($completeOperation);
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
-        $request = (new RunBatchJobRequest())
+        $request = new RunBatchJobRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->runBatchJob($request);
         $this->assertFalse($response->isDone());
@@ -381,7 +380,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
-        $request = (new RunBatchJobRequest())
+        $request = new RunBatchJobRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->runBatchJob($request);
         $this->assertFalse($response->isDone());
@@ -423,7 +422,7 @@ class BatchJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->batchJobName('[CUSTOMER_ID]', '[BATCH_JOB_ID]');
         $mutateOperations = [];
-        $request = (new AddBatchJobOperationsRequest())
+        $request = new AddBatchJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setMutateOperations($mutateOperations);
         $response = $gapicClient->addBatchJobOperationsAsync($request)->wait();

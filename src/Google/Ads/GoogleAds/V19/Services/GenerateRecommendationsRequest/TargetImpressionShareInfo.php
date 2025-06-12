@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\GenerateRecommendationsRequest;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -77,7 +75,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLocation()
     {
-        return isset($this->location) ? $this->location : 0;
+        return $this->location ?? 0;
     }
 
     public function hasLocation()
@@ -118,7 +116,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getTargetImpressionShareMicros()
     {
-        return isset($this->target_impression_share_micros) ? $this->target_impression_share_micros : 0;
+        return $this->target_impression_share_micros ?? 0;
     }
 
     public function hasTargetImpressionShareMicros()
@@ -159,7 +157,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidCeiling()
     {
-        return isset($this->max_cpc_bid_ceiling) ? $this->max_cpc_bid_ceiling : 0;
+        return $this->max_cpc_bid_ceiling ?? 0;
     }
 
     public function hasMaxCpcBidCeiling()

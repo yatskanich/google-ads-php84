@@ -33,7 +33,7 @@ final class ConfigurationLoader
      * @param EnvironmentalVariables $environmentalVariables
      */
     public function __construct(
-        EnvironmentalVariables $environmentalVariables = null
+        ?EnvironmentalVariables $environmentalVariables = null
     ) {
         $this->environmentalVariables = $environmentalVariables ?? new EnvironmentalVariables();
     }
@@ -68,7 +68,7 @@ final class ConfigurationLoader
                         )
                     );
                 }
-            } catch (UnexpectedValueException $e) {
+            } catch (UnexpectedValueException) {
                 throw new InvalidArgumentException(
                     sprintf(
                         "Config file not found as specified: '%s'. Home "

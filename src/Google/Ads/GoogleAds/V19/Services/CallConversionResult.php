@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -76,7 +74,7 @@ class CallConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getCallerId()
     {
-        return isset($this->caller_id) ? $this->caller_id : '';
+        return $this->caller_id ?? '';
     }
 
     public function hasCallerId()
@@ -114,7 +112,7 @@ class CallConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getCallStartDateTime()
     {
-        return isset($this->call_start_date_time) ? $this->call_start_date_time : '';
+        return $this->call_start_date_time ?? '';
     }
 
     public function hasCallStartDateTime()
@@ -151,7 +149,7 @@ class CallConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return isset($this->conversion_action) ? $this->conversion_action : '';
+        return $this->conversion_action ?? '';
     }
 
     public function hasConversionAction()
@@ -188,7 +186,7 @@ class CallConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
+        return $this->conversion_date_time ?? '';
     }
 
     public function hasConversionDateTime()

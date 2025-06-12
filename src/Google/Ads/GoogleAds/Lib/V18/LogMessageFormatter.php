@@ -33,8 +33,8 @@ final class LogMessageFormatter
     private $infoRedactor;
 
     public function __construct(
-        StatusMetadataExtractor $statusMetadataExtractor = null,
-        InfoRedactor $infoRedactor = null
+        ?StatusMetadataExtractor $statusMetadataExtractor = null,
+        ?InfoRedactor $infoRedactor = null
     ) {
         $this->statusMetadataExtractor = $statusMetadataExtractor ?? new StatusMetadataExtractor();
         $this->infoRedactor = $infoRedactor ?? new InfoRedactor();
@@ -56,7 +56,7 @@ final class LogMessageFormatter
             // In some cases, customer ID is available in the form of resource name, such as many
             // Get requests.
             $resourceName = $request->getResourceName();
-            $segments = explode('/', $resourceName);
+            $segments = explode('/', (string)$resourceName);
             if ($segments[0] === 'customers') {
                 return $segments[1];
             }

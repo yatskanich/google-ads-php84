@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -113,7 +111,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -153,7 +151,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return isset($this->language_code) ? $this->language_code : '';
+        return $this->language_code ?? '';
     }
 
     public function hasLanguageCode()
@@ -191,7 +189,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return isset($this->display_name) ? $this->display_name : '';
+        return $this->display_name ?? '';
     }
 
     public function hasDisplayName()

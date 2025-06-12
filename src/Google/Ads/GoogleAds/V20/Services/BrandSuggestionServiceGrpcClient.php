@@ -46,7 +46,7 @@ class BrandSuggestionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.BrandSuggestionService/SuggestBrands',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\SuggestBrandsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\SuggestBrandsResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -95,7 +93,7 @@ class AdGroupAdLabel extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
+        return $this->ad_group_ad ?? '';
     }
 
     public function hasAdGroupAd()
@@ -131,7 +129,7 @@ class AdGroupAdLabel extends \Google\Protobuf\Internal\Message
      */
     public function getLabel()
     {
-        return isset($this->label) ? $this->label : '';
+        return $this->label ?? '';
     }
 
     public function hasLabel()

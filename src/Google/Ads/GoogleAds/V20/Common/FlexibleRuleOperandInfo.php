@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -93,7 +91,7 @@ class FlexibleRuleOperandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLookbackWindowDays()
     {
-        return isset($this->lookback_window_days) ? $this->lookback_window_days : 0;
+        return $this->lookback_window_days ?? 0;
     }
 
     public function hasLookbackWindowDays()

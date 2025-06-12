@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.AdGroupAdService' => [
             'MutateAdGroupAds' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'RemoveAutomaticallyCreatedAssets' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Protobuf\GPBEmpty',
+                'responseType' => \Google\Protobuf\GPBEmpty::class,
                 'headerParams' => [
                     [
                         'keyName' => 'ad_group_ad',

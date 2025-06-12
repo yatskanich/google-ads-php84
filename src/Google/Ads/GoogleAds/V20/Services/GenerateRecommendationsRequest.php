@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -216,7 +214,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $recommendationTypes, int $advertisingChannelType): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setRecommendationTypes($recommendationTypes)
             ->setAdvertisingChannelType($advertisingChannelType);
@@ -446,7 +444,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignSitelinkCount()
     {
-        return isset($this->campaign_sitelink_count) ? $this->campaign_sitelink_count : 0;
+        return $this->campaign_sitelink_count ?? 0;
     }
 
     public function hasCampaignSitelinkCount()
@@ -488,7 +486,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getConversionTrackingStatus()
     {
-        return isset($this->conversion_tracking_status) ? $this->conversion_tracking_status : 0;
+        return $this->conversion_tracking_status ?? 0;
     }
 
     public function hasConversionTrackingStatus()
@@ -690,7 +688,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignImageAssetCount()
     {
-        return isset($this->campaign_image_asset_count) ? $this->campaign_image_asset_count : 0;
+        return $this->campaign_image_asset_count ?? 0;
     }
 
     public function hasCampaignImageAssetCount()
@@ -730,7 +728,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignCallAssetCount()
     {
-        return isset($this->campaign_call_asset_count) ? $this->campaign_call_asset_count : 0;
+        return $this->campaign_call_asset_count ?? 0;
     }
 
     public function hasCampaignCallAssetCount()
@@ -920,7 +918,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTargetPartnerSearchNetwork()
     {
-        return isset($this->target_partner_search_network) ? $this->target_partner_search_network : false;
+        return $this->target_partner_search_network ?? false;
     }
 
     public function hasTargetPartnerSearchNetwork()
@@ -960,7 +958,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getTargetContentNetwork()
     {
-        return isset($this->target_content_network) ? $this->target_content_network : false;
+        return $this->target_content_network ?? false;
     }
 
     public function hasTargetContentNetwork()
@@ -1004,7 +1002,7 @@ class GenerateRecommendationsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantCenterAccountId()
     {
-        return isset($this->merchant_center_account_id) ? $this->merchant_center_account_id : 0;
+        return $this->merchant_center_account_id ?? 0;
     }
 
     public function hasMerchantCenterAccountId()

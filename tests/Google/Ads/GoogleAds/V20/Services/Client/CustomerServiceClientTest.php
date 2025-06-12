@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
 use Google\Ads\GoogleAds\V20\Resources\Customer;
-use Google\Ads\GoogleAds\V20\Services\Client\CustomerServiceClient;
 use Google\Ads\GoogleAds\V20\Services\CreateCustomerClientRequest;
 use Google\Ads\GoogleAds\V20\Services\CreateCustomerClientResponse;
 use Google\Ads\GoogleAds\V20\Services\CustomerOperation;
@@ -84,7 +83,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         $response = $gapicClient->createCustomerClient($request);
@@ -122,7 +121,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         try {
@@ -206,7 +205,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerOperation();
-        $request = (new MutateCustomerRequest())
+        $request = new MutateCustomerRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomer($request);
@@ -244,7 +243,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerOperation();
-        $request = (new MutateCustomerRequest())
+        $request = new MutateCustomerRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -278,7 +277,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         $response = $gapicClient->createCustomerClientAsync($request)->wait();

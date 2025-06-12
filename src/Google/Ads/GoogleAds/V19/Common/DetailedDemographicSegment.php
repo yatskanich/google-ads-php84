@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class DetailedDemographicSegment extends \Google\Protobuf\Internal\Message
      */
     public function getDetailedDemographic()
     {
-        return isset($this->detailed_demographic) ? $this->detailed_demographic : '';
+        return $this->detailed_demographic ?? '';
     }
 
     public function hasDetailedDemographic()

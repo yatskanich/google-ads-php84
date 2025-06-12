@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -87,7 +85,7 @@ class PlannableLocation extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : '';
+        return $this->id ?? '';
     }
 
     public function hasId()
@@ -123,7 +121,7 @@ class PlannableLocation extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -163,7 +161,7 @@ class PlannableLocation extends \Google\Protobuf\Internal\Message
      */
     public function getParentCountryId()
     {
-        return isset($this->parent_country_id) ? $this->parent_country_id : 0;
+        return $this->parent_country_id ?? 0;
     }
 
     public function hasParentCountryId()
@@ -203,7 +201,7 @@ class PlannableLocation extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -240,7 +238,7 @@ class PlannableLocation extends \Google\Protobuf\Internal\Message
      */
     public function getLocationType()
     {
-        return isset($this->location_type) ? $this->location_type : '';
+        return $this->location_type ?? '';
     }
 
     public function hasLocationType()

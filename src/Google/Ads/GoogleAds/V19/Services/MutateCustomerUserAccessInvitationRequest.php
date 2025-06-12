@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -39,7 +37,7 @@ class MutateCustomerUserAccessInvitationRequest extends \Google\Protobuf\Interna
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V19\Services\CustomerUserAccessInvitationOperation $operation): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

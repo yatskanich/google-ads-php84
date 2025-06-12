@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -130,7 +128,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getGlobalSiteTag()
     {
-        return isset($this->global_site_tag) ? $this->global_site_tag : '';
+        return $this->global_site_tag ?? '';
     }
 
     public function hasGlobalSiteTag()
@@ -168,7 +166,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getEventSnippet()
     {
-        return isset($this->event_snippet) ? $this->event_snippet : '';
+        return $this->event_snippet ?? '';
     }
 
     public function hasEventSnippet()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -78,7 +76,7 @@ class FeedAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -114,7 +112,7 @@ class FeedAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -179,7 +177,7 @@ class FeedAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getIsPartOfKey()
     {
-        return isset($this->is_part_of_key) ? $this->is_part_of_key : false;
+        return $this->is_part_of_key ?? false;
     }
 
     public function hasIsPartOfKey()

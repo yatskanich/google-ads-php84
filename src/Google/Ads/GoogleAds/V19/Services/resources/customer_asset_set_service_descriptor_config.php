@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerAssetSetService' => [
             'MutateCustomerAssetSets' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCustomerAssetSetsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCustomerAssetSetsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CampaignBudgetServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateCampaignBudgetsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCampaignBudgetsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBudgets($request);
@@ -112,7 +111,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBudgetsAsync($request)->wait();

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -106,7 +104,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()
@@ -142,7 +140,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()

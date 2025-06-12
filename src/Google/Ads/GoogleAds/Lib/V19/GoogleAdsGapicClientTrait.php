@@ -59,8 +59,8 @@ trait GoogleAdsGapicClientTrait
         // recursion.
         if (
             !isset($options['operationsClient'])
-            && get_class($this) != OperationsClient::class
-            && get_class($this) != GoogleAdsOperationClient::class
+            && $this::class != OperationsClient::class
+            && $this::class != GoogleAdsOperationClient::class
         ) {
             $operationOptions = $options;
             // Use all the options except for those related to this service instance.

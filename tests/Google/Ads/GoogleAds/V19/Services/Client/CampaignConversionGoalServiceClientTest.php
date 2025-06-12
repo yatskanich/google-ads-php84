@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignConversionGoalServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignConversionGoalsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignConversionGoalsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignConversionGoalsRequest())
+        $request = new MutateCampaignConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignConversionGoals($request);
@@ -112,7 +111,7 @@ class CampaignConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignConversionGoalsRequest())
+        $request = new MutateCampaignConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignConversionGoalsRequest())
+        $request = new MutateCampaignConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignConversionGoalsAsync($request)->wait();

@@ -23,10 +23,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\V20\Enums\ChangeStatusOperationEnum\ChangeStatusOperation;
 use Google\Ads\GoogleAds\V20\Enums\ChangeStatusResourceTypeEnum\ChangeStatusResourceType;
 use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
@@ -40,22 +40,22 @@ use Google\ApiCore\ApiException;
  */
 class GetChangeSummary
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -159,38 +159,19 @@ class GetChangeSummary
     ) {
         $resourceType = $changeStatus->getResourceType();
         $resourceName = ''; // Default value for UNSPECIFIED or UNKNOWN resource type.
-        switch ($resourceType) {
-            case ChangeStatusResourceType::AD_GROUP:
-                $resourceName = $changeStatus->getAdGroup();
-                break;
-            case ChangeStatusResourceType::AD_GROUP_AD:
-                $resourceName = $changeStatus->getAdGroupAd();
-                break;
-            case ChangeStatusResourceType::AD_GROUP_BID_MODIFIER:
-                $resourceName = $changeStatus->getAdGroupBidModifier();
-                break;
-            case ChangeStatusResourceType::AD_GROUP_CRITERION:
-                $resourceName = $changeStatus->getAdGroupCriterion();
-                break;
-            case ChangeStatusResourceType::AD_GROUP_FEED:
-                $resourceName = $changeStatus->getAdGroupFeed();
-                break;
-            case ChangeStatusResourceType::CAMPAIGN:
-                $resourceName = $changeStatus->getCampaign();
-                break;
-            case ChangeStatusResourceType::CAMPAIGN_CRITERION:
-                $resourceName = $changeStatus->getCampaignCriterion();
-                break;
-            case ChangeStatusResourceType::CAMPAIGN_FEED:
-                $resourceName = $changeStatus->getCampaignFeed();
-                break;
-            case ChangeStatusResourceType::FEED:
-                $resourceName = $changeStatus->getFeed();
-                break;
-            case ChangeStatusResourceType::FEED_ITEM:
-                $resourceName = $changeStatus->getFeedItem();
-                break;
-        }
+        $resourceName = match ($resourceType) {
+            ChangeStatusResourceType::AD_GROUP => $changeStatus->getAdGroup(),
+            ChangeStatusResourceType::AD_GROUP_AD => $changeStatus->getAdGroupAd(),
+            ChangeStatusResourceType::AD_GROUP_BID_MODIFIER => $changeStatus->getAdGroupBidModifier(),
+            ChangeStatusResourceType::AD_GROUP_CRITERION => $changeStatus->getAdGroupCriterion(),
+            ChangeStatusResourceType::AD_GROUP_FEED => $changeStatus->getAdGroupFeed(),
+            ChangeStatusResourceType::CAMPAIGN => $changeStatus->getCampaign(),
+            ChangeStatusResourceType::CAMPAIGN_CRITERION => $changeStatus->getCampaignCriterion(),
+            ChangeStatusResourceType::CAMPAIGN_FEED => $changeStatus->getCampaignFeed(),
+            ChangeStatusResourceType::FEED => $changeStatus->getFeed(),
+            ChangeStatusResourceType::FEED_ITEM => $changeStatus->getFeedItem(),
+            default => $resourceName,
+        };
 
         return $resourceName;
     }

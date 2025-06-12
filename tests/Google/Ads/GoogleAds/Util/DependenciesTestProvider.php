@@ -32,7 +32,7 @@ class DependenciesTestProvider
      */
     public static function getFakeComposerLockFilePath()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'fake-composer.lock';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'fake-composer.lock';
     }
 
     /**
@@ -42,6 +42,6 @@ class DependenciesTestProvider
      */
     public static function getFakeComposerLockWithoutGrpcFilePath()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'fake-composer-no-grpc.lock';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'fake-composer-no-grpc.lock';
     }
 }

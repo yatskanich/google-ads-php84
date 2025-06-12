@@ -57,7 +57,7 @@ class ContentCreatorInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.ContentCreatorInsightsService/GenerateCreatorInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -82,7 +82,7 @@ class ContentCreatorInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.ContentCreatorInsightsService/GenerateTrendingInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\GenerateTrendingInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\GenerateTrendingInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 

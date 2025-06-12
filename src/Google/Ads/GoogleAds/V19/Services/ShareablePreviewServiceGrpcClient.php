@@ -43,7 +43,7 @@ class ShareablePreviewServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.ShareablePreviewService/GenerateShareablePreviews',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateShareablePreviewsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateShareablePreviewsResponse::class, 'decode'],
         $metadata, $options);
     }
 

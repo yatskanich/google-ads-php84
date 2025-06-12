@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -152,7 +150,7 @@ class FrequencyCapKey extends \Google\Protobuf\Internal\Message
      */
     public function getTimeLength()
     {
-        return isset($this->time_length) ? $this->time_length : 0;
+        return $this->time_length ?? 0;
     }
 
     public function hasTimeLength()

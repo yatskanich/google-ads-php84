@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -56,7 +54,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public static function build(\Google\Ads\GoogleAds\V18\Services\CampaignToForecast $campaign): self
     {
-        return (new self())
+        return new self()
             ->setCampaign($campaign);
     }
 
@@ -126,7 +124,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -162,7 +160,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return isset($this->gclid) ? $this->gclid : '';
+        return $this->gclid ?? '';
     }
 
     public function hasGclid()
@@ -274,7 +272,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getPageNumber()
     {
-        return isset($this->page_number) ? $this->page_number : 0;
+        return $this->page_number ?? 0;
     }
 
     public function hasPageNumber()
@@ -310,7 +308,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
+        return $this->ad_group_ad ?? '';
     }
 
     public function hasAdGroupAd()
@@ -346,7 +344,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignLocationTarget()
     {
-        return isset($this->campaign_location_target) ? $this->campaign_location_target : '';
+        return $this->campaign_location_target ?? '';
     }
 
     public function hasCampaignLocationTarget()
@@ -382,7 +380,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return isset($this->user_list) ? $this->user_list : '';
+        return $this->user_list ?? '';
     }
 
     public function hasUserList()

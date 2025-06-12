@@ -23,14 +23,14 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\ProductBrandInfo;
 use Google\Ads\GoogleAds\V20\Common\ListingDimensionInfo;
 use Google\Ads\GoogleAds\V20\Common\ListingGroupInfo;
+use Google\Ads\GoogleAds\V20\Common\ProductBrandInfo;
 use Google\Ads\GoogleAds\V20\Common\ProductConditionInfo;
 use Google\Ads\GoogleAds\V20\Enums\AdGroupCriterionStatusEnum\AdGroupCriterionStatus;
 use Google\Ads\GoogleAds\V20\Enums\ListingGroupTypeEnum\ListingGroupType;
@@ -59,26 +59,26 @@ use Google\ApiCore\ApiException;
  */
 class AddShoppingProductListingGroupTree
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
-    private const REPLACE_EXISTING_TREE = 'INSERT_BOOLEAN_TRUE_OR_FALSE_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
+    private const string REPLACE_EXISTING_TREE = 'INSERT_BOOLEAN_TRUE_OR_FALSE_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AD_GROUP_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::REPLACE_EXISTING_TREE => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -341,8 +341,8 @@ class AddShoppingProductListingGroupTree
     private static function createListingGroupSubdivision(
         int $customerId,
         int $adGroupId,
-        string $parentAdGroupCriterionResourceName = null,
-        ListingDimensionInfo $listingDimensionInfo = null
+        ?string $parentAdGroupCriterionResourceName = null,
+        ?ListingDimensionInfo $listingDimensionInfo = null
     ) {
         static $tempId = 0;
         $listingGroupInfo = new ListingGroupInfo([

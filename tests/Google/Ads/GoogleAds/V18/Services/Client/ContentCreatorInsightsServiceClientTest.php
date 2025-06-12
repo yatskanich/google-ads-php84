@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\ContentCreatorInsightsServiceClient;
 use Google\Ads\GoogleAds\V18\Services\GenerateCreatorInsightsRequest;
 use Google\Ads\GoogleAds\V18\Services\GenerateCreatorInsightsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup);
         $response = $gapicClient->generateCreatorInsights($request);
@@ -112,7 +111,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup);
         try {
@@ -142,7 +141,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup);
         $response = $gapicClient->generateCreatorInsightsAsync($request)->wait();

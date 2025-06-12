@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerService' => [
             'CreateCustomerClient' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\CreateCustomerClientResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\CreateCustomerClientResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,11 +37,11 @@ return [
             ],
             'ListAccessibleCustomers' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\ListAccessibleCustomersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\ListAccessibleCustomersResponse::class,
             ],
             'MutateCustomer' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCustomerResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCustomerResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

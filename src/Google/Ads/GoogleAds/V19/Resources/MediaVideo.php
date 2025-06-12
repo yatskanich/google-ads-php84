@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -79,7 +77,7 @@ class MediaVideo extends \Google\Protobuf\Internal\Message
      */
     public function getAdDurationMillis()
     {
-        return isset($this->ad_duration_millis) ? $this->ad_duration_millis : 0;
+        return $this->ad_duration_millis ?? 0;
     }
 
     public function hasAdDurationMillis()
@@ -117,7 +115,7 @@ class MediaVideo extends \Google\Protobuf\Internal\Message
      */
     public function getYoutubeVideoId()
     {
-        return isset($this->youtube_video_id) ? $this->youtube_video_id : '';
+        return $this->youtube_video_id ?? '';
     }
 
     public function hasYoutubeVideoId()
@@ -157,7 +155,7 @@ class MediaVideo extends \Google\Protobuf\Internal\Message
      */
     public function getAdvertisingIdCode()
     {
-        return isset($this->advertising_id_code) ? $this->advertising_id_code : '';
+        return $this->advertising_id_code ?? '';
     }
 
     public function hasAdvertisingIdCode()
@@ -196,7 +194,7 @@ class MediaVideo extends \Google\Protobuf\Internal\Message
      */
     public function getIsciCode()
     {
-        return isset($this->isci_code) ? $this->isci_code : '';
+        return $this->isci_code ?? '';
     }
 
     public function hasIsciCode()

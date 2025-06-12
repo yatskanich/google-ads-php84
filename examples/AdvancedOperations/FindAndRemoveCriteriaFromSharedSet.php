@@ -23,10 +23,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\V20\Enums\CriterionTypeEnum\CriterionType;
 use Google\Ads\GoogleAds\V20\Enums\KeywordMatchTypeEnum\KeywordMatchType;
 use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
@@ -43,24 +43,24 @@ use Google\ApiCore\ApiException;
  */
 class FindAndRemoveCriteriaFromSharedSet
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -95,7 +93,7 @@ class MobileApplicationInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()
@@ -145,7 +143,7 @@ class MobileApplicationInfo extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()

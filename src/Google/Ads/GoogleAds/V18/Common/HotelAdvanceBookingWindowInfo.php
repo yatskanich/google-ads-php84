@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class HotelAdvanceBookingWindowInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMinDays()
     {
-        return isset($this->min_days) ? $this->min_days : 0;
+        return $this->min_days ?? 0;
     }
 
     public function hasMinDays()
@@ -89,7 +87,7 @@ class HotelAdvanceBookingWindowInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMaxDays()
     {
-        return isset($this->max_days) ? $this->max_days : 0;
+        return $this->max_days ?? 0;
     }
 
     public function hasMaxDays()

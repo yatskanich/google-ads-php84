@@ -51,7 +51,7 @@ use Google\ApiCore\ApiException;
  */
 class AddBillingSetup
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     // Either a payments account ID or a payments profile ID must be provided for the example
     // to run successfully. If both are provided, only the payments account ID will be used.
@@ -60,29 +60,29 @@ class AddBillingSetup
      * Provide an existing payments account ID to link to the new billing setup. Must be
      * formatted as "1234-5678-9012-3456".
      */
-    private const PAYMENTS_ACCOUNT_ID = null;
+    private const null PAYMENTS_ACCOUNT_ID = null;
     /**
      * Alternatively, provide a payments profile ID which will be linked to a new payments
      * account and the new billing setup. Must be formatted as "1234-5678-9012".
      */
-    private const PAYMENTS_PROFILE_ID = null;
+    private const null PAYMENTS_PROFILE_ID = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::PAYMENTS_ACCOUNT_ID => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::PAYMENTS_PROFILE_ID => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

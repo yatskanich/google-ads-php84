@@ -32,6 +32,6 @@ class OAuth2TokenBuilderTestProvider
      */
     public static function getFakeJsonKeyFilePath()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'API-Project-abc123xyz.json';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'API-Project-abc123xyz.json';
     }
 }

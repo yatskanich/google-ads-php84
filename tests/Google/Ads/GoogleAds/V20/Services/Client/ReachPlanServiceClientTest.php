@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
 use Google\Ads\GoogleAds\V20\Services\CampaignDuration;
-use Google\Ads\GoogleAds\V20\Services\Client\ReachPlanServiceClient;
 use Google\Ads\GoogleAds\V20\Services\GenerateConversionRatesRequest;
 use Google\Ads\GoogleAds\V20\Services\GenerateConversionRatesResponse;
 use Google\Ads\GoogleAds\V20\Services\GenerateReachForecastRequest;
@@ -82,7 +81,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateConversionRatesRequest())
+        $request = new GenerateConversionRatesRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->generateConversionRates($request);
         $this->assertEquals($expectedResponse, $response);
@@ -116,7 +115,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateConversionRatesRequest())
+        $request = new GenerateConversionRatesRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->generateConversionRates($request);
@@ -146,7 +145,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $campaignDuration = new CampaignDuration();
         $plannedProducts = [];
-        $request = (new GenerateReachForecastRequest())
+        $request = new GenerateReachForecastRequest()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -188,7 +187,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $campaignDuration = new CampaignDuration();
         $plannedProducts = [];
-        $request = (new GenerateReachForecastRequest())
+        $request = new GenerateReachForecastRequest()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -272,7 +271,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $plannableLocationId = 'plannableLocationId-2050234651';
-        $request = (new ListPlannableProductsRequest())
+        $request = new ListPlannableProductsRequest()
             ->setPlannableLocationId($plannableLocationId);
         $response = $gapicClient->listPlannableProducts($request);
         $this->assertEquals($expectedResponse, $response);
@@ -306,7 +305,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $plannableLocationId = 'plannableLocationId-2050234651';
-        $request = (new ListPlannableProductsRequest())
+        $request = new ListPlannableProductsRequest()
             ->setPlannableLocationId($plannableLocationId);
         try {
             $gapicClient->listPlannableProducts($request);
@@ -334,7 +333,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new ListPlannableUserListsRequest())
+        $request = new ListPlannableUserListsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->listPlannableUserLists($request);
         $this->assertEquals($expectedResponse, $response);
@@ -368,7 +367,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new ListPlannableUserListsRequest())
+        $request = new ListPlannableUserListsRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->listPlannableUserLists($request);
@@ -396,7 +395,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateConversionRatesRequest())
+        $request = new GenerateConversionRatesRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->generateConversionRatesAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

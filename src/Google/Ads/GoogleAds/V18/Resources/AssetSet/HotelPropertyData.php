@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources\AssetSet;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -54,7 +52,7 @@ class HotelPropertyData extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
+        return $this->hotel_center_id ?? 0;
     }
 
     public function hasHotelCenterId()
@@ -90,7 +88,7 @@ class HotelPropertyData extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerName()
     {
-        return isset($this->partner_name) ? $this->partner_name : '';
+        return $this->partner_name ?? '';
     }
 
     public function hasPartnerName()

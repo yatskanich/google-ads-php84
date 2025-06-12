@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class YouTubeVideoInfo extends \Google\Protobuf\Internal\Message
      */
     public function getVideoId()
     {
-        return isset($this->video_id) ? $this->video_id : '';
+        return $this->video_id ?? '';
     }
 
     public function hasVideoId()

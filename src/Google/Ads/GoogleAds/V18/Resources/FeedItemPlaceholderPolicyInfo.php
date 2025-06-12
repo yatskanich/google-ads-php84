@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -140,7 +138,7 @@ class FeedItemPlaceholderPolicyInfo extends \Google\Protobuf\Internal\Message
      */
     public function getFeedMappingResourceName()
     {
-        return isset($this->feed_mapping_resource_name) ? $this->feed_mapping_resource_name : '';
+        return $this->feed_mapping_resource_name ?? '';
     }
 
     public function hasFeedMappingResourceName()

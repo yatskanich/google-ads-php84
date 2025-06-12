@@ -31,7 +31,7 @@ class FieldMasksTestDataProvider
     public static function getJsonTestCases()
     {
         return file_get_contents(
-            sprintf('%s%stest_cases.json', dirname(__FILE__), DIRECTORY_SEPARATOR)
+            sprintf('%s%stest_cases.json', __DIR__, DIRECTORY_SEPARATOR)
         );
     }
 }

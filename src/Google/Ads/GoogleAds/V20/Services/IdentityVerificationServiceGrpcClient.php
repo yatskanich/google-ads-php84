@@ -54,7 +54,7 @@ class IdentityVerificationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.IdentityVerificationService/StartIdentityVerification',
         $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
+            [\Google\Protobuf\GPBEmpty::class, 'decode'],
         $metadata, $options);
     }
 
@@ -77,7 +77,7 @@ class IdentityVerificationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.IdentityVerificationService/GetIdentityVerification',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\GetIdentityVerificationResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\GetIdentityVerificationResponse::class, 'decode'],
         $metadata, $options);
     }
 

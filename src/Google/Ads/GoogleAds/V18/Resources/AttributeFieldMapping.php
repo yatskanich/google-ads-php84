@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -103,7 +101,7 @@ class AttributeFieldMapping extends \Google\Protobuf\Internal\Message
      */
     public function getFeedAttributeId()
     {
-        return isset($this->feed_attribute_id) ? $this->feed_attribute_id : 0;
+        return $this->feed_attribute_id ?? 0;
     }
 
     public function hasFeedAttributeId()
@@ -141,7 +139,7 @@ class AttributeFieldMapping extends \Google\Protobuf\Internal\Message
      */
     public function getFieldId()
     {
-        return isset($this->field_id) ? $this->field_id : 0;
+        return $this->field_id ?? 0;
     }
 
     public function hasFieldId()

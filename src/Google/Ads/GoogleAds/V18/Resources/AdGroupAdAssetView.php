@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -159,7 +157,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
+        return $this->ad_group_ad ?? '';
     }
 
     public function hasAdGroupAd()
@@ -195,7 +193,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()
@@ -260,7 +258,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getEnabled()
     {
-        return isset($this->enabled) ? $this->enabled : false;
+        return $this->enabled ?? false;
     }
 
     public function hasEnabled()

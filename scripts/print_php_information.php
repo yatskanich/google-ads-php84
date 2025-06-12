@@ -20,7 +20,7 @@
  * Prints whether a given extension is installed or not and its version when it is installed.
  * @param string $extensionName the name of the extension to print information about
  */
-function printExtensionInformation(string $extensionName)
+function printExtensionInformation(string $extensionName): void
 {
     $isInstalled =  extension_loaded($extensionName);
     printf(

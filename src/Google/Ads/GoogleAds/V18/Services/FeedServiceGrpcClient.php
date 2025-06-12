@@ -72,7 +72,7 @@ class FeedServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.FeedService/MutateFeeds',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateFeedsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateFeedsResponse::class, 'decode'],
         $metadata, $options);
     }
 

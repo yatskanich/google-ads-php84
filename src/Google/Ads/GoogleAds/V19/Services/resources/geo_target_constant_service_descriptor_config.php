@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.GeoTargetConstantService' => [
             'SuggestGeoTargetConstants' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SuggestGeoTargetConstantsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SuggestGeoTargetConstantsResponse::class,
             ],
         ],
     ],

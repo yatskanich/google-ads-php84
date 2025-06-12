@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.UserListService' => [
             'MutateUserLists' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateUserListsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateUserListsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

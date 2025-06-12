@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class MoveUnusedBudgetRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getExcessCampaignBudget()
     {
-        return isset($this->excess_campaign_budget) ? $this->excess_campaign_budget : '';
+        return $this->excess_campaign_budget ?? '';
     }
 
     public function hasExcessCampaignBudget()

@@ -32,7 +32,6 @@ use Google\Ads\GoogleAds\V20\Enums\ConversionAdjustmentTypeEnum\ConversionAdjust
 use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
 use Google\Ads\GoogleAds\V20\Services\ConversionAdjustment;
 use Google\Ads\GoogleAds\V20\Services\ConversionAdjustmentResult;
-use Google\Ads\GoogleAds\V20\Services\GclidDateTimePair;
 use Google\Ads\GoogleAds\V20\Services\RestatementValue;
 use Google\Ads\GoogleAds\V20\Services\UploadConversionAdjustmentsRequest;
 use Google\ApiCore\ApiException;
@@ -43,25 +42,25 @@ use Google\ApiCore\ApiException;
  */
 class UploadConversionAdjustment
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
     // The transaction ID of the conversion to adjust. Required if the conversion being adjusted
     // meets the criteria described at
     // https://developers.google.com/google-ads/api/docs/conversions/upload-adjustments#requirements.
-    private const ORDER_ID = 'INSERT_ORDER_ID_HERE';
+    private const string ORDER_ID = 'INSERT_ORDER_ID_HERE';
     // RETRACTION negates a conversion, and RESTATEMENT changes the value of a conversion.
-    private const ADJUSTMENT_TYPE = "INSERT_ADJUSTMENT_TYPE_HERE";
+    private const string ADJUSTMENT_TYPE = "INSERT_ADJUSTMENT_TYPE_HERE";
     // The adjustment date time in "yyyy-mm-dd hh:mm:ss+|-hh:mm" format.
-    private const ADJUSTMENT_DATE_TIME = "INSERT_ADJUSTMENT_DATE_TIME_HERE";
+    private const string ADJUSTMENT_DATE_TIME = "INSERT_ADJUSTMENT_DATE_TIME_HERE";
     // Optional: Specify an adjusted value below for adjustment type RESTATEMENT.
     // This value will be ignored if you specify RETRACTION as adjustment type.
-    private const RESTATEMENT_VALUE = null;
+    private const null RESTATEMENT_VALUE = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CONVERSION_ACTION_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::ORDER_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -71,11 +70,11 @@ class UploadConversionAdjustment
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

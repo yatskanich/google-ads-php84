@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -69,7 +67,7 @@ class ImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : '';
+        return $this->data ?? '';
     }
 
     public function hasData()
@@ -105,7 +103,7 @@ class ImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function getFileSize()
     {
-        return isset($this->file_size) ? $this->file_size : 0;
+        return $this->file_size ?? 0;
     }
 
     public function hasFileSize()

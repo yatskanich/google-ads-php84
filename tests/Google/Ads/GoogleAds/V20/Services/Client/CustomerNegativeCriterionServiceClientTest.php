@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\CustomerNegativeCriterionServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateCustomerNegativeCriteriaRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateCustomerNegativeCriteriaResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerNegativeCriteria($request);
@@ -112,7 +111,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerNegativeCriteriaAsync($request)->wait();

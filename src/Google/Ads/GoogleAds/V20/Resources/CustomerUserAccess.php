@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -160,7 +158,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getEmailAddress()
     {
-        return isset($this->email_address) ? $this->email_address : '';
+        return $this->email_address ?? '';
     }
 
     public function hasEmailAddress()
@@ -226,7 +224,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getAccessCreationDateTime()
     {
-        return isset($this->access_creation_date_time) ? $this->access_creation_date_time : '';
+        return $this->access_creation_date_time ?? '';
     }
 
     public function hasAccessCreationDateTime()
@@ -266,7 +264,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getInviterUserEmailAddress()
     {
-        return isset($this->inviter_user_email_address) ? $this->inviter_user_email_address : '';
+        return $this->inviter_user_email_address ?? '';
     }
 
     public function hasInviterUserEmailAddress()

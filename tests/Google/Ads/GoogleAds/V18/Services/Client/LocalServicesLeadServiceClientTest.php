@@ -24,7 +24,6 @@ namespace Google\Ads\GoogleAds\V18\Services\Client;
 
 use Google\Ads\GoogleAds\V18\Services\AppendLeadConversationRequest;
 use Google\Ads\GoogleAds\V18\Services\AppendLeadConversationResponse;
-use Google\Ads\GoogleAds\V18\Services\Client\LocalServicesLeadServiceClient;
 use Google\ApiCore\ApiException;
 use Google\ApiCore\CredentialsWrapper;
 use Google\ApiCore\Testing\GeneratedTest;
@@ -74,7 +73,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversation($request);
@@ -112,7 +111,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         try {
@@ -142,7 +141,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversationAsync($request)->wait();

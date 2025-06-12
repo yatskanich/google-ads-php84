@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignBidModifierServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignBidModifiersRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignBidModifiersResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBidModifiersRequest())
+        $request = new MutateCampaignBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBidModifiers($request);
@@ -112,7 +111,7 @@ class CampaignBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBidModifiersRequest())
+        $request = new MutateCampaignBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBidModifiersRequest())
+        $request = new MutateCampaignBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBidModifiersAsync($request)->wait();

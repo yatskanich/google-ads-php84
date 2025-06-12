@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.AdGroupCriterionCustomizerService' => [
             'MutateAdGroupCriterionCustomizers' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriterionCustomizersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriterionCustomizersResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

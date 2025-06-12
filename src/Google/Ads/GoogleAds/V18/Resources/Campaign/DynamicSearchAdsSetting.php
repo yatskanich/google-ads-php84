@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources\Campaign;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -131,7 +129,7 @@ class DynamicSearchAdsSetting extends \Google\Protobuf\Internal\Message
      */
     public function getUseSuppliedUrlsOnly()
     {
-        return isset($this->use_supplied_urls_only) ? $this->use_supplied_urls_only : false;
+        return $this->use_supplied_urls_only ?? false;
     }
 
     public function hasUseSuppliedUrlsOnly()

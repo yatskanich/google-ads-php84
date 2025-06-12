@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignLabelServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignLabelsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignLabelsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignLabelsRequest())
+        $request = new MutateCampaignLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignLabels($request);
@@ -112,7 +111,7 @@ class CampaignLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignLabelsRequest())
+        $request = new MutateCampaignLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignLabelsRequest())
+        $request = new MutateCampaignLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignLabelsAsync($request)->wait();

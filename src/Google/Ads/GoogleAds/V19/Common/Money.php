@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class Money extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -89,7 +87,7 @@ class Money extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()

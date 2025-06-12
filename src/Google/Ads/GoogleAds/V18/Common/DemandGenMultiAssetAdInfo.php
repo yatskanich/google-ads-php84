@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -321,7 +319,7 @@ class DemandGenMultiAssetAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBusinessName()
     {
-        return isset($this->business_name) ? $this->business_name : '';
+        return $this->business_name ?? '';
     }
 
     public function hasBusinessName()
@@ -357,7 +355,7 @@ class DemandGenMultiAssetAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCallToActionText()
     {
-        return isset($this->call_to_action_text) ? $this->call_to_action_text : '';
+        return $this->call_to_action_text ?? '';
     }
 
     public function hasCallToActionText()
@@ -393,7 +391,7 @@ class DemandGenMultiAssetAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLeadFormOnly()
     {
-        return isset($this->lead_form_only) ? $this->lead_form_only : false;
+        return $this->lead_form_only ?? false;
     }
 
     public function hasLeadFormOnly()

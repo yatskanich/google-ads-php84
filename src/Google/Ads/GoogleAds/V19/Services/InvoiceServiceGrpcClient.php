@@ -55,7 +55,7 @@ class InvoiceServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.InvoiceService/ListInvoices',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\ListInvoicesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\ListInvoicesResponse::class, 'decode'],
         $metadata, $options);
     }
 

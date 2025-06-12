@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -171,7 +169,7 @@ class AdScheduleInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStartHour()
     {
-        return isset($this->start_hour) ? $this->start_hour : 0;
+        return $this->start_hour ?? 0;
     }
 
     public function hasStartHour()
@@ -213,7 +211,7 @@ class AdScheduleInfo extends \Google\Protobuf\Internal\Message
      */
     public function getEndHour()
     {
-        return isset($this->end_hour) ? $this->end_hour : 0;
+        return $this->end_hour ?? 0;
     }
 
     public function hasEndHour()

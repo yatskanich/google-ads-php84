@@ -33,7 +33,7 @@ use Illuminate\View\View;
 
 class GoogleAdsApiController extends Controller
 {
-    private const REPORT_TYPE_TO_DEFAULT_SELECTED_FIELDS = [
+    private const array REPORT_TYPE_TO_DEFAULT_SELECTED_FIELDS = [
         'campaign' => ['campaign.id', 'campaign.name', 'campaign.status'],
         'customer' => ['customer.id']
     ];
@@ -41,9 +41,9 @@ class GoogleAdsApiController extends Controller
     // The limit of the number of the returned results. This is set to prevent you from accidentally
     // fetching a very large number of campaigns and freezing your browser. Change it to a larger
     // number if you're sure that your request doesn't result in too many results.
-    private const RESULTS_LIMIT = 1000;
+    private const int RESULTS_LIMIT = 1000;
     // Google Ads API default page size.
-    private const DEFAULT_PAGE_SIZE = 10000;
+    private const int DEFAULT_PAGE_SIZE = 10000;
 
     /**
      * Controls a POST or GET request submitted in the context of the "Show Report" form.
@@ -86,7 +86,7 @@ class GoogleAdsApiController extends Controller
             $query = sprintf(
                 "SELECT %s FROM %s WHERE metrics.impressions > 0 AND segments.date " .
                 "DURING %s LIMIT %d",
-                join(", ", $selectedFields),
+                implode(", ", $selectedFields),
                 $reportType,
                 $reportRange,
                 self::RESULTS_LIMIT
@@ -176,7 +176,7 @@ class GoogleAdsApiController extends Controller
             if ($index >= $startIndex) {
                 /** @var GoogleAdsRow $googleAdsRow */
                 // Converts each result as a Plain Old PHP Object (POPO) using JSON.
-                $results[] = json_decode($googleAdsRow->serializeToJsonString(), true);
+                $results[] = json_decode((string)$googleAdsRow->serializeToJsonString(), true);
             }
             if (count($results) >= $entriesPerPage) {
                 break;
@@ -252,7 +252,7 @@ class GoogleAdsApiController extends Controller
 
         // Fetches and converts the result as a POPO using JSON.
         $campaign = json_decode(
-            $response->iterateAllElements()->current()->getCampaign()->serializeToJsonString(),
+            (string)$response->iterateAllElements()->current()->getCampaign()->serializeToJsonString(),
             true
         );
 

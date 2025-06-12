@@ -57,7 +57,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/GenerateInsightsFinderReport',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateInsightsFinderReportResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateInsightsFinderReportResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -82,7 +82,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/ListAudienceInsightsAttributes',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\ListAudienceInsightsAttributesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\ListAudienceInsightsAttributesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -107,7 +107,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/ListInsightsEligibleDates',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\ListInsightsEligibleDatesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\ListInsightsEligibleDatesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -135,7 +135,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/GenerateAudienceCompositionInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateAudienceCompositionInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateAudienceCompositionInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -162,7 +162,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/GenerateSuggestedTargetingInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateSuggestedTargetingInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateSuggestedTargetingInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -190,7 +190,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/GenerateAudienceOverlapInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateAudienceOverlapInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateAudienceOverlapInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -219,7 +219,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AudienceInsightsService/GenerateTargetingSuggestionMetrics',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\GenerateTargetingSuggestionMetricsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\GenerateTargetingSuggestionMetricsResponse::class, 'decode'],
         $metadata, $options);
     }
 

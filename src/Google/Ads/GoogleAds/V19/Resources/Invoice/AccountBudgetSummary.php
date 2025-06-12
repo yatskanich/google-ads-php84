@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\Invoice;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -192,7 +190,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCustomer()
     {
-        return isset($this->customer) ? $this->customer : '';
+        return $this->customer ?? '';
     }
 
     public function hasCustomer()
@@ -232,7 +230,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerDescriptiveName()
     {
-        return isset($this->customer_descriptive_name) ? $this->customer_descriptive_name : '';
+        return $this->customer_descriptive_name ?? '';
     }
 
     public function hasCustomerDescriptiveName()
@@ -271,7 +269,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudget()
     {
-        return isset($this->account_budget) ? $this->account_budget : '';
+        return $this->account_budget ?? '';
     }
 
     public function hasAccountBudget()
@@ -310,7 +308,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudgetName()
     {
-        return isset($this->account_budget_name) ? $this->account_budget_name : '';
+        return $this->account_budget_name ?? '';
     }
 
     public function hasAccountBudgetName()
@@ -348,7 +346,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
+        return $this->purchase_order_number ?? '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -386,7 +384,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getSubtotalAmountMicros()
     {
-        return isset($this->subtotal_amount_micros) ? $this->subtotal_amount_micros : 0;
+        return $this->subtotal_amount_micros ?? 0;
     }
 
     public function hasSubtotalAmountMicros()
@@ -424,7 +422,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmountMicros()
     {
-        return isset($this->tax_amount_micros) ? $this->tax_amount_micros : 0;
+        return $this->tax_amount_micros ?? 0;
     }
 
     public function hasTaxAmountMicros()
@@ -463,7 +461,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountMicros()
     {
-        return isset($this->total_amount_micros) ? $this->total_amount_micros : 0;
+        return $this->total_amount_micros ?? 0;
     }
 
     public function hasTotalAmountMicros()
@@ -543,7 +541,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getServedAmountMicros()
     {
-        return isset($this->served_amount_micros) ? $this->served_amount_micros : 0;
+        return $this->served_amount_micros ?? 0;
     }
 
     public function hasServedAmountMicros()
@@ -582,7 +580,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getBilledAmountMicros()
     {
-        return isset($this->billed_amount_micros) ? $this->billed_amount_micros : 0;
+        return $this->billed_amount_micros ?? 0;
     }
 
     public function hasBilledAmountMicros()
@@ -620,7 +618,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getOverdeliveryAmountMicros()
     {
-        return isset($this->overdelivery_amount_micros) ? $this->overdelivery_amount_micros : 0;
+        return $this->overdelivery_amount_micros ?? 0;
     }
 
     public function hasOverdeliveryAmountMicros()
@@ -658,7 +656,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getInvalidActivityAmountMicros()
     {
-        return isset($this->invalid_activity_amount_micros) ? $this->invalid_activity_amount_micros : 0;
+        return $this->invalid_activity_amount_micros ?? 0;
     }
 
     public function hasInvalidActivityAmountMicros()

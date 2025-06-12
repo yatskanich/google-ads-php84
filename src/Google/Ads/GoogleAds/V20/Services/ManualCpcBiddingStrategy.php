@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -61,7 +59,7 @@ class ManualCpcBiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getDailyBudgetMicros()
     {
-        return isset($this->daily_budget_micros) ? $this->daily_budget_micros : 0;
+        return $this->daily_budget_micros ?? 0;
     }
 
     public function hasDailyBudgetMicros()

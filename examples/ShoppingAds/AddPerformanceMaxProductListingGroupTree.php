@@ -58,8 +58,8 @@ use Google\ApiCore\Serializer;
  */
 class AddPerformanceMaxProductListingGroupTree
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const ASSET_GROUP_ID = 'INSERT_ASSET_GROUP_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string ASSET_GROUP_ID = 'INSERT_ASSET_GROUP_ID_HERE';
     // Optional: Removes the existing listing group tree from the asset group or not.
     //
     // If the current asset group already has a tree of listing group filters, and you
@@ -67,28 +67,28 @@ class AddPerformanceMaxProductListingGroupTree
     // receive a 'ASSET_GROUP_LISTING_GROUP_FILTER_ERROR_MULTIPLE_ROOTS' error.
     //
     // Setting this option to true will remove the existing tree and prevent this error.
-    private const REPLACE_EXISTING_TREE = false;
+    private const bool REPLACE_EXISTING_TREE = false;
 
     // We specify temporary IDs that are specific to a single mutate request.
     // Temporary IDs are always negative and unique within one mutate request.
-    private const LISTING_GROUP_ROOT_TEMPORARY_ID = -1;
+    private const int LISTING_GROUP_ROOT_TEMPORARY_ID = -1;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::ASSET_GROUP_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::REPLACE_EXISTING_TREE => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -574,30 +574,25 @@ class AddPerformanceMaxProductListingGroupTree
 
             $operation = $mutateOperations[$i]->getAssetGroupListingGroupFilterOperation();
             $getter = Serializer::getGetter($operationResponse->getResponse());
-            switch ($operation->getOperation()) {
-                case 'create':
-                    printf(
-                        "Created an asset group listing group filter with resource name: "
-                         . " '%s'.%s",
-                        $operationResponse->$getter()->getResourceName(),
-                        PHP_EOL
-                    );
-                    break;
-                case 'remove':
-                    printf(
-                        "Removed an asset group listing group filter with resource name: "
-                        . " '%s'.%s",
-                        $operationResponse->$getter()->getResourceName(),
-                        PHP_EOL
-                    );
-                    break;
-                default:
-                    printf(
-                        "Unsupported operation type: '%s'.%s",
-                        $operation->getOperation(),
-                        PHP_EOL
-                    );
-            }
+            match ($operation->getOperation()) {
+                'create' => printf(
+                    "Created an asset group listing group filter with resource name: "
+                    . " '%s'.%s",
+                    $operationResponse->$getter()->getResourceName(),
+                    PHP_EOL
+                ),
+                'remove' => printf(
+                    "Removed an asset group listing group filter with resource name: "
+                    . " '%s'.%s",
+                    $operationResponse->$getter()->getResourceName(),
+                    PHP_EOL
+                ),
+                default => printf(
+                    "Unsupported operation type: '%s'.%s",
+                    $operation->getOperation(),
+                    PHP_EOL
+                ),
+            };
         }
     }
 }

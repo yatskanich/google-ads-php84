@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\BiddingSeasonalityAdjustmentServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateBiddingSeasonalityAdjustmentsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateBiddingSeasonalityAdjustmentsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingSeasonalityAdjustments($request);
@@ -112,7 +111,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingSeasonalityAdjustmentsAsync($request)->wait();

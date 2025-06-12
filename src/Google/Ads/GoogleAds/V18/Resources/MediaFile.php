@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -141,7 +139,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -230,7 +228,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getSourceUrl()
     {
-        return isset($this->source_url) ? $this->source_url : '';
+        return $this->source_url ?? '';
     }
 
     public function hasSourceUrl()
@@ -268,7 +266,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -305,7 +303,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getFileSize()
     {
-        return isset($this->file_size) ? $this->file_size : 0;
+        return $this->file_size ?? 0;
     }
 
     public function hasFileSize()

@@ -55,18 +55,18 @@ class FieldMasks
      */
     public static function compare(Message $original, Message $modified)
     {
-        if (get_class($original) !== get_class($modified)) {
+        if ($original::class !== $modified::class) {
             throw new InvalidArgumentException(sprintf(
                 'Both input messages must be of the same type, got '
                     . 'original: %s, modified: %s',
-                get_class($original),
-                get_class($modified)
+                $original::class,
+                $modified::class
             ));
         }
         $paths = [];
         self::buildPaths($paths, '', $original, $modified);
 
-        return (new FieldMask())->setPaths($paths);
+        return new FieldMask()->setPaths($paths);
     }
 
     /**
@@ -80,7 +80,7 @@ class FieldMasks
      */
     public static function allSetFieldsOf(Message $message)
     {
-        $messageClass = get_class($message);
+        $messageClass = $message::class;
         $defaultMessage = new $messageClass();
 
         return self::compare($defaultMessage, $message);
@@ -344,7 +344,7 @@ class FieldMasks
         if (is_null(self::$descriptorPool)) {
             self::$descriptorPool = DescriptorPool::getGeneratedPool();
         }
-        return self::$descriptorPool->getDescriptorByClassName(get_class($message));
+        return self::$descriptorPool->getDescriptorByClassName($message::class);
     }
 
     /**

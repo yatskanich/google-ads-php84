@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -258,7 +256,7 @@ class CampaignToForecast extends \Google\Protobuf\Internal\Message
      */
     public function getConversionRate()
     {
-        return isset($this->conversion_rate) ? $this->conversion_rate : 0.0;
+        return $this->conversion_rate ?? 0.0;
     }
 
     public function hasConversionRate()

@@ -25,7 +25,6 @@ namespace Google\Ads\GoogleAds\V20\Services\Client;
 use Google\Ads\GoogleAds\V20\Enums\LocalServicesLeadSurveyAnswerEnum\SurveyAnswer;
 use Google\Ads\GoogleAds\V20\Services\AppendLeadConversationRequest;
 use Google\Ads\GoogleAds\V20\Services\AppendLeadConversationResponse;
-use Google\Ads\GoogleAds\V20\Services\Client\LocalServicesLeadServiceClient;
 use Google\Ads\GoogleAds\V20\Services\ProvideLeadFeedbackRequest;
 use Google\Ads\GoogleAds\V20\Services\ProvideLeadFeedbackResponse;
 use Google\ApiCore\ApiException;
@@ -77,7 +76,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversation($request);
@@ -115,7 +114,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         try {
@@ -145,7 +144,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->localServicesLeadName('[CUSTOMER_ID]', '[LOCAL_SERVICES_LEAD_ID]');
         $surveyAnswer = SurveyAnswer::UNSPECIFIED;
-        $request = (new ProvideLeadFeedbackRequest())
+        $request = new ProvideLeadFeedbackRequest()
             ->setResourceName($formattedResourceName)
             ->setSurveyAnswer($surveyAnswer);
         $response = $gapicClient->provideLeadFeedback($request);
@@ -183,7 +182,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->localServicesLeadName('[CUSTOMER_ID]', '[LOCAL_SERVICES_LEAD_ID]');
         $surveyAnswer = SurveyAnswer::UNSPECIFIED;
-        $request = (new ProvideLeadFeedbackRequest())
+        $request = new ProvideLeadFeedbackRequest()
             ->setResourceName($formattedResourceName)
             ->setSurveyAnswer($surveyAnswer);
         try {
@@ -213,7 +212,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversationAsync($request)->wait();

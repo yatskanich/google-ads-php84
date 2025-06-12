@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\ConversionValueRuleSetServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateConversionValueRuleSetsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateConversionValueRuleSetsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class ConversionValueRuleSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRuleSetsRequest())
+        $request = new MutateConversionValueRuleSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionValueRuleSets($request);
@@ -112,7 +111,7 @@ class ConversionValueRuleSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRuleSetsRequest())
+        $request = new MutateConversionValueRuleSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class ConversionValueRuleSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRuleSetsRequest())
+        $request = new MutateConversionValueRuleSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionValueRuleSetsAsync($request)->wait();

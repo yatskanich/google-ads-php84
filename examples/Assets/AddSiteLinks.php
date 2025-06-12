@@ -46,24 +46,24 @@ use Google\ApiCore\ApiException;
  */
 class AddSitelinks
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -174,9 +174,7 @@ class AddSitelinks
         ];
 
         // Creates an operation to add each asset.
-        $assetOperations = array_map(function (Asset $asset) {
-            return new AssetOperation(['create' => $asset]);
-        }, $assets);
+        $assetOperations = array_map(fn(Asset $asset) => new AssetOperation(['create' => $asset]), $assets);
 
         // Issues a mutate request to add the assets and print its information.
         $assetServiceClient = $googleAdsClient->getAssetServiceClient();
@@ -215,13 +213,13 @@ class AddSitelinks
         // Creates a CampaignAssetOperation for each asset resource name by linking it to a newly
         // created CampaignAsset.
         $campaignAssetOperations = array_map(
-            function (string $assetResourceName) use ($customerId, $campaignId) {
-                return new CampaignAssetOperation(['create' => new CampaignAsset([
+            fn(string $assetResourceName) => new CampaignAssetOperation([
+                'create' => new CampaignAsset([
                     'asset' => $assetResourceName,
                     'campaign' => ResourceNames::forCampaign($customerId, $campaignId),
                     'field_type' => AssetFieldType::SITELINK
-                ])]);
-            },
+                ])
+            ]),
             $assetResourceNames
         );
 

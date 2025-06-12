@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\RecommendationSubscriptionServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateRecommendationSubscriptionRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateRecommendationSubscriptionResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRecommendationSubscription($request);
@@ -112,7 +111,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRecommendationSubscriptionAsync($request)->wait();

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -208,7 +206,7 @@ class CampaignCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -245,7 +243,7 @@ class CampaignCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionId()
     {
-        return isset($this->criterion_id) ? $this->criterion_id : 0;
+        return $this->criterion_id ?? 0;
     }
 
     public function hasCriterionId()
@@ -312,7 +310,7 @@ class CampaignCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getBidModifier()
     {
-        return isset($this->bid_modifier) ? $this->bid_modifier : 0.0;
+        return $this->bid_modifier ?? 0.0;
     }
 
     public function hasBidModifier()
@@ -350,7 +348,7 @@ class CampaignCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return isset($this->negative) ? $this->negative : false;
+        return $this->negative ?? false;
     }
 
     public function hasNegative()

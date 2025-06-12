@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -225,7 +223,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -428,7 +426,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getJobTitle()
     {
-        return isset($this->job_title) ? $this->job_title : '';
+        return $this->job_title ?? '';
     }
 
     public function hasJobTitle()
@@ -465,7 +463,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getYearStartedPracticing()
     {
-        return isset($this->year_started_practicing) ? $this->year_started_practicing : 0;
+        return $this->year_started_practicing ?? 0;
     }
 
     public function hasYearStartedPracticing()
@@ -559,7 +557,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getNationalProviderIdNumber()
     {
-        return isset($this->national_provider_id_number) ? $this->national_provider_id_number : '';
+        return $this->national_provider_id_number ?? '';
     }
 
     public function hasNationalProviderIdNumber()
@@ -595,7 +593,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getEmailAddress()
     {
-        return isset($this->email_address) ? $this->email_address : '';
+        return $this->email_address ?? '';
     }
 
     public function hasEmailAddress()
@@ -631,7 +629,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getFirstName()
     {
-        return isset($this->first_name) ? $this->first_name : '';
+        return $this->first_name ?? '';
     }
 
     public function hasFirstName()
@@ -667,7 +665,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getMiddleName()
     {
-        return isset($this->middle_name) ? $this->middle_name : '';
+        return $this->middle_name ?? '';
     }
 
     public function hasMiddleName()
@@ -703,7 +701,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getLastName()
     {
-        return isset($this->last_name) ? $this->last_name : '';
+        return $this->last_name ?? '';
     }
 
     public function hasLastName()

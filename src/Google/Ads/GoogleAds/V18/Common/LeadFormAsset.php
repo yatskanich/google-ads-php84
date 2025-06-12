@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -348,7 +346,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getPostSubmitHeadline()
     {
-        return isset($this->post_submit_headline) ? $this->post_submit_headline : '';
+        return $this->post_submit_headline ?? '';
     }
 
     public function hasPostSubmitHeadline()
@@ -386,7 +384,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getPostSubmitDescription()
     {
-        return isset($this->post_submit_description) ? $this->post_submit_description : '';
+        return $this->post_submit_description ?? '';
     }
 
     public function hasPostSubmitDescription()
@@ -536,7 +534,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getBackgroundImageAsset()
     {
-        return isset($this->background_image_asset) ? $this->background_image_asset : '';
+        return $this->background_image_asset ?? '';
     }
 
     public function hasBackgroundImageAsset()
@@ -602,7 +600,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getCustomDisclosure()
     {
-        return isset($this->custom_disclosure) ? $this->custom_disclosure : '';
+        return $this->custom_disclosure ?? '';
     }
 
     public function hasCustomDisclosure()

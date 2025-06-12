@@ -71,15 +71,15 @@ use Google\ApiCore\OperationResponse;
  */
 class AddCompleteCampaignsUsingBatchJob
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
-    private const NUMBER_OF_CAMPAIGNS_TO_ADD = 2;
-    private const NUMBER_OF_AD_GROUPS_TO_ADD = 2;
-    private const NUMBER_OF_KEYWORDS_TO_ADD = 4;
-    private const POLL_FREQUENCY_SECONDS = 1;
-    private const MAX_TOTAL_POLL_INTERVAL_SECONDS = 60;
+    private const int NUMBER_OF_CAMPAIGNS_TO_ADD = 2;
+    private const int NUMBER_OF_AD_GROUPS_TO_ADD = 2;
+    private const int NUMBER_OF_KEYWORDS_TO_ADD = 4;
+    private const int POLL_FREQUENCY_SECONDS = 1;
+    private const int MAX_TOTAL_POLL_INTERVAL_SECONDS = 60;
 
-    private const PAGE_SIZE = 1000;
+    private const int PAGE_SIZE = 1000;
 
     /** @var int the negative temporary ID used in batch job operations. */
     private static $temporaryId = -1;
@@ -88,16 +88,16 @@ class AddCompleteCampaignsUsingBatchJob
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -318,48 +318,41 @@ class AddCompleteCampaignsUsingBatchJob
             $campaignBudgetOperation->getCreate()->getResourceName()
         );
         $mutateOperations = array_merge($mutateOperations, array_map(
-            function (CampaignOperation $campaignOperation) {
-                return new MutateOperation(['campaign_operation' => $campaignOperation]);
-            },
+            fn(CampaignOperation $campaignOperation) => new MutateOperation(['campaign_operation' => $campaignOperation]
+            ),
             $campaignOperations
         ));
 
         // Creates new campaign criterion operations and adds them to the array of mutate
         // operations.
         $mutateOperations = array_merge($mutateOperations, array_map(
-            function (CampaignCriterionOperation $campaignCriterionOperation) {
-                return new MutateOperation(
-                    ['campaign_criterion_operation' => $campaignCriterionOperation]
-                );
-            },
+            fn(CampaignCriterionOperation $campaignCriterionOperation) => new MutateOperation(
+                ['campaign_criterion_operation' => $campaignCriterionOperation]
+            ),
             self::buildCampaignCriterionOperations($campaignOperations)
         ));
 
         // Creates new ad group operations and adds them to the array of mutate operations.
         $adGroupOperations = self::buildAdGroupOperations($customerId, $campaignOperations);
         $mutateOperations = array_merge($mutateOperations, array_map(
-            function (AdGroupOperation $adGroupOperation) {
-                return new MutateOperation(['ad_group_operation' => $adGroupOperation]);
-            },
+            fn(AdGroupOperation $adGroupOperation) => new MutateOperation(['ad_group_operation' => $adGroupOperation]),
             $adGroupOperations
         ));
 
         // Creates new ad group criterion operations and adds them to the array of mutate
         // operations.
         $mutateOperations = array_merge($mutateOperations, array_map(
-            function (AdGroupCriterionOperation $adGroupCriterionOperation) {
-                return new MutateOperation(
-                    ['ad_group_criterion_operation' => $adGroupCriterionOperation]
-                );
-            },
+            fn(AdGroupCriterionOperation $adGroupCriterionOperation) => new MutateOperation(
+                ['ad_group_criterion_operation' => $adGroupCriterionOperation]
+            ),
             self::buildAdGroupCriterionOperations($adGroupOperations)
         ));
 
         // Creates new ad group ad operations and adds them to the array of mutate operations.
         $mutateOperations = array_merge($mutateOperations, array_map(
-            function (AdGroupAdOperation $adGroupAdOperation) {
-                return new MutateOperation(['ad_group_ad_operation' => $adGroupAdOperation]);
-            },
+            fn(AdGroupAdOperation $adGroupAdOperation) => new MutateOperation(
+                ['ad_group_ad_operation' => $adGroupAdOperation]
+            ),
             self::buildAdGroupAdOperations($adGroupOperations)
         ));
 
@@ -514,7 +507,7 @@ class AddCompleteCampaignsUsingBatchJob
                 // handling.
                 $keywordText = sprintf('mars%d', $i);
                 if ($i % 2 == 0) {
-                    $keywordText = $keywordText . '!!!';
+                    $keywordText .= '!!!';
                 }
                 // Creates an ad group criterion using the created keyword text.
                 $adGroupCriterion = new AdGroupCriterion([

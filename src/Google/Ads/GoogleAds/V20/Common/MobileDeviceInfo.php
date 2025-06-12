@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class MobileDeviceInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMobileDeviceConstant()
     {
-        return isset($this->mobile_device_constant) ? $this->mobile_device_constant : '';
+        return $this->mobile_device_constant ?? '';
     }
 
     public function hasMobileDeviceConstant()

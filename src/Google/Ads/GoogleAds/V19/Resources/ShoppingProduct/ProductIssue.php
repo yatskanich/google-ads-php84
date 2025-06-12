@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\ShoppingProduct;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -150,7 +148,7 @@ class ProductIssue extends \Google\Protobuf\Internal\Message
      */
     public function getAttributeName()
     {
-        return isset($this->attribute_name) ? $this->attribute_name : '';
+        return $this->attribute_name ?? '';
     }
 
     public function hasAttributeName()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -46,7 +44,7 @@ class RealTimeBiddingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getOptIn()
     {
-        return isset($this->opt_in) ? $this->opt_in : false;
+        return $this->opt_in ?? false;
     }
 
     public function hasOptIn()

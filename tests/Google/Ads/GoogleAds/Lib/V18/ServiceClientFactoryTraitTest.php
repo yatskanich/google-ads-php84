@@ -185,7 +185,7 @@ class ServiceClientFactoryTraitTest extends TestCase
             ->getMockBuilder(FetchAuthTokenInterface::class)
             ->disableOriginalConstructor()
             ->getMock();
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->withOAuth2Credential($fetchAuthTokenInterfaceMock)
             ->withDeveloperToken(self::$DEVELOPER_TOKEN)
             ->withLoginCustomerId(self::$LOGIN_CUSTOMER_ID)

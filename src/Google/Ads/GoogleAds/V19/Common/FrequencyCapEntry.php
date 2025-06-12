@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -94,7 +92,7 @@ class FrequencyCapEntry extends \Google\Protobuf\Internal\Message
      */
     public function getCap()
     {
-        return isset($this->cap) ? $this->cap : 0;
+        return $this->cap ?? 0;
     }
 
     public function hasCap()

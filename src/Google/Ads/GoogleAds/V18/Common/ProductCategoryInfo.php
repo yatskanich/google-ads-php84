@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -59,7 +57,7 @@ class ProductCategoryInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return isset($this->category_id) ? $this->category_id : 0;
+        return $this->category_id ?? 0;
     }
 
     public function hasCategoryId()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -130,7 +128,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getFeed()
     {
-        return isset($this->feed) ? $this->feed : '';
+        return $this->feed ?? '';
     }
 
     public function hasFeed()
@@ -198,7 +196,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRadius()
     {
-        return isset($this->radius) ? $this->radius : 0;
+        return $this->radius ?? 0;
     }
 
     public function hasRadius()
@@ -301,7 +299,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getEnableCustomerLevelLocationAssetSet()
     {
-        return isset($this->enable_customer_level_location_asset_set) ? $this->enable_customer_level_location_asset_set : false;
+        return $this->enable_customer_level_location_asset_set ?? false;
     }
 
     public function hasEnableCustomerLevelLocationAssetSet()

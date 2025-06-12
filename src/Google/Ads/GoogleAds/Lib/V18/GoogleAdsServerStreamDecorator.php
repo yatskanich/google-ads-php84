@@ -27,19 +27,17 @@ use Google\ApiCore\ServerStream;
  */
 class GoogleAdsServerStreamDecorator extends ServerStream
 {
-    protected ServerStream $serverStream;
-
     /**
      * @param ServerStream $serverStream the ServerStream to wrap
      */
-    public function __construct(ServerStream $serverStream)
+    public function __construct(protected ServerStream $serverStream)
     {
-        $this->serverStream = $serverStream;
     }
 
     /**
      * {@inheritdoc}
      */
+    #[\Override]
     public function readAll()
     {
         foreach ($this->serverStream->readAll() as $response) {
@@ -50,6 +48,7 @@ class GoogleAdsServerStreamDecorator extends ServerStream
     /**
      * {@inheritdoc}
      */
+    #[\Override]
     public function getServerStreamingCall()
     {
         return $this->serverStream->getServerStreamingCall();

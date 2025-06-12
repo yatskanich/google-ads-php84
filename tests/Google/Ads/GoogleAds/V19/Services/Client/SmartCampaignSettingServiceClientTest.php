@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\SmartCampaignSettingServiceClient;
 use Google\Ads\GoogleAds\V19\Services\GetSmartCampaignStatusRequest;
 use Google\Ads\GoogleAds\V19\Services\GetSmartCampaignStatusResponse;
 use Google\Ads\GoogleAds\V19\Services\MutateSmartCampaignSettingsRequest;
@@ -75,7 +74,7 @@ class SmartCampaignSettingServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->smartCampaignSettingName('[CUSTOMER_ID]', '[CAMPAIGN_ID]');
-        $request = (new GetSmartCampaignStatusRequest())
+        $request = new GetSmartCampaignStatusRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->getSmartCampaignStatus($request);
         $this->assertEquals($expectedResponse, $response);
@@ -109,7 +108,7 @@ class SmartCampaignSettingServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->smartCampaignSettingName('[CUSTOMER_ID]', '[CAMPAIGN_ID]');
-        $request = (new GetSmartCampaignStatusRequest())
+        $request = new GetSmartCampaignStatusRequest()
             ->setResourceName($formattedResourceName);
         try {
             $gapicClient->getSmartCampaignStatus($request);
@@ -138,7 +137,7 @@ class SmartCampaignSettingServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateSmartCampaignSettingsRequest())
+        $request = new MutateSmartCampaignSettingsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateSmartCampaignSettings($request);
@@ -176,7 +175,7 @@ class SmartCampaignSettingServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateSmartCampaignSettingsRequest())
+        $request = new MutateSmartCampaignSettingsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -205,7 +204,7 @@ class SmartCampaignSettingServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->smartCampaignSettingName('[CUSTOMER_ID]', '[CAMPAIGN_ID]');
-        $request = (new GetSmartCampaignStatusRequest())
+        $request = new GetSmartCampaignStatusRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->getSmartCampaignStatusAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

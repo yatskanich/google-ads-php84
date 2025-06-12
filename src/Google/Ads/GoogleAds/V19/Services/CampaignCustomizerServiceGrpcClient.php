@@ -46,7 +46,7 @@ class CampaignCustomizerServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.CampaignCustomizerService/MutateCampaignCustomizers',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateCampaignCustomizersResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateCampaignCustomizersResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.AdGroupService' => [
             'MutateAdGroups' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateAdGroupsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateAdGroupsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

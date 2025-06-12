@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CampaignBidModifierService' => [
             'MutateCampaignBidModifiers' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCampaignBidModifiersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCampaignBidModifiersResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

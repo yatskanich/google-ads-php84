@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -85,7 +83,7 @@ class PriceOffer extends \Google\Protobuf\Internal\Message
      */
     public function getHeader()
     {
-        return isset($this->header) ? $this->header : '';
+        return $this->header ?? '';
     }
 
     public function hasHeader()
@@ -121,7 +119,7 @@ class PriceOffer extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()

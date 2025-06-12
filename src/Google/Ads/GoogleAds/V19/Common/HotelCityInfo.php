@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class HotelCityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCityCriterion()
     {
-        return isset($this->city_criterion) ? $this->city_criterion : '';
+        return $this->city_criterion ?? '';
     }
 
     public function hasCityCriterion()

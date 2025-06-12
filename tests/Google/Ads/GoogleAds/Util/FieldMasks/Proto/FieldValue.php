@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -115,7 +113,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getInt32Value()
     {
-        return isset($this->int32_value) ? $this->int32_value : 0;
+        return $this->int32_value ?? 0;
     }
 
     public function hasInt32Value()
@@ -147,7 +145,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getInt64Value()
     {
-        return isset($this->int64_value) ? $this->int64_value : 0;
+        return $this->int64_value ?? 0;
     }
 
     public function hasInt64Value()
@@ -179,7 +177,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getFloatValue()
     {
-        return isset($this->float_value) ? $this->float_value : 0.0;
+        return $this->float_value ?? 0.0;
     }
 
     public function hasFloatValue()
@@ -211,7 +209,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getDoubleValue()
     {
-        return isset($this->double_value) ? $this->double_value : 0.0;
+        return $this->double_value ?? 0.0;
     }
 
     public function hasDoubleValue()
@@ -243,7 +241,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getStringValue()
     {
-        return isset($this->string_value) ? $this->string_value : '';
+        return $this->string_value ?? '';
     }
 
     public function hasStringValue()
@@ -275,7 +273,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getBoolValue()
     {
-        return isset($this->bool_value) ? $this->bool_value : false;
+        return $this->bool_value ?? false;
     }
 
     public function hasBoolValue()
@@ -329,7 +327,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getResourceStatusValue()
     {
-        return isset($this->resource_status_value) ? $this->resource_status_value : 0;
+        return $this->resource_status_value ?? 0;
     }
 
     public function hasResourceStatusValue()
@@ -361,7 +359,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getDynamicSettingValue()
     {
-        return isset($this->dynamic_setting_value) ? $this->dynamic_setting_value : null;
+        return $this->dynamic_setting_value ?? null;
     }
 
     public function hasDynamicSettingValue()
@@ -393,7 +391,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingSettingValue()
     {
-        return isset($this->tracking_setting_value) ? $this->tracking_setting_value : null;
+        return $this->tracking_setting_value ?? null;
     }
 
     public function hasTrackingSettingValue()
@@ -425,7 +423,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getSelectiveOptimizationValue()
     {
-        return isset($this->selective_optimization_value) ? $this->selective_optimization_value : null;
+        return $this->selective_optimization_value ?? null;
     }
 
     public function hasSelectiveOptimizationValue()
@@ -479,7 +477,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationSettingValue()
     {
-        return isset($this->optimization_setting_value) ? $this->optimization_setting_value : null;
+        return $this->optimization_setting_value ?? null;
     }
 
     public function hasOptimizationSettingValue()
@@ -533,7 +531,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getManualCpcValue()
     {
-        return isset($this->manual_cpc_value) ? $this->manual_cpc_value : null;
+        return $this->manual_cpc_value ?? null;
     }
 
     public function hasManualCpcValue()
@@ -565,7 +563,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function getManualCpmValue()
     {
-        return isset($this->manual_cpm_value) ? $this->manual_cpm_value : null;
+        return $this->manual_cpm_value ?? null;
     }
 
     public function hasManualCpmValue()

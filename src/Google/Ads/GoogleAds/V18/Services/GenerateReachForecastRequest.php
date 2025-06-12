@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -122,7 +120,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V18\Services\CampaignDuration $campaignDuration, array $plannedProducts): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -225,7 +223,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -304,7 +302,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCookieFrequencyCap()
     {
-        return isset($this->cookie_frequency_cap) ? $this->cookie_frequency_cap : 0;
+        return $this->cookie_frequency_cap ?? 0;
     }
 
     public function hasCookieFrequencyCap()
@@ -396,7 +394,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getMinEffectiveFrequency()
     {
-        return isset($this->min_effective_frequency) ? $this->min_effective_frequency : 0;
+        return $this->min_effective_frequency ?? 0;
     }
 
     public function hasMinEffectiveFrequency()
@@ -592,7 +590,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerReachGroup()
     {
-        return isset($this->customer_reach_group) ? $this->customer_reach_group : '';
+        return $this->customer_reach_group ?? '';
     }
 
     public function hasCustomerReachGroup()

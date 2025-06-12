@@ -60,7 +60,7 @@ class CustomAudienceServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.CustomAudienceService/MutateCustomAudiences',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateCustomAudiencesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateCustomAudiencesResponse::class, 'decode'],
         $metadata, $options);
     }
 

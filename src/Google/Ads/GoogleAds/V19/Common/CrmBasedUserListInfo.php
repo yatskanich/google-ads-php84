@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -94,7 +92,7 @@ class CrmBasedUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()

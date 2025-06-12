@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -97,7 +95,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPostalCode()
     {
-        return isset($this->postal_code) ? $this->postal_code : '';
+        return $this->postal_code ?? '';
     }
 
     public function hasPostalCode()
@@ -133,7 +131,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getProvinceCode()
     {
-        return isset($this->province_code) ? $this->province_code : '';
+        return $this->province_code ?? '';
     }
 
     public function hasProvinceCode()
@@ -169,7 +167,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -205,7 +203,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getProvinceName()
     {
-        return isset($this->province_name) ? $this->province_name : '';
+        return $this->province_name ?? '';
     }
 
     public function hasProvinceName()
@@ -241,7 +239,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStreetAddress()
     {
-        return isset($this->street_address) ? $this->street_address : '';
+        return $this->street_address ?? '';
     }
 
     public function hasStreetAddress()
@@ -279,7 +277,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStreetAddress2()
     {
-        return isset($this->street_address2) ? $this->street_address2 : '';
+        return $this->street_address2 ?? '';
     }
 
     public function hasStreetAddress2()
@@ -317,7 +315,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCityName()
     {
-        return isset($this->city_name) ? $this->city_name : '';
+        return $this->city_name ?? '';
     }
 
     public function hasCityName()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -46,7 +44,7 @@ class SimilarUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSeedUserList()
     {
-        return isset($this->seed_user_list) ? $this->seed_user_list : '';
+        return $this->seed_user_list ?? '';
     }
 
     public function hasSeedUserList()

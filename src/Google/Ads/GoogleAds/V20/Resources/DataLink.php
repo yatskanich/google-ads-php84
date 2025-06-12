@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -120,7 +118,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function getProductLinkId()
     {
-        return isset($this->product_link_id) ? $this->product_link_id : 0;
+        return $this->product_link_id ?? 0;
     }
 
     public function hasProductLinkId()
@@ -158,7 +156,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function getDataLinkId()
     {
-        return isset($this->data_link_id) ? $this->data_link_id : 0;
+        return $this->data_link_id ?? 0;
     }
 
     public function hasDataLinkId()

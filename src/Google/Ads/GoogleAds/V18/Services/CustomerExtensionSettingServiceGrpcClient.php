@@ -73,7 +73,7 @@ class CustomerExtensionSettingServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerExtensionSettingService/MutateCustomerExtensionSettings',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateCustomerExtensionSettingsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateCustomerExtensionSettingsResponse::class, 'decode'],
         $metadata, $options);
     }
 

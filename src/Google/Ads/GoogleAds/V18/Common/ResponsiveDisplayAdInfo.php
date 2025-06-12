@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -457,7 +455,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBusinessName()
     {
-        return isset($this->business_name) ? $this->business_name : '';
+        return $this->business_name ?? '';
     }
 
     public function hasBusinessName()
@@ -495,7 +493,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMainColor()
     {
-        return isset($this->main_color) ? $this->main_color : '';
+        return $this->main_color ?? '';
     }
 
     public function hasMainColor()
@@ -535,7 +533,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAccentColor()
     {
-        return isset($this->accent_color) ? $this->accent_color : '';
+        return $this->accent_color ?? '';
     }
 
     public function hasAccentColor()
@@ -577,7 +575,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAllowFlexibleColor()
     {
-        return isset($this->allow_flexible_color) ? $this->allow_flexible_color : false;
+        return $this->allow_flexible_color ?? false;
     }
 
     public function hasAllowFlexibleColor()
@@ -617,7 +615,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCallToActionText()
     {
-        return isset($this->call_to_action_text) ? $this->call_to_action_text : '';
+        return $this->call_to_action_text ?? '';
     }
 
     public function hasCallToActionText()
@@ -653,7 +651,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPricePrefix()
     {
-        return isset($this->price_prefix) ? $this->price_prefix : '';
+        return $this->price_prefix ?? '';
     }
 
     public function hasPricePrefix()
@@ -690,7 +688,7 @@ class ResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPromoText()
     {
-        return isset($this->promo_text) ? $this->promo_text : '';
+        return $this->promo_text ?? '';
     }
 
     public function hasPromoText()

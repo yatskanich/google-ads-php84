@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\AdGroupCriterionServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriteriaRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriteriaResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AdGroupCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriteriaRequest())
+        $request = new MutateAdGroupCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriteria($request);
@@ -112,7 +111,7 @@ class AdGroupCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriteriaRequest())
+        $request = new MutateAdGroupCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AdGroupCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriteriaRequest())
+        $request = new MutateAdGroupCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriteriaAsync($request)->wait();

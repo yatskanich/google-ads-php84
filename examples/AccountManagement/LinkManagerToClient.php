@@ -46,14 +46,14 @@ use Google\ApiCore\ApiException;
  */
 class LinkManagerToClient
 {
-    private const MANAGER_CUSTOMER_ID = 'INSERT_MANAGER_CUSTOMER_ID_HERE';
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string MANAGER_CUSTOMER_ID = 'INSERT_MANAGER_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::MANAGER_CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
@@ -275,13 +275,13 @@ class LinkManagerToClient
     private static function createGoogleAdsClient(int $loginCustomerId)
     {
         // Generates a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())
+        $oAuth2Credential = new OAuth2TokenBuilder()
             // Sets the properties based on the default properties file
             ->fromFile()
             ->build();
 
         // Builds and returns the Google Ads client
-        return (new GoogleAdsClientBuilder())
+        return new GoogleAdsClientBuilder()
             // Sets the properties based on the default properties file
             ->fromFile()
             // Uses the OAuth2 credentials created above.

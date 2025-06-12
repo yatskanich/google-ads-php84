@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Errors\ErrorLocation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -79,7 +77,7 @@ class FieldPathElement extends \Google\Protobuf\Internal\Message
      */
     public function getIndex()
     {
-        return isset($this->index) ? $this->index : 0;
+        return $this->index ?? 0;
     }
 
     public function hasIndex()

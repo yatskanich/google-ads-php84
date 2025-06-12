@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\GenerateRecommendationsRequest;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -71,7 +69,7 @@ class BiddingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBiddingStrategyType()
     {
-        return isset($this->bidding_strategy_type) ? $this->bidding_strategy_type : 0;
+        return $this->bidding_strategy_type ?? 0;
     }
 
     public function hasBiddingStrategyType()

@@ -44,7 +44,7 @@ class LocalServicesLeadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.LocalServicesLeadService/AppendLeadConversation',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\AppendLeadConversationResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\AppendLeadConversationResponse::class, 'decode'],
         $metadata, $options);
     }
 

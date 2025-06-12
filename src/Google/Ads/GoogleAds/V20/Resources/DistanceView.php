@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -128,7 +126,7 @@ class DistanceView extends \Google\Protobuf\Internal\Message
      */
     public function getMetricSystem()
     {
-        return isset($this->metric_system) ? $this->metric_system : false;
+        return $this->metric_system ?? false;
     }
 
     public function hasMetricSystem()

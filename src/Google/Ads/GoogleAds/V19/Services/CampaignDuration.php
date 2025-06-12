@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -64,7 +62,7 @@ class CampaignDuration extends \Google\Protobuf\Internal\Message
      */
     public function getDurationInDays()
     {
-        return isset($this->duration_in_days) ? $this->duration_in_days : 0;
+        return $this->duration_in_days ?? 0;
     }
 
     public function hasDurationInDays()

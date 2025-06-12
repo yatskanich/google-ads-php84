@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -138,7 +136,7 @@ class Targeting extends \Google\Protobuf\Internal\Message
      */
     public function getPlannableLocationId()
     {
-        return isset($this->plannable_location_id) ? $this->plannable_location_id : '';
+        return $this->plannable_location_id ?? '';
     }
 
     public function hasPlannableLocationId()

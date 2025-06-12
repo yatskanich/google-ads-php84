@@ -49,18 +49,18 @@ class GenerateUserCredentials
      * @var string the OAuth2 scope for the Google Ads API
      * @see https://developers.google.com/google-ads/api/docs/oauth/internals#scope
      */
-    private const SCOPE = 'https://www.googleapis.com/auth/adwords';
+    private const string SCOPE = 'https://www.googleapis.com/auth/adwords';
 
     /**
      * @var string the Google OAuth2 authorization URI for OAuth2 requests
      * @see https://developers.google.com/identity/protocols/OAuth2InstalledApp#step-2-send-a-request-to-googles-oauth-20-server
      */
-    private const AUTHORIZATION_URI = 'https://accounts.google.com/o/oauth2/v2/auth';
+    private const string AUTHORIZATION_URI = 'https://accounts.google.com/o/oauth2/v2/auth';
 
     /**
      * @var string the OAuth2 call back IP address.
      */
-    private const OAUTH2_CALLBACK_IP_ADDRESS = '127.0.0.1';
+    private const string OAUTH2_CALLBACK_IP_ADDRESS = '127.0.0.1';
 
     public static function main()
     {

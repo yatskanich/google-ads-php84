@@ -24,10 +24,10 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Util\V20\ResourceNames;
 use Google\Ads\GoogleAds\V20\Common\AdImageAsset;
 use Google\Ads\GoogleAds\V20\Common\AdTextAsset;
@@ -68,16 +68,16 @@ use Google\ApiCore\ApiException;
  */
 class AddMerchantCenterDynamicRemarketingCampaign
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const MERCHANT_CENTER_ACCOUNT_ID = 'INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE';
-    private const CAMPAIGN_BUDGET_ID = 'INSERT_CAMPAIGN_BUDGET_ID_HERE';
-    private const USER_LIST_ID = 'INSERT_USER_LIST_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string MERCHANT_CENTER_ACCOUNT_ID = 'INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE';
+    private const string CAMPAIGN_BUDGET_ID = 'INSERT_CAMPAIGN_BUDGET_ID_HERE';
+    private const string USER_LIST_ID = 'INSERT_USER_LIST_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::MERCHANT_CENTER_ACCOUNT_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_BUDGET_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -85,11 +85,11 @@ class AddMerchantCenterDynamicRemarketingCampaign
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

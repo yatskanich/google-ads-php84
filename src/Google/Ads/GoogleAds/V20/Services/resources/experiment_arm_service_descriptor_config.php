@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.ExperimentArmService' => [
             'MutateExperimentArms' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateExperimentArmsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateExperimentArmsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

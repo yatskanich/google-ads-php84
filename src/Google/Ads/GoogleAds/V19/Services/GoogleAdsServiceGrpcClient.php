@@ -57,7 +57,7 @@ class GoogleAdsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.GoogleAdsService/Search',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -84,7 +84,7 @@ class GoogleAdsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_serverStreamRequest('/google.ads.googleads.v19.services.GoogleAdsService/SearchStream',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsStreamResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsStreamResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -210,7 +210,7 @@ class GoogleAdsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.GoogleAdsService/Mutate',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateGoogleAdsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateGoogleAdsResponse::class, 'decode'],
         $metadata, $options);
     }
 

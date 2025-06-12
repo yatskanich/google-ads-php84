@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.CustomerFeedService' => [
             'MutateCustomerFeeds' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateCustomerFeedsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateCustomerFeedsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

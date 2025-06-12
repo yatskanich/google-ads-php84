@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -185,7 +183,7 @@ class GenerateKeywordHistoricalMetricsRequest extends \Google\Protobuf\Internal\
      */
     public function getLanguage()
     {
-        return isset($this->language) ? $this->language : '';
+        return $this->language ?? '';
     }
 
     public function hasLanguage()

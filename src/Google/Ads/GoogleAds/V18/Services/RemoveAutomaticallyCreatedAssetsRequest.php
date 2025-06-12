@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -41,7 +39,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      */
     public static function build(string $adGroupAd, array $assetsWithFieldType): self
     {
-        return (new self())
+        return new self()
             ->setAdGroupAd($adGroupAd)
             ->setAssetsWithFieldType($assetsWithFieldType);
     }

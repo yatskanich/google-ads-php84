@@ -59,7 +59,7 @@ class DataLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.DataLinkService/CreateDataLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\CreateDataLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\CreateDataLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -86,7 +86,7 @@ class DataLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.DataLinkService/RemoveDataLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\RemoveDataLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\RemoveDataLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -113,7 +113,7 @@ class DataLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.DataLinkService/UpdateDataLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\UpdateDataLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\UpdateDataLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 

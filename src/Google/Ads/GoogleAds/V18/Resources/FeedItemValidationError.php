@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -110,7 +108,7 @@ class FeedItemValidationError extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()
@@ -179,7 +177,7 @@ class FeedItemValidationError extends \Google\Protobuf\Internal\Message
      */
     public function getExtraInfo()
     {
-        return isset($this->extra_info) ? $this->extra_info : '';
+        return $this->extra_info ?? '';
     }
 
     public function hasExtraInfo()

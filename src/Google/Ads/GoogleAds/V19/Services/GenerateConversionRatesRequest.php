@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -40,7 +38,7 @@ class GenerateConversionRatesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId);
     }
 
@@ -98,7 +96,7 @@ class GenerateConversionRatesRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerReachGroup()
     {
-        return isset($this->customer_reach_group) ? $this->customer_reach_group : '';
+        return $this->customer_reach_group ?? '';
     }
 
     public function hasCustomerReachGroup()

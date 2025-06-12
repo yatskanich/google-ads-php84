@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\AudienceServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateAudiencesRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateAudiencesResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAudiencesRequest())
+        $request = new MutateAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAudiences($request);
@@ -112,7 +111,7 @@ class AudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAudiencesRequest())
+        $request = new MutateAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAudiencesRequest())
+        $request = new MutateAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAudiencesAsync($request)->wait();

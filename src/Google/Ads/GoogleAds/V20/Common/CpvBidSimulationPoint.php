@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -69,7 +67,7 @@ class CpvBidSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getCpvBidMicros()
     {
-        return isset($this->cpv_bid_micros) ? $this->cpv_bid_micros : 0;
+        return $this->cpv_bid_micros ?? 0;
     }
 
     public function hasCpvBidMicros()
@@ -105,7 +103,7 @@ class CpvBidSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getCostMicros()
     {
-        return isset($this->cost_micros) ? $this->cost_micros : 0;
+        return $this->cost_micros ?? 0;
     }
 
     public function hasCostMicros()
@@ -141,7 +139,7 @@ class CpvBidSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getImpressions()
     {
-        return isset($this->impressions) ? $this->impressions : 0;
+        return $this->impressions ?? 0;
     }
 
     public function hasImpressions()
@@ -177,7 +175,7 @@ class CpvBidSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getViews()
     {
-        return isset($this->views) ? $this->views : 0;
+        return $this->views ?? 0;
     }
 
     public function hasViews()

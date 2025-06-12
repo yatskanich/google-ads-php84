@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CustomerUserAccessInvitationServiceClient;
 use Google\Ads\GoogleAds\V18\Services\CustomerUserAccessInvitationOperation;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomerUserAccessInvitationRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomerUserAccessInvitationResponse;
@@ -75,7 +74,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccessInvitation($request);
@@ -113,7 +112,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +142,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccessInvitationAsync($request)->wait();

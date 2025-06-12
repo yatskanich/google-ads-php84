@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -144,7 +142,7 @@ class AdGroupAdAssetCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getEnabled()
     {
-        return isset($this->enabled) ? $this->enabled : false;
+        return $this->enabled ?? false;
     }
 
     public function hasEnabled()

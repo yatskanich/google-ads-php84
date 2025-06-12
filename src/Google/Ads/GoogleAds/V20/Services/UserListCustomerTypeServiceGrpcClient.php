@@ -55,7 +55,7 @@ class UserListCustomerTypeServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.UserListCustomerTypeService/MutateUserListCustomerTypes',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\MutateUserListCustomerTypesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\MutateUserListCustomerTypesResponse::class, 'decode'],
         $metadata, $options);
     }
 

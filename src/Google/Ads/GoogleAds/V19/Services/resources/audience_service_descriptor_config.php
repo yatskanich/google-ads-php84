@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.AudienceService' => [
             'MutateAudiences' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateAudiencesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateAudiencesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerLifecycleGoalService' => [
             'ConfigureCustomerLifecycleGoals' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\ConfigureCustomerLifecycleGoalsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\ConfigureCustomerLifecycleGoalsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

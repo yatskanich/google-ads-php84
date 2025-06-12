@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -50,7 +48,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      */
     public static function build(string $customerId, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }

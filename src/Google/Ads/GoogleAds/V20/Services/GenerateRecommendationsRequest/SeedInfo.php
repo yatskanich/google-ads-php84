@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -55,7 +53,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUrlSeed()
     {
-        return isset($this->url_seed) ? $this->url_seed : '';
+        return $this->url_seed ?? '';
     }
 
     public function hasUrlSeed()

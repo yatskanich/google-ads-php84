@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -158,7 +156,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getBiddableConversions()
     {
-        return isset($this->biddable_conversions) ? $this->biddable_conversions : 0.0;
+        return $this->biddable_conversions ?? 0.0;
     }
 
     public function hasBiddableConversions()
@@ -194,7 +192,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getBiddableConversionsValue()
     {
-        return isset($this->biddable_conversions_value) ? $this->biddable_conversions_value : 0.0;
+        return $this->biddable_conversions_value ?? 0.0;
     }
 
     public function hasBiddableConversionsValue()
@@ -282,7 +280,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getClicks()
     {
-        return isset($this->clicks) ? $this->clicks : 0;
+        return $this->clicks ?? 0;
     }
 
     public function hasClicks()
@@ -318,7 +316,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getCostMicros()
     {
-        return isset($this->cost_micros) ? $this->cost_micros : 0;
+        return $this->cost_micros ?? 0;
     }
 
     public function hasCostMicros()
@@ -354,7 +352,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getImpressions()
     {
-        return isset($this->impressions) ? $this->impressions : 0;
+        return $this->impressions ?? 0;
     }
 
     public function hasImpressions()
@@ -391,7 +389,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getTopSlotImpressions()
     {
-        return isset($this->top_slot_impressions) ? $this->top_slot_impressions : 0;
+        return $this->top_slot_impressions ?? 0;
     }
 
     public function hasTopSlotImpressions()
@@ -429,7 +427,7 @@ class TargetCpaSimulationPoint extends \Google\Protobuf\Internal\Message
      */
     public function getInteractions()
     {
-        return isset($this->interactions) ? $this->interactions : 0;
+        return $this->interactions ?? 0;
     }
 
     public function hasInteractions()

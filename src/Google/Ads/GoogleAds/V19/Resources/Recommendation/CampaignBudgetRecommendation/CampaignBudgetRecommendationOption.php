@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\Recommendation\CampaignBudgetRecommendation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -55,7 +53,7 @@ class CampaignBudgetRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getBudgetAmountMicros()
     {
-        return isset($this->budget_amount_micros) ? $this->budget_amount_micros : 0;
+        return $this->budget_amount_micros ?? 0;
     }
 
     public function hasBudgetAmountMicros()

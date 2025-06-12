@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\CampaignCriterionServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateCampaignCriteriaRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateCampaignCriteriaResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCriteriaRequest())
+        $request = new MutateCampaignCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCriteria($request);
@@ -112,7 +111,7 @@ class CampaignCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCriteriaRequest())
+        $request = new MutateCampaignCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCriteriaRequest())
+        $request = new MutateCampaignCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCriteriaAsync($request)->wait();

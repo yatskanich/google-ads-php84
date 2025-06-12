@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -62,7 +60,7 @@ class YoutubeVideoIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getChannelId()
     {
-        return isset($this->channel_id) ? $this->channel_id : '';
+        return $this->channel_id ?? '';
     }
 
     public function hasChannelId()
@@ -102,7 +100,7 @@ class YoutubeVideoIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getVideoId()
     {
-        return isset($this->video_id) ? $this->video_id : '';
+        return $this->video_id ?? '';
     }
 
     public function hasVideoId()

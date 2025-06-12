@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -54,7 +52,7 @@ class DataPartnerIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getDataPartnerId()
     {
-        return isset($this->data_partner_id) ? $this->data_partner_id : 0;
+        return $this->data_partner_id ?? 0;
     }
 
     public function hasDataPartnerId()

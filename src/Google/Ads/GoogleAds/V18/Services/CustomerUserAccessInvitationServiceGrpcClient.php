@@ -55,7 +55,7 @@ class CustomerUserAccessInvitationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerUserAccessInvitationService/MutateCustomerUserAccessInvitation',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateCustomerUserAccessInvitationResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateCustomerUserAccessInvitationResponse::class, 'decode'],
         $metadata, $options);
     }
 

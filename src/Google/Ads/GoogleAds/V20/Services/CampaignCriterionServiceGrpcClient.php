@@ -76,7 +76,7 @@ class CampaignCriterionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.CampaignCriterionService/MutateCampaignCriteria',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\MutateCampaignCriteriaResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\MutateCampaignCriteriaResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\AdGroupCriterionLabelServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriterionLabelsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateAdGroupCriterionLabelsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriterionLabels($request);
@@ -112,7 +111,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriterionLabelsAsync($request)->wait();

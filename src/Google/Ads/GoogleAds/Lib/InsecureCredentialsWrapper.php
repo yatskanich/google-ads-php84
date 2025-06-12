@@ -36,7 +36,7 @@ class InsecureCredentialsWrapper extends CredentialsWrapper
      */
     public function __construct(
         FetchAuthTokenInterface $credentialsFetcher,
-        callable $authHttpHandler = null
+        ?callable $authHttpHandler = null
     ) {
         parent::__construct($credentialsFetcher, $authHttpHandler);
     }
@@ -54,6 +54,7 @@ class InsecureCredentialsWrapper extends CredentialsWrapper
      * @param $audience
      * @return callable
      */
+    #[\Override]
     public function getAuthorizationHeaderCallback($audience = null): ?callable
     {
         return null;

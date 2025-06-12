@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -54,7 +52,7 @@ class SearchVolumeRange extends \Google\Protobuf\Internal\Message
      */
     public function getMin()
     {
-        return isset($this->min) ? $this->min : 0;
+        return $this->min ?? 0;
     }
 
     public function hasMin()
@@ -90,7 +88,7 @@ class SearchVolumeRange extends \Google\Protobuf\Internal\Message
      */
     public function getMax()
     {
-        return isset($this->max) ? $this->max : 0;
+        return $this->max ?? 0;
     }
 
     public function hasMax()

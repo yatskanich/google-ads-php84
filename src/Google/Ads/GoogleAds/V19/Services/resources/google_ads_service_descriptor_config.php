@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.GoogleAdsService' => [
             'Mutate' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateGoogleAdsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateGoogleAdsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -45,7 +45,7 @@ return [
                     'resourcesGetMethod' => 'getResults',
                 ],
                 'callType' => \Google\ApiCore\Call::PAGINATED_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -60,7 +60,7 @@ return [
                     'grpcStreamingType' => 'ServerStreaming',
                 ],
                 'callType' => \Google\ApiCore\Call::SERVER_STREAMING_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsStreamResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsStreamResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

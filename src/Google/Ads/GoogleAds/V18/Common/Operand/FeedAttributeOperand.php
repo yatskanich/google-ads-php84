@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common\Operand;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -54,7 +52,7 @@ class FeedAttributeOperand extends \Google\Protobuf\Internal\Message
      */
     public function getFeedId()
     {
-        return isset($this->feed_id) ? $this->feed_id : 0;
+        return $this->feed_id ?? 0;
     }
 
     public function hasFeedId()
@@ -90,7 +88,7 @@ class FeedAttributeOperand extends \Google\Protobuf\Internal\Message
      */
     public function getFeedAttributeId()
     {
-        return isset($this->feed_attribute_id) ? $this->feed_attribute_id : 0;
+        return $this->feed_attribute_id ?? 0;
     }
 
     public function hasFeedAttributeId()

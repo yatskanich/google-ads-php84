@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources\AdGroupCriterion;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -88,7 +86,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getFirstPageCpcMicros()
     {
-        return isset($this->first_page_cpc_micros) ? $this->first_page_cpc_micros : 0;
+        return $this->first_page_cpc_micros ?? 0;
     }
 
     public function hasFirstPageCpcMicros()
@@ -126,7 +124,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getFirstPositionCpcMicros()
     {
-        return isset($this->first_position_cpc_micros) ? $this->first_position_cpc_micros : 0;
+        return $this->first_position_cpc_micros ?? 0;
     }
 
     public function hasFirstPositionCpcMicros()
@@ -164,7 +162,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getTopOfPageCpcMicros()
     {
-        return isset($this->top_of_page_cpc_micros) ? $this->top_of_page_cpc_micros : 0;
+        return $this->top_of_page_cpc_micros ?? 0;
     }
 
     public function hasTopOfPageCpcMicros()
@@ -202,7 +200,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedAddClicksAtFirstPositionCpc()
     {
-        return isset($this->estimated_add_clicks_at_first_position_cpc) ? $this->estimated_add_clicks_at_first_position_cpc : 0;
+        return $this->estimated_add_clicks_at_first_position_cpc ?? 0;
     }
 
     public function hasEstimatedAddClicksAtFirstPositionCpc()
@@ -240,7 +238,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedAddCostAtFirstPositionCpc()
     {
-        return isset($this->estimated_add_cost_at_first_position_cpc) ? $this->estimated_add_cost_at_first_position_cpc : 0;
+        return $this->estimated_add_cost_at_first_position_cpc ?? 0;
     }
 
     public function hasEstimatedAddCostAtFirstPositionCpc()

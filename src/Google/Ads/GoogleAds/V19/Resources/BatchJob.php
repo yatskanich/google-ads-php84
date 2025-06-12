@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -127,7 +125,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -164,7 +162,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getNextAddSequenceToken()
     {
-        return isset($this->next_add_sequence_token) ? $this->next_add_sequence_token : '';
+        return $this->next_add_sequence_token ?? '';
     }
 
     public function hasNextAddSequenceToken()
@@ -265,7 +263,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return isset($this->long_running_operation) ? $this->long_running_operation : '';
+        return $this->long_running_operation ?? '';
     }
 
     public function hasLongRunningOperation()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -59,7 +57,7 @@ class UploadUserDataResponse extends \Google\Protobuf\Internal\Message
      */
     public function getUploadDateTime()
     {
-        return isset($this->upload_date_time) ? $this->upload_date_time : '';
+        return $this->upload_date_time ?? '';
     }
 
     public function hasUploadDateTime()
@@ -96,7 +94,7 @@ class UploadUserDataResponse extends \Google\Protobuf\Internal\Message
      */
     public function getReceivedOperationsCount()
     {
-        return isset($this->received_operations_count) ? $this->received_operations_count : 0;
+        return $this->received_operations_count ?? 0;
     }
 
     public function hasReceivedOperationsCount()

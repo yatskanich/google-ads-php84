@@ -56,7 +56,7 @@ class CustomerManagerLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerManagerLinkService/MutateCustomerManagerLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateCustomerManagerLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateCustomerManagerLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -86,7 +86,7 @@ class CustomerManagerLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerManagerLinkService/MoveManagerLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MoveManagerLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MoveManagerLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 

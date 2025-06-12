@@ -36,6 +36,7 @@ class GoogleAdsFailuresInterceptor extends Interceptor
      * @param array $options
      * @return GoogleAdsFailuresUnaryCall
      */
+    #[\Override]
     public function interceptUnaryUnary(
         $method,
         $argument,

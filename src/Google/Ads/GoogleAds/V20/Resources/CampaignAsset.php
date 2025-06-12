@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -159,7 +157,7 @@ class CampaignAsset extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -195,7 +193,7 @@ class CampaignAsset extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()

@@ -25,8 +25,8 @@ return [
         'google.ads.googleads.v18.services.BatchJobService' => [
             'RunBatchJob' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
-                    'metadataReturnType' => '\Google\Ads\GoogleAds\V18\Resources\BatchJob\BatchJobMetadata',
+                    'operationReturnType' => \Google\Protobuf\GPBEmpty::class,
+                    'metadataReturnType' => \Google\Ads\GoogleAds\V18\Resources\BatchJob\BatchJobMetadata::class,
                     'initialPollDelayMillis' => '500',
                     'pollDelayMultiplier' => '1.5',
                     'maxPollDelayMillis' => '5000',
@@ -44,7 +44,7 @@ return [
             ],
             'AddBatchJobOperations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\AddBatchJobOperationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\AddBatchJobOperationsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',
@@ -64,7 +64,7 @@ return [
                     'resourcesGetMethod' => 'getResults',
                 ],
                 'callType' => \Google\ApiCore\Call::PAGINATED_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\ListBatchJobResultsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\ListBatchJobResultsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',
@@ -76,7 +76,7 @@ return [
             ],
             'MutateBatchJob' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateBatchJobResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateBatchJobResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

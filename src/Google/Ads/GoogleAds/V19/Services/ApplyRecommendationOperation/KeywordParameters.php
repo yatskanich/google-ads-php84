@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\ApplyRecommendationOperation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -63,7 +61,7 @@ class KeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -126,7 +124,7 @@ class KeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
+        return $this->cpc_bid_micros ?? 0;
     }
 
     public function hasCpcBidMicros()

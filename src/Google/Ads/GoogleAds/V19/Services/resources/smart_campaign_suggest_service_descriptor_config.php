@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.SmartCampaignSuggestService' => [
             'SuggestKeywordThemes' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SuggestKeywordThemesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SuggestKeywordThemesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'SuggestSmartCampaignAd' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignAdResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignAdResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'SuggestSmartCampaignBudgetOptions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignBudgetOptionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignBudgetOptionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

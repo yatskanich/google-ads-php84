@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -94,7 +92,7 @@ class PlannedProduct extends \Google\Protobuf\Internal\Message
      */
     public function getPlannableProductCode()
     {
-        return isset($this->plannable_product_code) ? $this->plannable_product_code : '';
+        return $this->plannable_product_code ?? '';
     }
 
     public function hasPlannableProductCode()
@@ -135,7 +133,7 @@ class PlannedProduct extends \Google\Protobuf\Internal\Message
      */
     public function getBudgetMicros()
     {
-        return isset($this->budget_micros) ? $this->budget_micros : 0;
+        return $this->budget_micros ?? 0;
     }
 
     public function hasBudgetMicros()
@@ -177,7 +175,7 @@ class PlannedProduct extends \Google\Protobuf\Internal\Message
      */
     public function getConversionRate()
     {
-        return isset($this->conversion_rate) ? $this->conversion_rate : 0.0;
+        return $this->conversion_rate ?? 0.0;
     }
 
     public function hasConversionRate()

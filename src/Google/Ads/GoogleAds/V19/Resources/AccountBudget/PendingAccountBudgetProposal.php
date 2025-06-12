@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\AccountBudget;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -118,7 +116,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudgetProposal()
     {
-        return isset($this->account_budget_proposal) ? $this->account_budget_proposal : '';
+        return $this->account_budget_proposal ?? '';
     }
 
     public function hasAccountBudgetProposal()
@@ -184,7 +182,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -220,7 +218,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getStartDateTime()
     {
-        return isset($this->start_date_time) ? $this->start_date_time : '';
+        return $this->start_date_time ?? '';
     }
 
     public function hasStartDateTime()
@@ -257,7 +255,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
+        return $this->purchase_order_number ?? '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -294,7 +292,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getNotes()
     {
-        return isset($this->notes) ? $this->notes : '';
+        return $this->notes ?? '';
     }
 
     public function hasNotes()
@@ -331,7 +329,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getCreationDateTime()
     {
-        return isset($this->creation_date_time) ? $this->creation_date_time : '';
+        return $this->creation_date_time ?? '';
     }
 
     public function hasCreationDateTime()

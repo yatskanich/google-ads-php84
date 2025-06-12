@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -116,7 +114,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLinkText()
     {
-        return isset($this->link_text) ? $this->link_text : '';
+        return $this->link_text ?? '';
     }
 
     public function hasLinkText()
@@ -155,7 +153,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLine1()
     {
-        return isset($this->line1) ? $this->line1 : '';
+        return $this->line1 ?? '';
     }
 
     public function hasLine1()
@@ -195,7 +193,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLine2()
     {
-        return isset($this->line2) ? $this->line2 : '';
+        return $this->line2 ?? '';
     }
 
     public function hasLine2()
@@ -285,7 +283,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -350,7 +348,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()

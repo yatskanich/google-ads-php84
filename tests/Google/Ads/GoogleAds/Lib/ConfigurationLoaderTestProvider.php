@@ -33,7 +33,7 @@ class ConfigurationLoaderTestProvider
      */
     public static function getFilePathForTestIniFile()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'google_ads_php.ini';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'google_ads_php.ini';
     }
 
     /**
@@ -44,7 +44,7 @@ class ConfigurationLoaderTestProvider
      */
     public static function getFilePathToFakeHome()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'fakehome';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'fakehome';
     }
 
     /**

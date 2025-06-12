@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class SiteSeed extends \Google\Protobuf\Internal\Message
      */
     public function getSite()
     {
-        return isset($this->site) ? $this->site : '';
+        return $this->site ?? '';
     }
 
     public function hasSite()

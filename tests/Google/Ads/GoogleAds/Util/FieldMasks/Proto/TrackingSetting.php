@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -40,7 +38,7 @@ class TrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrl()
     {
-        return isset($this->tracking_url) ? $this->tracking_url : '';
+        return $this->tracking_url ?? '';
     }
 
     public function hasTrackingUrl()

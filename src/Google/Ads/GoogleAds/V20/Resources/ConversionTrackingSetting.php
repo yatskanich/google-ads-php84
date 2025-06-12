@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -118,7 +116,7 @@ class ConversionTrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getConversionTrackingId()
     {
-        return isset($this->conversion_tracking_id) ? $this->conversion_tracking_id : 0;
+        return $this->conversion_tracking_id ?? 0;
     }
 
     public function hasConversionTrackingId()
@@ -159,7 +157,7 @@ class ConversionTrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCrossAccountConversionTrackingId()
     {
-        return isset($this->cross_account_conversion_tracking_id) ? $this->cross_account_conversion_tracking_id : 0;
+        return $this->cross_account_conversion_tracking_id ?? 0;
     }
 
     public function hasCrossAccountConversionTrackingId()

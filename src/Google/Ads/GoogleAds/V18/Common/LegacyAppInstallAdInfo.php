@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -77,7 +75,7 @@ class LegacyAppInstallAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()
@@ -139,7 +137,7 @@ class LegacyAppInstallAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadline()
     {
-        return isset($this->headline) ? $this->headline : '';
+        return $this->headline ?? '';
     }
 
     public function hasHeadline()
@@ -175,7 +173,7 @@ class LegacyAppInstallAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription1()
     {
-        return isset($this->description1) ? $this->description1 : '';
+        return $this->description1 ?? '';
     }
 
     public function hasDescription1()
@@ -211,7 +209,7 @@ class LegacyAppInstallAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription2()
     {
-        return isset($this->description2) ? $this->description2 : '';
+        return $this->description2 ?? '';
     }
 
     public function hasDescription2()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class OperatingSystemVersionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getOperatingSystemVersionConstant()
     {
-        return isset($this->operating_system_version_constant) ? $this->operating_system_version_constant : '';
+        return $this->operating_system_version_constant ?? '';
     }
 
     public function hasOperatingSystemVersionConstant()

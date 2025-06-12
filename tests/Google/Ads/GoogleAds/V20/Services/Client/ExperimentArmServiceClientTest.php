@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\ExperimentArmServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateExperimentArmsRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateExperimentArmsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateExperimentArms($request);
@@ -112,7 +111,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateExperimentArmsAsync($request)->wait();

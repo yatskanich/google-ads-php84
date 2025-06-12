@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.BiddingStrategyService' => [
             'MutateBiddingStrategies' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateBiddingStrategiesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateBiddingStrategiesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

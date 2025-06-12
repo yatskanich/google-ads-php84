@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -96,7 +94,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppAnalyticsProviderId()
     {
-        return isset($this->app_analytics_provider_id) ? $this->app_analytics_provider_id : 0;
+        return $this->app_analytics_provider_id ?? 0;
     }
 
     public function hasAppAnalyticsProviderId()
@@ -145,7 +143,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()

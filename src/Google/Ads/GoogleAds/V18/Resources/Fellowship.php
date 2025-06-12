@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -55,7 +53,7 @@ class Fellowship extends \Google\Protobuf\Internal\Message
      */
     public function getInstitutionName()
     {
-        return isset($this->institution_name) ? $this->institution_name : '';
+        return $this->institution_name ?? '';
     }
 
     public function hasInstitutionName()
@@ -91,7 +89,7 @@ class Fellowship extends \Google\Protobuf\Internal\Message
      */
     public function getCompletionYear()
     {
-        return isset($this->completion_year) ? $this->completion_year : 0;
+        return $this->completion_year ?? 0;
     }
 
     public function hasCompletionYear()

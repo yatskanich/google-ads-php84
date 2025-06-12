@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CampaignFeedServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateCampaignFeedsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCampaignFeedsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignFeedsRequest())
+        $request = new MutateCampaignFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignFeeds($request);
@@ -112,7 +111,7 @@ class CampaignFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignFeedsRequest())
+        $request = new MutateCampaignFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignFeedsRequest())
+        $request = new MutateCampaignFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignFeedsAsync($request)->wait();

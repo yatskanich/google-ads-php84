@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -76,7 +74,7 @@ class GenerateAudienceOverlapInsightsRequest extends \Google\Protobuf\Internal\M
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Common\LocationInfo $countryLocation, \Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute $primaryAttribute, array $dimensions): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setCountryLocation($countryLocation)
             ->setPrimaryAttribute($primaryAttribute)

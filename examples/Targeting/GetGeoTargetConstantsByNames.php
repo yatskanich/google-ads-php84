@@ -23,10 +23,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\V20\Enums\GeoTargetConstantStatusEnum\GeoTargetConstantStatus;
 use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
 use Google\Ads\GoogleAds\V20\Services\GeoTargetConstantSuggestion;
@@ -41,10 +41,10 @@ class GetGeoTargetConstantsByNames
 {
     // Locale is using ISO 639-1 format. If an invalid locale is given, 'en' will be used by
     // default.
-    private const LOCALE = 'en';
+    private const string LOCALE = 'en';
     // A list of country codes can be referenced here:
     // https://developers.google.com/google-ads/api/reference/data/geotargets.
-    private const COUNTRY_CODE = 'FR';
+    private const string COUNTRY_CODE = 'FR';
     // The location names to get suggested geo target constants.
     private static $LOCATION_NAMES = ['Paris', 'Quebec', 'Spain', 'Deutschland'];
 
@@ -52,18 +52,18 @@ class GetGeoTargetConstantsByNames
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::LOCATION_NAMES => GetOpt::MULTIPLE_ARGUMENT,
             ArgumentNames::LOCALE => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::COUNTRY_CODE => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

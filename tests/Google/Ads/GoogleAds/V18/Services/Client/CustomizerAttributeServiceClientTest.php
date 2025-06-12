@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CustomizerAttributeServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomizerAttributesRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomizerAttributesResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomizerAttributes($request);
@@ -112,7 +111,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomizerAttributesAsync($request)->wait();

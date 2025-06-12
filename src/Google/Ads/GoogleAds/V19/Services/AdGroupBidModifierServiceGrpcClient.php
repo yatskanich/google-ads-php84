@@ -71,7 +71,7 @@ class AdGroupBidModifierServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AdGroupBidModifierService/MutateAdGroupBidModifiers',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateAdGroupBidModifiersResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateAdGroupBidModifiersResponse::class, 'decode'],
         $metadata, $options);
     }
 

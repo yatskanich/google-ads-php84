@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CampaignLabelService' => [
             'MutateCampaignLabels' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCampaignLabelsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCampaignLabelsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

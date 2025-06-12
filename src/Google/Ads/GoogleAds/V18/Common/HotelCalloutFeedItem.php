@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -58,7 +56,7 @@ class HotelCalloutFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return isset($this->text) ? $this->text : '';
+        return $this->text ?? '';
     }
 
     public function hasText()
@@ -96,7 +94,7 @@ class HotelCalloutFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return isset($this->language_code) ? $this->language_code : '';
+        return $this->language_code ?? '';
     }
 
     public function hasLanguageCode()

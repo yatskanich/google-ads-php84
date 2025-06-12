@@ -25,11 +25,11 @@ return [
         'google.ads.googleads.v19.services.ReachPlanService' => [
             'GenerateConversionRates' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\GenerateConversionRatesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\GenerateConversionRatesResponse::class,
             ],
             'GenerateReachForecast' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\GenerateReachForecastResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\GenerateReachForecastResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -41,11 +41,11 @@ return [
             ],
             'ListPlannableLocations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\ListPlannableLocationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\ListPlannableLocationsResponse::class,
             ],
             'ListPlannableProducts' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\ListPlannableProductsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\ListPlannableProductsResponse::class,
             ],
         ],
     ],

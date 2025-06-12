@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -122,7 +120,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getSharedSet()
     {
-        return isset($this->shared_set) ? $this->shared_set : '';
+        return $this->shared_set ?? '';
     }
 
     public function hasSharedSet()
@@ -159,7 +157,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionId()
     {
-        return isset($this->criterion_id) ? $this->criterion_id : 0;
+        return $this->criterion_id ?? 0;
     }
 
     public function hasCriterionId()

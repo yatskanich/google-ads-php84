@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -61,7 +59,7 @@ class TextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadline()
     {
-        return isset($this->headline) ? $this->headline : '';
+        return $this->headline ?? '';
     }
 
     public function hasHeadline()
@@ -97,7 +95,7 @@ class TextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription1()
     {
-        return isset($this->description1) ? $this->description1 : '';
+        return $this->description1 ?? '';
     }
 
     public function hasDescription1()
@@ -133,7 +131,7 @@ class TextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription2()
     {
-        return isset($this->description2) ? $this->description2 : '';
+        return $this->description2 ?? '';
     }
 
     public function hasDescription2()

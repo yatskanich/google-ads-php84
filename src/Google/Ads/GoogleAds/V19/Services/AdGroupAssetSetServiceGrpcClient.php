@@ -46,7 +46,7 @@ class AdGroupAssetSetServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AdGroupAssetSetService/MutateAdGroupAssetSets',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateAdGroupAssetSetsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateAdGroupAssetSetsResponse::class, 'decode'],
         $metadata, $options);
     }
 

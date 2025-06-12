@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -70,7 +68,7 @@ class AddBatchJobOperationsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $resourceName, string $sequenceToken, array $mutateOperations): self
     {
-        return (new self())
+        return new self()
             ->setResourceName($resourceName)
             ->setSequenceToken($sequenceToken)
             ->setMutateOperations($mutateOperations);
@@ -94,7 +92,7 @@ class AddBatchJobOperationsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function buildFromResourceNameMutateOperations(string $resourceName, array $mutateOperations): self
     {
-        return (new self())
+        return new self()
             ->setResourceName($resourceName)
             ->setMutateOperations($mutateOperations);
     }

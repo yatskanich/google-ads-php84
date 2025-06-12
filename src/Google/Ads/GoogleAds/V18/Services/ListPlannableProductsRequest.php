@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -35,7 +33,7 @@ class ListPlannableProductsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $plannableLocationId): self
     {
-        return (new self())
+        return new self()
             ->setPlannableLocationId($plannableLocationId);
     }
 

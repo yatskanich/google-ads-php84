@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class MaximizeClicksOptInRecommendation extends \Google\Protobuf\Internal\Messag
      */
     public function getRecommendedBudgetAmountMicros()
     {
-        return isset($this->recommended_budget_amount_micros) ? $this->recommended_budget_amount_micros : 0;
+        return $this->recommended_budget_amount_micros ?? 0;
     }
 
     public function hasRecommendedBudgetAmountMicros()

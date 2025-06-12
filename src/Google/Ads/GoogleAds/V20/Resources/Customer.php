@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -333,7 +331,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -369,7 +367,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getDescriptiveName()
     {
-        return isset($this->descriptive_name) ? $this->descriptive_name : '';
+        return $this->descriptive_name ?? '';
     }
 
     public function hasDescriptiveName()
@@ -407,7 +405,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -445,7 +443,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTimeZone()
     {
-        return isset($this->time_zone) ? $this->time_zone : '';
+        return $this->time_zone ?? '';
     }
 
     public function hasTimeZone()
@@ -482,7 +480,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -520,7 +518,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -558,7 +556,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getAutoTaggingEnabled()
     {
-        return isset($this->auto_tagging_enabled) ? $this->auto_tagging_enabled : false;
+        return $this->auto_tagging_enabled ?? false;
     }
 
     public function hasAutoTaggingEnabled()
@@ -598,7 +596,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getHasPartnersBadge()
     {
-        return isset($this->has_partners_badge) ? $this->has_partners_badge : false;
+        return $this->has_partners_badge ?? false;
     }
 
     public function hasHasPartnersBadge()
@@ -637,7 +635,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getManager()
     {
-        return isset($this->manager) ? $this->manager : false;
+        return $this->manager ?? false;
     }
 
     public function hasManager()
@@ -673,7 +671,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTestAccount()
     {
-        return isset($this->test_account) ? $this->test_account : false;
+        return $this->test_account ?? false;
     }
 
     public function hasTestAccount()
@@ -855,7 +853,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
+        return $this->optimization_score ?? 0.0;
     }
 
     public function hasOptimizationScore()
@@ -964,7 +962,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getLocationAssetAutoMigrationDone()
     {
-        return isset($this->location_asset_auto_migration_done) ? $this->location_asset_auto_migration_done : false;
+        return $this->location_asset_auto_migration_done ?? false;
     }
 
     public function hasLocationAssetAutoMigrationDone()
@@ -1002,7 +1000,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getImageAssetAutoMigrationDone()
     {
-        return isset($this->image_asset_auto_migration_done) ? $this->image_asset_auto_migration_done : false;
+        return $this->image_asset_auto_migration_done ?? false;
     }
 
     public function hasImageAssetAutoMigrationDone()
@@ -1040,7 +1038,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getLocationAssetAutoMigrationDoneDateTime()
     {
-        return isset($this->location_asset_auto_migration_done_date_time) ? $this->location_asset_auto_migration_done_date_time : '';
+        return $this->location_asset_auto_migration_done_date_time ?? '';
     }
 
     public function hasLocationAssetAutoMigrationDoneDateTime()
@@ -1078,7 +1076,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getImageAssetAutoMigrationDoneDateTime()
     {
-        return isset($this->image_asset_auto_migration_done_date_time) ? $this->image_asset_auto_migration_done_date_time : '';
+        return $this->image_asset_auto_migration_done_date_time ?? '';
     }
 
     public function hasImageAssetAutoMigrationDoneDateTime()

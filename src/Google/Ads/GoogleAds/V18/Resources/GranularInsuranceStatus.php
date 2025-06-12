@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -76,7 +74,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getGeoCriterionId()
     {
-        return isset($this->geo_criterion_id) ? $this->geo_criterion_id : 0;
+        return $this->geo_criterion_id ?? 0;
     }
 
     public function hasGeoCriterionId()
@@ -118,7 +116,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return isset($this->category_id) ? $this->category_id : '';
+        return $this->category_id ?? '';
     }
 
     public function hasCategoryId()
@@ -157,7 +155,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getVerificationStatus()
     {
-        return isset($this->verification_status) ? $this->verification_status : 0;
+        return $this->verification_status ?? 0;
     }
 
     public function hasVerificationStatus()

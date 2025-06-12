@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerCustomizerService' => [
             'MutateCustomerCustomizers' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCustomerCustomizersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCustomerCustomizersResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

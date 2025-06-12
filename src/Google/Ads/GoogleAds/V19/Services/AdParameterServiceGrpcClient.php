@@ -60,7 +60,7 @@ class AdParameterServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AdParameterService/MutateAdParameters',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateAdParametersResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateAdParametersResponse::class, 'decode'],
         $metadata, $options);
     }
 

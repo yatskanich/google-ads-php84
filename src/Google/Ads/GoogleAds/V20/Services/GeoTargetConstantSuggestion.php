@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -90,7 +88,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getLocale()
     {
-        return isset($this->locale) ? $this->locale : '';
+        return $this->locale ?? '';
     }
 
     public function hasLocale()
@@ -130,7 +128,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getReach()
     {
-        return isset($this->reach) ? $this->reach : 0;
+        return $this->reach ?? 0;
     }
 
     public function hasReach()
@@ -168,7 +166,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.AdGroupFeedService' => [
             'MutateAdGroupFeeds' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateAdGroupFeedsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateAdGroupFeedsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

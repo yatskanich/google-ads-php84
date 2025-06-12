@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign\VideoCampaignSettings;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -63,7 +61,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowInStream()
     {
-        return isset($this->allow_in_stream) ? $this->allow_in_stream : false;
+        return $this->allow_in_stream ?? false;
     }
 
     public function hasAllowInStream()
@@ -99,7 +97,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowInFeed()
     {
-        return isset($this->allow_in_feed) ? $this->allow_in_feed : false;
+        return $this->allow_in_feed ?? false;
     }
 
     public function hasAllowInFeed()
@@ -135,7 +133,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowShorts()
     {
-        return isset($this->allow_shorts) ? $this->allow_shorts : false;
+        return $this->allow_shorts ?? false;
     }
 
     public function hasAllowShorts()

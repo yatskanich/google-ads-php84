@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\ApplyRecommendationOperation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class CampaignBudgetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewBudgetAmountMicros()
     {
-        return isset($this->new_budget_amount_micros) ? $this->new_budget_amount_micros : 0;
+        return $this->new_budget_amount_micros ?? 0;
     }
 
     public function hasNewBudgetAmountMicros()

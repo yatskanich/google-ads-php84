@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\PaymentsAccountServiceClient;
 use Google\Ads\GoogleAds\V19\Services\ListPaymentsAccountsRequest;
 use Google\Ads\GoogleAds\V19\Services\ListPaymentsAccountsResponse;
 use Google\ApiCore\ApiException;
@@ -73,7 +72,7 @@ class PaymentsAccountServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new ListPaymentsAccountsRequest())
+        $request = new ListPaymentsAccountsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->listPaymentsAccounts($request);
         $this->assertEquals($expectedResponse, $response);
@@ -107,7 +106,7 @@ class PaymentsAccountServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new ListPaymentsAccountsRequest())
+        $request = new ListPaymentsAccountsRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->listPaymentsAccounts($request);
@@ -135,7 +134,7 @@ class PaymentsAccountServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new ListPaymentsAccountsRequest())
+        $request = new ListPaymentsAccountsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->listPaymentsAccountsAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

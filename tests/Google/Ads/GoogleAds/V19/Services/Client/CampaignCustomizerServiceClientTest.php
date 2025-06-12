@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignCustomizerServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignCustomizersRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignCustomizersResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCustomizers($request);
@@ -112,7 +111,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCustomizersAsync($request)->wait();

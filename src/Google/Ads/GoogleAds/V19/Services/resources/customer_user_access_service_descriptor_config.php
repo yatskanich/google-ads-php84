@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerUserAccessService' => [
             'MutateCustomerUserAccess' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCustomerUserAccessResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCustomerUserAccessResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

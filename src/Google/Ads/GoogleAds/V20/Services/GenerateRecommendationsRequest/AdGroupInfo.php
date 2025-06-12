@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -72,7 +70,7 @@ class AdGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupType()
     {
-        return isset($this->ad_group_type) ? $this->ad_group_type : 0;
+        return $this->ad_group_type ?? 0;
     }
 
     public function hasAdGroupType()

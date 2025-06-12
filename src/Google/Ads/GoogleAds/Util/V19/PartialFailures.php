@@ -30,6 +30,6 @@ final class PartialFailures
      */
     public static function isPartialFailure(Message $message)
     {
-        return strlen($message->serializeToString()) === 0;
+        return strlen((string)$message->serializeToString()) === 0;
     }
 }

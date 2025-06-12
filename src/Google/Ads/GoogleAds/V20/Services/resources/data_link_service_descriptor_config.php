@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.DataLinkService' => [
             'CreateDataLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\CreateDataLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\CreateDataLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'RemoveDataLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\RemoveDataLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\RemoveDataLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'UpdateDataLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\UpdateDataLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\UpdateDataLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

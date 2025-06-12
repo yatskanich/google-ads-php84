@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\SmartCampaignSuggestServiceClient;
 use Google\Ads\GoogleAds\V18\Services\SmartCampaignSuggestionInfo;
 use Google\Ads\GoogleAds\V18\Services\SuggestKeywordThemesRequest;
 use Google\Ads\GoogleAds\V18\Services\SuggestKeywordThemesResponse;
@@ -79,7 +78,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $suggestionInfo = new SmartCampaignSuggestionInfo();
-        $request = (new SuggestKeywordThemesRequest())
+        $request = new SuggestKeywordThemesRequest()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
         $response = $gapicClient->suggestKeywordThemes($request);
@@ -117,7 +116,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $suggestionInfo = new SmartCampaignSuggestionInfo();
-        $request = (new SuggestKeywordThemesRequest())
+        $request = new SuggestKeywordThemesRequest()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
         try {
@@ -147,7 +146,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $suggestionInfo = new SmartCampaignSuggestionInfo();
-        $request = (new SuggestSmartCampaignAdRequest())
+        $request = new SuggestSmartCampaignAdRequest()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
         $response = $gapicClient->suggestSmartCampaignAd($request);
@@ -185,7 +184,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $suggestionInfo = new SmartCampaignSuggestionInfo();
-        $request = (new SuggestSmartCampaignAdRequest())
+        $request = new SuggestSmartCampaignAdRequest()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
         try {
@@ -215,7 +214,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedCampaign = $gapicClient->campaignName('[CUSTOMER_ID]', '[CAMPAIGN_ID]');
-        $request = (new SuggestSmartCampaignBudgetOptionsRequest())
+        $request = new SuggestSmartCampaignBudgetOptionsRequest()
             ->setCustomerId($customerId)
             ->setCampaign($formattedCampaign);
         $response = $gapicClient->suggestSmartCampaignBudgetOptions($request);
@@ -253,7 +252,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedCampaign = $gapicClient->campaignName('[CUSTOMER_ID]', '[CAMPAIGN_ID]');
-        $request = (new SuggestSmartCampaignBudgetOptionsRequest())
+        $request = new SuggestSmartCampaignBudgetOptionsRequest()
             ->setCustomerId($customerId)
             ->setCampaign($formattedCampaign);
         try {
@@ -283,7 +282,7 @@ class SmartCampaignSuggestServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $suggestionInfo = new SmartCampaignSuggestionInfo();
-        $request = (new SuggestKeywordThemesRequest())
+        $request = new SuggestKeywordThemesRequest()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
         $response = $gapicClient->suggestKeywordThemesAsync($request)->wait();

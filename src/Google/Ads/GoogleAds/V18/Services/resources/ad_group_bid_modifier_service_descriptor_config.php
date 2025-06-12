@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.AdGroupBidModifierService' => [
             'MutateAdGroupBidModifiers' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateAdGroupBidModifiersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateAdGroupBidModifiersResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

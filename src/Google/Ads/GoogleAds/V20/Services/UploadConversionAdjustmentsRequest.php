@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -75,7 +73,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, array $conversionAdjustments, bool $partialFailure): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -245,7 +243,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      */
     public function getJobId()
     {
-        return isset($this->job_id) ? $this->job_id : 0;
+        return $this->job_id ?? 0;
     }
 
     public function hasJobId()

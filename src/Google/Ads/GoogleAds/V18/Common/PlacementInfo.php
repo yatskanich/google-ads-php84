@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -49,7 +47,7 @@ class PlacementInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return isset($this->url) ? $this->url : '';
+        return $this->url ?? '';
     }
 
     public function hasUrl()

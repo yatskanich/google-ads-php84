@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\TravelAssetSuggestionServiceClient;
 use Google\Ads\GoogleAds\V18\Services\SuggestTravelAssetsRequest;
 use Google\Ads\GoogleAds\V18\Services\SuggestTravelAssetsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         $response = $gapicClient->suggestTravelAssets($request);
@@ -112,7 +111,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         try {
@@ -142,7 +141,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         $response = $gapicClient->suggestTravelAssetsAsync($request)->wait();

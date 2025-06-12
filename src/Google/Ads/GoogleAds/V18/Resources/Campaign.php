@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -706,7 +704,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -746,7 +744,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -1024,7 +1022,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -1648,7 +1646,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBaseCampaign()
     {
-        return isset($this->base_campaign) ? $this->base_campaign : '';
+        return $this->base_campaign ?? '';
     }
 
     public function hasBaseCampaign()
@@ -1686,7 +1684,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignBudget()
     {
-        return isset($this->campaign_budget) ? $this->campaign_budget : '';
+        return $this->campaign_budget ?? '';
     }
 
     public function hasCampaignBudget()
@@ -1797,7 +1795,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return isset($this->start_date) ? $this->start_date : '';
+        return $this->start_date ?? '';
     }
 
     public function hasStartDate()
@@ -1834,7 +1832,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignGroup()
     {
-        return isset($this->campaign_group) ? $this->campaign_group : '';
+        return $this->campaign_group ?? '';
     }
 
     public function hasCampaignGroup()
@@ -1873,7 +1871,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->end_date) ? $this->end_date : '';
+        return $this->end_date ?? '';
     }
 
     public function hasEndDate()
@@ -1913,7 +1911,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -2193,7 +2191,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
+        return $this->optimization_score ?? 0.0;
     }
 
     public function hasOptimizationScore()
@@ -2315,7 +2313,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getUrlExpansionOptOut()
     {
-        return isset($this->url_expansion_opt_out) ? $this->url_expansion_opt_out : false;
+        return $this->url_expansion_opt_out ?? false;
     }
 
     public function hasUrlExpansionOptOut()
@@ -2393,7 +2391,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getHotelPropertyAssetSet()
     {
-        return isset($this->hotel_property_asset_set) ? $this->hotel_property_asset_set : '';
+        return $this->hotel_property_asset_set ?? '';
     }
 
     public function hasHotelPropertyAssetSet()
@@ -2431,7 +2429,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getListingType()
     {
-        return isset($this->listing_type) ? $this->listing_type : 0;
+        return $this->listing_type ?? 0;
     }
 
     public function hasListingType()
@@ -2529,7 +2527,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBrandGuidelinesEnabled()
     {
-        return isset($this->brand_guidelines_enabled) ? $this->brand_guidelines_enabled : false;
+        return $this->brand_guidelines_enabled ?? false;
     }
 
     public function hasBrandGuidelinesEnabled()

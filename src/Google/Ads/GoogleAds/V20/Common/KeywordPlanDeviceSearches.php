@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -79,7 +77,7 @@ class KeywordPlanDeviceSearches extends \Google\Protobuf\Internal\Message
      */
     public function getSearchCount()
     {
-        return isset($this->search_count) ? $this->search_count : 0;
+        return $this->search_count ?? 0;
     }
 
     public function hasSearchCount()

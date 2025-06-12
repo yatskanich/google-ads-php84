@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -255,7 +253,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getLastChangeDateTime()
     {
-        return isset($this->last_change_date_time) ? $this->last_change_date_time : '';
+        return $this->last_change_date_time ?? '';
     }
 
     public function hasLastChangeDateTime()
@@ -322,7 +320,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -358,7 +356,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -420,7 +418,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
+        return $this->ad_group_ad ?? '';
     }
 
     public function hasAdGroupAd()
@@ -456,7 +454,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
+        return $this->ad_group_criterion ?? '';
     }
 
     public function hasAdGroupCriterion()
@@ -492,7 +490,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignCriterion()
     {
-        return isset($this->campaign_criterion) ? $this->campaign_criterion : '';
+        return $this->campaign_criterion ?? '';
     }
 
     public function hasCampaignCriterion()
@@ -528,7 +526,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getFeed()
     {
-        return isset($this->feed) ? $this->feed : '';
+        return $this->feed ?? '';
     }
 
     public function hasFeed()
@@ -564,7 +562,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getFeedItem()
     {
-        return isset($this->feed_item) ? $this->feed_item : '';
+        return $this->feed_item ?? '';
     }
 
     public function hasFeedItem()
@@ -600,7 +598,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupFeed()
     {
-        return isset($this->ad_group_feed) ? $this->ad_group_feed : '';
+        return $this->ad_group_feed ?? '';
     }
 
     public function hasAdGroupFeed()
@@ -636,7 +634,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignFeed()
     {
-        return isset($this->campaign_feed) ? $this->campaign_feed : '';
+        return $this->campaign_feed ?? '';
     }
 
     public function hasCampaignFeed()
@@ -672,7 +670,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupBidModifier()
     {
-        return isset($this->ad_group_bid_modifier) ? $this->ad_group_bid_modifier : '';
+        return $this->ad_group_bid_modifier ?? '';
     }
 
     public function hasAdGroupBidModifier()

@@ -29,17 +29,12 @@ use Psr\Log\LogLevel;
 final class GoogleAdsCallLogger
 {
     use ArrayTrait;
-
-    private $logger;
-    private $filterLevel;
-    private $endpoint;
     private $logMessageFormatter;
-    private $context;
     // An associative array of all the log levels (based on the PSR-3 standard) to sequence numbers.
     // Sequence numbers are used to determine if a given log level is higher or lower than another,
     // which can help determine, e.g., if this library should log the requests/responses, depending
     // on the set filter level.
-    private const LOG_LEVELS  = [
+    private const array LOG_LEVELS = [
         'DEBUG' => 0,
         'INFO' => 1,
         'NOTICE' => 2,
@@ -60,17 +55,13 @@ final class GoogleAdsCallLogger
      * @param array $context the context for logging
      */
     public function __construct(
-        LoggerInterface $logger,
-        $filterLevel,
-        $endpoint,
-        LogMessageFormatter $logMessageFormatter = null,
-        $context = []
+        private LoggerInterface $logger,
+        private $filterLevel,
+        private $endpoint,
+        ?LogMessageFormatter $logMessageFormatter = null,
+        private $context = []
     ) {
-        $this->logger = $logger;
-        $this->filterLevel = $filterLevel;
-        $this->endpoint = $endpoint;
         $this->logMessageFormatter = $logMessageFormatter ?: new LogMessageFormatter();
-        $this->context = $context;
     }
 
     /**

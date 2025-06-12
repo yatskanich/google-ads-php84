@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CustomerLifecycleGoalServiceClient;
 use Google\Ads\GoogleAds\V18\Services\ConfigureCustomerLifecycleGoalsRequest;
 use Google\Ads\GoogleAds\V18\Services\ConfigureCustomerLifecycleGoalsResponse;
 use Google\Ads\GoogleAds\V18\Services\CustomerLifecycleGoalOperation;
@@ -75,7 +74,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->configureCustomerLifecycleGoals($request);
@@ -113,7 +112,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +142,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->configureCustomerLifecycleGoalsAsync($request)->wait();

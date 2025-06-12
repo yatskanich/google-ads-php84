@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.CustomerClientLinkService' => [
             'MutateCustomerClientLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateCustomerClientLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateCustomerClientLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

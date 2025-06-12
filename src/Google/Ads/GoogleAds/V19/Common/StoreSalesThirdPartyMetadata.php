@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -112,7 +110,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getAdvertiserUploadDateTime()
     {
-        return isset($this->advertiser_upload_date_time) ? $this->advertiser_upload_date_time : '';
+        return $this->advertiser_upload_date_time ?? '';
     }
 
     public function hasAdvertiserUploadDateTime()
@@ -153,7 +151,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getValidTransactionFraction()
     {
-        return isset($this->valid_transaction_fraction) ? $this->valid_transaction_fraction : 0.0;
+        return $this->valid_transaction_fraction ?? 0.0;
     }
 
     public function hasValidTransactionFraction()
@@ -195,7 +193,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerMatchFraction()
     {
-        return isset($this->partner_match_fraction) ? $this->partner_match_fraction : 0.0;
+        return $this->partner_match_fraction ?? 0.0;
     }
 
     public function hasPartnerMatchFraction()
@@ -237,7 +235,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerUploadFraction()
     {
-        return isset($this->partner_upload_fraction) ? $this->partner_upload_fraction : 0.0;
+        return $this->partner_upload_fraction ?? 0.0;
     }
 
     public function hasPartnerUploadFraction()
@@ -276,7 +274,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getBridgeMapVersionId()
     {
-        return isset($this->bridge_map_version_id) ? $this->bridge_map_version_id : '';
+        return $this->bridge_map_version_id ?? '';
     }
 
     public function hasBridgeMapVersionId()
@@ -312,7 +310,7 @@ class StoreSalesThirdPartyMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerId()
     {
-        return isset($this->partner_id) ? $this->partner_id : 0;
+        return $this->partner_id ?? 0;
     }
 
     public function hasPartnerId()

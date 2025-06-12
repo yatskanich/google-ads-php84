@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.ConversionAdjustmentUploadService' => [
             'UploadConversionAdjustments' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\UploadConversionAdjustmentsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\UploadConversionAdjustmentsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

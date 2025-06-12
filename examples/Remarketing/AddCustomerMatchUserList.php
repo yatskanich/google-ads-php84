@@ -79,26 +79,26 @@ use Google\ApiCore\ApiException;
  */
 class AddCustomerMatchUserList
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Optional: The ID of an existing user list. If not specified, this example will create a new
     // user list.
-    private const USER_LIST_ID = null;
+    private const null USER_LIST_ID = null;
     // Optional: The ID of an existing offline user data job in the PENDING state. If not specified,
     // this example will create a new job.
-    private const OFFLINE_USER_DATA_JOB_ID = null;
+    private const null OFFLINE_USER_DATA_JOB_ID = null;
     // Optional: The consent status for ad personalization.
-    private const AD_PERSONALIZATION_CONSENT = null;
+    private const null AD_PERSONALIZATION_CONSENT = null;
     // Optional: The consent status for ad user data.
-    private const AD_USER_DATA_CONSENT = null;
+    private const null AD_USER_DATA_CONSENT = null;
     // Optional: If true, runs the offline user data job after adding operations. The default value
     // is false.
-    private const RUN_JOB = false;
+    private const bool RUN_JOB = false;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::RUN_JOB => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::USER_LIST_ID => GetOpt::OPTIONAL_ARGUMENT,
@@ -108,11 +108,11 @@ class AddCustomerMatchUserList
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -512,9 +512,7 @@ class AddCustomerMatchUserList
 
         // Creates the operations to add users.
         $operations = array_map(
-            function (UserData $userData) {
-                return new OfflineUserDataJobOperation(['create' => $userData]);
-            },
+            fn(UserData $userData) => new OfflineUserDataJobOperation(['create' => $userData]),
             $userDataList
         );
         // [END add_customer_match_user_list_2]

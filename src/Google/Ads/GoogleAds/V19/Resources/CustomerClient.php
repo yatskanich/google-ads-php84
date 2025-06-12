@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -188,7 +186,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getClientCustomer()
     {
-        return isset($this->client_customer) ? $this->client_customer : '';
+        return $this->client_customer ?? '';
     }
 
     public function hasClientCustomer()
@@ -227,7 +225,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getHidden()
     {
-        return isset($this->hidden) ? $this->hidden : false;
+        return $this->hidden ?? false;
     }
 
     public function hasHidden()
@@ -266,7 +264,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getLevel()
     {
-        return isset($this->level) ? $this->level : 0;
+        return $this->level ?? 0;
     }
 
     public function hasLevel()
@@ -304,7 +302,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getTimeZone()
     {
-        return isset($this->time_zone) ? $this->time_zone : '';
+        return $this->time_zone ?? '';
     }
 
     public function hasTimeZone()
@@ -341,7 +339,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getTestAccount()
     {
-        return isset($this->test_account) ? $this->test_account : false;
+        return $this->test_account ?? false;
     }
 
     public function hasTestAccount()
@@ -377,7 +375,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getManager()
     {
-        return isset($this->manager) ? $this->manager : false;
+        return $this->manager ?? false;
     }
 
     public function hasManager()
@@ -413,7 +411,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getDescriptiveName()
     {
-        return isset($this->descriptive_name) ? $this->descriptive_name : '';
+        return $this->descriptive_name ?? '';
     }
 
     public function hasDescriptiveName()
@@ -450,7 +448,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -487,7 +485,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()

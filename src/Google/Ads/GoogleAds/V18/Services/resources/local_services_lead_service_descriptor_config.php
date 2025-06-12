@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.LocalServicesLeadService' => [
             'AppendLeadConversation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\AppendLeadConversationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\AppendLeadConversationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

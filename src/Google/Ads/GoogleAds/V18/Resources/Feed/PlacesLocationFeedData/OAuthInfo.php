@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources\Feed\PlacesLocationFeedData;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -61,7 +59,7 @@ class OAuthInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHttpMethod()
     {
-        return isset($this->http_method) ? $this->http_method : '';
+        return $this->http_method ?? '';
     }
 
     public function hasHttpMethod()
@@ -97,7 +95,7 @@ class OAuthInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHttpRequestUrl()
     {
-        return isset($this->http_request_url) ? $this->http_request_url : '';
+        return $this->http_request_url ?? '';
     }
 
     public function hasHttpRequestUrl()
@@ -133,7 +131,7 @@ class OAuthInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHttpAuthorizationHeader()
     {
-        return isset($this->http_authorization_header) ? $this->http_authorization_header : '';
+        return $this->http_authorization_header ?? '';
     }
 
     public function hasHttpAuthorizationHeader()

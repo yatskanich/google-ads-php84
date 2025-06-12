@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\BrandSuggestionServiceClient;
 use Google\Ads\GoogleAds\V19\Services\SuggestBrandsRequest;
 use Google\Ads\GoogleAds\V19\Services\SuggestBrandsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class BrandSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $brandPrefix = 'brandPrefix-2146521526';
-        $request = (new SuggestBrandsRequest())
+        $request = new SuggestBrandsRequest()
             ->setCustomerId($customerId)
             ->setBrandPrefix($brandPrefix);
         $response = $gapicClient->suggestBrands($request);
@@ -112,7 +111,7 @@ class BrandSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $brandPrefix = 'brandPrefix-2146521526';
-        $request = (new SuggestBrandsRequest())
+        $request = new SuggestBrandsRequest()
             ->setCustomerId($customerId)
             ->setBrandPrefix($brandPrefix);
         try {
@@ -142,7 +141,7 @@ class BrandSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $brandPrefix = 'brandPrefix-2146521526';
-        $request = (new SuggestBrandsRequest())
+        $request = new SuggestBrandsRequest()
             ->setCustomerId($customerId)
             ->setBrandPrefix($brandPrefix);
         $response = $gapicClient->suggestBrandsAsync($request)->wait();

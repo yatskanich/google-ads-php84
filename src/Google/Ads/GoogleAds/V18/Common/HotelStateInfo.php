@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class HotelStateInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStateCriterion()
     {
-        return isset($this->state_criterion) ? $this->state_criterion : '';
+        return $this->state_criterion ?? '';
     }
 
     public function hasStateCriterion()

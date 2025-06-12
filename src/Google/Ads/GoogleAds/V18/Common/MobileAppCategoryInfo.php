@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class MobileAppCategoryInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMobileAppCategoryConstant()
     {
-        return isset($this->mobile_app_category_constant) ? $this->mobile_app_category_constant : '';
+        return $this->mobile_app_category_constant ?? '';
     }
 
     public function hasMobileAppCategoryConstant()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -94,7 +92,7 @@ class ThirdPartyAppAnalyticsLink extends \Google\Protobuf\Internal\Message
      */
     public function getShareableLinkId()
     {
-        return isset($this->shareable_link_id) ? $this->shareable_link_id : '';
+        return $this->shareable_link_id ?? '';
     }
 
     public function hasShareableLinkId()

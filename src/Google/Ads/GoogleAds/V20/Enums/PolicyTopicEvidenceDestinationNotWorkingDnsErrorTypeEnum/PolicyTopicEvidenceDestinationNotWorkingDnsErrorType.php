@@ -52,7 +52,11 @@ class PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
     {
         if (!isset(self::$valueToName[$value])) {
             throw new UnexpectedValueException(sprintf(
-                    'Enum %s has no name defined for value %s', __CLASS__, $value));
+                'Enum %s has no name defined for value %s',
+                self::class,
+                $value
+            )
+            );
         }
         return self::$valueToName[$value];
     }
@@ -60,10 +64,14 @@ class PolicyTopicEvidenceDestinationNotWorkingDnsErrorType
 
     public static function value($name)
     {
-        $const = __CLASS__ . '::' . strtoupper($name);
+        $const = self::class . '::' . strtoupper((string)$name);
         if (!defined($const)) {
             throw new UnexpectedValueException(sprintf(
-                    'Enum %s has no value defined for name %s', __CLASS__, $name));
+                'Enum %s has no value defined for name %s',
+                self::class,
+                $name
+            )
+            );
         }
         return constant($const);
     }

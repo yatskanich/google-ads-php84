@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\CustomerManagerLinkServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MoveManagerLinkRequest;
 use Google\Ads\GoogleAds\V20\Services\MoveManagerLinkResponse;
 use Google\Ads\GoogleAds\V20\Services\MutateCustomerManagerLinkRequest;
@@ -79,7 +78,7 @@ class CustomerManagerLinkServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $previousCustomerManagerLink = 'previousCustomerManagerLink-1454597947';
         $newManager = 'newManager90619918';
-        $request = (new MoveManagerLinkRequest())
+        $request = new MoveManagerLinkRequest()
             ->setCustomerId($customerId)
             ->setPreviousCustomerManagerLink($previousCustomerManagerLink)
             ->setNewManager($newManager);
@@ -121,7 +120,7 @@ class CustomerManagerLinkServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $previousCustomerManagerLink = 'previousCustomerManagerLink-1454597947';
         $newManager = 'newManager90619918';
-        $request = (new MoveManagerLinkRequest())
+        $request = new MoveManagerLinkRequest()
             ->setCustomerId($customerId)
             ->setPreviousCustomerManagerLink($previousCustomerManagerLink)
             ->setNewManager($newManager);
@@ -152,7 +151,7 @@ class CustomerManagerLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerManagerLinkRequest())
+        $request = new MutateCustomerManagerLinkRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerManagerLink($request);
@@ -190,7 +189,7 @@ class CustomerManagerLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerManagerLinkRequest())
+        $request = new MutateCustomerManagerLinkRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -223,7 +222,7 @@ class CustomerManagerLinkServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $previousCustomerManagerLink = 'previousCustomerManagerLink-1454597947';
         $newManager = 'newManager90619918';
-        $request = (new MoveManagerLinkRequest())
+        $request = new MoveManagerLinkRequest()
             ->setCustomerId($customerId)
             ->setPreviousCustomerManagerLink($previousCustomerManagerLink)
             ->setNewManager($newManager);

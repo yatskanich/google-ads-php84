@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -57,7 +55,7 @@ class DemandGenCampaignSettings extends \Google\Protobuf\Internal\Message
      */
     public function getUpgradedTargeting()
     {
-        return isset($this->upgraded_targeting) ? $this->upgraded_targeting : false;
+        return $this->upgraded_targeting ?? false;
     }
 
     public function hasUpgradedTargeting()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -96,7 +94,7 @@ class RaiseTargetCpaRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getAppBiddingGoal()
     {
-        return isset($this->app_bidding_goal) ? $this->app_bidding_goal : 0;
+        return $this->app_bidding_goal ?? 0;
     }
 
     public function hasAppBiddingGoal()

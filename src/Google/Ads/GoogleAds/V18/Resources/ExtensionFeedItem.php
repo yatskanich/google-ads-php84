@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -203,7 +201,7 @@ class ExtensionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -270,7 +268,7 @@ class ExtensionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getStartDateTime()
     {
-        return isset($this->start_date_time) ? $this->start_date_time : '';
+        return $this->start_date_time ?? '';
     }
 
     public function hasStartDateTime()
@@ -312,7 +310,7 @@ class ExtensionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getEndDateTime()
     {
-        return isset($this->end_date_time) ? $this->end_date_time : '';
+        return $this->end_date_time ?? '';
     }
 
     public function hasEndDateTime()
@@ -407,7 +405,7 @@ class ExtensionFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getTargetedGeoTargetConstant()
     {
-        return isset($this->targeted_geo_target_constant) ? $this->targeted_geo_target_constant : '';
+        return $this->targeted_geo_target_constant ?? '';
     }
 
     public function hasTargetedGeoTargetConstant()

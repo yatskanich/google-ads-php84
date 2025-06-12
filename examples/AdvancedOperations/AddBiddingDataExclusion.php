@@ -45,26 +45,26 @@ use Google\ApiCore\ApiException;
  */
 class AddBiddingDataExclusion
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const START_DATE_TIME = 'INSERT_START_DATE_TIME_HERE';
-    private const END_DATE_TIME = 'INSERT_END_DATE_TIME_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string START_DATE_TIME = 'INSERT_START_DATE_TIME_HERE';
+    private const string END_DATE_TIME = 'INSERT_END_DATE_TIME_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::START_DATE_TIME => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::END_DATE_TIME => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

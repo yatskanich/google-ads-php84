@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
 use Google\Ads\GoogleAds\V18\Services\CampaignDuration;
-use Google\Ads\GoogleAds\V18\Services\Client\ReachPlanServiceClient;
 use Google\Ads\GoogleAds\V18\Services\GenerateReachForecastRequest;
 use Google\Ads\GoogleAds\V18\Services\GenerateReachForecastResponse;
 use Google\Ads\GoogleAds\V18\Services\ListPlannableLocationsRequest;
@@ -80,7 +79,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $campaignDuration = new CampaignDuration();
         $plannedProducts = [];
-        $request = (new GenerateReachForecastRequest())
+        $request = new GenerateReachForecastRequest()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -122,7 +121,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $campaignDuration = new CampaignDuration();
         $plannedProducts = [];
-        $request = (new GenerateReachForecastRequest())
+        $request = new GenerateReachForecastRequest()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -206,7 +205,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $plannableLocationId = 'plannableLocationId-2050234651';
-        $request = (new ListPlannableProductsRequest())
+        $request = new ListPlannableProductsRequest()
             ->setPlannableLocationId($plannableLocationId);
         $response = $gapicClient->listPlannableProducts($request);
         $this->assertEquals($expectedResponse, $response);
@@ -240,7 +239,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $plannableLocationId = 'plannableLocationId-2050234651';
-        $request = (new ListPlannableProductsRequest())
+        $request = new ListPlannableProductsRequest()
             ->setPlannableLocationId($plannableLocationId);
         try {
             $gapicClient->listPlannableProducts($request);
@@ -270,7 +269,7 @@ class ReachPlanServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $campaignDuration = new CampaignDuration();
         $plannedProducts = [];
-        $request = (new GenerateReachForecastRequest())
+        $request = new GenerateReachForecastRequest()
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);

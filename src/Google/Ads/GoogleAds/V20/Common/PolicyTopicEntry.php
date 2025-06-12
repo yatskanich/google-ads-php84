@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -88,7 +86,7 @@ class PolicyTopicEntry extends \Google\Protobuf\Internal\Message
      */
     public function getTopic()
     {
-        return isset($this->topic) ? $this->topic : '';
+        return $this->topic ?? '';
     }
 
     public function hasTopic()

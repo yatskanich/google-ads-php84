@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\Campaign;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class HotelSettingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
+        return $this->hotel_center_id ?? 0;
     }
 
     public function hasHotelCenterId()

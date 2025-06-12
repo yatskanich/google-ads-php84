@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -142,7 +140,7 @@ class BillingSetup extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -210,7 +208,7 @@ class BillingSetup extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsAccount()
     {
-        return isset($this->payments_account) ? $this->payments_account : '';
+        return $this->payments_account ?? '';
     }
 
     public function hasPaymentsAccount()

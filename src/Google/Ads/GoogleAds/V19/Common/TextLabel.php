@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -61,7 +59,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getBackgroundColor()
     {
-        return isset($this->background_color) ? $this->background_color : '';
+        return $this->background_color ?? '';
     }
 
     public function hasBackgroundColor()
@@ -100,7 +98,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()

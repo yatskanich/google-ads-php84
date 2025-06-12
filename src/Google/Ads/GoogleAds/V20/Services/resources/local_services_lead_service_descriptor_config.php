@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.LocalServicesLeadService' => [
             'AppendLeadConversation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\AppendLeadConversationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\AppendLeadConversationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'ProvideLeadFeedback' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\ProvideLeadFeedbackResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\ProvideLeadFeedbackResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',

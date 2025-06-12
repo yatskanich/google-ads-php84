@@ -31,7 +31,7 @@ final class Helper
      */
     public static function getPrintableDatetime(): string
     {
-        return (new DateTime())->format("Y-m-d\TH:i:s.vP");
+        return new DateTime()->format("Y-m-d\TH:i:s.vP");
     }
 
     /**
@@ -40,7 +40,7 @@ final class Helper
      */
     public static function getShortPrintableDatetime(): string
     {
-        return (new DateTime())->format("mdHisv");
+        return new DateTime()->format("mdHisv");
     }
 
     /**

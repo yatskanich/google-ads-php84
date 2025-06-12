@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -85,7 +83,7 @@ class TextMessageFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getBusinessName()
     {
-        return isset($this->business_name) ? $this->business_name : '';
+        return $this->business_name ?? '';
     }
 
     public function hasBusinessName()
@@ -123,7 +121,7 @@ class TextMessageFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -160,7 +158,7 @@ class TextMessageFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getPhoneNumber()
     {
-        return isset($this->phone_number) ? $this->phone_number : '';
+        return $this->phone_number ?? '';
     }
 
     public function hasPhoneNumber()
@@ -197,7 +195,7 @@ class TextMessageFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return isset($this->text) ? $this->text : '';
+        return $this->text ?? '';
     }
 
     public function hasText()
@@ -234,7 +232,7 @@ class TextMessageFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getExtensionText()
     {
-        return isset($this->extension_text) ? $this->extension_text : '';
+        return $this->extension_text ?? '';
     }
 
     public function hasExtensionText()

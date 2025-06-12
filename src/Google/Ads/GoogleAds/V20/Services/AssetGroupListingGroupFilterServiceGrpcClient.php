@@ -46,7 +46,7 @@ class AssetGroupListingGroupFilterServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.AssetGroupListingGroupFilterService/MutateAssetGroupListingGroupFilters',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\MutateAssetGroupListingGroupFiltersResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\MutateAssetGroupListingGroupFiltersResponse::class, 'decode'],
         $metadata, $options);
     }
 

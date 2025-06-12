@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getKey()
     {
-        return isset($this->key) ? $this->key : '';
+        return $this->key ?? '';
     }
 
     public function hasKey()
@@ -77,7 +75,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()

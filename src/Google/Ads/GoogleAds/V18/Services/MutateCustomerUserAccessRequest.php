@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -39,7 +37,7 @@ class MutateCustomerUserAccessRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V18\Services\CustomerUserAccessOperation $operation): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

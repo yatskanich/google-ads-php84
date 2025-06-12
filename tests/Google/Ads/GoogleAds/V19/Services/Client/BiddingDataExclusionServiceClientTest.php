@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\BiddingDataExclusionServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateBiddingDataExclusionsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateBiddingDataExclusionsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingDataExclusions($request);
@@ -112,7 +111,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingDataExclusionsAsync($request)->wait();

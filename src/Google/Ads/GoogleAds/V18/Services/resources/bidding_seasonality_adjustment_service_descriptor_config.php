@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.BiddingSeasonalityAdjustmentService' => [
             'MutateBiddingSeasonalityAdjustments' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateBiddingSeasonalityAdjustmentsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateBiddingSeasonalityAdjustmentsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -45,27 +45,27 @@ use Google\ApiCore\ApiException;
  */
 class AddHotelCallout
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     // See supported languages at:
     // https://developers.google.com/hotels/hotel-ads/api-reference/language-codes.
-    private const LANGUAGE_CODE = 'INSERT_LANGUAGE_CODE_HERE';
+    private const string LANGUAGE_CODE = 'INSERT_LANGUAGE_CODE_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::LANGUAGE_CODE => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -143,11 +143,9 @@ class AddHotelCallout
 
         // For each HotelCalloutAsset, wraps it in an Asset and creates an AssetOperation to add the
         // Asset.
-        $assetOperations = array_map(function (HotelCalloutAsset $hotelCalloutAsset) {
-            return new AssetOperation([
-                'create' => new Asset(['hotel_callout_asset' => $hotelCalloutAsset])
-            ]);
-        }, $hotelCalloutAssets);
+        $assetOperations = array_map(fn(HotelCalloutAsset $hotelCalloutAsset) => new AssetOperation([
+            'create' => new Asset(['hotel_callout_asset' => $hotelCalloutAsset])
+        ]), $hotelCalloutAssets);
 
         // Issues a mutate request to add the assets and print its information.
         $assetServiceClient = $googleAdsClient->getAssetServiceClient();
@@ -182,12 +180,12 @@ class AddHotelCallout
     ): void {
         // Creates a CustomerAssetOperation for each asset resource name by linking it to a newly
         // created CustomerAsset.
-        $customerAssetOperations = array_map(function (string $assetResourceName) {
-            return new CustomerAssetOperation(['create' => new CustomerAsset([
+        $customerAssetOperations = array_map(fn(string $assetResourceName) => new CustomerAssetOperation([
+            'create' => new CustomerAsset([
                 'asset' => $assetResourceName,
                 'field_type' => AssetFieldType::HOTEL_CALLOUT
-            ])]);
-        }, $assetResourceNames);
+            ])
+        ]), $assetResourceNames);
 
         // Issues a mutate request to add the customer assets and prints its information.
         $customerAssetServiceClient = $googleAdsClient->getCustomerAssetServiceClient();

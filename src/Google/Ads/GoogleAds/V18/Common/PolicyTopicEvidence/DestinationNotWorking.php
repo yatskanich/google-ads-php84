@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common\PolicyTopicEvidence;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -71,7 +69,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getExpandedUrl()
     {
-        return isset($this->expanded_url) ? $this->expanded_url : '';
+        return $this->expanded_url ?? '';
     }
 
     public function hasExpandedUrl()
@@ -135,7 +133,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getLastCheckedDateTime()
     {
-        return isset($this->last_checked_date_time) ? $this->last_checked_date_time : '';
+        return $this->last_checked_date_time ?? '';
     }
 
     public function hasLastCheckedDateTime()

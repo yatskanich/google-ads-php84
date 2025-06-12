@@ -18,8 +18,8 @@
 
 namespace Google\Ads\GoogleAds\Lib\V19;
 
-use Google\Ads\GoogleAds\V19\Services\MutateCampaignsResponse;
 use Google\Ads\GoogleAds\V19\Services\ListBatchJobResultsResponse;
+use Google\Ads\GoogleAds\V19\Services\MutateCampaignsResponse;
 use Google\Ads\GoogleAds\V19\Services\SearchGoogleAdsResponse;
 use Google\ApiCore\Transport\Grpc\ForwardingUnaryCall;
 use Google\Rpc\Status;
@@ -53,7 +53,7 @@ class GoogleAdsFailuresUnaryCallTest extends TestCase
         $googleAdsFailuresUnaryCallMock = $this->getMockBuilder(GoogleAdsFailuresUnaryCall::class)
             ->enableOriginalConstructor()
             ->setConstructorArgs([$forwardingCallMock])
-            ->setMethodsExcept(array('wait'))
+            ->setMethodsExcept(['wait'])
             ->getMock();
         $googleAdsFailuresUnaryCallMock
             ->expects($isInitializationExpected ? $this->once() : $this->never())

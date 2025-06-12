@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -119,7 +117,7 @@ class MobileDeviceConstant extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -155,7 +153,7 @@ class MobileDeviceConstant extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -191,7 +189,7 @@ class MobileDeviceConstant extends \Google\Protobuf\Internal\Message
      */
     public function getManufacturerName()
     {
-        return isset($this->manufacturer_name) ? $this->manufacturer_name : '';
+        return $this->manufacturer_name ?? '';
     }
 
     public function hasManufacturerName()
@@ -227,7 +225,7 @@ class MobileDeviceConstant extends \Google\Protobuf\Internal\Message
      */
     public function getOperatingSystemName()
     {
-        return isset($this->operating_system_name) ? $this->operating_system_name : '';
+        return $this->operating_system_name ?? '';
     }
 
     public function hasOperatingSystemName()

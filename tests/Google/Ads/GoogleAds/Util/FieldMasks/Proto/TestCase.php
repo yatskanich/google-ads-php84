@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -139,7 +137,7 @@ class TestCase extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalResource()
     {
-        return isset($this->original_resource) ? $this->original_resource : null;
+        return $this->original_resource ?? null;
     }
 
     public function hasOriginalResource()
@@ -171,7 +169,7 @@ class TestCase extends \Google\Protobuf\Internal\Message
      */
     public function getModifiedResource()
     {
-        return isset($this->modified_resource) ? $this->modified_resource : null;
+        return $this->modified_resource ?? null;
     }
 
     public function hasModifiedResource()
@@ -203,7 +201,7 @@ class TestCase extends \Google\Protobuf\Internal\Message
      */
     public function getExpectedMask()
     {
-        return isset($this->expected_mask) ? $this->expected_mask : null;
+        return $this->expected_mask ?? null;
     }
 
     public function hasExpectedMask()
@@ -235,7 +233,7 @@ class TestCase extends \Google\Protobuf\Internal\Message
      */
     public function getAllSetFieldsMask()
     {
-        return isset($this->all_set_fields_mask) ? $this->all_set_fields_mask : null;
+        return $this->all_set_fields_mask ?? null;
     }
 
     public function hasAllSetFieldsMask()

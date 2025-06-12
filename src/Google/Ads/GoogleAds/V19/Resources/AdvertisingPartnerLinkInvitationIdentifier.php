@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class AdvertisingPartnerLinkInvitationIdentifier extends \Google\Protobuf\Intern
      */
     public function getCustomer()
     {
-        return isset($this->customer) ? $this->customer : '';
+        return $this->customer ?? '';
     }
 
     public function hasCustomer()

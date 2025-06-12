@@ -20,7 +20,6 @@ namespace Google\Ads\GoogleAds\Lib\V18;
 
 use Google\Ads\GoogleAds\Lib\GoogleAdsMiddlewareAbstract;
 use Google\ApiCore\Call;
-use Google\ApiCore\Middleware\ResponseMetadataMiddleware;
 use GuzzleHttp\Promise\Promise;
 use GuzzleHttp\Promise\PromiseInterface;
 
@@ -31,11 +30,8 @@ class UnaryGoogleAdsResponseMetadataCallable extends GoogleAdsMiddlewareAbstract
 {
     use GoogleAdsMetadataTrait;
 
-    private $adsClient;
-
-    public function __construct(callable $nextHandler = null, $adsClient = null)
+    public function __construct(?callable $nextHandler = null, private $adsClient = null)
     {
-        $this->adsClient = $adsClient;
         parent::__construct($nextHandler);
     }
     /**
@@ -60,7 +56,7 @@ class UnaryGoogleAdsResponseMetadataCallable extends GoogleAdsMiddlewareAbstract
         }
 
         $metadataReceiver = new Promise();
-        $options['metadataCallback'] = function ($metadata) use ($metadataReceiver) {
+        $options['metadataCallback'] = function ($metadata) use ($metadataReceiver): void {
             $metadataReceiver->resolve($metadata);
         };
         return $next($call, $options)->then(

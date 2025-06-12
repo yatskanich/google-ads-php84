@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -119,7 +117,7 @@ class AdGroupCriterionCustomizer extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
+        return $this->ad_group_criterion ?? '';
     }
 
     public function hasAdGroupCriterion()

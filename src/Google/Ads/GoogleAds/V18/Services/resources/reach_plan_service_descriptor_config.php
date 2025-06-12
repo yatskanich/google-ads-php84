@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.ReachPlanService' => [
             'GenerateReachForecast' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\GenerateReachForecastResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\GenerateReachForecastResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,11 +37,11 @@ return [
             ],
             'ListPlannableLocations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\ListPlannableLocationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\ListPlannableLocationsResponse::class,
             ],
             'ListPlannableProducts' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\ListPlannableProductsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\ListPlannableProductsResponse::class,
             ],
         ],
     ],

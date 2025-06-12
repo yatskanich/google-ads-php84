@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common\PolicyTopicConstraint;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -49,7 +47,7 @@ class CountryConstraint extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCriterion()
     {
-        return isset($this->country_criterion) ? $this->country_criterion : '';
+        return $this->country_criterion ?? '';
     }
 
     public function hasCountryCriterion()

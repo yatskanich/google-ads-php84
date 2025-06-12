@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\AssetGroupListingGroupFilterServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateAssetGroupListingGroupFiltersRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateAssetGroupListingGroupFiltersResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AssetGroupListingGroupFilterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupListingGroupFiltersRequest())
+        $request = new MutateAssetGroupListingGroupFiltersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAssetGroupListingGroupFilters($request);
@@ -112,7 +111,7 @@ class AssetGroupListingGroupFilterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupListingGroupFiltersRequest())
+        $request = new MutateAssetGroupListingGroupFiltersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AssetGroupListingGroupFilterServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupListingGroupFiltersRequest())
+        $request = new MutateAssetGroupListingGroupFiltersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAssetGroupListingGroupFiltersAsync($request)->wait();

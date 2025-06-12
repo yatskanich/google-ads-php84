@@ -65,7 +65,7 @@ class BillingSetupServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.BillingSetupService/MutateBillingSetup',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateBillingSetupResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateBillingSetupResponse::class, 'decode'],
         $metadata, $options);
     }
 

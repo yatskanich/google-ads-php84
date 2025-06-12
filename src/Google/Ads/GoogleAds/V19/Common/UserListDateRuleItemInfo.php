@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -105,7 +103,7 @@ class UserListDateRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()
@@ -145,7 +143,7 @@ class UserListDateRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getOffsetInDays()
     {
-        return isset($this->offset_in_days) ? $this->offset_in_days : 0;
+        return $this->offset_in_days ?? 0;
     }
 
     public function hasOffsetInDays()

@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\FeedMappingServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateFeedMappingsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateFeedMappingsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class FeedMappingServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateFeedMappingsRequest())
+        $request = new MutateFeedMappingsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateFeedMappings($request);
@@ -112,7 +111,7 @@ class FeedMappingServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateFeedMappingsRequest())
+        $request = new MutateFeedMappingsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class FeedMappingServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateFeedMappingsRequest())
+        $request = new MutateFeedMappingsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateFeedMappingsAsync($request)->wait();

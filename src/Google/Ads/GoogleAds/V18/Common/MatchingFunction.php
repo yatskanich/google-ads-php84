@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -109,7 +107,7 @@ class MatchingFunction extends \Google\Protobuf\Internal\Message
      */
     public function getFunctionString()
     {
-        return isset($this->function_string) ? $this->function_string : '';
+        return $this->function_string ?? '';
     }
 
     public function hasFunctionString()

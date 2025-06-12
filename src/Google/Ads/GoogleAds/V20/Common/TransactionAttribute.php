@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -129,7 +127,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionDateTime()
     {
-        return isset($this->transaction_date_time) ? $this->transaction_date_time : '';
+        return $this->transaction_date_time ?? '';
     }
 
     public function hasTransactionDateTime()
@@ -173,7 +171,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionAmountMicros()
     {
-        return isset($this->transaction_amount_micros) ? $this->transaction_amount_micros : 0.0;
+        return $this->transaction_amount_micros ?? 0.0;
     }
 
     public function hasTransactionAmountMicros()
@@ -213,7 +211,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -250,7 +248,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return isset($this->conversion_action) ? $this->conversion_action : '';
+        return $this->conversion_action ?? '';
     }
 
     public function hasConversionAction()
@@ -288,7 +286,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getOrderId()
     {
-        return isset($this->order_id) ? $this->order_id : '';
+        return $this->order_id ?? '';
     }
 
     public function hasOrderId()
@@ -362,7 +360,7 @@ class TransactionAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getCustomValue()
     {
-        return isset($this->custom_value) ? $this->custom_value : '';
+        return $this->custom_value ?? '';
     }
 
     public function hasCustomValue()

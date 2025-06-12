@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -177,7 +175,7 @@ class CriterionCategoryChannelAvailability extends \Google\Protobuf\Internal\Mes
      */
     public function getIncludeDefaultChannelSubType()
     {
-        return isset($this->include_default_channel_sub_type) ? $this->include_default_channel_sub_type : false;
+        return $this->include_default_channel_sub_type ?? false;
     }
 
     public function hasIncludeDefaultChannelSubType()

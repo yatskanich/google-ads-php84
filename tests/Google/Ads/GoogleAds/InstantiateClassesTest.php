@@ -18,9 +18,9 @@
 
 namespace Google\Ads\GoogleAds;
 
-use PHPUnit\Framework\TestCase;
 use Google\ApiCore\ValidationException;
 use GuzzleHttp\Exception\ConnectException;
+use PHPUnit\Framework\TestCase;
 
 class InstantiateClassesTest extends TestCase
 {
@@ -41,7 +41,7 @@ class InstantiateClassesTest extends TestCase
         // Prevent phpunit from marking as risky tests that don't perform any assertion.
         $this->assertTrue(true);
 
-        if (strpos($class, 'metadata') !== false || strpos($class, 'Testing') !== false) {
+        if (str_contains((string)$class, 'metadata') || str_contains((string)$class, 'Testing')) {
             return;
         }
 
@@ -52,13 +52,7 @@ class InstantiateClassesTest extends TestCase
 
         try {
             $instance = new $class();
-        } catch (\ArgumentCountError $error) {
-            //Disregard
-            return;
-        } catch (ValidationException $exception) {
-            //Disregard
-            return;
-        } catch (ConnectException $exception) {
+        } catch (\ArgumentCountError|ValidationException|ConnectException) {
             //Disregard
             return;
         }
@@ -73,7 +67,7 @@ class InstantiateClassesTest extends TestCase
         $reg = new \RegexIterator($it, '#.+[^_config]\.php$#', \RecursiveRegexIterator::GET_MATCH);
         foreach ($reg as $files) {
             $file = $files[0];
-            $namespace = str_replace("/", "\\", substr($file, 3));
+            $namespace = str_replace("/", "\\", substr((string)$file, 3));
             $class = explode('.', $namespace)[0];
             yield [$class];
         }

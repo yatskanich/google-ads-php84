@@ -44,7 +44,7 @@ class BiddingDataExclusionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.BiddingDataExclusionService/MutateBiddingDataExclusions',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateBiddingDataExclusionsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateBiddingDataExclusionsResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -65,7 +65,7 @@ class CampaignBudgetServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.CampaignBudgetService/MutateCampaignBudgets',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateCampaignBudgetsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateCampaignBudgetsResponse::class, 'decode'],
         $metadata, $options);
     }
 

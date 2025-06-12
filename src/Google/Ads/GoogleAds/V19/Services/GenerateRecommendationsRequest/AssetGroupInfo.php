@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\GenerateRecommendationsRequest;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -82,7 +80,7 @@ class AssetGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrl()
     {
-        return isset($this->final_url) ? $this->final_url : '';
+        return $this->final_url ?? '';
     }
 
     public function hasFinalUrl()

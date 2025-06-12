@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\ConversionUploadServiceClient;
 use Google\Ads\GoogleAds\V20\Services\UploadCallConversionsRequest;
 use Google\Ads\GoogleAds\V20\Services\UploadCallConversionsResponse;
 use Google\Ads\GoogleAds\V20\Services\UploadClickConversionsRequest;
@@ -77,7 +76,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -119,7 +118,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -153,7 +152,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadClickConversionsRequest())
+        $request = new UploadClickConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -195,7 +194,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadClickConversionsRequest())
+        $request = new UploadClickConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -227,7 +226,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);

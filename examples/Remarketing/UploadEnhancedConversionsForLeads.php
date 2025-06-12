@@ -29,16 +29,15 @@ use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
 use Google\Ads\GoogleAds\Util\V20\ResourceNames;
 use Google\Ads\GoogleAds\V20\Common\Consent;
-use Google\Ads\GoogleAds\V20\Common\OfflineUserAddressInfo;
 use Google\Ads\GoogleAds\V20\Common\UserIdentifier;
 use Google\Ads\GoogleAds\V20\Enums\ConsentStatusEnum\ConsentStatus;
 use Google\Ads\GoogleAds\V20\Enums\UserIdentifierSourceEnum\UserIdentifierSource;
 use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
 use Google\Ads\GoogleAds\V20\Services\ClickConversion;
 use Google\Ads\GoogleAds\V20\Services\ClickConversionResult;
-use Google\Ads\GoogleAds\V20\Services\UploadClickConversionsRequest;
 use Google\Ads\GoogleAds\V20\Services\SessionAttributeKeyValuePair;
 use Google\Ads\GoogleAds\V20\Services\SessionAttributesKeyValuePairs;
+use Google\Ads\GoogleAds\V20\Services\UploadClickConversionsRequest;
 use Google\ApiCore\ApiException;
 
 /**
@@ -49,33 +48,33 @@ use Google\ApiCore\ApiException;
  */
 class UploadEnhancedConversionsForLeads
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
     // The date time at which the conversion occurred.
     // Must be after the click time, and must include the time zone offset.
     // The format is "yyyy-mm-dd hh:mm:ss+|-hh:mm", e.g. '2019-01-01 12:32:45-08:00'.
-    private const CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
-    private const CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
+    private const string CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
+    private const string CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
 
     // Optional: Specifies the order ID.
-    private const ORDER_ID = null;
+    private const null ORDER_ID = null;
     // Optional: The Google Click ID for which conversions are uploaded.
-    private const GCLID = null;
+    private const null GCLID = null;
     // Optional: The consent status for ad user data.
-    private const AD_USER_DATA_CONSENT = null;
+    private const null AD_USER_DATA_CONSENT = null;
     // Optional: a str token of encoded session atttributes. Only one of
     // SESSION_ATTRIBUTES_ENCODED or SESSION_ATTRIBUTES_DICT should be passed.
-    private const SESSION_ATTRIBUTES_ENCODED = null;
+    private const null SESSION_ATTRIBUTES_ENCODED = null;
     // Optional: a dict[str, str] of session attribute
     // key value pairs. Only one of SESSION_ATTRIBUTES_ENCODED or
     // SESSION_ATTRIBUTES_DICT should be passed.
-    private const SESSION_ATTRIBUTES_DICT = null;
+    private const null SESSION_ATTRIBUTES_DICT = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CONVERSION_ACTION_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CONVERSION_DATE_TIME => GetOpt::REQUIRED_ARGUMENT,
@@ -90,7 +89,7 @@ class UploadEnhancedConversionsForLeads
         // Parse SESSION_ATTRIBUTES_DICT into an associative array if provided
         $sessionAttributesDict = [];
         if (!empty($options[ArgumentNames::SESSION_ATTRIBUTES_DICT])) {
-            $pairs = explode(',', $options[ArgumentNames::SESSION_ATTRIBUTES_DICT]);
+            $pairs = explode(',', (string)$options[ArgumentNames::SESSION_ATTRIBUTES_DICT]);
             foreach ($pairs as $pair) {
                 [$key, $value] = explode('=', $pair, 2);
                 $sessionAttributesDict[trim($key)] = trim($value);
@@ -108,11 +107,11 @@ class UploadEnhancedConversionsForLeads
         }
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -259,8 +258,7 @@ class UploadEnhancedConversionsForLeads
             $hashedPhoneNumberIdentifier = new UserIdentifier([
                 'hashed_phone_number' => self::normalizeAndHash(
                     $hashAlgorithm,
-                    $rawRecord['phone'],
-                    true
+                    $rawRecord['phone']
                 )
             ]);
             // Adds the hashed email identifier to the user identifiers list.

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -56,7 +54,7 @@ class ExternalAttributionData extends \Google\Protobuf\Internal\Message
      */
     public function getExternalAttributionCredit()
     {
-        return isset($this->external_attribution_credit) ? $this->external_attribution_credit : 0.0;
+        return $this->external_attribution_credit ?? 0.0;
     }
 
     public function hasExternalAttributionCredit()
@@ -93,7 +91,7 @@ class ExternalAttributionData extends \Google\Protobuf\Internal\Message
      */
     public function getExternalAttributionModel()
     {
-        return isset($this->external_attribution_model) ? $this->external_attribution_model : '';
+        return $this->external_attribution_model ?? '';
     }
 
     public function hasExternalAttributionModel()

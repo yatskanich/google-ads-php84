@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class LanguageInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageConstant()
     {
-        return isset($this->language_constant) ? $this->language_constant : '';
+        return $this->language_constant ?? '';
     }
 
     public function hasLanguageConstant()

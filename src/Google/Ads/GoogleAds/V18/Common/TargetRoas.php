@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -73,7 +71,7 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return isset($this->target_roas) ? $this->target_roas : 0.0;
+        return $this->target_roas ?? 0.0;
     }
 
     public function hasTargetRoas()
@@ -112,7 +110,7 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
+        return $this->cpc_bid_ceiling_micros ?? 0;
     }
 
     public function hasCpcBidCeilingMicros()
@@ -152,7 +150,7 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidFloorMicros()
     {
-        return isset($this->cpc_bid_floor_micros) ? $this->cpc_bid_floor_micros : 0;
+        return $this->cpc_bid_floor_micros ?? 0;
     }
 
     public function hasCpcBidFloorMicros()

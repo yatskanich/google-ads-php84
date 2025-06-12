@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class CarrierInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCarrierConstant()
     {
-        return isset($this->carrier_constant) ? $this->carrier_constant : '';
+        return $this->carrier_constant ?? '';
     }
 
     public function hasCarrierConstant()

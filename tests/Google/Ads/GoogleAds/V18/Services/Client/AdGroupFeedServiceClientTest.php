@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\AdGroupFeedServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateAdGroupFeedsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateAdGroupFeedsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class AdGroupFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupFeedsRequest())
+        $request = new MutateAdGroupFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupFeeds($request);
@@ -112,7 +111,7 @@ class AdGroupFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupFeedsRequest())
+        $request = new MutateAdGroupFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class AdGroupFeedServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupFeedsRequest())
+        $request = new MutateAdGroupFeedsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupFeedsAsync($request)->wait();

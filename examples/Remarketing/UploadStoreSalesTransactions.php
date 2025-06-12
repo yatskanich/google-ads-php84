@@ -64,77 +64,77 @@ use Google\ApiCore\ApiException;
  */
 class UploadStoreSalesTransactions
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     /**
      * The type of user data in the job (first or third party). If you have an official
      * store sales partnership with Google, use STORE_SALES_UPLOAD_THIRD_PARTY.
      * Otherwise, use STORE_SALES_UPLOAD_FIRST_PARTY or omit this parameter.
      */
-    private const OFFLINE_USER_DATA_JOB_TYPE = 'STORE_SALES_UPLOAD_FIRST_PARTY';
+    private const string OFFLINE_USER_DATA_JOB_TYPE = 'STORE_SALES_UPLOAD_FIRST_PARTY';
     /** The ID of a store sales conversion action. */
-    private const CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
+    private const string CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
     /**
      * Optional (but recommended) external ID to identify the offline user data job.
      * The external ID for the offline user data job.
      */
-    private const EXTERNAL_ID = null;
+    private const null EXTERNAL_ID = null;
     /**
      * Only required after creating a custom key and custom values in the account.
      * Custom key and values are used to segment store sales conversions.
      * This measurement can be used to provide more advanced insights.
      */
-    private const CUSTOM_KEY = null;
+    private const null CUSTOM_KEY = null;
 
     // Optional: If uploading third party data, also specify the following values:
     /**
      * The date and time the advertiser uploaded data to the partner.
      * The date/time must be in the format "yyyy-MM-dd hh:mm:ss".
      */
-    private const ADVERTISER_UPLOAD_DATE_TIME = null;
+    private const null ADVERTISER_UPLOAD_DATE_TIME = null;
     /** The version of partner IDs to be used for uploads. */
-    private const BRIDGE_MAP_VERSION_ID = null;
+    private const null BRIDGE_MAP_VERSION_ID = null;
     /** The ID of the third party partner. */
-    private const PARTNER_ID = null;
+    private const null PARTNER_ID = null;
     // Optional: The consent status for ad personalization.
-    private const AD_PERSONALIZATION_CONSENT = null;
+    private const null AD_PERSONALIZATION_CONSENT = null;
     // Optional: The consent status for ad user data.
-    private const AD_USER_DATA_CONSENT = null;
+    private const null AD_USER_DATA_CONSENT = null;
 
     // Optional: Below constants are only required if uploading with item attributes.
     /**
      * Specify a unique identifier of a product, either the Merchant Center
      * Item ID or Global Trade Item Number (GTIN).
      */
-    private const ITEM_ID = null;
+    private const null ITEM_ID = null;
     /**
      * Specify a Merchant Center Account ID.
      */
-    private const MERCHANT_CENTER_ACCOUNT_ID = null;
+    private const null MERCHANT_CENTER_ACCOUNT_ID = null;
     /**
      * Specify a two-letter country code of the location associated with the
      * feed where your items are uploaded.
      * For a list of country codes see:
      * https://developers.google.com/google-ads/api/reference/data/codes-formats#expandable-16
      */
-    private const COUNTRY_CODE = null;
+    private const null COUNTRY_CODE = null;
     /**
      * Specify a two-letter language code of the language associated with
      * the feed where your items are uploaded.
      * For a list of language codes see:
      * https://developers.google.com/google-ads/api/reference/data/codes-formats#expandable-7
      */
-    private const LANGUAGE_CODE = null;
+    private const null LANGUAGE_CODE = null;
     /**
      * Specify a number of items sold.
      */
-    private const QUANTITY = 1;
+    private const int QUANTITY = 1;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::OFFLINE_USER_DATA_JOB_TYPE => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::CONVERSION_ACTION_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -153,11 +153,11 @@ class UploadStoreSalesTransactions
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

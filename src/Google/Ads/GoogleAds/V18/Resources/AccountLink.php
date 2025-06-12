@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -110,7 +108,7 @@ class AccountLink extends \Google\Protobuf\Internal\Message
      */
     public function getAccountLinkId()
     {
-        return isset($this->account_link_id) ? $this->account_link_id : 0;
+        return $this->account_link_id ?? 0;
     }
 
     public function hasAccountLinkId()

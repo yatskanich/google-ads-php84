@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -55,7 +53,7 @@ class Commission extends \Google\Protobuf\Internal\Message
      */
     public function getCommissionRateMicros()
     {
-        return isset($this->commission_rate_micros) ? $this->commission_rate_micros : 0;
+        return $this->commission_rate_micros ?? 0;
     }
 
     public function hasCommissionRateMicros()

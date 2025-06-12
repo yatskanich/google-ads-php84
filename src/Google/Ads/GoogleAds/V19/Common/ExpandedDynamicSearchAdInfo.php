@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class ExpandedDynamicSearchAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()
@@ -89,7 +87,7 @@ class ExpandedDynamicSearchAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription2()
     {
-        return isset($this->description2) ? $this->description2 : '';
+        return $this->description2 ?? '';
     }
 
     public function hasDescription2()

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.ConversionValueRuleService' => [
             'MutateConversionValueRules' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateConversionValueRulesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateConversionValueRulesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

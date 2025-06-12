@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -314,7 +312,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getViewableImpressions()
     {
-        return isset($this->viewable_impressions) ? $this->viewable_impressions : 0;
+        return $this->viewable_impressions ?? 0;
     }
 
     public function hasViewableImpressions()
@@ -354,7 +352,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetCoviewReach()
     {
-        return isset($this->on_target_coview_reach) ? $this->on_target_coview_reach : 0;
+        return $this->on_target_coview_reach ?? 0;
     }
 
     public function hasOnTargetCoviewReach()
@@ -392,7 +390,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalCoviewReach()
     {
-        return isset($this->total_coview_reach) ? $this->total_coview_reach : 0;
+        return $this->total_coview_reach ?? 0;
     }
 
     public function hasTotalCoviewReach()
@@ -430,7 +428,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetCoviewImpressions()
     {
-        return isset($this->on_target_coview_impressions) ? $this->on_target_coview_impressions : 0;
+        return $this->on_target_coview_impressions ?? 0;
     }
 
     public function hasOnTargetCoviewImpressions()
@@ -469,7 +467,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalCoviewImpressions()
     {
-        return isset($this->total_coview_impressions) ? $this->total_coview_impressions : 0;
+        return $this->total_coview_impressions ?? 0;
     }
 
     public function hasTotalCoviewImpressions()
@@ -511,7 +509,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getAverageFrequency()
     {
-        return isset($this->average_frequency) ? $this->average_frequency : 0.0;
+        return $this->average_frequency ?? 0.0;
     }
 
     public function hasAverageFrequency()
@@ -555,7 +553,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getViews()
     {
-        return isset($this->views) ? $this->views : 0;
+        return $this->views ?? 0;
     }
 
     public function hasViews()
@@ -598,7 +596,7 @@ class PlannedProductForecast extends \Google\Protobuf\Internal\Message
      */
     public function getConversions()
     {
-        return isset($this->conversions) ? $this->conversions : 0.0;
+        return $this->conversions ?? 0.0;
     }
 
     public function hasConversions()

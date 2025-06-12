@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -55,7 +53,7 @@ class MutateAccountLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V19\Services\AccountLinkOperation $operation): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

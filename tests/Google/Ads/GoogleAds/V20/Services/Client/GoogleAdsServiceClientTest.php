@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\GoogleAdsServiceClient;
 use Google\Ads\GoogleAds\V20\Services\GoogleAdsRow;
 use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsResponse;
@@ -80,7 +79,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $mutateOperations = [];
-        $request = (new MutateGoogleAdsRequest())
+        $request = new MutateGoogleAdsRequest()
             ->setCustomerId($customerId)
             ->setMutateOperations($mutateOperations);
         $response = $gapicClient->mutate($request);
@@ -118,7 +117,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $mutateOperations = [];
-        $request = (new MutateGoogleAdsRequest())
+        $request = new MutateGoogleAdsRequest()
             ->setCustomerId($customerId)
             ->setMutateOperations($mutateOperations);
         try {
@@ -159,7 +158,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsRequest())
+        $request = new SearchGoogleAdsRequest()
             ->setCustomerId($customerId)
             ->setQuery($query);
         $response = $gapicClient->search($request);
@@ -200,7 +199,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsRequest())
+        $request = new SearchGoogleAdsRequest()
             ->setCustomerId($customerId)
             ->setQuery($query);
         try {
@@ -246,7 +245,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsStreamRequest())
+        $request = new SearchGoogleAdsStreamRequest()
             ->setCustomerId($customerId)
             ->setQuery($query);
         $serverStream = $gapicClient->searchStream($request);
@@ -290,7 +289,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsStreamRequest())
+        $request = new SearchGoogleAdsStreamRequest()
             ->setCustomerId($customerId)
             ->setQuery($query);
         $serverStream = $gapicClient->searchStream($request);
@@ -322,7 +321,7 @@ class GoogleAdsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $mutateOperations = [];
-        $request = (new MutateGoogleAdsRequest())
+        $request = new MutateGoogleAdsRequest()
             ->setCustomerId($customerId)
             ->setMutateOperations($mutateOperations);
         $response = $gapicClient->mutateAsync($request)->wait();

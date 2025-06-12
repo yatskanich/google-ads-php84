@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.ConversionCustomVariableService' => [
             'MutateConversionCustomVariables' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\MutateConversionCustomVariablesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\MutateConversionCustomVariablesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

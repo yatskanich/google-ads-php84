@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.SmartCampaignSettingService' => [
             'GetSmartCampaignStatus' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\GetSmartCampaignStatusResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\GetSmartCampaignStatusResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',
@@ -37,7 +37,7 @@ return [
             ],
             'MutateSmartCampaignSettings' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateSmartCampaignSettingsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateSmartCampaignSettingsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

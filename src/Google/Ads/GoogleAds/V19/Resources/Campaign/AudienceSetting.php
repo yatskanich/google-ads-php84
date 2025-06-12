@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\Campaign;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -51,7 +49,7 @@ class AudienceSetting extends \Google\Protobuf\Internal\Message
      */
     public function getUseAudienceGrouped()
     {
-        return isset($this->use_audience_grouped) ? $this->use_audience_grouped : false;
+        return $this->use_audience_grouped ?? false;
     }
 
     public function hasUseAudienceGrouped()

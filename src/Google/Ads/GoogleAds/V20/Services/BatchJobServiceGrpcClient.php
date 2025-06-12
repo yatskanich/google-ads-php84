@@ -54,7 +54,7 @@ class BatchJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.BatchJobService/MutateBatchJob',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\MutateBatchJobResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\MutateBatchJobResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -79,7 +79,7 @@ class BatchJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.BatchJobService/ListBatchJobResults',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\ListBatchJobResultsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\ListBatchJobResultsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -107,7 +107,7 @@ class BatchJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.BatchJobService/RunBatchJob',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+            [\Google\LongRunning\Operation::class, 'decode'],
         $metadata, $options);
     }
 
@@ -132,7 +132,7 @@ class BatchJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.BatchJobService/AddBatchJobOperations',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\AddBatchJobOperationsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\AddBatchJobOperationsResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\AdGroupAdServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateAdGroupAdsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateAdGroupAdsResponse;
 use Google\Ads\GoogleAds\V18\Services\RemoveAutomaticallyCreatedAssetsRequest;
@@ -76,7 +75,7 @@ class AdGroupAdServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAdsRequest())
+        $request = new MutateAdGroupAdsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupAds($request);
@@ -114,7 +113,7 @@ class AdGroupAdServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAdsRequest())
+        $request = new MutateAdGroupAdsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -144,7 +143,7 @@ class AdGroupAdServiceClientTest extends GeneratedTest
         // Mock request
         $formattedAdGroupAd = $gapicClient->adGroupAdName('[CUSTOMER_ID]', '[AD_GROUP_ID]', '[AD_ID]');
         $assetsWithFieldType = [];
-        $request = (new RemoveAutomaticallyCreatedAssetsRequest())
+        $request = new RemoveAutomaticallyCreatedAssetsRequest()
             ->setAdGroupAd($formattedAdGroupAd)
             ->setAssetsWithFieldType($assetsWithFieldType);
         $gapicClient->removeAutomaticallyCreatedAssets($request);
@@ -181,7 +180,7 @@ class AdGroupAdServiceClientTest extends GeneratedTest
         // Mock request
         $formattedAdGroupAd = $gapicClient->adGroupAdName('[CUSTOMER_ID]', '[AD_GROUP_ID]', '[AD_ID]');
         $assetsWithFieldType = [];
-        $request = (new RemoveAutomaticallyCreatedAssetsRequest())
+        $request = new RemoveAutomaticallyCreatedAssetsRequest()
             ->setAdGroupAd($formattedAdGroupAd)
             ->setAssetsWithFieldType($assetsWithFieldType);
         try {
@@ -211,7 +210,7 @@ class AdGroupAdServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAdsRequest())
+        $request = new MutateAdGroupAdsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupAdsAsync($request)->wait();

@@ -62,7 +62,7 @@ class KeywordPlanAdGroupServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.KeywordPlanAdGroupService/MutateKeywordPlanAdGroups',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateKeywordPlanAdGroupsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateKeywordPlanAdGroupsResponse::class, 'decode'],
         $metadata, $options);
     }
 

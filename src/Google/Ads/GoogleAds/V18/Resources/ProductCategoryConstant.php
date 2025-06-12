@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -153,7 +151,7 @@ class ProductCategoryConstant extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryConstantParent()
     {
-        return isset($this->product_category_constant_parent) ? $this->product_category_constant_parent : '';
+        return $this->product_category_constant_parent ?? '';
     }
 
     public function hasProductCategoryConstantParent()

@@ -25,8 +25,8 @@ return [
         'google.ads.googleads.v20.services.OfflineUserDataJobService' => [
             'RunOfflineUserDataJob' => [
                 'longRunning' => [
-                    'operationReturnType' => '\Google\Protobuf\GPBEmpty',
-                    'metadataReturnType' => '\Google\Ads\GoogleAds\V20\Resources\OfflineUserDataJobMetadata',
+                    'operationReturnType' => \Google\Protobuf\GPBEmpty::class,
+                    'metadataReturnType' => \Google\Ads\GoogleAds\V20\Resources\OfflineUserDataJobMetadata::class,
                     'initialPollDelayMillis' => '300000',
                     'pollDelayMultiplier' => '1.25',
                     'maxPollDelayMillis' => '3600000',
@@ -44,7 +44,7 @@ return [
             ],
             'AddOfflineUserDataJobOperations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\AddOfflineUserDataJobOperationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\AddOfflineUserDataJobOperationsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',
@@ -56,7 +56,7 @@ return [
             ],
             'CreateOfflineUserDataJob' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\CreateOfflineUserDataJobResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\CreateOfflineUserDataJobResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

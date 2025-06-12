@@ -52,7 +52,7 @@ class ConversionAdjustmentUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.ConversionAdjustmentUploadService/UploadConversionAdjustments',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\UploadConversionAdjustmentsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\UploadConversionAdjustmentsResponse::class, 'decode'],
         $metadata, $options);
     }
 

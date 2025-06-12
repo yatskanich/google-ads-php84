@@ -70,19 +70,19 @@ use Google\ApiCore\ApiException;
  */
 class SetUpRemarketing
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
-    private const AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
+    private const string AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
 
     // Optional: To use a different bid modifier value from the default (1.5), modify
     // the line below with your desired bid modifier value.
-    private const BID_MODIFIER_VALUE = 1.5;
+    private const float BID_MODIFIER_VALUE = 1.5;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AD_GROUP_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -90,11 +90,11 @@ class SetUpRemarketing
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

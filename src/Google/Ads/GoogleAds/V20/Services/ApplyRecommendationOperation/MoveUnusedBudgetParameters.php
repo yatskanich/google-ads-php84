@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class MoveUnusedBudgetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getBudgetMicrosToMove()
     {
-        return isset($this->budget_micros_to_move) ? $this->budget_micros_to_move : 0;
+        return $this->budget_micros_to_move ?? 0;
     }
 
     public function hasBudgetMicrosToMove()

@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
 use Google\Ads\GoogleAds\V18\Resources\DataLink;
-use Google\Ads\GoogleAds\V18\Services\Client\DataLinkServiceClient;
 use Google\Ads\GoogleAds\V18\Services\CreateDataLinkRequest;
 use Google\Ads\GoogleAds\V18\Services\CreateDataLinkResponse;
 use Google\ApiCore\ApiException;
@@ -77,7 +76,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         $response = $gapicClient->createDataLink($request);
@@ -115,7 +114,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         try {
@@ -147,7 +146,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         $response = $gapicClient->createDataLinkAsync($request)->wait();

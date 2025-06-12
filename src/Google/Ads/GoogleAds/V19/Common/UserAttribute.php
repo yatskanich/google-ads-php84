@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -150,7 +148,7 @@ class UserAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getLifetimeValueMicros()
     {
-        return isset($this->lifetime_value_micros) ? $this->lifetime_value_micros : 0;
+        return $this->lifetime_value_micros ?? 0;
     }
 
     public function hasLifetimeValueMicros()
@@ -188,7 +186,7 @@ class UserAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getLifetimeValueBucket()
     {
-        return isset($this->lifetime_value_bucket) ? $this->lifetime_value_bucket : 0;
+        return $this->lifetime_value_bucket ?? 0;
     }
 
     public function hasLifetimeValueBucket()

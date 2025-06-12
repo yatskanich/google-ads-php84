@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AdStrengthActionItem;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -93,7 +91,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getAssetCount()
     {
-        return isset($this->asset_count) ? $this->asset_count : 0;
+        return $this->asset_count ?? 0;
     }
 
     public function hasAssetCount()
@@ -132,7 +130,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getVideoAspectRatioRequirement()
     {
-        return isset($this->video_aspect_ratio_requirement) ? $this->video_aspect_ratio_requirement : 0;
+        return $this->video_aspect_ratio_requirement ?? 0;
     }
 
     public function hasVideoAspectRatioRequirement()

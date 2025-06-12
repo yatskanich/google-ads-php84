@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.GoogleAdsFieldService' => [
             'GetGoogleAdsField' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Resources\GoogleAdsField',
+                'responseType' => \Google\Ads\GoogleAds\V18\Resources\GoogleAdsField::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',
@@ -45,7 +45,7 @@ return [
                     'resourcesGetMethod' => 'getResults',
                 ],
                 'callType' => \Google\ApiCore\Call::PAGINATED_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\SearchGoogleAdsFieldsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\SearchGoogleAdsFieldsResponse::class,
             ],
             'templateMap' => [
                 'googleAdsField' => 'googleAdsFields/{google_ads_field}',

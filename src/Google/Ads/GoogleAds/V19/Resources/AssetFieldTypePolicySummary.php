@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -61,7 +59,7 @@ class AssetFieldTypePolicySummary extends \Google\Protobuf\Internal\Message
      */
     public function getAssetFieldType()
     {
-        return isset($this->asset_field_type) ? $this->asset_field_type : 0;
+        return $this->asset_field_type ?? 0;
     }
 
     public function hasAssetFieldType()
@@ -97,7 +95,7 @@ class AssetFieldTypePolicySummary extends \Google\Protobuf\Internal\Message
      */
     public function getAssetSource()
     {
-        return isset($this->asset_source) ? $this->asset_source : 0;
+        return $this->asset_source ?? 0;
     }
 
     public function hasAssetSource()

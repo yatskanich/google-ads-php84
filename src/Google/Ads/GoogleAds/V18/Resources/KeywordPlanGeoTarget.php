@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class KeywordPlanGeoTarget extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetConstant()
     {
-        return isset($this->geo_target_constant) ? $this->geo_target_constant : '';
+        return $this->geo_target_constant ?? '';
     }
 
     public function hasGeoTargetConstant()

@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\ShareablePreviewServiceClient;
 use Google\Ads\GoogleAds\V18\Services\GenerateShareablePreviewsRequest;
 use Google\Ads\GoogleAds\V18\Services\GenerateShareablePreviewsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         $response = $gapicClient->generateShareablePreviews($request);
@@ -112,7 +111,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         try {
@@ -142,7 +141,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         $response = $gapicClient->generateShareablePreviewsAsync($request)->wait();

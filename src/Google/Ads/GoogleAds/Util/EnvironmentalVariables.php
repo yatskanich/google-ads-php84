@@ -93,7 +93,7 @@ class EnvironmentalVariables
         $envVars = [];
         $prefixLength = strlen($prefix);
         foreach (getenv() as $name => $value) {
-            if (strpos($name, $prefix) === 0) {
+            if (str_starts_with($name, $prefix)) {
                 $envVars[substr($name, $prefixLength)] = $value;
             }
         }

@@ -56,7 +56,7 @@ class CustomerServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerService/MutateCustomer',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateCustomerResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateCustomerResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -80,7 +80,7 @@ class CustomerServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerService/ListAccessibleCustomers',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\ListAccessibleCustomersResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\ListAccessibleCustomersResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -108,7 +108,7 @@ class CustomerServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CustomerService/CreateCustomerClient',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\CreateCustomerClientResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\CreateCustomerClientResponse::class, 'decode'],
         $metadata, $options);
     }
 

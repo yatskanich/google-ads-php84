@@ -46,7 +46,7 @@ class CampaignConversionGoalServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.CampaignConversionGoalService/MutateCampaignConversionGoals',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateCampaignConversionGoalsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateCampaignConversionGoalsResponse::class, 'decode'],
         $metadata, $options);
     }
 

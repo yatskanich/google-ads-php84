@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common\PolicyTopicConstraint;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class CountryConstraintList extends \Google\Protobuf\Internal\Message
      */
     public function getTotalTargetedCountries()
     {
-        return isset($this->total_targeted_countries) ? $this->total_targeted_countries : 0;
+        return $this->total_targeted_countries ?? 0;
     }
 
     public function hasTotalTargetedCountries()

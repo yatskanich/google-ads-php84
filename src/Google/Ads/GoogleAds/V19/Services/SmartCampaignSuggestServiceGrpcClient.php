@@ -43,7 +43,7 @@ class SmartCampaignSuggestServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.SmartCampaignSuggestService/SuggestSmartCampaignBudgetOptions',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignBudgetOptionsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignBudgetOptionsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -59,7 +59,7 @@ class SmartCampaignSuggestServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.SmartCampaignSuggestService/SuggestSmartCampaignAd',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignAdResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SuggestSmartCampaignAdResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -74,7 +74,7 @@ class SmartCampaignSuggestServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.SmartCampaignSuggestService/SuggestKeywordThemes',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SuggestKeywordThemesResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SuggestKeywordThemesResponse::class, 'decode'],
         $metadata, $options);
     }
 

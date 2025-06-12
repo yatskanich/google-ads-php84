@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class UserInterestInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUserInterestCategory()
     {
-        return isset($this->user_interest_category) ? $this->user_interest_category : '';
+        return $this->user_interest_category ?? '';
     }
 
     public function hasUserInterestCategory()

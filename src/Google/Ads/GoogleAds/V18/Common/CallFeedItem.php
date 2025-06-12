@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -102,7 +100,7 @@ class CallFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getPhoneNumber()
     {
-        return isset($this->phone_number) ? $this->phone_number : '';
+        return $this->phone_number ?? '';
     }
 
     public function hasPhoneNumber()
@@ -140,7 +138,7 @@ class CallFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -178,7 +176,7 @@ class CallFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCallTrackingEnabled()
     {
-        return isset($this->call_tracking_enabled) ? $this->call_tracking_enabled : false;
+        return $this->call_tracking_enabled ?? false;
     }
 
     public function hasCallTrackingEnabled()
@@ -217,7 +215,7 @@ class CallFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionAction()
     {
-        return isset($this->call_conversion_action) ? $this->call_conversion_action : '';
+        return $this->call_conversion_action ?? '';
     }
 
     public function hasCallConversionAction()
@@ -256,7 +254,7 @@ class CallFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionTrackingDisabled()
     {
-        return isset($this->call_conversion_tracking_disabled) ? $this->call_conversion_tracking_disabled : false;
+        return $this->call_conversion_tracking_disabled ?? false;
     }
 
     public function hasCallConversionTrackingDisabled()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -150,7 +148,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()
@@ -188,7 +186,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getHeadline()
     {
-        return isset($this->headline) ? $this->headline : '';
+        return $this->headline ?? '';
     }
 
     public function hasHeadline()
@@ -226,7 +224,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getLandingPage()
     {
-        return isset($this->landing_page) ? $this->landing_page : '';
+        return $this->landing_page ?? '';
     }
 
     public function hasLandingPage()
@@ -264,7 +262,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getPageUrl()
     {
-        return isset($this->page_url) ? $this->page_url : '';
+        return $this->page_url ?? '';
     }
 
     public function hasPageUrl()
@@ -302,7 +300,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getHasNegativeKeyword()
     {
-        return isset($this->has_negative_keyword) ? $this->has_negative_keyword : false;
+        return $this->has_negative_keyword ?? false;
     }
 
     public function hasHasNegativeKeyword()
@@ -340,7 +338,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getHasMatchingKeyword()
     {
-        return isset($this->has_matching_keyword) ? $this->has_matching_keyword : false;
+        return $this->has_matching_keyword ?? false;
     }
 
     public function hasHasMatchingKeyword()
@@ -378,7 +376,7 @@ class DynamicSearchAdsSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getHasNegativeUrl()
     {
-        return isset($this->has_negative_url) ? $this->has_negative_url : false;
+        return $this->has_negative_url ?? false;
     }
 
     public function hasHasNegativeUrl()

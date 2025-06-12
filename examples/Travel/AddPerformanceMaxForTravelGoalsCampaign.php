@@ -90,28 +90,28 @@ use Google\ApiCore\Serializer;
  */
 class AddPerformanceMaxForTravelGoalsCampaign
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Sets a place ID that uniquely identifies a place in the Google Places database.
     // See https://developers.google.com/places/web-service/place-id to learn more.
     // The provided place ID must belong to a hotel property.
-    private const PLACE_ID = 'INSERT_PLACE_ID_HERE';
+    private const string PLACE_ID = 'INSERT_PLACE_ID_HERE';
 
     // Minimum requirements of assets required in a Performance Max asset group.
     // See https://developers.google.com/google-ads/api/docs/performance-max/assets for details.
-    private const MIN_REQUIRED_TEXT_ASSET_COUNTS = [
+    private const array MIN_REQUIRED_TEXT_ASSET_COUNTS = [
         AssetFieldType::HEADLINE => 3,
         AssetFieldType::LONG_HEADLINE => 1,
         AssetFieldType::DESCRIPTION => 2,
         AssetFieldType::BUSINESS_NAME => 1
     ];
-    private const MIN_REQUIRED_IMAGE_ASSET_COUNTS = [
+    private const array MIN_REQUIRED_IMAGE_ASSET_COUNTS = [
         AssetFieldType::MARKETING_IMAGE => 1,
         AssetFieldType::SQUARE_MARKETING_IMAGE => 1,
         AssetFieldType::LOGO => 1
     ];
     // Texts and URLs used to create text and image assets when the TravelAssetSuggestionService
     // doesn't return enough assets required for creating an asset group.
-    private const DEFAULT_TEXT_ASSETS_INFO = [
+    private const array DEFAULT_TEXT_ASSETS_INFO = [
         AssetFieldType::HEADLINE => ['Hotel', 'Travel Reviews', 'Book travel'],
         AssetFieldType::LONG_HEADLINE => ['Travel the World'],
         AssetFieldType::DESCRIPTION => [
@@ -120,7 +120,7 @@ class AddPerformanceMaxForTravelGoalsCampaign
         ],
         AssetFieldType::BUSINESS_NAME => ['Interplanetary Cruises']
     ];
-    private const DEFAULT_IMAGE_ASSETS_INFO = [
+    private const array DEFAULT_IMAGE_ASSETS_INFO = [
         AssetFieldType::MARKETING_IMAGE => ['https://gaagl.page.link/Eit5'],
         AssetFieldType::SQUARE_MARKETING_IMAGE => ['https://gaagl.page.link/bjYi'],
         AssetFieldType::LOGO => ['https://gaagl.page.link/bjYi']
@@ -133,10 +133,10 @@ class AddPerformanceMaxForTravelGoalsCampaign
     // for further details.
     //
     // These temporary IDs are fixed because they are used in multiple places.
-    private const ASSET_TEMPORARY_ID = -1;
-    private const BUDGET_TEMPORARY_ID = -2;
-    private const CAMPAIGN_TEMPORARY_ID = -3;
-    private const ASSET_GROUP_TEMPORARY_ID = -4;
+    private const int ASSET_TEMPORARY_ID = -1;
+    private const int BUDGET_TEMPORARY_ID = -2;
+    private const int CAMPAIGN_TEMPORARY_ID = -3;
+    private const int ASSET_GROUP_TEMPORARY_ID = -4;
 
     // There are also entities that will be created in the same request but do not need to be fixed
     // temporary IDs because they are referenced only once.
@@ -147,17 +147,17 @@ class AddPerformanceMaxForTravelGoalsCampaign
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::PLACE_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -856,7 +856,7 @@ class AddPerformanceMaxForTravelGoalsCampaign
                         $customerId,
                         self::DEFAULT_IMAGE_ASSETS_INFO[$assetFieldType][$i],
                         $assetFieldType,
-                        strtolower(AssetFieldType::name($assetFieldType))
+                        strtolower((string)AssetFieldType::name($assetFieldType))
                         . Helper::getShortPrintableDatetime()
                     )
                 );

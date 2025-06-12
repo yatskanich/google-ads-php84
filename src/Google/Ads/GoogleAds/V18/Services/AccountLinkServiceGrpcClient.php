@@ -56,7 +56,7 @@ class AccountLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.AccountLinkService/CreateAccountLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\CreateAccountLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\CreateAccountLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -85,7 +85,7 @@ class AccountLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.AccountLinkService/MutateAccountLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateAccountLinkResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateAccountLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 

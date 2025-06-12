@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CustomAudienceServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomAudiencesRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomAudiencesResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomAudiences($request);
@@ -112,7 +111,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomAudiencesAsync($request)->wait();

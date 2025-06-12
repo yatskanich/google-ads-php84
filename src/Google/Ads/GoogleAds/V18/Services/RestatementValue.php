@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -77,7 +75,7 @@ class RestatementValue extends \Google\Protobuf\Internal\Message
      */
     public function getAdjustedValue()
     {
-        return isset($this->adjusted_value) ? $this->adjusted_value : 0.0;
+        return $this->adjusted_value ?? 0.0;
     }
 
     public function hasAdjustedValue()
@@ -122,7 +120,7 @@ class RestatementValue extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()

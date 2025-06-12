@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -130,7 +128,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getPlacement()
     {
-        return isset($this->placement) ? $this->placement : '';
+        return $this->placement ?? '';
     }
 
     public function hasPlacement()
@@ -168,7 +166,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return isset($this->display_name) ? $this->display_name : '';
+        return $this->display_name ?? '';
     }
 
     public function hasDisplayName()
@@ -206,7 +204,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getGroupPlacementTargetUrl()
     {
-        return isset($this->group_placement_target_url) ? $this->group_placement_target_url : '';
+        return $this->group_placement_target_url ?? '';
     }
 
     public function hasGroupPlacementTargetUrl()
@@ -244,7 +242,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getTargetUrl()
     {
-        return isset($this->target_url) ? $this->target_url : '';
+        return $this->target_url ?? '';
     }
 
     public function hasTargetUrl()

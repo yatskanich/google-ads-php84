@@ -46,33 +46,33 @@ use Google\ApiCore\ApiException;
  */
 class UploadOfflineConversion
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
 
     // Set exactly one of GCLID, GBRAID, or WBRAID.
     // The Google Click ID for which conversions are uploaded.
-    private const GCLID = null;
+    private const null GCLID = null;
     // The GBRAID identifier for an iOS app conversion.
-    private const GBRAID = null;
+    private const null GBRAID = null;
     // The WBRAID identifier for an iOS web conversion.
-    private const WBRAID = null;
+    private const null WBRAID = null;
     // Optional: Specify the unique order ID for the click conversion.
-    private const ORDER_ID = null;
+    private const null ORDER_ID = null;
     // The conversion date time in "yyyy-mm-dd hh:mm:ss+|-hh:mm" format.
-    private const CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
-    private const CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
+    private const string CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
+    private const string CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
     // Optional: Specify the conversion custom variable ID and value you want to
     // associate with the click conversion upload.
-    private const CONVERSION_CUSTOM_VARIABLE_ID = null;
-    private const CONVERSION_CUSTOM_VARIABLE_VALUE = null;
+    private const null CONVERSION_CUSTOM_VARIABLE_ID = null;
+    private const null CONVERSION_CUSTOM_VARIABLE_VALUE = null;
     // Optional: The consent status for ad user data.
-    private const AD_USER_DATA_CONSENT = null;
+    private const null AD_USER_DATA_CONSENT = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CONVERSION_ACTION_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::GCLID => GetOpt::OPTIONAL_ARGUMENT,
@@ -87,11 +87,11 @@ class UploadOfflineConversion
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -185,9 +185,7 @@ class UploadOfflineConversion
         // See https://developers.google.com/google-ads/api/docs/conversions/upload-clicks for details.
         $nonNullFields = array_filter(
             [$gclid, $gbraid, $wbraid],
-            function ($field) {
-                return !is_null($field);
-            }
+            fn($field) => !is_null($field)
         );
         if (count($nonNullFields) !== 1) {
             throw new \UnexpectedValueException(

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -47,7 +45,7 @@ class UpdateDataLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, int $dataLinkStatus, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setDataLinkStatus($dataLinkStatus)
             ->setResourceName($resourceName);

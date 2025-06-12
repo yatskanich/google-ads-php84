@@ -24,7 +24,6 @@ namespace Google\Ads\GoogleAds\V20\Services\Client;
 
 use Google\Ads\GoogleAds\V20\Enums\DataLinkStatusEnum\DataLinkStatus;
 use Google\Ads\GoogleAds\V20\Resources\DataLink;
-use Google\Ads\GoogleAds\V20\Services\Client\DataLinkServiceClient;
 use Google\Ads\GoogleAds\V20\Services\CreateDataLinkRequest;
 use Google\Ads\GoogleAds\V20\Services\CreateDataLinkResponse;
 use Google\Ads\GoogleAds\V20\Services\RemoveDataLinkRequest;
@@ -82,7 +81,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         $response = $gapicClient->createDataLink($request);
@@ -120,7 +119,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         try {
@@ -152,7 +151,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->dataLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]', '[DATA_LINK_ID]');
-        $request = (new RemoveDataLinkRequest())
+        $request = new RemoveDataLinkRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->removeDataLink($request);
@@ -190,7 +189,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->dataLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]', '[DATA_LINK_ID]');
-        $request = (new RemoveDataLinkRequest())
+        $request = new RemoveDataLinkRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         try {
@@ -223,7 +222,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $dataLinkStatus = DataLinkStatus::UNSPECIFIED;
         $formattedResourceName = $gapicClient->dataLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]', '[DATA_LINK_ID]');
-        $request = (new UpdateDataLinkRequest())
+        $request = new UpdateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLinkStatus($dataLinkStatus)
             ->setResourceName($formattedResourceName);
@@ -265,7 +264,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $dataLinkStatus = DataLinkStatus::UNSPECIFIED;
         $formattedResourceName = $gapicClient->dataLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]', '[DATA_LINK_ID]');
-        $request = (new UpdateDataLinkRequest())
+        $request = new UpdateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLinkStatus($dataLinkStatus)
             ->setResourceName($formattedResourceName);
@@ -298,7 +297,7 @@ class DataLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $dataLink = new DataLink();
-        $request = (new CreateDataLinkRequest())
+        $request = new CreateDataLinkRequest()
             ->setCustomerId($customerId)
             ->setDataLink($dataLink);
         $response = $gapicClient->createDataLinkAsync($request)->wait();

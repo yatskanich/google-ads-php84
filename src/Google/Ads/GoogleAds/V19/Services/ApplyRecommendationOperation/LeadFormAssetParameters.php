@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\ApplyRecommendationOperation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -98,7 +96,7 @@ class LeadFormAssetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getSetSubmitLeadFormAssetCampaignGoal()
     {
-        return isset($this->set_submit_lead_form_asset_campaign_goal) ? $this->set_submit_lead_form_asset_campaign_goal : false;
+        return $this->set_submit_lead_form_asset_campaign_goal ?? false;
     }
 
     public function hasSetSubmitLeadFormAssetCampaignGoal()

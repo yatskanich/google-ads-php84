@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
 use Google\Ads\GoogleAds\V19\Enums\MonthOfYearEnum\MonthOfYear;
-use Google\Ads\GoogleAds\V19\Services\Client\InvoiceServiceClient;
 use Google\Ads\GoogleAds\V19\Services\ListInvoicesRequest;
 use Google\Ads\GoogleAds\V19\Services\ListInvoicesResponse;
 use Google\ApiCore\ApiException;
@@ -77,7 +76,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)
@@ -123,7 +122,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)
@@ -157,7 +156,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)

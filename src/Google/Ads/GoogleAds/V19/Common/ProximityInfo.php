@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -111,7 +109,7 @@ class ProximityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRadius()
     {
-        return isset($this->radius) ? $this->radius : 0.0;
+        return $this->radius ?? 0.0;
     }
 
     public function hasRadius()

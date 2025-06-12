@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\UserListServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateUserListsRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateUserListsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class UserListServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListsRequest())
+        $request = new MutateUserListsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateUserLists($request);
@@ -112,7 +111,7 @@ class UserListServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListsRequest())
+        $request = new MutateUserListsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class UserListServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListsRequest())
+        $request = new MutateUserListsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateUserListsAsync($request)->wait();

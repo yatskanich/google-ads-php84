@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -139,7 +137,7 @@ class ResponsiveSearchAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath1()
     {
-        return isset($this->path1) ? $this->path1 : '';
+        return $this->path1 ?? '';
     }
 
     public function hasPath1()
@@ -176,7 +174,7 @@ class ResponsiveSearchAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath2()
     {
-        return isset($this->path2) ? $this->path2 : '';
+        return $this->path2 ?? '';
     }
 
     public function hasPath2()

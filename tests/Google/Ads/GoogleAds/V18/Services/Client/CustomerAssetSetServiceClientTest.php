@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services\Client;
 
-use Google\Ads\GoogleAds\V18\Services\Client\CustomerAssetSetServiceClient;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomerAssetSetsRequest;
 use Google\Ads\GoogleAds\V18\Services\MutateCustomerAssetSetsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CustomerAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerAssetSetsRequest())
+        $request = new MutateCustomerAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerAssetSets($request);
@@ -112,7 +111,7 @@ class CustomerAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerAssetSetsRequest())
+        $request = new MutateCustomerAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CustomerAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerAssetSetsRequest())
+        $request = new MutateCustomerAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerAssetSetsAsync($request)->wait();

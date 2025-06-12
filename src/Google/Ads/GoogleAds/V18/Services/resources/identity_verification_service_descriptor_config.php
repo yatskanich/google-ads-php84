@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.IdentityVerificationService' => [
             'GetIdentityVerification' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\GetIdentityVerificationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\GetIdentityVerificationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'StartIdentityVerification' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Protobuf\GPBEmpty',
+                'responseType' => \Google\Protobuf\GPBEmpty::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

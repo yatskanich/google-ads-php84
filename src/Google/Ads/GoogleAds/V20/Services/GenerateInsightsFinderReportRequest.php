@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -64,7 +62,7 @@ class GenerateInsightsFinderReportRequest extends \Google\Protobuf\Internal\Mess
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Services\BasicInsightsAudience $baselineAudience, \Google\Ads\GoogleAds\V20\Services\BasicInsightsAudience $specificAudience): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setBaselineAudience($baselineAudience)
             ->setSpecificAudience($specificAudience);

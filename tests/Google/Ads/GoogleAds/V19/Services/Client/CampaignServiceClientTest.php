@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignServiceClient;
 use Google\Ads\GoogleAds\V19\Services\EnablePMaxBrandGuidelinesRequest;
 use Google\Ads\GoogleAds\V19\Services\EnablePMaxBrandGuidelinesResponse;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignsRequest;
@@ -76,7 +75,7 @@ class CampaignServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new EnablePMaxBrandGuidelinesRequest())
+        $request = new EnablePMaxBrandGuidelinesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->enablePMaxBrandGuidelines($request);
@@ -114,7 +113,7 @@ class CampaignServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new EnablePMaxBrandGuidelinesRequest())
+        $request = new EnablePMaxBrandGuidelinesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -144,7 +143,7 @@ class CampaignServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignsRequest())
+        $request = new MutateCampaignsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaigns($request);
@@ -182,7 +181,7 @@ class CampaignServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignsRequest())
+        $request = new MutateCampaignsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -212,7 +211,7 @@ class CampaignServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new EnablePMaxBrandGuidelinesRequest())
+        $request = new EnablePMaxBrandGuidelinesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->enablePMaxBrandGuidelinesAsync($request)->wait();

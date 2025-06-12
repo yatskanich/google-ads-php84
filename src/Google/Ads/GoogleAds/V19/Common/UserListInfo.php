@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -46,7 +44,7 @@ class UserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return isset($this->user_list) ? $this->user_list : '';
+        return $this->user_list ?? '';
     }
 
     public function hasUserList()

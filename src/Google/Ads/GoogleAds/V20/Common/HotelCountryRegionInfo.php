@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -45,7 +43,7 @@ class HotelCountryRegionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCountryRegionCriterion()
     {
-        return isset($this->country_region_criterion) ? $this->country_region_criterion : '';
+        return $this->country_region_criterion ?? '';
     }
 
     public function hasCountryRegionCriterion()

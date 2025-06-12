@@ -57,7 +57,7 @@ class ContentCreatorInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.ContentCreatorInsightsService/GenerateCreatorInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\GenerateCreatorInsightsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\GenerateCreatorInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 

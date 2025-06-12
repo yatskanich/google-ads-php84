@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
 use Google\Ads\GoogleAds\V19\Enums\IdentityVerificationProgramEnum\IdentityVerificationProgram;
-use Google\Ads\GoogleAds\V19\Services\Client\IdentityVerificationServiceClient;
 use Google\Ads\GoogleAds\V19\Services\GetIdentityVerificationRequest;
 use Google\Ads\GoogleAds\V19\Services\GetIdentityVerificationResponse;
 use Google\Ads\GoogleAds\V19\Services\StartIdentityVerificationRequest;
@@ -76,7 +75,7 @@ class IdentityVerificationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GetIdentityVerificationRequest())
+        $request = new GetIdentityVerificationRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->getIdentityVerification($request);
         $this->assertEquals($expectedResponse, $response);
@@ -110,7 +109,7 @@ class IdentityVerificationServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GetIdentityVerificationRequest())
+        $request = new GetIdentityVerificationRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->getIdentityVerification($request);
@@ -139,7 +138,7 @@ class IdentityVerificationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $verificationProgram = IdentityVerificationProgram::UNSPECIFIED;
-        $request = (new StartIdentityVerificationRequest())
+        $request = new StartIdentityVerificationRequest()
             ->setCustomerId($customerId)
             ->setVerificationProgram($verificationProgram);
         $gapicClient->startIdentityVerification($request);
@@ -176,7 +175,7 @@ class IdentityVerificationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $verificationProgram = IdentityVerificationProgram::UNSPECIFIED;
-        $request = (new StartIdentityVerificationRequest())
+        $request = new StartIdentityVerificationRequest()
             ->setCustomerId($customerId)
             ->setVerificationProgram($verificationProgram);
         try {
@@ -205,7 +204,7 @@ class IdentityVerificationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GetIdentityVerificationRequest())
+        $request = new GetIdentityVerificationRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->getIdentityVerificationAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

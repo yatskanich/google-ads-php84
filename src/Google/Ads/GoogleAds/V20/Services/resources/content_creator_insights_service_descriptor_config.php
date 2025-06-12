@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.ContentCreatorInsightsService' => [
             'GenerateCreatorInsights' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'GenerateTrendingInsights' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\GenerateTrendingInsightsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\GenerateTrendingInsightsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -90,7 +90,7 @@ class AdGroupAdServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AdGroupAdService/MutateAdGroupAds',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\MutateAdGroupAdsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\MutateAdGroupAdsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -116,7 +116,7 @@ class AdGroupAdServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.AdGroupAdService/RemoveAutomaticallyCreatedAssets',
         $argument,
-        ['\Google\Protobuf\GPBEmpty', 'decode'],
+            [\Google\Protobuf\GPBEmpty::class, 'decode'],
         $metadata, $options);
     }
 

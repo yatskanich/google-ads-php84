@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v18.services.RecommendationService' => [
             'ApplyRecommendation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\ApplyRecommendationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\ApplyRecommendationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'DismissRecommendation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\DismissRecommendationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\DismissRecommendationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'GenerateRecommendations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V18\Services\GenerateRecommendationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V18\Services\GenerateRecommendationsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

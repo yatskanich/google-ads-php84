@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
 use Google\Ads\GoogleAds\V20\Services\AccountBudgetProposalOperation;
-use Google\Ads\GoogleAds\V20\Services\Client\AccountBudgetProposalServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateAccountBudgetProposalRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateAccountBudgetProposalResponse;
 use Google\ApiCore\ApiException;
@@ -75,7 +74,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountBudgetProposal($request);
@@ -113,7 +112,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +142,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountBudgetProposalAsync($request)->wait();

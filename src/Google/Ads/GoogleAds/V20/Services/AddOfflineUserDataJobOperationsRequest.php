@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -60,7 +58,7 @@ class AddOfflineUserDataJobOperationsRequest extends \Google\Protobuf\Internal\M
      */
     public static function build(string $resourceName, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setResourceName($resourceName)
             ->setOperations($operations);
     }
@@ -125,7 +123,7 @@ class AddOfflineUserDataJobOperationsRequest extends \Google\Protobuf\Internal\M
      */
     public function getEnablePartialFailure()
     {
-        return isset($this->enable_partial_failure) ? $this->enable_partial_failure : false;
+        return $this->enable_partial_failure ?? false;
     }
 
     public function hasEnablePartialFailure()
@@ -163,7 +161,7 @@ class AddOfflineUserDataJobOperationsRequest extends \Google\Protobuf\Internal\M
      */
     public function getEnableWarnings()
     {
-        return isset($this->enable_warnings) ? $this->enable_warnings : false;
+        return $this->enable_warnings ?? false;
     }
 
     public function hasEnableWarnings()

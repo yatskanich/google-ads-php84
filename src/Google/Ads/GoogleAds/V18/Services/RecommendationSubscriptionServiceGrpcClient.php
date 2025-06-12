@@ -58,7 +58,7 @@ class RecommendationSubscriptionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.RecommendationSubscriptionService/MutateRecommendationSubscription',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateRecommendationSubscriptionResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateRecommendationSubscriptionResponse::class, 'decode'],
         $metadata, $options);
     }
 

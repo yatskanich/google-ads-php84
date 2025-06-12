@@ -58,7 +58,7 @@ class CampaignDraftServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.CampaignDraftService/MutateCampaignDrafts',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\MutateCampaignDraftsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\MutateCampaignDraftsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -90,7 +90,7 @@ class CampaignDraftServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.CampaignDraftService/PromoteCampaignDraft',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+            [\Google\LongRunning\Operation::class, 'decode'],
         $metadata, $options);
     }
 
@@ -115,7 +115,7 @@ class CampaignDraftServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v20.services.CampaignDraftService/ListCampaignDraftAsyncErrors',
         $argument,
-        ['\Google\Ads\GoogleAds\V20\Services\ListCampaignDraftAsyncErrorsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V20\Services\ListCampaignDraftAsyncErrorsResponse::class, 'decode'],
         $metadata, $options);
     }
 

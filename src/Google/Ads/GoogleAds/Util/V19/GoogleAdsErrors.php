@@ -18,14 +18,14 @@
 
 namespace Google\Ads\GoogleAds\Util\V19;
 
-use Google\Rpc\Status;
+use Google\Ads\GoogleAds\V19\Errors\ErrorLocation\FieldPathElement;
 use Google\Ads\GoogleAds\V19\Errors\GoogleAdsError;
 use Google\Ads\GoogleAds\V19\Errors\GoogleAdsFailure;
-use Google\Ads\GoogleAds\V19\Errors\ErrorLocation\FieldPathElement;
+use Google\Rpc\Status;
 
 final class GoogleAdsErrors
 {
-    private const SUPPORTED_FIELDS = [
+    private const array SUPPORTED_FIELDS = [
         'operations',
         'mutate_operations',
         'conversion_adjustments',

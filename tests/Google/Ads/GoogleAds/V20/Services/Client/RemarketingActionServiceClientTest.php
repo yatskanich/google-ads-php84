@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\RemarketingActionServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateRemarketingActionsRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateRemarketingActionsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class RemarketingActionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRemarketingActionsRequest())
+        $request = new MutateRemarketingActionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRemarketingActions($request);
@@ -112,7 +111,7 @@ class RemarketingActionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRemarketingActionsRequest())
+        $request = new MutateRemarketingActionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class RemarketingActionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRemarketingActionsRequest())
+        $request = new MutateRemarketingActionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRemarketingActionsAsync($request)->wait();

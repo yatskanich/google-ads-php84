@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources\ConversionAction;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -53,7 +51,7 @@ class ThirdPartyAppAnalyticsSettings extends \Google\Protobuf\Internal\Message
      */
     public function getEventName()
     {
-        return isset($this->event_name) ? $this->event_name : '';
+        return $this->event_name ?? '';
     }
 
     public function hasEventName()

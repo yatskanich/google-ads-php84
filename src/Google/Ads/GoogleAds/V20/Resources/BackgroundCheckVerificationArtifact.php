@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -59,7 +57,7 @@ class BackgroundCheckVerificationArtifact extends \Google\Protobuf\Internal\Mess
      */
     public function getCaseUrl()
     {
-        return isset($this->case_url) ? $this->case_url : '';
+        return $this->case_url ?? '';
     }
 
     public function hasCaseUrl()
@@ -98,7 +96,7 @@ class BackgroundCheckVerificationArtifact extends \Google\Protobuf\Internal\Mess
      */
     public function getFinalAdjudicationDateTime()
     {
-        return isset($this->final_adjudication_date_time) ? $this->final_adjudication_date_time : '';
+        return $this->final_adjudication_date_time ?? '';
     }
 
     public function hasFinalAdjudicationDateTime()

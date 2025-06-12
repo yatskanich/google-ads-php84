@@ -24,7 +24,6 @@ namespace Google\Ads\GoogleAds\V19\Services\Client;
 
 use Google\Ads\GoogleAds\V19\Resources\AccountLink;
 use Google\Ads\GoogleAds\V19\Services\AccountLinkOperation;
-use Google\Ads\GoogleAds\V19\Services\Client\AccountLinkServiceClient;
 use Google\Ads\GoogleAds\V19\Services\CreateAccountLinkRequest;
 use Google\Ads\GoogleAds\V19\Services\CreateAccountLinkResponse;
 use Google\Ads\GoogleAds\V19\Services\MutateAccountLinkRequest;
@@ -80,7 +79,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         $response = $gapicClient->createAccountLink($request);
@@ -118,7 +117,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         try {
@@ -148,7 +147,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountLinkOperation();
-        $request = (new MutateAccountLinkRequest())
+        $request = new MutateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountLink($request);
@@ -186,7 +185,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountLinkOperation();
-        $request = (new MutateAccountLinkRequest())
+        $request = new MutateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -218,7 +217,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         $response = $gapicClient->createAccountLinkAsync($request)->wait();

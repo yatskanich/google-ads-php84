@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -132,7 +130,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
+        return $this->ad_group_criterion ?? '';
     }
 
     public function hasAdGroupCriterion()
@@ -168,7 +166,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getParameterIndex()
     {
-        return isset($this->parameter_index) ? $this->parameter_index : 0;
+        return $this->parameter_index ?? 0;
     }
 
     public function hasParameterIndex()
@@ -216,7 +214,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getInsertionText()
     {
-        return isset($this->insertion_text) ? $this->insertion_text : '';
+        return $this->insertion_text ?? '';
     }
 
     public function hasInsertionText()

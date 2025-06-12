@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\CampaignSharedSetServiceClient;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignSharedSetsRequest;
 use Google\Ads\GoogleAds\V19\Services\MutateCampaignSharedSetsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignSharedSets($request);
@@ -112,7 +111,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignSharedSetsAsync($request)->wait();

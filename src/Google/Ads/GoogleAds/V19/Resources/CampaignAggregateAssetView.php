@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -112,7 +110,7 @@ class CampaignAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -148,7 +146,7 @@ class CampaignAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()
@@ -184,7 +182,7 @@ class CampaignAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAssetSource()
     {
-        return isset($this->asset_source) ? $this->asset_source : 0;
+        return $this->asset_source ?? 0;
     }
 
     public function hasAssetSource()
@@ -220,7 +218,7 @@ class CampaignAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getFieldType()
     {
-        return isset($this->field_type) ? $this->field_type : 0;
+        return $this->field_type ?? 0;
     }
 
     public function hasFieldType()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -47,7 +45,7 @@ class UpdateProductLinkInvitationRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, int $productLinkInvitationStatus, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setProductLinkInvitationStatus($productLinkInvitationStatus)
             ->setResourceName($resourceName);

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -72,7 +70,7 @@ class DynamicSetting extends \Google\Protobuf\Internal\Message
      */
     public function getUseSuppliedUrlsOnly()
     {
-        return isset($this->use_supplied_urls_only) ? $this->use_supplied_urls_only : false;
+        return $this->use_supplied_urls_only ?? false;
     }
 
     public function hasUseSuppliedUrlsOnly()
@@ -104,7 +102,7 @@ class DynamicSetting extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingSetting()
     {
-        return isset($this->tracking_setting) ? $this->tracking_setting : null;
+        return $this->tracking_setting ?? null;
     }
 
     public function hasTrackingSetting()

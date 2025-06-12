@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v19.services.ConversionActionService' => [
             'MutateConversionActions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V19\Services\MutateConversionActionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V19\Services\MutateConversionActionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

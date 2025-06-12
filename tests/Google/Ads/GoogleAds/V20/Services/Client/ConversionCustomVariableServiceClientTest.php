@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\ConversionCustomVariableServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateConversionCustomVariablesRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateConversionCustomVariablesResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionCustomVariables($request);
@@ -112,7 +111,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionCustomVariablesAsync($request)->wait();

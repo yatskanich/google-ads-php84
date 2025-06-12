@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -46,7 +44,7 @@ class CustomAffinityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAffinity()
     {
-        return isset($this->custom_affinity) ? $this->custom_affinity : '';
+        return $this->custom_affinity ?? '';
     }
 
     public function hasCustomAffinity()

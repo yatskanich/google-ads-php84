@@ -38,7 +38,7 @@ class ApiVersionSupport
      * @param string|null $rootPath the root path of the library, the one that contains this class
      *     file is used by default
      */
-    public function __construct(string $rootPath = null)
+    public function __construct(?string $rootPath = null)
     {
         $this->rootPath = $rootPath ?: dirname(__DIR__, 5);
     }
@@ -81,27 +81,27 @@ class ApiVersionSupport
         $paths = [];
         $versionName = 'V' . $version;
 
-        $metadataPath = join(
+        $metadataPath = implode(
             DIRECTORY_SEPARATOR,
             [$this->rootPath, 'metadata', 'Google', 'Ads', 'GoogleAds']
         );
-        $paths[] = join(DIRECTORY_SEPARATOR, [$metadataPath, $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$metadataPath, $versionName]);
 
-        $srcPath = join(
+        $srcPath = implode(
             DIRECTORY_SEPARATOR,
             [$this->rootPath, 'src', 'Google', 'Ads', 'GoogleAds']
         );
-        $paths[] = join(DIRECTORY_SEPARATOR, [$srcPath, $versionName]);
-        $paths[] = join(DIRECTORY_SEPARATOR, [$srcPath, 'Util', $versionName]);
-        $paths[] = join(DIRECTORY_SEPARATOR, [$srcPath, 'Lib', $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$srcPath, $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$srcPath, 'Util', $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$srcPath, 'Lib', $versionName]);
 
-        $testsPath = join(
+        $testsPath = implode(
             DIRECTORY_SEPARATOR,
             [$this->rootPath, 'tests', 'Google', 'Ads', 'GoogleAds']
         );
-        $paths[] = join(DIRECTORY_SEPARATOR, [$testsPath, $versionName]);
-        $paths[] = join(DIRECTORY_SEPARATOR, [$testsPath, 'Util', $versionName]);
-        $paths[] = join(DIRECTORY_SEPARATOR, [$testsPath, 'Lib', $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$testsPath, $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$testsPath, 'Util', $versionName]);
+        $paths[] = implode(DIRECTORY_SEPARATOR, [$testsPath, 'Lib', $versionName]);
 
         return $paths;
     }

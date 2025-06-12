@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -111,7 +109,7 @@ class Video extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : '';
+        return $this->id ?? '';
     }
 
     public function hasId()
@@ -147,7 +145,7 @@ class Video extends \Google\Protobuf\Internal\Message
      */
     public function getChannelId()
     {
-        return isset($this->channel_id) ? $this->channel_id : '';
+        return $this->channel_id ?? '';
     }
 
     public function hasChannelId()
@@ -183,7 +181,7 @@ class Video extends \Google\Protobuf\Internal\Message
      */
     public function getDurationMillis()
     {
-        return isset($this->duration_millis) ? $this->duration_millis : 0;
+        return $this->duration_millis ?? 0;
     }
 
     public function hasDurationMillis()
@@ -219,7 +217,7 @@ class Video extends \Google\Protobuf\Internal\Message
      */
     public function getTitle()
     {
-        return isset($this->title) ? $this->title : '';
+        return $this->title ?? '';
     }
 
     public function hasTitle()

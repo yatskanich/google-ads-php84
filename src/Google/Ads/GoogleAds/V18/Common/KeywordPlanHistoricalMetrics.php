@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -107,7 +105,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAvgMonthlySearches()
     {
-        return isset($this->avg_monthly_searches) ? $this->avg_monthly_searches : 0;
+        return $this->avg_monthly_searches ?? 0;
     }
 
     public function hasAvgMonthlySearches()
@@ -200,7 +198,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCompetitionIndex()
     {
-        return isset($this->competition_index) ? $this->competition_index : 0;
+        return $this->competition_index ?? 0;
     }
 
     public function hasCompetitionIndex()
@@ -240,7 +238,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getLowTopOfPageBidMicros()
     {
-        return isset($this->low_top_of_page_bid_micros) ? $this->low_top_of_page_bid_micros : 0;
+        return $this->low_top_of_page_bid_micros ?? 0;
     }
 
     public function hasLowTopOfPageBidMicros()
@@ -276,7 +274,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getHighTopOfPageBidMicros()
     {
-        return isset($this->high_top_of_page_bid_micros) ? $this->high_top_of_page_bid_micros : 0;
+        return $this->high_top_of_page_bid_micros ?? 0;
     }
 
     public function hasHighTopOfPageBidMicros()
@@ -312,7 +310,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpcMicros()
     {
-        return isset($this->average_cpc_micros) ? $this->average_cpc_micros : 0;
+        return $this->average_cpc_micros ?? 0;
     }
 
     public function hasAverageCpcMicros()

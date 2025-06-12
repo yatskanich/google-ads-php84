@@ -80,11 +80,11 @@ use Google\ApiCore\Serializer;
  */
 class AddPerformanceMaxCampaign
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Optional: An audience ID to use to improve the targeting of the Performance Max campaign.
-    private const AUDIENCE_ID = null;
+    private const null AUDIENCE_ID = null;
     // Optional: Indicates whether the created campaign is enabled for brand guidelines.
-    private const BRAND_GUIDELINES_ENABLED = false;
+    private const bool BRAND_GUIDELINES_ENABLED = false;
 
     // We specify temporary IDs that are specific to a single mutate request.
     // Temporary IDs are always negative and unique within one mutate request.
@@ -93,9 +93,9 @@ class AddPerformanceMaxCampaign
     // for further details.
     //
     // These temporary IDs are fixed because they are used in multiple places.
-    private const BUDGET_TEMPORARY_ID = -1;
-    private const PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID = -2;
-    private const ASSET_GROUP_TEMPORARY_ID = -3;
+    private const int BUDGET_TEMPORARY_ID = -1;
+    private const int PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID = -2;
+    private const int ASSET_GROUP_TEMPORARY_ID = -3;
 
     // There are also entities that will be created in the same request but do not need to be fixed
     // temporary IDs because they are referenced only once.
@@ -106,18 +106,18 @@ class AddPerformanceMaxCampaign
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AUDIENCE_ID => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::BRAND_GUIDELINES_ENABLED => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

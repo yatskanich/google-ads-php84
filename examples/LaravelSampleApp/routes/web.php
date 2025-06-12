@@ -18,9 +18,7 @@
 
 Route::get(
     '/',
-    function () {
-        return view('main');
-    }
+    fn() => view('main')
 );
 Route::post(
     'pause-campaign',

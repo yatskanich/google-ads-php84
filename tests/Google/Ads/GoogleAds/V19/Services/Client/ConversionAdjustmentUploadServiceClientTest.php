@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services\Client;
 
-use Google\Ads\GoogleAds\V19\Services\Client\ConversionAdjustmentUploadServiceClient;
 use Google\Ads\GoogleAds\V19\Services\UploadConversionAdjustmentsRequest;
 use Google\Ads\GoogleAds\V19\Services\UploadConversionAdjustmentsResponse;
 use Google\ApiCore\ApiException;
@@ -77,7 +76,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -119,7 +118,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -153,7 +152,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);

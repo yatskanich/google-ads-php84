@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Resources\Recommendation\TargetCpaOptInRecommendation;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -99,7 +97,7 @@ class TargetCpaOptInRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getTargetCpaMicros()
     {
-        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
+        return $this->target_cpa_micros ?? 0;
     }
 
     public function hasTargetCpaMicros()
@@ -137,7 +135,7 @@ class TargetCpaOptInRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getRequiredCampaignBudgetAmountMicros()
     {
-        return isset($this->required_campaign_budget_amount_micros) ? $this->required_campaign_budget_amount_micros : 0;
+        return $this->required_campaign_budget_amount_micros ?? 0;
     }
 
     public function hasRequiredCampaignBudgetAmountMicros()

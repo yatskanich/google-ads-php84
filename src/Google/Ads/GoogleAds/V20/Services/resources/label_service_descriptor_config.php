@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v20.services.LabelService' => [
             'MutateLabels' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V20\Services\MutateLabelsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V20\Services\MutateLabelsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

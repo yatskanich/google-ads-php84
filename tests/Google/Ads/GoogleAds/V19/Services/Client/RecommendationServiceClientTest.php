@@ -25,7 +25,6 @@ namespace Google\Ads\GoogleAds\V19\Services\Client;
 use Google\Ads\GoogleAds\V19\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
 use Google\Ads\GoogleAds\V19\Services\ApplyRecommendationRequest;
 use Google\Ads\GoogleAds\V19\Services\ApplyRecommendationResponse;
-use Google\Ads\GoogleAds\V19\Services\Client\RecommendationServiceClient;
 use Google\Ads\GoogleAds\V19\Services\DismissRecommendationRequest;
 use Google\Ads\GoogleAds\V19\Services\DismissRecommendationResponse;
 use Google\Ads\GoogleAds\V19\Services\GenerateRecommendationsRequest;
@@ -79,7 +78,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new ApplyRecommendationRequest())
+        $request = new ApplyRecommendationRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->applyRecommendation($request);
@@ -117,7 +116,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new ApplyRecommendationRequest())
+        $request = new ApplyRecommendationRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -147,7 +146,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new DismissRecommendationRequest())
+        $request = new DismissRecommendationRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->dismissRecommendation($request);
@@ -185,7 +184,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new DismissRecommendationRequest())
+        $request = new DismissRecommendationRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -216,7 +215,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $recommendationTypes = [];
         $advertisingChannelType = AdvertisingChannelType::UNSPECIFIED;
-        $request = (new GenerateRecommendationsRequest())
+        $request = new GenerateRecommendationsRequest()
             ->setCustomerId($customerId)
             ->setRecommendationTypes($recommendationTypes)
             ->setAdvertisingChannelType($advertisingChannelType);
@@ -258,7 +257,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $recommendationTypes = [];
         $advertisingChannelType = AdvertisingChannelType::UNSPECIFIED;
-        $request = (new GenerateRecommendationsRequest())
+        $request = new GenerateRecommendationsRequest()
             ->setCustomerId($customerId)
             ->setRecommendationTypes($recommendationTypes)
             ->setAdvertisingChannelType($advertisingChannelType);
@@ -289,7 +288,7 @@ class RecommendationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new ApplyRecommendationRequest())
+        $request = new ApplyRecommendationRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->applyRecommendationAsync($request)->wait();

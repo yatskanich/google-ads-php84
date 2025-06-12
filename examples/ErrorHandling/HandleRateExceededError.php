@@ -20,6 +20,7 @@ namespace Google\Ads\GoogleAds\Examples\ErrorHandling;
 
 require __DIR__ . '/../../vendor/autoload.php';
 
+use Exception;
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
@@ -38,7 +39,6 @@ use Google\Ads\GoogleAds\V20\Services\AdGroupCriterionOperation;
 use Google\Ads\GoogleAds\V20\Services\GoogleAdsRow;
 use Google\Ads\GoogleAds\V20\Services\MutateAdGroupCriteriaRequest;
 use Google\ApiCore\ApiException;
-use Exception;
 
 /**
  * Handles RateExceededError in an application. This code example runs 5 requests sequentially,
@@ -50,33 +50,33 @@ use Exception;
  */
 class HandleRateExceededError
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
 
     // Number of requests to be run.
-    private const NUM_REQUESTS = 5;
+    private const int NUM_REQUESTS = 5;
     // Number of keywords to be validated in each API call.
-    private const NUM_KEYWORDS = 100;
+    private const int NUM_KEYWORDS = 100;
     // Number of retries to be run in case of a RateExceededError.
-    private const NUM_RETRIES = 3;
+    private const int NUM_RETRIES = 3;
     // Minimum number of seconds to wait before a retry.
-    private const RETRY_SECONDS = 10;
+    private const int RETRY_SECONDS = 10;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AD_GROUP_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

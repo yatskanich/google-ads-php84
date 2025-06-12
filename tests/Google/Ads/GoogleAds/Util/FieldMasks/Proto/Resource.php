@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\Util\FieldMasks\Proto;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -133,7 +131,7 @@ class Resource extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()
@@ -187,7 +185,7 @@ class Resource extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
+        return $this->optimization_score ?? 0.0;
     }
 
     public function hasOptimizationScore()
@@ -219,7 +217,7 @@ class Resource extends \Google\Protobuf\Internal\Message
      */
     public function getDynamicSetting()
     {
-        return isset($this->dynamic_setting) ? $this->dynamic_setting : null;
+        return $this->dynamic_setting ?? null;
     }
 
     public function hasDynamicSetting()
@@ -251,7 +249,7 @@ class Resource extends \Google\Protobuf\Internal\Message
      */
     public function getSelectiveOptimization()
     {
-        return isset($this->selective_optimization) ? $this->selective_optimization : null;
+        return $this->selective_optimization ?? null;
     }
 
     public function hasSelectiveOptimization()
@@ -327,7 +325,7 @@ class Resource extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationSetting()
     {
-        return isset($this->optimization_setting) ? $this->optimization_setting : null;
+        return $this->optimization_setting ?? null;
     }
 
     public function hasOptimizationSetting()

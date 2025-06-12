@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -77,7 +75,7 @@ class QualityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getQualityScore()
     {
-        return isset($this->quality_score) ? $this->quality_score : 0;
+        return $this->quality_score ?? 0;
     }
 
     public function hasQualityScore()

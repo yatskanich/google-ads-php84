@@ -52,8 +52,8 @@ use Google\ApiCore\ApiException;
  */
 class AddResponsiveSearchAdWithAdCustomizer
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
 
     // The name of the customizer attribute to be used in the ad customizer, which must be unique.
     // To run this example multiple times, change this value or specify its corresponding argument.
@@ -61,24 +61,24 @@ class AddResponsiveSearchAdWithAdCustomizer
     // so you shouldn't run this example more than necessary.
     // Visit https://developers.google.com/google-ads/api/docs/ads/customize-responsive-search-ads#rules_and_limitations
     // for details.
-    private const CUSTOMIZER_ATTRIBUTE_NAME = 'Price';
+    private const string CUSTOMIZER_ATTRIBUTE_NAME = 'Price';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AD_GROUP_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CUSTOMIZER_ATTRIBUTE_NAME => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

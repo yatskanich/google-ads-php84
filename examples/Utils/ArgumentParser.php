@@ -102,7 +102,7 @@ class ArgumentParser
      *
      * @param GetOpt $getOpt the GetOpt object to print its help text
      */
-    public function printHelpMessageAndExit(GetOpt $getOpt)
+    public function printHelpMessageAndExit(GetOpt $getOpt): never
     {
         echo PHP_EOL . $getOpt->getHelpText();
         exit;

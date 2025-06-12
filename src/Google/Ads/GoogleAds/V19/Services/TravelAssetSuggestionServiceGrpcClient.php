@@ -46,7 +46,7 @@ class TravelAssetSuggestionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v19.services.TravelAssetSuggestionService/SuggestTravelAssets',
         $argument,
-        ['\Google\Ads\GoogleAds\V19\Services\SuggestTravelAssetsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V19\Services\SuggestTravelAssetsResponse::class, 'decode'],
         $metadata, $options);
     }
 

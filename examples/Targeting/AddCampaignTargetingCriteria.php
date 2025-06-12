@@ -23,10 +23,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
 use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
 use Google\Ads\GoogleAds\Util\V20\ResourceNames;
 use Google\Ads\GoogleAds\V20\Common\AddressInfo;
 use Google\Ads\GoogleAds\V20\Common\KeywordInfo;
@@ -46,20 +46,20 @@ use Google\ApiCore\ApiException;
  */
 class AddCampaignTargetingCriteria
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
     // Specify the keyword text to be created as a negative campaign criterion.
-    private const KEYWORD_TEXT = 'INSERT_KEYWORD_TEXT_HERE';
+    private const string KEYWORD_TEXT = 'INSERT_KEYWORD_TEXT_HERE';
     // Specify the location ID below.
     // For more information on determining LOCATION_ID value, see:
     // https://developers.google.com/google-ads/api/reference/data/geotargets.
-    private const LOCATION_ID = 21167; // New York
+    private const int LOCATION_ID = 21167; // New York
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::KEYWORD_TEXT => GetOpt::REQUIRED_ARGUMENT,
@@ -67,11 +67,11 @@ class AddCampaignTargetingCriteria
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

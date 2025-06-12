@@ -23,7 +23,6 @@
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
 use Google\Ads\GoogleAds\V20\Services\BillingSetupOperation;
-use Google\Ads\GoogleAds\V20\Services\Client\BillingSetupServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateBillingSetupRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateBillingSetupResponse;
 use Google\ApiCore\ApiException;
@@ -75,7 +74,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateBillingSetup($request);
@@ -113,7 +112,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +142,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateBillingSetupAsync($request)->wait();

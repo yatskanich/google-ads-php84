@@ -56,7 +56,7 @@ class AdGroupCriterionLabelServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v18.services.AdGroupCriterionLabelService/MutateAdGroupCriterionLabels',
         $argument,
-        ['\Google\Ads\GoogleAds\V18\Services\MutateAdGroupCriterionLabelsResponse', 'decode'],
+            [\Google\Ads\GoogleAds\V18\Services\MutateAdGroupCriterionLabelsResponse::class, 'decode'],
         $metadata, $options);
     }
 

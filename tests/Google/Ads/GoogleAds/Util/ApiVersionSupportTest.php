@@ -62,7 +62,7 @@ class ApiVersionSupportTest extends TestCase
         // Asserts that there is no content left.
         $this->assertEquals(
             [],
-            array_diff(scandir($this->mockPath), array('..', '.')),
+            array_diff(scandir($this->mockPath), ['..', '.']),
             'Not all the content was removed'
         );
     }
@@ -71,7 +71,7 @@ class ApiVersionSupportTest extends TestCase
     {
         $version = 0;
         $numberOfPaths = 7;
-        $defaultPaths = (new ApiVersionSupport())->getDirectoryPathsForApiVersion($version);
+        $defaultPaths = new ApiVersionSupport()->getDirectoryPathsForApiVersion($version);
         $this->assertEquals(
             $numberOfPaths,
             count($defaultPaths),
@@ -86,7 +86,7 @@ class ApiVersionSupportTest extends TestCase
             );
         }
 
-        $givenPaths = (new ApiVersionSupport($this->mockPath))->getDirectoryPathsForApiVersion(0);
+        $givenPaths = new ApiVersionSupport($this->mockPath)->getDirectoryPathsForApiVersion(0);
         $this->assertNotEquals(
             $defaultPaths,
             $givenPaths,

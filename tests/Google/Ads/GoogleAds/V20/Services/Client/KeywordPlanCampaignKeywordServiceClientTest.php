@@ -22,7 +22,6 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\Client;
 
-use Google\Ads\GoogleAds\V20\Services\Client\KeywordPlanCampaignKeywordServiceClient;
 use Google\Ads\GoogleAds\V20\Services\MutateKeywordPlanCampaignKeywordsRequest;
 use Google\Ads\GoogleAds\V20\Services\MutateKeywordPlanCampaignKeywordsResponse;
 use Google\ApiCore\ApiException;
@@ -74,7 +73,7 @@ class KeywordPlanCampaignKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanCampaignKeywordsRequest())
+        $request = new MutateKeywordPlanCampaignKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateKeywordPlanCampaignKeywords($request);
@@ -112,7 +111,7 @@ class KeywordPlanCampaignKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanCampaignKeywordsRequest())
+        $request = new MutateKeywordPlanCampaignKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +141,7 @@ class KeywordPlanCampaignKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanCampaignKeywordsRequest())
+        $request = new MutateKeywordPlanCampaignKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateKeywordPlanCampaignKeywordsAsync($request)->wait();

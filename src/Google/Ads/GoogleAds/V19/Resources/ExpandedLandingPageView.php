@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -88,7 +86,7 @@ class ExpandedLandingPageView extends \Google\Protobuf\Internal\Message
      */
     public function getExpandedFinalUrl()
     {
-        return isset($this->expanded_final_url) ? $this->expanded_final_url : '';
+        return $this->expanded_final_url ?? '';
     }
 
     public function hasExpandedFinalUrl()

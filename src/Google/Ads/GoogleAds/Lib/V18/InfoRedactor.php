@@ -43,11 +43,11 @@ class InfoRedactor
 {
     use GoogleAdsMetadataTrait;
 
-    private const REDACTED_STRING = 'REDACTED';
+    private const string REDACTED_STRING = 'REDACTED';
     // A preg_match format which searches for a WHERE clause of a specified field. "%s" is replaced
     // by the field using sprintf().
-    private const SENSITIVE_TEXT_SEARCH_FORMAT = '/(SELECT.+WHERE.+%s.+?[\'"])\S+?([\'"])/i';
-    private const SENSITIVE_TEXT_REPLACEMENT_FORMAT = '$1%s$2';
+    private const string SENSITIVE_TEXT_SEARCH_FORMAT = '/(SELECT.+WHERE.+%s.+?[\'"])\S+?([\'"])/i';
+    private const string SENSITIVE_TEXT_REPLACEMENT_FORMAT = '$1%s$2';
 
     /** @var array the list of customer user access' fields containing email addresses. */
     private static $CUSTOMER_USER_ACCESS_EMAIL_FIELDS;
@@ -99,7 +99,7 @@ class InfoRedactor
      */
     public function redactHeaders(
         array $headers,
-        array $headerKeysToRedactedValues = null
+        ?array $headerKeysToRedactedValues = null
     ) {
         $headerKeysToRedactedValues =
             $headerKeysToRedactedValues ?: self::getDefaultHeaderKeysToRedactedValues();
@@ -220,7 +220,7 @@ class InfoRedactor
      */
     private static function cloneBody(Message $body)
     {
-        $className = get_class($body);
+        $className = $body::class;
         $clone = new $className();
         $clone->mergeFrom($body);
         return $clone;
@@ -250,7 +250,7 @@ class InfoRedactor
             $redactedQuery = preg_replace(
                 sprintf(self::SENSITIVE_TEXT_SEARCH_FORMAT, str_replace('.', '\.', $field)),
                 sprintf(self::SENSITIVE_TEXT_REPLACEMENT_FORMAT, self::REDACTED_STRING),
-                $redactedQuery
+                (string)$redactedQuery
             );
         }
         $request->setQuery($redactedQuery);

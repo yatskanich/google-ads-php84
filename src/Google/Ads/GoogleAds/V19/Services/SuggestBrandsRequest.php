@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Services;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class SuggestBrandsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $brandPrefix): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setBrandPrefix($brandPrefix);
     }
@@ -110,7 +108,7 @@ class SuggestBrandsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getBrandPrefix()
     {
-        return isset($this->brand_prefix) ? $this->brand_prefix : '';
+        return $this->brand_prefix ?? '';
     }
 
     public function hasBrandPrefix()

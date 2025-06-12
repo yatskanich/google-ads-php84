@@ -43,24 +43,24 @@ use Google\ApiCore\ApiException;
  */
 class UploadCallConversion
 {
-    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
-    private const CALLER_ID = 'INSERT_CALLER_ID_HERE';
-    private const CALL_START_DATE_TIME = 'INSERT_CALL_START_DATE_TIME_HERE';
-    private const CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
-    private const CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
+    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const string CONVERSION_ACTION_ID = 'INSERT_CONVERSION_ACTION_ID_HERE';
+    private const string CALLER_ID = 'INSERT_CALLER_ID_HERE';
+    private const string CALL_START_DATE_TIME = 'INSERT_CALL_START_DATE_TIME_HERE';
+    private const string CONVERSION_DATE_TIME = 'INSERT_CONVERSION_DATE_TIME_HERE';
+    private const string CONVERSION_VALUE = 'INSERT_CONVERSION_VALUE_HERE';
     // Optional: Specify the conversion custom variable ID and value you want to
     // associate with the call conversion upload.
-    private const CONVERSION_CUSTOM_VARIABLE_ID = null;
-    private const CONVERSION_CUSTOM_VARIABLE_VALUE = null;
+    private const null CONVERSION_CUSTOM_VARIABLE_ID = null;
+    private const null CONVERSION_CUSTOM_VARIABLE_VALUE = null;
     // Optional: The consent status for ad user data.
-    private const AD_USER_DATA_CONSENT = null;
+    private const null AD_USER_DATA_CONSENT = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CONVERSION_ACTION_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CALLER_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -73,11 +73,11 @@ class UploadCallConversion
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())
+        $googleAdsClient = new GoogleAdsClientBuilder()
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();

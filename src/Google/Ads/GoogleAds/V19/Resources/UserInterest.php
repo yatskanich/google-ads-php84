@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V19\Resources;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -155,7 +153,7 @@ class UserInterest extends \Google\Protobuf\Internal\Message
      */
     public function getUserInterestId()
     {
-        return isset($this->user_interest_id) ? $this->user_interest_id : 0;
+        return $this->user_interest_id ?? 0;
     }
 
     public function hasUserInterestId()
@@ -191,7 +189,7 @@ class UserInterest extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -227,7 +225,7 @@ class UserInterest extends \Google\Protobuf\Internal\Message
      */
     public function getUserInterestParent()
     {
-        return isset($this->user_interest_parent) ? $this->user_interest_parent : '';
+        return $this->user_interest_parent ?? '';
     }
 
     public function hasUserInterestParent()
@@ -264,7 +262,7 @@ class UserInterest extends \Google\Protobuf\Internal\Message
      */
     public function getLaunchedToAll()
     {
-        return isset($this->launched_to_all) ? $this->launched_to_all : false;
+        return $this->launched_to_all ?? false;
     }
 
     public function hasLaunchedToAll()

@@ -4,8 +4,6 @@
 
 namespace Google\Ads\GoogleAds\V18\Common;
 
-use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
@@ -48,7 +46,7 @@ class StoreAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getStoreCode()
     {
-        return isset($this->store_code) ? $this->store_code : '';
+        return $this->store_code ?? '';
     }
 
     public function hasStoreCode()
