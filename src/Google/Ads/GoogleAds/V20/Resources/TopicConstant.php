@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Use topics to target or exclude placements in the Google Display Network
@@ -60,7 +62,7 @@ class TopicConstant extends \Google\Protobuf\Internal\Message
      *           Output only. The ID of the topic.
      *     @type string $topic_constant_parent
      *           Output only. Resource name of parent of the topic constant.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $path
+     *     @type string[] $path
      *           Output only. The category to target or exclude. Each subsequent element in
      *           the array describes a more specific sub-category. For example,
      *           {"Pets & Animals", "Pets", "Dogs"} represents the
@@ -111,7 +113,7 @@ class TopicConstant extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -147,7 +149,7 @@ class TopicConstant extends \Google\Protobuf\Internal\Message
      */
     public function getTopicConstantParent()
     {
-        return $this->topic_constant_parent ?? '';
+        return isset($this->topic_constant_parent) ? $this->topic_constant_parent : '';
     }
 
     public function hasTopicConstantParent()
@@ -183,7 +185,7 @@ class TopicConstant extends \Google\Protobuf\Internal\Message
      * https://developers.google.com/google-ads/api/reference/data/verticals
      *
      * Generated from protobuf field <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getPath()
     {
@@ -198,7 +200,7 @@ class TopicConstant extends \Google\Protobuf\Internal\Message
      * https://developers.google.com/google-ads/api/reference/data/verticals
      *
      * Generated from protobuf field <code>repeated string path = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setPath($var)

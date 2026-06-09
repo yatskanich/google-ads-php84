@@ -24,44 +24,45 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\V20\Common\ManualCpc;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\Campaign\NetworkSettings;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignBudgetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\V24\Common\ManualCpc;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\NetworkSettings;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignBudgetsRequest;
 use Google\ApiCore\ApiException;
 
 /** This example adds new campaigns to an account. */
 class AddCampaigns
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const int NUMBER_OF_CAMPAIGNS_TO_ADD = 2;
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const NUMBER_OF_CAMPAIGNS_TO_ADD = 2;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()
+        $googleAdsClient = (new GoogleAdsClientBuilder())
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -135,9 +136,12 @@ class AddCampaigns
                 'campaign_budget' => $budgetResourceName,
                 // Adds the network settings configured above.
                 'network_settings' => $networkSettings,
+                // Declare whether or not this campaign serves political ads targeting the EU.
+                'contains_eu_political_advertising' =>
+                    EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING,
                 // Optional: Sets the start and end dates.
-                'start_date' => date('Ymd', strtotime('+1 day')),
-                'end_date' => date('Ymd', strtotime('+1 month'))
+                'start_date_time' => date('Y-m-d 00:00:00', strtotime('+1 day')),
+                'end_date_time' => date('Y-m-d 23:59:59', strtotime('+1 month'))
             ]);
             // [END add_campaigns_1]
 

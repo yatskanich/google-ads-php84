@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for fetching the invoices of a given billing setup that were
@@ -57,7 +59,7 @@ class ListInvoicesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $billingSetup, string $issueYear, int $issueMonth): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)

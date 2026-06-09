@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Response message for
@@ -57,7 +59,7 @@ class UploadUserDataResponse extends \Google\Protobuf\Internal\Message
      */
     public function getUploadDateTime()
     {
-        return $this->upload_date_time ?? '';
+        return isset($this->upload_date_time) ? $this->upload_date_time : '';
     }
 
     public function hasUploadDateTime()
@@ -94,7 +96,7 @@ class UploadUserDataResponse extends \Google\Protobuf\Internal\Message
      */
     public function getReceivedOperationsCount()
     {
-        return $this->received_operations_count ?? 0;
+        return isset($this->received_operations_count) ? $this->received_operations_count : 0;
     }
 
     public function hasReceivedOperationsCount()

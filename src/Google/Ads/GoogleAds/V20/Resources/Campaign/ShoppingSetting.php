@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The setting for Shopping campaigns. Defines the universe of products that
@@ -25,11 +27,13 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
     protected $merchant_id = null;
     /**
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      *
      * Generated from protobuf field <code>string feed_label = 10;</code>
      */
@@ -60,8 +64,11 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     protected $use_vehicle_inventory = false;
     /**
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      *
      * Generated from protobuf field <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
      */
@@ -88,11 +95,13 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      *           Shopping campaigns.
      *     @type string $feed_label
      *           Feed label of products to include in the campaign.
-     *           Only one of feed_label or sales_country can be set.
-     *           If used instead of sales_country, the feed_label field accepts country
-     *           codes in the same format for example: 'XX'.
-     *           Otherwise can be any string used for feed label in Google Merchant
-     *           Center.
+     *           Valid feed labels may contain a maximum of 20 characters including
+     *           uppercase letters, numbers, hyphens, and underscores.
+     *           If you previously used the deprecated `sales_country` in the two-letter
+     *           country code (`XX`) format, the `feed_label` field should be used
+     *           instead. For more information see the
+     *           [feed label](//support.google.com/merchants/answer/12453549)
+     *           support article.
      *     @type int $campaign_priority
      *           Priority of the campaign. Campaigns with numerically higher priorities
      *           take precedence over those with lower priorities.
@@ -106,9 +115,12 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      *           Immutable. Whether to target Vehicle Listing inventory. This field is
      *           supported only in Smart Shopping Campaigns. For setting Vehicle Listing
      *           inventory in Performance Max campaigns, use `listing_type` instead.
-     *     @type array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $advertising_partner_ids
-     *           Immutable. The ads account IDs of advertising partners cooperating within
-     *           the campaign.
+     *     @type int[]|string[] $advertising_partner_ids
+     *           Immutable. The list of Google Ads accounts IDs of advertising partners
+     *           cooperating within the campaign. This feature is currently available only
+     *           for accounts having an advertising partner link. This feature is
+     *           currently supported only for Performance Max, Shopping, Search and Demand
+     *           Gen campaign types.
      *     @type bool $disable_product_feed
      *           Disable the optional product feed. This field is currently supported
      *           only for Demand Gen campaigns. See
@@ -131,7 +143,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantId()
     {
-        return $this->merchant_id ?? 0;
+        return isset($this->merchant_id) ? $this->merchant_id : 0;
     }
 
     public function hasMerchantId()
@@ -163,11 +175,13 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
 
     /**
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      *
      * Generated from protobuf field <code>string feed_label = 10;</code>
      * @return string
@@ -179,11 +193,13 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
 
     /**
      * Feed label of products to include in the campaign.
-     * Only one of feed_label or sales_country can be set.
-     * If used instead of sales_country, the feed_label field accepts country
-     * codes in the same format for example: 'XX'.
-     * Otherwise can be any string used for feed label in Google Merchant
-     * Center.
+     * Valid feed labels may contain a maximum of 20 characters including
+     * uppercase letters, numbers, hyphens, and underscores.
+     * If you previously used the deprecated `sales_country` in the two-letter
+     * country code (`XX`) format, the `feed_label` field should be used
+     * instead. For more information see the
+     * [feed label](//support.google.com/merchants/answer/12453549)
+     * support article.
      *
      * Generated from protobuf field <code>string feed_label = 10;</code>
      * @param string $var
@@ -210,7 +226,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignPriority()
     {
-        return $this->campaign_priority ?? 0;
+        return isset($this->campaign_priority) ? $this->campaign_priority : 0;
     }
 
     public function hasCampaignPriority()
@@ -251,7 +267,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getEnableLocal()
     {
-        return $this->enable_local ?? false;
+        return isset($this->enable_local) ? $this->enable_local : false;
     }
 
     public function hasEnableLocal()
@@ -310,11 +326,14 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      *
      * Generated from protobuf field <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>|RepeatedField<string>
      */
     public function getAdvertisingPartnerIds()
     {
@@ -322,11 +341,14 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Immutable. The ads account IDs of advertising partners cooperating within
-     * the campaign.
+     * Immutable. The list of Google Ads accounts IDs of advertising partners
+     * cooperating within the campaign. This feature is currently available only
+     * for accounts having an advertising partner link. This feature is
+     * currently supported only for Performance Max, Shopping, Search and Demand
+     * Gen campaign types.
      *
      * Generated from protobuf field <code>repeated int64 advertising_partner_ids = 11 [(.google.api.field_behavior) = IMMUTABLE];</code>
-     * @param array<int>|array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[]|string[] $var
      * @return $this
      */
     public function setAdvertisingPartnerIds($var)
@@ -348,7 +370,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getDisableProductFeed()
     {
-        return $this->disable_product_feed ?? false;
+        return isset($this->disable_product_feed) ? $this->disable_product_feed : false;
     }
 
     public function hasDisableProductFeed()
@@ -380,7 +402,4 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ShoppingSetting::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_ShoppingSetting::class);
 

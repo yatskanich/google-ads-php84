@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A shopping product from Google Merchant Center that can be advertised by
@@ -16,24 +18,28 @@ use Google\Protobuf\Internal\GPBUtil;
  * products having a specified feed label. Standard Shopping campaigns can also
  * limit the inclusion through a `campaign_criterion.listing_scope`.
  * Queries to this resource specify a scope:
- * Account:
+ * * Account:
  *   - Filters on campaigns or ad groups are not specified.
  *   - All products from the linked Google Merchant Center accounts are
  *     returned.
  *   - Metrics and some fields (see the per-field documentation) are aggregated
  *     across all Shopping and Performance Max campaigns that include a product.
- * Campaign:
+ * * Campaign:
  *   - An equality filter on `campaign` is specified. Supported campaign types
  *     are Shopping, Performance Max, Demand Gen, Video.
  *   - Only products that are included by the specified campaign are returned.
  *   - Metrics and some fields (see the per-field documentation) are restricted
  *     to the specified campaign.
- * Ad group:
- *   - An equality filter on `ad group` and `campaign` is specified. Supported
+ *   - Only the following metrics are supported for Demand Gen, Video
+ *     campaigns: impressions, clicks, ctr.
+ * * Ad group:
+ *   - An equality filter on `ad_group` and `campaign` is specified. Supported
  *     campaign types are Shopping, Demand Gen, Video.
  *   - Only products that are included by the specified campaign are returned.
  *   - Metrics and some fields (see the per-field documentation) are restricted
  *     to the specified ad group.
+ *   - Only the following metrics are supported for Demand Gen, Video
+ *     campaigns: impressions, clicks, ctr.
  * Note that segmentation by date segments is not permitted and will return
  * UNSUPPORTED_DATE_SEGMENTATION error. On the other hand, filtering on date
  * segments is allowed.
@@ -324,7 +330,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      *           Output only. The condition of the product as provided by the merchant.
      *     @type int $availability
      *           Output only. The availability of the product as provided by the merchant.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $target_countries
+     *     @type string[] $target_countries
      *           Output only. Upper-case two-letter ISO 3166-1 code of the regions where the
      *           product is intended to be shown in ads.
      *     @type string $custom_attribute0
@@ -374,7 +380,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      *           The value of this field is restricted to the scope specified in the query,
      *           see the documentation of the resource.
      *           This field can take up to 24 hours to update.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\ShoppingProduct\ProductIssue>|\Google\Protobuf\Internal\RepeatedField $issues
+     *     @type \Google\Ads\GoogleAds\V20\Resources\ShoppingProduct\ProductIssue[] $issues
      *           Output only. The list of issues affecting whether the product can show in
      *           ads. The value of this field is restricted to the scope specified in the
      *           query, see the documentation of the resource. This field can take up to 24
@@ -565,7 +571,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getMultiClientAccountId()
     {
-        return $this->multi_client_account_id ?? 0;
+        return isset($this->multi_client_account_id) ? $this->multi_client_account_id : 0;
     }
 
     public function hasMultiClientAccountId()
@@ -602,7 +608,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getTitle()
     {
-        return $this->title ?? '';
+        return isset($this->title) ? $this->title : '';
     }
 
     public function hasTitle()
@@ -638,7 +644,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return $this->brand ?? '';
+        return isset($this->brand) ? $this->brand : '';
     }
 
     public function hasBrand()
@@ -676,7 +682,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getPriceMicros()
     {
-        return $this->price_micros ?? 0;
+        return isset($this->price_micros) ? $this->price_micros : 0;
     }
 
     public function hasPriceMicros()
@@ -715,7 +721,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -753,7 +759,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getChannelExclusivity()
     {
-        return $this->channel_exclusivity ?? 0;
+        return isset($this->channel_exclusivity) ? $this->channel_exclusivity : 0;
     }
 
     public function hasChannelExclusivity()
@@ -790,7 +796,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCondition()
     {
-        return $this->condition ?? 0;
+        return isset($this->condition) ? $this->condition : 0;
     }
 
     public function hasCondition()
@@ -826,7 +832,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getAvailability()
     {
-        return $this->availability ?? 0;
+        return isset($this->availability) ? $this->availability : 0;
     }
 
     public function hasAvailability()
@@ -859,7 +865,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      * product is intended to be shown in ads.
      *
      * Generated from protobuf field <code>repeated string target_countries = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getTargetCountries()
     {
@@ -871,7 +877,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      * product is intended to be shown in ads.
      *
      * Generated from protobuf field <code>repeated string target_countries = 15 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setTargetCountries($var)
@@ -891,7 +897,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute0()
     {
-        return $this->custom_attribute0 ?? '';
+        return isset($this->custom_attribute0) ? $this->custom_attribute0 : '';
     }
 
     public function hasCustomAttribute0()
@@ -929,7 +935,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute1()
     {
-        return $this->custom_attribute1 ?? '';
+        return isset($this->custom_attribute1) ? $this->custom_attribute1 : '';
     }
 
     public function hasCustomAttribute1()
@@ -967,7 +973,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute2()
     {
-        return $this->custom_attribute2 ?? '';
+        return isset($this->custom_attribute2) ? $this->custom_attribute2 : '';
     }
 
     public function hasCustomAttribute2()
@@ -1005,7 +1011,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute3()
     {
-        return $this->custom_attribute3 ?? '';
+        return isset($this->custom_attribute3) ? $this->custom_attribute3 : '';
     }
 
     public function hasCustomAttribute3()
@@ -1043,7 +1049,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute4()
     {
-        return $this->custom_attribute4 ?? '';
+        return isset($this->custom_attribute4) ? $this->custom_attribute4 : '';
     }
 
     public function hasCustomAttribute4()
@@ -1080,7 +1086,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel1()
     {
-        return $this->category_level1 ?? '';
+        return isset($this->category_level1) ? $this->category_level1 : '';
     }
 
     public function hasCategoryLevel1()
@@ -1116,7 +1122,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel2()
     {
-        return $this->category_level2 ?? '';
+        return isset($this->category_level2) ? $this->category_level2 : '';
     }
 
     public function hasCategoryLevel2()
@@ -1152,7 +1158,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel3()
     {
-        return $this->category_level3 ?? '';
+        return isset($this->category_level3) ? $this->category_level3 : '';
     }
 
     public function hasCategoryLevel3()
@@ -1188,7 +1194,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel4()
     {
-        return $this->category_level4 ?? '';
+        return isset($this->category_level4) ? $this->category_level4 : '';
     }
 
     public function hasCategoryLevel4()
@@ -1224,7 +1230,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel5()
     {
-        return $this->category_level5 ?? '';
+        return isset($this->category_level5) ? $this->category_level5 : '';
     }
 
     public function hasCategoryLevel5()
@@ -1260,7 +1266,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel1()
     {
-        return $this->product_type_level1 ?? '';
+        return isset($this->product_type_level1) ? $this->product_type_level1 : '';
     }
 
     public function hasProductTypeLevel1()
@@ -1296,7 +1302,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel2()
     {
-        return $this->product_type_level2 ?? '';
+        return isset($this->product_type_level2) ? $this->product_type_level2 : '';
     }
 
     public function hasProductTypeLevel2()
@@ -1332,7 +1338,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel3()
     {
-        return $this->product_type_level3 ?? '';
+        return isset($this->product_type_level3) ? $this->product_type_level3 : '';
     }
 
     public function hasProductTypeLevel3()
@@ -1368,7 +1374,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel4()
     {
-        return $this->product_type_level4 ?? '';
+        return isset($this->product_type_level4) ? $this->product_type_level4 : '';
     }
 
     public function hasProductTypeLevel4()
@@ -1404,7 +1410,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel5()
     {
-        return $this->product_type_level5 ?? '';
+        return isset($this->product_type_level5) ? $this->product_type_level5 : '';
     }
 
     public function hasProductTypeLevel5()
@@ -1445,7 +1451,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveMaxCpcMicros()
     {
-        return $this->effective_max_cpc_micros ?? 0;
+        return isset($this->effective_max_cpc_micros) ? $this->effective_max_cpc_micros : 0;
     }
 
     public function hasEffectiveMaxCpcMicros()
@@ -1517,7 +1523,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      * hours to update.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.ShoppingProduct.ProductIssue issues = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\ShoppingProduct\ProductIssue>
      */
     public function getIssues()
     {
@@ -1531,7 +1537,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      * hours to update.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.ShoppingProduct.ProductIssue issues = 33 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\ShoppingProduct\ProductIssue>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\ShoppingProduct\ProductIssue[] $var
      * @return $this
      */
     public function setIssues($var)
@@ -1552,7 +1558,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -1592,7 +1598,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return $this->ad_group ?? '';
+        return isset($this->ad_group) ? $this->ad_group : '';
     }
 
     public function hasAdGroup()

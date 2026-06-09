@@ -83,6 +83,3 @@ class CriterionCategoryChannelAvailabilityMode
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CriterionCategoryChannelAvailabilityMode::class, \Google\Ads\GoogleAds\V20\Enums\CriterionCategoryChannelAvailabilityModeEnum_CriterionCategoryChannelAvailabilityMode::class);
-

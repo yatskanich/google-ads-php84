@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Campaign-level settings for hotel ads.
@@ -43,7 +45,7 @@ class HotelSettingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return $this->hotel_center_id ?? 0;
+        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
     }
 
     public function hasHotelCenterId()
@@ -72,7 +74,4 @@ class HotelSettingInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(HotelSettingInfo::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_HotelSettingInfo::class);
 

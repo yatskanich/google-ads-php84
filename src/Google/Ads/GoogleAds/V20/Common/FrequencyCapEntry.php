@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A rule specifying the maximum number of times an ad (or some set of ads) can
@@ -92,7 +94,7 @@ class FrequencyCapEntry extends \Google\Protobuf\Internal\Message
      */
     public function getCap()
     {
-        return $this->cap ?? 0;
+        return isset($this->cap) ? $this->cap : 0;
     }
 
     public function hasCap()

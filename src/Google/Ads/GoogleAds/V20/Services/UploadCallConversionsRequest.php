@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -27,13 +29,13 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
      */
     private $conversions;
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
@@ -49,13 +51,15 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
     /**
      * @param string                                              $customerId     Required. The ID of the customer performing the upload.
      * @param \Google\Ads\GoogleAds\V20\Services\CallConversion[] $conversions    Required. The conversions that are being uploaded.
-     * @param bool                                                $partialFailure Required. If true, successful operations will be carried out and invalid
-     *                                                                            operations will return errors. If false, all operations will be carried
+     * @param bool                                                $partialFailure Required. If `true`, successful operations will be carried out and invalid
+     *                                                                            operations will return errors. If `false`, all operations will be carried
      *                                                                            out in one transaction if and only if they are all valid.
-     *                                                                            This should always be set to true.
+     *
+     *                                                                            This should always be set to `true`.
+     *
      *                                                                            See
-     *                                                                            https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     *                                                                            for more information about partial failure.
+     *                                                                            [Best practices for partial
+     *                                                                            failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * @return \Google\Ads\GoogleAds\V20\Services\UploadCallConversionsRequest
      *
@@ -63,7 +67,7 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $conversions, bool $partialFailure): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -77,16 +81,16 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $customer_id
      *           Required. The ID of the customer performing the upload.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\CallConversion>|\Google\Protobuf\Internal\RepeatedField $conversions
+     *     @type \Google\Ads\GoogleAds\V20\Services\CallConversion[] $conversions
      *           Required. The conversions that are being uploaded.
      *     @type bool $partial_failure
-     *           Required. If true, successful operations will be carried out and invalid
-     *           operations will return errors. If false, all operations will be carried
+     *           Required. If `true`, successful operations will be carried out and invalid
+     *           operations will return errors. If `false`, all operations will be carried
      *           out in one transaction if and only if they are all valid.
-     *           This should always be set to true.
+     *           This should always be set to `true`.
      *           See
-     *           https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     *           for more information about partial failure.
+     *           [Best practices for partial
+     *           failures](/google-ads/api/docs/best-practices/partial-failures).
      *     @type bool $validate_only
      *           If true, the request is validated but not executed. Only errors are
      *           returned, not results.
@@ -127,7 +131,7 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
      * Required. The conversions that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\CallConversion>
      */
     public function getConversions()
     {
@@ -138,7 +142,7 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
      * Required. The conversions that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CallConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\CallConversion>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\CallConversion[] $var
      * @return $this
      */
     public function setConversions($var)
@@ -150,13 +154,13 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return bool
@@ -167,13 +171,13 @@ class UploadCallConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param bool $var

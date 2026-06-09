@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A list of degrees this employee has obtained, and wants to feature.
@@ -59,7 +61,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getInstitutionName()
     {
-        return $this->institution_name ?? '';
+        return isset($this->institution_name) ? $this->institution_name : '';
     }
 
     public function hasInstitutionName()
@@ -95,7 +97,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getDegree()
     {
-        return $this->degree ?? '';
+        return isset($this->degree) ? $this->degree : '';
     }
 
     public function hasDegree()
@@ -131,7 +133,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getGraduationYear()
     {
-        return $this->graduation_year ?? 0;
+        return isset($this->graduation_year) ? $this->graduation_year : 0;
     }
 
     public function hasGraduationYear()

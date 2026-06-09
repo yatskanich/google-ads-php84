@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Text asset.
@@ -43,7 +45,7 @@ class TextAsset extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return $this->text ?? '';
+        return isset($this->text) ? $this->text : '';
     }
 
     public function hasText()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -62,7 +64,7 @@ class CreateCustomerClientRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Resources\Customer $customerClient): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
     }
@@ -170,7 +172,7 @@ class CreateCustomerClientRequest extends \Google\Protobuf\Internal\Message
      */
     public function getEmailAddress()
     {
-        return $this->email_address ?? '';
+        return isset($this->email_address) ? $this->email_address : '';
     }
 
     public function hasEmailAddress()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A conversion action.
@@ -222,7 +224,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      *           How to count conversion events for the conversion action.
      *     @type \Google\Ads\GoogleAds\V20\Resources\ConversionAction\AttributionModelSettings $attribution_model_settings
      *           Settings related to this conversion action's attribution model.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\TagSnippet>|\Google\Protobuf\Internal\RepeatedField $tag_snippets
+     *     @type \Google\Ads\GoogleAds\V20\Common\TagSnippet[] $tag_snippets
      *           Output only. The snippets used for tracking conversions.
      *     @type int|string $phone_call_duration_seconds
      *           The phone call duration in seconds after which a conversion should be
@@ -285,7 +287,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -323,7 +325,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -448,7 +450,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getPrimaryForGoal()
     {
-        return $this->primary_for_goal ?? false;
+        return isset($this->primary_for_goal) ? $this->primary_for_goal : false;
     }
 
     public function hasPrimaryForGoal()
@@ -520,7 +522,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getOwnerCustomer()
     {
-        return $this->owner_customer ?? '';
+        return isset($this->owner_customer) ? $this->owner_customer : '';
     }
 
     public function hasOwnerCustomer()
@@ -558,7 +560,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getIncludeInConversionsMetric()
     {
-        return $this->include_in_conversions_metric ?? false;
+        return isset($this->include_in_conversions_metric) ? $this->include_in_conversions_metric : false;
     }
 
     public function hasIncludeInConversionsMetric()
@@ -596,7 +598,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getClickThroughLookbackWindowDays()
     {
-        return $this->click_through_lookback_window_days ?? 0;
+        return isset($this->click_through_lookback_window_days) ? $this->click_through_lookback_window_days : 0;
     }
 
     public function hasClickThroughLookbackWindowDays()
@@ -634,7 +636,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getViewThroughLookbackWindowDays()
     {
-        return $this->view_through_lookback_window_days ?? 0;
+        return isset($this->view_through_lookback_window_days) ? $this->view_through_lookback_window_days : 0;
     }
 
     public function hasViewThroughLookbackWindowDays()
@@ -767,7 +769,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      * Output only. The snippets used for tracking conversions.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\TagSnippet>
      */
     public function getTagSnippets()
     {
@@ -778,7 +780,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      * Output only. The snippets used for tracking conversions.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.TagSnippet tag_snippets = 14 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\TagSnippet>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\TagSnippet[] $var
      * @return $this
      */
     public function setTagSnippets($var)
@@ -799,7 +801,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getPhoneCallDurationSeconds()
     {
-        return $this->phone_call_duration_seconds ?? 0;
+        return isset($this->phone_call_duration_seconds) ? $this->phone_call_duration_seconds : 0;
     }
 
     public function hasPhoneCallDurationSeconds()
@@ -837,7 +839,7 @@ class ConversionAction extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return $this->app_id ?? '';
+        return isset($this->app_id) ? $this->app_id : '';
     }
 
     public function hasAppId()

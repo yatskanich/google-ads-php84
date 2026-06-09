@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A rule item composed of a number operation.
@@ -91,7 +93,7 @@ class UserListNumberRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value ?? 0.0;
+        return isset($this->value) ? $this->value : 0.0;
     }
 
     public function hasValue()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Metadata for an image at a certain size, either original or resized.
@@ -59,7 +61,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getHeightPixels()
     {
-        return $this->height_pixels ?? 0;
+        return isset($this->height_pixels) ? $this->height_pixels : 0;
     }
 
     public function hasHeightPixels()
@@ -95,7 +97,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getWidthPixels()
     {
-        return $this->width_pixels ?? 0;
+        return isset($this->width_pixels) ? $this->width_pixels : 0;
     }
 
     public function hasWidthPixels()
@@ -131,7 +133,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return $this->url ?? '';
+        return isset($this->url) ? $this->url : '';
     }
 
     public function hasUrl()

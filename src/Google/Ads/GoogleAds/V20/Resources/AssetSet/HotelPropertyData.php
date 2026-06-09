@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AssetSet;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * For Performance Max for travel goals campaigns with a Hotel
@@ -52,7 +54,7 @@ class HotelPropertyData extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return $this->hotel_center_id ?? 0;
+        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
     }
 
     public function hasHotelCenterId()
@@ -88,7 +90,7 @@ class HotelPropertyData extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerName()
     {
-        return $this->partner_name ?? '';
+        return isset($this->partner_name) ? $this->partner_name : '';
     }
 
     public function hasPartnerName()
@@ -117,7 +119,4 @@ class HotelPropertyData extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(HotelPropertyData::class, \Google\Ads\GoogleAds\V20\Resources\AssetSet_HotelPropertyData::class);
 

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A breakdown of the number of unique people reached at a given effective
@@ -191,7 +193,7 @@ class EffectiveFrequencyBreakdown extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCoviewReach()
     {
-        return $this->effective_coview_reach ?? 0;
+        return isset($this->effective_coview_reach) ? $this->effective_coview_reach : 0;
     }
 
     public function hasEffectiveCoviewReach()
@@ -229,7 +231,7 @@ class EffectiveFrequencyBreakdown extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetEffectiveCoviewReach()
     {
-        return $this->on_target_effective_coview_reach ?? 0;
+        return isset($this->on_target_effective_coview_reach) ? $this->on_target_effective_coview_reach : 0;
     }
 
     public function hasOnTargetEffectiveCoviewReach()

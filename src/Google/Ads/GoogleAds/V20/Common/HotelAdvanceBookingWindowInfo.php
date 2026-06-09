@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Criterion for number of days prior to the stay the booking is being made.
@@ -51,7 +53,7 @@ class HotelAdvanceBookingWindowInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMinDays()
     {
-        return $this->min_days ?? 0;
+        return isset($this->min_days) ? $this->min_days : 0;
     }
 
     public function hasMinDays()
@@ -87,7 +89,7 @@ class HotelAdvanceBookingWindowInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMaxDays()
     {
-        return $this->max_days ?? 0;
+        return isset($this->max_days) ? $this->max_days : 0;
     }
 
     public function hasMaxDays()

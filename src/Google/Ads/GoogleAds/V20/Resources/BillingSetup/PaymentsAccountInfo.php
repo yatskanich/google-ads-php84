@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\BillingSetup;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Container of payments account information for this billing.
@@ -104,7 +106,7 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsAccountId()
     {
-        return $this->payments_account_id ?? '';
+        return isset($this->payments_account_id) ? $this->payments_account_id : '';
     }
 
     public function hasPaymentsAccountId()
@@ -147,7 +149,7 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsAccountName()
     {
-        return $this->payments_account_name ?? '';
+        return isset($this->payments_account_name) ? $this->payments_account_name : '';
     }
 
     public function hasPaymentsAccountName()
@@ -190,7 +192,7 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsProfileId()
     {
-        return $this->payments_profile_id ?? '';
+        return isset($this->payments_profile_id) ? $this->payments_profile_id : '';
     }
 
     public function hasPaymentsProfileId()
@@ -230,7 +232,7 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsProfileName()
     {
-        return $this->payments_profile_name ?? '';
+        return isset($this->payments_profile_name) ? $this->payments_profile_name : '';
     }
 
     public function hasPaymentsProfileName()
@@ -269,7 +271,7 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSecondaryPaymentsProfileId()
     {
-        return $this->secondary_payments_profile_id ?? '';
+        return isset($this->secondary_payments_profile_id) ? $this->secondary_payments_profile_id : '';
     }
 
     public function hasSecondaryPaymentsProfileId()
@@ -300,7 +302,4 @@ class PaymentsAccountInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PaymentsAccountInfo::class, \Google\Ads\GoogleAds\V20\Resources\BillingSetup_PaymentsAccountInfo::class);
 

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A local ad.
@@ -80,27 +82,27 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $headlines
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $headlines
      *           List of text assets for headlines. When the ad serves the headlines will
      *           be selected from this list. At least 1 and at most 5 headlines must be
      *           specified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $descriptions
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $descriptions
      *           List of text assets for descriptions. When the ad serves the descriptions
      *           will be selected from this list. At least 1 and at most 5 descriptions must
      *           be specified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $call_to_actions
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $call_to_actions
      *           List of text assets for call-to-actions. When the ad serves the
      *           call-to-actions will be selected from this list. At least 1 and at most
      *           5 call-to-actions must be specified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>|\Google\Protobuf\Internal\RepeatedField $marketing_images
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdImageAsset[] $marketing_images
      *           List of marketing image assets that may be displayed with the ad. The
      *           images must be 314x600 pixels or 320x320 pixels. At least 1 and at most
      *           20 image assets must be specified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>|\Google\Protobuf\Internal\RepeatedField $logo_images
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdImageAsset[] $logo_images
      *           List of logo image assets that may be displayed with the ad. The images
      *           must be 128x128 pixels and not larger than 120KB. At least 1 and at most 5
      *           image assets must be specified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AdVideoAsset>|\Google\Protobuf\Internal\RepeatedField $videos
+     *     @type \Google\Ads\GoogleAds\V20\Common\AdVideoAsset[] $videos
      *           List of YouTube video assets that may be displayed with the ad. At least 1
      *           and at most 20 video assets must be specified.
      *     @type string $path1
@@ -121,7 +123,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset headlines = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>
      */
     public function getHeadlines()
     {
@@ -134,7 +136,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset headlines = 1;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $var
      * @return $this
      */
     public function setHeadlines($var)
@@ -151,7 +153,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset descriptions = 2;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>
      */
     public function getDescriptions()
     {
@@ -164,7 +166,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset descriptions = 2;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $var
      * @return $this
      */
     public function setDescriptions($var)
@@ -181,7 +183,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * 5 call-to-actions must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset call_to_actions = 3;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>
      */
     public function getCallToActions()
     {
@@ -194,7 +196,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * 5 call-to-actions must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdTextAsset call_to_actions = 3;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdTextAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdTextAsset[] $var
      * @return $this
      */
     public function setCallToActions($var)
@@ -211,7 +213,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * 20 image assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdImageAsset marketing_images = 4;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>
      */
     public function getMarketingImages()
     {
@@ -224,7 +226,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * 20 image assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdImageAsset marketing_images = 4;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdImageAsset[] $var
      * @return $this
      */
     public function setMarketingImages($var)
@@ -241,7 +243,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * image assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdImageAsset logo_images = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>
      */
     public function getLogoImages()
     {
@@ -254,7 +256,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * image assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdImageAsset logo_images = 5;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdImageAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdImageAsset[] $var
      * @return $this
      */
     public function setLogoImages($var)
@@ -270,7 +272,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * and at most 20 video assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdVideoAsset videos = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AdVideoAsset>
      */
     public function getVideos()
     {
@@ -282,7 +284,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      * and at most 20 video assets must be specified.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AdVideoAsset videos = 6;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AdVideoAsset>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AdVideoAsset[] $var
      * @return $this
      */
     public function setVideos($var)
@@ -301,7 +303,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath1()
     {
-        return $this->path1 ?? '';
+        return isset($this->path1) ? $this->path1 : '';
     }
 
     public function hasPath1()
@@ -338,7 +340,7 @@ class LocalAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath2()
     {
-        return $this->path2 ?? '';
+        return isset($this->path2) ? $this->path2 : '';
     }
 
     public function hasPath2()

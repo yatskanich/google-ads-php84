@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Information about which locales a category is available in.
@@ -97,7 +99,7 @@ class CriterionCategoryLocaleAvailability extends \Google\Protobuf\Internal\Mess
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -133,7 +135,7 @@ class CriterionCategoryLocaleAvailability extends \Google\Protobuf\Internal\Mess
      */
     public function getLanguageCode()
     {
-        return $this->language_code ?? '';
+        return isset($this->language_code) ? $this->language_code : '';
     }
 
     public function hasLanguageCode()

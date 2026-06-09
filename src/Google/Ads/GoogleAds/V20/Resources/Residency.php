@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details about the employee's medical residency.
@@ -53,7 +55,7 @@ class Residency extends \Google\Protobuf\Internal\Message
      */
     public function getInstitutionName()
     {
-        return $this->institution_name ?? '';
+        return isset($this->institution_name) ? $this->institution_name : '';
     }
 
     public function hasInstitutionName()
@@ -89,7 +91,7 @@ class Residency extends \Google\Protobuf\Internal\Message
      */
     public function getCompletionYear()
     {
-        return $this->completion_year ?? 0;
+        return isset($this->completion_year) ? $this->completion_year : 0;
     }
 
     public function hasCompletionYear()

@@ -74,6 +74,3 @@ class TargetFrequencyTimeUnit
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetFrequencyTimeUnit::class, \Google\Ads\GoogleAds\V20\Enums\TargetFrequencyTimeUnitEnum_TargetFrequencyTimeUnit::class);
-

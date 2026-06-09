@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Smart Campaign keyword theme constant.
@@ -111,7 +113,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -151,7 +153,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return $this->language_code ?? '';
+        return isset($this->language_code) ? $this->language_code : '';
     }
 
     public function hasLanguageCode()
@@ -189,7 +191,7 @@ class KeywordThemeConstant extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return $this->display_name ?? '';
+        return isset($this->display_name) ? $this->display_name : '';
     }
 
     public function hasDisplayName()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Call reporting setting for a customer. Only mutable in an `update` operation.
@@ -66,7 +68,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallReportingEnabled()
     {
-        return $this->call_reporting_enabled ?? false;
+        return isset($this->call_reporting_enabled) ? $this->call_reporting_enabled : false;
     }
 
     public function hasCallReportingEnabled()
@@ -103,7 +105,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionReportingEnabled()
     {
-        return $this->call_conversion_reporting_enabled ?? false;
+        return isset($this->call_conversion_reporting_enabled) ? $this->call_conversion_reporting_enabled : false;
     }
 
     public function hasCallConversionReportingEnabled()
@@ -141,7 +143,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionAction()
     {
-        return $this->call_conversion_action ?? '';
+        return isset($this->call_conversion_action) ? $this->call_conversion_action : '';
     }
 
     public function hasCallConversionAction()

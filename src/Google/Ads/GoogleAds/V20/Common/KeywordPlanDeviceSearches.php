@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The total searches for the device type during the specified time period.
@@ -77,7 +79,7 @@ class KeywordPlanDeviceSearches extends \Google\Protobuf\Internal\Message
      */
     public function getSearchCount()
     {
-        return $this->search_count ?? 0;
+        return isset($this->search_count) ? $this->search_count : 0;
     }
 
     public function hasSearchCount()

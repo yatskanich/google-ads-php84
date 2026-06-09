@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A conversion adjustment.
@@ -119,7 +121,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      *           value, it must have a new, more recent, adjustment occurrence time.
      *           Otherwise, it will be treated as a duplicate of the previous restatement
      *           and ignored.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $user_identifiers
+     *     @type \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $user_identifiers
      *           The user identifiers to enhance the original conversion.
      *           ConversionAdjustmentUploadService only accepts user identifiers in
      *           enhancements. The maximum number of user identifiers for each
@@ -189,7 +191,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getOrderId()
     {
-        return $this->order_id ?? '';
+        return isset($this->order_id) ? $this->order_id : '';
     }
 
     public function hasOrderId()
@@ -230,7 +232,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return $this->conversion_action ?? '';
+        return isset($this->conversion_action) ? $this->conversion_action : '';
     }
 
     public function hasConversionAction()
@@ -271,7 +273,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getAdjustmentDateTime()
     {
-        return $this->adjustment_date_time ?? '';
+        return isset($this->adjustment_date_time) ? $this->adjustment_date_time : '';
     }
 
     public function hasAdjustmentDateTime()
@@ -382,7 +384,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      * enhancement is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 10;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>
      */
     public function getUserIdentifiers()
     {
@@ -396,7 +398,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      * enhancement is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 10;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $var
      * @return $this
      */
     public function setUserIdentifiers($var)
@@ -421,7 +423,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getUserAgent()
     {
-        return $this->user_agent ?? '';
+        return isset($this->user_agent) ? $this->user_agent : '';
     }
 
     public function hasUserAgent()

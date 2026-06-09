@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An ad parameter that is used to update numeric values (such as prices or
@@ -130,7 +132,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return $this->ad_group_criterion ?? '';
+        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
     }
 
     public function hasAdGroupCriterion()
@@ -166,7 +168,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getParameterIndex()
     {
-        return $this->parameter_index ?? 0;
+        return isset($this->parameter_index) ? $this->parameter_index : 0;
     }
 
     public function hasParameterIndex()
@@ -214,7 +216,7 @@ class AdParameter extends \Google\Protobuf\Internal\Message
      */
     public function getInsertionText()
     {
-        return $this->insertion_text ?? '';
+        return isset($this->insertion_text) ? $this->insertion_text : '';
     }
 
     public function hasInsertionText()

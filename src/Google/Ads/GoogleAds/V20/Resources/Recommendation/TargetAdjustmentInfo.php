@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Information of a target adjustment recommendation.
@@ -69,7 +71,7 @@ class TargetAdjustmentInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSharedSet()
     {
-        return $this->shared_set ?? '';
+        return isset($this->shared_set) ? $this->shared_set : '';
     }
 
     public function hasSharedSet()
@@ -156,7 +158,4 @@ class TargetAdjustmentInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetAdjustmentInfo::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_TargetAdjustmentInfo::class);
 

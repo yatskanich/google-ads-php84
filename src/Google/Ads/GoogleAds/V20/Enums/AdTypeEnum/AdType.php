@@ -33,7 +33,7 @@ class AdType
      */
     const TEXT_AD = 2;
     /**
-     * The ad is an expanded text ad.
+     * The ad is an expanded text ad. Expanded text ads are deprecated.
      *
      * Generated from protobuf enum <code>EXPANDED_TEXT_AD = 3;</code>
      */
@@ -285,7 +285,4 @@ class AdType
         return constant($const);
     }
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdType::class, \Google\Ads\GoogleAds\V20\Enums\AdTypeEnum_AdType::class);
 

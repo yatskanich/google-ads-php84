@@ -26,7 +26,7 @@ class VideoAdFormatRestriction
      */
     const UNKNOWN = 1;
     /**
-     * Non-skippable in-stream Video Responsive Ad.
+     * Non-skippable in-stream video responsive ad.
      *
      * Generated from protobuf enum <code>NON_SKIPPABLE_IN_STREAM = 2;</code>
      */
@@ -66,7 +66,4 @@ class VideoAdFormatRestriction
         return constant($const);
     }
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(VideoAdFormatRestriction::class, \Google\Ads\GoogleAds\V20\Enums\VideoAdFormatRestrictionEnum_VideoAdFormatRestriction::class);
 

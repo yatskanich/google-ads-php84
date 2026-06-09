@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Dimension specifying users by their gender.
@@ -32,7 +34,7 @@ class GenderDimension extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $genders
+     *     @type int[] $genders
      *           Included gender demographic segments.
      *     @type bool $include_undetermined
      *           Include users whose gender is not determined.
@@ -47,7 +49,7 @@ class GenderDimension extends \Google\Protobuf\Internal\Message
      * Included gender demographic segments.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.GenderTypeEnum.GenderType genders = 1;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getGenders()
     {
@@ -58,7 +60,7 @@ class GenderDimension extends \Google\Protobuf\Internal\Message
      * Included gender demographic segments.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.GenderTypeEnum.GenderType genders = 1;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setGenders($var)
@@ -77,7 +79,7 @@ class GenderDimension extends \Google\Protobuf\Internal\Message
      */
     public function getIncludeUndetermined()
     {
-        return $this->include_undetermined ?? false;
+        return isset($this->include_undetermined) ? $this->include_undetermined : false;
     }
 
     public function hasIncludeUndetermined()

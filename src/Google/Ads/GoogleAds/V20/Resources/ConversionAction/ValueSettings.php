@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\ConversionAction;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Settings related to the value for conversion events associated with this
@@ -74,7 +76,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getDefaultValue()
     {
-        return $this->default_value ?? 0.0;
+        return isset($this->default_value) ? $this->default_value : 0.0;
     }
 
     public function hasDefaultValue()
@@ -114,7 +116,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getDefaultCurrencyCode()
     {
-        return $this->default_currency_code ?? '';
+        return isset($this->default_currency_code) ? $this->default_currency_code : '';
     }
 
     public function hasDefaultCurrencyCode()
@@ -154,7 +156,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getAlwaysUseDefaultValue()
     {
-        return $this->always_use_default_value ?? false;
+        return isset($this->always_use_default_value) ? $this->always_use_default_value : false;
     }
 
     public function hasAlwaysUseDefaultValue()
@@ -185,7 +187,4 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ValueSettings::class, \Google\Ads\GoogleAds\V20\Resources\ConversionAction_ValueSettings::class);
 

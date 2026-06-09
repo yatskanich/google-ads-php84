@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Address for proximity criterion.
@@ -95,7 +97,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPostalCode()
     {
-        return $this->postal_code ?? '';
+        return isset($this->postal_code) ? $this->postal_code : '';
     }
 
     public function hasPostalCode()
@@ -131,7 +133,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getProvinceCode()
     {
-        return $this->province_code ?? '';
+        return isset($this->province_code) ? $this->province_code : '';
     }
 
     public function hasProvinceCode()
@@ -167,7 +169,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -203,7 +205,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getProvinceName()
     {
-        return $this->province_name ?? '';
+        return isset($this->province_name) ? $this->province_name : '';
     }
 
     public function hasProvinceName()
@@ -239,7 +241,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStreetAddress()
     {
-        return $this->street_address ?? '';
+        return isset($this->street_address) ? $this->street_address : '';
     }
 
     public function hasStreetAddress()
@@ -277,7 +279,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStreetAddress2()
     {
-        return $this->street_address2 ?? '';
+        return isset($this->street_address2) ? $this->street_address2 : '';
     }
 
     public function hasStreetAddress2()
@@ -315,7 +317,7 @@ class AddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCityName()
     {
-        return $this->city_name ?? '';
+        return isset($this->city_name) ? $this->city_name : '';
     }
 
     public function hasCityName()

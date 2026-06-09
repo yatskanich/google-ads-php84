@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents the data sharing connection between  a Google
@@ -106,7 +108,7 @@ class ProductLink extends \Google\Protobuf\Internal\Message
      */
     public function getProductLinkId()
     {
-        return $this->product_link_id ?? 0;
+        return isset($this->product_link_id) ? $this->product_link_id : 0;
     }
 
     public function hasProductLinkId()

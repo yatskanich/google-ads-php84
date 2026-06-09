@@ -5,12 +5,12 @@
 namespace Google\Ads\GoogleAds\V20\Services;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Result message for
- * [RecommendationSubscriptionService.MutateRecommendationSubscription]
+ * [RecommendationSubscriptionService.MutateRecommendationSubscription][google.ads.googleads.v20.services.RecommendationSubscriptionService.MutateRecommendationSubscription]
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.MutateRecommendationSubscriptionResult</code>
  */

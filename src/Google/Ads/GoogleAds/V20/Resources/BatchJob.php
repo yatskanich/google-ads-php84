@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A list of mutates being processed asynchronously. The mutates are uploaded
@@ -125,7 +127,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -162,7 +164,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getNextAddSequenceToken()
     {
-        return $this->next_add_sequence_token ?? '';
+        return isset($this->next_add_sequence_token) ? $this->next_add_sequence_token : '';
     }
 
     public function hasNextAddSequenceToken()
@@ -263,7 +265,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return $this->long_running_operation ?? '';
+        return isset($this->long_running_operation) ? $this->long_running_operation : '';
     }
 
     public function hasLongRunningOperation()

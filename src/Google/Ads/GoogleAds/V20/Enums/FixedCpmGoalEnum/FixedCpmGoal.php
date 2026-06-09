@@ -76,6 +76,3 @@ class FixedCpmGoal
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FixedCpmGoal::class, \Google\Ads\GoogleAds\V20\Enums\FixedCpmGoalEnum_FixedCpmGoal::class);
-

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Location Criterion bid modifier.
@@ -84,7 +86,7 @@ class CriterionBidModifier extends \Google\Protobuf\Internal\Message
      */
     public function getBidModifier()
     {
-        return $this->bid_modifier ?? 0.0;
+        return isset($this->bid_modifier) ? $this->bid_modifier : 0.0;
     }
 
     public function hasBidModifier()

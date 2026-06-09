@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A mapping that can be used by custom parameter tags in a
@@ -52,7 +54,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getKey()
     {
-        return $this->key ?? '';
+        return isset($this->key) ? $this->key : '';
     }
 
     public function hasKey()
@@ -88,7 +90,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value ?? '';
+        return isset($this->value) ? $this->value : '';
     }
 
     public function hasValue()

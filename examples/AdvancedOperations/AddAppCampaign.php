@@ -24,42 +24,44 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\AdTextAsset;
-use Google\Ads\GoogleAds\V20\Common\AppAdInfo;
-use Google\Ads\GoogleAds\V20\Common\LanguageInfo;
-use Google\Ads\GoogleAds\V20\Common\LocationInfo;
-use Google\Ads\GoogleAds\V20\Common\TargetCpa;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupAdStatusEnum\AdGroupAdStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupStatusEnum\AdGroupStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelSubTypeEnum\AdvertisingChannelSubType;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\AppCampaignAppStoreEnum\AppCampaignAppStore;
-use Google\Ads\GoogleAds\V20\Enums\AppCampaignBiddingStrategyGoalTypeEnum\AppCampaignBiddingStrategyGoalType;
-use Google\Ads\GoogleAds\V20\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Ad;
-use Google\Ads\GoogleAds\V20\Resources\AdGroup;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupAd;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\Campaign\AppCampaignSetting;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Resources\CampaignCriterion;
-use Google\Ads\GoogleAds\V20\Services\AdGroupAdOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignBudgetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignCriteriaRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\AdTextAsset;
+use Google\Ads\GoogleAds\V24\Common\AppAdInfo;
+use Google\Ads\GoogleAds\V24\Common\LanguageInfo;
+use Google\Ads\GoogleAds\V24\Common\LocationInfo;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupAdStatusEnum\AdGroupAdStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupStatusEnum\AdGroupStatus;
+use Google\Ads\GoogleAds\V24\Enums\AppCampaignBiddingStrategyGoalTypeEnum\AppCampaignBiddingStrategyGoalType;
+use Google\Ads\GoogleAds\V24\Common\TargetCpa;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelSubTypeEnum\AdvertisingChannelSubType;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\AppCampaignAppStoreEnum\AppCampaignAppStore;
+use Google\Ads\GoogleAds\V24\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\CriterionTypeEnum\CriterionType;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Ad;
+use Google\Ads\GoogleAds\V24\Resources\AdGroup;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupAd;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\AppCampaignSetting;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Resources\CampaignCriterion;
+use Google\Ads\GoogleAds\V24\Services\AdGroupAdOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupAdsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignBudgetsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignCriteriaRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsRequest;
 use Google\ApiCore\ApiException;
 
 /**
@@ -73,22 +75,22 @@ use Google\ApiCore\ApiException;
  */
 class AddAppCampaign
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()
+        $googleAdsClient = (new GoogleAdsClientBuilder())
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -243,9 +245,12 @@ class AddAppCampaign
                 'bidding_strategy_goal_type' =>
                     AppCampaignBiddingStrategyGoalType::OPTIMIZE_INSTALLS_TARGET_INSTALL_COST
             ]),
+            // Declare whether or not this campaign serves political ads targeting the EU.
+            'contains_eu_political_advertising' =>
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING,
             // Optional fields.
-            'start_date' => date('Ymd', strtotime('+1 day')),
-            'end_date' => date('Ymd', strtotime('+365 days'))
+            'start_date_time' => date('Y-m-d 00:00:00', strtotime('+1 day')),
+            'end_date_time' => date('Y-m-d 23:59:59', strtotime('+365 days'))
             // If you select the
             // OPTIMIZE_IN_APP_CONVERSIONS_TARGET_INSTALL_COST goal type, then also
             // specify your in-app conversion types so the Google Ads API can focus

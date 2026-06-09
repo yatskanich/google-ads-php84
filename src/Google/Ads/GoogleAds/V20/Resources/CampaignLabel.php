@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a relationship between a campaign and a label.
@@ -93,7 +95,7 @@ class CampaignLabel extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -129,7 +131,7 @@ class CampaignLabel extends \Google\Protobuf\Internal\Message
      */
     public function getLabel()
     {
-        return $this->label ?? '';
+        return isset($this->label) ? $this->label : '';
     }
 
     public function hasLabel()

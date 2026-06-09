@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The Maximize Conversions Opt-In recommendation.
@@ -43,7 +45,7 @@ class MaximizeConversionsOptInRecommendation extends \Google\Protobuf\Internal\M
      */
     public function getRecommendedBudgetAmountMicros()
     {
-        return $this->recommended_budget_amount_micros ?? 0;
+        return isset($this->recommended_budget_amount_micros) ? $this->recommended_budget_amount_micros : 0;
     }
 
     public function hasRecommendedBudgetAmountMicros()
@@ -72,7 +74,4 @@ class MaximizeConversionsOptInRecommendation extends \Google\Protobuf\Internal\M
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MaximizeConversionsOptInRecommendation::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_MaximizeConversionsOptInRecommendation::class);
 

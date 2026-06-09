@@ -24,45 +24,46 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\V20\Common\ExpandedDynamicSearchAdInfo;
-use Google\Ads\GoogleAds\V20\Common\ManualCpc;
-use Google\Ads\GoogleAds\V20\Common\WebpageConditionInfo;
-use Google\Ads\GoogleAds\V20\Common\WebpageInfo;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupAdStatusEnum\AdGroupAdStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupCriterionStatusEnum\AdGroupCriterionStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupStatusEnum\AdGroupStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupTypeEnum\AdGroupType;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Enums\WebpageConditionOperandEnum\WebpageConditionOperand;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Ad;
-use Google\Ads\GoogleAds\V20\Resources\AdGroup;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupAd;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\Campaign\DynamicSearchAdsSetting;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Services\AdGroupAdOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupCriteriaRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupCriteriaResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupsResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignBudgetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignBudgetsResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsResponse;
+use Google\Ads\GoogleAds\V24\Common\ExpandedDynamicSearchAdInfo;
+use Google\Ads\GoogleAds\V24\Common\ManualCpc;
+use Google\Ads\GoogleAds\V24\Common\WebpageConditionInfo;
+use Google\Ads\GoogleAds\V24\Common\WebpageInfo;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupAdStatusEnum\AdGroupAdStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupCriterionStatusEnum\AdGroupCriterionStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupStatusEnum\AdGroupStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupTypeEnum\AdGroupType;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Enums\WebpageConditionOperandEnum\WebpageConditionOperand;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Ad;
+use Google\Ads\GoogleAds\V24\Resources\AdGroup;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupCriterion;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupAd;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\DynamicSearchAdsSetting;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Services\AdGroupCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupAdOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupAdsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupAdsResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupCriteriaRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupsResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupCriteriaResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignBudgetsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignBudgetsResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsResponse;
 use Google\ApiCore\ApiException;
 
 /**
@@ -70,22 +71,22 @@ use Google\ApiCore\ApiException;
  */
 class AddDynamicSearchAds
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
+        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -205,10 +206,13 @@ class AddDynamicSearchAds
                 'domain_name' => 'example.com',
                 'language_code' => 'en'
             ]),
+            // Declare whether or not this campaign serves political ads targeting the EU.
+            'contains_eu_political_advertising' =>
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING,
             // Optional: Sets the start and end dates for the campaign, beginning one day from
             // now and ending a month from now.
-            'start_date' => date('Ymd', strtotime('+1 day')),
-            'end_date' => date('Ymd', strtotime('+1 month'))
+            'start_date_time' => date('Y-m-d 00:00:00', strtotime('+1 day')),
+            'end_date_time' => date('Y-m-d 23:59:59', strtotime('+1 month'))
         ]);
 
         // Creates a campaign operation.

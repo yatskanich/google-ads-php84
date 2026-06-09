@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Settings for Demand Gen campaign.
@@ -55,7 +57,7 @@ class DemandGenCampaignSettings extends \Google\Protobuf\Internal\Message
      */
     public function getUpgradedTargeting()
     {
-        return $this->upgraded_targeting ?? false;
+        return isset($this->upgraded_targeting) ? $this->upgraded_targeting : false;
     }
 
     public function hasUpgradedTargeting()
@@ -88,7 +90,4 @@ class DemandGenCampaignSettings extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DemandGenCampaignSettings::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_DemandGenCampaignSettings::class);
 

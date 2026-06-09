@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A geo target constant suggestion.
@@ -68,7 +70,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      *           matched the geo target.
      *     @type \Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant $geo_target_constant
      *           The GeoTargetConstant result.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant>|\Google\Protobuf\Internal\RepeatedField $geo_target_constant_parents
+     *     @type \Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant[] $geo_target_constant_parents
      *           The list of parents of the geo target constant.
      * }
      */
@@ -88,7 +90,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getLocale()
     {
-        return $this->locale ?? '';
+        return isset($this->locale) ? $this->locale : '';
     }
 
     public function hasLocale()
@@ -128,7 +130,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getReach()
     {
-        return $this->reach ?? 0;
+        return isset($this->reach) ? $this->reach : 0;
     }
 
     public function hasReach()
@@ -166,7 +168,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return $this->search_term ?? '';
+        return isset($this->search_term) ? $this->search_term : '';
     }
 
     public function hasSearchTerm()
@@ -235,7 +237,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      * The list of parents of the geo target constant.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant>
      */
     public function getGeoTargetConstantParents()
     {
@@ -246,7 +248,7 @@ class GeoTargetConstantSuggestion extends \Google\Protobuf\Internal\Message
      * The list of parents of the geo target constant.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.GeoTargetConstant geo_target_constant_parents = 5;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\GeoTargetConstant[] $var
      * @return $this
      */
     public function setGeoTargetConstantParents($var)

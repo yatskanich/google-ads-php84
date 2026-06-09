@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A listing group criterion.
@@ -136,7 +138,7 @@ class ListingGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getParentAdGroupCriterion()
     {
-        return $this->parent_ad_group_criterion ?? '';
+        return isset($this->parent_ad_group_criterion) ? $this->parent_ad_group_criterion : '';
     }
 
     public function hasParentAdGroupCriterion()

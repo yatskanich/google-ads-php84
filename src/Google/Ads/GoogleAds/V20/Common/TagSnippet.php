@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The site tag and event snippet pair for a TrackingCodeType.
@@ -128,7 +130,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getGlobalSiteTag()
     {
-        return $this->global_site_tag ?? '';
+        return isset($this->global_site_tag) ? $this->global_site_tag : '';
     }
 
     public function hasGlobalSiteTag()
@@ -166,7 +168,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getEventSnippet()
     {
-        return $this->event_snippet ?? '';
+        return isset($this->event_snippet) ? $this->event_snippet : '';
     }
 
     public function hasEventSnippet()

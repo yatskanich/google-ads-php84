@@ -4,11 +4,13 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
- * [CampaignLifecycleGoalService.configureCampaignLifecycleGoals][].
+ * [CampaignLifecycleGoalService.ConfigureCampaignLifecycleGoals][google.ads.googleads.v20.services.CampaignLifecycleGoalService.ConfigureCampaignLifecycleGoals].
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.ConfigureCampaignLifecycleGoalsRequest</code>
  */
@@ -44,7 +46,7 @@ class ConfigureCampaignLifecycleGoalsRequest extends \Google\Protobuf\Internal\M
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Services\CampaignLifecycleGoalOperation $operation): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

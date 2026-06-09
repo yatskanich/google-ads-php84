@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An image asset used inside an ad.
@@ -43,7 +45,7 @@ class AdImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return $this->asset ?? '';
+        return isset($this->asset) ? $this->asset : '';
     }
 
     public function hasAsset()

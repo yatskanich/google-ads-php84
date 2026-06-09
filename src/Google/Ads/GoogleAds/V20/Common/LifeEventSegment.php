@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Live event segment.
@@ -43,7 +45,7 @@ class LifeEventSegment extends \Google\Protobuf\Internal\Message
      */
     public function getLifeEvent()
     {
-        return $this->life_event ?? '';
+        return isset($this->life_event) ? $this->life_event : '';
     }
 
     public function hasLifeEvent()

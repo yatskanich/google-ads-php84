@@ -13,17 +13,10 @@ class DisplayKeywordView
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Google\Api\Resource::initOnce();
         \GPBMetadata\Google\Api\FieldBehavior::initOnce();
+        \GPBMetadata\Google\Api\Resource::initOnce();
         $pool->internalAddGeneratedFile(
-            '
-ñ
-=google/ads/googleads/v20/resources/display_keyword_view.proto"google.ads.googleads.v20.resourcesgoogle/api/resource.proto"Ü
-DisplayKeywordViewJ
-resource_name (	B3àAúA-
-+googleads.googleapis.com/DisplayKeywordView:zêAw
-+googleads.googleapis.com/DisplayKeywordViewHcustomers/{customer_id}/displayKeywordViews/{ad_group_id}~{criterion_id}B‰
-&com.google.ads.googleads.v20.resourcesBDisplayKeywordViewProtoPZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources¢GAAª"Google.Ads.GoogleAds.V20.ResourcesÊ"Google\\Ads\\GoogleAds\\V20\\Resourcesê&Google::Ads::GoogleAds::V20::Resourcesbproto3'
+            "\x0A\xF1\x04\x0A=google/ads/googleads/v20/resources/display_keyword_view.proto\x12\"google.ads.googleads.v20.resources\x1A\x19google/api/resource.proto\"\xDC\x01\x0A\x12DisplayKeywordView\x12J\x0A\x0Dresource_name\x18\x01 \x01(\x09B3\xE0A\x03\xFAA-\x0A+googleads.googleapis.com/DisplayKeywordView:z\xEAAw\x0A+googleads.googleapis.com/DisplayKeywordView\x12Hcustomers/{customer_id}/displayKeywordViews/{ad_group_id}~{criterion_id}B\x89\x02\x0A&com.google.ads.googleads.v20.resourcesB\x17DisplayKeywordViewProtoP\x01ZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources\xA2\x02\x03GAA\xAA\x02\"Google.Ads.GoogleAds.V20.Resources\xCA\x02\"Google\\Ads\\GoogleAds\\V20\\Resources\xEA\x02&Google::Ads::GoogleAds::V20::Resourcesb\x06proto3"
         , true);
         static::$is_initialized = true;
     }

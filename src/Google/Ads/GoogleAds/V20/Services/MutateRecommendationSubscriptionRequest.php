@@ -4,11 +4,13 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
- * [RecommendationSubscriptionService.MutateRecommendationSubscription]
+ * [RecommendationSubscriptionService.MutateRecommendationSubscription][google.ads.googleads.v20.services.RecommendationSubscriptionService.MutateRecommendationSubscription]
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.MutateRecommendationSubscriptionRequest</code>
  */
@@ -62,7 +64,7 @@ class MutateRecommendationSubscriptionRequest extends \Google\Protobuf\Internal\
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -75,7 +77,7 @@ class MutateRecommendationSubscriptionRequest extends \Google\Protobuf\Internal\
      *
      *     @type string $customer_id
      *           Required. The ID of the subscribing customer.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\RecommendationSubscriptionOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\RecommendationSubscriptionOperation[] $operations
      *           Required. The list of create or update operations.
      *     @type bool $partial_failure
      *           If true, successful operations will be carried out and invalid
@@ -127,7 +129,7 @@ class MutateRecommendationSubscriptionRequest extends \Google\Protobuf\Internal\
      * Required. The list of create or update operations.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.RecommendationSubscriptionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\RecommendationSubscriptionOperation>
      */
     public function getOperations()
     {
@@ -138,7 +140,7 @@ class MutateRecommendationSubscriptionRequest extends \Google\Protobuf\Internal\
      * Required. The list of create or update operations.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.RecommendationSubscriptionOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\RecommendationSubscriptionOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\RecommendationSubscriptionOperation[] $var
      * @return $this
      */
     public function setOperations($var)

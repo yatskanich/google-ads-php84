@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Segment only fields.
@@ -1051,7 +1053,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityAccountId()
     {
-        return $this->activity_account_id ?? 0;
+        return isset($this->activity_account_id) ? $this->activity_account_id : 0;
     }
 
     public function hasActivityAccountId()
@@ -1087,7 +1089,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityCity()
     {
-        return $this->activity_city ?? '';
+        return isset($this->activity_city) ? $this->activity_city : '';
     }
 
     public function hasActivityCity()
@@ -1123,7 +1125,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityCountry()
     {
-        return $this->activity_country ?? '';
+        return isset($this->activity_country) ? $this->activity_country : '';
     }
 
     public function hasActivityCountry()
@@ -1159,7 +1161,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityRating()
     {
-        return $this->activity_rating ?? 0;
+        return isset($this->activity_rating) ? $this->activity_rating : 0;
     }
 
     public function hasActivityRating()
@@ -1195,7 +1197,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityState()
     {
-        return $this->activity_state ?? '';
+        return isset($this->activity_state) ? $this->activity_state : '';
     }
 
     public function hasActivityState()
@@ -1231,7 +1233,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getExternalActivityId()
     {
-        return $this->external_activity_id ?? '';
+        return isset($this->external_activity_id) ? $this->external_activity_id : '';
     }
 
     public function hasExternalActivityId()
@@ -1345,7 +1347,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return $this->ad_group ?? '';
+        return isset($this->ad_group) ? $this->ad_group : '';
     }
 
     public function hasAdGroup()
@@ -1381,7 +1383,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAssetGroup()
     {
-        return $this->asset_group ?? '';
+        return isset($this->asset_group) ? $this->asset_group : '';
     }
 
     public function hasAssetGroup()
@@ -1417,7 +1419,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAuctionInsightDomain()
     {
-        return $this->auction_insight_domain ?? '';
+        return isset($this->auction_insight_domain) ? $this->auction_insight_domain : '';
     }
 
     public function hasAuctionInsightDomain()
@@ -1489,7 +1491,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -1551,7 +1553,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return $this->conversion_action ?? '';
+        return isset($this->conversion_action) ? $this->conversion_action : '';
     }
 
     public function hasConversionAction()
@@ -1613,7 +1615,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionActionName()
     {
-        return $this->conversion_action_name ?? '';
+        return isset($this->conversion_action_name) ? $this->conversion_action_name : '';
     }
 
     public function hasConversionActionName()
@@ -1653,7 +1655,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAdjustment()
     {
-        return $this->conversion_adjustment ?? false;
+        return isset($this->conversion_adjustment) ? $this->conversion_adjustment : false;
     }
 
     public function hasConversionAdjustment()
@@ -1776,7 +1778,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return $this->date ?? '';
+        return isset($this->date) ? $this->date : '';
     }
 
     public function hasDate()
@@ -1891,7 +1893,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetAirport()
     {
-        return $this->geo_target_airport ?? '';
+        return isset($this->geo_target_airport) ? $this->geo_target_airport : '';
     }
 
     public function hasGeoTargetAirport()
@@ -1927,7 +1929,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCanton()
     {
-        return $this->geo_target_canton ?? '';
+        return isset($this->geo_target_canton) ? $this->geo_target_canton : '';
     }
 
     public function hasGeoTargetCanton()
@@ -1963,7 +1965,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCity()
     {
-        return $this->geo_target_city ?? '';
+        return isset($this->geo_target_city) ? $this->geo_target_city : '';
     }
 
     public function hasGeoTargetCity()
@@ -1999,7 +2001,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCountry()
     {
-        return $this->geo_target_country ?? '';
+        return isset($this->geo_target_country) ? $this->geo_target_country : '';
     }
 
     public function hasGeoTargetCountry()
@@ -2035,7 +2037,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCounty()
     {
-        return $this->geo_target_county ?? '';
+        return isset($this->geo_target_county) ? $this->geo_target_county : '';
     }
 
     public function hasGeoTargetCounty()
@@ -2071,7 +2073,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetDistrict()
     {
-        return $this->geo_target_district ?? '';
+        return isset($this->geo_target_district) ? $this->geo_target_district : '';
     }
 
     public function hasGeoTargetDistrict()
@@ -2107,7 +2109,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetMetro()
     {
-        return $this->geo_target_metro ?? '';
+        return isset($this->geo_target_metro) ? $this->geo_target_metro : '';
     }
 
     public function hasGeoTargetMetro()
@@ -2144,7 +2146,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetMostSpecificLocation()
     {
-        return $this->geo_target_most_specific_location ?? '';
+        return isset($this->geo_target_most_specific_location) ? $this->geo_target_most_specific_location : '';
     }
 
     public function hasGeoTargetMostSpecificLocation()
@@ -2181,7 +2183,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetPostalCode()
     {
-        return $this->geo_target_postal_code ?? '';
+        return isset($this->geo_target_postal_code) ? $this->geo_target_postal_code : '';
     }
 
     public function hasGeoTargetPostalCode()
@@ -2217,7 +2219,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetProvince()
     {
-        return $this->geo_target_province ?? '';
+        return isset($this->geo_target_province) ? $this->geo_target_province : '';
     }
 
     public function hasGeoTargetProvince()
@@ -2253,7 +2255,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetRegion()
     {
-        return $this->geo_target_region ?? '';
+        return isset($this->geo_target_region) ? $this->geo_target_region : '';
     }
 
     public function hasGeoTargetRegion()
@@ -2289,7 +2291,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetState()
     {
-        return $this->geo_target_state ?? '';
+        return isset($this->geo_target_state) ? $this->geo_target_state : '';
     }
 
     public function hasGeoTargetState()
@@ -2325,7 +2327,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelBookingWindowDays()
     {
-        return $this->hotel_booking_window_days ?? 0;
+        return isset($this->hotel_booking_window_days) ? $this->hotel_booking_window_days : 0;
     }
 
     public function hasHotelBookingWindowDays()
@@ -2361,7 +2363,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return $this->hotel_center_id ?? 0;
+        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
     }
 
     public function hasHotelCenterId()
@@ -2397,7 +2399,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCheckInDate()
     {
-        return $this->hotel_check_in_date ?? '';
+        return isset($this->hotel_check_in_date) ? $this->hotel_check_in_date : '';
     }
 
     public function hasHotelCheckInDate()
@@ -2459,7 +2461,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCity()
     {
-        return $this->hotel_city ?? '';
+        return isset($this->hotel_city) ? $this->hotel_city : '';
     }
 
     public function hasHotelCity()
@@ -2495,7 +2497,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelClass()
     {
-        return $this->hotel_class ?? 0;
+        return isset($this->hotel_class) ? $this->hotel_class : 0;
     }
 
     public function hasHotelClass()
@@ -2531,7 +2533,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCountry()
     {
-        return $this->hotel_country ?? '';
+        return isset($this->hotel_country) ? $this->hotel_country : '';
     }
 
     public function hasHotelCountry()
@@ -2593,7 +2595,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelLengthOfStay()
     {
-        return $this->hotel_length_of_stay ?? 0;
+        return isset($this->hotel_length_of_stay) ? $this->hotel_length_of_stay : 0;
     }
 
     public function hasHotelLengthOfStay()
@@ -2629,7 +2631,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelRateRuleId()
     {
-        return $this->hotel_rate_rule_id ?? '';
+        return isset($this->hotel_rate_rule_id) ? $this->hotel_rate_rule_id : '';
     }
 
     public function hasHotelRateRuleId()
@@ -2717,7 +2719,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelState()
     {
-        return $this->hotel_state ?? '';
+        return isset($this->hotel_state) ? $this->hotel_state : '';
     }
 
     public function hasHotelState()
@@ -2753,7 +2755,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHour()
     {
-        return $this->hour ?? 0;
+        return isset($this->hour) ? $this->hour : 0;
     }
 
     public function hasHour()
@@ -2791,7 +2793,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getInteractionOnThisExtension()
     {
-        return $this->interaction_on_this_extension ?? false;
+        return isset($this->interaction_on_this_extension) ? $this->interaction_on_this_extension : false;
     }
 
     public function hasInteractionOnThisExtension()
@@ -2866,7 +2868,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getMonth()
     {
-        return $this->month ?? '';
+        return isset($this->month) ? $this->month : '';
     }
 
     public function hasMonth()
@@ -2929,7 +2931,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerHotelId()
     {
-        return $this->partner_hotel_id ?? '';
+        return isset($this->partner_hotel_id) ? $this->partner_hotel_id : '';
     }
 
     public function hasPartnerHotelId()
@@ -2965,7 +2967,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductAggregatorId()
     {
-        return $this->product_aggregator_id ?? 0;
+        return isset($this->product_aggregator_id) ? $this->product_aggregator_id : 0;
     }
 
     public function hasProductAggregatorId()
@@ -3001,7 +3003,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel1()
     {
-        return $this->product_category_level1 ?? '';
+        return isset($this->product_category_level1) ? $this->product_category_level1 : '';
     }
 
     public function hasProductCategoryLevel1()
@@ -3037,7 +3039,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel2()
     {
-        return $this->product_category_level2 ?? '';
+        return isset($this->product_category_level2) ? $this->product_category_level2 : '';
     }
 
     public function hasProductCategoryLevel2()
@@ -3073,7 +3075,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel3()
     {
-        return $this->product_category_level3 ?? '';
+        return isset($this->product_category_level3) ? $this->product_category_level3 : '';
     }
 
     public function hasProductCategoryLevel3()
@@ -3109,7 +3111,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel4()
     {
-        return $this->product_category_level4 ?? '';
+        return isset($this->product_category_level4) ? $this->product_category_level4 : '';
     }
 
     public function hasProductCategoryLevel4()
@@ -3145,7 +3147,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel5()
     {
-        return $this->product_category_level5 ?? '';
+        return isset($this->product_category_level5) ? $this->product_category_level5 : '';
     }
 
     public function hasProductCategoryLevel5()
@@ -3181,7 +3183,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductBrand()
     {
-        return $this->product_brand ?? '';
+        return isset($this->product_brand) ? $this->product_brand : '';
     }
 
     public function hasProductBrand()
@@ -3296,7 +3298,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCountry()
     {
-        return $this->product_country ?? '';
+        return isset($this->product_country) ? $this->product_country : '';
     }
 
     public function hasProductCountry()
@@ -3333,7 +3335,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute0()
     {
-        return $this->product_custom_attribute0 ?? '';
+        return isset($this->product_custom_attribute0) ? $this->product_custom_attribute0 : '';
     }
 
     public function hasProductCustomAttribute0()
@@ -3369,7 +3371,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute1()
     {
-        return $this->product_custom_attribute1 ?? '';
+        return isset($this->product_custom_attribute1) ? $this->product_custom_attribute1 : '';
     }
 
     public function hasProductCustomAttribute1()
@@ -3405,7 +3407,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute2()
     {
-        return $this->product_custom_attribute2 ?? '';
+        return isset($this->product_custom_attribute2) ? $this->product_custom_attribute2 : '';
     }
 
     public function hasProductCustomAttribute2()
@@ -3441,7 +3443,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute3()
     {
-        return $this->product_custom_attribute3 ?? '';
+        return isset($this->product_custom_attribute3) ? $this->product_custom_attribute3 : '';
     }
 
     public function hasProductCustomAttribute3()
@@ -3477,7 +3479,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute4()
     {
-        return $this->product_custom_attribute4 ?? '';
+        return isset($this->product_custom_attribute4) ? $this->product_custom_attribute4 : '';
     }
 
     public function hasProductCustomAttribute4()
@@ -3513,7 +3515,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductFeedLabel()
     {
-        return $this->product_feed_label ?? '';
+        return isset($this->product_feed_label) ? $this->product_feed_label : '';
     }
 
     public function hasProductFeedLabel()
@@ -3549,7 +3551,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductItemId()
     {
-        return $this->product_item_id ?? '';
+        return isset($this->product_item_id) ? $this->product_item_id : '';
     }
 
     public function hasProductItemId()
@@ -3585,7 +3587,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductLanguage()
     {
-        return $this->product_language ?? '';
+        return isset($this->product_language) ? $this->product_language : '';
     }
 
     public function hasProductLanguage()
@@ -3621,7 +3623,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductMerchantId()
     {
-        return $this->product_merchant_id ?? 0;
+        return isset($this->product_merchant_id) ? $this->product_merchant_id : 0;
     }
 
     public function hasProductMerchantId()
@@ -3657,7 +3659,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductStoreId()
     {
-        return $this->product_store_id ?? '';
+        return isset($this->product_store_id) ? $this->product_store_id : '';
     }
 
     public function hasProductStoreId()
@@ -3693,7 +3695,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTitle()
     {
-        return $this->product_title ?? '';
+        return isset($this->product_title) ? $this->product_title : '';
     }
 
     public function hasProductTitle()
@@ -3729,7 +3731,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL1()
     {
-        return $this->product_type_l1 ?? '';
+        return isset($this->product_type_l1) ? $this->product_type_l1 : '';
     }
 
     public function hasProductTypeL1()
@@ -3765,7 +3767,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL2()
     {
-        return $this->product_type_l2 ?? '';
+        return isset($this->product_type_l2) ? $this->product_type_l2 : '';
     }
 
     public function hasProductTypeL2()
@@ -3801,7 +3803,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL3()
     {
-        return $this->product_type_l3 ?? '';
+        return isset($this->product_type_l3) ? $this->product_type_l3 : '';
     }
 
     public function hasProductTypeL3()
@@ -3837,7 +3839,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL4()
     {
-        return $this->product_type_l4 ?? '';
+        return isset($this->product_type_l4) ? $this->product_type_l4 : '';
     }
 
     public function hasProductTypeL4()
@@ -3873,7 +3875,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL5()
     {
-        return $this->product_type_l5 ?? '';
+        return isset($this->product_type_l5) ? $this->product_type_l5 : '';
     }
 
     public function hasProductTypeL5()
@@ -3911,7 +3913,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getQuarter()
     {
-        return $this->quarter ?? '';
+        return isset($this->quarter) ? $this->quarter : '';
     }
 
     public function hasQuarter()
@@ -3949,7 +3951,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationCity()
     {
-        return $this->travel_destination_city ?? '';
+        return isset($this->travel_destination_city) ? $this->travel_destination_city : '';
     }
 
     public function hasTravelDestinationCity()
@@ -3985,7 +3987,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationCountry()
     {
-        return $this->travel_destination_country ?? '';
+        return isset($this->travel_destination_country) ? $this->travel_destination_country : '';
     }
 
     public function hasTravelDestinationCountry()
@@ -4021,7 +4023,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationRegion()
     {
-        return $this->travel_destination_region ?? '';
+        return isset($this->travel_destination_region) ? $this->travel_destination_region : '';
     }
 
     public function hasTravelDestinationRegion()
@@ -4110,7 +4112,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSearchSubcategory()
     {
-        return $this->search_subcategory ?? '';
+        return isset($this->search_subcategory) ? $this->search_subcategory : '';
     }
 
     public function hasSearchSubcategory()
@@ -4147,7 +4149,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return $this->search_term ?? '';
+        return isset($this->search_term) ? $this->search_term : '';
     }
 
     public function hasSearchTerm()
@@ -4273,7 +4275,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getWebpage()
     {
-        return $this->webpage ?? '';
+        return isset($this->webpage) ? $this->webpage : '';
     }
 
     public function hasWebpage()
@@ -4310,7 +4312,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getWeek()
     {
-        return $this->week ?? '';
+        return isset($this->week) ? $this->week : '';
     }
 
     public function hasWeek()
@@ -4347,7 +4349,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getYear()
     {
-        return $this->year ?? 0;
+        return isset($this->year) ? $this->year : 0;
     }
 
     public function hasYear()
@@ -4385,7 +4387,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkFineConversionValue()
     {
-        return $this->sk_ad_network_fine_conversion_value ?? 0;
+        return isset($this->sk_ad_network_fine_conversion_value) ? $this->sk_ad_network_fine_conversion_value : 0;
     }
 
     public function hasSkAdNetworkFineConversionValue()
@@ -4429,7 +4431,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkRedistributedFineConversionValue()
     {
-        return $this->sk_ad_network_redistributed_fine_conversion_value ?? 0;
+        return isset($this->sk_ad_network_redistributed_fine_conversion_value) ? $this->sk_ad_network_redistributed_fine_conversion_value : 0;
     }
 
     public function hasSkAdNetworkRedistributedFineConversionValue()
@@ -4617,7 +4619,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkSourceDomain()
     {
-        return $this->sk_ad_network_source_domain ?? '';
+        return isset($this->sk_ad_network_source_domain) ? $this->sk_ad_network_source_domain : '';
     }
 
     public function hasSkAdNetworkSourceDomain()
@@ -4687,7 +4689,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkPostbackSequenceIndex()
     {
-        return $this->sk_ad_network_postback_sequence_index ?? 0;
+        return isset($this->sk_ad_network_postback_sequence_index) ? $this->sk_ad_network_postback_sequence_index : 0;
     }
 
     public function hasSkAdNetworkPostbackSequenceIndex()
@@ -4723,7 +4725,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkVersion()
     {
-        return $this->sk_ad_network_version ?? '';
+        return isset($this->sk_ad_network_version) ? $this->sk_ad_network_version : '';
     }
 
     public function hasSkAdNetworkVersion()

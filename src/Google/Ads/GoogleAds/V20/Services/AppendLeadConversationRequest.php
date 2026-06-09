@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -39,7 +41,7 @@ class AppendLeadConversationRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $conversations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setConversations($conversations);
     }
@@ -53,7 +55,7 @@ class AppendLeadConversationRequest extends \Google\Protobuf\Internal\Message
      *     @type string $customer_id
      *           Required. The Id of the customer which owns the leads onto which the
      *           conversations will be appended.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\Conversation>|\Google\Protobuf\Internal\RepeatedField $conversations
+     *     @type \Google\Ads\GoogleAds\V20\Services\Conversation[] $conversations
      *           Required. Conversations that are being appended.
      * }
      */
@@ -94,7 +96,7 @@ class AppendLeadConversationRequest extends \Google\Protobuf\Internal\Message
      * Required. Conversations that are being appended.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.Conversation conversations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\Conversation>
      */
     public function getConversations()
     {
@@ -105,7 +107,7 @@ class AppendLeadConversationRequest extends \Google\Protobuf\Internal\Message
      * Required. Conversations that are being appended.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.Conversation conversations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\Conversation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\Conversation[] $var
      * @return $this
      */
     public function setConversations($var)

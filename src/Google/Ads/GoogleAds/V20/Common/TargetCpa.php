@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An automated bid strategy that sets bids to help get as many conversions as
@@ -74,7 +76,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return $this->target_cpa_micros ?? 0;
+        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
     }
 
     public function hasTargetCpaMicros()
@@ -114,7 +116,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return $this->cpc_bid_ceiling_micros ?? 0;
+        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
     }
 
     public function hasCpcBidCeilingMicros()
@@ -154,7 +156,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidFloorMicros()
     {
-        return $this->cpc_bid_floor_micros ?? 0;
+        return isset($this->cpc_bid_floor_micros) ? $this->cpc_bid_floor_micros : 0;
     }
 
     public function hasCpcBidFloorMicros()

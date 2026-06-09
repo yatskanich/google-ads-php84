@@ -116,6 +116,3 @@ class AttributionModel
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AttributionModel::class, \Google\Ads\GoogleAds\V20\Enums\AttributionModelEnum_AttributionModel::class);
-

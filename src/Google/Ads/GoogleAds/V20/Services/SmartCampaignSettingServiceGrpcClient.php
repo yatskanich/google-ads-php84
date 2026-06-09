@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -39,7 +39,7 @@ class SmartCampaignSettingServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\GetSmartCampaignStatusRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\GetSmartCampaignStatusResponse>
      */
     public function GetSmartCampaignStatus(\Google\Ads\GoogleAds\V20\Services\GetSmartCampaignStatusRequest $argument,
       $metadata = [], $options = []) {
@@ -54,7 +54,7 @@ class SmartCampaignSettingServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\MutateSmartCampaignSettingsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\MutateSmartCampaignSettingsResponse>
      */
     public function MutateSmartCampaignSettings(\Google\Ads\GoogleAds\V20\Services\MutateSmartCampaignSettingsRequest $argument,
       $metadata = [], $options = []) {

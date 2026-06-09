@@ -82,6 +82,3 @@ class AdSharingError
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdSharingError::class, \Google\Ads\GoogleAds\V20\Errors\AdSharingErrorEnum_AdSharingError::class);
-

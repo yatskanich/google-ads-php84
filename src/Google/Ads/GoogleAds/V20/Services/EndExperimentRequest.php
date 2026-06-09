@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -37,7 +39,7 @@ class EndExperimentRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $experiment): self
     {
-        return new self()
+        return (new self())
             ->setExperiment($experiment);
     }
 

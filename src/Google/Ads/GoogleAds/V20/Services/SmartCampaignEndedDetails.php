@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details related to Smart campaigns that have ended.
@@ -49,7 +51,7 @@ class SmartCampaignEndedDetails extends \Google\Protobuf\Internal\Message
      */
     public function getEndDateTime()
     {
-        return $this->end_date_time ?? '';
+        return isset($this->end_date_time) ? $this->end_date_time : '';
     }
 
     public function hasEndDateTime()

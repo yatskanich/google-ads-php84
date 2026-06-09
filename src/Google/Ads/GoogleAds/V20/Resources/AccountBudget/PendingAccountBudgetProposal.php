@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AccountBudget;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A pending proposal associated with the enclosing account-level budget,
@@ -116,7 +118,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudgetProposal()
     {
-        return $this->account_budget_proposal ?? '';
+        return isset($this->account_budget_proposal) ? $this->account_budget_proposal : '';
     }
 
     public function hasAccountBudgetProposal()
@@ -182,7 +184,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -218,7 +220,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getStartDateTime()
     {
-        return $this->start_date_time ?? '';
+        return isset($this->start_date_time) ? $this->start_date_time : '';
     }
 
     public function hasStartDateTime()
@@ -255,7 +257,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return $this->purchase_order_number ?? '';
+        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -292,7 +294,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getNotes()
     {
-        return $this->notes ?? '';
+        return isset($this->notes) ? $this->notes : '';
     }
 
     public function hasNotes()
@@ -329,7 +331,7 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getCreationDateTime()
     {
-        return $this->creation_date_time ?? '';
+        return isset($this->creation_date_time) ? $this->creation_date_time : '';
     }
 
     public function hasCreationDateTime()
@@ -503,7 +505,4 @@ class PendingAccountBudgetProposal extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PendingAccountBudgetProposal::class, \Google\Ads\GoogleAds\V20\Resources\AccountBudget_PendingAccountBudgetProposal::class);
 

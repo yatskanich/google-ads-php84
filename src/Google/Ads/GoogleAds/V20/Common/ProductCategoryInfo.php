@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Category of a product offer.
@@ -57,7 +59,7 @@ class ProductCategoryInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return $this->category_id ?? 0;
+        return isset($this->category_id) ? $this->category_id : 0;
     }
 
     public function hasCategoryId()

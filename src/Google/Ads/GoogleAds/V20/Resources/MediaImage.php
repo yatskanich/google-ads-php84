@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Encapsulates an Image.
@@ -59,7 +61,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return $this->data ?? '';
+        return isset($this->data) ? $this->data : '';
     }
 
     public function hasData()
@@ -95,7 +97,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getFullSizeImageUrl()
     {
-        return $this->full_size_image_url ?? '';
+        return isset($this->full_size_image_url) ? $this->full_size_image_url : '';
     }
 
     public function hasFullSizeImageUrl()
@@ -131,7 +133,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getPreviewSizeImageUrl()
     {
-        return $this->preview_size_image_url ?? '';
+        return isset($this->preview_size_image_url) ? $this->preview_size_image_url : '';
     }
 
     public function hasPreviewSizeImageUrl()

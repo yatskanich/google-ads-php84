@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\ConversionAction;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Settings related to a third party app analytics conversion action.
@@ -51,7 +53,7 @@ class ThirdPartyAppAnalyticsSettings extends \Google\Protobuf\Internal\Message
      */
     public function getEventName()
     {
-        return $this->event_name ?? '';
+        return isset($this->event_name) ? $this->event_name : '';
     }
 
     public function hasEventName()
@@ -106,7 +108,4 @@ class ThirdPartyAppAnalyticsSettings extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ThirdPartyAppAnalyticsSettings::class, \Google\Ads\GoogleAds\V20\Resources\ConversionAction_ThirdPartyAppAnalyticsSettings::class);
 

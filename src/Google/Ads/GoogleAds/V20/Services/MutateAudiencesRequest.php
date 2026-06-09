@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -59,7 +61,7 @@ class MutateAudiencesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -72,7 +74,7 @@ class MutateAudiencesRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $customer_id
      *           Required. The ID of the customer whose audiences are being modified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\AudienceOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\AudienceOperation[] $operations
      *           Required. The list of operations to perform on individual audiences.
      *     @type bool $partial_failure
      *           If true, successful operations will be carried out and invalid operations
@@ -121,7 +123,7 @@ class MutateAudiencesRequest extends \Google\Protobuf\Internal\Message
      * Required. The list of operations to perform on individual audiences.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.AudienceOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\AudienceOperation>
      */
     public function getOperations()
     {
@@ -132,7 +134,7 @@ class MutateAudiencesRequest extends \Google\Protobuf\Internal\Message
      * Required. The list of operations to perform on individual audiences.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.AudienceOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\AudienceOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\AudienceOperation[] $var
      * @return $this
      */
     public function setOperations($var)

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A proto holding information specific to a local services business
@@ -67,7 +69,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getRegistrationType()
     {
-        return $this->registration_type ?? 0;
+        return isset($this->registration_type) ? $this->registration_type : 0;
     }
 
     public function hasRegistrationType()
@@ -104,7 +106,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getCheckId()
     {
-        return $this->check_id ?? '';
+        return isset($this->check_id) ? $this->check_id : '';
     }
 
     public function hasCheckId()
@@ -141,7 +143,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getRejectionReason()
     {
-        return $this->rejection_reason ?? 0;
+        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
     }
 
     public function hasRejectionReason()

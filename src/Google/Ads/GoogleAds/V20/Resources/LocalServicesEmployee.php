@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A local services employee resource.
@@ -147,13 +149,13 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      *           Output only. Employee status, such as DELETED or ENABLED.
      *     @type int $type
      *           Output only. Employee type.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\UniversityDegree>|\Google\Protobuf\Internal\RepeatedField $university_degrees
+     *     @type \Google\Ads\GoogleAds\V20\Resources\UniversityDegree[] $university_degrees
      *           Output only. A list of degrees this employee has obtained, and wants to
      *           feature.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Residency>|\Google\Protobuf\Internal\RepeatedField $residencies
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Residency[] $residencies
      *           Output only. The institutions where the employee has completed their
      *           residency.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Fellowship>|\Google\Protobuf\Internal\RepeatedField $fellowships
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Fellowship[] $fellowships
      *           Output only. The institutions where the employee has completed their
      *           fellowship.
      *     @type string $job_title
@@ -161,10 +163,10 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      *           verticals.
      *     @type int $year_started_practicing
      *           Output only. The year that this employee started practicing in this field.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $languages_spoken
+     *     @type string[] $languages_spoken
      *           Output only. Languages that the employee speaks, represented as language
      *           tags from https://developers.google.com/admin-sdk/directory/v1/languages
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $category_ids
+     *     @type string[] $category_ids
      *           Output only. Category of the employee. A list of Local Services category
      *           IDs can be found at
      *           https://developers.google.com/google-ads/api/data/codes-formats#local_services_ids.
@@ -223,7 +225,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -338,7 +340,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * feature.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.UniversityDegree university_degrees = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\UniversityDegree>
      */
     public function getUniversityDegrees()
     {
@@ -350,7 +352,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * feature.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.UniversityDegree university_degrees = 6 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\UniversityDegree>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\UniversityDegree[] $var
      * @return $this
      */
     public function setUniversityDegrees($var)
@@ -366,7 +368,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * residency.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Residency residencies = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Residency>
      */
     public function getResidencies()
     {
@@ -378,7 +380,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * residency.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Residency residencies = 7 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Residency>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Residency[] $var
      * @return $this
      */
     public function setResidencies($var)
@@ -394,7 +396,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * fellowship.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Fellowship fellowships = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Fellowship>
      */
     public function getFellowships()
     {
@@ -406,7 +408,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * fellowship.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Fellowship fellowships = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Fellowship>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Fellowship[] $var
      * @return $this
      */
     public function setFellowships($var)
@@ -426,7 +428,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getJobTitle()
     {
-        return $this->job_title ?? '';
+        return isset($this->job_title) ? $this->job_title : '';
     }
 
     public function hasJobTitle()
@@ -463,7 +465,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getYearStartedPracticing()
     {
-        return $this->year_started_practicing ?? 0;
+        return isset($this->year_started_practicing) ? $this->year_started_practicing : 0;
     }
 
     public function hasYearStartedPracticing()
@@ -496,7 +498,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * tags from https://developers.google.com/admin-sdk/directory/v1/languages
      *
      * Generated from protobuf field <code>repeated string languages_spoken = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getLanguagesSpoken()
     {
@@ -508,7 +510,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * tags from https://developers.google.com/admin-sdk/directory/v1/languages
      *
      * Generated from protobuf field <code>repeated string languages_spoken = 11 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setLanguagesSpoken($var)
@@ -525,7 +527,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * https://developers.google.com/google-ads/api/data/codes-formats#local_services_ids.
      *
      * Generated from protobuf field <code>repeated string category_ids = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getCategoryIds()
     {
@@ -538,7 +540,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      * https://developers.google.com/google-ads/api/data/codes-formats#local_services_ids.
      *
      * Generated from protobuf field <code>repeated string category_ids = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setCategoryIds($var)
@@ -557,7 +559,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getNationalProviderIdNumber()
     {
-        return $this->national_provider_id_number ?? '';
+        return isset($this->national_provider_id_number) ? $this->national_provider_id_number : '';
     }
 
     public function hasNationalProviderIdNumber()
@@ -593,7 +595,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getEmailAddress()
     {
-        return $this->email_address ?? '';
+        return isset($this->email_address) ? $this->email_address : '';
     }
 
     public function hasEmailAddress()
@@ -629,7 +631,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getFirstName()
     {
-        return $this->first_name ?? '';
+        return isset($this->first_name) ? $this->first_name : '';
     }
 
     public function hasFirstName()
@@ -665,7 +667,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getMiddleName()
     {
-        return $this->middle_name ?? '';
+        return isset($this->middle_name) ? $this->middle_name : '';
     }
 
     public function hasMiddleName()
@@ -701,7 +703,7 @@ class LocalServicesEmployee extends \Google\Protobuf\Internal\Message
      */
     public function getLastName()
     {
-        return $this->last_name ?? '';
+        return isset($this->last_name) ? $this->last_name : '';
     }
 
     public function hasLastName()

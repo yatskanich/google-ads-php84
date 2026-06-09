@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A proto holding information specific to a local services business
@@ -44,7 +46,7 @@ class BusinessRegistrationNumber extends \Google\Protobuf\Internal\Message
      */
     public function getNumber()
     {
-        return $this->number ?? '';
+        return isset($this->number) ? $this->number : '';
     }
 
     public function hasNumber()

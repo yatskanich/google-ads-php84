@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An ad group.
@@ -87,7 +89,10 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     protected $campaign = null;
     /**
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      *
      * Generated from protobuf field <code>optional int64 cpc_bid_micros = 39;</code>
      */
@@ -130,11 +135,17 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     protected $target_cpm_micros = null;
     /**
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     * For any other bidding strategies, this value is ignored.
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      *
      * Generated from protobuf field <code>optional double target_roas = 44;</code>
      */
@@ -178,7 +189,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     protected $exclude_demographic_expansion = false;
     /**
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      *
@@ -315,13 +326,16 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      *           This field is read-only.
      *     @type string $tracking_url_template
      *           The URL template for constructing a tracking URL.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $url_custom_parameters
+     *     @type \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $url_custom_parameters
      *           The list of mappings used to substitute custom parameter tags in a
      *           `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *     @type string $campaign
      *           Immutable. The campaign to which the ad group belongs.
      *     @type int|string $cpc_bid_micros
-     *           The maximum CPC (cost-per-click) bid.
+     *           The maximum CPC (cost-per-click) bid. This field is used when the
+     *           ad group's effective bidding strategy is Manual CPC. This field is not
+     *           applicable and will be ignored if the ad group's campaign is using a
+     *           portfolio bidding strategy.
      *     @type int|string $effective_cpc_bid_micros
      *           Output only. Value will be same as that of the CPC (cost-per-click) bid
      *           value when the bidding strategy is one of manual cpc, enhanced cpc, page
@@ -340,11 +354,17 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      *           Average amount in micros that the advertiser is willing to pay for every
      *           thousand times the ad is shown.
      *     @type float $target_roas
-     *           The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     *           bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     *           target_roas field set), then this field overrides the target ROAS specified
-     *           in the campaign's bidding strategy.
-     *           Otherwise, this value is ignored.
+     *           The target ROAS (return-on-ad-spend) for this ad group.
+     *           This field lets you override the target ROAS specified in the
+     *           campaign's bidding strategy, but only if the campaign is using a
+     *           standard (not portfolio) `TargetRoas` strategy or a standard
+     *           `MaximizeConversionValue` strategy with its `target_roas` field set.
+     *           If the campaign is using a portfolio bidding strategy, this field
+     *           cannot be set and attempting to do so will result in an error.
+     *           For any other bidding strategies, this value is ignored.
+     *           To see the actual target ROAS being used by the ad group, considering
+     *           potential overrides, query the `effective_target_roas` and
+     *           `effective_target_roas_source` fields.
      *     @type int|string $percent_cpc_bid_micros
      *           The percent cpc bid amount, expressed as a fraction of the advertised price
      *           for some good or service. The valid range for the fraction is [0,1) and the
@@ -364,7 +384,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      *           When optimized_targeting_enabled is false, this field is ignored. Default
      *           is false.
      *     @type int $display_custom_bid_dimension
-     *           Allows advertisers to specify a targeting dimension on which to place
+     *           Lets advertisers specify a targeting dimension on which to place
      *           absolute bids. This is only applicable for campaigns that target only the
      *           display network and not search.
      *     @type string $final_url_suffix
@@ -385,13 +405,13 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      *     @type int $effective_target_roas_source
      *           Output only. Source of the effective target ROAS.
      *           This field is read-only.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $labels
+     *     @type string[] $labels
      *           Output only. The resource names of labels attached to this ad group.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $excluded_parent_asset_field_types
+     *     @type int[] $excluded_parent_asset_field_types
      *           The asset field types that should be excluded from this ad group. Asset
      *           links with these field types will not be inherited by this ad group from
      *           the upper levels.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $excluded_parent_asset_set_types
+     *     @type int[] $excluded_parent_asset_set_types
      *           The asset set types that should be excluded from this ad group. Asset set
      *           links with these types will not be inherited by this ad group from the
      *           upper levels.
@@ -405,7 +425,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      *     @type int $primary_status
      *           Output only. Provides aggregated view into why an ad group is not serving
      *           or not serving optimally.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $primary_status_reasons
+     *     @type int[] $primary_status_reasons
      *           Output only. Provides reasons for why an ad group is not serving or not
      *           serving optimally.
      *     @type \Google\Ads\GoogleAds\V20\Resources\AdGroup\DemandGenAdGroupSettings $demand_gen_ad_group_settings
@@ -455,7 +475,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -496,7 +516,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -620,7 +640,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getBaseAdGroup()
     {
-        return $this->base_ad_group ?? '';
+        return isset($this->base_ad_group) ? $this->base_ad_group : '';
     }
 
     public function hasBaseAdGroup()
@@ -661,7 +681,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return $this->tracking_url_template ?? '';
+        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -694,7 +714,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\CustomParameter>
      */
     public function getUrlCustomParameters()
     {
@@ -706,7 +726,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 6;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $var
      * @return $this
      */
     public function setUrlCustomParameters($var)
@@ -725,7 +745,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -754,14 +774,17 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      *
      * Generated from protobuf field <code>optional int64 cpc_bid_micros = 39;</code>
      * @return int|string
      */
     public function getCpcBidMicros()
     {
-        return $this->cpc_bid_micros ?? 0;
+        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
     }
 
     public function hasCpcBidMicros()
@@ -775,7 +798,10 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The maximum CPC (cost-per-click) bid.
+     * The maximum CPC (cost-per-click) bid. This field is used when the
+     * ad group's effective bidding strategy is Manual CPC. This field is not
+     * applicable and will be ignored if the ad group's campaign is using a
+     * portfolio bidding strategy.
      *
      * Generated from protobuf field <code>optional int64 cpc_bid_micros = 39;</code>
      * @param int|string $var
@@ -799,7 +825,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCpcBidMicros()
     {
-        return $this->effective_cpc_bid_micros ?? 0;
+        return isset($this->effective_cpc_bid_micros) ? $this->effective_cpc_bid_micros : 0;
     }
 
     public function hasEffectiveCpcBidMicros()
@@ -837,7 +863,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCpmBidMicros()
     {
-        return $this->cpm_bid_micros ?? 0;
+        return isset($this->cpm_bid_micros) ? $this->cpm_bid_micros : 0;
     }
 
     public function hasCpmBidMicros()
@@ -877,7 +903,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return $this->target_cpa_micros ?? 0;
+        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
     }
 
     public function hasTargetCpaMicros()
@@ -917,7 +943,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCpvBidMicros()
     {
-        return $this->cpv_bid_micros ?? 0;
+        return isset($this->cpv_bid_micros) ? $this->cpv_bid_micros : 0;
     }
 
     public function hasCpvBidMicros()
@@ -954,7 +980,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpmMicros()
     {
-        return $this->target_cpm_micros ?? 0;
+        return isset($this->target_cpm_micros) ? $this->target_cpm_micros : 0;
     }
 
     public function hasTargetCpmMicros()
@@ -984,18 +1010,24 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     * For any other bidding strategies, this value is ignored.
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      *
      * Generated from protobuf field <code>optional double target_roas = 44;</code>
      * @return float
      */
     public function getTargetRoas()
     {
-        return $this->target_roas ?? 0.0;
+        return isset($this->target_roas) ? $this->target_roas : 0.0;
     }
 
     public function hasTargetRoas()
@@ -1009,11 +1041,17 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The target ROAS (return-on-ad-spend) override. If the ad group's campaign
-     * bidding strategy is TargetRoas or MaximizeConversionValue (with its
-     * target_roas field set), then this field overrides the target ROAS specified
-     * in the campaign's bidding strategy.
-     * Otherwise, this value is ignored.
+     * The target ROAS (return-on-ad-spend) for this ad group.
+     * This field lets you override the target ROAS specified in the
+     * campaign's bidding strategy, but only if the campaign is using a
+     * standard (not portfolio) `TargetRoas` strategy or a standard
+     * `MaximizeConversionValue` strategy with its `target_roas` field set.
+     * If the campaign is using a portfolio bidding strategy, this field
+     * cannot be set and attempting to do so will result in an error.
+     * For any other bidding strategies, this value is ignored.
+     * To see the actual target ROAS being used by the ad group, considering
+     * potential overrides, query the `effective_target_roas` and
+     * `effective_target_roas_source` fields.
      *
      * Generated from protobuf field <code>optional double target_roas = 44;</code>
      * @param float $var
@@ -1037,7 +1075,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getPercentCpcBidMicros()
     {
-        return $this->percent_cpc_bid_micros ?? 0;
+        return isset($this->percent_cpc_bid_micros) ? $this->percent_cpc_bid_micros : 0;
     }
 
     public function hasPercentCpcBidMicros()
@@ -1076,7 +1114,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getFixedCpmMicros()
     {
-        return $this->fixed_cpm_micros ?? 0;
+        return isset($this->fixed_cpm_micros) ? $this->fixed_cpm_micros : 0;
     }
 
     public function hasFixedCpmMicros()
@@ -1114,7 +1152,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpvMicros()
     {
-        return $this->target_cpv_micros ?? 0;
+        return isset($this->target_cpv_micros) ? $this->target_cpv_micros : 0;
     }
 
     public function hasTargetCpvMicros()
@@ -1204,7 +1242,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      *
@@ -1217,7 +1255,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Allows advertisers to specify a targeting dimension on which to place
+     * Lets advertisers specify a targeting dimension on which to place
      * absolute bids. This is only applicable for campaigns that target only the
      * display network and not search.
      *
@@ -1241,7 +1279,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return $this->final_url_suffix ?? '';
+        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
     }
 
     public function hasFinalUrlSuffix()
@@ -1350,7 +1388,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveTargetCpaMicros()
     {
-        return $this->effective_target_cpa_micros ?? 0;
+        return isset($this->effective_target_cpa_micros) ? $this->effective_target_cpa_micros : 0;
     }
 
     public function hasEffectiveTargetCpaMicros()
@@ -1416,7 +1454,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveTargetRoas()
     {
-        return $this->effective_target_roas ?? 0.0;
+        return isset($this->effective_target_roas) ? $this->effective_target_roas : 0.0;
     }
 
     public function hasEffectiveTargetRoas()
@@ -1477,7 +1515,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * Output only. The resource names of labels attached to this ad group.
      *
      * Generated from protobuf field <code>repeated string labels = 49 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getLabels()
     {
@@ -1488,7 +1526,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * Output only. The resource names of labels attached to this ad group.
      *
      * Generated from protobuf field <code>repeated string labels = 49 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setLabels($var)
@@ -1505,7 +1543,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * the upper levels.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 54;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getExcludedParentAssetFieldTypes()
     {
@@ -1518,7 +1556,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * the upper levels.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 54;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setExcludedParentAssetFieldTypes($var)
@@ -1542,7 +1580,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * Only LOCATION_SYNC is currently supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetSetTypeEnum.AssetSetType excluded_parent_asset_set_types = 58;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getExcludedParentAssetSetTypes()
     {
@@ -1562,7 +1600,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * Only LOCATION_SYNC is currently supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetSetTypeEnum.AssetSetType excluded_parent_asset_set_types = 58;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setExcludedParentAssetSetTypes($var)
@@ -1606,7 +1644,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * serving optimally.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason primary_status_reasons = 63 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getPrimaryStatusReasons()
     {
@@ -1618,7 +1656,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      * serving optimally.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdGroupPrimaryStatusReasonEnum.AdGroupPrimaryStatusReason primary_status_reasons = 63 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setPrimaryStatusReasons($var)

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Location criteria associated with a click.
@@ -75,7 +77,7 @@ class ClickLocation extends \Google\Protobuf\Internal\Message
      */
     public function getCity()
     {
-        return $this->city ?? '';
+        return isset($this->city) ? $this->city : '';
     }
 
     public function hasCity()
@@ -111,7 +113,7 @@ class ClickLocation extends \Google\Protobuf\Internal\Message
      */
     public function getCountry()
     {
-        return $this->country ?? '';
+        return isset($this->country) ? $this->country : '';
     }
 
     public function hasCountry()
@@ -147,7 +149,7 @@ class ClickLocation extends \Google\Protobuf\Internal\Message
      */
     public function getMetro()
     {
-        return $this->metro ?? '';
+        return isset($this->metro) ? $this->metro : '';
     }
 
     public function hasMetro()
@@ -183,7 +185,7 @@ class ClickLocation extends \Google\Protobuf\Internal\Message
      */
     public function getMostSpecific()
     {
-        return $this->most_specific ?? '';
+        return isset($this->most_specific) ? $this->most_specific : '';
     }
 
     public function hasMostSpecific()
@@ -219,7 +221,7 @@ class ClickLocation extends \Google\Protobuf\Internal\Message
      */
     public function getRegion()
     {
-        return $this->region ?? '';
+        return isset($this->region) ? $this->region : '';
     }
 
     public function hasRegion()

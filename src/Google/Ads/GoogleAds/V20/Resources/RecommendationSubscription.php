@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Recommendation Subscription resource
@@ -141,7 +143,7 @@ class RecommendationSubscription extends \Google\Protobuf\Internal\Message
      */
     public function getCreateDateTime()
     {
-        return $this->create_date_time ?? '';
+        return isset($this->create_date_time) ? $this->create_date_time : '';
     }
 
     public function hasCreateDateTime()
@@ -181,7 +183,7 @@ class RecommendationSubscription extends \Google\Protobuf\Internal\Message
      */
     public function getModifyDateTime()
     {
-        return $this->modify_date_time ?? '';
+        return isset($this->modify_date_time) ? $this->modify_date_time : '';
     }
 
     public function hasModifyDateTime()
@@ -219,7 +221,7 @@ class RecommendationSubscription extends \Google\Protobuf\Internal\Message
      */
     public function getStatus()
     {
-        return $this->status ?? 0;
+        return isset($this->status) ? $this->status : 0;
     }
 
     public function hasStatus()

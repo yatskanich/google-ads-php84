@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Estimates for criterion bids at various positions.
@@ -86,7 +88,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getFirstPageCpcMicros()
     {
-        return $this->first_page_cpc_micros ?? 0;
+        return isset($this->first_page_cpc_micros) ? $this->first_page_cpc_micros : 0;
     }
 
     public function hasFirstPageCpcMicros()
@@ -124,7 +126,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getFirstPositionCpcMicros()
     {
-        return $this->first_position_cpc_micros ?? 0;
+        return isset($this->first_position_cpc_micros) ? $this->first_position_cpc_micros : 0;
     }
 
     public function hasFirstPositionCpcMicros()
@@ -162,7 +164,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getTopOfPageCpcMicros()
     {
-        return $this->top_of_page_cpc_micros ?? 0;
+        return isset($this->top_of_page_cpc_micros) ? $this->top_of_page_cpc_micros : 0;
     }
 
     public function hasTopOfPageCpcMicros()
@@ -200,7 +202,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedAddClicksAtFirstPositionCpc()
     {
-        return $this->estimated_add_clicks_at_first_position_cpc ?? 0;
+        return isset($this->estimated_add_clicks_at_first_position_cpc) ? $this->estimated_add_clicks_at_first_position_cpc : 0;
     }
 
     public function hasEstimatedAddClicksAtFirstPositionCpc()
@@ -238,7 +240,7 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
      */
     public function getEstimatedAddCostAtFirstPositionCpc()
     {
-        return $this->estimated_add_cost_at_first_position_cpc ?? 0;
+        return isset($this->estimated_add_cost_at_first_position_cpc) ? $this->estimated_add_cost_at_first_position_cpc : 0;
     }
 
     public function hasEstimatedAddCostAtFirstPositionCpc()
@@ -268,7 +270,4 @@ class PositionEstimates extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PositionEstimates::class, \Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion_PositionEstimates::class);
 

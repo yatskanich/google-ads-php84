@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A YouTube asset.
@@ -54,7 +56,7 @@ class YoutubeVideoAsset extends \Google\Protobuf\Internal\Message
      */
     public function getYoutubeVideoId()
     {
-        return $this->youtube_video_id ?? '';
+        return isset($this->youtube_video_id) ? $this->youtube_video_id : '';
     }
 
     public function hasYoutubeVideoId()

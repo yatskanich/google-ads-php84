@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Manual click-based bidding where user pays per click.
@@ -43,7 +45,7 @@ class ManualCpc extends \Google\Protobuf\Internal\Message
      */
     public function getEnhancedCpcEnabled()
     {
-        return $this->enhanced_cpc_enabled ?? false;
+        return isset($this->enhanced_cpc_enabled) ? $this->enhanced_cpc_enabled : false;
     }
 
     public function hasEnhancedCpcEnabled()

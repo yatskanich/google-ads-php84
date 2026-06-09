@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A bidding strategy.
@@ -222,7 +224,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -261,7 +263,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -402,7 +404,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCurrencyCode()
     {
-        return $this->effective_currency_code ?? '';
+        return isset($this->effective_currency_code) ? $this->effective_currency_code : '';
     }
 
     public function hasEffectiveCurrencyCode()
@@ -479,7 +481,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignCount()
     {
-        return $this->campaign_count ?? 0;
+        return isset($this->campaign_count) ? $this->campaign_count : 0;
     }
 
     public function hasCampaignCount()
@@ -518,7 +520,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getNonRemovedCampaignCount()
     {
-        return $this->non_removed_campaign_count ?? 0;
+        return isset($this->non_removed_campaign_count) ? $this->non_removed_campaign_count : 0;
     }
 
     public function hasNonRemovedCampaignCount()

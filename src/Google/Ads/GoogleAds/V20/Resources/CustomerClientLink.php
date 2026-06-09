@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents customer client link relationship.
@@ -113,7 +115,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getClientCustomer()
     {
-        return $this->client_customer ?? '';
+        return isset($this->client_customer) ? $this->client_customer : '';
     }
 
     public function hasClientCustomer()
@@ -149,7 +151,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getManagerLinkId()
     {
-        return $this->manager_link_id ?? 0;
+        return isset($this->manager_link_id) ? $this->manager_link_id : 0;
     }
 
     public function hasManagerLinkId()
@@ -213,7 +215,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getHidden()
     {
-        return $this->hidden ?? false;
+        return isset($this->hidden) ? $this->hidden : false;
     }
 
     public function hasHidden()

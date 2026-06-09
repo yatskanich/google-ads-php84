@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A link between the given customer and a client customer. CustomerClients only
@@ -133,7 +135,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      *           only.
      *     @type int|string $id
      *           Output only. The ID of the client customer. Read only.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $applied_labels
+     *     @type string[] $applied_labels
      *           Output only. The resource names of the labels owned by the requesting
      *           customer that are applied to the client customer. Label resource names have
      *           the form:
@@ -186,7 +188,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getClientCustomer()
     {
-        return $this->client_customer ?? '';
+        return isset($this->client_customer) ? $this->client_customer : '';
     }
 
     public function hasClientCustomer()
@@ -225,7 +227,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getHidden()
     {
-        return $this->hidden ?? false;
+        return isset($this->hidden) ? $this->hidden : false;
     }
 
     public function hasHidden()
@@ -264,7 +266,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getLevel()
     {
-        return $this->level ?? 0;
+        return isset($this->level) ? $this->level : 0;
     }
 
     public function hasLevel()
@@ -302,7 +304,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getTimeZone()
     {
-        return $this->time_zone ?? '';
+        return isset($this->time_zone) ? $this->time_zone : '';
     }
 
     public function hasTimeZone()
@@ -339,7 +341,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getTestAccount()
     {
-        return $this->test_account ?? false;
+        return isset($this->test_account) ? $this->test_account : false;
     }
 
     public function hasTestAccount()
@@ -375,7 +377,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getManager()
     {
-        return $this->manager ?? false;
+        return isset($this->manager) ? $this->manager : false;
     }
 
     public function hasManager()
@@ -411,7 +413,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getDescriptiveName()
     {
-        return $this->descriptive_name ?? '';
+        return isset($this->descriptive_name) ? $this->descriptive_name : '';
     }
 
     public function hasDescriptiveName()
@@ -448,7 +450,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -485,7 +487,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -520,7 +522,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      * `customers/{customer_id}/labels/{label_id}`
      *
      * Generated from protobuf field <code>repeated string applied_labels = 21 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getAppliedLabels()
     {
@@ -534,7 +536,7 @@ class CustomerClient extends \Google\Protobuf\Internal\Message
      * `customers/{customer_id}/labels/{label_id}`
      *
      * Generated from protobuf field <code>repeated string applied_labels = 21 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setAppliedLabels($var)

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The identifiers of a Third Party App Analytics Link.
@@ -94,7 +96,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppAnalyticsProviderId()
     {
-        return $this->app_analytics_provider_id ?? 0;
+        return isset($this->app_analytics_provider_id) ? $this->app_analytics_provider_id : 0;
     }
 
     public function hasAppAnalyticsProviderId()
@@ -143,7 +145,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppId()
     {
-        return $this->app_id ?? '';
+        return isset($this->app_id) ? $this->app_id : '';
     }
 
     public function hasAppId()

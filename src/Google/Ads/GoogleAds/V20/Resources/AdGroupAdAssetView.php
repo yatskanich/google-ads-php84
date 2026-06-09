@@ -4,11 +4,19 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A link between an AdGroupAd and an Asset. AdGroupAdAssetView supports AppAds,
- * Demand Gen camapaigns, and Responsive Search Ads.
+ * Represents a link between an AdGroupAd and an Asset.
+ * This view provides insights into the performance of assets within specific
+ *  ads.
+ * AdGroupAdAssetView supports the following ad types:
+ * * App Ads
+ * * Demand Gen campaigns
+ * * Responsive Search Ads
+ * It does not support Responsive Display Ads.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.AdGroupAdAssetView</code>
  */
@@ -156,7 +164,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return $this->ad_group_ad ?? '';
+        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
     }
 
     public function hasAdGroupAd()
@@ -192,7 +200,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return $this->asset ?? '';
+        return isset($this->asset) ? $this->asset : '';
     }
 
     public function hasAsset()
@@ -257,7 +265,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getEnabled()
     {
-        return $this->enabled ?? false;
+        return isset($this->enabled) ? $this->enabled : false;
     }
 
     public function hasEnabled()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A MediaBundle asset.
@@ -52,7 +54,7 @@ class MediaBundleAsset extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return $this->data ?? '';
+        return isset($this->data) ? $this->data : '';
     }
 
     public function hasData()

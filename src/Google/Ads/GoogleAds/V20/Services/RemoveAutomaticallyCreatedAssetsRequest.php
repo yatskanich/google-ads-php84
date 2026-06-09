@@ -4,11 +4,13 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
- * [AdGroupAdService.RemoveAutomaticallyCreatedAssetsRequest][].
+ * [AdGroupAdService.RemoveAutomaticallyCreatedAssets][google.ads.googleads.v20.services.AdGroupAdService.RemoveAutomaticallyCreatedAssets].
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.RemoveAutomaticallyCreatedAssetsRequest</code>
  */
@@ -39,7 +41,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      */
     public static function build(string $adGroupAd, array $assetsWithFieldType): self
     {
-        return new self()
+        return (new self())
             ->setAdGroupAd($adGroupAd)
             ->setAssetsWithFieldType($assetsWithFieldType);
     }
@@ -53,7 +55,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      *     @type string $ad_group_ad
      *           Required. The resource name of the AdGroupAd from which to remove
      *           automatically created assets.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\AssetsWithFieldType>|\Google\Protobuf\Internal\RepeatedField $assets_with_field_type
+     *     @type \Google\Ads\GoogleAds\V20\Services\AssetsWithFieldType[] $assets_with_field_type
      *           Required. List of assets with field type to be removed from the AdGroupAd.
      * }
      */
@@ -94,7 +96,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      * Required. List of assets with field type to be removed from the AdGroupAd.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.AssetsWithFieldType assets_with_field_type = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\AssetsWithFieldType>
      */
     public function getAssetsWithFieldType()
     {
@@ -105,7 +107,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      * Required. List of assets with field type to be removed from the AdGroupAd.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.AssetsWithFieldType assets_with_field_type = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\AssetsWithFieldType>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\AssetsWithFieldType[] $var
      * @return $this
      */
     public function setAssetsWithFieldType($var)

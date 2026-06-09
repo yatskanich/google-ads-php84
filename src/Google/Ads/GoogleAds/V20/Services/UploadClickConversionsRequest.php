@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -27,31 +29,32 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      */
     private $conversions;
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     protected $partial_failure = false;
     /**
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      *
      * Generated from protobuf field <code>bool validate_only = 4;</code>
      */
     protected $validate_only = false;
     /**
-     * If true, the API will perform all upload checks and return errors if
-     * any are found. If false, it will perform only basic input validation,
+     * If `true`, the API will perform all upload checks and return errors if
+     * any are found. If `false`, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -80,13 +83,14 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     /**
      * @param string                                               $customerId     Required. The ID of the customer performing the upload.
      * @param \Google\Ads\GoogleAds\V20\Services\ClickConversion[] $conversions    Required. The conversions that are being uploaded.
-     * @param bool                                                 $partialFailure Required. If true, successful operations will be carried out and invalid
-     *                                                                             operations will return errors. If false, all operations will be carried
+     * @param bool                                                 $partialFailure Required. If `true`, successful operations will be carried out and invalid
+     *                                                                             operations will return errors. If `false`, all operations will be carried
      *                                                                             out in one transaction if and only if they are all valid.
-     *                                                                             This should always be set to true.
+     *                                                                             This should always be set to `true`.
+     *
      *                                                                             See
-     *                                                                             https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     *                                                                             for more information about partial failure.
+     *                                                                             [Best practices for partial
+     *                                                                             failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * @return \Google\Ads\GoogleAds\V20\Services\UploadClickConversionsRequest
      *
@@ -94,7 +98,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $conversions, bool $partialFailure): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -108,26 +112,27 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      *
      *     @type string $customer_id
      *           Required. The ID of the customer performing the upload.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\ClickConversion>|\Google\Protobuf\Internal\RepeatedField $conversions
+     *     @type \Google\Ads\GoogleAds\V20\Services\ClickConversion[] $conversions
      *           Required. The conversions that are being uploaded.
      *     @type bool $partial_failure
-     *           Required. If true, successful operations will be carried out and invalid
-     *           operations will return errors. If false, all operations will be carried
+     *           Required. If `true`, successful operations will be carried out and invalid
+     *           operations will return errors. If `false`, all operations will be carried
      *           out in one transaction if and only if they are all valid.
-     *           This should always be set to true.
+     *           This should always be set to `true`.
      *           See
-     *           https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     *           for more information about partial failure.
+     *           [Best practices for partial
+     *           failures](/google-ads/api/docs/best-practices/partial-failures).
      *     @type bool $validate_only
-     *           If true, the request is validated but not executed. Only errors are
+     *           If `true`, the request is validated but not executed. Only errors are
      *           returned, not results.
      *     @type bool $debug_enabled
-     *           If true, the API will perform all upload checks and return errors if
-     *           any are found. If false, it will perform only basic input validation,
+     *           If `true`, the API will perform all upload checks and return errors if
+     *           any are found. If `false`, it will perform only basic input validation,
      *           skip subsequent upload checks, and return success even if no click
      *           was found for the provided `user_identifiers`.
      *           This setting only affects Enhanced conversions for leads uploads that use
-     *           `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     *           `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     *           parameters. When
      *           uploading enhanced conversions for leads, you should upload all conversion
      *           events to the API, including those that may not come from Google Ads
      *           campaigns. The upload of an event that is not from a Google Ads campaign
@@ -181,7 +186,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      * Required. The conversions that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\ClickConversion>
      */
     public function getConversions()
     {
@@ -192,7 +197,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      * Required. The conversions that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ClickConversion conversions = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\ClickConversion>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\ClickConversion[] $var
      * @return $this
      */
     public function setConversions($var)
@@ -204,13 +209,13 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @return bool
@@ -221,13 +226,13 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Required. If true, successful operations will be carried out and invalid
-     * operations will return errors. If false, all operations will be carried
+     * Required. If `true`, successful operations will be carried out and invalid
+     * operations will return errors. If `false`, all operations will be carried
      * out in one transaction if and only if they are all valid.
-     * This should always be set to true.
+     * This should always be set to `true`.
      * See
-     * https://developers.google.com/google-ads/api/docs/best-practices/partial-failures
-     * for more information about partial failure.
+     * [Best practices for partial
+     * failures](/google-ads/api/docs/best-practices/partial-failures).
      *
      * Generated from protobuf field <code>bool partial_failure = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      * @param bool $var
@@ -242,7 +247,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      *
      * Generated from protobuf field <code>bool validate_only = 4;</code>
@@ -254,7 +259,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, the request is validated but not executed. Only errors are
+     * If `true`, the request is validated but not executed. Only errors are
      * returned, not results.
      *
      * Generated from protobuf field <code>bool validate_only = 4;</code>
@@ -270,12 +275,13 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, the API will perform all upload checks and return errors if
-     * any are found. If false, it will perform only basic input validation,
+     * If `true`, the API will perform all upload checks and return errors if
+     * any are found. If `false`, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -296,12 +302,13 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * If true, the API will perform all upload checks and return errors if
-     * any are found. If false, it will perform only basic input validation,
+     * If `true`, the API will perform all upload checks and return errors if
+     * any are found. If `false`, it will perform only basic input validation,
      * skip subsequent upload checks, and return success even if no click
      * was found for the provided `user_identifiers`.
      * This setting only affects Enhanced conversions for leads uploads that use
-     * `user_identifiers` instead of `GCLID`, `GBRAID`, or `WBRAID`. When
+     * `user_identifiers` instead of `GCLID`, or the `GBRAID` or `WBRAID` URL
+     * parameters. When
      * uploading enhanced conversions for leads, you should upload all conversion
      * events to the API, including those that may not come from Google Ads
      * campaigns. The upload of an event that is not from a Google Ads campaign
@@ -337,7 +344,7 @@ class UploadClickConversionsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getJobId()
     {
-        return $this->job_id ?? 0;
+        return isset($this->job_id) ? $this->job_id : 0;
     }
 
     public function hasJobId()

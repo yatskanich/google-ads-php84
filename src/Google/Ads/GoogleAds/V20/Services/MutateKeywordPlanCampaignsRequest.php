@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -57,7 +59,7 @@ class MutateKeywordPlanCampaignsRequest extends \Google\Protobuf\Internal\Messag
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -71,7 +73,7 @@ class MutateKeywordPlanCampaignsRequest extends \Google\Protobuf\Internal\Messag
      *     @type string $customer_id
      *           Required. The ID of the customer whose Keyword Plan campaigns are being
      *           modified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\KeywordPlanCampaignOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\KeywordPlanCampaignOperation[] $operations
      *           Required. The list of operations to perform on individual Keyword Plan
      *           campaigns.
      *     @type bool $partial_failure
@@ -122,7 +124,7 @@ class MutateKeywordPlanCampaignsRequest extends \Google\Protobuf\Internal\Messag
      * campaigns.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\KeywordPlanCampaignOperation>
      */
     public function getOperations()
     {
@@ -134,7 +136,7 @@ class MutateKeywordPlanCampaignsRequest extends \Google\Protobuf\Internal\Messag
      * campaigns.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.KeywordPlanCampaignOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\KeywordPlanCampaignOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\KeywordPlanCampaignOperation[] $var
      * @return $this
      */
     public function setOperations($var)

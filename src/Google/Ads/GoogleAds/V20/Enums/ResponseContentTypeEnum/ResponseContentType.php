@@ -69,6 +69,3 @@ class ResponseContentType
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ResponseContentType::class, \Google\Ads\GoogleAds\V20\Enums\ResponseContentTypeEnum_ResponseContentType::class);
-

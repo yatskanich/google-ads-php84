@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a bid-modifiable only criterion at the campaign level.
@@ -107,7 +109,7 @@ class CampaignBidModifier extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -144,7 +146,7 @@ class CampaignBidModifier extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionId()
     {
-        return $this->criterion_id ?? 0;
+        return isset($this->criterion_id) ? $this->criterion_id : 0;
     }
 
     public function hasCriterionId()
@@ -181,7 +183,7 @@ class CampaignBidModifier extends \Google\Protobuf\Internal\Message
      */
     public function getBidModifier()
     {
-        return $this->bid_modifier ?? 0.0;
+        return isset($this->bid_modifier) ? $this->bid_modifier : 0.0;
     }
 
     public function hasBidModifier()

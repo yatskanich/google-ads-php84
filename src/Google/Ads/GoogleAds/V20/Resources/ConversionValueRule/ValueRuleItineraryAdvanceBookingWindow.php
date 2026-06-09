@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\ConversionValueRule;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Range for the number of days between the date of the booking and the
@@ -52,7 +54,7 @@ class ValueRuleItineraryAdvanceBookingWindow extends \Google\Protobuf\Internal\M
      */
     public function getMinDays()
     {
-        return $this->min_days ?? 0;
+        return isset($this->min_days) ? $this->min_days : 0;
     }
 
     public function hasMinDays()
@@ -88,7 +90,7 @@ class ValueRuleItineraryAdvanceBookingWindow extends \Google\Protobuf\Internal\M
      */
     public function getMaxDays()
     {
-        return $this->max_days ?? 0;
+        return isset($this->max_days) ? $this->max_days : 0;
     }
 
     public function hasMaxDays()
@@ -117,7 +119,4 @@ class ValueRuleItineraryAdvanceBookingWindow extends \Google\Protobuf\Internal\M
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ValueRuleItineraryAdvanceBookingWindow::class, \Google\Ads\GoogleAds\V20\Resources\ConversionValueRule_ValueRuleItineraryAdvanceBookingWindow::class);
 

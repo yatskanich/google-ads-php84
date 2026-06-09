@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -37,11 +39,9 @@ class SearchGoogleAdsRequest extends \Google\Protobuf\Internal\Message
     protected $page_token = '';
     /**
      * This field is deprecated and will be removed in
-     * a future version of the API. As of v17, Google Ads API will return a
-     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request body.
-     * See
-     * https://ads-developers.googleblog.com/2024/07/upcoming-changes-to-page-size-in-google.html
-     * to learn more details.
+     * a future version of the API. Google Ads API returns a
+     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request
+     * body.
      *
      * Generated from protobuf field <code>int32 page_size = 4;</code>
      */
@@ -70,7 +70,7 @@ class SearchGoogleAdsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $query): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setQuery($query);
     }
@@ -92,11 +92,9 @@ class SearchGoogleAdsRequest extends \Google\Protobuf\Internal\Message
      *           the next page of results.
      *     @type int $page_size
      *           This field is deprecated and will be removed in
-     *           a future version of the API. As of v17, Google Ads API will return a
-     *           `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request body.
-     *           See
-     *           https://ads-developers.googleblog.com/2024/07/upcoming-changes-to-page-size-in-google.html
-     *           to learn more details.
+     *           a future version of the API. Google Ads API returns a
+     *           `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request
+     *           body.
      *     @type bool $validate_only
      *           If true, the request is validated but not executed.
      *     @type \Google\Ads\GoogleAds\V20\Services\SearchSettings $search_settings
@@ -195,11 +193,9 @@ class SearchGoogleAdsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * This field is deprecated and will be removed in
-     * a future version of the API. As of v17, Google Ads API will return a
-     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request body.
-     * See
-     * https://ads-developers.googleblog.com/2024/07/upcoming-changes-to-page-size-in-google.html
-     * to learn more details.
+     * a future version of the API. Google Ads API returns a
+     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request
+     * body.
      *
      * Generated from protobuf field <code>int32 page_size = 4;</code>
      * @return int
@@ -211,11 +207,9 @@ class SearchGoogleAdsRequest extends \Google\Protobuf\Internal\Message
 
     /**
      * This field is deprecated and will be removed in
-     * a future version of the API. As of v17, Google Ads API will return a
-     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request body.
-     * See
-     * https://ads-developers.googleblog.com/2024/07/upcoming-changes-to-page-size-in-google.html
-     * to learn more details.
+     * a future version of the API. Google Ads API returns a
+     * `PAGE_SIZE_NOT_SUPPORTED` error if this field is set in the request
+     * body.
      *
      * Generated from protobuf field <code>int32 page_size = 4;</code>
      * @param int $var

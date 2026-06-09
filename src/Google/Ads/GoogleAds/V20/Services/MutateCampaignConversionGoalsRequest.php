@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -48,7 +50,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -62,7 +64,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      *     @type string $customer_id
      *           Required. The ID of the customer whose campaign conversion goals are being
      *           modified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\CampaignConversionGoalOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\CampaignConversionGoalOperation[] $operations
      *           Required. The list of operations to perform on individual campaign
      *           conversion goal.
      *     @type bool $validate_only
@@ -108,7 +110,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      * conversion goal.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CampaignConversionGoalOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\CampaignConversionGoalOperation>
      */
     public function getOperations()
     {
@@ -120,7 +122,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      * conversion goal.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CampaignConversionGoalOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\CampaignConversionGoalOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\CampaignConversionGoalOperation[] $var
      * @return $this
      */
     public function setOperations($var)

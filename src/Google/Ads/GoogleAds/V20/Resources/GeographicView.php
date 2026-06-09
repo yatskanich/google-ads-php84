@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A geographic view.
@@ -123,7 +125,7 @@ class GeographicView extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCriterionId()
     {
-        return $this->country_criterion_id ?? 0;
+        return isset($this->country_criterion_id) ? $this->country_criterion_id : 0;
     }
 
     public function hasCountryCriterionId()

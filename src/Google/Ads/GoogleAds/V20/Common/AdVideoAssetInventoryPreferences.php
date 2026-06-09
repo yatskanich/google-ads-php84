@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * YouTube Video Asset inventory preferences.
@@ -66,7 +68,7 @@ class AdVideoAssetInventoryPreferences extends \Google\Protobuf\Internal\Message
      */
     public function getInFeedPreference()
     {
-        return $this->in_feed_preference ?? false;
+        return isset($this->in_feed_preference) ? $this->in_feed_preference : false;
     }
 
     public function hasInFeedPreference()
@@ -104,7 +106,7 @@ class AdVideoAssetInventoryPreferences extends \Google\Protobuf\Internal\Message
      */
     public function getInStreamPreference()
     {
-        return $this->in_stream_preference ?? false;
+        return isset($this->in_stream_preference) ? $this->in_stream_preference : false;
     }
 
     public function hasInStreamPreference()
@@ -142,7 +144,7 @@ class AdVideoAssetInventoryPreferences extends \Google\Protobuf\Internal\Message
      */
     public function getShortsPreference()
     {
-        return $this->shorts_preference ?? false;
+        return isset($this->shorts_preference) ? $this->shorts_preference : false;
     }
 
     public function hasShortsPreference()

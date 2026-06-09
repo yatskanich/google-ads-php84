@@ -24,26 +24,27 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\TargetSpend;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\BiddingStrategy;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\Campaign\NetworkSettings;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Services\BiddingStrategyOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateBiddingStrategiesRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignBudgetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\TargetSpend;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\BiddingStrategy;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\NetworkSettings;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Services\BiddingStrategyOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateBiddingStrategiesRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignBudgetsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsRequest;
 use Google\ApiCore\ApiException;
 
 /**
@@ -51,16 +52,16 @@ use Google\ApiCore\ApiException;
  */
 class UsePortfolioBiddingStrategy
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Optional: Specify a campaign budget ID below to be used to create a campaign. If none is
     // specified, this example will create a new campaign budget.
-    private const null CAMPAIGN_BUDGET_ID = null;
+    private const CAMPAIGN_BUDGET_ID = null;
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments(
+        $options = (new ArgumentParser())->parseCommandArguments(
             [
                 ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
                 ArgumentNames::CAMPAIGN_BUDGET_ID => GetOpt::OPTIONAL_ARGUMENT
@@ -68,11 +69,11 @@ class UsePortfolioBiddingStrategy
         );
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
+        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -253,7 +254,10 @@ class UsePortfolioBiddingStrategy
             ]),
             // Sets the bidding strategy and budget.
             'bidding_strategy' => $biddingStrategyResourceName,
-            'campaign_budget' => $campaignBudgetResourceName
+            'campaign_budget' => $campaignBudgetResourceName,
+            // Declare whether or not this campaign serves political ads targeting the EU.
+            'contains_eu_political_advertising' =>
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING
         ]);
         // [END use_portfolio_bidding_strategy_2]
 

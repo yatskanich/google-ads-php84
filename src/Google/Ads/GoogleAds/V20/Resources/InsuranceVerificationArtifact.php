@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A proto holding information specific to a local services insurance.
@@ -76,7 +78,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return $this->amount_micros ?? 0;
+        return isset($this->amount_micros) ? $this->amount_micros : 0;
     }
 
     public function hasAmountMicros()
@@ -113,7 +115,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getRejectionReason()
     {
-        return $this->rejection_reason ?? 0;
+        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
     }
 
     public function hasRejectionReason()
@@ -189,7 +191,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationDateTime()
     {
-        return $this->expiration_date_time ?? '';
+        return isset($this->expiration_date_time) ? $this->expiration_date_time : '';
     }
 
     public function hasExpirationDateTime()

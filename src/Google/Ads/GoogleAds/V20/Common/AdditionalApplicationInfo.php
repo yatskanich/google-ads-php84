@@ -5,13 +5,16 @@
 namespace Google\Ads\GoogleAds\V20\Common;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Additional information about the application/tool issuing the request. This
- * field is only used by [ContentCreatorInsightsService],
- * [AudienceInsightsService], and [ReachPlanService] APIs.
+ * field is only used by
+ * [ContentCreatorInsightsService][google.ads.googleads.v20.services.ContentCreatorInsightsService],
+ * [AudienceInsightsService][google.ads.googleads.v20.services.AudienceInsightsService],
+ * and [ReachPlanService][google.ads.googleads.v20.services.ReachPlanService]
+ * APIs.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.common.AdditionalApplicationInfo</code>
  */

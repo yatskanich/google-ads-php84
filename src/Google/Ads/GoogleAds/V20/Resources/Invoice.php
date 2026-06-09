@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An invoice. All invoice information is snapshotted to match the PDF invoice.
@@ -298,7 +300,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *           set, `replaced_invoices` will not be set. Invoice resource names have the
      *           form:
      *           `customers/{customer_id}/invoices/{invoice_id}`
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $replaced_invoices
+     *     @type string[] $replaced_invoices
      *           Output only. The resource name of the original invoice(s) being rebilled or
      *           replaced by this invoice, if applicable. There might be multiple replaced
      *           invoices due to invoice consolidation. The replaced invoices may not belong
@@ -308,10 +310,10 @@ class Invoice extends \Google\Protobuf\Internal\Message
      *     @type string $pdf_url
      *           Output only. The URL to a PDF copy of the invoice. Users need to pass in
      *           their OAuth token to request the PDF with this URL.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountBudgetSummary>|\Google\Protobuf\Internal\RepeatedField $account_budget_summaries
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Invoice\AccountBudgetSummary[] $account_budget_summaries
      *           Output only. The list of summarized account budget information associated
      *           with this invoice.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountSummary>|\Google\Protobuf\Internal\RepeatedField $account_summaries
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Invoice\AccountSummary[] $account_summaries
      *           Output only. The list of summarized account information associated with
      *           this invoice.
      * }
@@ -362,7 +364,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? '';
+        return isset($this->id) ? $this->id : '';
     }
 
     public function hasId()
@@ -426,7 +428,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getBillingSetup()
     {
-        return $this->billing_setup ?? '';
+        return isset($this->billing_setup) ? $this->billing_setup : '';
     }
 
     public function hasBillingSetup()
@@ -465,7 +467,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsAccountId()
     {
-        return $this->payments_account_id ?? '';
+        return isset($this->payments_account_id) ? $this->payments_account_id : '';
     }
 
     public function hasPaymentsAccountId()
@@ -505,7 +507,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsProfileId()
     {
-        return $this->payments_profile_id ?? '';
+        return isset($this->payments_profile_id) ? $this->payments_profile_id : '';
     }
 
     public function hasPaymentsProfileId()
@@ -544,7 +546,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getIssueDate()
     {
-        return $this->issue_date ?? '';
+        return isset($this->issue_date) ? $this->issue_date : '';
     }
 
     public function hasIssueDate()
@@ -581,7 +583,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getDueDate()
     {
-        return $this->due_date ?? '';
+        return isset($this->due_date) ? $this->due_date : '';
     }
 
     public function hasDueDate()
@@ -657,7 +659,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -858,7 +860,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeSubtotalAmountMicros()
     {
-        return $this->export_charge_subtotal_amount_micros ?? 0;
+        return isset($this->export_charge_subtotal_amount_micros) ? $this->export_charge_subtotal_amount_micros : 0;
     }
 
     public function hasExportChargeSubtotalAmountMicros()
@@ -896,7 +898,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeTaxAmountMicros()
     {
-        return $this->export_charge_tax_amount_micros ?? 0;
+        return isset($this->export_charge_tax_amount_micros) ? $this->export_charge_tax_amount_micros : 0;
     }
 
     public function hasExportChargeTaxAmountMicros()
@@ -933,7 +935,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeTotalAmountMicros()
     {
-        return $this->export_charge_total_amount_micros ?? 0;
+        return isset($this->export_charge_total_amount_micros) ? $this->export_charge_total_amount_micros : 0;
     }
 
     public function hasExportChargeTotalAmountMicros()
@@ -971,7 +973,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getSubtotalAmountMicros()
     {
-        return $this->subtotal_amount_micros ?? 0;
+        return isset($this->subtotal_amount_micros) ? $this->subtotal_amount_micros : 0;
     }
 
     public function hasSubtotalAmountMicros()
@@ -1011,7 +1013,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmountMicros()
     {
-        return $this->tax_amount_micros ?? 0;
+        return isset($this->tax_amount_micros) ? $this->tax_amount_micros : 0;
     }
 
     public function hasTaxAmountMicros()
@@ -1053,7 +1055,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountMicros()
     {
-        return $this->total_amount_micros ?? 0;
+        return isset($this->total_amount_micros) ? $this->total_amount_micros : 0;
     }
 
     public function hasTotalAmountMicros()
@@ -1097,7 +1099,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getCorrectedInvoice()
     {
-        return $this->corrected_invoice ?? '';
+        return isset($this->corrected_invoice) ? $this->corrected_invoice : '';
     }
 
     public function hasCorrectedInvoice()
@@ -1138,7 +1140,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * `customers/{customer_id}/invoices/{invoice_id}`
      *
      * Generated from protobuf field <code>repeated string replaced_invoices = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getReplacedInvoices()
     {
@@ -1154,7 +1156,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * `customers/{customer_id}/invoices/{invoice_id}`
      *
      * Generated from protobuf field <code>repeated string replaced_invoices = 37 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setReplacedInvoices($var)
@@ -1174,7 +1176,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      */
     public function getPdfUrl()
     {
-        return $this->pdf_url ?? '';
+        return isset($this->pdf_url) ? $this->pdf_url : '';
     }
 
     public function hasPdfUrl()
@@ -1208,7 +1210,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * with this invoice.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountBudgetSummary>
      */
     public function getAccountBudgetSummaries()
     {
@@ -1220,7 +1222,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * with this invoice.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.AccountBudgetSummary account_budget_summaries = 18 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountBudgetSummary>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Invoice\AccountBudgetSummary[] $var
      * @return $this
      */
     public function setAccountBudgetSummaries($var)
@@ -1236,7 +1238,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * this invoice.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.AccountSummary account_summaries = 39 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountSummary>
      */
     public function getAccountSummaries()
     {
@@ -1248,7 +1250,7 @@ class Invoice extends \Google\Protobuf\Internal\Message
      * this invoice.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.AccountSummary account_summaries = 39 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Invoice\AccountSummary>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Invoice\AccountSummary[] $var
      * @return $this
      */
     public function setAccountSummaries($var)

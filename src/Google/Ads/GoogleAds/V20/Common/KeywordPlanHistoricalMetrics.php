@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Historical metrics specific to the targeting options selected.
@@ -73,7 +75,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      *     @type int|string $avg_monthly_searches
      *           Approximate number of monthly searches on this query, averaged
      *           for the past 12 months.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\MonthlySearchVolume>|\Google\Protobuf\Internal\RepeatedField $monthly_search_volumes
+     *     @type \Google\Ads\GoogleAds\V20\Common\MonthlySearchVolume[] $monthly_search_volumes
      *           Approximate number of searches on this query for the past twelve months.
      *     @type int $competition
      *           The competition level for the query.
@@ -105,7 +107,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAvgMonthlySearches()
     {
-        return $this->avg_monthly_searches ?? 0;
+        return isset($this->avg_monthly_searches) ? $this->avg_monthly_searches : 0;
     }
 
     public function hasAvgMonthlySearches()
@@ -138,7 +140,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      * Approximate number of searches on this query for the past twelve months.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\MonthlySearchVolume>
      */
     public function getMonthlySearchVolumes()
     {
@@ -149,7 +151,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      * Approximate number of searches on this query for the past twelve months.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.MonthlySearchVolume monthly_search_volumes = 6;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\MonthlySearchVolume>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\MonthlySearchVolume[] $var
      * @return $this
      */
     public function setMonthlySearchVolumes($var)
@@ -198,7 +200,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCompetitionIndex()
     {
-        return $this->competition_index ?? 0;
+        return isset($this->competition_index) ? $this->competition_index : 0;
     }
 
     public function hasCompetitionIndex()
@@ -238,7 +240,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getLowTopOfPageBidMicros()
     {
-        return $this->low_top_of_page_bid_micros ?? 0;
+        return isset($this->low_top_of_page_bid_micros) ? $this->low_top_of_page_bid_micros : 0;
     }
 
     public function hasLowTopOfPageBidMicros()
@@ -274,7 +276,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getHighTopOfPageBidMicros()
     {
-        return $this->high_top_of_page_bid_micros ?? 0;
+        return isset($this->high_top_of_page_bid_micros) ? $this->high_top_of_page_bid_micros : 0;
     }
 
     public function hasHighTopOfPageBidMicros()
@@ -310,7 +312,7 @@ class KeywordPlanHistoricalMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpcMicros()
     {
-        return $this->average_cpc_micros ?? 0;
+        return isset($this->average_cpc_micros) ? $this->average_cpc_micros : 0;
     }
 
     public function hasAverageCpcMicros()

@@ -4,10 +4,12 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * An expanded text ad.
+ * An expanded text ad. Expanded text ads are deprecated.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.common.ExpandedTextAdInfo</code>
  */
@@ -91,7 +93,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadlinePart1()
     {
-        return $this->headline_part1 ?? '';
+        return isset($this->headline_part1) ? $this->headline_part1 : '';
     }
 
     public function hasHeadlinePart1()
@@ -127,7 +129,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadlinePart2()
     {
-        return $this->headline_part2 ?? '';
+        return isset($this->headline_part2) ? $this->headline_part2 : '';
     }
 
     public function hasHeadlinePart2()
@@ -163,7 +165,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadlinePart3()
     {
-        return $this->headline_part3 ?? '';
+        return isset($this->headline_part3) ? $this->headline_part3 : '';
     }
 
     public function hasHeadlinePart3()
@@ -199,7 +201,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return $this->description ?? '';
+        return isset($this->description) ? $this->description : '';
     }
 
     public function hasDescription()
@@ -235,7 +237,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription2()
     {
-        return $this->description2 ?? '';
+        return isset($this->description2) ? $this->description2 : '';
     }
 
     public function hasDescription2()
@@ -271,7 +273,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath1()
     {
-        return $this->path1 ?? '';
+        return isset($this->path1) ? $this->path1 : '';
     }
 
     public function hasPath1()
@@ -307,7 +309,7 @@ class ExpandedTextAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPath2()
     {
-        return $this->path2 ?? '';
+        return isset($this->path2) ? $this->path2 : '';
     }
 
     public function hasPath2()

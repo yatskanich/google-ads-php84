@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A campaign draft.
@@ -156,7 +158,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getDraftId()
     {
-        return $this->draft_id ?? 0;
+        return isset($this->draft_id) ? $this->draft_id : 0;
     }
 
     public function hasDraftId()
@@ -193,7 +195,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getBaseCampaign()
     {
-        return $this->base_campaign ?? '';
+        return isset($this->base_campaign) ? $this->base_campaign : '';
     }
 
     public function hasBaseCampaign()
@@ -233,7 +235,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -275,7 +277,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getDraftCampaign()
     {
-        return $this->draft_campaign ?? '';
+        return isset($this->draft_campaign) ? $this->draft_campaign : '';
     }
 
     public function hasDraftCampaign()
@@ -342,7 +344,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getHasExperimentRunning()
     {
-        return $this->has_experiment_running ?? false;
+        return isset($this->has_experiment_running) ? $this->has_experiment_running : false;
     }
 
     public function hasHasExperimentRunning()
@@ -381,7 +383,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return $this->long_running_operation ?? '';
+        return isset($this->long_running_operation) ? $this->long_running_operation : '';
     }
 
     public function hasLongRunningOperation()

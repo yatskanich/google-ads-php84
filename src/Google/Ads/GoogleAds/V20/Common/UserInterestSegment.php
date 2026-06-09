@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * User interest segment.
@@ -43,7 +45,7 @@ class UserInterestSegment extends \Google\Protobuf\Internal\Message
      */
     public function getUserInterestCategory()
     {
-        return $this->user_interest_category ?? '';
+        return isset($this->user_interest_category) ? $this->user_interest_category : '';
     }
 
     public function hasUserInterestCategory()

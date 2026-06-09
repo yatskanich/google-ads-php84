@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A negative criterion for exclusions at the customer level.
@@ -64,7 +66,8 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
      *     @type \Google\Ads\GoogleAds\V20\Common\NegativeKeywordListInfo $negative_keyword_list
      *           Immutable. NegativeKeywordList.
      *     @type \Google\Ads\GoogleAds\V20\Common\IpBlockInfo $ip_block
-     *           Immutable. IPBLock
+     *           Immutable. IpBlock.
+     *           You can exclude up to 500 IP addresses per account.
      * }
      */
     public function __construct($data = NULL) {
@@ -110,7 +113,7 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -382,7 +385,8 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     * You can exclude up to 500 IP addresses per account.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @return \Google\Ads\GoogleAds\V20\Common\IpBlockInfo|null
@@ -398,7 +402,8 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Immutable. IPBLock
+     * Immutable. IpBlock.
+     * You can exclude up to 500 IP addresses per account.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.common.IpBlockInfo ip_block = 12 [(.google.api.field_behavior) = IMMUTABLE];</code>
      * @param \Google\Ads\GoogleAds\V20\Common\IpBlockInfo $var

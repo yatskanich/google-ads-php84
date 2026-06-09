@@ -83,6 +83,3 @@ class AccessInvitationStatus
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AccessInvitationStatus::class, \Google\Ads\GoogleAds\V20\Enums\AccessInvitationStatusEnum_AccessInvitationStatus::class);
-

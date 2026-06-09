@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Remarketing setting for a customer.
@@ -43,7 +45,7 @@ class RemarketingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getGoogleGlobalSiteTag()
     {
-        return $this->google_global_site_tag ?? '';
+        return isset($this->google_global_site_tag) ? $this->google_global_site_tag : '';
     }
 
     public function hasGoogleGlobalSiteTag()

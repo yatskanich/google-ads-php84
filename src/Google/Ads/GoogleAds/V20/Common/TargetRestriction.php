@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The list of per-targeting-dimension targeting settings.
@@ -95,7 +97,7 @@ class TargetRestriction extends \Google\Protobuf\Internal\Message
      */
     public function getBidOnly()
     {
-        return $this->bid_only ?? false;
+        return isset($this->bid_only) ? $this->bid_only : false;
     }
 
     public function hasBidOnly()

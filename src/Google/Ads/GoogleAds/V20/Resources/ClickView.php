@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A click view with metrics aggregated at each click level, including both
@@ -13,6 +15,8 @@ use Google\Protobuf\Internal\GPBUtil;
  * Queries including ClickView must have a filter limiting the results to one
  * day and can be requested for dates back to 90 days before the time of the
  * request.
+ * GCLIDs are not available in this report for App Campaigns for Installs (ACi)
+ * and App Campaigns for Pre-registration (ACpre).
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.ClickView</code>
  */
@@ -160,7 +164,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return $this->gclid ?? '';
+        return isset($this->gclid) ? $this->gclid : '';
     }
 
     public function hasGclid()
@@ -272,7 +276,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getPageNumber()
     {
-        return $this->page_number ?? 0;
+        return isset($this->page_number) ? $this->page_number : 0;
     }
 
     public function hasPageNumber()
@@ -308,7 +312,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return $this->ad_group_ad ?? '';
+        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
     }
 
     public function hasAdGroupAd()
@@ -344,7 +348,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignLocationTarget()
     {
-        return $this->campaign_location_target ?? '';
+        return isset($this->campaign_location_target) ? $this->campaign_location_target : '';
     }
 
     public function hasCampaignLocationTarget()
@@ -380,7 +384,7 @@ class ClickView extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return $this->user_list ?? '';
+        return isset($this->user_list) ? $this->user_list : '';
     }
 
     public function hasUserList()

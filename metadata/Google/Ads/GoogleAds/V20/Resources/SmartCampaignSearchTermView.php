@@ -13,20 +13,10 @@ class SmartCampaignSearchTermView
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Google\Api\Resource::initOnce();
         \GPBMetadata\Google\Api\FieldBehavior::initOnce();
+        \GPBMetadata\Google\Api\Resource::initOnce();
         $pool->internalAddGeneratedFile(
-            '
-û
-Hgoogle/ads/googleads/v20/resources/smart_campaign_search_term_view.proto"google.ads.googleads.v20.resourcesgoogle/api/resource.proto"Ò
-SmartCampaignSearchTermViewS
-resource_name (	B<àAúA6
-4googleads.googleapis.com/SmartCampaignSearchTermView
-search_term (	BàA;
-campaign (	B)àAúA#
-!googleads.googleapis.com/Campaign:†êA‚
-4googleads.googleapis.com/SmartCampaignSearchTermViewJcustomers/{customer_id}/smartCampaignSearchTermViews/{campaign_id}~{query}B’
-&com.google.ads.googleads.v20.resourcesB SmartCampaignSearchTermViewProtoPZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources¢GAAª"Google.Ads.GoogleAds.V20.ResourcesÊ"Google\\Ads\\GoogleAds\\V20\\Resourcesê&Google::Ads::GoogleAds::V20::Resourcesbproto3'
+            "\x0A\xFB\x05\x0AHgoogle/ads/googleads/v20/resources/smart_campaign_search_term_view.proto\x12\"google.ads.googleads.v20.resources\x1A\x19google/api/resource.proto\"\xD2\x02\x0A\x1BSmartCampaignSearchTermView\x12S\x0A\x0Dresource_name\x18\x01 \x01(\x09B<\xE0A\x03\xFAA6\x0A4googleads.googleapis.com/SmartCampaignSearchTermView\x12\x18\x0A\x0Bsearch_term\x18\x02 \x01(\x09B\x03\xE0A\x03\x12;\x0A\x08campaign\x18\x03 \x01(\x09B)\xE0A\x03\xFAA#\x0A!googleads.googleapis.com/Campaign:\x86\x01\xEAA\x82\x01\x0A4googleads.googleapis.com/SmartCampaignSearchTermView\x12Jcustomers/{customer_id}/smartCampaignSearchTermViews/{campaign_id}~{query}B\x92\x02\x0A&com.google.ads.googleads.v20.resourcesB SmartCampaignSearchTermViewProtoP\x01ZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources\xA2\x02\x03GAA\xAA\x02\"Google.Ads.GoogleAds.V20.Resources\xCA\x02\"Google\\Ads\\GoogleAds\\V20\\Resources\xEA\x02&Google::Ads::GoogleAds::V20::Resourcesb\x06proto3"
         , true);
         static::$is_initialized = true;
     }

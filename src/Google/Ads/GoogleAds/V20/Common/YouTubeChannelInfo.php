@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A YouTube Channel criterion.
@@ -43,7 +45,7 @@ class YouTubeChannelInfo extends \Google\Protobuf\Internal\Message
      */
     public function getChannelId()
     {
-        return $this->channel_id ?? '';
+        return isset($this->channel_id) ? $this->channel_id : '';
     }
 
     public function hasChannelId()

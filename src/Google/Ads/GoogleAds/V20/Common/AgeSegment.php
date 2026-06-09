@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Contiguous age range.
@@ -58,7 +60,7 @@ class AgeSegment extends \Google\Protobuf\Internal\Message
      */
     public function getMinAge()
     {
-        return $this->min_age ?? 0;
+        return isset($this->min_age) ? $this->min_age : 0;
     }
 
     public function hasMinAge()
@@ -97,7 +99,7 @@ class AgeSegment extends \Google\Protobuf\Internal\Message
      */
     public function getMaxAge()
     {
-        return $this->max_age ?? 0;
+        return isset($this->max_age) ? $this->max_age : 0;
     }
 
     public function hasMaxAge()

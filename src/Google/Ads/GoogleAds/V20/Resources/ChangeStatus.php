@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Describes the status of returned resource. ChangeStatus could have up to 3
@@ -229,7 +231,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getLastChangeDateTime()
     {
-        return $this->last_change_date_time ?? '';
+        return isset($this->last_change_date_time) ? $this->last_change_date_time : '';
     }
 
     public function hasLastChangeDateTime()
@@ -296,7 +298,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -332,7 +334,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return $this->ad_group ?? '';
+        return isset($this->ad_group) ? $this->ad_group : '';
     }
 
     public function hasAdGroup()
@@ -394,7 +396,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return $this->ad_group_ad ?? '';
+        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
     }
 
     public function hasAdGroupAd()
@@ -430,7 +432,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return $this->ad_group_criterion ?? '';
+        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
     }
 
     public function hasAdGroupCriterion()
@@ -466,7 +468,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignCriterion()
     {
-        return $this->campaign_criterion ?? '';
+        return isset($this->campaign_criterion) ? $this->campaign_criterion : '';
     }
 
     public function hasCampaignCriterion()
@@ -502,7 +504,7 @@ class ChangeStatus extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupBidModifier()
     {
-        return $this->ad_group_bid_modifier ?? '';
+        return isset($this->ad_group_bid_modifier) ? $this->ad_group_bid_modifier : '';
     }
 
     public function hasAdGroupBidModifier()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Keyword Plan campaign.
@@ -92,7 +94,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      *           The name of the Keyword Plan campaign.
      *           This field is required and should not be empty when creating Keyword Plan
      *           campaigns.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $language_constants
+     *     @type string[] $language_constants
      *           The languages targeted for the Keyword Plan campaign.
      *           Max allowed: 1.
      *     @type int $keyword_plan_network
@@ -104,7 +106,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      *           groups under the campaign.
      *           This field is required and should not be empty when creating Keyword Plan
      *           campaigns.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\KeywordPlanGeoTarget>|\Google\Protobuf\Internal\RepeatedField $geo_targets
+     *     @type \Google\Ads\GoogleAds\V20\Resources\KeywordPlanGeoTarget[] $geo_targets
      *           The geo targets.
      *           Max number allowed: 20.
      * }
@@ -152,7 +154,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getKeywordPlan()
     {
-        return $this->keyword_plan ?? '';
+        return isset($this->keyword_plan) ? $this->keyword_plan : '';
     }
 
     public function hasKeywordPlan()
@@ -188,7 +190,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -226,7 +228,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -261,7 +263,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      * Max allowed: 1.
      *
      * Generated from protobuf field <code>repeated string language_constants = 12 [(.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getLanguageConstants()
     {
@@ -273,7 +275,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      * Max allowed: 1.
      *
      * Generated from protobuf field <code>repeated string language_constants = 12 [(.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setLanguageConstants($var)
@@ -325,7 +327,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return $this->cpc_bid_micros ?? 0;
+        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
     }
 
     public function hasCpcBidMicros()
@@ -361,7 +363,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      * Max number allowed: 20.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\KeywordPlanGeoTarget>
      */
     public function getGeoTargets()
     {
@@ -373,7 +375,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      * Max number allowed: 20.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.KeywordPlanGeoTarget geo_targets = 8;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\KeywordPlanGeoTarget>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\KeywordPlanGeoTarget[] $var
      * @return $this
      */
     public function setGeoTargets($var)

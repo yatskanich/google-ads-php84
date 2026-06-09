@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An automated bid strategy that sets your bids to help get as many clicks
@@ -70,14 +72,14 @@ class TargetSpend extends \Google\Protobuf\Internal\Message
      *
      * Generated from protobuf field <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @return int|string
+     * @deprecated
      */
-    #[\Deprecated]
     public function getTargetSpendMicros()
     {
         if (isset($this->target_spend_micros)) {
             @trigger_error('target_spend_micros is deprecated.', E_USER_DEPRECATED);
         }
-        return $this->target_spend_micros ?? 0;
+        return isset($this->target_spend_micros) ? $this->target_spend_micros : 0;
     }
 
     public function hasTargetSpendMicros()
@@ -106,8 +108,8 @@ class TargetSpend extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>optional int64 target_spend_micros = 3 [deprecated = true];</code>
      * @param int|string $var
      * @return $this
+     * @deprecated
      */
-    #[\Deprecated]
     public function setTargetSpendMicros($var)
     {
         @trigger_error('target_spend_micros is deprecated.', E_USER_DEPRECATED);
@@ -126,7 +128,7 @@ class TargetSpend extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return $this->cpc_bid_ceiling_micros ?? 0;
+        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
     }
 
     public function hasCpcBidCeilingMicros()

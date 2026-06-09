@@ -74,6 +74,3 @@ class SharedSetStatus
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SharedSetStatus::class, \Google\Ads\GoogleAds\V20\Enums\SharedSetStatusEnum_SharedSetStatus::class);
-

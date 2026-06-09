@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details related to Smart campaigns that are not eligible to serve.
@@ -43,7 +45,7 @@ class SmartCampaignNotEligibleDetails extends \Google\Protobuf\Internal\Message
      */
     public function getNotEligibleReason()
     {
-        return $this->not_eligible_reason ?? 0;
+        return isset($this->not_eligible_reason) ? $this->not_eligible_reason : 0;
     }
 
     public function hasNotEligibleReason()

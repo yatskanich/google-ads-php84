@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a ZIP archive media the content of which contains HTML5 assets.
@@ -55,7 +57,7 @@ class MediaBundle extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return $this->data ?? '';
+        return isset($this->data) ? $this->data : '';
     }
 
     public function hasData()
@@ -93,7 +95,7 @@ class MediaBundle extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return $this->url ?? '';
+        return isset($this->url) ? $this->url : '';
     }
 
     public function hasUrl()

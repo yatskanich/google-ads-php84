@@ -102,6 +102,3 @@ class SearchTermInsightError
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SearchTermInsightError::class, \Google\Ads\GoogleAds\V20\Errors\SearchTermInsightErrorEnum_SearchTermInsightError::class);
-

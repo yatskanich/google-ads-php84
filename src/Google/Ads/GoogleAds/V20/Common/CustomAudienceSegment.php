@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Custom audience segment.
@@ -43,7 +45,7 @@ class CustomAudienceSegment extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAudience()
     {
-        return $this->custom_audience ?? '';
+        return isset($this->custom_audience) ? $this->custom_audience : '';
     }
 
     public function hasCustomAudience()

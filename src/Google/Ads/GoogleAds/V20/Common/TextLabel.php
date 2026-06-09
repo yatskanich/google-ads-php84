@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A type of label displaying text on a colored background.
@@ -59,7 +61,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getBackgroundColor()
     {
-        return $this->background_color ?? '';
+        return isset($this->background_color) ? $this->background_color : '';
     }
 
     public function hasBackgroundColor()
@@ -98,7 +100,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return $this->description ?? '';
+        return isset($this->description) ? $this->description : '';
     }
 
     public function hasDescription()

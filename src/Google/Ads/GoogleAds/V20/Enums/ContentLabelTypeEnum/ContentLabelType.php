@@ -250,6 +250,3 @@ class ContentLabelType
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ContentLabelType::class, \Google\Ads\GoogleAds\V20\Enums\ContentLabelTypeEnum_ContentLabelType::class);
-

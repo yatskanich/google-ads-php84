@@ -4,10 +4,14 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A Customer search term view.
+ * This report provides a high-level view of search demand at the customer
+ * level by grouping similar search terms into categories and showing their
+ * search volume.
  * Historical data is available starting March 2023.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.CustomerSearchTermInsight</code>
@@ -97,7 +101,7 @@ class CustomerSearchTermInsight extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLabel()
     {
-        return $this->category_label ?? '';
+        return isset($this->category_label) ? $this->category_label : '';
     }
 
     public function hasCategoryLabel()
@@ -134,7 +138,7 @@ class CustomerSearchTermInsight extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()

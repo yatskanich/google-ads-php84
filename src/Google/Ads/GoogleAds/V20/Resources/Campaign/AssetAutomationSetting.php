@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Asset automation setting contains pair of AssetAutomationType and the
@@ -52,7 +54,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationType()
     {
-        return $this->asset_automation_type ?? 0;
+        return isset($this->asset_automation_type) ? $this->asset_automation_type : 0;
     }
 
     public function hasAssetAutomationType()
@@ -88,7 +90,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationStatus()
     {
-        return $this->asset_automation_status ?? 0;
+        return isset($this->asset_automation_status) ? $this->asset_automation_status : 0;
     }
 
     public function hasAssetAutomationStatus()
@@ -117,7 +119,4 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AssetAutomationSetting::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_AssetAutomationSetting::class);
 

@@ -74,6 +74,3 @@ class ValueRuleGeoLocationMatchType
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ValueRuleGeoLocationMatchType::class, \Google\Ads\GoogleAds\V20\Enums\ValueRuleGeoLocationMatchTypeEnum_ValueRuleGeoLocationMatchType::class);
-

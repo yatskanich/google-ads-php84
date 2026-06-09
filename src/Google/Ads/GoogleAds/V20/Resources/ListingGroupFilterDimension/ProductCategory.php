@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\ListingGroupFilterDimension;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * One element of a category at a certain level. Top-level categories
@@ -61,7 +63,7 @@ class ProductCategory extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return $this->category_id ?? 0;
+        return isset($this->category_id) ? $this->category_id : 0;
     }
 
     public function hasCategoryId()
@@ -118,7 +120,4 @@ class ProductCategory extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ProductCategory::class, \Google\Ads\GoogleAds\V20\Resources\ListingGroupFilterDimension_ProductCategory::class);
 

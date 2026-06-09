@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Parameters to use when applying a set target CPA recommendation.
@@ -51,7 +53,7 @@ class ForecastingSetTargetCpaParameters extends \Google\Protobuf\Internal\Messag
      */
     public function getTargetCpaMicros()
     {
-        return $this->target_cpa_micros ?? 0;
+        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
     }
 
     public function hasTargetCpaMicros()
@@ -87,7 +89,7 @@ class ForecastingSetTargetCpaParameters extends \Google\Protobuf\Internal\Messag
      */
     public function getCampaignBudgetAmountMicros()
     {
-        return $this->campaign_budget_amount_micros ?? 0;
+        return isset($this->campaign_budget_amount_micros) ? $this->campaign_budget_amount_micros : 0;
     }
 
     public function hasCampaignBudgetAmountMicros()
@@ -116,7 +118,4 @@ class ForecastingSetTargetCpaParameters extends \Google\Protobuf\Internal\Messag
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ForecastingSetTargetCpaParameters::class, \Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation_ForecastingSetTargetCpaParameters::class);
 

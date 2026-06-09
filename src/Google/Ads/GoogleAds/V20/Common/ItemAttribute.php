@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Item attributes of the transaction.
@@ -128,7 +130,7 @@ class ItemAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantId()
     {
-        return $this->merchant_id ?? 0;
+        return isset($this->merchant_id) ? $this->merchant_id : 0;
     }
 
     public function hasMerchantId()

@@ -116,6 +116,3 @@ class BusinessMessageCallToActionType
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BusinessMessageCallToActionType::class, \Google\Ads\GoogleAds\V20\Enums\BusinessMessageCallToActionTypeEnum_BusinessMessageCallToActionType::class);
-

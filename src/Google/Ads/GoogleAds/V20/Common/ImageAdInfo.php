@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An image ad.
@@ -108,7 +110,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPixelWidth()
     {
-        return $this->pixel_width ?? 0;
+        return isset($this->pixel_width) ? $this->pixel_width : 0;
     }
 
     public function hasPixelWidth()
@@ -144,7 +146,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPixelHeight()
     {
-        return $this->pixel_height ?? 0;
+        return isset($this->pixel_height) ? $this->pixel_height : 0;
     }
 
     public function hasPixelHeight()
@@ -180,7 +182,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getImageUrl()
     {
-        return $this->image_url ?? '';
+        return isset($this->image_url) ? $this->image_url : '';
     }
 
     public function hasImageUrl()
@@ -216,7 +218,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPreviewPixelWidth()
     {
-        return $this->preview_pixel_width ?? 0;
+        return isset($this->preview_pixel_width) ? $this->preview_pixel_width : 0;
     }
 
     public function hasPreviewPixelWidth()
@@ -252,7 +254,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPreviewPixelHeight()
     {
-        return $this->preview_pixel_height ?? 0;
+        return isset($this->preview_pixel_height) ? $this->preview_pixel_height : 0;
     }
 
     public function hasPreviewPixelHeight()
@@ -288,7 +290,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPreviewImageUrl()
     {
-        return $this->preview_image_url ?? '';
+        return isset($this->preview_image_url) ? $this->preview_image_url : '';
     }
 
     public function hasPreviewImageUrl()
@@ -351,7 +353,7 @@ class ImageAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()

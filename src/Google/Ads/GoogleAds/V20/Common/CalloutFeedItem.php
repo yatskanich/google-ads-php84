@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a callout extension.
@@ -46,7 +48,7 @@ class CalloutFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCalloutText()
     {
-        return $this->callout_text ?? '';
+        return isset($this->callout_text) ? $this->callout_text : '';
     }
 
     public function hasCalloutText()

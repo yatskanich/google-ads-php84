@@ -111,6 +111,3 @@ class AdGroupFeedError
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdGroupFeedError::class, \Google\Ads\GoogleAds\V20\Errors\AdGroupFeedErrorEnum_AdGroupFeedError::class);
-

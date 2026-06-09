@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Local Services Document with read only accessible data.
@@ -43,7 +45,7 @@ class LocalServicesDocumentReadOnly extends \Google\Protobuf\Internal\Message
      */
     public function getDocumentUrl()
     {
-        return $this->document_url ?? '';
+        return isset($this->document_url) ? $this->document_url : '';
     }
 
     public function hasDocumentUrl()

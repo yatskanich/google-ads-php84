@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation\CampaignBudgetRecommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The impact estimates for a given budget amount.
@@ -53,7 +55,7 @@ class CampaignBudgetRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getBudgetAmountMicros()
     {
-        return $this->budget_amount_micros ?? 0;
+        return isset($this->budget_amount_micros) ? $this->budget_amount_micros : 0;
     }
 
     public function hasBudgetAmountMicros()
@@ -120,7 +122,4 @@ class CampaignBudgetRecommendationOption extends \Google\Protobuf\Internal\Messa
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CampaignBudgetRecommendationOption::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_CampaignBudgetRecommendation_CampaignBudgetRecommendationOption::class);
 

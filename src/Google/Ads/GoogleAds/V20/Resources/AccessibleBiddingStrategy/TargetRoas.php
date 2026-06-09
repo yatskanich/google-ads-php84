@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AccessibleBiddingStrategy;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An automated bidding strategy that helps you maximize revenue while
@@ -47,7 +49,7 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return $this->target_roas ?? 0.0;
+        return isset($this->target_roas) ? $this->target_roas : 0.0;
     }
 
     public function hasTargetRoas()
@@ -77,7 +79,4 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetRoas::class, \Google\Ads\GoogleAds\V20\Resources\AccessibleBiddingStrategy_TargetRoas::class);
 

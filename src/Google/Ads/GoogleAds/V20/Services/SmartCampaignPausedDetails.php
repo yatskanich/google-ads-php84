@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details related to paused Smart campaigns.
@@ -49,7 +51,7 @@ class SmartCampaignPausedDetails extends \Google\Protobuf\Internal\Message
      */
     public function getPausedDateTime()
     {
-        return $this->paused_date_time ?? '';
+        return isset($this->paused_date_time) ? $this->paused_date_time : '';
     }
 
     public function hasPausedDateTime()

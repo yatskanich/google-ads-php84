@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -37,7 +39,7 @@ class CreateProductLinkInvitationRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Resources\ProductLinkInvitation $productLinkInvitation): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setProductLinkInvitation($productLinkInvitation);
     }

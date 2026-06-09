@@ -23,21 +23,21 @@ require __DIR__ . '/../../vendor/autoload.php';
 use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\HotelClassInfo;
-use Google\Ads\GoogleAds\V20\Common\HotelCountryRegionInfo;
-use Google\Ads\GoogleAds\V20\Common\ListingDimensionInfo;
-use Google\Ads\GoogleAds\V20\Common\ListingGroupInfo;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupStatusEnum\AdGroupStatus;
-use Google\Ads\GoogleAds\V20\Enums\ListingGroupTypeEnum\ListingGroupType;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion;
-use Google\Ads\GoogleAds\V20\Services\AdGroupCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupCriteriaRequest;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\HotelClassInfo;
+use Google\Ads\GoogleAds\V24\Common\HotelCountryRegionInfo;
+use Google\Ads\GoogleAds\V24\Common\ListingDimensionInfo;
+use Google\Ads\GoogleAds\V24\Common\ListingGroupInfo;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupStatusEnum\AdGroupStatus;
+use Google\Ads\GoogleAds\V24\Enums\ListingGroupTypeEnum\ListingGroupType;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupCriterion;
+use Google\Ads\GoogleAds\V24\Services\AdGroupCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupCriteriaRequest;
 use Google\ApiCore\ApiException;
 
 /**
@@ -55,13 +55,13 @@ use Google\ApiCore\ApiException;
  */
 class AddHotelListingGroupTree
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const string AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const AD_GROUP_ID = 'INSERT_AD_GROUP_ID_HERE';
 
     // Specify the CPC bid micro amount to be set on a created ad group criterion.
     // For simplicity, each ad group criterion will use the below amount equally. In practice, you
     // probably want to use different values for each ad group criterion.
-    private const int PERCENT_CPC_BID_MICRO_AMOUNT = 1000000;
+    private const PERCENT_CPC_BID_MICRO_AMOUNT = 1000000;
 
     /**
      * @var int $nextTempId
@@ -82,18 +82,18 @@ class AddHotelListingGroupTree
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AD_GROUP_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::PERCENT_CPC_BID_MICRO_AMOUNT => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
+        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -365,8 +365,8 @@ class AddHotelListingGroupTree
      */
     private static function createListingGroupInfo(
         int $listingGroupType,
-        ?string $parentCriterionResourceName = null,
-        ?ListingDimensionInfo $caseValue = null
+        string $parentCriterionResourceName = null,
+        ListingDimensionInfo $caseValue = null
     ) {
         $listingGroupInfo = new ListingGroupInfo([
             'type' => $listingGroupType

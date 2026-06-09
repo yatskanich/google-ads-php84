@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * State the hotel is located in.
@@ -43,7 +45,7 @@ class HotelStateInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStateCriterion()
     {
-        return $this->state_criterion ?? '';
+        return isset($this->state_criterion) ? $this->state_criterion : '';
     }
 
     public function hasStateCriterion()

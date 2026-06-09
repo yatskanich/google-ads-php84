@@ -4,10 +4,17 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A user list. This is a list of users a customer may target.
+ * The unique key of a user list consists of the following fields: `id`.
+ * Note that the `name` must also be unique for user lists owned
+ * by a given customer, except in some cases where
+ * `access_reason` is set to `SHARED`. Violating the unique name constraint
+ * produces error: `UserListError.INVALID_NAME`.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.UserList</code>
  */
@@ -37,8 +44,9 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     protected $read_only = null;
     /**
-     * Name of this user list. Depending on its access_reason, the user list name
-     * may not be unique (for example, if access_reason=SHARED)
+     * Name of this user list.
+     * Unique per user list, except in some cases where a user list of the same
+     * name has `access_reason` set to `SHARED`.
      *
      * Generated from protobuf field <code>optional string name = 27;</code>
      */
@@ -67,12 +75,9 @@ class UserList extends \Google\Protobuf\Internal\Message
     /**
      * Number of days a user's cookie stays on your list since its most recent
      * addition to the list. This field must be between 0 and 540 inclusive.
-     * However, for CRM based userlists, this field can be set to 10000 which
-     * means no expiration. Beginning on April 7, 2025, using a value of 10000 to
-     * indicate no expiration will no longer be supported.
-     * This field is ignored for logical_user_list and rule_based_user_list types.
-     * Membership to lists of these types depends on the rules defined by the
-     * lists.
+     * This field is ignored for `logical_user_list` and `rule_based_user_list`
+     * types. Membership to lists of these types depends on the rules defined by
+     * the lists.
      *
      * Generated from protobuf field <code>optional int64 membership_life_span = 30;</code>
      */
@@ -186,8 +191,9 @@ class UserList extends \Google\Protobuf\Internal\Message
      *           lists are not editable.
      *           This field is read-only.
      *     @type string $name
-     *           Name of this user list. Depending on its access_reason, the user list name
-     *           may not be unique (for example, if access_reason=SHARED)
+     *           Name of this user list.
+     *           Unique per user list, except in some cases where a user list of the same
+     *           name has `access_reason` set to `SHARED`.
      *     @type string $description
      *           Description of this user list.
      *     @type int $membership_status
@@ -200,12 +206,9 @@ class UserList extends \Google\Protobuf\Internal\Message
      *     @type int|string $membership_life_span
      *           Number of days a user's cookie stays on your list since its most recent
      *           addition to the list. This field must be between 0 and 540 inclusive.
-     *           However, for CRM based userlists, this field can be set to 10000 which
-     *           means no expiration. Beginning on April 7, 2025, using a value of 10000 to
-     *           indicate no expiration will no longer be supported.
-     *           This field is ignored for logical_user_list and rule_based_user_list types.
-     *           Membership to lists of these types depends on the rules defined by the
-     *           lists.
+     *           This field is ignored for `logical_user_list` and `rule_based_user_list`
+     *           types. Membership to lists of these types depends on the rules defined by
+     *           the lists.
      *     @type int|string $size_for_display
      *           Output only. Estimated number of users in this user list, on the Google
      *           Display Network. This value is null if the number of users has not yet been
@@ -309,7 +312,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -348,7 +351,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getReadOnly()
     {
-        return $this->read_only ?? false;
+        return isset($this->read_only) ? $this->read_only : false;
     }
 
     public function hasReadOnly()
@@ -380,15 +383,16 @@ class UserList extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Name of this user list. Depending on its access_reason, the user list name
-     * may not be unique (for example, if access_reason=SHARED)
+     * Name of this user list.
+     * Unique per user list, except in some cases where a user list of the same
+     * name has `access_reason` set to `SHARED`.
      *
      * Generated from protobuf field <code>optional string name = 27;</code>
      * @return string
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -402,8 +406,9 @@ class UserList extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * Name of this user list. Depending on its access_reason, the user list name
-     * may not be unique (for example, if access_reason=SHARED)
+     * Name of this user list.
+     * Unique per user list, except in some cases where a user list of the same
+     * name has `access_reason` set to `SHARED`.
      *
      * Generated from protobuf field <code>optional string name = 27;</code>
      * @param string $var
@@ -425,7 +430,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return $this->description ?? '';
+        return isset($this->description) ? $this->description : '';
     }
 
     public function hasDescription()
@@ -492,7 +497,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getIntegrationCode()
     {
-        return $this->integration_code ?? '';
+        return isset($this->integration_code) ? $this->integration_code : '';
     }
 
     public function hasIntegrationCode()
@@ -524,19 +529,16 @@ class UserList extends \Google\Protobuf\Internal\Message
     /**
      * Number of days a user's cookie stays on your list since its most recent
      * addition to the list. This field must be between 0 and 540 inclusive.
-     * However, for CRM based userlists, this field can be set to 10000 which
-     * means no expiration. Beginning on April 7, 2025, using a value of 10000 to
-     * indicate no expiration will no longer be supported.
-     * This field is ignored for logical_user_list and rule_based_user_list types.
-     * Membership to lists of these types depends on the rules defined by the
-     * lists.
+     * This field is ignored for `logical_user_list` and `rule_based_user_list`
+     * types. Membership to lists of these types depends on the rules defined by
+     * the lists.
      *
      * Generated from protobuf field <code>optional int64 membership_life_span = 30;</code>
      * @return int|string
      */
     public function getMembershipLifeSpan()
     {
-        return $this->membership_life_span ?? 0;
+        return isset($this->membership_life_span) ? $this->membership_life_span : 0;
     }
 
     public function hasMembershipLifeSpan()
@@ -552,12 +554,9 @@ class UserList extends \Google\Protobuf\Internal\Message
     /**
      * Number of days a user's cookie stays on your list since its most recent
      * addition to the list. This field must be between 0 and 540 inclusive.
-     * However, for CRM based userlists, this field can be set to 10000 which
-     * means no expiration. Beginning on April 7, 2025, using a value of 10000 to
-     * indicate no expiration will no longer be supported.
-     * This field is ignored for logical_user_list and rule_based_user_list types.
-     * Membership to lists of these types depends on the rules defined by the
-     * lists.
+     * This field is ignored for `logical_user_list` and `rule_based_user_list`
+     * types. Membership to lists of these types depends on the rules defined by
+     * the lists.
      *
      * Generated from protobuf field <code>optional int64 membership_life_span = 30;</code>
      * @param int|string $var
@@ -582,7 +581,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getSizeForDisplay()
     {
-        return $this->size_for_display ?? 0;
+        return isset($this->size_for_display) ? $this->size_for_display : 0;
     }
 
     public function hasSizeForDisplay()
@@ -654,7 +653,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getSizeForSearch()
     {
-        return $this->size_for_search ?? 0;
+        return isset($this->size_for_search) ? $this->size_for_search : 0;
     }
 
     public function hasSizeForSearch()
@@ -843,7 +842,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getEligibleForSearch()
     {
-        return $this->eligible_for_search ?? false;
+        return isset($this->eligible_for_search) ? $this->eligible_for_search : false;
     }
 
     public function hasEligibleForSearch()
@@ -881,7 +880,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getEligibleForDisplay()
     {
-        return $this->eligible_for_display ?? false;
+        return isset($this->eligible_for_display) ? $this->eligible_for_display : false;
     }
 
     public function hasEligibleForDisplay()
@@ -922,7 +921,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getMatchRatePercentage()
     {
-        return $this->match_rate_percentage ?? 0;
+        return isset($this->match_rate_percentage) ? $this->match_rate_percentage : 0;
     }
 
     public function hasMatchRatePercentage()

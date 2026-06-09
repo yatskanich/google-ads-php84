@@ -24,41 +24,42 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\AdImageAsset;
-use Google\Ads\GoogleAds\V20\Common\AdTextAsset;
-use Google\Ads\GoogleAds\V20\Common\ImageAsset;
-use Google\Ads\GoogleAds\V20\Common\ManualCpc;
-use Google\Ads\GoogleAds\V20\Common\ResponsiveDisplayAdInfo;
-use Google\Ads\GoogleAds\V20\Common\UserListInfo;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupStatusEnum\AdGroupStatus;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\AssetTypeEnum\AssetType;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Enums\DisplayAdFormatSettingEnum\DisplayAdFormatSetting;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Ad;
-use Google\Ads\GoogleAds\V20\Resources\AdGroup;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupAd;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion;
-use Google\Ads\GoogleAds\V20\Resources\Asset;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\Campaign\ShoppingSetting;
-use Google\Ads\GoogleAds\V20\Services\AdGroupAdOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupOperation;
-use Google\Ads\GoogleAds\V20\Services\AssetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupCriteriaRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAdGroupsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateAssetResult;
-use Google\Ads\GoogleAds\V20\Services\MutateAssetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignsRequest;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\AdImageAsset;
+use Google\Ads\GoogleAds\V24\Common\AdTextAsset;
+use Google\Ads\GoogleAds\V24\Common\ImageAsset;
+use Google\Ads\GoogleAds\V24\Common\ManualCpc;
+use Google\Ads\GoogleAds\V24\Common\ResponsiveDisplayAdInfo;
+use Google\Ads\GoogleAds\V24\Common\UserListInfo;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupStatusEnum\AdGroupStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\AssetTypeEnum\AssetType;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\DisplayAdFormatSettingEnum\DisplayAdFormatSetting;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Ad;
+use Google\Ads\GoogleAds\V24\Resources\AdGroup;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupAd;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupCriterion;
+use Google\Ads\GoogleAds\V24\Resources\Asset;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\ShoppingSetting;
+use Google\Ads\GoogleAds\V24\Services\AdGroupAdOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupOperation;
+use Google\Ads\GoogleAds\V24\Services\AssetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupAdsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupCriteriaRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAdGroupsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateAssetResult;
+use Google\Ads\GoogleAds\V24\Services\MutateAssetsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignsRequest;
 use Google\ApiCore\ApiException;
 
 /**
@@ -68,16 +69,16 @@ use Google\ApiCore\ApiException;
  */
 class AddMerchantCenterDynamicRemarketingCampaign
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const string MERCHANT_CENTER_ACCOUNT_ID = 'INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE';
-    private const string CAMPAIGN_BUDGET_ID = 'INSERT_CAMPAIGN_BUDGET_ID_HERE';
-    private const string USER_LIST_ID = 'INSERT_USER_LIST_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const MERCHANT_CENTER_ACCOUNT_ID = 'INSERT_MERCHANT_CENTER_ACCOUNT_ID_HERE';
+    private const CAMPAIGN_BUDGET_ID = 'INSERT_CAMPAIGN_BUDGET_ID_HERE';
+    private const USER_LIST_ID = 'INSERT_USER_LIST_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::MERCHANT_CENTER_ACCOUNT_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_BUDGET_ID => GetOpt::REQUIRED_ARGUMENT,
@@ -85,11 +86,11 @@ class AddMerchantCenterDynamicRemarketingCampaign
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()
+        $googleAdsClient = (new GoogleAdsClientBuilder())
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -196,6 +197,9 @@ class AddMerchantCenterDynamicRemarketingCampaign
             'status' => CampaignStatus::PAUSED,
             'campaign_budget' => ResourceNames::forCampaignBudget($customerId, $campaignBudgetId),
             'manual_cpc' => new ManualCpc(),
+            // Declare whether or not this campaign serves political ads targeting the EU.
+            'contains_eu_political_advertising' =>
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING
             // This connects the campaign to the merchant center account.
             'shopping_setting' => $shoppingSettings
         ]);

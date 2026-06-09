@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Category bids in LocalServicesReportingCampaignSettings.
@@ -68,7 +70,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return $this->category_id ?? '';
+        return isset($this->category_id) ? $this->category_id : '';
     }
 
     public function hasCategoryId()
@@ -107,7 +109,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getManualCpaBidMicros()
     {
-        return $this->manual_cpa_bid_micros ?? 0;
+        return isset($this->manual_cpa_bid_micros) ? $this->manual_cpa_bid_micros : 0;
     }
 
     public function hasManualCpaBidMicros()
@@ -146,7 +148,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaBidMicros()
     {
-        return $this->target_cpa_bid_micros ?? 0;
+        return isset($this->target_cpa_bid_micros) ? $this->target_cpa_bid_micros : 0;
     }
 
     public function hasTargetCpaBidMicros()
@@ -176,7 +178,4 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CategoryBid::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_CategoryBid::class);
 

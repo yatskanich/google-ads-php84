@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A payments account, which can be used to set up billing for an Ads customer.
@@ -135,7 +137,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsAccountId()
     {
-        return $this->payments_account_id ?? '';
+        return isset($this->payments_account_id) ? $this->payments_account_id : '';
     }
 
     public function hasPaymentsAccountId()
@@ -171,7 +173,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -209,7 +211,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -248,7 +250,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getPaymentsProfileId()
     {
-        return $this->payments_profile_id ?? '';
+        return isset($this->payments_profile_id) ? $this->payments_profile_id : '';
     }
 
     public function hasPaymentsProfileId()
@@ -287,7 +289,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getSecondaryPaymentsProfileId()
     {
-        return $this->secondary_payments_profile_id ?? '';
+        return isset($this->secondary_payments_profile_id) ? $this->secondary_payments_profile_id : '';
     }
 
     public function hasSecondaryPaymentsProfileId()
@@ -325,7 +327,7 @@ class PaymentsAccount extends \Google\Protobuf\Internal\Message
      */
     public function getPayingManagerCustomer()
     {
-        return $this->paying_manager_customer ?? '';
+        return isset($this->paying_manager_customer) ? $this->paying_manager_customer : '';
     }
 
     public function hasPayingManagerCustomer()

@@ -111,6 +111,3 @@ class SurveyDissatisfiedReason
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SurveyDissatisfiedReason::class, \Google\Ads\GoogleAds\V20\Enums\LocalServicesLeadSurveyDissatisfiedReasonEnum_SurveyDissatisfiedReason::class);
-

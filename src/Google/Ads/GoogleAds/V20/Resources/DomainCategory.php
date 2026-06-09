@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A category generated automatically by crawling a domain. If a campaign uses
@@ -162,7 +164,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return $this->campaign ?? '';
+        return isset($this->campaign) ? $this->campaign : '';
     }
 
     public function hasCampaign()
@@ -200,7 +202,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getCategory()
     {
-        return $this->category ?? '';
+        return isset($this->category) ? $this->category : '';
     }
 
     public function hasCategory()
@@ -242,7 +244,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return $this->language_code ?? '';
+        return isset($this->language_code) ? $this->language_code : '';
     }
 
     public function hasLanguageCode()
@@ -283,7 +285,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getDomain()
     {
-        return $this->domain ?? '';
+        return isset($this->domain) ? $this->domain : '';
     }
 
     public function hasDomain()
@@ -320,7 +322,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getCoverageFraction()
     {
-        return $this->coverage_fraction ?? 0.0;
+        return isset($this->coverage_fraction) ? $this->coverage_fraction : 0.0;
     }
 
     public function hasCoverageFraction()
@@ -358,7 +360,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryRank()
     {
-        return $this->category_rank ?? 0;
+        return isset($this->category_rank) ? $this->category_rank : 0;
     }
 
     public function hasCategoryRank()
@@ -396,7 +398,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getHasChildren()
     {
-        return $this->has_children ?? false;
+        return isset($this->has_children) ? $this->has_children : false;
     }
 
     public function hasHasChildren()
@@ -432,7 +434,7 @@ class DomainCategory extends \Google\Protobuf\Internal\Message
      */
     public function getRecommendedCpcBidMicros()
     {
-        return $this->recommended_cpc_bid_micros ?? 0;
+        return isset($this->recommended_cpc_bid_micros) ? $this->recommended_cpc_bid_micros : 0;
     }
 
     public function hasRecommendedCpcBidMicros()

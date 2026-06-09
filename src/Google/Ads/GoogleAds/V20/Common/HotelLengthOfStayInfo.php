@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Criterion for length of hotel stay in nights.
@@ -51,7 +53,7 @@ class HotelLengthOfStayInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMinNights()
     {
-        return $this->min_nights ?? 0;
+        return isset($this->min_nights) ? $this->min_nights : 0;
     }
 
     public function hasMinNights()
@@ -87,7 +89,7 @@ class HotelLengthOfStayInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMaxNights()
     {
-        return $this->max_nights ?? 0;
+        return isset($this->max_nights) ? $this->max_nights : 0;
     }
 
     public function hasMaxNights()

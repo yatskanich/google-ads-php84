@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Maximize Clicks Bidding Strategy.
@@ -85,7 +87,7 @@ class MaximizeClicksBiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidCeilingMicros()
     {
-        return $this->max_cpc_bid_ceiling_micros ?? 0;
+        return isset($this->max_cpc_bid_ceiling_micros) ? $this->max_cpc_bid_ceiling_micros : 0;
     }
 
     public function hasMaxCpcBidCeilingMicros()

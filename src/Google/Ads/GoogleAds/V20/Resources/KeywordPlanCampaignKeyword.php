@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Keyword Plan Campaign keyword.
@@ -120,7 +122,7 @@ class KeywordPlanCampaignKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getKeywordPlanCampaign()
     {
-        return $this->keyword_plan_campaign ?? '';
+        return isset($this->keyword_plan_campaign) ? $this->keyword_plan_campaign : '';
     }
 
     public function hasKeywordPlanCampaign()
@@ -156,7 +158,7 @@ class KeywordPlanCampaignKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -192,7 +194,7 @@ class KeywordPlanCampaignKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return $this->text ?? '';
+        return isset($this->text) ? $this->text : '';
     }
 
     public function hasText()
@@ -255,7 +257,7 @@ class KeywordPlanCampaignKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return $this->negative ?? false;
+        return isset($this->negative) ? $this->negative : false;
     }
 
     public function hasNegative()

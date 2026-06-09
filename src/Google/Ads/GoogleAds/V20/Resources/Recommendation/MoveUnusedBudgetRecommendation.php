@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The move unused budget recommendation.
@@ -51,7 +53,7 @@ class MoveUnusedBudgetRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getExcessCampaignBudget()
     {
-        return $this->excess_campaign_budget ?? '';
+        return isset($this->excess_campaign_budget) ? $this->excess_campaign_budget : '';
     }
 
     public function hasExcessCampaignBudget()
@@ -116,7 +118,4 @@ class MoveUnusedBudgetRecommendation extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MoveUnusedBudgetRecommendation::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_MoveUnusedBudgetRecommendation::class);
 

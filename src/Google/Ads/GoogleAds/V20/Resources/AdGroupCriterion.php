@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An ad group criterion.
@@ -279,12 +281,12 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      *           Output only. Serving status of the criterion.
      *     @type int $approval_status
      *           Output only. Approval status of the criterion.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $disapproval_reasons
+     *     @type string[] $disapproval_reasons
      *           Output only. List of disapproval reasons of the criterion.
      *           The different reasons for disapproving a criterion can be found here:
      *           https://support.google.com/adspolicy/answer/6008942
      *           This field is read-only.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $labels
+     *     @type string[] $labels
      *           Output only. The resource names of labels attached to this ad group
      *           criterion.
      *     @type float $bid_modifier
@@ -319,21 +321,21 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      *           Output only. Source of the effective Percent CPC bid.
      *     @type \Google\Ads\GoogleAds\V20\Resources\AdGroupCriterion\PositionEstimates $position_estimates
      *           Output only. Estimates for criterion bids at various positions.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $final_urls
+     *     @type string[] $final_urls
      *           The list of possible final URLs after all cross-domain redirects for the
      *           ad.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $final_mobile_urls
+     *     @type string[] $final_mobile_urls
      *           The list of possible final mobile URLs after all cross-domain redirects.
      *     @type string $final_url_suffix
      *           URL template for appending params to final URL.
      *     @type string $tracking_url_template
      *           The URL template for constructing a tracking URL.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $url_custom_parameters
+     *     @type \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $url_custom_parameters
      *           The list of mappings used to substitute custom parameter tags in a
      *           `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *     @type int $primary_status
      *           Output only. The primary status for the ad group criterion.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $primary_status_reasons
+     *     @type int[] $primary_status_reasons
      *           Output only. The primary status reasons for the ad group criterion.
      *     @type \Google\Ads\GoogleAds\V20\Common\KeywordInfo $keyword
      *           Immutable. Keyword.
@@ -427,7 +429,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionId()
     {
-        return $this->criterion_id ?? 0;
+        return isset($this->criterion_id) ? $this->criterion_id : 0;
     }
 
     public function hasCriterionId()
@@ -570,7 +572,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return $this->ad_group ?? '';
+        return isset($this->ad_group) ? $this->ad_group : '';
     }
 
     public function hasAdGroup()
@@ -634,7 +636,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return $this->negative ?? false;
+        return isset($this->negative) ? $this->negative : false;
     }
 
     public function hasNegative()
@@ -723,7 +725,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * This field is read-only.
      *
      * Generated from protobuf field <code>repeated string disapproval_reasons = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getDisapprovalReasons()
     {
@@ -737,7 +739,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * This field is read-only.
      *
      * Generated from protobuf field <code>repeated string disapproval_reasons = 59 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setDisapprovalReasons($var)
@@ -753,7 +755,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * criterion.
      *
      * Generated from protobuf field <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getLabels()
     {
@@ -765,7 +767,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * criterion.
      *
      * Generated from protobuf field <code>repeated string labels = 60 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setLabels($var)
@@ -785,7 +787,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getBidModifier()
     {
-        return $this->bid_modifier ?? 0.0;
+        return isset($this->bid_modifier) ? $this->bid_modifier : 0.0;
     }
 
     public function hasBidModifier()
@@ -822,7 +824,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return $this->cpc_bid_micros ?? 0;
+        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
     }
 
     public function hasCpcBidMicros()
@@ -858,7 +860,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCpmBidMicros()
     {
-        return $this->cpm_bid_micros ?? 0;
+        return isset($this->cpm_bid_micros) ? $this->cpm_bid_micros : 0;
     }
 
     public function hasCpmBidMicros()
@@ -894,7 +896,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCpvBidMicros()
     {
-        return $this->cpv_bid_micros ?? 0;
+        return isset($this->cpv_bid_micros) ? $this->cpv_bid_micros : 0;
     }
 
     public function hasCpvBidMicros()
@@ -932,7 +934,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getPercentCpcBidMicros()
     {
-        return $this->percent_cpc_bid_micros ?? 0;
+        return isset($this->percent_cpc_bid_micros) ? $this->percent_cpc_bid_micros : 0;
     }
 
     public function hasPercentCpcBidMicros()
@@ -970,7 +972,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCpcBidMicros()
     {
-        return $this->effective_cpc_bid_micros ?? 0;
+        return isset($this->effective_cpc_bid_micros) ? $this->effective_cpc_bid_micros : 0;
     }
 
     public function hasEffectiveCpcBidMicros()
@@ -1007,7 +1009,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCpmBidMicros()
     {
-        return $this->effective_cpm_bid_micros ?? 0;
+        return isset($this->effective_cpm_bid_micros) ? $this->effective_cpm_bid_micros : 0;
     }
 
     public function hasEffectiveCpmBidMicros()
@@ -1044,7 +1046,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCpvBidMicros()
     {
-        return $this->effective_cpv_bid_micros ?? 0;
+        return isset($this->effective_cpv_bid_micros) ? $this->effective_cpv_bid_micros : 0;
     }
 
     public function hasEffectiveCpvBidMicros()
@@ -1080,7 +1082,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getEffectivePercentCpcBidMicros()
     {
-        return $this->effective_percent_cpc_bid_micros ?? 0;
+        return isset($this->effective_percent_cpc_bid_micros) ? $this->effective_percent_cpc_bid_micros : 0;
     }
 
     public function hasEffectivePercentCpcBidMicros()
@@ -1253,7 +1255,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * ad.
      *
      * Generated from protobuf field <code>repeated string final_urls = 70;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFinalUrls()
     {
@@ -1265,7 +1267,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * ad.
      *
      * Generated from protobuf field <code>repeated string final_urls = 70;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFinalUrls($var)
@@ -1280,7 +1282,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * The list of possible final mobile URLs after all cross-domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_mobile_urls = 71;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFinalMobileUrls()
     {
@@ -1291,7 +1293,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * The list of possible final mobile URLs after all cross-domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_mobile_urls = 71;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFinalMobileUrls($var)
@@ -1310,7 +1312,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return $this->final_url_suffix ?? '';
+        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
     }
 
     public function hasFinalUrlSuffix()
@@ -1346,7 +1348,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return $this->tracking_url_template ?? '';
+        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -1379,7 +1381,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 14;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\CustomParameter>
      */
     public function getUrlCustomParameters()
     {
@@ -1391,7 +1393,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 14;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $var
      * @return $this
      */
     public function setUrlCustomParameters($var)
@@ -1410,7 +1412,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getPrimaryStatus()
     {
-        return $this->primary_status ?? 0;
+        return isset($this->primary_status) ? $this->primary_status : 0;
     }
 
     public function hasPrimaryStatus()
@@ -1442,7 +1444,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * Output only. The primary status reasons for the ad group criterion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdGroupCriterionPrimaryStatusReasonEnum.AdGroupCriterionPrimaryStatusReason primary_status_reasons = 86 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getPrimaryStatusReasons()
     {
@@ -1453,7 +1455,7 @@ class AdGroupCriterion extends \Google\Protobuf\Internal\Message
      * Output only. The primary status reasons for the ad group criterion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdGroupCriterionPrimaryStatusReasonEnum.AdGroupCriterionPrimaryStatusReason primary_status_reasons = 86 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setPrimaryStatusReasons($var)

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A channel-level aggregate asset view that shows where the asset is linked,
@@ -110,7 +112,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAdvertisingChannelType()
     {
-        return $this->advertising_channel_type ?? 0;
+        return isset($this->advertising_channel_type) ? $this->advertising_channel_type : 0;
     }
 
     public function hasAdvertisingChannelType()
@@ -146,7 +148,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return $this->asset ?? '';
+        return isset($this->asset) ? $this->asset : '';
     }
 
     public function hasAsset()
@@ -182,7 +184,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAssetSource()
     {
-        return $this->asset_source ?? 0;
+        return isset($this->asset_source) ? $this->asset_source : 0;
     }
 
     public function hasAssetSource()
@@ -218,7 +220,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getFieldType()
     {
-        return $this->field_type ?? 0;
+        return isset($this->field_type) ? $this->field_type : 0;
     }
 
     public function hasFieldType()

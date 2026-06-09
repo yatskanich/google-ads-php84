@@ -25,42 +25,46 @@ use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\AudienceInfo;
-use Google\Ads\GoogleAds\V20\Common\ImageAsset;
-use Google\Ads\GoogleAds\V20\Common\LanguageInfo;
-use Google\Ads\GoogleAds\V20\Common\LocationInfo;
-use Google\Ads\GoogleAds\V20\Common\MaximizeConversionValue;
-use Google\Ads\GoogleAds\V20\Common\TextAsset;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\AssetFieldTypeEnum\AssetFieldType;
-use Google\Ads\GoogleAds\V20\Enums\AssetGroupStatusEnum\AssetGroupStatus;
-use Google\Ads\GoogleAds\V20\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Asset;
-use Google\Ads\GoogleAds\V20\Resources\AssetGroup;
-use Google\Ads\GoogleAds\V20\Resources\AssetGroupAsset;
-use Google\Ads\GoogleAds\V20\Resources\AssetGroupSignal;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\CampaignAsset;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Resources\CampaignCriterion;
-use Google\Ads\GoogleAds\V20\Services\AssetGroupAssetOperation;
-use Google\Ads\GoogleAds\V20\Services\AssetGroupOperation;
-use Google\Ads\GoogleAds\V20\Services\AssetGroupSignalOperation;
-use Google\Ads\GoogleAds\V20\Services\AssetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignAssetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateOperationResponse;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\AudienceInfo;
+use Google\Ads\GoogleAds\V24\Common\ImageAsset;
+use Google\Ads\GoogleAds\V24\Common\LanguageInfo;
+use Google\Ads\GoogleAds\V24\Common\LocationInfo;
+use Google\Ads\GoogleAds\V24\Common\MaximizeConversionValue;
+use Google\Ads\GoogleAds\V24\Common\TextAsset;
+use Google\Ads\GoogleAds\V24\Enums\AssetAutomationTypeEnum\AssetAutomationType;
+use Google\Ads\GoogleAds\V24\Enums\AssetAutomationStatusEnum\AssetAutomationStatus;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType;
+use Google\Ads\GoogleAds\V24\Enums\AssetGroupStatusEnum\AssetGroupStatus;
+use Google\Ads\GoogleAds\V24\Enums\BudgetDeliveryMethodEnum\BudgetDeliveryMethod;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Asset;
+use Google\Ads\GoogleAds\V24\Resources\AssetGroup;
+use Google\Ads\GoogleAds\V24\Resources\AssetGroupAsset;
+use Google\Ads\GoogleAds\V24\Resources\AssetGroupSignal;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\Campaign\AssetAutomationSetting;
+use Google\Ads\GoogleAds\V24\Resources\CampaignAsset;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Resources\CampaignCriterion;
+use Google\Ads\GoogleAds\V24\Services\AssetGroupAssetOperation;
+use Google\Ads\GoogleAds\V24\Services\AssetGroupOperation;
+use Google\Ads\GoogleAds\V24\Services\AssetGroupSignalOperation;
+use Google\Ads\GoogleAds\V24\Services\AssetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignAssetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateGoogleAdsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateGoogleAdsResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateOperationResponse;
 use Google\ApiCore\ApiException;
 use Google\ApiCore\Serializer;
 
@@ -80,11 +84,11 @@ use Google\ApiCore\Serializer;
  */
 class AddPerformanceMaxCampaign
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
     // Optional: An audience ID to use to improve the targeting of the Performance Max campaign.
-    private const null AUDIENCE_ID = null;
+    private const AUDIENCE_ID = null;
     // Optional: Indicates whether the created campaign is enabled for brand guidelines.
-    private const bool BRAND_GUIDELINES_ENABLED = false;
+    private const BRAND_GUIDELINES_ENABLED = true;
 
     // We specify temporary IDs that are specific to a single mutate request.
     // Temporary IDs are always negative and unique within one mutate request.
@@ -93,9 +97,9 @@ class AddPerformanceMaxCampaign
     // for further details.
     //
     // These temporary IDs are fixed because they are used in multiple places.
-    private const int BUDGET_TEMPORARY_ID = -1;
-    private const int PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID = -2;
-    private const int ASSET_GROUP_TEMPORARY_ID = -3;
+    private const BUDGET_TEMPORARY_ID = -1;
+    private const PERFORMANCE_MAX_CAMPAIGN_TEMPORARY_ID = -2;
+    private const ASSET_GROUP_TEMPORARY_ID = -3;
 
     // There are also entities that will be created in the same request but do not need to be fixed
     // temporary IDs because they are referenced only once.
@@ -106,18 +110,18 @@ class AddPerformanceMaxCampaign
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::AUDIENCE_ID => GetOpt::OPTIONAL_ARGUMENT,
             ArgumentNames::BRAND_GUIDELINES_ENABLED => GetOpt::OPTIONAL_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()
+        $googleAdsClient = (new GoogleAdsClientBuilder())
             ->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
@@ -321,23 +325,32 @@ class AddPerformanceMaxCampaign
                         'target_roas' => 3.5
                     ]),
 
-                    // Sets the Final URL expansion opt out. This flag is specific to
-                    // Performance Max campaigns. If opted out (true), only the final URLs in
-                    // the asset group or URLs specified in the advertiser's Google Merchant
-                    // Center or business data feeds are targeted.
-                    // If opted in (false), the entire domain will be targeted. For best
-                    // results, set this value to false to opt in and allow URL expansions. You
-                    // can optionally add exclusions to limit traffic to parts of your website.
-                    'url_expansion_opt_out' => false,
+                    // [START add_pmax_asset_automation_settings]
+                    'asset_automation_settings' => [
+                        new AssetAutomationSetting([
+                            'asset_automation_type' => AssetAutomationType::TEXT_ASSET_AUTOMATION,
+                            'asset_automation_status' => AssetAutomationStatus::OPTED_IN
+                        ]),
+                        new AssetAutomationSetting([
+                            'asset_automation_type' => AssetAutomationType::URL_EXPANSION,
+                            'asset_automation_status' => AssetAutomationStatus::OPTED_IN
+                        ])
+                    ],
+                    // [END add_pmax_asset_automation_settings]
+
 
                     // Sets if the campaign is enabled for brand guidelines. For more information
                     // on brand guidelines, see
                     // https://support.google.com/google-ads/answer/14934472.
                     'brand_guidelines_enabled' => $brandGuidelinesEnabled,
 
+                    // Declare whether or not this campaign serves political ads targeting the EU.
+                    'contains_eu_political_advertising' =>
+                        EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING,
+
                     // Optional fields.
-                    'start_date' => date('Ymd', strtotime('+1 day')),
-                    'end_date' => date('Ymd', strtotime('+365 days'))
+                    'start_date_time' => date('Y-m-d 00:00:00', strtotime('+1 day')),
+                    'end_date_time' => date('Y-m-d 23:59:59', strtotime('+365 days'))
                 ])
             ])
         ]);
@@ -676,6 +689,8 @@ class AddPerformanceMaxCampaign
     }
     // [END add_performance_max_campaign_8]
 
+    // [START createAndLinkBrandAssets]
+
     /**
      * Creates a list of MutateOperations that create linked brand assets.
      *
@@ -778,6 +793,8 @@ class AddPerformanceMaxCampaign
 
         return $operations;
     }
+
+    // [END createAndLinkBrandAssets]
 
     /**
      * Creates a list of MutateOperations that may create asset group signals.

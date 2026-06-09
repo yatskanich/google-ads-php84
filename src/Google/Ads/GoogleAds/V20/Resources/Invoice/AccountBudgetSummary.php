@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Invoice;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a summarized account budget billable cost.
@@ -169,7 +171,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      *     @type int|string $invalid_activity_amount_micros
      *           Output only. The pretax invalid activity amount attributable to this
      *           budget in previous months, in micros (negative value).
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Invoice\InvalidActivitySummary>|\Google\Protobuf\Internal\RepeatedField $invalid_activity_summaries
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Invoice\InvalidActivitySummary[] $invalid_activity_summaries
      *           Output only. The list of summarized invalid activity credits with
      *           original linkages.
      * }
@@ -190,7 +192,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCustomer()
     {
-        return $this->customer ?? '';
+        return isset($this->customer) ? $this->customer : '';
     }
 
     public function hasCustomer()
@@ -230,7 +232,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerDescriptiveName()
     {
-        return $this->customer_descriptive_name ?? '';
+        return isset($this->customer_descriptive_name) ? $this->customer_descriptive_name : '';
     }
 
     public function hasCustomerDescriptiveName()
@@ -269,7 +271,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudget()
     {
-        return $this->account_budget ?? '';
+        return isset($this->account_budget) ? $this->account_budget : '';
     }
 
     public function hasAccountBudget()
@@ -308,7 +310,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudgetName()
     {
-        return $this->account_budget_name ?? '';
+        return isset($this->account_budget_name) ? $this->account_budget_name : '';
     }
 
     public function hasAccountBudgetName()
@@ -346,7 +348,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return $this->purchase_order_number ?? '';
+        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -384,7 +386,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getSubtotalAmountMicros()
     {
-        return $this->subtotal_amount_micros ?? 0;
+        return isset($this->subtotal_amount_micros) ? $this->subtotal_amount_micros : 0;
     }
 
     public function hasSubtotalAmountMicros()
@@ -422,7 +424,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmountMicros()
     {
-        return $this->tax_amount_micros ?? 0;
+        return isset($this->tax_amount_micros) ? $this->tax_amount_micros : 0;
     }
 
     public function hasTaxAmountMicros()
@@ -461,7 +463,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountMicros()
     {
-        return $this->total_amount_micros ?? 0;
+        return isset($this->total_amount_micros) ? $this->total_amount_micros : 0;
     }
 
     public function hasTotalAmountMicros()
@@ -541,7 +543,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getServedAmountMicros()
     {
-        return $this->served_amount_micros ?? 0;
+        return isset($this->served_amount_micros) ? $this->served_amount_micros : 0;
     }
 
     public function hasServedAmountMicros()
@@ -580,7 +582,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getBilledAmountMicros()
     {
-        return $this->billed_amount_micros ?? 0;
+        return isset($this->billed_amount_micros) ? $this->billed_amount_micros : 0;
     }
 
     public function hasBilledAmountMicros()
@@ -618,7 +620,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getOverdeliveryAmountMicros()
     {
-        return $this->overdelivery_amount_micros ?? 0;
+        return isset($this->overdelivery_amount_micros) ? $this->overdelivery_amount_micros : 0;
     }
 
     public function hasOverdeliveryAmountMicros()
@@ -656,7 +658,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      */
     public function getInvalidActivityAmountMicros()
     {
-        return $this->invalid_activity_amount_micros ?? 0;
+        return isset($this->invalid_activity_amount_micros) ? $this->invalid_activity_amount_micros : 0;
     }
 
     public function hasInvalidActivityAmountMicros()
@@ -690,7 +692,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      * original linkages.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.InvalidActivitySummary invalid_activity_summaries = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Invoice\InvalidActivitySummary>
      */
     public function getInvalidActivitySummaries()
     {
@@ -702,7 +704,7 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
      * original linkages.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Invoice.InvalidActivitySummary invalid_activity_summaries = 22 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Invoice\InvalidActivitySummary>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Invoice\InvalidActivitySummary[] $var
      * @return $this
      */
     public function setInvalidActivitySummaries($var)
@@ -714,7 +716,4 @@ class AccountBudgetSummary extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AccountBudgetSummary::class, \Google\Ads\GoogleAds\V20\Resources\Invoice_AccountBudgetSummary::class);
 

@@ -4,10 +4,12 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Identifying information for a successfully processed ClickConversion.
+ * Identifying information for a successfully processed `ClickConversion`.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.ClickConversionResult</code>
  */
@@ -20,15 +22,13 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     protected $gclid = null;
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 8;</code>
      */
     protected $gbraid = '';
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 9;</code>
      */
@@ -64,17 +64,15 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      *     @type string $gclid
      *           The Google Click ID (gclid) associated with this conversion.
      *     @type string $gbraid
-     *           The click identifier for clicks associated with app conversions and
-     *           originating from iOS devices starting with iOS14.
+     *           The URL parameter for clicks associated with app conversions.
      *     @type string $wbraid
-     *           The click identifier for clicks associated with web conversions and
-     *           originating from iOS devices starting with iOS14.
+     *           The URL parameter for clicks associated with web conversions.
      *     @type string $conversion_action
      *           Resource name of the conversion action associated with this conversion.
      *     @type string $conversion_date_time
      *           The date time at which the conversion occurred. The format is
      *           "yyyy-mm-dd hh:mm:ss+|-hh:mm", for example, "2019-01-01 12:32:45-08:00".
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $user_identifiers
+     *     @type \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $user_identifiers
      *           The user identifiers associated with this conversion. Only hashed_email and
      *           hashed_phone_number are supported for conversion uploads. The maximum
      *           number of user identifiers for each conversion is 5.
@@ -93,7 +91,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return $this->gclid ?? '';
+        return isset($this->gclid) ? $this->gclid : '';
     }
 
     public function hasGclid()
@@ -122,8 +120,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 8;</code>
      * @return string
@@ -134,8 +131,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 8;</code>
      * @param string $var
@@ -150,8 +146,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 9;</code>
      * @return string
@@ -162,8 +157,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 9;</code>
      * @param string $var
@@ -185,7 +179,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return $this->conversion_action ?? '';
+        return isset($this->conversion_action) ? $this->conversion_action : '';
     }
 
     public function hasConversionAction()
@@ -222,7 +216,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return $this->conversion_date_time ?? '';
+        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
     }
 
     public function hasConversionDateTime()
@@ -257,7 +251,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      * number of user identifiers for each conversion is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>
      */
     public function getUserIdentifiers()
     {
@@ -270,7 +264,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      * number of user identifiers for each conversion is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 7;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $var
      * @return $this
      */
     public function setUserIdentifiers($var)

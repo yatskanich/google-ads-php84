@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A biddable keyword part of an ad group.
@@ -96,7 +98,7 @@ class BiddableKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidMicros()
     {
-        return $this->max_cpc_bid_micros ?? 0;
+        return isset($this->max_cpc_bid_micros) ? $this->max_cpc_bid_micros : 0;
     }
 
     public function hasMaxCpcBidMicros()

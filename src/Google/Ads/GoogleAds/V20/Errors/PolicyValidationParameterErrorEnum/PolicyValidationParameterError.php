@@ -82,6 +82,3 @@ class PolicyValidationParameterError
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PolicyValidationParameterError::class, \Google\Ads\GoogleAds\V20\Errors\PolicyValidationParameterErrorEnum_PolicyValidationParameterError::class);
-

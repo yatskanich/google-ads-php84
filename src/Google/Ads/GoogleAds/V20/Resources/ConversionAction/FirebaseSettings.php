@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\ConversionAction;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Settings related to a Firebase conversion action.
@@ -67,7 +69,7 @@ class FirebaseSettings extends \Google\Protobuf\Internal\Message
      */
     public function getEventName()
     {
-        return $this->event_name ?? '';
+        return isset($this->event_name) ? $this->event_name : '';
     }
 
     public function hasEventName()
@@ -103,7 +105,7 @@ class FirebaseSettings extends \Google\Protobuf\Internal\Message
      */
     public function getProjectId()
     {
-        return $this->project_id ?? '';
+        return isset($this->project_id) ? $this->project_id : '';
     }
 
     public function hasProjectId()
@@ -184,7 +186,4 @@ class FirebaseSettings extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(FirebaseSettings::class, \Google\Ads\GoogleAds\V20\Resources\ConversionAction_FirebaseSettings::class);
 

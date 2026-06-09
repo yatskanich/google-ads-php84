@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Operand of logical user list that consists of a user list.
@@ -43,7 +45,7 @@ class LogicalUserListOperandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return $this->user_list ?? '';
+        return isset($this->user_list) ? $this->user_list : '';
     }
 
     public function hasUserList()

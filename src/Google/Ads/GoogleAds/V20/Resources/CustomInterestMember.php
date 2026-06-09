@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A member of custom interest audience. A member can be a keyword or url.
@@ -81,7 +83,7 @@ class CustomInterestMember extends \Google\Protobuf\Internal\Message
      */
     public function getParameter()
     {
-        return $this->parameter ?? '';
+        return isset($this->parameter) ? $this->parameter : '';
     }
 
     public function hasParameter()

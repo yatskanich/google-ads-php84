@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details related to Smart campaigns that are eligible to serve.
@@ -64,7 +66,7 @@ class SmartCampaignEligibleDetails extends \Google\Protobuf\Internal\Message
      */
     public function getLastImpressionDateTime()
     {
-        return $this->last_impression_date_time ?? '';
+        return isset($this->last_impression_date_time) ? $this->last_impression_date_time : '';
     }
 
     public function hasLastImpressionDateTime()
@@ -105,7 +107,7 @@ class SmartCampaignEligibleDetails extends \Google\Protobuf\Internal\Message
      */
     public function getEndDateTime()
     {
-        return $this->end_date_time ?? '';
+        return isset($this->end_date_time) ? $this->end_date_time : '';
     }
 
     public function hasEndDateTime()

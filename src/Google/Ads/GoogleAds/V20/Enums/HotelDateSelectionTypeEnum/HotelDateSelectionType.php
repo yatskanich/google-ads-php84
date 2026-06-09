@@ -74,6 +74,3 @@ class HotelDateSelectionType
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(HotelDateSelectionType::class, \Google\Ads\GoogleAds\V20\Enums\HotelDateSelectionTypeEnum_HotelDateSelectionType::class);
-

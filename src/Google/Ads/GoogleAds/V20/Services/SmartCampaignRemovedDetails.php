@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Details related to removed Smart campaigns.
@@ -49,7 +51,7 @@ class SmartCampaignRemovedDetails extends \Google\Protobuf\Internal\Message
      */
     public function getRemovedDateTime()
     {
-        return $this->removed_date_time ?? '';
+        return isset($this->removed_date_time) ? $this->removed_date_time : '';
     }
 
     public function hasRemovedDateTime()

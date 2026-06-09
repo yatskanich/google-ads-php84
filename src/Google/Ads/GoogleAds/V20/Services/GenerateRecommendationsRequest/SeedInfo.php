@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A keyword seed and a specific url to generate keywords from.
@@ -35,7 +37,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      *
      *     @type string $url_seed
      *           A specific url to generate ideas from, for example: www.example.com/cars.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $keyword_seeds
+     *     @type string[] $keyword_seeds
      *           Optional. Keywords or phrases to generate ideas from, for example: cars
      *           or "car dealership near me".
      * }
@@ -53,7 +55,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUrlSeed()
     {
-        return $this->url_seed ?? '';
+        return isset($this->url_seed) ? $this->url_seed : '';
     }
 
     public function hasUrlSeed()
@@ -86,7 +88,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      * or "car dealership near me".
      *
      * Generated from protobuf field <code>repeated string keyword_seeds = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getKeywordSeeds()
     {
@@ -98,7 +100,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      * or "car dealership near me".
      *
      * Generated from protobuf field <code>repeated string keyword_seeds = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setKeywordSeeds($var)
@@ -110,7 +112,4 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SeedInfo::class, \Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest_SeedInfo::class);
 

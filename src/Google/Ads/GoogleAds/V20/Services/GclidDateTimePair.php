@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Uniquely identifies a conversion that was reported without an order ID
@@ -59,7 +61,7 @@ class GclidDateTimePair extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return $this->gclid ?? '';
+        return isset($this->gclid) ? $this->gclid : '';
     }
 
     public function hasGclid()
@@ -98,7 +100,7 @@ class GclidDateTimePair extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return $this->conversion_date_time ?? '';
+        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
     }
 
     public function hasConversionDateTime()

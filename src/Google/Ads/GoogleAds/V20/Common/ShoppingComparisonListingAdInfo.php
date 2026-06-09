@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Shopping Comparison Listing ad.
@@ -46,7 +48,7 @@ class ShoppingComparisonListingAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHeadline()
     {
-        return $this->headline ?? '';
+        return isset($this->headline) ? $this->headline : '';
     }
 
     public function hasHeadline()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Information identifying a successfully processed ConversionAdjustment.
@@ -142,7 +144,7 @@ class ConversionAdjustmentResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return $this->conversion_action ?? '';
+        return isset($this->conversion_action) ? $this->conversion_action : '';
     }
 
     public function hasConversionAction()
@@ -180,7 +182,7 @@ class ConversionAdjustmentResult extends \Google\Protobuf\Internal\Message
      */
     public function getAdjustmentDateTime()
     {
-        return $this->adjustment_date_time ?? '';
+        return isset($this->adjustment_date_time) ? $this->adjustment_date_time : '';
     }
 
     public function hasAdjustmentDateTime()

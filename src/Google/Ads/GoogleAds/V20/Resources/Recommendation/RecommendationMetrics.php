@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Weekly account performance metrics. For some recommendation types, these
@@ -86,7 +88,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getImpressions()
     {
-        return $this->impressions ?? 0.0;
+        return isset($this->impressions) ? $this->impressions : 0.0;
     }
 
     public function hasImpressions()
@@ -122,7 +124,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getClicks()
     {
-        return $this->clicks ?? 0.0;
+        return isset($this->clicks) ? $this->clicks : 0.0;
     }
 
     public function hasClicks()
@@ -159,7 +161,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCostMicros()
     {
-        return $this->cost_micros ?? 0;
+        return isset($this->cost_micros) ? $this->cost_micros : 0;
     }
 
     public function hasCostMicros()
@@ -196,7 +198,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getConversions()
     {
-        return $this->conversions ?? 0.0;
+        return isset($this->conversions) ? $this->conversions : 0.0;
     }
 
     public function hasConversions()
@@ -232,7 +234,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getConversionsValue()
     {
-        return $this->conversions_value ?? 0.0;
+        return isset($this->conversions_value) ? $this->conversions_value : 0.0;
     }
 
     public function hasConversionsValue()
@@ -268,7 +270,7 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getVideoViews()
     {
-        return $this->video_views ?? 0.0;
+        return isset($this->video_views) ? $this->video_views : 0.0;
     }
 
     public function hasVideoViews()
@@ -297,7 +299,4 @@ class RecommendationMetrics extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RecommendationMetrics::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_RecommendationMetrics::class);
 

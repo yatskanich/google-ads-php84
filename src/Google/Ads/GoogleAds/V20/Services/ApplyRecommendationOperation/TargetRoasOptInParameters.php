@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Parameters to use when applying a Target ROAS opt-in recommendation.
@@ -57,7 +59,7 @@ class TargetRoasOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return $this->target_roas ?? 0.0;
+        return isset($this->target_roas) ? $this->target_roas : 0.0;
     }
 
     public function hasTargetRoas()
@@ -95,7 +97,7 @@ class TargetRoasOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewCampaignBudgetAmountMicros()
     {
-        return $this->new_campaign_budget_amount_micros ?? 0;
+        return isset($this->new_campaign_budget_amount_micros) ? $this->new_campaign_budget_amount_micros : 0;
     }
 
     public function hasNewCampaignBudgetAmountMicros()
@@ -124,7 +126,4 @@ class TargetRoasOptInParameters extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetRoasOptInParameters::class, \Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation_TargetRoasOptInParameters::class);
 

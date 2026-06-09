@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Insurance status at geo + vertical level.
@@ -74,7 +76,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getGeoCriterionId()
     {
-        return $this->geo_criterion_id ?? 0;
+        return isset($this->geo_criterion_id) ? $this->geo_criterion_id : 0;
     }
 
     public function hasGeoCriterionId()
@@ -116,7 +118,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return $this->category_id ?? '';
+        return isset($this->category_id) ? $this->category_id : '';
     }
 
     public function hasCategoryId()
@@ -155,7 +157,7 @@ class GranularInsuranceStatus extends \Google\Protobuf\Internal\Message
      */
     public function getVerificationStatus()
     {
-        return $this->verification_status ?? 0;
+        return isset($this->verification_status) ? $this->verification_status : 0;
     }
 
     public function hasVerificationStatus()

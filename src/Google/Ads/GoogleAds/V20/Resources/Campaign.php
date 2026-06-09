@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A campaign.
@@ -441,6 +443,23 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.ads.googleads.v20.resources.Campaign.BrandGuidelines brand_guidelines = 98;</code>
      */
     protected $brand_guidelines = null;
+    /**
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     */
+    protected $contains_eu_political_advertising = 0;
+    /**
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     * This field is read-only.
+     *
+     * Generated from protobuf field <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $missing_eu_political_advertising_declaration = false;
     protected $campaign_bidding_strategy;
 
     /**
@@ -466,7 +485,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *           Provides insight into why a campaign is not serving or not serving
      *           optimally. Modification to the campaign and its related entities might take
      *           a while to be reflected in this status.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $primary_status_reasons
+     *     @type int[] $primary_status_reasons
      *           Output only. The primary status reasons of the campaign.
      *           Provides insight into why a campaign is not serving or not serving
      *           optimally. These reasons are aggregated to determine an overall
@@ -494,7 +513,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *           After campaign is created, the field can not be changed.
      *     @type string $tracking_url_template
      *           The URL template for constructing a tracking URL.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $url_custom_parameters
+     *     @type \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $url_custom_parameters
      *           The list of mappings used to substitute custom parameter tags in a
      *           `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *     @type \Google\Ads\GoogleAds\V20\Resources\Campaign\LocalServicesCampaignSettings $local_services_campaign_settings
@@ -528,7 +547,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *           The setting for local campaign.
      *     @type \Google\Ads\GoogleAds\V20\Resources\Campaign\AppCampaignSetting $app_campaign_setting
      *           The setting related to App Campaign.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $labels
+     *     @type string[] $labels
      *           Output only. The resource names of labels attached to this campaign.
      *     @type int $experiment_type
      *           Output only. The type of campaign: normal, draft, or experiment.
@@ -566,7 +585,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *     @type string $final_url_suffix
      *           Suffix used to append query parameters to landing pages that are served
      *           with parallel tracking.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\FrequencyCapEntry>|\Google\Protobuf\Internal\RepeatedField $frequency_caps
+     *     @type \Google\Ads\GoogleAds\V20\Common\FrequencyCapEntry[] $frequency_caps
      *           A list that limits how often each user will see this campaign's ads.
      *     @type int $video_brand_safety_suitability
      *           Brand Safety setting at the individual campaign level. Allows for selecting
@@ -596,11 +615,11 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *           See "About optimization score" at
      *           https://support.google.com/google-ads/answer/9061546.
      *           This field is read-only.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $excluded_parent_asset_field_types
+     *     @type int[] $excluded_parent_asset_field_types
      *           The asset field types that should be excluded from this campaign. Asset
      *           links with these field types will not be inherited by this campaign from
      *           the upper level.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $excluded_parent_asset_set_types
+     *     @type int[] $excluded_parent_asset_set_types
      *           The asset set types that should be excluded from this campaign. Asset set
      *           links with these types will not be inherited by this campaign from
      *           the upper level.
@@ -626,7 +645,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *     @type int $listing_type
      *           Immutable. Listing type of ads served for this campaign.
      *           Field is restricted for usage with Performance Max campaigns.
-     *     @type array<\Google\Ads\GoogleAds\V20\Resources\Campaign\AssetAutomationSetting>|\Google\Protobuf\Internal\RepeatedField $asset_automation_settings
+     *     @type \Google\Ads\GoogleAds\V20\Resources\Campaign\AssetAutomationSetting[] $asset_automation_settings
      *           Contains the opt-in/out status of each AssetAutomationType.
      *           See documentation of each asset automation type enum for default
      *           opt in/out behavior.
@@ -653,6 +672,15 @@ class Campaign extends \Google\Protobuf\Internal\Message
      *           These settings control how your brand appears in automatically generated
      *           assets and formats within this campaign. Note: These settings can only be
      *           used for Performance Max campaigns that have Brand Guidelines enabled.
+     *     @type int $contains_eu_political_advertising
+     *           The advertiser should self-declare whether this campaign contains
+     *           political advertising content targeted towards the European Union.
+     *     @type bool $missing_eu_political_advertising_declaration
+     *           Output only. Indicates whether this campaign is missing a declaration about
+     *           whether it contains political advertising targeted towards the EU and is
+     *           ineligible for any exemptions. If this field is true, use the
+     *           contains_eu_political_advertising field to add the required declaration.
+     *           This field is read-only.
      *     @type string $bidding_strategy
      *           The resource name of the portfolio bidding strategy used by the campaign.
      *     @type \Google\Ads\GoogleAds\V20\Common\Commission $commission
@@ -746,7 +774,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -786,7 +814,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -857,7 +885,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * CampaignPrimaryStatus.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.CampaignPrimaryStatusReasonEnum.CampaignPrimaryStatusReason primary_status_reasons = 82 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getPrimaryStatusReasons()
     {
@@ -871,7 +899,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * CampaignPrimaryStatus.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.CampaignPrimaryStatusReasonEnum.CampaignPrimaryStatusReason primary_status_reasons = 82 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setPrimaryStatusReasons($var)
@@ -1064,7 +1092,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return $this->tracking_url_template ?? '';
+        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -1097,7 +1125,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 12;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\CustomParameter>
      */
     public function getUrlCustomParameters()
     {
@@ -1109,7 +1137,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * `tracking_url_template`, `final_urls`, or `mobile_final_urls`.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 12;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $var
      * @return $this
      */
     public function setUrlCustomParameters($var)
@@ -1666,7 +1694,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * Output only. The resource names of labels attached to this campaign.
      *
      * Generated from protobuf field <code>repeated string labels = 61 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getLabels()
     {
@@ -1677,7 +1705,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * Output only. The resource names of labels attached to this campaign.
      *
      * Generated from protobuf field <code>repeated string labels = 61 [(.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setLabels($var)
@@ -1724,7 +1752,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBaseCampaign()
     {
-        return $this->base_campaign ?? '';
+        return isset($this->base_campaign) ? $this->base_campaign : '';
     }
 
     public function hasBaseCampaign()
@@ -1762,7 +1790,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignBudget()
     {
-        return $this->campaign_budget ?? '';
+        return isset($this->campaign_budget) ? $this->campaign_budget : '';
     }
 
     public function hasCampaignBudget()
@@ -1873,7 +1901,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return $this->start_date ?? '';
+        return isset($this->start_date) ? $this->start_date : '';
     }
 
     public function hasStartDate()
@@ -1910,7 +1938,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignGroup()
     {
-        return $this->campaign_group ?? '';
+        return isset($this->campaign_group) ? $this->campaign_group : '';
     }
 
     public function hasCampaignGroup()
@@ -1949,7 +1977,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return $this->end_date ?? '';
+        return isset($this->end_date) ? $this->end_date : '';
     }
 
     public function hasEndDate()
@@ -1989,7 +2017,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return $this->final_url_suffix ?? '';
+        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
     }
 
     public function hasFinalUrlSuffix()
@@ -2022,7 +2050,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * A list that limits how often each user will see this campaign's ads.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.FrequencyCapEntry frequency_caps = 40;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\FrequencyCapEntry>
      */
     public function getFrequencyCaps()
     {
@@ -2033,7 +2061,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * A list that limits how often each user will see this campaign's ads.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.FrequencyCapEntry frequency_caps = 40;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\FrequencyCapEntry>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\FrequencyCapEntry[] $var
      * @return $this
      */
     public function setFrequencyCaps($var)
@@ -2269,7 +2297,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return $this->optimization_score ?? 0.0;
+        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
     }
 
     public function hasOptimizationScore()
@@ -2310,7 +2338,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * the upper level.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 69;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getExcludedParentAssetFieldTypes()
     {
@@ -2323,7 +2351,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * the upper level.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetFieldTypeEnum.AssetFieldType excluded_parent_asset_field_types = 69;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setExcludedParentAssetFieldTypes($var)
@@ -2347,7 +2375,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * Only LOCATION_SYNC is currently supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetSetTypeEnum.AssetSetType excluded_parent_asset_set_types = 80;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getExcludedParentAssetSetTypes()
     {
@@ -2367,7 +2395,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * Only LOCATION_SYNC is currently supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AssetSetTypeEnum.AssetSetType excluded_parent_asset_set_types = 80;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setExcludedParentAssetSetTypes($var)
@@ -2391,7 +2419,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getUrlExpansionOptOut()
     {
-        return $this->url_expansion_opt_out ?? false;
+        return isset($this->url_expansion_opt_out) ? $this->url_expansion_opt_out : false;
     }
 
     public function hasUrlExpansionOptOut()
@@ -2469,7 +2497,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getHotelPropertyAssetSet()
     {
-        return $this->hotel_property_asset_set ?? '';
+        return isset($this->hotel_property_asset_set) ? $this->hotel_property_asset_set : '';
     }
 
     public function hasHotelPropertyAssetSet()
@@ -2507,7 +2535,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getListingType()
     {
-        return $this->listing_type ?? 0;
+        return isset($this->listing_type) ? $this->listing_type : 0;
     }
 
     public function hasListingType()
@@ -2542,7 +2570,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * opt in/out behavior.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Campaign.AssetAutomationSetting asset_automation_settings = 88;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Resources\Campaign\AssetAutomationSetting>
      */
     public function getAssetAutomationSettings()
     {
@@ -2555,7 +2583,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      * opt in/out behavior.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.resources.Campaign.AssetAutomationSetting asset_automation_settings = 88;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Resources\Campaign\AssetAutomationSetting>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Resources\Campaign\AssetAutomationSetting[] $var
      * @return $this
      */
     public function setAssetAutomationSettings($var)
@@ -2616,7 +2644,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBrandGuidelinesEnabled()
     {
-        return $this->brand_guidelines_enabled ?? false;
+        return isset($this->brand_guidelines_enabled) ? $this->brand_guidelines_enabled : false;
     }
 
     public function hasBrandGuidelinesEnabled()
@@ -2694,6 +2722,68 @@ class Campaign extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Google\Ads\GoogleAds\V20\Resources\Campaign\BrandGuidelines::class);
         $this->brand_guidelines = $var;
+
+        return $this;
+    }
+
+    /**
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @return int
+     */
+    public function getContainsEuPoliticalAdvertising()
+    {
+        return $this->contains_eu_political_advertising;
+    }
+
+    /**
+     * The advertiser should self-declare whether this campaign contains
+     * political advertising content targeted towards the European Union.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 102;</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setContainsEuPoliticalAdvertising($var)
+    {
+        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus::class);
+        $this->contains_eu_political_advertising = $var;
+
+        return $this;
+    }
+
+    /**
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     * This field is read-only.
+     *
+     * Generated from protobuf field <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return bool
+     */
+    public function getMissingEuPoliticalAdvertisingDeclaration()
+    {
+        return $this->missing_eu_political_advertising_declaration;
+    }
+
+    /**
+     * Output only. Indicates whether this campaign is missing a declaration about
+     * whether it contains political advertising targeted towards the EU and is
+     * ineligible for any exemptions. If this field is true, use the
+     * contains_eu_political_advertising field to add the required declaration.
+     * This field is read-only.
+     *
+     * Generated from protobuf field <code>bool missing_eu_political_advertising_declaration = 108 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param bool $var
+     * @return $this
+     */
+    public function setMissingEuPoliticalAdvertisingDeclaration($var)
+    {
+        GPBUtil::checkBool($var);
+        $this->missing_eu_political_advertising_declaration = $var;
 
         return $this;
     }

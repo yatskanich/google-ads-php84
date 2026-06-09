@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Asset automation setting for an AdGroupAd.
@@ -51,7 +53,7 @@ class AdGroupAdAssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationType()
     {
-        return $this->asset_automation_type ?? 0;
+        return isset($this->asset_automation_type) ? $this->asset_automation_type : 0;
     }
 
     public function hasAssetAutomationType()
@@ -87,7 +89,7 @@ class AdGroupAdAssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationStatus()
     {
-        return $this->asset_automation_status ?? 0;
+        return isset($this->asset_automation_status) ? $this->asset_automation_status : 0;
     }
 
     public function hasAssetAutomationStatus()

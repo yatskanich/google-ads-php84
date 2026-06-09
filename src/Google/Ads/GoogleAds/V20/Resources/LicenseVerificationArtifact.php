@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A proto holding information specific to a local services license.
@@ -97,7 +99,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getLicenseType()
     {
-        return $this->license_type ?? '';
+        return isset($this->license_type) ? $this->license_type : '';
     }
 
     public function hasLicenseType()
@@ -133,7 +135,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getLicenseNumber()
     {
-        return $this->license_number ?? '';
+        return isset($this->license_number) ? $this->license_number : '';
     }
 
     public function hasLicenseNumber()
@@ -169,7 +171,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getLicenseeFirstName()
     {
-        return $this->licensee_first_name ?? '';
+        return isset($this->licensee_first_name) ? $this->licensee_first_name : '';
     }
 
     public function hasLicenseeFirstName()
@@ -205,7 +207,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getLicenseeLastName()
     {
-        return $this->licensee_last_name ?? '';
+        return isset($this->licensee_last_name) ? $this->licensee_last_name : '';
     }
 
     public function hasLicenseeLastName()
@@ -241,7 +243,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getRejectionReason()
     {
-        return $this->rejection_reason ?? 0;
+        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
     }
 
     public function hasRejectionReason()
@@ -317,7 +319,7 @@ class LicenseVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationDateTime()
     {
-        return $this->expiration_date_time ?? '';
+        return isset($this->expiration_date_time) ? $this->expiration_date_time : '';
     }
 
     public function hasExpirationDateTime()

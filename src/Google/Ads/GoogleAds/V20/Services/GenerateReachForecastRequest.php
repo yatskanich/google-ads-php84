@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -39,7 +41,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
-     * This field is deprecated in v4 and will eventually be removed.
+     * This field is deprecated and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      *
      * Generated from protobuf field <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -51,7 +53,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
-     * This field replaces the deprecated cookie_frequency_cap field.
+     * This field replaces the deprecated `cookie_frequency_cap` field.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
      */
@@ -126,7 +128,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Services\CampaignDuration $campaignDuration, array $plannedProducts): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setCampaignDuration($campaignDuration)
             ->setPlannedProducts($plannedProducts);
@@ -151,7 +153,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      *           a campaign, it represents the maximum number of times an ad can be shown to
      *           the same user.
      *           If not specified, no cap is applied.
-     *           This field is deprecated in v4 and will eventually be removed.
+     *           This field is deprecated and will eventually be removed.
      *           Use cookie_frequency_cap_setting instead.
      *     @type \Google\Ads\GoogleAds\V20\Services\FrequencyCap $cookie_frequency_cap_setting
      *           Chosen cookie frequency cap to be applied to each planned product.
@@ -159,7 +161,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      *           a campaign, it represents the maximum number of times an ad can be shown to
      *           the same user during a specified time interval.
      *           If not specified, a default of 0 (no cap) is applied.
-     *           This field replaces the deprecated cookie_frequency_cap field.
+     *           This field replaces the deprecated `cookie_frequency_cap` field.
      *     @type int $min_effective_frequency
      *           Chosen minimum effective frequency (the number of times a person was
      *           exposed to the ad) for the reported reach metrics [1-10].
@@ -180,7 +182,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      *           This is planned targeting: execution details might vary based on the
      *           advertising product, consult an implementation specialist.
      *           See specific metrics for details on how targeting affects them.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\PlannedProduct>|\Google\Protobuf\Internal\RepeatedField $planned_products
+     *     @type \Google\Ads\GoogleAds\V20\Services\PlannedProduct[] $planned_products
      *           Required. The products to be forecast.
      *           The max number of allowed planned products is 15.
      *     @type \Google\Ads\GoogleAds\V20\Services\ForecastMetricOptions $forecast_metric_options
@@ -231,7 +233,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -302,7 +304,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
-     * This field is deprecated in v4 and will eventually be removed.
+     * This field is deprecated and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      *
      * Generated from protobuf field <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -310,7 +312,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCookieFrequencyCap()
     {
-        return $this->cookie_frequency_cap ?? 0;
+        return isset($this->cookie_frequency_cap) ? $this->cookie_frequency_cap : 0;
     }
 
     public function hasCookieFrequencyCap()
@@ -329,7 +331,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user.
      * If not specified, no cap is applied.
-     * This field is deprecated in v4 and will eventually be removed.
+     * This field is deprecated and will eventually be removed.
      * Use cookie_frequency_cap_setting instead.
      *
      * Generated from protobuf field <code>optional int32 cookie_frequency_cap = 10;</code>
@@ -350,7 +352,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
-     * This field replaces the deprecated cookie_frequency_cap field.
+     * This field replaces the deprecated `cookie_frequency_cap` field.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
      * @return \Google\Ads\GoogleAds\V20\Services\FrequencyCap|null
@@ -376,7 +378,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * a campaign, it represents the maximum number of times an ad can be shown to
      * the same user during a specified time interval.
      * If not specified, a default of 0 (no cap) is applied.
-     * This field replaces the deprecated cookie_frequency_cap field.
+     * This field replaces the deprecated `cookie_frequency_cap` field.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.services.FrequencyCap cookie_frequency_cap_setting = 8;</code>
      * @param \Google\Ads\GoogleAds\V20\Services\FrequencyCap $var
@@ -402,7 +404,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getMinEffectiveFrequency()
     {
-        return $this->min_effective_frequency ?? 0;
+        return isset($this->min_effective_frequency) ? $this->min_effective_frequency : 0;
     }
 
     public function hasMinEffectiveFrequency()
@@ -531,7 +533,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * The max number of allowed planned products is 15.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\PlannedProduct>
      */
     public function getPlannedProducts()
     {
@@ -543,7 +545,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      * The max number of allowed planned products is 15.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.PlannedProduct planned_products = 7 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\PlannedProduct>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\PlannedProduct[] $var
      * @return $this
      */
     public function setPlannedProducts($var)
@@ -598,7 +600,7 @@ class GenerateReachForecastRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerReachGroup()
     {
-        return $this->customer_reach_group ?? '';
+        return isset($this->customer_reach_group) ? $this->customer_reach_group : '';
     }
 
     public function hasCustomerReachGroup()

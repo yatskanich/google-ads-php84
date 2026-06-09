@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Invoice;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a summarized view at account level.
@@ -195,7 +197,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCustomer()
     {
-        return $this->customer ?? '';
+        return isset($this->customer) ? $this->customer : '';
     }
 
     public function hasCustomer()
@@ -231,7 +233,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getBillingCorrectionSubtotalAmountMicros()
     {
-        return $this->billing_correction_subtotal_amount_micros ?? 0;
+        return isset($this->billing_correction_subtotal_amount_micros) ? $this->billing_correction_subtotal_amount_micros : 0;
     }
 
     public function hasBillingCorrectionSubtotalAmountMicros()
@@ -267,7 +269,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getBillingCorrectionTaxAmountMicros()
     {
-        return $this->billing_correction_tax_amount_micros ?? 0;
+        return isset($this->billing_correction_tax_amount_micros) ? $this->billing_correction_tax_amount_micros : 0;
     }
 
     public function hasBillingCorrectionTaxAmountMicros()
@@ -303,7 +305,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getBillingCorrectionTotalAmountMicros()
     {
-        return $this->billing_correction_total_amount_micros ?? 0;
+        return isset($this->billing_correction_total_amount_micros) ? $this->billing_correction_total_amount_micros : 0;
     }
 
     public function hasBillingCorrectionTotalAmountMicros()
@@ -339,7 +341,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCouponAdjustmentSubtotalAmountMicros()
     {
-        return $this->coupon_adjustment_subtotal_amount_micros ?? 0;
+        return isset($this->coupon_adjustment_subtotal_amount_micros) ? $this->coupon_adjustment_subtotal_amount_micros : 0;
     }
 
     public function hasCouponAdjustmentSubtotalAmountMicros()
@@ -375,7 +377,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCouponAdjustmentTaxAmountMicros()
     {
-        return $this->coupon_adjustment_tax_amount_micros ?? 0;
+        return isset($this->coupon_adjustment_tax_amount_micros) ? $this->coupon_adjustment_tax_amount_micros : 0;
     }
 
     public function hasCouponAdjustmentTaxAmountMicros()
@@ -411,7 +413,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCouponAdjustmentTotalAmountMicros()
     {
-        return $this->coupon_adjustment_total_amount_micros ?? 0;
+        return isset($this->coupon_adjustment_total_amount_micros) ? $this->coupon_adjustment_total_amount_micros : 0;
     }
 
     public function hasCouponAdjustmentTotalAmountMicros()
@@ -447,7 +449,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExcessCreditAdjustmentSubtotalAmountMicros()
     {
-        return $this->excess_credit_adjustment_subtotal_amount_micros ?? 0;
+        return isset($this->excess_credit_adjustment_subtotal_amount_micros) ? $this->excess_credit_adjustment_subtotal_amount_micros : 0;
     }
 
     public function hasExcessCreditAdjustmentSubtotalAmountMicros()
@@ -483,7 +485,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExcessCreditAdjustmentTaxAmountMicros()
     {
-        return $this->excess_credit_adjustment_tax_amount_micros ?? 0;
+        return isset($this->excess_credit_adjustment_tax_amount_micros) ? $this->excess_credit_adjustment_tax_amount_micros : 0;
     }
 
     public function hasExcessCreditAdjustmentTaxAmountMicros()
@@ -519,7 +521,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExcessCreditAdjustmentTotalAmountMicros()
     {
-        return $this->excess_credit_adjustment_total_amount_micros ?? 0;
+        return isset($this->excess_credit_adjustment_total_amount_micros) ? $this->excess_credit_adjustment_total_amount_micros : 0;
     }
 
     public function hasExcessCreditAdjustmentTotalAmountMicros()
@@ -555,7 +557,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getRegulatoryCostsSubtotalAmountMicros()
     {
-        return $this->regulatory_costs_subtotal_amount_micros ?? 0;
+        return isset($this->regulatory_costs_subtotal_amount_micros) ? $this->regulatory_costs_subtotal_amount_micros : 0;
     }
 
     public function hasRegulatoryCostsSubtotalAmountMicros()
@@ -591,7 +593,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getRegulatoryCostsTaxAmountMicros()
     {
-        return $this->regulatory_costs_tax_amount_micros ?? 0;
+        return isset($this->regulatory_costs_tax_amount_micros) ? $this->regulatory_costs_tax_amount_micros : 0;
     }
 
     public function hasRegulatoryCostsTaxAmountMicros()
@@ -627,7 +629,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getRegulatoryCostsTotalAmountMicros()
     {
-        return $this->regulatory_costs_total_amount_micros ?? 0;
+        return isset($this->regulatory_costs_total_amount_micros) ? $this->regulatory_costs_total_amount_micros : 0;
     }
 
     public function hasRegulatoryCostsTotalAmountMicros()
@@ -663,7 +665,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeSubtotalAmountMicros()
     {
-        return $this->export_charge_subtotal_amount_micros ?? 0;
+        return isset($this->export_charge_subtotal_amount_micros) ? $this->export_charge_subtotal_amount_micros : 0;
     }
 
     public function hasExportChargeSubtotalAmountMicros()
@@ -699,7 +701,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeTaxAmountMicros()
     {
-        return $this->export_charge_tax_amount_micros ?? 0;
+        return isset($this->export_charge_tax_amount_micros) ? $this->export_charge_tax_amount_micros : 0;
     }
 
     public function hasExportChargeTaxAmountMicros()
@@ -735,7 +737,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getExportChargeTotalAmountMicros()
     {
-        return $this->export_charge_total_amount_micros ?? 0;
+        return isset($this->export_charge_total_amount_micros) ? $this->export_charge_total_amount_micros : 0;
     }
 
     public function hasExportChargeTotalAmountMicros()
@@ -772,7 +774,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getSubtotalAmountMicros()
     {
-        return $this->subtotal_amount_micros ?? 0;
+        return isset($this->subtotal_amount_micros) ? $this->subtotal_amount_micros : 0;
     }
 
     public function hasSubtotalAmountMicros()
@@ -810,7 +812,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTaxAmountMicros()
     {
-        return $this->tax_amount_micros ?? 0;
+        return isset($this->tax_amount_micros) ? $this->tax_amount_micros : 0;
     }
 
     public function hasTaxAmountMicros()
@@ -849,7 +851,7 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
      */
     public function getTotalAmountMicros()
     {
-        return $this->total_amount_micros ?? 0;
+        return isset($this->total_amount_micros) ? $this->total_amount_micros : 0;
     }
 
     public function hasTotalAmountMicros()
@@ -880,7 +882,4 @@ class AccountSummary extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AccountSummary::class, \Google\Ads\GoogleAds\V20\Resources\Invoice_AccountSummary::class);
 

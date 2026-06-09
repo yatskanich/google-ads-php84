@@ -82,6 +82,3 @@ class OfflineEventUploadClient
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(OfflineEventUploadClient::class, \Google\Ads\GoogleAds\V20\Enums\OfflineEventUploadClientEnum_OfflineEventUploadClient::class);
-

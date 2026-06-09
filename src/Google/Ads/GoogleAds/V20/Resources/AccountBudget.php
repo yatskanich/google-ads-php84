@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An account-level budget. It contains information about the budget itself,
@@ -245,7 +247,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -283,7 +285,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getBillingSetup()
     {
-        return $this->billing_setup ?? '';
+        return isset($this->billing_setup) ? $this->billing_setup : '';
     }
 
     public function hasBillingSetup()
@@ -347,7 +349,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -385,7 +387,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getProposedStartDateTime()
     {
-        return $this->proposed_start_date_time ?? '';
+        return isset($this->proposed_start_date_time) ? $this->proposed_start_date_time : '';
     }
 
     public function hasProposedStartDateTime()
@@ -426,7 +428,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getApprovedStartDateTime()
     {
-        return $this->approved_start_date_time ?? '';
+        return isset($this->approved_start_date_time) ? $this->approved_start_date_time : '';
     }
 
     public function hasApprovedStartDateTime()
@@ -524,7 +526,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return $this->purchase_order_number ?? '';
+        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -561,7 +563,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getNotes()
     {
-        return $this->notes ?? '';
+        return isset($this->notes) ? $this->notes : '';
     }
 
     public function hasNotes()

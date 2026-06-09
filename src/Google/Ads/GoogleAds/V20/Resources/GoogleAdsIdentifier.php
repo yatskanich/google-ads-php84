@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The identifier for Google Ads account.
@@ -52,7 +54,7 @@ class GoogleAdsIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getCustomer()
     {
-        return $this->customer ?? '';
+        return isset($this->customer) ? $this->customer : '';
     }
 
     public function hasCustomer()

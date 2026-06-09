@@ -5,8 +5,8 @@
 namespace Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsRequest;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The brand used to search for top creators.
@@ -24,8 +24,10 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
     private $brand_entities;
     /**
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      *
      * Generated from protobuf field <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
@@ -37,13 +39,15 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
      * @param array $data {
      *     Optional. Data for populating the Message object.
      *
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute>|\Google\Protobuf\Internal\RepeatedField $brand_entities
+     *     @type \Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute[] $brand_entities
      *           Optional. One or more Knowledge Graph Entities that represent the brand
      *           for which to find insights.
      *     @type bool $include_related_topics
      *           Optional. When true, we will expand the search to beyond just the
-     *           entities specified in [brand_entities] to other related knowledge graph
-     *           entities similar to the brand. The default value is `false`.
+     *           entities specified in
+     *           [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     *           to other related knowledge graph entities similar to the brand. The
+     *           default value is `false`.
      * }
      */
     public function __construct($data = NULL) {
@@ -56,7 +60,7 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
      * for which to find insights.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute brand_entities = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute>
      */
     public function getBrandEntities()
     {
@@ -68,7 +72,7 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
      * for which to find insights.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AudienceInsightsAttribute brand_entities = 1 [(.google.api.field_behavior) = OPTIONAL];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AudienceInsightsAttribute[] $var
      * @return $this
      */
     public function setBrandEntities($var)
@@ -81,8 +85,10 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      *
      * Generated from protobuf field <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @return bool
@@ -94,8 +100,10 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
 
     /**
      * Optional. When true, we will expand the search to beyond just the
-     * entities specified in [brand_entities] to other related knowledge graph
-     * entities similar to the brand. The default value is `false`.
+     * entities specified in
+     * [brand_entities][google.ads.googleads.v20.services.GenerateCreatorInsightsRequest.SearchBrand.brand_entities]
+     * to other related knowledge graph entities similar to the brand. The
+     * default value is `false`.
      *
      * Generated from protobuf field <code>bool include_related_topics = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      * @param bool $var
@@ -110,7 +118,4 @@ class SearchBrand extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SearchBrand::class, \Google\Ads\GoogleAds\V20\Services\GenerateCreatorInsightsRequest_SearchBrand::class);
 

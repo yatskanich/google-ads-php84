@@ -67,6 +67,3 @@ class EnumError
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(EnumError::class, \Google\Ads\GoogleAds\V20\Errors\EnumErrorEnum_EnumError::class);
-

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A currency constant.
@@ -113,7 +115,7 @@ class CurrencyConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCode()
     {
-        return $this->code ?? '';
+        return isset($this->code) ? $this->code : '';
     }
 
     public function hasCode()
@@ -149,7 +151,7 @@ class CurrencyConstant extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -186,7 +188,7 @@ class CurrencyConstant extends \Google\Protobuf\Internal\Message
      */
     public function getSymbol()
     {
-        return $this->symbol ?? '';
+        return isset($this->symbol) ? $this->symbol : '';
     }
 
     public function hasSymbol()
@@ -224,7 +226,7 @@ class CurrencyConstant extends \Google\Protobuf\Internal\Message
      */
     public function getBillableUnitMicros()
     {
-        return $this->billable_unit_micros ?? 0;
+        return isset($this->billable_unit_micros) ? $this->billable_unit_micros : 0;
     }
 
     public function hasBillableUnitMicros()

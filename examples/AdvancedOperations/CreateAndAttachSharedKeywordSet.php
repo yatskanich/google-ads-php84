@@ -24,24 +24,24 @@ use GetOpt\GetOpt;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\KeywordInfo;
-use Google\Ads\GoogleAds\V20\Enums\KeywordMatchTypeEnum\KeywordMatchType;
-use Google\Ads\GoogleAds\V20\Enums\SharedSetTypeEnum\SharedSetType;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\CampaignSharedSet;
-use Google\Ads\GoogleAds\V20\Resources\SharedCriterion;
-use Google\Ads\GoogleAds\V20\Resources\SharedSet;
-use Google\Ads\GoogleAds\V20\Services\CampaignSharedSetOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateCampaignSharedSetsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateSharedCriteriaRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateSharedSetsRequest;
-use Google\Ads\GoogleAds\V20\Services\SharedCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\SharedSetOperation;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\KeywordInfo;
+use Google\Ads\GoogleAds\V24\Enums\KeywordMatchTypeEnum\KeywordMatchType;
+use Google\Ads\GoogleAds\V24\Enums\SharedSetTypeEnum\SharedSetType;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\CampaignSharedSet;
+use Google\Ads\GoogleAds\V24\Resources\SharedCriterion;
+use Google\Ads\GoogleAds\V24\Resources\SharedSet;
+use Google\Ads\GoogleAds\V24\Services\CampaignSharedSetOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateCampaignSharedSetsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateSharedCriteriaRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateSharedSetsRequest;
+use Google\Ads\GoogleAds\V24\Services\SharedCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\SharedSetOperation;
 use Google\ApiCore\ApiException;
 
 /**
@@ -50,24 +50,24 @@ use Google\ApiCore\ApiException;
  */
 class CreateAndAttachSharedKeywordSet
 {
-    private const string CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
-    private const string CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
+    private const CUSTOMER_ID = 'INSERT_CUSTOMER_ID_HERE';
+    private const CAMPAIGN_ID = 'INSERT_CAMPAIGN_ID_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = new ArgumentParser()->parseCommandArguments([
+        $options = (new ArgumentParser())->parseCommandArguments([
             ArgumentNames::CUSTOMER_ID => GetOpt::REQUIRED_ARGUMENT,
             ArgumentNames::CAMPAIGN_ID => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
+        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
+        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 

@@ -353,7 +353,18 @@ class FieldMasks
      */
     private static function isFieldRepeated(FieldDescriptor $fieldDescriptor)
     {
-        return $fieldDescriptor->getLabel() === GPBLabel::REPEATED;
+        // SAFE SOLUTION: Check if the modern method exists (for updated C extensions or native PHP).
+        // This protects against a fatal error in environments where the C extension is outdated.
+        if (method_exists($fieldDescriptor, 'isRepeated')) {
+            return $fieldDescriptor->isRepeated();
+        }
+        // Secondary check: Use getLabel only if it actually exists.
+        if (method_exists($fieldDescriptor, 'getLabel')) {
+         return $fieldDescriptor->getLabel() === GPBLabel::REPEATED;
+        }
+        // Last Resort: Default to false (or throw an exception). 
+        // If neither exists, we're in an unknown state, but returning false is better than a Fatal Error.
+        return false;
     }
 
     // TODO: We can remove this function when it's supported in google/gax-php:

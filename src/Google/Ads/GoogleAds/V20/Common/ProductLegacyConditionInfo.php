@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Legacy condition of a product offer. This listing dimension is deprecated and
@@ -44,7 +46,7 @@ class ProductLegacyConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value ?? '';
+        return isset($this->value) ? $this->value : '';
     }
 
     public function hasValue()

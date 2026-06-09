@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -49,7 +49,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\GenerateKeywordIdeasRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\GenerateKeywordIdeaResponse>
      */
     public function GenerateKeywordIdeas(\Google\Ads\GoogleAds\V20\Services\GenerateKeywordIdeasRequest $argument,
       $metadata = [], $options = []) {
@@ -73,7 +73,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\GenerateKeywordHistoricalMetricsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\GenerateKeywordHistoricalMetricsResponse>
      */
     public function GenerateKeywordHistoricalMetrics(\Google\Ads\GoogleAds\V20\Services\GenerateKeywordHistoricalMetricsRequest $argument,
       $metadata = [], $options = []) {
@@ -98,7 +98,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\GenerateAdGroupThemesRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\GenerateAdGroupThemesResponse>
      */
     public function GenerateAdGroupThemes(\Google\Ads\GoogleAds\V20\Services\GenerateAdGroupThemesRequest $argument,
       $metadata = [], $options = []) {
@@ -123,7 +123,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\GenerateKeywordForecastMetricsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\GenerateKeywordForecastMetricsResponse>
      */
     public function GenerateKeywordForecastMetrics(\Google\Ads\GoogleAds\V20\Services\GenerateKeywordForecastMetricsRequest $argument,
       $metadata = [], $options = []) {

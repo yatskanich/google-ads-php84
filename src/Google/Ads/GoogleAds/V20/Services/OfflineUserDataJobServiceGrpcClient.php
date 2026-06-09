@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -51,7 +51,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\CreateOfflineUserDataJobRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\CreateOfflineUserDataJobResponse>
      */
     public function CreateOfflineUserDataJob(\Google\Ads\GoogleAds\V20\Services\CreateOfflineUserDataJobRequest $argument,
       $metadata = [], $options = []) {
@@ -78,7 +78,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\AddOfflineUserDataJobOperationsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\AddOfflineUserDataJobOperationsResponse>
      */
     public function AddOfflineUserDataJobOperations(\Google\Ads\GoogleAds\V20\Services\AddOfflineUserDataJobOperationsRequest $argument,
       $metadata = [], $options = []) {
@@ -106,7 +106,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\RunOfflineUserDataJobRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\LongRunning\Operation>
      */
     public function RunOfflineUserDataJob(\Google\Ads\GoogleAds\V20\Services\RunOfflineUserDataJobRequest $argument,
       $metadata = [], $options = []) {

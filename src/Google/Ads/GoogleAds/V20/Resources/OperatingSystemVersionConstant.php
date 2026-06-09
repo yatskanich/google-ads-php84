@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A mobile operating system version or a range of versions, depending on
@@ -121,7 +123,7 @@ class OperatingSystemVersionConstant extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -157,7 +159,7 @@ class OperatingSystemVersionConstant extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -193,7 +195,7 @@ class OperatingSystemVersionConstant extends \Google\Protobuf\Internal\Message
      */
     public function getOsMajorVersion()
     {
-        return $this->os_major_version ?? 0;
+        return isset($this->os_major_version) ? $this->os_major_version : 0;
     }
 
     public function hasOsMajorVersion()
@@ -229,7 +231,7 @@ class OperatingSystemVersionConstant extends \Google\Protobuf\Internal\Message
      */
     public function getOsMinorVersion()
     {
-        return $this->os_minor_version ?? 0;
+        return isset($this->os_minor_version) ? $this->os_minor_version : 0;
     }
 
     public function hasOsMinorVersion()

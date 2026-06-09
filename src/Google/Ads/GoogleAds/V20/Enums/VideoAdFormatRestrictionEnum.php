@@ -5,11 +5,11 @@
 namespace Google\Ads\GoogleAds\V20\Enums;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Container for enum describing format restrictions for Video Responsive Ads in
+ * Container for enum describing format restrictions for video responsive ads in
  * video campaigns.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.enums.VideoAdFormatRestrictionEnum</code>

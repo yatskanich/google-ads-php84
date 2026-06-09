@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -73,7 +75,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, array $conversionAdjustments, bool $partialFailure): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -87,7 +89,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      *
      *     @type string $customer_id
      *           Required. The ID of the customer performing the upload.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\ConversionAdjustment>|\Google\Protobuf\Internal\RepeatedField $conversion_adjustments
+     *     @type \Google\Ads\GoogleAds\V20\Services\ConversionAdjustment[] $conversion_adjustments
      *           Required. The conversion adjustments that are being uploaded.
      *     @type bool $partial_failure
      *           Required. If true, successful operations will be carried out and invalid
@@ -143,7 +145,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      * Required. The conversion adjustments that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ConversionAdjustment conversion_adjustments = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\ConversionAdjustment>
      */
     public function getConversionAdjustments()
     {
@@ -154,7 +156,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      * Required. The conversion adjustments that are being uploaded.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ConversionAdjustment conversion_adjustments = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\ConversionAdjustment>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\ConversionAdjustment[] $var
      * @return $this
      */
     public function setConversionAdjustments($var)
@@ -243,7 +245,7 @@ class UploadConversionAdjustmentsRequest extends \Google\Protobuf\Internal\Messa
      */
     public function getJobId()
     {
-        return $this->job_id ?? 0;
+        return isset($this->job_id) ? $this->job_id : 0;
     }
 
     public function hasJobId()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AssetSet;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Merchant ID and Feed Label from Google Merchant Center.
@@ -77,7 +79,7 @@ class MerchantCenterFeed extends \Google\Protobuf\Internal\Message
      */
     public function getFeedLabel()
     {
-        return $this->feed_label ?? '';
+        return isset($this->feed_label) ? $this->feed_label : '';
     }
 
     public function hasFeedLabel()
@@ -106,7 +108,4 @@ class MerchantCenterFeed extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MerchantCenterFeed::class, \Google\Ads\GoogleAds\V20\Resources\AssetSet_MerchantCenterFeed::class);
 

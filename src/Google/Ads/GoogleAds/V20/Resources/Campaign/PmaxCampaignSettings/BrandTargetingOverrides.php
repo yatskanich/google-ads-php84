@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Campaign\PmaxCampaignSettings;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Overrides of brand targeting for various ad types.
@@ -43,7 +45,7 @@ class BrandTargetingOverrides extends \Google\Protobuf\Internal\Message
      */
     public function getIgnoreExclusionsForShoppingAds()
     {
-        return $this->ignore_exclusions_for_shopping_ads ?? false;
+        return isset($this->ignore_exclusions_for_shopping_ads) ? $this->ignore_exclusions_for_shopping_ads : false;
     }
 
     public function hasIgnoreExclusionsForShoppingAds()
@@ -72,7 +74,4 @@ class BrandTargetingOverrides extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BrandTargetingOverrides::class, \Google\Ads\GoogleAds\V20\Resources\Campaign_PmaxCampaignSettings_BrandTargetingOverrides::class);
 

@@ -83,6 +83,3 @@ class LookalikeExpansionLevel
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(LookalikeExpansionLevel::class, \Google\Ads\GoogleAds\V20\Enums\LookalikeExpansionLevelEnum_LookalikeExpansionLevel::class);
-

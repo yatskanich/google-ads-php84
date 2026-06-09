@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The shopping loyalty related data. Shopping utilizes this data to provide
@@ -51,7 +53,7 @@ class ShoppingLoyalty extends \Google\Protobuf\Internal\Message
      */
     public function getLoyaltyTier()
     {
-        return $this->loyalty_tier ?? '';
+        return isset($this->loyalty_tier) ? $this->loyalty_tier : '';
     }
 
     public function hasLoyaltyTier()

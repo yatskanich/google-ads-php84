@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A paid organic search term view providing a view of search stats across
@@ -90,7 +92,7 @@ class PaidOrganicSearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return $this->search_term ?? '';
+        return isset($this->search_term) ? $this->search_term : '';
     }
 
     public function hasSearchTerm()

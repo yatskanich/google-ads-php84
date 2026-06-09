@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A click conversion.
@@ -20,15 +22,13 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     protected $gclid = null;
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 18;</code>
      */
     protected $gbraid = '';
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 19;</code>
      */
@@ -112,7 +112,6 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     protected $consent = null;
     /**
      * Type of the customer associated with the conversion (new or returning).
-     * Accessible only to customers on the allow-list.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.enums.ConversionCustomerTypeEnum.ConversionCustomerType customer_type = 26;</code>
      */
@@ -120,7 +119,18 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     /**
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See
+     * [About offline conversion
+     * imports](//support.google.com/google-ads/answer/2998031) page for more
+     * details.
+     * This field is only available to allowlisted users. To include this field in
+     * conversion imports, upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>optional string user_ip_address = 27 [(.google.api.field_info) = {</code>
      */
@@ -136,11 +146,9 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      *     @type string $gclid
      *           The Google click ID (gclid) associated with this conversion.
      *     @type string $gbraid
-     *           The click identifier for clicks associated with app conversions and
-     *           originating from iOS devices starting with iOS14.
+     *           The URL parameter for clicks associated with app conversions.
      *     @type string $wbraid
-     *           The click identifier for clicks associated with web conversions and
-     *           originating from iOS devices starting with iOS14.
+     *           The URL parameter for clicks associated with web conversions.
      *     @type string $conversion_action
      *           Resource name of the conversion action associated with this conversion.
      *           Note: Although this resource name consists of a customer id and a
@@ -162,11 +170,11 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      *           Additional data about externally attributed conversions. This field
      *           is required for conversions with an externally attributed conversion
      *           action, but should not be set otherwise.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\CustomVariable>|\Google\Protobuf\Internal\RepeatedField $custom_variables
+     *     @type \Google\Ads\GoogleAds\V20\Services\CustomVariable[] $custom_variables
      *           The custom variables associated with this conversion.
      *     @type \Google\Ads\GoogleAds\V20\Services\CartData $cart_data
      *           The cart data associated with this conversion.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $user_identifiers
+     *     @type \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $user_identifiers
      *           The user identifiers associated with this conversion. Only hashed_email and
      *           hashed_phone_number are supported for conversion uploads. The maximum
      *           number of user identifiers for each conversion is 5.
@@ -176,18 +184,32 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      *           The consent setting for the event.
      *     @type int $customer_type
      *           Type of the customer associated with the conversion (new or returning).
-     *           Accessible only to customers on the allow-list.
      *     @type string $user_ip_address
      *           The IP address of the customer when they arrived on the landing page after
      *           an ad click but before a conversion event. This is the IP address of the
-     *           customer's device, not the advertiser's server.
+     *           customer's device, not the advertiser's server. Google Ads does not support
+     *           IP address matching for end users in the European Economic Area (EEA),
+     *           United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     *           exclude sharing IP addresses from users from these regions and ensure that
+     *           you provide users with clear and comprehensive information about the data
+     *           you collect on your sites, apps, and other properties and get consent where
+     *           required by law or any applicable Google policies. See
+     *           [About offline conversion
+     *           imports](//support.google.com/google-ads/answer/2998031) page for more
+     *           details.
+     *           This field is only available to allowlisted users. To include this field in
+     *           conversion imports, upgrade to the Data Manager API.
      *     @type string $session_attributes_encoded
      *           The session attributes for the event, represented as a base64-encoded
      *           JSON string. The content should be generated by Google-provided library.
      *           To set session attributes individually, use
-     *           session_attributes_key_value_pairs instead.
+     *           session_attributes_key_value_pairs instead. This field is only available
+     *           to allowlisted users. To include this field in conversion imports,
+     *           upgrade to the Data Manager API.
      *     @type \Google\Ads\GoogleAds\V20\Services\SessionAttributesKeyValuePairs $session_attributes_key_value_pairs
      *           The session attributes for the event, represented as key-value pairs.
+     *           This field is only available to allowlisted users. To include this
+     *           field in conversion imports, upgrade to the Data Manager API.
      * }
      */
     public function __construct($data = NULL) {
@@ -203,7 +225,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return $this->gclid ?? '';
+        return isset($this->gclid) ? $this->gclid : '';
     }
 
     public function hasGclid()
@@ -232,8 +254,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 18;</code>
      * @return string
@@ -244,8 +265,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with app conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with app conversions.
      *
      * Generated from protobuf field <code>string gbraid = 18;</code>
      * @param string $var
@@ -260,8 +280,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 19;</code>
      * @return string
@@ -272,8 +291,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * The click identifier for clicks associated with web conversions and
-     * originating from iOS devices starting with iOS14.
+     * The URL parameter for clicks associated with web conversions.
      *
      * Generated from protobuf field <code>string wbraid = 19;</code>
      * @param string $var
@@ -298,7 +316,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return $this->conversion_action ?? '';
+        return isset($this->conversion_action) ? $this->conversion_action : '';
     }
 
     public function hasConversionAction()
@@ -339,7 +357,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return $this->conversion_date_time ?? '';
+        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
     }
 
     public function hasConversionDateTime()
@@ -377,7 +395,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getConversionValue()
     {
-        return $this->conversion_value ?? 0.0;
+        return isset($this->conversion_value) ? $this->conversion_value : 0.0;
     }
 
     public function hasConversionValue()
@@ -414,7 +432,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -452,7 +470,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      */
     public function getOrderId()
     {
-        return $this->order_id ?? '';
+        return isset($this->order_id) ? $this->order_id : '';
     }
 
     public function hasOrderId()
@@ -525,7 +543,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * The custom variables associated with this conversion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CustomVariable custom_variables = 15;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\CustomVariable>
      */
     public function getCustomVariables()
     {
@@ -536,7 +554,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * The custom variables associated with this conversion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CustomVariable custom_variables = 15;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\CustomVariable>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\CustomVariable[] $var
      * @return $this
      */
     public function setCustomVariables($var)
@@ -589,7 +607,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * number of user identifiers for each conversion is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 17;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>
      */
     public function getUserIdentifiers()
     {
@@ -602,7 +620,7 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * number of user identifiers for each conversion is 5.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.UserIdentifier user_identifiers = 17;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\UserIdentifier>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\UserIdentifier[] $var
      * @return $this
      */
     public function setUserIdentifiers($var)
@@ -677,7 +695,6 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
 
     /**
      * Type of the customer associated with the conversion (new or returning).
-     * Accessible only to customers on the allow-list.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.enums.ConversionCustomerTypeEnum.ConversionCustomerType customer_type = 26;</code>
      * @return int
@@ -689,7 +706,6 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
 
     /**
      * Type of the customer associated with the conversion (new or returning).
-     * Accessible only to customers on the allow-list.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.enums.ConversionCustomerTypeEnum.ConversionCustomerType customer_type = 26;</code>
      * @param int $var
@@ -706,14 +722,25 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     /**
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See
+     * [About offline conversion
+     * imports](//support.google.com/google-ads/answer/2998031) page for more
+     * details.
+     * This field is only available to allowlisted users. To include this field in
+     * conversion imports, upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>optional string user_ip_address = 27 [(.google.api.field_info) = {</code>
      * @return string
      */
     public function getUserIpAddress()
     {
-        return $this->user_ip_address ?? '';
+        return isset($this->user_ip_address) ? $this->user_ip_address : '';
     }
 
     public function hasUserIpAddress()
@@ -729,7 +756,18 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
     /**
      * The IP address of the customer when they arrived on the landing page after
      * an ad click but before a conversion event. This is the IP address of the
-     * customer's device, not the advertiser's server.
+     * customer's device, not the advertiser's server. Google Ads does not support
+     * IP address matching for end users in the European Economic Area (EEA),
+     * United Kingdom (UK), or Switzerland (CH). Add logic to conditionally
+     * exclude sharing IP addresses from users from these regions and ensure that
+     * you provide users with clear and comprehensive information about the data
+     * you collect on your sites, apps, and other properties and get consent where
+     * required by law or any applicable Google policies. See
+     * [About offline conversion
+     * imports](//support.google.com/google-ads/answer/2998031) page for more
+     * details.
+     * This field is only available to allowlisted users. To include this field in
+     * conversion imports, upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>optional string user_ip_address = 27 [(.google.api.field_info) = {</code>
      * @param string $var
@@ -747,7 +785,9 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * The session attributes for the event, represented as a base64-encoded
      * JSON string. The content should be generated by Google-provided library.
      * To set session attributes individually, use
-     * session_attributes_key_value_pairs instead.
+     * session_attributes_key_value_pairs instead. This field is only available
+     * to allowlisted users. To include this field in conversion imports,
+     * upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>bytes session_attributes_encoded = 24;</code>
      * @return string
@@ -766,7 +806,9 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
      * The session attributes for the event, represented as a base64-encoded
      * JSON string. The content should be generated by Google-provided library.
      * To set session attributes individually, use
-     * session_attributes_key_value_pairs instead.
+     * session_attributes_key_value_pairs instead. This field is only available
+     * to allowlisted users. To include this field in conversion imports,
+     * upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>bytes session_attributes_encoded = 24;</code>
      * @param string $var
@@ -782,6 +824,8 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
 
     /**
      * The session attributes for the event, represented as key-value pairs.
+     * This field is only available to allowlisted users. To include this
+     * field in conversion imports, upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.services.SessionAttributesKeyValuePairs session_attributes_key_value_pairs = 25;</code>
      * @return \Google\Ads\GoogleAds\V20\Services\SessionAttributesKeyValuePairs|null
@@ -798,6 +842,8 @@ class ClickConversion extends \Google\Protobuf\Internal\Message
 
     /**
      * The session attributes for the event, represented as key-value pairs.
+     * This field is only available to allowlisted users. To include this
+     * field in conversion imports, upgrade to the Data Manager API.
      *
      * Generated from protobuf field <code>.google.ads.googleads.v20.services.SessionAttributesKeyValuePairs session_attributes_key_value_pairs = 25;</code>
      * @param \Google\Ads\GoogleAds\V20\Services\SessionAttributesKeyValuePairs $var

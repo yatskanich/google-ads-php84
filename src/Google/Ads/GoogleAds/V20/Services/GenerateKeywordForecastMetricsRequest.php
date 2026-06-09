@@ -4,10 +4,13 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * Request message for [KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
+ * Request message for
+ * [KeywordPlanIdeaService.GenerateKeywordForecastMetrics][google.ads.googleads.v20.services.KeywordPlanIdeaService.GenerateKeywordForecastMetrics].
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.GenerateKeywordForecastMetricsRequest</code>
  */
@@ -54,7 +57,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public static function build(\Google\Ads\GoogleAds\V20\Services\CampaignToForecast $campaign): self
     {
-        return new self()
+        return (new self())
             ->setCampaign($campaign);
     }
 
@@ -124,7 +127,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()

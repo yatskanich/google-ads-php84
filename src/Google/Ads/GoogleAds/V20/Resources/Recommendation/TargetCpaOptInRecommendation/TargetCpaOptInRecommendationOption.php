@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation\TargetCpaOptInRecommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The Target CPA opt-in option with impact estimate.
@@ -97,7 +99,7 @@ class TargetCpaOptInRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getTargetCpaMicros()
     {
-        return $this->target_cpa_micros ?? 0;
+        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
     }
 
     public function hasTargetCpaMicros()
@@ -135,7 +137,7 @@ class TargetCpaOptInRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getRequiredCampaignBudgetAmountMicros()
     {
-        return $this->required_campaign_budget_amount_micros ?? 0;
+        return isset($this->required_campaign_budget_amount_micros) ? $this->required_campaign_budget_amount_micros : 0;
     }
 
     public function hasRequiredCampaignBudgetAmountMicros()
@@ -202,7 +204,4 @@ class TargetCpaOptInRecommendationOption extends \Google\Protobuf\Internal\Messa
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetCpaOptInRecommendationOption::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_TargetCpaOptInRecommendation_TargetCpaOptInRecommendationOption::class);
 

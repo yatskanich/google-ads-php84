@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The raise target CPA bid too low recommendation.
@@ -56,7 +58,7 @@ class RaiseTargetCpaBidTooLowRecommendation extends \Google\Protobuf\Internal\Me
      */
     public function getRecommendedTargetMultiplier()
     {
-        return $this->recommended_target_multiplier ?? 0.0;
+        return isset($this->recommended_target_multiplier) ? $this->recommended_target_multiplier : 0.0;
     }
 
     public function hasRecommendedTargetMultiplier()
@@ -94,7 +96,7 @@ class RaiseTargetCpaBidTooLowRecommendation extends \Google\Protobuf\Internal\Me
      */
     public function getAverageTargetCpaMicros()
     {
-        return $this->average_target_cpa_micros ?? 0;
+        return isset($this->average_target_cpa_micros) ? $this->average_target_cpa_micros : 0;
     }
 
     public function hasAverageTargetCpaMicros()
@@ -124,7 +126,4 @@ class RaiseTargetCpaBidTooLowRecommendation extends \Google\Protobuf\Internal\Me
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(RaiseTargetCpaBidTooLowRecommendation::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_RaiseTargetCpaBidTooLowRecommendation::class);
 

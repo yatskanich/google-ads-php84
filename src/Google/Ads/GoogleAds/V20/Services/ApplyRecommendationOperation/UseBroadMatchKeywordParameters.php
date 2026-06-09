@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Parameters to use when applying a use broad match keyword recommendation.
@@ -43,7 +45,7 @@ class UseBroadMatchKeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewBudgetAmountMicros()
     {
-        return $this->new_budget_amount_micros ?? 0;
+        return isset($this->new_budget_amount_micros) ? $this->new_budget_amount_micros : 0;
     }
 
     public function hasNewBudgetAmountMicros()
@@ -72,7 +74,4 @@ class UseBroadMatchKeywordParameters extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UseBroadMatchKeywordParameters::class, \Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation_UseBroadMatchKeywordParameters::class);
 

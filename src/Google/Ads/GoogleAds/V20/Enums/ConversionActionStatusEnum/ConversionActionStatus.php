@@ -82,6 +82,3 @@ class ConversionActionStatus
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(ConversionActionStatus::class, \Google\Ads\GoogleAds\V20\Enums\ConversionActionStatusEnum_ConversionActionStatus::class);
-

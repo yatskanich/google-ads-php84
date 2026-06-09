@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Metadata for customer match user list.
@@ -54,7 +56,7 @@ class CustomerMatchUserListMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return $this->user_list ?? '';
+        return isset($this->user_list) ? $this->user_list : '';
     }
 
     public function hasUserList()

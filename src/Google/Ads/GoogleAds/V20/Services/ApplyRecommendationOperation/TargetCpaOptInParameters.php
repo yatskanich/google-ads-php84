@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Parameters to use when applying Target CPA recommendation.
@@ -54,7 +56,7 @@ class TargetCpaOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return $this->target_cpa_micros ?? 0;
+        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
     }
 
     public function hasTargetCpaMicros()
@@ -91,7 +93,7 @@ class TargetCpaOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewCampaignBudgetAmountMicros()
     {
-        return $this->new_campaign_budget_amount_micros ?? 0;
+        return isset($this->new_campaign_budget_amount_micros) ? $this->new_campaign_budget_amount_micros : 0;
     }
 
     public function hasNewCampaignBudgetAmountMicros()
@@ -120,7 +122,4 @@ class TargetCpaOptInParameters extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetCpaOptInParameters::class, \Google\Ads\GoogleAds\V20\Services\ApplyRecommendationOperation_TargetCpaOptInParameters::class);
 

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A date range.
@@ -51,7 +53,7 @@ class DateRange extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return $this->start_date ?? '';
+        return isset($this->start_date) ? $this->start_date : '';
     }
 
     public function hasStartDate()
@@ -87,7 +89,7 @@ class DateRange extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return $this->end_date ?? '';
+        return isset($this->end_date) ? $this->end_date : '';
     }
 
     public function hasEndDate()

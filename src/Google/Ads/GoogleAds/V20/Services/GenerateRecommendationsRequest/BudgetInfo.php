@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Current budget information of the campaign.
@@ -52,7 +54,7 @@ class BudgetInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentBudget()
     {
-        return $this->current_budget ?? 0;
+        return isset($this->current_budget) ? $this->current_budget : 0;
     }
 
     public function hasCurrentBudget()
@@ -84,7 +86,4 @@ class BudgetInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BudgetInfo::class, \Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest_BudgetInfo::class);
 

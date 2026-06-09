@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Encapsulates an Audio.
@@ -43,7 +45,7 @@ class MediaAudio extends \Google\Protobuf\Internal\Message
      */
     public function getAdDurationMillis()
     {
-        return $this->ad_duration_millis ?? 0;
+        return isset($this->ad_duration_millis) ? $this->ad_duration_millis : 0;
     }
 
     public function hasAdDurationMillis()

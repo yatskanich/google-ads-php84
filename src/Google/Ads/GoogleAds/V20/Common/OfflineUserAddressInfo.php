@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Address identifier of offline data.
@@ -107,7 +109,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedFirstName()
     {
-        return $this->hashed_first_name ?? '';
+        return isset($this->hashed_first_name) ? $this->hashed_first_name : '';
     }
 
     public function hasHashedFirstName()
@@ -146,7 +148,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedLastName()
     {
-        return $this->hashed_last_name ?? '';
+        return isset($this->hashed_last_name) ? $this->hashed_last_name : '';
     }
 
     public function hasHashedLastName()
@@ -184,7 +186,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCity()
     {
-        return $this->city ?? '';
+        return isset($this->city) ? $this->city : '';
     }
 
     public function hasCity()
@@ -222,7 +224,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getState()
     {
-        return $this->state ?? '';
+        return isset($this->state) ? $this->state : '';
     }
 
     public function hasState()
@@ -259,7 +261,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -295,7 +297,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPostalCode()
     {
-        return $this->postal_code ?? '';
+        return isset($this->postal_code) ? $this->postal_code : '';
     }
 
     public function hasPostalCode()
@@ -333,7 +335,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedStreetAddress()
     {
-        return $this->hashed_street_address ?? '';
+        return isset($this->hashed_street_address) ? $this->hashed_street_address : '';
     }
 
     public function hasHashedStreetAddress()

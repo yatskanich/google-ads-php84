@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The identifier for Google Merchant Center account
@@ -52,7 +54,7 @@ class MerchantCenterIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantCenterId()
     {
-        return $this->merchant_center_id ?? 0;
+        return isset($this->merchant_center_id) ? $this->merchant_center_id : 0;
     }
 
     public function hasMerchantCenterId()

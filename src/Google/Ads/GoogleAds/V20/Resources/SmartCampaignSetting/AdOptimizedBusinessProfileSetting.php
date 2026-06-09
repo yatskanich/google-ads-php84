@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Settings for configuring a business profile optimized for ads as this
@@ -50,7 +52,7 @@ class AdOptimizedBusinessProfileSetting extends \Google\Protobuf\Internal\Messag
      */
     public function getIncludeLeadForm()
     {
-        return $this->include_lead_form ?? false;
+        return isset($this->include_lead_form) ? $this->include_lead_form : false;
     }
 
     public function hasIncludeLeadForm()
@@ -81,7 +83,4 @@ class AdOptimizedBusinessProfileSetting extends \Google\Protobuf\Internal\Messag
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AdOptimizedBusinessProfileSetting::class, \Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting_AdOptimizedBusinessProfileSetting::class);
 

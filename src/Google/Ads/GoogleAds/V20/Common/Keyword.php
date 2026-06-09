@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Keyword criterion segment.
@@ -51,7 +53,7 @@ class Keyword extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return $this->ad_group_criterion ?? '';
+        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
     }
 
     public function hasAdGroupCriterion()

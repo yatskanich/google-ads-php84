@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A proto holding information specific to local services background check.
@@ -57,7 +59,7 @@ class BackgroundCheckVerificationArtifact extends \Google\Protobuf\Internal\Mess
      */
     public function getCaseUrl()
     {
-        return $this->case_url ?? '';
+        return isset($this->case_url) ? $this->case_url : '';
     }
 
     public function hasCaseUrl()
@@ -96,7 +98,7 @@ class BackgroundCheckVerificationArtifact extends \Google\Protobuf\Internal\Mess
      */
     public function getFinalAdjudicationDateTime()
     {
-        return $this->final_adjudication_date_time ?? '';
+        return isset($this->final_adjudication_date_time) ? $this->final_adjudication_date_time : '';
     }
 
     public function hasFinalAdjudicationDateTime()

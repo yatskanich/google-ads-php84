@@ -8,7 +8,7 @@ use UnexpectedValueException;
 
 /**
  * Enum describing the allowed maximum duration values for videos used in
- * non-skippable Responsive Video Ads.
+ * non-skippable video responsive ads.
  *
  * Protobuf type <code>google.ads.googleads.v20.enums.NonSkippableMaxDurationEnum.NonSkippableMaxDuration</code>
  */
@@ -81,7 +81,4 @@ class NonSkippableMaxDuration
         return constant($const);
     }
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(NonSkippableMaxDuration::class, \Google\Ads\GoogleAds\V20\Enums\NonSkippableMaxDurationEnum_NonSkippableMaxDuration::class);
 

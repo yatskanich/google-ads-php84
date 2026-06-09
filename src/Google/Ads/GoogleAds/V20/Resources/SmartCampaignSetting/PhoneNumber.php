@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Phone number and country code in smart campaign settings.
@@ -51,7 +53,7 @@ class PhoneNumber extends \Google\Protobuf\Internal\Message
      */
     public function getPhoneNumber()
     {
-        return $this->phone_number ?? '';
+        return isset($this->phone_number) ? $this->phone_number : '';
     }
 
     public function hasPhoneNumber()
@@ -87,7 +89,7 @@ class PhoneNumber extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -116,7 +118,4 @@ class PhoneNumber extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(PhoneNumber::class, \Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting_PhoneNumber::class);
 

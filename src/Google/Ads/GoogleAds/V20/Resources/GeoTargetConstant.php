@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A geo target constant.
@@ -141,7 +143,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -177,7 +179,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -214,7 +216,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return $this->country_code ?? '';
+        return isset($this->country_code) ? $this->country_code : '';
     }
 
     public function hasCountryCode()
@@ -251,7 +253,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getTargetType()
     {
-        return $this->target_type ?? '';
+        return isset($this->target_type) ? $this->target_type : '';
     }
 
     public function hasTargetType()
@@ -314,7 +316,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCanonicalName()
     {
-        return $this->canonical_name ?? '';
+        return isset($this->canonical_name) ? $this->canonical_name : '';
     }
 
     public function hasCanonicalName()
@@ -353,7 +355,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getParentGeoTarget()
     {
-        return $this->parent_geo_target ?? '';
+        return isset($this->parent_geo_target) ? $this->parent_geo_target : '';
     }
 
     public function hasParentGeoTarget()

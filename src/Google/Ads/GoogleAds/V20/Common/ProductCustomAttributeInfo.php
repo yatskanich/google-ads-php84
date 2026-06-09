@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Custom attribute of a product offer.
@@ -51,7 +53,7 @@ class ProductCustomAttributeInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return $this->value ?? '';
+        return isset($this->value) ? $this->value : '';
     }
 
     public function hasValue()

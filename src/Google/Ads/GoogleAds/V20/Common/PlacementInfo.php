@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A placement criterion. This can be used to modify bids for sites when
@@ -47,7 +49,7 @@ class PlacementInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return $this->url ?? '';
+        return isset($this->url) ? $this->url : '';
     }
 
     public function hasUrl()

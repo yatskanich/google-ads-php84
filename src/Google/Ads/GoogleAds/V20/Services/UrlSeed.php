@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Url Seed
@@ -43,7 +45,7 @@ class UrlSeed extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return $this->url ?? '';
+        return isset($this->url) ? $this->url : '';
     }
 
     public function hasUrl()

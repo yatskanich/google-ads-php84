@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -50,7 +52,7 @@ class ListExperimentAsyncErrorsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $resourceName): self
     {
-        return new self()
+        return (new self())
             ->setResourceName($resourceName);
     }
 

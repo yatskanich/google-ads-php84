@@ -4,11 +4,14 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A search term view with metrics aggregated by search term at the ad group
- * level.
+ * level. This view does not include Performance Max data. If you are looking
+ * for Performance Max search term data, use the CampaignSearchTermView instead.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.SearchTermView</code>
  */
@@ -104,7 +107,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return $this->search_term ?? '';
+        return isset($this->search_term) ? $this->search_term : '';
     }
 
     public function hasSearchTerm()
@@ -140,7 +143,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return $this->ad_group ?? '';
+        return isset($this->ad_group) ? $this->ad_group : '';
     }
 
     public function hasAdGroup()

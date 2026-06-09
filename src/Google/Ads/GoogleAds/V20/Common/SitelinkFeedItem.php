@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a sitelink.
@@ -86,13 +88,13 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      *           Second line of the description for the sitelink.
      *           If this value is set, line1 must also be set.
      *           The length of this string should be between 0 and 35, inclusive.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $final_urls
+     *     @type string[] $final_urls
      *           A list of possible final URLs after all cross domain redirects.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $final_mobile_urls
+     *     @type string[] $final_mobile_urls
      *           A list of possible final mobile URLs after all cross domain redirects.
      *     @type string $tracking_url_template
      *           URL template for constructing a tracking URL.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $url_custom_parameters
+     *     @type \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $url_custom_parameters
      *           A list of mappings to be used for substituting URL custom parameter tags in
      *           the tracking_url_template, final_urls, and/or final_mobile_urls.
      *     @type string $final_url_suffix
@@ -114,7 +116,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLinkText()
     {
-        return $this->link_text ?? '';
+        return isset($this->link_text) ? $this->link_text : '';
     }
 
     public function hasLinkText()
@@ -153,7 +155,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLine1()
     {
-        return $this->line1 ?? '';
+        return isset($this->line1) ? $this->line1 : '';
     }
 
     public function hasLine1()
@@ -193,7 +195,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getLine2()
     {
-        return $this->line2 ?? '';
+        return isset($this->line2) ? $this->line2 : '';
     }
 
     public function hasLine2()
@@ -227,7 +229,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * A list of possible final URLs after all cross domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_urls = 12;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFinalUrls()
     {
@@ -238,7 +240,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * A list of possible final URLs after all cross domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_urls = 12;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFinalUrls($var)
@@ -253,7 +255,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * A list of possible final mobile URLs after all cross domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_mobile_urls = 13;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getFinalMobileUrls()
     {
@@ -264,7 +266,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * A list of possible final mobile URLs after all cross domain redirects.
      *
      * Generated from protobuf field <code>repeated string final_mobile_urls = 13;</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setFinalMobileUrls($var)
@@ -283,7 +285,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return $this->tracking_url_template ?? '';
+        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -316,7 +318,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * the tracking_url_template, final_urls, and/or final_mobile_urls.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 7;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\CustomParameter>
      */
     public function getUrlCustomParameters()
     {
@@ -328,7 +330,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      * the tracking_url_template, final_urls, and/or final_mobile_urls.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.CustomParameter url_custom_parameters = 7;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\CustomParameter>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\CustomParameter[] $var
      * @return $this
      */
     public function setUrlCustomParameters($var)
@@ -348,7 +350,7 @@ class SitelinkFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return $this->final_url_suffix ?? '';
+        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
     }
 
     public function hasFinalUrlSuffix()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a Brand Criterion used for targeting based on commercial knowledge
@@ -76,7 +78,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return $this->display_name ?? '';
+        return isset($this->display_name) ? $this->display_name : '';
     }
 
     public function hasDisplayName()
@@ -112,7 +114,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getEntityId()
     {
-        return $this->entity_id ?? '';
+        return isset($this->entity_id) ? $this->entity_id : '';
     }
 
     public function hasEntityId()
@@ -148,7 +150,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPrimaryUrl()
     {
-        return $this->primary_url ?? '';
+        return isset($this->primary_url) ? $this->primary_url : '';
     }
 
     public function hasPrimaryUrl()
@@ -184,7 +186,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRejectionReason()
     {
-        return $this->rejection_reason ?? 0;
+        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
     }
 
     public function hasRejectionReason()
@@ -220,7 +222,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStatus()
     {
-        return $this->status ?? 0;
+        return isset($this->status) ? $this->status : 0;
     }
 
     public function hasStatus()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Current Target Impression Share information of the campaign.
@@ -75,7 +77,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLocation()
     {
-        return $this->location ?? 0;
+        return isset($this->location) ? $this->location : 0;
     }
 
     public function hasLocation()
@@ -116,7 +118,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getTargetImpressionShareMicros()
     {
-        return $this->target_impression_share_micros ?? 0;
+        return isset($this->target_impression_share_micros) ? $this->target_impression_share_micros : 0;
     }
 
     public function hasTargetImpressionShareMicros()
@@ -157,7 +159,7 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidCeiling()
     {
-        return $this->max_cpc_bid_ceiling ?? 0;
+        return isset($this->max_cpc_bid_ceiling) ? $this->max_cpc_bid_ceiling : 0;
     }
 
     public function hasMaxCpcBidCeiling()
@@ -188,7 +190,4 @@ class TargetImpressionShareInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TargetImpressionShareInfo::class, \Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest_TargetImpressionShareInfo::class);
 

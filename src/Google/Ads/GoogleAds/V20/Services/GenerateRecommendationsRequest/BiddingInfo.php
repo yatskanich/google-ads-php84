@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Current bidding information of the campaign. Provides a wrapper for
@@ -69,7 +71,7 @@ class BiddingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBiddingStrategyType()
     {
-        return $this->bidding_strategy_type ?? 0;
+        return isset($this->bidding_strategy_type) ? $this->bidding_strategy_type : 0;
     }
 
     public function hasBiddingStrategyType()
@@ -215,7 +217,4 @@ class BiddingInfo extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(BiddingInfo::class, \Google\Ads\GoogleAds\V20\Services\GenerateRecommendationsRequest_BiddingInfo::class);
 

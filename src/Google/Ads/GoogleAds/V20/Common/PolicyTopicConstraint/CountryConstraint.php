@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common\PolicyTopicConstraint;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Indicates that a resource's ability to serve in a particular country is
@@ -47,7 +49,7 @@ class CountryConstraint extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCriterion()
     {
-        return $this->country_criterion ?? '';
+        return isset($this->country_criterion) ? $this->country_criterion : '';
     }
 
     public function hasCountryCriterion()
@@ -77,7 +79,4 @@ class CountryConstraint extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(CountryConstraint::class, \Google\Ads\GoogleAds\V20\Common\PolicyTopicConstraint_CountryConstraint::class);
 

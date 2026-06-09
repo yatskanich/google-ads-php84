@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Key of the violation. The key is used for referring to a violation
@@ -60,7 +62,7 @@ class PolicyViolationKey extends \Google\Protobuf\Internal\Message
      */
     public function getPolicyName()
     {
-        return $this->policy_name ?? '';
+        return isset($this->policy_name) ? $this->policy_name : '';
     }
 
     public function hasPolicyName()
@@ -100,7 +102,7 @@ class PolicyViolationKey extends \Google\Protobuf\Internal\Message
      */
     public function getViolatingText()
     {
-        return $this->violating_text ?? '';
+        return isset($this->violating_text) ? $this->violating_text : '';
     }
 
     public function hasViolatingText()

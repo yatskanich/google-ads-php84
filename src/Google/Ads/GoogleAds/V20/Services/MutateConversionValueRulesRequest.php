@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -64,7 +66,7 @@ class MutateConversionValueRulesRequest extends \Google\Protobuf\Internal\Messag
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -78,7 +80,7 @@ class MutateConversionValueRulesRequest extends \Google\Protobuf\Internal\Messag
      *     @type string $customer_id
      *           Required. The ID of the customer whose conversion value rules are being
      *           modified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\ConversionValueRuleOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\ConversionValueRuleOperation[] $operations
      *           Required. The list of operations to perform on individual conversion value
      *           rules.
      *     @type bool $partial_failure
@@ -132,7 +134,7 @@ class MutateConversionValueRulesRequest extends \Google\Protobuf\Internal\Messag
      * rules.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ConversionValueRuleOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\ConversionValueRuleOperation>
      */
     public function getOperations()
     {
@@ -144,7 +146,7 @@ class MutateConversionValueRulesRequest extends \Google\Protobuf\Internal\Messag
      * rules.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.ConversionValueRuleOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\ConversionValueRuleOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\ConversionValueRuleOperation[] $var
      * @return $this
      */
     public function setOperations($var)

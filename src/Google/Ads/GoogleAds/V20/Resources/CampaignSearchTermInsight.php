@@ -4,10 +4,14 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
- * A Campaign search term view.
+ * This report provides a high-level view of search demand at the campaign
+ * level by grouping similar search terms into categories and showing their
+ * search volume.
  * Historical data is available starting March 2023.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.CampaignSearchTermInsight</code>
@@ -105,7 +109,7 @@ class CampaignSearchTermInsight extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLabel()
     {
-        return $this->category_label ?? '';
+        return isset($this->category_label) ? $this->category_label : '';
     }
 
     public function hasCategoryLabel()
@@ -142,7 +146,7 @@ class CampaignSearchTermInsight extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -178,7 +182,7 @@ class CampaignSearchTermInsight extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignId()
     {
-        return $this->campaign_id ?? 0;
+        return isset($this->campaign_id) ? $this->campaign_id : 0;
     }
 
     public function hasCampaignId()

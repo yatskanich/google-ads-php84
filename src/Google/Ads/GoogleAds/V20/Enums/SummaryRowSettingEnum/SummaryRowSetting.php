@@ -82,6 +82,3 @@ class SummaryRowSetting
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(SummaryRowSetting::class, \Google\Ads\GoogleAds\V20\Enums\SummaryRowSettingEnum_SummaryRowSetting::class);
-

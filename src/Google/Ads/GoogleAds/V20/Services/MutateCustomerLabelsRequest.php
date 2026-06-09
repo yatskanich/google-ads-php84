@@ -4,11 +4,17 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
  * [CustomerLabelService.MutateCustomerLabels][google.ads.googleads.v20.services.CustomerLabelService.MutateCustomerLabels].
+ * A single `MutateCustomerLabelsRequest` can only modify labels for the single
+ * customer account specified in the request. To apply a label to multiple
+ * different accounts, separate `MutateCustomerLabelsRequest` calls must be
+ * made.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.MutateCustomerLabelsRequest</code>
  */
@@ -57,7 +63,7 @@ class MutateCustomerLabelsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $operations): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -71,7 +77,7 @@ class MutateCustomerLabelsRequest extends \Google\Protobuf\Internal\Message
      *     @type string $customer_id
      *           Required. ID of the customer whose customer-label relationships are being
      *           modified.
-     *     @type array<\Google\Ads\GoogleAds\V20\Services\CustomerLabelOperation>|\Google\Protobuf\Internal\RepeatedField $operations
+     *     @type \Google\Ads\GoogleAds\V20\Services\CustomerLabelOperation[] $operations
      *           Required. The list of operations to perform on customer-label
      *           relationships.
      *     @type bool $partial_failure
@@ -122,7 +128,7 @@ class MutateCustomerLabelsRequest extends \Google\Protobuf\Internal\Message
      * relationships.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CustomerLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Services\CustomerLabelOperation>
      */
     public function getOperations()
     {
@@ -134,7 +140,7 @@ class MutateCustomerLabelsRequest extends \Google\Protobuf\Internal\Message
      * relationships.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.services.CustomerLabelOperation operations = 2 [(.google.api.field_behavior) = REQUIRED];</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Services\CustomerLabelOperation>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Services\CustomerLabelOperation[] $var
      * @return $this
      */
     public function setOperations($var)

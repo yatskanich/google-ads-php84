@@ -172,6 +172,3 @@ class UserListSizeRange
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(UserListSizeRange::class, \Google\Ads\GoogleAds\V20\Enums\UserListSizeRangeEnum_UserListSizeRange::class);
-

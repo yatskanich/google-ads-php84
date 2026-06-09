@@ -5,14 +5,16 @@
 namespace Google\Ads\GoogleAds\V20\Resources;
 
 use Google\Protobuf\Internal\GPBType;
-use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Represents a bidding data exclusion. Bidding data exclusions can be set in
  * client accounts only, and cannot be used in manager accounts.
  * See "About data exclusions" at
  * https://support.google.com/google-ads/answer/10370710.
+ * Note: A customer account can have a maximum of 500 active bidding data
+ * exclusions.
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.resources.BiddingDataExclusion</code>
  */
@@ -138,17 +140,17 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      *     @type string $description
      *           The description of the data exclusion. The description can be at
      *           most 2048 characters.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $devices
+     *     @type int[] $devices
      *           If not specified, all devices will be included in this exclusion.
      *           Otherwise, only the specified targeted devices will be included in this
      *           exclusion.
-     *     @type array<string>|\Google\Protobuf\Internal\RepeatedField $campaigns
+     *     @type string[] $campaigns
      *           The data exclusion will apply to the campaigns listed when the scope of
      *           this exclusion is CAMPAIGN. The maximum number of campaigns per event is
      *           2000.
      *           Note: a data exclusion with both advertising_channel_types and
      *           campaign_ids is not supported.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $advertising_channel_types
+     *     @type int[] $advertising_channel_types
      *           The data_exclusion will apply to all the campaigns under the listed
      *           channels retroactively as well as going forward when the scope of this
      *           exclusion is CHANNEL.
@@ -396,7 +398,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * exclusion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.DeviceEnum.Device devices = 9;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getDevices()
     {
@@ -409,7 +411,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * exclusion.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.DeviceEnum.Device devices = 9;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setDevices($var)
@@ -428,7 +430,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * campaign_ids is not supported.
      *
      * Generated from protobuf field <code>repeated string campaigns = 10 [(.google.api.resource_reference) = {</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<string>
      */
     public function getCampaigns()
     {
@@ -443,7 +445,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * campaign_ids is not supported.
      *
      * Generated from protobuf field <code>repeated string campaigns = 10 [(.google.api.resource_reference) = {</code>
-     * @param array<string>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param string[] $var
      * @return $this
      */
     public function setCampaigns($var)
@@ -463,7 +465,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * campaign_ids is not supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_types = 11;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getAdvertisingChannelTypes()
     {
@@ -479,7 +481,7 @@ class BiddingDataExclusion extends \Google\Protobuf\Internal\Message
      * campaign_ids is not supported.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.AdvertisingChannelTypeEnum.AdvertisingChannelType advertising_channel_types = 11;</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setAdvertisingChannelTypes($var)

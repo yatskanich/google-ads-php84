@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A location criterion.
@@ -43,7 +45,7 @@ class LocationInfo extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetConstant()
     {
-        return $this->geo_target_constant ?? '';
+        return isset($this->geo_target_constant) ? $this->geo_target_constant : '';
     }
 
     public function hasGeoTargetConstant()

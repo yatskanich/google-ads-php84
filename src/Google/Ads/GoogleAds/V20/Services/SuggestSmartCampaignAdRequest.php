@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
@@ -43,7 +45,7 @@ class SuggestSmartCampaignAdRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V20\Services\SmartCampaignSuggestionInfo $suggestionInfo): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
     }

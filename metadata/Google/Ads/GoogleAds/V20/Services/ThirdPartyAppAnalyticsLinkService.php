@@ -13,23 +13,14 @@ class ThirdPartyAppAnalyticsLinkService
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Google\Api\Http::initOnce();
-        \GPBMetadata\Google\Api\LaunchStage::initOnce();
         \GPBMetadata\Google\Api\Resource::initOnce();
-        \GPBMetadata\Google\Api\Annotations::initOnce();
         \GPBMetadata\Google\Protobuf\Duration::initOnce();
+        \GPBMetadata\Google\Api\Http::initOnce();
+        \GPBMetadata\Google\Api\Annotations::initOnce();
+        \GPBMetadata\Google\Api\LaunchStage::initOnce();
         \GPBMetadata\Google\Api\Client::initOnce();
         $pool->internalAddGeneratedFile(
-            '
-Ù
-Ngoogle/ads/googleads/v20/services/third_party_app_analytics_link_service.proto!google.ads.googleads.v20.servicesgoogle/api/client.protogoogle/api/resource.proto"s
- RegenerateShareableLinkIdRequestO
-resource_name (	B8úA5
-3googleads.googleapis.com/ThirdPartyAppAnalyticsLink"#
-!RegenerateShareableLinkIdResponse2ø
-!ThirdPartyAppAnalyticsLinkService‹
-RegenerateShareableLinkIdC.google.ads.googleads.v20.services.RegenerateShareableLinkIdRequestD.google.ads.googleads.v20.services.RegenerateShareableLinkIdResponse"c‚Óä“]"X/v20/{resource_name=customers/*/thirdPartyAppAnalyticsLinks/*}:regenerateShareableLinkId:*EÊAgoogleads.googleapis.comÒA\'https://www.googleapis.com/auth/adwordsB’
-%com.google.ads.googleads.v20.servicesB&ThirdPartyAppAnalyticsLinkServiceProtoPZIgoogle.golang.org/genproto/googleapis/ads/googleads/v20/services;services¢GAAª!Google.Ads.GoogleAds.V20.ServicesÊ!Google\\Ads\\GoogleAds\\V20\\Servicesê%Google::Ads::GoogleAds::V20::Servicesbproto3'
+            "\x0A\xD9\x07\x0ANgoogle/ads/googleads/v20/services/third_party_app_analytics_link_service.proto\x12!google.ads.googleads.v20.services\x1A\x17google/api/client.proto\x1A\x19google/api/resource.proto\"s\x0A RegenerateShareableLinkIdRequest\x12O\x0A\x0Dresource_name\x18\x01 \x01(\x09B8\xFAA5\x0A3googleads.googleapis.com/ThirdPartyAppAnalyticsLink\"#\x0A!RegenerateShareableLinkIdResponse2\xF8\x02\x0A!ThirdPartyAppAnalyticsLinkService\x12\x8B\x02\x0A\x19RegenerateShareableLinkId\x12C.google.ads.googleads.v20.services.RegenerateShareableLinkIdRequest\x1AD.google.ads.googleads.v20.services.RegenerateShareableLinkIdResponse\"c\x82\xD3\xE4\x93\x02]\"X/v20/{resource_name=customers/*/thirdPartyAppAnalyticsLinks/*}:regenerateShareableLinkId:\x01*\x1AE\xCAA\x18googleads.googleapis.com\xD2A'https://www.googleapis.com/auth/adwordsB\x92\x02\x0A%com.google.ads.googleads.v20.servicesB&ThirdPartyAppAnalyticsLinkServiceProtoP\x01ZIgoogle.golang.org/genproto/googleapis/ads/googleads/v20/services;services\xA2\x02\x03GAA\xAA\x02!Google.Ads.GoogleAds.V20.Services\xCA\x02!Google\\Ads\\GoogleAds\\V20\\Services\xEA\x02%Google::Ads::GoogleAds::V20::Servicesb\x06proto3"
         , true);
         static::$is_initialized = true;
     }

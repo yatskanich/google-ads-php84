@@ -76,6 +76,3 @@ class GoalConfigLevel
     }
 }
 
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(GoalConfigLevel::class, \Google\Ads\GoogleAds\V20\Enums\GoalConfigLevelEnum_GoalConfigLevel::class);
-

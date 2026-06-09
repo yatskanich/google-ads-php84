@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Logical expression for targeting webpages of an advertiser's website.
@@ -111,7 +113,7 @@ class WebpageConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getArgument()
     {
-        return $this->argument ?? '';
+        return isset($this->argument) ? $this->argument : '';
     }
 
     public function hasArgument()

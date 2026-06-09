@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A SkAdNetworkSourceApp segment.
@@ -46,7 +48,7 @@ class SkAdNetworkSourceApp extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkSourceAppId()
     {
-        return $this->sk_ad_network_source_app_id ?? '';
+        return isset($this->sk_ad_network_source_app_id) ? $this->sk_ad_network_source_app_id : '';
     }
 
     public function hasSkAdNetworkSourceAppId()

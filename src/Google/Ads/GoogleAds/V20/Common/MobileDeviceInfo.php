@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A mobile device criterion.
@@ -43,7 +45,7 @@ class MobileDeviceInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMobileDeviceConstant()
     {
-        return $this->mobile_device_constant ?? '';
+        return isset($this->mobile_device_constant) ? $this->mobile_device_constant : '';
     }
 
     public function hasMobileDeviceConstant()

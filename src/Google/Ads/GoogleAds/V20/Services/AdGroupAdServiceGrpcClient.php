@@ -2,7 +2,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 // Original file comments:
-// Copyright 2025 Google LLC
+// Copyright 2026 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -84,7 +84,7 @@ class AdGroupAdServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsResponse>
      */
     public function MutateAdGroupAds(\Google\Ads\GoogleAds\V20\Services\MutateAdGroupAdsRequest $argument,
       $metadata = [], $options = []) {
@@ -110,7 +110,7 @@ class AdGroupAdServiceGrpcClient extends \Grpc\BaseStub {
      * @param \Google\Ads\GoogleAds\V20\Services\RemoveAutomaticallyCreatedAssetsRequest $argument input argument
      * @param array $metadata metadata
      * @param array $options call options
-     * @return \Grpc\UnaryCall
+     * @return \Grpc\UnaryCall<\Google\Protobuf\GPBEmpty>
      */
     public function RemoveAutomaticallyCreatedAssets(\Google\Ads\GoogleAds\V20\Services\RemoveAutomaticallyCreatedAssetsRequest $argument,
       $metadata = [], $options = []) {

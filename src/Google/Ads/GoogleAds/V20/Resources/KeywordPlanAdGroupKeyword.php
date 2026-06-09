@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Keyword Plan ad group keyword.
@@ -132,7 +134,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getKeywordPlanAdGroup()
     {
-        return $this->keyword_plan_ad_group ?? '';
+        return isset($this->keyword_plan_ad_group) ? $this->keyword_plan_ad_group : '';
     }
 
     public function hasKeywordPlanAdGroup()
@@ -168,7 +170,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -204,7 +206,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return $this->text ?? '';
+        return isset($this->text) ? $this->text : '';
     }
 
     public function hasText()
@@ -269,7 +271,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return $this->cpc_bid_micros ?? 0;
+        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
     }
 
     public function hasCpcBidMicros()
@@ -308,7 +310,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return $this->negative ?? false;
+        return isset($this->negative) ? $this->negative : false;
     }
 
     public function hasNegative()

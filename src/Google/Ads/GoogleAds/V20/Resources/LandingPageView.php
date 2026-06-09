@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A landing page view with metrics aggregated at the unexpanded final URL
@@ -86,7 +88,7 @@ class LandingPageView extends \Google\Protobuf\Internal\Message
      */
     public function getUnexpandedFinalUrl()
     {
-        return $this->unexpanded_final_url ?? '';
+        return isset($this->unexpanded_final_url) ? $this->unexpanded_final_url : '';
     }
 
     public function hasUnexpandedFinalUrl()

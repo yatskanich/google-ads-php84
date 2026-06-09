@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common\PolicyTopicEvidence;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Evidence details when the destination is returning an HTTP error
@@ -69,7 +71,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getExpandedUrl()
     {
-        return $this->expanded_url ?? '';
+        return isset($this->expanded_url) ? $this->expanded_url : '';
     }
 
     public function hasExpandedUrl()
@@ -133,7 +135,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getLastCheckedDateTime()
     {
-        return $this->last_checked_date_time ?? '';
+        return isset($this->last_checked_date_time) ? $this->last_checked_date_time : '';
     }
 
     public function hasLastCheckedDateTime()
@@ -234,7 +236,4 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(DestinationNotWorking::class, \Google\Ads\GoogleAds\V20\Common\PolicyTopicEvidence_DestinationNotWorking::class);
 

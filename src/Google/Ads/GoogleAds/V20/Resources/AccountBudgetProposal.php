@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An account-level budget proposal.
@@ -217,7 +219,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -254,7 +256,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getBillingSetup()
     {
-        return $this->billing_setup ?? '';
+        return isset($this->billing_setup) ? $this->billing_setup : '';
     }
 
     public function hasBillingSetup()
@@ -292,7 +294,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudget()
     {
-        return $this->account_budget ?? '';
+        return isset($this->account_budget) ? $this->account_budget : '';
     }
 
     public function hasAccountBudget()
@@ -385,7 +387,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedName()
     {
-        return $this->proposed_name ?? '';
+        return isset($this->proposed_name) ? $this->proposed_name : '';
     }
 
     public function hasProposedName()
@@ -421,7 +423,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getApprovedStartDateTime()
     {
-        return $this->approved_start_date_time ?? '';
+        return isset($this->approved_start_date_time) ? $this->approved_start_date_time : '';
     }
 
     public function hasApprovedStartDateTime()
@@ -458,7 +460,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedPurchaseOrderNumber()
     {
-        return $this->proposed_purchase_order_number ?? '';
+        return isset($this->proposed_purchase_order_number) ? $this->proposed_purchase_order_number : '';
     }
 
     public function hasProposedPurchaseOrderNumber()
@@ -495,7 +497,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedNotes()
     {
-        return $this->proposed_notes ?? '';
+        return isset($this->proposed_notes) ? $this->proposed_notes : '';
     }
 
     public function hasProposedNotes()
@@ -532,7 +534,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getCreationDateTime()
     {
-        return $this->creation_date_time ?? '';
+        return isset($this->creation_date_time) ? $this->creation_date_time : '';
     }
 
     public function hasCreationDateTime()
@@ -570,7 +572,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getApprovalDateTime()
     {
-        return $this->approval_date_time ?? '';
+        return isset($this->approval_date_time) ? $this->approval_date_time : '';
     }
 
     public function hasApprovalDateTime()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * City the hotel is located in.
@@ -43,7 +45,7 @@ class HotelCityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCityCriterion()
     {
-        return $this->city_criterion ?? '';
+        return isset($this->city_criterion) ? $this->city_criterion : '';
     }
 
     public function hasCityCriterion()

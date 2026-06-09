@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The text ad recommendation.
@@ -100,7 +102,7 @@ class TextAdRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getCreationDate()
     {
-        return $this->creation_date ?? '';
+        return isset($this->creation_date) ? $this->creation_date : '';
     }
 
     public function hasCreationDate()
@@ -138,7 +140,7 @@ class TextAdRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getAutoApplyDate()
     {
-        return $this->auto_apply_date ?? '';
+        return isset($this->auto_apply_date) ? $this->auto_apply_date : '';
     }
 
     public function hasAutoApplyDate()
@@ -168,7 +170,4 @@ class TextAdRecommendation extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(TextAdRecommendation::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_TextAdRecommendation::class);
 

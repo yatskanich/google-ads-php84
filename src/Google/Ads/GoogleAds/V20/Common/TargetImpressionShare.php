@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * An automated bidding strategy that sets bids so that a certain percentage of
@@ -94,7 +96,7 @@ class TargetImpressionShare extends \Google\Protobuf\Internal\Message
      */
     public function getLocationFractionMicros()
     {
-        return $this->location_fraction_micros ?? 0;
+        return isset($this->location_fraction_micros) ? $this->location_fraction_micros : 0;
     }
 
     public function hasLocationFractionMicros()
@@ -133,7 +135,7 @@ class TargetImpressionShare extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return $this->cpc_bid_ceiling_micros ?? 0;
+        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
     }
 
     public function hasCpcBidCeilingMicros()

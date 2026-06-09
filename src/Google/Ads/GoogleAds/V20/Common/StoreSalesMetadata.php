@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Metadata for Store Sales Direct.
@@ -87,7 +89,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getLoyaltyFraction()
     {
-        return $this->loyalty_fraction ?? 0.0;
+        return isset($this->loyalty_fraction) ? $this->loyalty_fraction : 0.0;
     }
 
     public function hasLoyaltyFraction()
@@ -129,7 +131,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionUploadFraction()
     {
-        return $this->transaction_upload_fraction ?? 0.0;
+        return isset($this->transaction_upload_fraction) ? $this->transaction_upload_fraction : 0.0;
     }
 
     public function hasTransactionUploadFraction()
@@ -172,7 +174,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getCustomKey()
     {
-        return $this->custom_key ?? '';
+        return isset($this->custom_key) ? $this->custom_key : '';
     }
 
     public function hasCustomKey()

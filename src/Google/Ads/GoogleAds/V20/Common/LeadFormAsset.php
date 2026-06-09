@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Lead Form asset.
@@ -145,13 +147,13 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      *     @type string $post_submit_description
      *           Detailed description shown after form submission that describes how the
      *           advertiser will follow up with the user.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\LeadFormField>|\Google\Protobuf\Internal\RepeatedField $fields
+     *     @type \Google\Ads\GoogleAds\V20\Common\LeadFormField[] $fields
      *           Ordered list of input fields. This field can be updated by reordering
      *           questions, but not by adding or removing questions.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\LeadFormCustomQuestionField>|\Google\Protobuf\Internal\RepeatedField $custom_question_fields
+     *     @type \Google\Ads\GoogleAds\V20\Common\LeadFormCustomQuestionField[] $custom_question_fields
      *           Ordered list of custom question fields. This field is subject to a limit of
      *           5 qualifying questions per form.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\LeadFormDeliveryMethod>|\Google\Protobuf\Internal\RepeatedField $delivery_methods
+     *     @type \Google\Ads\GoogleAds\V20\Common\LeadFormDeliveryMethod[] $delivery_methods
      *           Configured methods for collected lead data to be delivered to advertiser.
      *           Only one method typed as WebhookDelivery can be configured.
      *     @type int $post_submit_call_to_action_type
@@ -346,7 +348,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getPostSubmitHeadline()
     {
-        return $this->post_submit_headline ?? '';
+        return isset($this->post_submit_headline) ? $this->post_submit_headline : '';
     }
 
     public function hasPostSubmitHeadline()
@@ -384,7 +386,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getPostSubmitDescription()
     {
-        return $this->post_submit_description ?? '';
+        return isset($this->post_submit_description) ? $this->post_submit_description : '';
     }
 
     public function hasPostSubmitDescription()
@@ -418,7 +420,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * questions, but not by adding or removing questions.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormField fields = 8;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\LeadFormField>
      */
     public function getFields()
     {
@@ -430,7 +432,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * questions, but not by adding or removing questions.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormField fields = 8;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\LeadFormField>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\LeadFormField[] $var
      * @return $this
      */
     public function setFields($var)
@@ -446,7 +448,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * 5 qualifying questions per form.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\LeadFormCustomQuestionField>
      */
     public function getCustomQuestionFields()
     {
@@ -458,7 +460,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * 5 qualifying questions per form.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormCustomQuestionField custom_question_fields = 23;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\LeadFormCustomQuestionField>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\LeadFormCustomQuestionField[] $var
      * @return $this
      */
     public function setCustomQuestionFields($var)
@@ -474,7 +476,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * Only one method typed as WebhookDelivery can be configured.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormDeliveryMethod delivery_methods = 9;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\LeadFormDeliveryMethod>
      */
     public function getDeliveryMethods()
     {
@@ -486,7 +488,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      * Only one method typed as WebhookDelivery can be configured.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.LeadFormDeliveryMethod delivery_methods = 9;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\LeadFormDeliveryMethod>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\LeadFormDeliveryMethod[] $var
      * @return $this
      */
     public function setDeliveryMethods($var)
@@ -534,7 +536,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getBackgroundImageAsset()
     {
-        return $this->background_image_asset ?? '';
+        return isset($this->background_image_asset) ? $this->background_image_asset : '';
     }
 
     public function hasBackgroundImageAsset()
@@ -600,7 +602,7 @@ class LeadFormAsset extends \Google\Protobuf\Internal\Message
      */
     public function getCustomDisclosure()
     {
-        return $this->custom_disclosure ?? '';
+        return isset($this->custom_disclosure) ? $this->custom_disclosure : '';
     }
 
     public function hasCustomDisclosure()

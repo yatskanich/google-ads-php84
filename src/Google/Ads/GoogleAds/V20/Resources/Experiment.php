@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Google ads experiment for users to experiment changes on multiple
@@ -153,7 +155,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      *           the end of the specified date in the customer's time zone.
      *           Format: YYYY-MM-DD
      *           Example: 2019-04-18
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\MetricGoal>|\Google\Protobuf\Internal\RepeatedField $goals
+     *     @type \Google\Ads\GoogleAds\V20\Common\MetricGoal[] $goals
      *           The goals of this experiment.
      *     @type string $long_running_operation
      *           Output only. The resource name of the long-running operation that can be
@@ -210,7 +212,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getExperimentId()
     {
-        return $this->experiment_id ?? 0;
+        return isset($this->experiment_id) ? $this->experiment_id : 0;
     }
 
     public function hasExperimentId()
@@ -391,7 +393,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return $this->start_date ?? '';
+        return isset($this->start_date) ? $this->start_date : '';
     }
 
     public function hasStartDate()
@@ -436,7 +438,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return $this->end_date ?? '';
+        return isset($this->end_date) ? $this->end_date : '';
     }
 
     public function hasEndDate()
@@ -472,7 +474,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      * The goals of this experiment.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.MetricGoal goals = 17;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\MetricGoal>
      */
     public function getGoals()
     {
@@ -483,7 +485,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      * The goals of this experiment.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.MetricGoal goals = 17;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\MetricGoal>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\MetricGoal[] $var
      * @return $this
      */
     public function setGoals($var)
@@ -504,7 +506,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return $this->long_running_operation ?? '';
+        return isset($this->long_running_operation) ? $this->long_running_operation : '';
     }
 
     public function hasLongRunningOperation()
@@ -570,7 +572,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getSyncEnabled()
     {
-        return $this->sync_enabled ?? false;
+        return isset($this->sync_enabled) ? $this->sync_enabled : false;
     }
 
     public function hasSyncEnabled()

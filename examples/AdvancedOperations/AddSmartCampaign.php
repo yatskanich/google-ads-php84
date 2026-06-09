@@ -25,52 +25,53 @@ use Google\Ads\GoogleAds\Examples\Utils\ArgumentNames;
 use Google\Ads\GoogleAds\Examples\Utils\ArgumentParser;
 use Google\Ads\GoogleAds\Examples\Utils\Helper;
 use Google\Ads\GoogleAds\Lib\OAuth2TokenBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClient;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsClientBuilder;
-use Google\Ads\GoogleAds\Lib\V20\GoogleAdsException;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClient;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsClientBuilder;
+use Google\Ads\GoogleAds\Lib\V24\GoogleAdsException;
 use Google\Ads\GoogleAds\Util\FieldMasks;
-use Google\Ads\GoogleAds\Util\V20\ResourceNames;
-use Google\Ads\GoogleAds\V20\Common\AdScheduleInfo;
-use Google\Ads\GoogleAds\V20\Common\AdTextAsset;
-use Google\Ads\GoogleAds\V20\Common\KeywordThemeInfo;
-use Google\Ads\GoogleAds\V20\Common\LocationInfo;
-use Google\Ads\GoogleAds\V20\Common\SmartCampaignAdInfo;
-use Google\Ads\GoogleAds\V20\Enums\AdGroupTypeEnum\AdGroupType;
-use Google\Ads\GoogleAds\V20\Enums\AdTypeEnum\AdType;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelSubTypeEnum\AdvertisingChannelSubType;
-use Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
-use Google\Ads\GoogleAds\V20\Enums\BudgetTypeEnum\BudgetType;
-use Google\Ads\GoogleAds\V20\Enums\CampaignStatusEnum\CampaignStatus;
-use Google\Ads\GoogleAds\V20\Enums\DayOfWeekEnum\DayOfWeek;
-use Google\Ads\GoogleAds\V20\Enums\MinuteOfHourEnum\MinuteOfHour;
-use Google\Ads\GoogleAds\V20\Errors\GoogleAdsError;
-use Google\Ads\GoogleAds\V20\Resources\Ad;
-use Google\Ads\GoogleAds\V20\Resources\AdGroup;
-use Google\Ads\GoogleAds\V20\Resources\AdGroupAd;
-use Google\Ads\GoogleAds\V20\Resources\Campaign;
-use Google\Ads\GoogleAds\V20\Resources\CampaignBudget;
-use Google\Ads\GoogleAds\V20\Resources\CampaignCriterion;
-use Google\Ads\GoogleAds\V20\Resources\KeywordThemeConstant;
-use Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting;
-use Google\Ads\GoogleAds\V20\Resources\SmartCampaignSetting\PhoneNumber;
-use Google\Ads\GoogleAds\V20\Services\AdGroupAdOperation;
-use Google\Ads\GoogleAds\V20\Services\AdGroupOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignBudgetOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignCriterionOperation;
-use Google\Ads\GoogleAds\V20\Services\CampaignOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsRequest;
-use Google\Ads\GoogleAds\V20\Services\MutateGoogleAdsResponse;
-use Google\Ads\GoogleAds\V20\Services\MutateOperation;
-use Google\Ads\GoogleAds\V20\Services\MutateOperationResponse;
-use Google\Ads\GoogleAds\V20\Services\SmartCampaignSettingOperation;
-use Google\Ads\GoogleAds\V20\Services\SmartCampaignSuggestionInfo;
-use Google\Ads\GoogleAds\V20\Services\SmartCampaignSuggestionInfo\BusinessContext;
-use Google\Ads\GoogleAds\V20\Services\SmartCampaignSuggestionInfo\LocationList;
-use Google\Ads\GoogleAds\V20\Services\SuggestKeywordThemeConstantsRequest;
-use Google\Ads\GoogleAds\V20\Services\SuggestKeywordThemesRequest;
-use Google\Ads\GoogleAds\V20\Services\SuggestKeywordThemesResponse\KeywordTheme;
-use Google\Ads\GoogleAds\V20\Services\SuggestSmartCampaignAdRequest;
-use Google\Ads\GoogleAds\V20\Services\SuggestSmartCampaignBudgetOptionsRequest;
+use Google\Ads\GoogleAds\Util\V24\ResourceNames;
+use Google\Ads\GoogleAds\V24\Common\AdScheduleInfo;
+use Google\Ads\GoogleAds\V24\Common\AdTextAsset;
+use Google\Ads\GoogleAds\V24\Common\KeywordThemeInfo;
+use Google\Ads\GoogleAds\V24\Common\LocationInfo;
+use Google\Ads\GoogleAds\V24\Common\SmartCampaignAdInfo;
+use Google\Ads\GoogleAds\V24\Enums\AdGroupTypeEnum\AdGroupType;
+use Google\Ads\GoogleAds\V24\Enums\AdTypeEnum\AdType;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelSubTypeEnum\AdvertisingChannelSubType;
+use Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType;
+use Google\Ads\GoogleAds\V24\Enums\BudgetTypeEnum\BudgetType;
+use Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus;
+use Google\Ads\GoogleAds\V24\Enums\DayOfWeekEnum\DayOfWeek;
+use Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus;
+use Google\Ads\GoogleAds\V24\Enums\MinuteOfHourEnum\MinuteOfHour;
+use Google\Ads\GoogleAds\V24\Errors\GoogleAdsError;
+use Google\Ads\GoogleAds\V24\Resources\Ad;
+use Google\Ads\GoogleAds\V24\Resources\AdGroup;
+use Google\Ads\GoogleAds\V24\Resources\AdGroupAd;
+use Google\Ads\GoogleAds\V24\Resources\Campaign;
+use Google\Ads\GoogleAds\V24\Resources\CampaignBudget;
+use Google\Ads\GoogleAds\V24\Resources\CampaignCriterion;
+use Google\Ads\GoogleAds\V24\Resources\KeywordThemeConstant;
+use Google\Ads\GoogleAds\V24\Resources\SmartCampaignSetting;
+use Google\Ads\GoogleAds\V24\Resources\SmartCampaignSetting\PhoneNumber;
+use Google\Ads\GoogleAds\V24\Services\AdGroupAdOperation;
+use Google\Ads\GoogleAds\V24\Services\AdGroupOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignBudgetOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignCriterionOperation;
+use Google\Ads\GoogleAds\V24\Services\CampaignOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateGoogleAdsRequest;
+use Google\Ads\GoogleAds\V24\Services\MutateGoogleAdsResponse;
+use Google\Ads\GoogleAds\V24\Services\MutateOperation;
+use Google\Ads\GoogleAds\V24\Services\MutateOperationResponse;
+use Google\Ads\GoogleAds\V24\Services\SmartCampaignSettingOperation;
+use Google\Ads\GoogleAds\V24\Services\SmartCampaignSuggestionInfo;
+use Google\Ads\GoogleAds\V24\Services\SmartCampaignSuggestionInfo\BusinessContext;
+use Google\Ads\GoogleAds\V24\Services\SmartCampaignSuggestionInfo\LocationList;
+use Google\Ads\GoogleAds\V24\Services\SuggestKeywordThemeConstantsRequest;
+use Google\Ads\GoogleAds\V24\Services\SuggestKeywordThemesRequest;
+use Google\Ads\GoogleAds\V24\Services\SuggestKeywordThemesResponse\KeywordTheme;
+use Google\Ads\GoogleAds\V24\Services\SuggestSmartCampaignAdRequest;
+use Google\Ads\GoogleAds\V24\Services\SuggestSmartCampaignBudgetOptionsRequest;
 use Google\ApiCore\ApiException;
 use InvalidArgumentException;
 
@@ -660,7 +661,10 @@ class AddSmartCampaign
                 ResourceNames::forCampaign($customerId, self::SMART_CAMPAIGN_TEMPORARY_ID),
             // Sets the budget using the given budget resource name.
             'campaign_budget' =>
-                ResourceNames::forCampaignBudget($customerId, self::BUDGET_TEMPORARY_ID)
+                ResourceNames::forCampaignBudget($customerId, self::BUDGET_TEMPORARY_ID),
+            // Declare whether or not this campaign serves political ads targeting the EU.
+            'contains_eu_political_advertising' =>
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING
         ]);
 
         // Creates the MutateOperation that creates the campaign.

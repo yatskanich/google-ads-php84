@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Common;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A Proximity criterion. The geo point and radius determine what geographical
@@ -109,7 +111,7 @@ class ProximityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRadius()
     {
-        return $this->radius ?? 0.0;
+        return isset($this->radius) ? $this->radius : 0.0;
     }
 
     public function hasRadius()

@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\AdStrengthActionItem;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The details of the asset to add.
@@ -91,7 +93,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getAssetCount()
     {
-        return $this->asset_count ?? 0;
+        return isset($this->asset_count) ? $this->asset_count : 0;
     }
 
     public function hasAssetCount()
@@ -130,7 +132,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getVideoAspectRatioRequirement()
     {
-        return $this->video_aspect_ratio_requirement ?? 0;
+        return isset($this->video_aspect_ratio_requirement) ? $this->video_aspect_ratio_requirement : 0;
     }
 
     public function hasVideoAspectRatioRequirement()
@@ -162,7 +164,4 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(AddAssetDetails::class, \Google\Ads\GoogleAds\V20\Resources\AdStrengthActionItem_AddAssetDetails::class);
 

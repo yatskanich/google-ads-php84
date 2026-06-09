@@ -13,21 +13,10 @@ class AssetGroupProductGroupView
         if (static::$is_initialized == true) {
           return;
         }
-        \GPBMetadata\Google\Api\Resource::initOnce();
         \GPBMetadata\Google\Api\FieldBehavior::initOnce();
+        \GPBMetadata\Google\Api\Resource::initOnce();
         $pool->internalAddGeneratedFile(
-            '
-Þ
-Ggoogle/ads/googleads/v20/resources/asset_group_product_group_view.proto"google.ads.googleads.v20.resourcesgoogle/api/resource.proto"·
-AssetGroupProductGroupViewR
-resource_name (	B;àAúA5
-3googleads.googleapis.com/AssetGroupProductGroupView@
-asset_group (	B+àAúA%
-#googleads.googleapis.com/AssetGroupg
- asset_group_listing_group_filter (	B=àAúA7
-5googleads.googleapis.com/AssetGroupListingGroupFilter:™êA•
-3googleads.googleapis.com/AssetGroupProductGroupView^customers/{customer_id}/assetGroupProductGroupViews/{asset_group_id}~{listing_group_filter_id}B‘
-&com.google.ads.googleads.v20.resourcesBAssetGroupProductGroupViewProtoPZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources¢GAAª"Google.Ads.GoogleAds.V20.ResourcesÊ"Google\\Ads\\GoogleAds\\V20\\Resourcesê&Google::Ads::GoogleAds::V20::Resourcesbproto3'
+            "\x0A\xDE\x06\x0AGgoogle/ads/googleads/v20/resources/asset_group_product_group_view.proto\x12\"google.ads.googleads.v20.resources\x1A\x19google/api/resource.proto\"\xB7\x03\x0A\x1AAssetGroupProductGroupView\x12R\x0A\x0Dresource_name\x18\x01 \x01(\x09B;\xE0A\x03\xFAA5\x0A3googleads.googleapis.com/AssetGroupProductGroupView\x12@\x0A\x0Basset_group\x18\x02 \x01(\x09B+\xE0A\x03\xFAA%\x0A#googleads.googleapis.com/AssetGroup\x12g\x0A asset_group_listing_group_filter\x18\x04 \x01(\x09B=\xE0A\x03\xFAA7\x0A5googleads.googleapis.com/AssetGroupListingGroupFilter:\x99\x01\xEAA\x95\x01\x0A3googleads.googleapis.com/AssetGroupProductGroupView\x12^customers/{customer_id}/assetGroupProductGroupViews/{asset_group_id}~{listing_group_filter_id}B\x91\x02\x0A&com.google.ads.googleads.v20.resourcesB\x1FAssetGroupProductGroupViewProtoP\x01ZKgoogle.golang.org/genproto/googleapis/ads/googleads/v20/resources;resources\xA2\x02\x03GAA\xAA\x02\"Google.Ads.GoogleAds.V20.Resources\xCA\x02\"Google\\Ads\\GoogleAds\\V20\\Resources\xEA\x02&Google::Ads::GoogleAds::V20::Resourcesb\x06proto3"
         , true);
         static::$is_initialized = true;
     }

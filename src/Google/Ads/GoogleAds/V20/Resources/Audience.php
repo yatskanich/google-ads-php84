@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Audience is an effective targeting option that lets you
@@ -105,7 +107,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      *           updated when scope is ASSET_GROUP.
      *     @type string $description
      *           Description of this audience.
-     *     @type array<\Google\Ads\GoogleAds\V20\Common\AudienceDimension>|\Google\Protobuf\Internal\RepeatedField $dimensions
+     *     @type \Google\Ads\GoogleAds\V20\Common\AudienceDimension[] $dimensions
      *           Positive dimensions specifying the audience composition.
      *     @type \Google\Ads\GoogleAds\V20\Common\AudienceExclusionDimension $exclusion_dimension
      *           Negative dimension specifying the audience composition.
@@ -221,7 +223,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return $this->name ?? '';
+        return isset($this->name) ? $this->name : '';
     }
 
     public function hasName()
@@ -282,7 +284,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      * Positive dimensions specifying the audience composition.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AudienceDimension dimensions = 6;</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<\Google\Ads\GoogleAds\V20\Common\AudienceDimension>
      */
     public function getDimensions()
     {
@@ -293,7 +295,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      * Positive dimensions specifying the audience composition.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.common.AudienceDimension dimensions = 6;</code>
-     * @param array<\Google\Ads\GoogleAds\V20\Common\AudienceDimension>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param \Google\Ads\GoogleAds\V20\Common\AudienceDimension[] $var
      * @return $this
      */
     public function setDimensions($var)

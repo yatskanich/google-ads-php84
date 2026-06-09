@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * A customer.
@@ -196,6 +198,16 @@ class Customer extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.ads.googleads.v20.enums.BrandSafetySuitabilityEnum.BrandSafetySuitability video_brand_safety_suitability = 46 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     protected $video_brand_safety_suitability = 0;
+    /**
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    protected $contains_eu_political_advertising = 0;
 
     /**
      * Constructor.
@@ -242,7 +254,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      *           Conversion tracking setting for a customer.
      *     @type \Google\Ads\GoogleAds\V20\Resources\RemarketingSetting $remarketing_setting
      *           Output only. Remarketing setting for a customer.
-     *     @type array<int>|\Google\Protobuf\Internal\RepeatedField $pay_per_conversion_eligibility_failure_reasons
+     *     @type int[] $pay_per_conversion_eligibility_failure_reasons
      *           Output only. Reasons why the customer is not eligible to use
      *           PaymentMode.CONVERSIONS. If the list is empty, the customer is eligible.
      *           This field is read-only.
@@ -286,6 +298,12 @@ class Customer extends \Google\Protobuf\Internal\Message
      *           selecting an inventory type to show your ads on content that is the right
      *           fit for your brand. See
      *           https://support.google.com/google-ads/answer/7515513.
+     *     @type int $contains_eu_political_advertising
+     *           Output only. Returns the advertiser self-declaration status of whether this
+     *           customer contains political advertising content targeted towards the
+     *           European Union. You can use the Google Ads UI to update this account-level
+     *           declaration, or use the API to update the self-declaration status of
+     *           individual campaigns.
      * }
      */
     public function __construct($data = NULL) {
@@ -331,7 +349,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return $this->id ?? 0;
+        return isset($this->id) ? $this->id : 0;
     }
 
     public function hasId()
@@ -367,7 +385,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getDescriptiveName()
     {
-        return $this->descriptive_name ?? '';
+        return isset($this->descriptive_name) ? $this->descriptive_name : '';
     }
 
     public function hasDescriptiveName()
@@ -405,7 +423,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return $this->currency_code ?? '';
+        return isset($this->currency_code) ? $this->currency_code : '';
     }
 
     public function hasCurrencyCode()
@@ -443,7 +461,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTimeZone()
     {
-        return $this->time_zone ?? '';
+        return isset($this->time_zone) ? $this->time_zone : '';
     }
 
     public function hasTimeZone()
@@ -480,7 +498,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return $this->tracking_url_template ?? '';
+        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -518,7 +536,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return $this->final_url_suffix ?? '';
+        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
     }
 
     public function hasFinalUrlSuffix()
@@ -556,7 +574,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getAutoTaggingEnabled()
     {
-        return $this->auto_tagging_enabled ?? false;
+        return isset($this->auto_tagging_enabled) ? $this->auto_tagging_enabled : false;
     }
 
     public function hasAutoTaggingEnabled()
@@ -596,7 +614,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getHasPartnersBadge()
     {
-        return $this->has_partners_badge ?? false;
+        return isset($this->has_partners_badge) ? $this->has_partners_badge : false;
     }
 
     public function hasHasPartnersBadge()
@@ -635,7 +653,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getManager()
     {
-        return $this->manager ?? false;
+        return isset($this->manager) ? $this->manager : false;
     }
 
     public function hasManager()
@@ -671,7 +689,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getTestAccount()
     {
-        return $this->test_account ?? false;
+        return isset($this->test_account) ? $this->test_account : false;
     }
 
     public function hasTestAccount()
@@ -815,7 +833,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      * This field is read-only.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @return \Google\Protobuf\Internal\RepeatedField
+     * @return RepeatedField<int>
      */
     public function getPayPerConversionEligibilityFailureReasons()
     {
@@ -828,7 +846,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      * This field is read-only.
      *
      * Generated from protobuf field <code>repeated .google.ads.googleads.v20.enums.CustomerPayPerConversionEligibilityFailureReasonEnum.CustomerPayPerConversionEligibilityFailureReason pay_per_conversion_eligibility_failure_reasons = 16 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
-     * @param array<int>|\Google\Protobuf\Internal\RepeatedField $var
+     * @param int[] $var
      * @return $this
      */
     public function setPayPerConversionEligibilityFailureReasons($var)
@@ -853,7 +871,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return $this->optimization_score ?? 0.0;
+        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
     }
 
     public function hasOptimizationScore()
@@ -962,7 +980,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getLocationAssetAutoMigrationDone()
     {
-        return $this->location_asset_auto_migration_done ?? false;
+        return isset($this->location_asset_auto_migration_done) ? $this->location_asset_auto_migration_done : false;
     }
 
     public function hasLocationAssetAutoMigrationDone()
@@ -1000,7 +1018,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getImageAssetAutoMigrationDone()
     {
-        return $this->image_asset_auto_migration_done ?? false;
+        return isset($this->image_asset_auto_migration_done) ? $this->image_asset_auto_migration_done : false;
     }
 
     public function hasImageAssetAutoMigrationDone()
@@ -1038,7 +1056,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getLocationAssetAutoMigrationDoneDateTime()
     {
-        return $this->location_asset_auto_migration_done_date_time ?? '';
+        return isset($this->location_asset_auto_migration_done_date_time) ? $this->location_asset_auto_migration_done_date_time : '';
     }
 
     public function hasLocationAssetAutoMigrationDoneDateTime()
@@ -1076,7 +1094,7 @@ class Customer extends \Google\Protobuf\Internal\Message
      */
     public function getImageAssetAutoMigrationDoneDateTime()
     {
-        return $this->image_asset_auto_migration_done_date_time ?? '';
+        return isset($this->image_asset_auto_migration_done_date_time) ? $this->image_asset_auto_migration_done_date_time : '';
     }
 
     public function hasImageAssetAutoMigrationDoneDateTime()
@@ -1205,6 +1223,40 @@ class Customer extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\BrandSafetySuitabilityEnum\BrandSafetySuitability::class);
         $this->video_brand_safety_suitability = $var;
+
+        return $this;
+    }
+
+    /**
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return int
+     */
+    public function getContainsEuPoliticalAdvertising()
+    {
+        return $this->contains_eu_political_advertising;
+    }
+
+    /**
+     * Output only. Returns the advertiser self-declaration status of whether this
+     * customer contains political advertising content targeted towards the
+     * European Union. You can use the Google Ads UI to update this account-level
+     * declaration, or use the API to update the self-declaration status of
+     * individual campaigns.
+     *
+     * Generated from protobuf field <code>.google.ads.googleads.v20.enums.EuPoliticalAdvertisingStatusEnum.EuPoliticalAdvertisingStatus contains_eu_political_advertising = 55 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param int $var
+     * @return $this
+     */
+    public function setContainsEuPoliticalAdvertising($var)
+    {
+        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus::class);
+        $this->contains_eu_political_advertising = $var;
 
         return $this;
     }

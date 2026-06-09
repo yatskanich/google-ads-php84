@@ -1,3 +1,57 @@
+## 33.4.0
+* Added support for Google Ads API v24.1
+* Resolved Laravel sample app security vulnerabilities
+
+
+## 33.3.0
+*   Added support for Google Ads API v24
+*   Dependency updates
+*   Resolved Laravel sample app security vulnerabilities
+*   Removed grpc/grpc maximum version constraint
+
+## 32.3.0
+*   Support for Google Ads API v23.2.
+*   Incorporated generator updates (new 'actions' directory, Protobuf changes).
+*   Dependency updates.
+
+## 32.2.0
+*   Added support for Google Ads API v23.1.
+*   Regenerated stubs for Google Ads API v20, v21, and v22 to incorporate changes for supporting European Union Political Ads Regulation in Google Ads API
+*   Updated dependencies.
+
+## 32.1.0
+*   Added support for Google Ads API v23.
+*   Removed support for Google Ads API v19.
+*   Updated examples in examples in `AddCampaigns`, `AddDynamicSearchAds`, `AddPerformanceMaxCampaign`, `AddPerformanceMaxRetailCampaign`, and `AddAppCampaign`.
+*   Removed the `AddCallAd.php` example as Call Ads are no longer supported in the API.
+*   Changed the default value of the `brandGuidelinesEnabled` parameter to `true` in `AddPerformanceMaxCampaign` and `AddPerformanceMaxRetailCampaign` examples.
+*   Ensured deprecated `salesCountry` parameter is not used in `AddPerformanceMaxRetailCampaign` example.
+*   Updated dependencies via `composer update`.
+
+
+## 31.1.0
+*   Added support for Google Ads API V22.
+*   Updated generated code for Google Ads API V21 to include recent fixes.
+*   Updated `examples/AdvancedOperations/AddPerformanceMaxCampaign.php` and `examples/ShoppingAds/AddPerformanceMaxRetailCampaign.php`:
+*   Examples now use Google Ads API V22.
+*   Replaced deprecated `url_expansion_opt_out` field with `AssetAutomationSettings` to control URL expansion and text asset automation.
+
+## 31.0.1
+*    Updated protobuf constraint in to be less restrictive for users on the Protobuf 3.x series and preserve backwards compatibility.
+
+## 31.0.0
+*    Compatibility with v21.0 of the API: https://developers.google.com/google-ads/api/docs/release-notes
+*    Added support for declaring EU political advertising status on campaign creation in examples.
+*    Pinned the 'grpc/grpc' dependency so it doesn't get ahead of the C 'ext-grpc'.
+*    Removed support for v18 of the API: https://ads-developers.googleblog.com/2025/07/google-ads-api-v18-sunset-reminder.html
+
+## 30.0.0
+*    Fixed the potential break in v29.0.0 (due to dependency conflicts) by pinning the protobuf dependency to be <=4.30.0 and reverting back to the old getLabel method.
+*    Fixed the potential maximum call size error due to a bug in the GRPC C extension by pinning ext-grpc to be <=1.66.0
+
+## 29.0.0
+*    Security fixes, updated deprecated getLabel to isRepeated.
+
 ## 28.0.0
 *    Compatibility with v20.0 of the API: https://developers.google.com/google-ads/api/docs/release-notes
 

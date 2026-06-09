@@ -4,7 +4,9 @@
 
 namespace Google\Ads\GoogleAds\V20\Resources\Recommendation;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * The Maximize Clicks opt-in recommendation.
@@ -46,7 +48,7 @@ class MaximizeClicksOptInRecommendation extends \Google\Protobuf\Internal\Messag
      */
     public function getRecommendedBudgetAmountMicros()
     {
-        return $this->recommended_budget_amount_micros ?? 0;
+        return isset($this->recommended_budget_amount_micros) ? $this->recommended_budget_amount_micros : 0;
     }
 
     public function hasRecommendedBudgetAmountMicros()
@@ -76,7 +78,4 @@ class MaximizeClicksOptInRecommendation extends \Google\Protobuf\Internal\Messag
     }
 
 }
-
-// Adding a class alias for backwards compatibility with the previous class name.
-class_alias(MaximizeClicksOptInRecommendation::class, \Google\Ads\GoogleAds\V20\Resources\Recommendation_MaximizeClicksOptInRecommendation::class);
 

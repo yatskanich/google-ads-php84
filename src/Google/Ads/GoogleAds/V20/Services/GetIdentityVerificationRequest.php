@@ -4,11 +4,13 @@
 
 namespace Google\Ads\GoogleAds\V20\Services;
 
+use Google\Protobuf\Internal\GPBType;
 use Google\Protobuf\Internal\GPBUtil;
+use Google\Protobuf\RepeatedField;
 
 /**
  * Request message for
- *  [IdentityVerificationService.GetIdentityVerification].
+ *  [GetIdentityVerification][google.ads.googleads.v20.services.IdentityVerificationService.GetIdentityVerification].
  *
  * Generated from protobuf message <code>google.ads.googleads.v20.services.GetIdentityVerificationRequest</code>
  */
@@ -32,7 +34,7 @@ class GetIdentityVerificationRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId): self
     {
-        return new self()
+        return (new self())
             ->setCustomerId($customerId);
     }
 
