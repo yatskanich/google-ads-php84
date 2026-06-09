@@ -78,7 +78,7 @@ class AudienceCompositionSection extends \Google\Protobuf\Internal\Message
      */
     public function setDimension($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AudienceInsightsDimensionEnum\AudienceInsightsDimension::class);
+        GPBUtil::checkEnum($var);
         $this->dimension = $var;
 
         return $this;

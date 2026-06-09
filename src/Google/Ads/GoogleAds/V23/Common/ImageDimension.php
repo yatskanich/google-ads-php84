@@ -61,7 +61,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getHeightPixels()
     {
-        return isset($this->height_pixels) ? $this->height_pixels : 0;
+        return $this->height_pixels ?? 0;
     }
 
     public function hasHeightPixels()
@@ -97,7 +97,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getWidthPixels()
     {
-        return isset($this->width_pixels) ? $this->width_pixels : 0;
+        return $this->width_pixels ?? 0;
     }
 
     public function hasWidthPixels()
@@ -133,7 +133,7 @@ class ImageDimension extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return isset($this->url) ? $this->url : '';
+        return $this->url ?? '';
     }
 
     public function hasUrl()

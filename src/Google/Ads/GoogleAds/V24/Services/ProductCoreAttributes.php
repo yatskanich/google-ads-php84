@@ -69,7 +69,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function getMarketingObjective()
     {
-        return isset($this->marketing_objective) ? $this->marketing_objective : 0;
+        return $this->marketing_objective ?? 0;
     }
 
     public function hasMarketingObjective()
@@ -92,7 +92,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function setMarketingObjective($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ReachPlanMarketingObjectiveEnum\ReachPlanMarketingObjective::class);
+        GPBUtil::checkEnum($var);
         $this->marketing_objective = $var;
 
         return $this;
@@ -106,7 +106,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function getCostModel()
     {
-        return isset($this->cost_model) ? $this->cost_model : 0;
+        return $this->cost_model ?? 0;
     }
 
     public function hasCostModel()
@@ -128,7 +128,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function setCostModel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ReachPlanCostModelEnum\ReachPlanCostModel::class);
+        GPBUtil::checkEnum($var);
         $this->cost_model = $var;
 
         return $this;
@@ -144,7 +144,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function getBuyingMethod()
     {
-        return isset($this->buying_method) ? $this->buying_method : 0;
+        return $this->buying_method ?? 0;
     }
 
     public function hasBuyingMethod()
@@ -168,7 +168,7 @@ class ProductCoreAttributes extends \Google\Protobuf\Internal\Message
      */
     public function setBuyingMethod($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ReachPlanBuyingMethodEnum\ReachPlanBuyingMethod::class);
+        GPBUtil::checkEnum($var);
         $this->buying_method = $var;
 
         return $this;

@@ -91,7 +91,7 @@ class ConceptGroup extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\KeywordPlanConceptGroupTypeEnum\KeywordPlanConceptGroupType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

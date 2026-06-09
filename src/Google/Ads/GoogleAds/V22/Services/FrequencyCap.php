@@ -92,7 +92,7 @@ class FrequencyCap extends \Google\Protobuf\Internal\Message
      */
     public function setTimeUnit($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\FrequencyCapTimeUnitEnum\FrequencyCapTimeUnit::class);
+        GPBUtil::checkEnum($var);
         $this->time_unit = $var;
 
         return $this;

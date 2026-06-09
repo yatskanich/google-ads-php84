@@ -74,7 +74,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         $response = $gapicClient->suggestTravelAssets($request);
@@ -112,7 +112,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         try {
@@ -142,7 +142,7 @@ class TravelAssetSuggestionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $languageOption = 'languageOption-1219231940';
-        $request = (new SuggestTravelAssetsRequest())
+        $request = new SuggestTravelAssetsRequest()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
         $response = $gapicClient->suggestTravelAssetsAsync($request)->wait();

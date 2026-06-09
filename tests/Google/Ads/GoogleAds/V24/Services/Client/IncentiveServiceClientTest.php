@@ -79,7 +79,7 @@ class IncentiveServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $countryCode = 'countryCode1481071862';
-        $request = (new ApplyIncentiveRequest())
+        $request = new ApplyIncentiveRequest()
             ->setCountryCode($countryCode);
         $response = $gapicClient->applyIncentive($request);
         $this->assertEquals($expectedResponse, $response);
@@ -113,7 +113,7 @@ class IncentiveServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $countryCode = 'countryCode1481071862';
-        $request = (new ApplyIncentiveRequest())
+        $request = new ApplyIncentiveRequest()
             ->setCountryCode($countryCode);
         try {
             $gapicClient->applyIncentive($request);
@@ -199,7 +199,7 @@ class IncentiveServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $countryCode = 'countryCode1481071862';
-        $request = (new ApplyIncentiveRequest())
+        $request = new ApplyIncentiveRequest()
             ->setCountryCode($countryCode);
         $response = $gapicClient->applyIncentiveAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

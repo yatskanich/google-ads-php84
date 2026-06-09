@@ -144,7 +144,7 @@ class AdGroupAdAssetCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getEnabled()
     {
-        return isset($this->enabled) ? $this->enabled : false;
+        return $this->enabled ?? false;
     }
 
     public function hasEnabled()

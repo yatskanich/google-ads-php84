@@ -57,7 +57,7 @@ class LocalCampaignSetting extends \Google\Protobuf\Internal\Message
      */
     public function setLocationSourceType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LocationSourceTypeEnum\LocationSourceType::class);
+        GPBUtil::checkEnum($var);
         $this->location_source_type = $var;
 
         return $this;

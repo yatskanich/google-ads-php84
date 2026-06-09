@@ -149,4 +149,6 @@ class InviteUserWithAccessRole
     }
 }
 
-InviteUserWithAccessRole::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    InviteUserWithAccessRole::main();
+}

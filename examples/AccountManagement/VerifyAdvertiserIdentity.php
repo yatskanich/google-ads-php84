@@ -218,4 +218,6 @@ class VerifyAdvertiserIdentity
     // [END verify_advertiser_identity_2]
 }
 
-VerifyAdvertiserIdentity::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    VerifyAdvertiserIdentity::main();
+}

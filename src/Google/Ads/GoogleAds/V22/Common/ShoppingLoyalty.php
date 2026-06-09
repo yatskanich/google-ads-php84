@@ -53,7 +53,7 @@ class ShoppingLoyalty extends \Google\Protobuf\Internal\Message
      */
     public function getLoyaltyTier()
     {
-        return isset($this->loyalty_tier) ? $this->loyalty_tier : '';
+        return $this->loyalty_tier ?? '';
     }
 
     public function hasLoyaltyTier()

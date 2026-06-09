@@ -57,7 +57,7 @@ class IncomeRangeInfo extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\IncomeRangeTypeEnum\IncomeRangeType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

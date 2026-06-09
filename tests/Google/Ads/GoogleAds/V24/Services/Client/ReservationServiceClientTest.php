@@ -75,7 +75,7 @@ class ReservationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new BookCampaignsRequest())
+        $request = new BookCampaignsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->bookCampaigns($request);
         $this->assertEquals($expectedResponse, $response);
@@ -109,7 +109,7 @@ class ReservationServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new BookCampaignsRequest())
+        $request = new BookCampaignsRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->bookCampaigns($request);
@@ -137,7 +137,7 @@ class ReservationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new QuoteCampaignsRequest())
+        $request = new QuoteCampaignsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->quoteCampaigns($request);
         $this->assertEquals($expectedResponse, $response);
@@ -171,7 +171,7 @@ class ReservationServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new QuoteCampaignsRequest())
+        $request = new QuoteCampaignsRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->quoteCampaigns($request);
@@ -199,7 +199,7 @@ class ReservationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new BookCampaignsRequest())
+        $request = new BookCampaignsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->bookCampaignsAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

@@ -39,7 +39,7 @@ class CreateProductLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V21\Resources\ProductLink $productLink): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setProductLink($productLink);
     }

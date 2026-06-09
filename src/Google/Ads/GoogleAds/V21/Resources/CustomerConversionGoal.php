@@ -124,7 +124,7 @@ class CustomerConversionGoal extends \Google\Protobuf\Internal\Message
      */
     public function setCategory($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionActionCategoryEnum\ConversionActionCategory::class);
+        GPBUtil::checkEnum($var);
         $this->category = $var;
 
         return $this;
@@ -154,7 +154,7 @@ class CustomerConversionGoal extends \Google\Protobuf\Internal\Message
      */
     public function setOrigin($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionOriginEnum\ConversionOrigin::class);
+        GPBUtil::checkEnum($var);
         $this->origin = $var;
 
         return $this;

@@ -57,7 +57,7 @@ class MediaBundle extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : '';
+        return $this->data ?? '';
     }
 
     public function hasData()
@@ -95,7 +95,7 @@ class MediaBundle extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return isset($this->url) ? $this->url : '';
+        return $this->url ?? '';
     }
 
     public function hasUrl()

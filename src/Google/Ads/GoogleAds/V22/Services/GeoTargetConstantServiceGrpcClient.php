@@ -54,7 +54,7 @@ class GeoTargetConstantServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.GeoTargetConstantService/SuggestGeoTargetConstants',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\SuggestGeoTargetConstantsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\SuggestGeoTargetConstantsResponse::class, 'decode'],
         $metadata, $options);
     }
 

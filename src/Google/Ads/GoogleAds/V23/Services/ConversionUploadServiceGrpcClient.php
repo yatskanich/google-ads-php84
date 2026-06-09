@@ -53,7 +53,7 @@ class ConversionUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.ConversionUploadService/UploadClickConversions',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\UploadClickConversionsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\UploadClickConversionsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -77,7 +77,7 @@ class ConversionUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.ConversionUploadService/UploadCallConversions',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\UploadCallConversionsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\UploadCallConversionsResponse::class, 'decode'],
         $metadata, $options);
     }
 

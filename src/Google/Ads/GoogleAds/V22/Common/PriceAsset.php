@@ -85,7 +85,7 @@ class PriceAsset extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\PriceExtensionTypeEnum\PriceExtensionType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -111,7 +111,7 @@ class PriceAsset extends \Google\Protobuf\Internal\Message
      */
     public function setPriceQualifier($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\PriceExtensionPriceQualifierEnum\PriceExtensionPriceQualifier::class);
+        GPBUtil::checkEnum($var);
         $this->price_qualifier = $var;
 
         return $this;

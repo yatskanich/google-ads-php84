@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.InvoiceService' => [
             'ListInvoices' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ListInvoicesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ListInvoicesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

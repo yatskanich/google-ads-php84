@@ -93,7 +93,7 @@ class FlexibleRuleOperandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLookbackWindowDays()
     {
-        return isset($this->lookback_window_days) ? $this->lookback_window_days : 0;
+        return $this->lookback_window_days ?? 0;
     }
 
     public function hasLookbackWindowDays()

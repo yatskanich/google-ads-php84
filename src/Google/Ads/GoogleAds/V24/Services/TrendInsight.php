@@ -193,7 +193,7 @@ class TrendInsight extends \Google\Protobuf\Internal\Message
      */
     public function setTrend($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\InsightsTrendEnum\InsightsTrend::class);
+        GPBUtil::checkEnum($var);
         $this->trend = $var;
 
         return $this;

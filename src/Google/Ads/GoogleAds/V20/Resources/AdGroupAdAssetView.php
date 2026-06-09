@@ -164,7 +164,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupAd()
     {
-        return isset($this->ad_group_ad) ? $this->ad_group_ad : '';
+        return $this->ad_group_ad ?? '';
     }
 
     public function hasAdGroupAd()
@@ -200,7 +200,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()
@@ -248,7 +248,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;
@@ -265,7 +265,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getEnabled()
     {
-        return isset($this->enabled) ? $this->enabled : false;
+        return $this->enabled ?? false;
     }
 
     public function hasEnabled()
@@ -352,7 +352,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setPerformanceLabel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AssetPerformanceLabelEnum\AssetPerformanceLabel::class);
+        GPBUtil::checkEnum($var);
         $this->performance_label = $var;
 
         return $this;
@@ -378,7 +378,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setPinnedField($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ServedAssetFieldTypeEnum\ServedAssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->pinned_field = $var;
 
         return $this;
@@ -404,7 +404,7 @@ class AdGroupAdAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AssetSourceEnum\AssetSource::class);
+        GPBUtil::checkEnum($var);
         $this->source = $var;
 
         return $this;

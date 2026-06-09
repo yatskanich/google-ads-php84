@@ -96,7 +96,7 @@ class RaiseTargetCpaRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getAppBiddingGoal()
     {
-        return isset($this->app_bidding_goal) ? $this->app_bidding_goal : 0;
+        return $this->app_bidding_goal ?? 0;
     }
 
     public function hasAppBiddingGoal()
@@ -119,7 +119,7 @@ class RaiseTargetCpaRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function setAppBiddingGoal($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AppBiddingGoalEnum\AppBiddingGoal::class);
+        GPBUtil::checkEnum($var);
         $this->app_bidding_goal = $var;
 
         return $this;

@@ -74,7 +74,7 @@ class BiddingStrategyServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingStrategiesRequest())
+        $request = new MutateBiddingStrategiesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingStrategies($request);
@@ -112,7 +112,7 @@ class BiddingStrategyServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingStrategiesRequest())
+        $request = new MutateBiddingStrategiesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class BiddingStrategyServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingStrategiesRequest())
+        $request = new MutateBiddingStrategiesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingStrategiesAsync($request)->wait();

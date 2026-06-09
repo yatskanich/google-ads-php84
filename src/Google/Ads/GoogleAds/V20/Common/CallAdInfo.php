@@ -477,7 +477,7 @@ class CallAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function setConversionReportingState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\CallConversionReportingStateEnum\CallConversionReportingState::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_reporting_state = $var;
 
         return $this;

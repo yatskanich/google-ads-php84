@@ -148,4 +148,6 @@ class AddCampaignLabels
     // [END add_campaign_labels]
 }
 
-AddCampaignLabels::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddCampaignLabels::main();
+}

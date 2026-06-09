@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.KeywordPlanCampaignKeywordService' => [
             'MutateKeywordPlanCampaignKeywords' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\MutateKeywordPlanCampaignKeywordsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\MutateKeywordPlanCampaignKeywordsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

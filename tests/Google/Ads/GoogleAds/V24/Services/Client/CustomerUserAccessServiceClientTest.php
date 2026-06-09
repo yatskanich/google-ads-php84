@@ -75,7 +75,7 @@ class CustomerUserAccessServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessOperation();
-        $request = (new MutateCustomerUserAccessRequest())
+        $request = new MutateCustomerUserAccessRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccess($request);
@@ -113,7 +113,7 @@ class CustomerUserAccessServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessOperation();
-        $request = (new MutateCustomerUserAccessRequest())
+        $request = new MutateCustomerUserAccessRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class CustomerUserAccessServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessOperation();
-        $request = (new MutateCustomerUserAccessRequest())
+        $request = new MutateCustomerUserAccessRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccessAsync($request)->wait();

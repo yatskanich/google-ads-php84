@@ -199,7 +199,7 @@ class AddMerchantCenterDynamicRemarketingCampaign
             'manual_cpc' => new ManualCpc(),
             // Declare whether or not this campaign serves political ads targeting the EU.
             'contains_eu_political_advertising' =>
-                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING
+                EuPoliticalAdvertisingStatus::DOES_NOT_CONTAIN_EU_POLITICAL_ADVERTISING,
             // This connects the campaign to the merchant center account.
             'shopping_setting' => $shoppingSettings
         ]);
@@ -440,4 +440,6 @@ class AddMerchantCenterDynamicRemarketingCampaign
     // [END add_merchant_center_dynamic_remarketing_campaign_3]
 }
 
-AddMerchantCenterDynamicRemarketingCampaign::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddMerchantCenterDynamicRemarketingCampaign::main();
+}

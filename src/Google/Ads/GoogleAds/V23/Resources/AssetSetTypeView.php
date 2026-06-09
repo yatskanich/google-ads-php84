@@ -102,7 +102,7 @@ class AssetSetTypeView extends \Google\Protobuf\Internal\Message
      */
     public function setAssetSetType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AssetSetTypeEnum\AssetSetType::class);
+        GPBUtil::checkEnum($var);
         $this->asset_set_type = $var;
 
         return $this;

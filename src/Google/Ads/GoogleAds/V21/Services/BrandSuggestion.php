@@ -159,7 +159,7 @@ class BrandSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\BrandStateEnum\BrandState::class);
+        GPBUtil::checkEnum($var);
         $this->state = $var;
 
         return $this;

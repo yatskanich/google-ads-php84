@@ -143,7 +143,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantId()
     {
-        return isset($this->merchant_id) ? $this->merchant_id : 0;
+        return $this->merchant_id ?? 0;
     }
 
     public function hasMerchantId()
@@ -226,7 +226,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignPriority()
     {
-        return isset($this->campaign_priority) ? $this->campaign_priority : 0;
+        return $this->campaign_priority ?? 0;
     }
 
     public function hasCampaignPriority()
@@ -267,7 +267,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getEnableLocal()
     {
-        return isset($this->enable_local) ? $this->enable_local : false;
+        return $this->enable_local ?? false;
     }
 
     public function hasEnableLocal()
@@ -370,7 +370,7 @@ class ShoppingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getDisableProductFeed()
     {
-        return isset($this->disable_product_feed) ? $this->disable_product_feed : false;
+        return $this->disable_product_feed ?? false;
     }
 
     public function hasDisableProductFeed()

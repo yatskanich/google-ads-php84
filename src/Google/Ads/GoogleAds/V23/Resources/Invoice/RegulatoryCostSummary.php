@@ -55,7 +55,7 @@ class RegulatoryCostSummary extends \Google\Protobuf\Internal\Message
      */
     public function getRegulatoryFeeType()
     {
-        return isset($this->regulatory_fee_type) ? $this->regulatory_fee_type : 0;
+        return $this->regulatory_fee_type ?? 0;
     }
 
     public function hasRegulatoryFeeType()
@@ -77,7 +77,7 @@ class RegulatoryCostSummary extends \Google\Protobuf\Internal\Message
      */
     public function setRegulatoryFeeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\RegulatoryFeeTypeEnum\RegulatoryFeeType::class);
+        GPBUtil::checkEnum($var);
         $this->regulatory_fee_type = $var;
 
         return $this;
@@ -92,7 +92,7 @@ class RegulatoryCostSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()

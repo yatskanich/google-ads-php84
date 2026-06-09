@@ -91,7 +91,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return isset($this->gclid) ? $this->gclid : '';
+        return $this->gclid ?? '';
     }
 
     public function hasGclid()
@@ -179,7 +179,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return isset($this->conversion_action) ? $this->conversion_action : '';
+        return $this->conversion_action ?? '';
     }
 
     public function hasConversionAction()
@@ -216,7 +216,7 @@ class ClickConversionResult extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
+        return $this->conversion_date_time ?? '';
     }
 
     public function hasConversionDateTime()

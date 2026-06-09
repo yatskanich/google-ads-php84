@@ -65,7 +65,7 @@ class NonSkippableInStreamRestrictions extends \Google\Protobuf\Internal\Message
      */
     public function setMinDuration($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\NonSkippableMinDurationEnum\NonSkippableMinDuration::class);
+        GPBUtil::checkEnum($var);
         $this->min_duration = $var;
 
         return $this;
@@ -91,7 +91,7 @@ class NonSkippableInStreamRestrictions extends \Google\Protobuf\Internal\Message
      */
     public function setMaxDuration($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\NonSkippableMaxDurationEnum\NonSkippableMaxDuration::class);
+        GPBUtil::checkEnum($var);
         $this->max_duration = $var;
 
         return $this;

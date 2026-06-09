@@ -109,7 +109,7 @@ class CampaignRetentionGoalSettings extends \Google\Protobuf\Internal\Message
      */
     public function setTargetOption($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\CustomerLifecycleOptimizationModeEnum\CustomerLifecycleOptimizationMode::class);
+        GPBUtil::checkEnum($var);
         $this->target_option = $var;
 
         return $this;

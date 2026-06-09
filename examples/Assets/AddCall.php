@@ -239,4 +239,6 @@ class AddCall
     }
 }
 
-AddCall::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddCall::main();
+}

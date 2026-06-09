@@ -74,7 +74,7 @@ class CampaignGroupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignGroupsRequest())
+        $request = new MutateCampaignGroupsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignGroups($request);
@@ -112,7 +112,7 @@ class CampaignGroupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignGroupsRequest())
+        $request = new MutateCampaignGroupsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CampaignGroupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignGroupsRequest())
+        $request = new MutateCampaignGroupsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignGroupsAsync($request)->wait();

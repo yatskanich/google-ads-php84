@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.AdGroupCriterionService' => [
             'MutateAdGroupCriteria' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\MutateAdGroupCriteriaResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\MutateAdGroupCriteriaResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

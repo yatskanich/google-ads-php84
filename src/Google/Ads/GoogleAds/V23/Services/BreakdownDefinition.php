@@ -85,7 +85,7 @@ class BreakdownDefinition extends \Google\Protobuf\Internal\Message
      */
     public function setDateBreakdown($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\BenchmarksTimeGranularityEnum\BenchmarksTimeGranularity::class);
+        GPBUtil::checkEnum($var);
         $this->date_breakdown = $var;
 
         return $this;

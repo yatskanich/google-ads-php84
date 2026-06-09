@@ -69,7 +69,7 @@ class OfflineUserDataJobMetadata extends \Google\Protobuf\Internal\Message
      */
     public function setMatchRateRange($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\OfflineUserDataJobMatchRateRangeEnum\OfflineUserDataJobMatchRateRange::class);
+        GPBUtil::checkEnum($var);
         $this->match_rate_range = $var;
 
         return $this;

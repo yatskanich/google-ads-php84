@@ -100,7 +100,7 @@ class MessagingRestriction extends \Google\Protobuf\Internal\Message
      */
     public function setRestrictionType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\MessagingRestrictionTypeEnum\MessagingRestrictionType::class);
+        GPBUtil::checkEnum($var);
         $this->restriction_type = $var;
 
         return $this;

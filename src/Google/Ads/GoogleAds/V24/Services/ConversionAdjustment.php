@@ -191,7 +191,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getOrderId()
     {
-        return isset($this->order_id) ? $this->order_id : '';
+        return $this->order_id ?? '';
     }
 
     public function hasOrderId()
@@ -232,7 +232,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return isset($this->conversion_action) ? $this->conversion_action : '';
+        return $this->conversion_action ?? '';
     }
 
     public function hasConversionAction()
@@ -273,7 +273,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getAdjustmentDateTime()
     {
-        return isset($this->adjustment_date_time) ? $this->adjustment_date_time : '';
+        return $this->adjustment_date_time ?? '';
     }
 
     public function hasAdjustmentDateTime()
@@ -323,7 +323,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function setAdjustmentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ConversionAdjustmentTypeEnum\ConversionAdjustmentType::class);
+        GPBUtil::checkEnum($var);
         $this->adjustment_type = $var;
 
         return $this;
@@ -423,7 +423,7 @@ class ConversionAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function getUserAgent()
     {
-        return isset($this->user_agent) ? $this->user_agent : '';
+        return $this->user_agent ?? '';
     }
 
     public function hasUserAgent()

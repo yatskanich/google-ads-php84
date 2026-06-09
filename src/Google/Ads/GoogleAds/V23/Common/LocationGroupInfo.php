@@ -150,7 +150,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRadius()
     {
-        return isset($this->radius) ? $this->radius : 0;
+        return $this->radius ?? 0;
     }
 
     public function hasRadius()
@@ -203,7 +203,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function setRadiusUnits($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocationGroupRadiusUnitsEnum\LocationGroupRadiusUnits::class);
+        GPBUtil::checkEnum($var);
         $this->radius_units = $var;
 
         return $this;
@@ -253,7 +253,7 @@ class LocationGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getEnableCustomerLevelLocationAssetSet()
     {
-        return isset($this->enable_customer_level_location_asset_set) ? $this->enable_customer_level_location_asset_set : false;
+        return $this->enable_customer_level_location_asset_set ?? false;
     }
 
     public function hasEnableCustomerLevelLocationAssetSet()

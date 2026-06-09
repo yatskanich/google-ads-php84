@@ -78,7 +78,7 @@ class IdentityVerificationProgress extends \Google\Protobuf\Internal\Message
      */
     public function setProgramStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\IdentityVerificationProgramStatusEnum\IdentityVerificationProgramStatus::class);
+        GPBUtil::checkEnum($var);
         $this->program_status = $var;
 
         return $this;

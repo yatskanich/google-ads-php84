@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.YouTubeVideoUploadService' => [
             'CreateYouTubeVideoUpload' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\CreateYouTubeVideoUploadResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\CreateYouTubeVideoUploadResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'RemoveYouTubeVideoUpload' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\RemoveYouTubeVideoUploadResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\RemoveYouTubeVideoUploadResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'UpdateYouTubeVideoUpload' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\UpdateYouTubeVideoUploadResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\UpdateYouTubeVideoUploadResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

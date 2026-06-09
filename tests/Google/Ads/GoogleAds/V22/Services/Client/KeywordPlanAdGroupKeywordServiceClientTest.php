@@ -74,7 +74,7 @@ class KeywordPlanAdGroupKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanAdGroupKeywordsRequest())
+        $request = new MutateKeywordPlanAdGroupKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateKeywordPlanAdGroupKeywords($request);
@@ -112,7 +112,7 @@ class KeywordPlanAdGroupKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanAdGroupKeywordsRequest())
+        $request = new MutateKeywordPlanAdGroupKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class KeywordPlanAdGroupKeywordServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateKeywordPlanAdGroupKeywordsRequest())
+        $request = new MutateKeywordPlanAdGroupKeywordsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateKeywordPlanAdGroupKeywordsAsync($request)->wait();

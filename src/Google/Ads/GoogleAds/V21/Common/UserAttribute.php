@@ -150,7 +150,7 @@ class UserAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getLifetimeValueMicros()
     {
-        return isset($this->lifetime_value_micros) ? $this->lifetime_value_micros : 0;
+        return $this->lifetime_value_micros ?? 0;
     }
 
     public function hasLifetimeValueMicros()
@@ -188,7 +188,7 @@ class UserAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getLifetimeValueBucket()
     {
-        return isset($this->lifetime_value_bucket) ? $this->lifetime_value_bucket : 0;
+        return $this->lifetime_value_bucket ?? 0;
     }
 
     public function hasLifetimeValueBucket()

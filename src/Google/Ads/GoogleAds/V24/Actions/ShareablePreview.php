@@ -65,7 +65,7 @@ class ShareablePreview extends \Google\Protobuf\Internal\Message
      */
     public function setPreviewType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\PreviewTypeEnum\PreviewType::class);
+        GPBUtil::checkEnum($var);
         $this->preview_type = $var;
 
         return $this;

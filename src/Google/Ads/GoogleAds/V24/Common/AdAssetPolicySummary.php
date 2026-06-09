@@ -101,7 +101,7 @@ class AdAssetPolicySummary extends \Google\Protobuf\Internal\Message
      */
     public function setReviewStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\PolicyReviewStatusEnum\PolicyReviewStatus::class);
+        GPBUtil::checkEnum($var);
         $this->review_status = $var;
 
         return $this;
@@ -129,7 +129,7 @@ class AdAssetPolicySummary extends \Google\Protobuf\Internal\Message
      */
     public function setApprovalStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\PolicyApprovalStatusEnum\PolicyApprovalStatus::class);
+        GPBUtil::checkEnum($var);
         $this->approval_status = $var;
 
         return $this;

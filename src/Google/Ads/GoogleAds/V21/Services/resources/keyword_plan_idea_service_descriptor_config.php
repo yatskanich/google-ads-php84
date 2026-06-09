@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.KeywordPlanIdeaService' => [
             'GenerateAdGroupThemes' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\GenerateAdGroupThemesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\GenerateAdGroupThemesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'GenerateKeywordForecastMetrics' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\GenerateKeywordForecastMetricsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\GenerateKeywordForecastMetricsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'GenerateKeywordHistoricalMetrics' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\GenerateKeywordHistoricalMetricsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\GenerateKeywordHistoricalMetricsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -69,7 +69,7 @@ return [
                     'resourcesGetMethod' => 'getResults',
                 ],
                 'callType' => \Google\ApiCore\Call::PAGINATED_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\GenerateKeywordIdeaResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\GenerateKeywordIdeaResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

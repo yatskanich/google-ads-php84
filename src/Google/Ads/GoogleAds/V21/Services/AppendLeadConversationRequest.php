@@ -41,7 +41,7 @@ class AppendLeadConversationRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $conversations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
     }

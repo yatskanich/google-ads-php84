@@ -375,4 +375,6 @@ class AddAdCustomizer
     // [END add_ad_customizer_3]
 }
 
-AddAdCustomizer::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddAdCustomizer::main();
+}

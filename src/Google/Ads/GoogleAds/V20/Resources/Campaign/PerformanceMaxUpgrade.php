@@ -137,7 +137,7 @@ class PerformanceMaxUpgrade extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\PerformanceMaxUpgradeStatusEnum\PerformanceMaxUpgradeStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

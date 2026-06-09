@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.ProductLinkInvitationService' => [
             'CreateProductLinkInvitation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\CreateProductLinkInvitationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\CreateProductLinkInvitationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'RemoveProductLinkInvitation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\RemoveProductLinkInvitationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\RemoveProductLinkInvitationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'UpdateProductLinkInvitation' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\UpdateProductLinkInvitationResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\UpdateProductLinkInvitationResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

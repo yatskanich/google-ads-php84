@@ -170,7 +170,7 @@ class ExperimentalPerformanceMaxCampaignSettings extends \Google\Protobuf\Intern
      */
     public function setBiddingStrategyType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\BiddingStrategyTypeEnum\BiddingStrategyType::class);
+        GPBUtil::checkEnum($var);
         $this->bidding_strategy_type = $var;
 
         return $this;

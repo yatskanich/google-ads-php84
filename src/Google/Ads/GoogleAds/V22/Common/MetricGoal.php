@@ -71,7 +71,7 @@ class MetricGoal extends \Google\Protobuf\Internal\Message
      */
     public function setMetric($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ExperimentMetricEnum\ExperimentMetric::class);
+        GPBUtil::checkEnum($var);
         $this->metric = $var;
 
         return $this;
@@ -99,7 +99,7 @@ class MetricGoal extends \Google\Protobuf\Internal\Message
      */
     public function setDirection($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ExperimentMetricDirectionEnum\ExperimentMetricDirection::class);
+        GPBUtil::checkEnum($var);
         $this->direction = $var;
 
         return $this;

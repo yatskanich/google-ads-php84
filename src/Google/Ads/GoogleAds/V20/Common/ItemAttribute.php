@@ -130,7 +130,7 @@ class ItemAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getMerchantId()
     {
-        return isset($this->merchant_id) ? $this->merchant_id : 0;
+        return $this->merchant_id ?? 0;
     }
 
     public function hasMerchantId()

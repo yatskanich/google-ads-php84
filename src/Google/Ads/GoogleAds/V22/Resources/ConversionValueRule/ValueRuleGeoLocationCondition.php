@@ -107,7 +107,7 @@ class ValueRuleGeoLocationCondition extends \Google\Protobuf\Internal\Message
      */
     public function setExcludedGeoMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ValueRuleGeoLocationMatchTypeEnum\ValueRuleGeoLocationMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->excluded_geo_match_type = $var;
 
         return $this;
@@ -159,7 +159,7 @@ class ValueRuleGeoLocationCondition extends \Google\Protobuf\Internal\Message
      */
     public function setGeoMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ValueRuleGeoLocationMatchTypeEnum\ValueRuleGeoLocationMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->geo_match_type = $var;
 
         return $this;

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.ProductLinkService' => [
             'CreateProductLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\CreateProductLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\CreateProductLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'RemoveProductLink' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\RemoveProductLinkResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\RemoveProductLinkResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

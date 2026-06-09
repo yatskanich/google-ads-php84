@@ -74,7 +74,7 @@ class AdGroupAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAssetSetsRequest())
+        $request = new MutateAdGroupAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupAssetSets($request);
@@ -112,7 +112,7 @@ class AdGroupAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAssetSetsRequest())
+        $request = new MutateAdGroupAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class AdGroupAssetSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupAssetSetsRequest())
+        $request = new MutateAdGroupAssetSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupAssetSetsAsync($request)->wait();

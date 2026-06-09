@@ -86,7 +86,7 @@ class TargetCpaOptInRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getRecommendedTargetCpaMicros()
     {
-        return isset($this->recommended_target_cpa_micros) ? $this->recommended_target_cpa_micros : 0;
+        return $this->recommended_target_cpa_micros ?? 0;
     }
 
     public function hasRecommendedTargetCpaMicros()

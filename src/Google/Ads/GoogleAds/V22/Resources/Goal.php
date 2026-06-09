@@ -114,7 +114,7 @@ class Goal extends \Google\Protobuf\Internal\Message
      */
     public function getGoalId()
     {
-        return isset($this->goal_id) ? $this->goal_id : 0;
+        return $this->goal_id ?? 0;
     }
 
     public function hasGoalId()
@@ -162,7 +162,7 @@ class Goal extends \Google\Protobuf\Internal\Message
      */
     public function setGoalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\GoalTypeEnum\GoalType::class);
+        GPBUtil::checkEnum($var);
         $this->goal_type = $var;
 
         return $this;
@@ -176,7 +176,7 @@ class Goal extends \Google\Protobuf\Internal\Message
      */
     public function getOwnerCustomer()
     {
-        return isset($this->owner_customer) ? $this->owner_customer : '';
+        return $this->owner_customer ?? '';
     }
 
     public function hasOwnerCustomer()
@@ -224,7 +224,7 @@ class Goal extends \Google\Protobuf\Internal\Message
      */
     public function setOptimizationEligibility($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\GoalOptimizationEligibilityEnum\GoalOptimizationEligibility::class);
+        GPBUtil::checkEnum($var);
         $this->optimization_eligibility = $var;
 
         return $this;

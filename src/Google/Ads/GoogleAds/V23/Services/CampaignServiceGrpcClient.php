@@ -82,7 +82,7 @@ class CampaignServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.CampaignService/MutateCampaigns',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\MutateCampaignsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\MutateCampaignsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -111,7 +111,7 @@ class CampaignServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.CampaignService/EnablePMaxBrandGuidelines',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\EnablePMaxBrandGuidelinesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\EnablePMaxBrandGuidelinesResponse::class, 'decode'],
         $metadata, $options);
     }
 

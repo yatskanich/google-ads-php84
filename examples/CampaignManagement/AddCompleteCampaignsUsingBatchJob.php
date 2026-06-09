@@ -574,4 +574,6 @@ class AddCompleteCampaignsUsingBatchJob
     }
 }
 
-AddCompleteCampaignsUsingBatchJob::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddCompleteCampaignsUsingBatchJob::main();
+}

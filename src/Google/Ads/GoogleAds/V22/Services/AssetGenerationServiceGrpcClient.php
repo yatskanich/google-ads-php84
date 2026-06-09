@@ -53,7 +53,7 @@ class AssetGenerationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.AssetGenerationService/GenerateText',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateTextResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateTextResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -78,7 +78,7 @@ class AssetGenerationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.AssetGenerationService/GenerateImages',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateImagesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateImagesResponse::class, 'decode'],
         $metadata, $options);
     }
 

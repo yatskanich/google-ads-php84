@@ -49,7 +49,7 @@ class TargetRoas extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return isset($this->target_roas) ? $this->target_roas : 0.0;
+        return $this->target_roas ?? 0.0;
     }
 
     public function hasTargetRoas()

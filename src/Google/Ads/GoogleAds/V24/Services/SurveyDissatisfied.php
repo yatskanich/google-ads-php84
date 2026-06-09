@@ -67,7 +67,7 @@ class SurveyDissatisfied extends \Google\Protobuf\Internal\Message
      */
     public function setSurveyDissatisfiedReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\LocalServicesLeadSurveyDissatisfiedReasonEnum\SurveyDissatisfiedReason::class);
+        GPBUtil::checkEnum($var);
         $this->survey_dissatisfied_reason = $var;
 
         return $this;

@@ -82,7 +82,7 @@ class AssetGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrl()
     {
-        return isset($this->final_url) ? $this->final_url : '';
+        return $this->final_url ?? '';
     }
 
     public function hasFinalUrl()

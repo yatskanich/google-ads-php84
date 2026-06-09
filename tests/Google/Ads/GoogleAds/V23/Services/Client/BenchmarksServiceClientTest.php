@@ -87,7 +87,7 @@ class BenchmarksServiceClientTest extends GeneratedTest
         $location = new LocationInfo();
         $benchmarksSource = new BenchmarksSource();
         $productFilter = new ProductFilter();
-        $request = (new GenerateBenchmarksMetricsRequest())
+        $request = new GenerateBenchmarksMetricsRequest()
             ->setCustomerId($customerId)
             ->setLocation($location)
             ->setBenchmarksSource($benchmarksSource)
@@ -133,7 +133,7 @@ class BenchmarksServiceClientTest extends GeneratedTest
         $location = new LocationInfo();
         $benchmarksSource = new BenchmarksSource();
         $productFilter = new ProductFilter();
-        $request = (new GenerateBenchmarksMetricsRequest())
+        $request = new GenerateBenchmarksMetricsRequest()
             ->setCustomerId($customerId)
             ->setLocation($location)
             ->setBenchmarksSource($benchmarksSource)
@@ -326,7 +326,7 @@ class BenchmarksServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $benchmarksSources = [];
-        $request = (new ListBenchmarksSourcesRequest())
+        $request = new ListBenchmarksSourcesRequest()
             ->setBenchmarksSources($benchmarksSources);
         $response = $gapicClient->listBenchmarksSources($request);
         $this->assertEquals($expectedResponse, $response);
@@ -360,7 +360,7 @@ class BenchmarksServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $benchmarksSources = [];
-        $request = (new ListBenchmarksSourcesRequest())
+        $request = new ListBenchmarksSourcesRequest()
             ->setBenchmarksSources($benchmarksSources);
         try {
             $gapicClient->listBenchmarksSources($request);
@@ -391,7 +391,7 @@ class BenchmarksServiceClientTest extends GeneratedTest
         $location = new LocationInfo();
         $benchmarksSource = new BenchmarksSource();
         $productFilter = new ProductFilter();
-        $request = (new GenerateBenchmarksMetricsRequest())
+        $request = new GenerateBenchmarksMetricsRequest()
             ->setCustomerId($customerId)
             ->setLocation($location)
             ->setBenchmarksSource($benchmarksSource)

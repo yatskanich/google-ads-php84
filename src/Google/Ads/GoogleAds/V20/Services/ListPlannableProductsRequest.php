@@ -41,7 +41,7 @@ class ListPlannableProductsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $plannableLocationId): self
     {
-        return (new self())
+        return new self()
             ->setPlannableLocationId($plannableLocationId);
     }
 

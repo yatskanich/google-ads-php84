@@ -799,7 +799,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -839,7 +839,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -897,7 +897,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setPrimaryStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CampaignPrimaryStatusEnum\CampaignPrimaryStatus::class);
+        GPBUtil::checkEnum($var);
         $this->primary_status = $var;
 
         return $this;
@@ -957,7 +957,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CampaignStatusEnum\CampaignStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -983,7 +983,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setServingStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CampaignServingStatusEnum\CampaignServingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->serving_status = $var;
 
         return $this;
@@ -1009,7 +1009,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingStrategySystemStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\BiddingStrategySystemStatusEnum\BiddingStrategySystemStatus::class);
+        GPBUtil::checkEnum($var);
         $this->bidding_strategy_system_status = $var;
 
         return $this;
@@ -1035,7 +1035,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setAdServingOptimizationStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdServingOptimizationStatusEnum\AdServingOptimizationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->ad_serving_optimization_status = $var;
 
         return $this;
@@ -1071,7 +1071,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setAdvertisingChannelType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType::class);
+        GPBUtil::checkEnum($var);
         $this->advertising_channel_type = $var;
 
         return $this;
@@ -1103,7 +1103,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setAdvertisingChannelSubType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelSubTypeEnum\AdvertisingChannelSubType::class);
+        GPBUtil::checkEnum($var);
         $this->advertising_channel_sub_type = $var;
 
         return $this;
@@ -1117,7 +1117,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -1761,7 +1761,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setExperimentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CampaignExperimentTypeEnum\CampaignExperimentType::class);
+        GPBUtil::checkEnum($var);
         $this->experiment_type = $var;
 
         return $this;
@@ -1777,7 +1777,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBaseCampaign()
     {
-        return isset($this->base_campaign) ? $this->base_campaign : '';
+        return $this->base_campaign ?? '';
     }
 
     public function hasBaseCampaign()
@@ -1815,7 +1815,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignBudget()
     {
-        return isset($this->campaign_budget) ? $this->campaign_budget : '';
+        return $this->campaign_budget ?? '';
     }
 
     public function hasCampaignBudget()
@@ -1871,7 +1871,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingStrategyType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\BiddingStrategyTypeEnum\BiddingStrategyType::class);
+        GPBUtil::checkEnum($var);
         $this->bidding_strategy_type = $var;
 
         return $this;
@@ -1925,7 +1925,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignGroup()
     {
-        return isset($this->campaign_group) ? $this->campaign_group : '';
+        return $this->campaign_group ?? '';
     }
 
     public function hasCampaignGroup()
@@ -1964,7 +1964,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getStartDateTime()
     {
-        return isset($this->start_date_time) ? $this->start_date_time : '';
+        return $this->start_date_time ?? '';
     }
 
     public function hasStartDateTime()
@@ -2007,7 +2007,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getEndDateTime()
     {
-        return isset($this->end_date_time) ? $this->end_date_time : '';
+        return $this->end_date_time ?? '';
     }
 
     public function hasEndDateTime()
@@ -2048,7 +2048,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -2277,7 +2277,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setPaymentMode($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\PaymentModeEnum\PaymentMode::class);
+        GPBUtil::checkEnum($var);
         $this->payment_mode = $var;
 
         return $this;
@@ -2298,7 +2298,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getOptimizationScore()
     {
-        return isset($this->optimization_score) ? $this->optimization_score : 0.0;
+        return $this->optimization_score ?? 0.0;
     }
 
     public function hasOptimizationScore()
@@ -2452,7 +2452,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getHotelPropertyAssetSet()
     {
-        return isset($this->hotel_property_asset_set) ? $this->hotel_property_asset_set : '';
+        return $this->hotel_property_asset_set ?? '';
     }
 
     public function hasHotelPropertyAssetSet()
@@ -2490,7 +2490,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getListingType()
     {
-        return isset($this->listing_type) ? $this->listing_type : 0;
+        return $this->listing_type ?? 0;
     }
 
     public function hasListingType()
@@ -2513,7 +2513,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setListingType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ListingTypeEnum\ListingType::class);
+        GPBUtil::checkEnum($var);
         $this->listing_type = $var;
 
         return $this;
@@ -2571,7 +2571,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CampaignKeywordMatchTypeEnum\CampaignKeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->keyword_match_type = $var;
 
         return $this;
@@ -2599,7 +2599,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getBrandGuidelinesEnabled()
     {
-        return isset($this->brand_guidelines_enabled) ? $this->brand_guidelines_enabled : false;
+        return $this->brand_guidelines_enabled ?? false;
     }
 
     public function hasBrandGuidelinesEnabled()
@@ -2815,7 +2815,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setContainsEuPoliticalAdvertising($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\EuPoliticalAdvertisingStatusEnum\EuPoliticalAdvertisingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->contains_eu_political_advertising = $var;
 
         return $this;
@@ -2856,7 +2856,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function getViewThroughConversionOptimizationEnabled()
     {
-        return isset($this->view_through_conversion_optimization_enabled) ? $this->view_through_conversion_optimization_enabled : false;
+        return $this->view_through_conversion_optimization_enabled ?? false;
     }
 
     public function hasViewThroughConversionOptimizationEnabled()

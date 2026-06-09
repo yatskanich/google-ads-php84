@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.CampaignSharedSetService' => [
             'MutateCampaignSharedSets' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\MutateCampaignSharedSetsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\MutateCampaignSharedSetsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

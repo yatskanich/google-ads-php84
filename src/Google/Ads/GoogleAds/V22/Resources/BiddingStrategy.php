@@ -224,7 +224,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -263,7 +263,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -316,7 +316,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\BiddingStrategyStatusEnum\BiddingStrategyStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -346,7 +346,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\BiddingStrategyTypeEnum\BiddingStrategyType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -404,7 +404,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCurrencyCode()
     {
-        return isset($this->effective_currency_code) ? $this->effective_currency_code : '';
+        return $this->effective_currency_code ?? '';
     }
 
     public function hasEffectiveCurrencyCode()
@@ -481,7 +481,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignCount()
     {
-        return isset($this->campaign_count) ? $this->campaign_count : 0;
+        return $this->campaign_count ?? 0;
     }
 
     public function hasCampaignCount()
@@ -520,7 +520,7 @@ class BiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getNonRemovedCampaignCount()
     {
-        return isset($this->non_removed_campaign_count) ? $this->non_removed_campaign_count : 0;
+        return $this->non_removed_campaign_count ?? 0;
     }
 
     public function hasNonRemovedCampaignCount()

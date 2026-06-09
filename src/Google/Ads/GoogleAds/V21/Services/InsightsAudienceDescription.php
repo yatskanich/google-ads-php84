@@ -146,7 +146,7 @@ class InsightsAudienceDescription extends \Google\Protobuf\Internal\Message
      */
     public function setMarketingObjective($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AudienceInsightsMarketingObjectiveEnum\AudienceInsightsMarketingObjective::class);
+        GPBUtil::checkEnum($var);
         $this->marketing_objective = $var;
 
         return $this;

@@ -107,7 +107,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()
@@ -143,7 +143,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -193,7 +193,7 @@ class SearchTermView extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\SearchTermTargetingStatusEnum\SearchTermTargetingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

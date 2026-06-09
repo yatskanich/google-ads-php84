@@ -171,7 +171,7 @@ class CustomerUserAccessInvitation extends \Google\Protobuf\Internal\Message
      */
     public function setAccessRole($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AccessRoleEnum\AccessRole::class);
+        GPBUtil::checkEnum($var);
         $this->access_role = $var;
 
         return $this;
@@ -259,7 +259,7 @@ class CustomerUserAccessInvitation extends \Google\Protobuf\Internal\Message
      */
     public function setInvitationStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AccessInvitationStatusEnum\AccessInvitationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->invitation_status = $var;
 
         return $this;

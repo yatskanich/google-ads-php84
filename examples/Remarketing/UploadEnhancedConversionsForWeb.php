@@ -386,4 +386,6 @@ class UploadEnhancedConversionsForWeb
     // [END normalize_and_hash]
 }
 
-UploadEnhancedConversionsForWeb::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UploadEnhancedConversionsForWeb::main();
+}

@@ -163,7 +163,7 @@ class CallAsset extends \Google\Protobuf\Internal\Message
      */
     public function setCallConversionReportingState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\CallConversionReportingStateEnum\CallConversionReportingState::class);
+        GPBUtil::checkEnum($var);
         $this->call_conversion_reporting_state = $var;
 
         return $this;

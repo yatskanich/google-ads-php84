@@ -51,7 +51,7 @@ class AdvertisingPartnerProperties extends \Google\Protobuf\Internal\Message
      */
     public function getAllowedDomain()
     {
-        return isset($this->allowed_domain) ? $this->allowed_domain : '';
+        return $this->allowed_domain ?? '';
     }
 
     public function hasAllowedDomain()

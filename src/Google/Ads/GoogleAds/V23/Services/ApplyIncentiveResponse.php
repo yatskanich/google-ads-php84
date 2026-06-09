@@ -64,7 +64,7 @@ class ApplyIncentiveResponse extends \Google\Protobuf\Internal\Message
      */
     public function getCouponCode()
     {
-        return isset($this->coupon_code) ? $this->coupon_code : '';
+        return $this->coupon_code ?? '';
     }
 
     public function hasCouponCode()
@@ -104,7 +104,7 @@ class ApplyIncentiveResponse extends \Google\Protobuf\Internal\Message
      */
     public function getCreationTime()
     {
-        return isset($this->creation_time) ? $this->creation_time : '';
+        return $this->creation_time ?? '';
     }
 
     public function hasCreationTime()

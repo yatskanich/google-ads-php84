@@ -124,7 +124,7 @@ class LocalServicesVerificationArtifact extends \Google\Protobuf\Internal\Messag
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -202,7 +202,7 @@ class LocalServicesVerificationArtifact extends \Google\Protobuf\Internal\Messag
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocalServicesVerificationArtifactStatusEnum\LocalServicesVerificationArtifactStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -228,7 +228,7 @@ class LocalServicesVerificationArtifact extends \Google\Protobuf\Internal\Messag
      */
     public function setArtifactType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocalServicesVerificationArtifactTypeEnum\LocalServicesVerificationArtifactType::class);
+        GPBUtil::checkEnum($var);
         $this->artifact_type = $var;
 
         return $this;

@@ -77,7 +77,7 @@ class QualityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getQualityScore()
     {
-        return isset($this->quality_score) ? $this->quality_score : 0;
+        return $this->quality_score ?? 0;
     }
 
     public function hasQualityScore()
@@ -127,7 +127,7 @@ class QualityInfo extends \Google\Protobuf\Internal\Message
      */
     public function setCreativeQualityScore($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\QualityScoreBucketEnum\QualityScoreBucket::class);
+        GPBUtil::checkEnum($var);
         $this->creative_quality_score = $var;
 
         return $this;
@@ -153,7 +153,7 @@ class QualityInfo extends \Google\Protobuf\Internal\Message
      */
     public function setPostClickQualityScore($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\QualityScoreBucketEnum\QualityScoreBucket::class);
+        GPBUtil::checkEnum($var);
         $this->post_click_quality_score = $var;
 
         return $this;
@@ -181,7 +181,7 @@ class QualityInfo extends \Google\Protobuf\Internal\Message
      */
     public function setSearchPredictedCtr($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\QualityScoreBucketEnum\QualityScoreBucket::class);
+        GPBUtil::checkEnum($var);
         $this->search_predicted_ctr = $var;
 
         return $this;

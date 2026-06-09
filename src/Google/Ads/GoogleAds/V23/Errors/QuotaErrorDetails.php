@@ -75,7 +75,7 @@ class QuotaErrorDetails extends \Google\Protobuf\Internal\Message
      */
     public function setRateScope($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Errors\QuotaErrorDetails\QuotaRateScope::class);
+        GPBUtil::checkEnum($var);
         $this->rate_scope = $var;
 
         return $this;

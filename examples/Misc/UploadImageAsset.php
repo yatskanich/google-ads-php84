@@ -141,4 +141,6 @@ class UploadImageAsset
     // [END upload_image_asset]
 }
 
-UploadImageAsset::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UploadImageAsset::main();
+}

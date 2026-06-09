@@ -77,7 +77,7 @@ class FinalAppUrl extends \Google\Protobuf\Internal\Message
      */
     public function setOsType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AppUrlOperatingSystemTypeEnum\AppUrlOperatingSystemType::class);
+        GPBUtil::checkEnum($var);
         $this->os_type = $var;
 
         return $this;
@@ -97,7 +97,7 @@ class FinalAppUrl extends \Google\Protobuf\Internal\Message
      */
     public function getUrl()
     {
-        return isset($this->url) ? $this->url : '';
+        return $this->url ?? '';
     }
 
     public function hasUrl()

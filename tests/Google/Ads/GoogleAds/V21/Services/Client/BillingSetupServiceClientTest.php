@@ -75,7 +75,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateBillingSetup($request);
@@ -113,7 +113,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class BillingSetupServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new BillingSetupOperation();
-        $request = (new MutateBillingSetupRequest())
+        $request = new MutateBillingSetupRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateBillingSetupAsync($request)->wait();

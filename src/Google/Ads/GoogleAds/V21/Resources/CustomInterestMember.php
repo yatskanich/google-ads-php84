@@ -68,7 +68,7 @@ class CustomInterestMember extends \Google\Protobuf\Internal\Message
      */
     public function setMemberType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\CustomInterestMemberTypeEnum\CustomInterestMemberType::class);
+        GPBUtil::checkEnum($var);
         $this->member_type = $var;
 
         return $this;
@@ -83,7 +83,7 @@ class CustomInterestMember extends \Google\Protobuf\Internal\Message
      */
     public function getParameter()
     {
-        return isset($this->parameter) ? $this->parameter : '';
+        return $this->parameter ?? '';
     }
 
     public function hasParameter()

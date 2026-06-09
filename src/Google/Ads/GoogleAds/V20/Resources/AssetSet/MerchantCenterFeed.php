@@ -79,7 +79,7 @@ class MerchantCenterFeed extends \Google\Protobuf\Internal\Message
      */
     public function getFeedLabel()
     {
-        return isset($this->feed_label) ? $this->feed_label : '';
+        return $this->feed_label ?? '';
     }
 
     public function hasFeedLabel()

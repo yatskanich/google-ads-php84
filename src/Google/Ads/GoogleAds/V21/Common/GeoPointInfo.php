@@ -53,7 +53,7 @@ class GeoPointInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLongitudeInMicroDegrees()
     {
-        return isset($this->longitude_in_micro_degrees) ? $this->longitude_in_micro_degrees : 0;
+        return $this->longitude_in_micro_degrees ?? 0;
     }
 
     public function hasLongitudeInMicroDegrees()
@@ -89,7 +89,7 @@ class GeoPointInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLatitudeInMicroDegrees()
     {
-        return isset($this->latitude_in_micro_degrees) ? $this->latitude_in_micro_degrees : 0;
+        return $this->latitude_in_micro_degrees ?? 0;
     }
 
     public function hasLatitudeInMicroDegrees()

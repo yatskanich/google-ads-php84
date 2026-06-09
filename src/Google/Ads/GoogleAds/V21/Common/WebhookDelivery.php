@@ -63,7 +63,7 @@ class WebhookDelivery extends \Google\Protobuf\Internal\Message
      */
     public function getAdvertiserWebhookUrl()
     {
-        return isset($this->advertiser_webhook_url) ? $this->advertiser_webhook_url : '';
+        return $this->advertiser_webhook_url ?? '';
     }
 
     public function hasAdvertiserWebhookUrl()
@@ -99,7 +99,7 @@ class WebhookDelivery extends \Google\Protobuf\Internal\Message
      */
     public function getGoogleSecret()
     {
-        return isset($this->google_secret) ? $this->google_secret : '';
+        return $this->google_secret ?? '';
     }
 
     public function hasGoogleSecret()
@@ -135,7 +135,7 @@ class WebhookDelivery extends \Google\Protobuf\Internal\Message
      */
     public function getPayloadSchemaVersion()
     {
-        return isset($this->payload_schema_version) ? $this->payload_schema_version : 0;
+        return $this->payload_schema_version ?? 0;
     }
 
     public function hasPayloadSchemaVersion()

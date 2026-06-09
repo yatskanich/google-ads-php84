@@ -95,7 +95,7 @@ class VideoAdSequence extends \Google\Protobuf\Internal\Message
      */
     public function setMinimumDuration($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\VideoAdSequenceMinimumDurationEnum\VideoAdSequenceMinimumDuration::class);
+        GPBUtil::checkEnum($var);
         $this->minimum_duration = $var;
 
         return $this;

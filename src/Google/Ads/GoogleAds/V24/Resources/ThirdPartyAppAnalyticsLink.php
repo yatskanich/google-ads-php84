@@ -94,7 +94,7 @@ class ThirdPartyAppAnalyticsLink extends \Google\Protobuf\Internal\Message
      */
     public function getShareableLinkId()
     {
-        return isset($this->shareable_link_id) ? $this->shareable_link_id : '';
+        return $this->shareable_link_id ?? '';
     }
 
     public function hasShareableLinkId()

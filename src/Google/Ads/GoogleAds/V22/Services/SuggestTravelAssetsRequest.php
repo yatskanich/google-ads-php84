@@ -51,7 +51,7 @@ class SuggestTravelAssetsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $languageOption): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setLanguageOption($languageOption);
     }

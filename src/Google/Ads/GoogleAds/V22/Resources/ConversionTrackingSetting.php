@@ -118,7 +118,7 @@ class ConversionTrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getConversionTrackingId()
     {
-        return isset($this->conversion_tracking_id) ? $this->conversion_tracking_id : 0;
+        return $this->conversion_tracking_id ?? 0;
     }
 
     public function hasConversionTrackingId()
@@ -159,7 +159,7 @@ class ConversionTrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCrossAccountConversionTrackingId()
     {
-        return isset($this->cross_account_conversion_tracking_id) ? $this->cross_account_conversion_tracking_id : 0;
+        return $this->cross_account_conversion_tracking_id ?? 0;
     }
 
     public function hasCrossAccountConversionTrackingId()
@@ -250,7 +250,7 @@ class ConversionTrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function setConversionTrackingStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ConversionTrackingStatusEnum\ConversionTrackingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_tracking_status = $var;
 
         return $this;

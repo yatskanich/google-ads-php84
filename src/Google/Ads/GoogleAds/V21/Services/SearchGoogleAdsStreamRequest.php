@@ -47,7 +47,7 @@ class SearchGoogleAdsStreamRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $query): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setQuery($query);
     }
@@ -149,7 +149,7 @@ class SearchGoogleAdsStreamRequest extends \Google\Protobuf\Internal\Message
      */
     public function setSummaryRowSetting($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SummaryRowSettingEnum\SummaryRowSetting::class);
+        GPBUtil::checkEnum($var);
         $this->summary_row_setting = $var;
 
         return $this;

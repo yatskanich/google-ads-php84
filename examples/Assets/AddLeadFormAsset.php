@@ -251,4 +251,6 @@ class AddLeadFormAsset
     // [END add_lead_form_asset_1]
 }
 
-AddLeadFormAsset::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddLeadFormAsset::main();
+}

@@ -185,7 +185,7 @@ class GenerateKeywordHistoricalMetricsRequest extends \Google\Protobuf\Internal\
      */
     public function getLanguage()
     {
-        return isset($this->language) ? $this->language : '';
+        return $this->language ?? '';
     }
 
     public function hasLanguage()
@@ -294,7 +294,7 @@ class GenerateKeywordHistoricalMetricsRequest extends \Google\Protobuf\Internal\
      */
     public function setKeywordPlanNetwork($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\KeywordPlanNetworkEnum\KeywordPlanNetwork::class);
+        GPBUtil::checkEnum($var);
         $this->keyword_plan_network = $var;
 
         return $this;

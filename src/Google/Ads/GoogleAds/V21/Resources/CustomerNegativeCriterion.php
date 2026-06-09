@@ -115,7 +115,7 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -163,7 +163,7 @@ class CustomerNegativeCriterion extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\CriterionTypeEnum\CriterionType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

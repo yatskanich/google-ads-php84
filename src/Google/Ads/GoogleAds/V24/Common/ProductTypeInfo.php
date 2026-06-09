@@ -53,7 +53,7 @@ class ProductTypeInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()
@@ -101,7 +101,7 @@ class ProductTypeInfo extends \Google\Protobuf\Internal\Message
      */
     public function setLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductTypeLevelEnum\ProductTypeLevel::class);
+        GPBUtil::checkEnum($var);
         $this->level = $var;
 
         return $this;

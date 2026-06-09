@@ -71,7 +71,7 @@ class BiddingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBiddingStrategyType()
     {
-        return isset($this->bidding_strategy_type) ? $this->bidding_strategy_type : 0;
+        return $this->bidding_strategy_type ?? 0;
     }
 
     public function hasBiddingStrategyType()
@@ -97,7 +97,7 @@ class BiddingInfo extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingStrategyType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\BiddingStrategyTypeEnum\BiddingStrategyType::class);
+        GPBUtil::checkEnum($var);
         $this->bidding_strategy_type = $var;
 
         return $this;

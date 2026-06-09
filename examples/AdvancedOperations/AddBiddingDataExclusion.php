@@ -158,4 +158,6 @@ class AddBiddingDataExclusion
     }
 }
 
-AddBiddingDataExclusion::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddBiddingDataExclusion::main();
+}

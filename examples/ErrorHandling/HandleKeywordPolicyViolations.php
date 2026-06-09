@@ -273,4 +273,6 @@ class HandleKeywordPolicyViolations
     // [END handle_keyword_policy_violations_1]
 }
 
-HandleKeywordPolicyViolations::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    HandleKeywordPolicyViolations::main();
+}

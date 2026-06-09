@@ -75,7 +75,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountBudgetProposal($request);
@@ -113,7 +113,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class AccountBudgetProposalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountBudgetProposalOperation();
-        $request = (new MutateAccountBudgetProposalRequest())
+        $request = new MutateAccountBudgetProposalRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountBudgetProposalAsync($request)->wait();

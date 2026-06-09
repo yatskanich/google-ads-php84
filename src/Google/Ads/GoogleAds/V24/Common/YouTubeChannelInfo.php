@@ -45,7 +45,7 @@ class YouTubeChannelInfo extends \Google\Protobuf\Internal\Message
      */
     public function getChannelId()
     {
-        return isset($this->channel_id) ? $this->channel_id : '';
+        return $this->channel_id ?? '';
     }
 
     public function hasChannelId()

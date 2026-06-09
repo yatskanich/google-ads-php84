@@ -25,11 +25,11 @@ return [
         'google.ads.googleads.v24.services.ReachPlanService' => [
             'GenerateConversionRates' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\GenerateConversionRatesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\GenerateConversionRatesResponse::class,
             ],
             'GenerateReachForecast' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\GenerateReachForecastResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\GenerateReachForecastResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -41,19 +41,19 @@ return [
             ],
             'ListPlannableLocations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ListPlannableLocationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ListPlannableLocationsResponse::class,
             ],
             'ListPlannableProducts' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ListPlannableProductsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ListPlannableProductsResponse::class,
             ],
             'ListPlannableUserInterests' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ListPlannableUserInterestsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ListPlannableUserInterestsResponse::class,
             ],
             'ListPlannableUserLists' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ListPlannableUserListsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ListPlannableUserListsResponse::class,
             ],
         ],
     ],

@@ -68,7 +68,7 @@ class DisplayUploadAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function setDisplayUploadProductType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\DisplayUploadProductTypeEnum\DisplayUploadProductType::class);
+        GPBUtil::checkEnum($var);
         $this->display_upload_product_type = $var;
 
         return $this;

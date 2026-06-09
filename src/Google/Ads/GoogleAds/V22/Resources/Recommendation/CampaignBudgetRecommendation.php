@@ -63,7 +63,7 @@ class CampaignBudgetRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentBudgetAmountMicros()
     {
-        return isset($this->current_budget_amount_micros) ? $this->current_budget_amount_micros : 0;
+        return $this->current_budget_amount_micros ?? 0;
     }
 
     public function hasCurrentBudgetAmountMicros()
@@ -99,7 +99,7 @@ class CampaignBudgetRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getRecommendedBudgetAmountMicros()
     {
-        return isset($this->recommended_budget_amount_micros) ? $this->recommended_budget_amount_micros : 0;
+        return $this->recommended_budget_amount_micros ?? 0;
     }
 
     public function hasRecommendedBudgetAmountMicros()

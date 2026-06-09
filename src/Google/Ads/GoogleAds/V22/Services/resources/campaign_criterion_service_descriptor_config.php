@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.CampaignCriterionService' => [
             'MutateCampaignCriteria' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateCampaignCriteriaResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateCampaignCriteriaResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

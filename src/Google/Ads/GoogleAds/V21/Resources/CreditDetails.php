@@ -69,7 +69,7 @@ class CreditDetails extends \Google\Protobuf\Internal\Message
      */
     public function setCreditState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LocalServicesCreditStateEnum\CreditState::class);
+        GPBUtil::checkEnum($var);
         $this->credit_state = $var;
 
         return $this;

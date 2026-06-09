@@ -91,7 +91,7 @@ class AssetUsage extends \Google\Protobuf\Internal\Message
      */
     public function setServedAssetFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ServedAssetFieldTypeEnum\ServedAssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->served_asset_field_type = $var;
 
         return $this;

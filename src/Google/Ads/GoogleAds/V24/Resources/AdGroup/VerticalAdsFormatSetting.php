@@ -62,7 +62,7 @@ class VerticalAdsFormatSetting extends \Google\Protobuf\Internal\Message
      */
     public function getDisableTextAds()
     {
-        return isset($this->disable_text_ads) ? $this->disable_text_ads : false;
+        return $this->disable_text_ads ?? false;
     }
 
     public function hasDisableTextAds()
@@ -98,7 +98,7 @@ class VerticalAdsFormatSetting extends \Google\Protobuf\Internal\Message
      */
     public function getEnableBookingLinks()
     {
-        return isset($this->enable_booking_links) ? $this->enable_booking_links : false;
+        return $this->enable_booking_links ?? false;
     }
 
     public function hasEnableBookingLinks()
@@ -134,7 +134,7 @@ class VerticalAdsFormatSetting extends \Google\Protobuf\Internal\Message
      */
     public function getEnableVerticalPromotionAds()
     {
-        return isset($this->enable_vertical_promotion_ads) ? $this->enable_vertical_promotion_ads : false;
+        return $this->enable_vertical_promotion_ads ?? false;
     }
 
     public function hasEnableVerticalPromotionAds()

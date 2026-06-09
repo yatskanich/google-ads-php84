@@ -52,7 +52,7 @@ class GenerateTargetingSuggestionMetricsRequest extends \Google\Protobuf\Interna
      */
     public static function build(string $customerId, array $audiences): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setAudiences($audiences);
     }

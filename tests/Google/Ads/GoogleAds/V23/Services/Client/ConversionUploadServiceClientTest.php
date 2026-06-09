@@ -77,7 +77,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -119,7 +119,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -153,7 +153,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadClickConversionsRequest())
+        $request = new UploadClickConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -195,7 +195,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadClickConversionsRequest())
+        $request = new UploadClickConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);
@@ -227,7 +227,7 @@ class ConversionUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversions = [];
         $partialFailure = true;
-        $request = (new UploadCallConversionsRequest())
+        $request = new UploadCallConversionsRequest()
             ->setCustomerId($customerId)
             ->setConversions($conversions)
             ->setPartialFailure($partialFailure);

@@ -74,7 +74,7 @@ class ConversionValueRuleServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRulesRequest())
+        $request = new MutateConversionValueRulesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionValueRules($request);
@@ -112,7 +112,7 @@ class ConversionValueRuleServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRulesRequest())
+        $request = new MutateConversionValueRulesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class ConversionValueRuleServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionValueRulesRequest())
+        $request = new MutateConversionValueRulesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionValueRulesAsync($request)->wait();

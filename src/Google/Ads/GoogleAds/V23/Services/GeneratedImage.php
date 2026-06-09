@@ -91,7 +91,7 @@ class GeneratedImage extends \Google\Protobuf\Internal\Message
      */
     public function setAssetFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->asset_field_type = $var;
 
         return $this;

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.BenchmarksService' => [
             'GenerateBenchmarksMetrics' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateBenchmarksMetricsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateBenchmarksMetricsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,19 +37,19 @@ return [
             ],
             'ListBenchmarksAvailableDates' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListBenchmarksAvailableDatesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListBenchmarksAvailableDatesResponse::class,
             ],
             'ListBenchmarksLocations' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListBenchmarksLocationsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListBenchmarksLocationsResponse::class,
             ],
             'ListBenchmarksProducts' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListBenchmarksProductsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListBenchmarksProductsResponse::class,
             ],
             'ListBenchmarksSources' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListBenchmarksSourcesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListBenchmarksSourcesResponse::class,
             ],
         ],
     ],

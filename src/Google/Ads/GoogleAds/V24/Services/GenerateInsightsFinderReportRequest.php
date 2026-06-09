@@ -64,7 +64,7 @@ class GenerateInsightsFinderReportRequest extends \Google\Protobuf\Internal\Mess
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V24\Services\InsightsAudience $baselineAudience, \Google\Ads\GoogleAds\V24\Services\InsightsAudience $specificAudience): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setBaselineAudience($baselineAudience)
             ->setSpecificAudience($specificAudience);

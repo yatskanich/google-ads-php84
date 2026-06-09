@@ -87,7 +87,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\TrackingCodeTypeEnum\TrackingCodeType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -115,7 +115,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function setPageFormat($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\TrackingCodePageFormatEnum\TrackingCodePageFormat::class);
+        GPBUtil::checkEnum($var);
         $this->page_format = $var;
 
         return $this;
@@ -130,7 +130,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getGlobalSiteTag()
     {
-        return isset($this->global_site_tag) ? $this->global_site_tag : '';
+        return $this->global_site_tag ?? '';
     }
 
     public function hasGlobalSiteTag()
@@ -168,7 +168,7 @@ class TagSnippet extends \Google\Protobuf\Internal\Message
      */
     public function getEventSnippet()
     {
-        return isset($this->event_snippet) ? $this->event_snippet : '';
+        return $this->event_snippet ?? '';
     }
 
     public function hasEventSnippet()

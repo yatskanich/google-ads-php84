@@ -48,7 +48,7 @@ class AudienceServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.AudienceService/MutateAudiences',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\MutateAudiencesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\MutateAudiencesResponse::class, 'decode'],
         $metadata, $options);
     }
 

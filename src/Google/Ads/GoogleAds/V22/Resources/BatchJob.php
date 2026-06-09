@@ -127,7 +127,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -164,7 +164,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getNextAddSequenceToken()
     {
-        return isset($this->next_add_sequence_token) ? $this->next_add_sequence_token : '';
+        return $this->next_add_sequence_token ?? '';
     }
 
     public function hasNextAddSequenceToken()
@@ -249,7 +249,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\BatchJobStatusEnum\BatchJobStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -265,7 +265,7 @@ class BatchJob extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return isset($this->long_running_operation) ? $this->long_running_operation : '';
+        return $this->long_running_operation ?? '';
     }
 
     public function hasLongRunningOperation()

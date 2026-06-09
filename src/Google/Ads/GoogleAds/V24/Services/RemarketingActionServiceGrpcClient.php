@@ -54,7 +54,7 @@ class RemarketingActionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.RemarketingActionService/MutateRemarketingActions',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\MutateRemarketingActionsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\MutateRemarketingActionsResponse::class, 'decode'],
         $metadata, $options);
     }
 

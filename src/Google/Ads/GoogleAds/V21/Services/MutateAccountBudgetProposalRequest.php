@@ -48,7 +48,7 @@ class MutateAccountBudgetProposalRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V21\Services\AccountBudgetProposalOperation $operation): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

@@ -125,7 +125,7 @@ class RemoveCampaignAutomaticallyCreatedAssetOperation extends \Google\Protobuf\
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;

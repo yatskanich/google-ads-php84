@@ -170,7 +170,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getEmailAddress()
     {
-        return isset($this->email_address) ? $this->email_address : '';
+        return $this->email_address ?? '';
     }
 
     public function hasEmailAddress()
@@ -219,7 +219,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function setAccessRole($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AccessRoleEnum\AccessRole::class);
+        GPBUtil::checkEnum($var);
         $this->access_role = $var;
 
         return $this;
@@ -236,7 +236,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getAccessCreationDateTime()
     {
-        return isset($this->access_creation_date_time) ? $this->access_creation_date_time : '';
+        return $this->access_creation_date_time ?? '';
     }
 
     public function hasAccessCreationDateTime()
@@ -276,7 +276,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getInviterUserEmailAddress()
     {
-        return isset($this->inviter_user_email_address) ? $this->inviter_user_email_address : '';
+        return $this->inviter_user_email_address ?? '';
     }
 
     public function hasInviterUserEmailAddress()
@@ -314,7 +314,7 @@ class CustomerUserAccess extends \Google\Protobuf\Internal\Message
      */
     public function getPasskeyEnabled()
     {
-        return isset($this->passkey_enabled) ? $this->passkey_enabled : false;
+        return $this->passkey_enabled ?? false;
     }
 
     public function hasPasskeyEnabled()

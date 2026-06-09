@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.CustomerConversionGoalService' => [
             'MutateCustomerConversionGoals' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\MutateCustomerConversionGoalsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\MutateCustomerConversionGoalsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

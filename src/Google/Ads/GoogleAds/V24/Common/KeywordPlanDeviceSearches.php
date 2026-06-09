@@ -65,7 +65,7 @@ class KeywordPlanDeviceSearches extends \Google\Protobuf\Internal\Message
      */
     public function setDevice($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\DeviceEnum\Device::class);
+        GPBUtil::checkEnum($var);
         $this->device = $var;
 
         return $this;
@@ -79,7 +79,7 @@ class KeywordPlanDeviceSearches extends \Google\Protobuf\Internal\Message
      */
     public function getSearchCount()
     {
-        return isset($this->search_count) ? $this->search_count : 0;
+        return $this->search_count ?? 0;
     }
 
     public function hasSearchCount()

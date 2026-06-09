@@ -74,7 +74,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriterionLabels($request);
@@ -112,7 +112,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class AdGroupCriterionLabelServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupCriterionLabelsRequest())
+        $request = new MutateAdGroupCriterionLabelsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupCriterionLabelsAsync($request)->wait();

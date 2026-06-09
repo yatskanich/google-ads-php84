@@ -38,8 +38,8 @@ class ServerStreamingGoogleAdsExceptionMiddleware extends GoogleAdsMiddlewareAbs
      * @param StatusMetadataExtractor|null $statusMetadataExtractor
      */
     public function __construct(
-        callable $nextHandler = null,
-        StatusMetadataExtractor $statusMetadataExtractor = null
+        ?callable $nextHandler = null,
+        ?StatusMetadataExtractor $statusMetadataExtractor = null
     ) {
         parent::__construct($nextHandler);
         $this->statusMetadataExtractor = $statusMetadataExtractor ?: new StatusMetadataExtractor();
@@ -68,18 +68,15 @@ class ServerStreamingGoogleAdsExceptionMiddleware extends GoogleAdsMiddlewareAbs
         ) extends GoogleAdsServerStreamDecorator {
             use GoogleAdsExceptionTrait;
 
-            private StatusMetadataExtractor $statusMetadataExtractor;
-
             /**
              * @param ServerStream $serverStream the ServerStream to wrap
              * @param StatusMetadataExtractor $statusMetadataExtractor
              */
             public function __construct(
                 ServerStream $serverStream,
-                StatusMetadataExtractor $statusMetadataExtractor
+                private StatusMetadataExtractor $statusMetadataExtractor
             ) {
                 parent::__construct($serverStream);
-                $this->statusMetadataExtractor = $statusMetadataExtractor;
             }
 
             /**

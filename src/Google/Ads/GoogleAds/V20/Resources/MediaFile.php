@@ -141,7 +141,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -189,7 +189,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\MediaTypeEnum\MediaType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -215,7 +215,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function setMimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\MimeTypeEnum\MimeType::class);
+        GPBUtil::checkEnum($var);
         $this->mime_type = $var;
 
         return $this;
@@ -230,7 +230,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getSourceUrl()
     {
-        return isset($this->source_url) ? $this->source_url : '';
+        return $this->source_url ?? '';
     }
 
     public function hasSourceUrl()
@@ -268,7 +268,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -305,7 +305,7 @@ class MediaFile extends \Google\Protobuf\Internal\Message
      */
     public function getFileSize()
     {
-        return isset($this->file_size) ? $this->file_size : 0;
+        return $this->file_size ?? 0;
     }
 
     public function hasFileSize()

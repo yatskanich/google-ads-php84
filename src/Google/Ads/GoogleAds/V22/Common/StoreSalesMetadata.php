@@ -89,7 +89,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getLoyaltyFraction()
     {
-        return isset($this->loyalty_fraction) ? $this->loyalty_fraction : 0.0;
+        return $this->loyalty_fraction ?? 0.0;
     }
 
     public function hasLoyaltyFraction()
@@ -131,7 +131,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getTransactionUploadFraction()
     {
-        return isset($this->transaction_upload_fraction) ? $this->transaction_upload_fraction : 0.0;
+        return $this->transaction_upload_fraction ?? 0.0;
     }
 
     public function hasTransactionUploadFraction()
@@ -174,7 +174,7 @@ class StoreSalesMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getCustomKey()
     {
-        return isset($this->custom_key) ? $this->custom_key : '';
+        return $this->custom_key ?? '';
     }
 
     public function hasCustomKey()

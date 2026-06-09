@@ -221,4 +221,6 @@ class GenerateForecastMetrics
     // [END generate_forecast_metrics]
 }
 
-GenerateForecastMetrics::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    GenerateForecastMetrics::main();
+}

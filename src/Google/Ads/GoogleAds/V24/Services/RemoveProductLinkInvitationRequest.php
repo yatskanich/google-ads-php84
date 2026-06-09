@@ -46,7 +46,7 @@ class RemoveProductLinkInvitationRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setResourceName($resourceName);
     }

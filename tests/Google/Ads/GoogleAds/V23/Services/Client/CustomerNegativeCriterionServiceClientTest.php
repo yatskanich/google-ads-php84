@@ -74,7 +74,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerNegativeCriteria($request);
@@ -112,7 +112,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CustomerNegativeCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomerNegativeCriteriaRequest())
+        $request = new MutateCustomerNegativeCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomerNegativeCriteriaAsync($request)->wait();

@@ -45,7 +45,7 @@ class CustomAudienceSegment extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAudience()
     {
-        return isset($this->custom_audience) ? $this->custom_audience : '';
+        return $this->custom_audience ?? '';
     }
 
     public function hasCustomAudience()

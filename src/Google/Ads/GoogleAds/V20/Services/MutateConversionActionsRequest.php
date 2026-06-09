@@ -66,7 +66,7 @@ class MutateConversionActionsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -239,7 +239,7 @@ class MutateConversionActionsRequest extends \Google\Protobuf\Internal\Message
      */
     public function setResponseContentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ResponseContentTypeEnum\ResponseContentType::class);
+        GPBUtil::checkEnum($var);
         $this->response_content_type = $var;
 
         return $this;

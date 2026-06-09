@@ -57,7 +57,7 @@ class CallToActionAsset extends \Google\Protobuf\Internal\Message
      */
     public function setCallToAction($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CallToActionTypeEnum\CallToActionType::class);
+        GPBUtil::checkEnum($var);
         $this->call_to_action = $var;
 
         return $this;

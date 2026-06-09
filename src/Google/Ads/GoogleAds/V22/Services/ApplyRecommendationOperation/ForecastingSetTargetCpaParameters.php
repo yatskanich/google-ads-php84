@@ -53,7 +53,7 @@ class ForecastingSetTargetCpaParameters extends \Google\Protobuf\Internal\Messag
      */
     public function getTargetCpaMicros()
     {
-        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
+        return $this->target_cpa_micros ?? 0;
     }
 
     public function hasTargetCpaMicros()
@@ -89,7 +89,7 @@ class ForecastingSetTargetCpaParameters extends \Google\Protobuf\Internal\Messag
      */
     public function getCampaignBudgetAmountMicros()
     {
-        return isset($this->campaign_budget_amount_micros) ? $this->campaign_budget_amount_micros : 0;
+        return $this->campaign_budget_amount_micros ?? 0;
     }
 
     public function hasCampaignBudgetAmountMicros()

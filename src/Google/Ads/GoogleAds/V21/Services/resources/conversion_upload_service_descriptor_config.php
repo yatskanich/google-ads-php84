@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.ConversionUploadService' => [
             'UploadCallConversions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\UploadCallConversionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\UploadCallConversionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'UploadClickConversions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\UploadClickConversionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\UploadClickConversionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -113,7 +113,7 @@ class LineupAttributeMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getMedianMonthlyInventory()
     {
-        return isset($this->median_monthly_inventory) ? $this->median_monthly_inventory : 0;
+        return $this->median_monthly_inventory ?? 0;
     }
 
     public function hasMedianMonthlyInventory()
@@ -149,7 +149,7 @@ class LineupAttributeMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getChannelCountLowerBound()
     {
-        return isset($this->channel_count_lower_bound) ? $this->channel_count_lower_bound : 0;
+        return $this->channel_count_lower_bound ?? 0;
     }
 
     public function hasChannelCountLowerBound()
@@ -185,7 +185,7 @@ class LineupAttributeMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getChannelCountUpperBound()
     {
-        return isset($this->channel_count_upper_bound) ? $this->channel_count_upper_bound : 0;
+        return $this->channel_count_upper_bound ?? 0;
     }
 
     public function hasChannelCountUpperBound()

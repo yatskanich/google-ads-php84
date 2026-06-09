@@ -91,7 +91,7 @@ class BusinessProfileBusinessNameFilter extends \Google\Protobuf\Internal\Messag
      */
     public function setFilterType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocationStringFilterTypeEnum\LocationStringFilterType::class);
+        GPBUtil::checkEnum($var);
         $this->filter_type = $var;
 
         return $this;

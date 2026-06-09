@@ -95,7 +95,7 @@ class AdGroupLabel extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -131,7 +131,7 @@ class AdGroupLabel extends \Google\Protobuf\Internal\Message
      */
     public function getLabel()
     {
-        return isset($this->label) ? $this->label : '';
+        return $this->label ?? '';
     }
 
     public function hasLabel()

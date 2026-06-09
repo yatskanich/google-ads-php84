@@ -46,7 +46,7 @@ class YouTubeVideoUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.YouTubeVideoUploadService/CreateYouTubeVideoUpload',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\CreateYouTubeVideoUploadResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\CreateYouTubeVideoUploadResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -62,7 +62,7 @@ class YouTubeVideoUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.YouTubeVideoUploadService/UpdateYouTubeVideoUpload',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\UpdateYouTubeVideoUploadResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\UpdateYouTubeVideoUploadResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -77,7 +77,7 @@ class YouTubeVideoUploadServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.YouTubeVideoUploadService/RemoveYouTubeVideoUpload',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\RemoveYouTubeVideoUploadResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\RemoveYouTubeVideoUploadResponse::class, 'decode'],
         $metadata, $options);
     }
 

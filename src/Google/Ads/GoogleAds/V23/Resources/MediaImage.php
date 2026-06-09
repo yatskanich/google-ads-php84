@@ -61,7 +61,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : '';
+        return $this->data ?? '';
     }
 
     public function hasData()
@@ -97,7 +97,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getFullSizeImageUrl()
     {
-        return isset($this->full_size_image_url) ? $this->full_size_image_url : '';
+        return $this->full_size_image_url ?? '';
     }
 
     public function hasFullSizeImageUrl()
@@ -133,7 +133,7 @@ class MediaImage extends \Google\Protobuf\Internal\Message
      */
     public function getPreviewSizeImageUrl()
     {
-        return isset($this->preview_size_image_url) ? $this->preview_size_image_url : '';
+        return $this->preview_size_image_url ?? '';
     }
 
     public function hasPreviewSizeImageUrl()

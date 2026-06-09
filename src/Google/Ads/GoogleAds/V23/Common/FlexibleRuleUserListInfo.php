@@ -87,7 +87,7 @@ class FlexibleRuleUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function setInclusiveRuleOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\UserListFlexibleRuleOperatorEnum\UserListFlexibleRuleOperator::class);
+        GPBUtil::checkEnum($var);
         $this->inclusive_rule_operator = $var;
 
         return $this;

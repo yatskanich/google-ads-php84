@@ -285,7 +285,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -405,7 +405,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -441,7 +441,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -507,7 +507,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayUrl()
     {
-        return isset($this->display_url) ? $this->display_url : '';
+        return $this->display_url ?? '';
     }
 
     public function hasDisplayUrl()
@@ -555,7 +555,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdTypeEnum\AdType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -572,7 +572,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getAddedByGoogleAds()
     {
-        return isset($this->added_by_google_ads) ? $this->added_by_google_ads : false;
+        return $this->added_by_google_ads ?? false;
     }
 
     public function hasAddedByGoogleAds()
@@ -633,7 +633,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function setDevicePreference($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\DeviceEnum\Device::class);
+        GPBUtil::checkEnum($var);
         $this->device_preference = $var;
 
         return $this;
@@ -679,7 +679,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -733,7 +733,7 @@ class Ad extends \Google\Protobuf\Internal\Message
      */
     public function setSystemManagedResourceSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\SystemManagedResourceSourceEnum\SystemManagedResourceSource::class);
+        GPBUtil::checkEnum($var);
         $this->system_managed_resource_source = $var;
 
         return $this;

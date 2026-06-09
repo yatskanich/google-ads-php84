@@ -48,7 +48,7 @@ class StoreAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getStoreCode()
     {
-        return isset($this->store_code) ? $this->store_code : '';
+        return $this->store_code ?? '';
     }
 
     public function hasStoreCode()

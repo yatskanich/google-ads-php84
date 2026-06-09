@@ -135,7 +135,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getPlacement()
     {
-        return isset($this->placement) ? $this->placement : '';
+        return $this->placement ?? '';
     }
 
     public function hasPlacement()
@@ -173,7 +173,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return isset($this->display_name) ? $this->display_name : '';
+        return $this->display_name ?? '';
     }
 
     public function hasDisplayName()
@@ -211,7 +211,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getGroupPlacementTargetUrl()
     {
-        return isset($this->group_placement_target_url) ? $this->group_placement_target_url : '';
+        return $this->group_placement_target_url ?? '';
     }
 
     public function hasGroupPlacementTargetUrl()
@@ -249,7 +249,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function getTargetUrl()
     {
-        return isset($this->target_url) ? $this->target_url : '';
+        return $this->target_url ?? '';
     }
 
     public function hasTargetUrl()
@@ -300,7 +300,7 @@ class DetailPlacementView extends \Google\Protobuf\Internal\Message
      */
     public function setPlacementType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\PlacementTypeEnum\PlacementType::class);
+        GPBUtil::checkEnum($var);
         $this->placement_type = $var;
 
         return $this;

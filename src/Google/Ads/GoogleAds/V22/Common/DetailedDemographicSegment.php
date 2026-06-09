@@ -45,7 +45,7 @@ class DetailedDemographicSegment extends \Google\Protobuf\Internal\Message
      */
     public function getDetailedDemographic()
     {
-        return isset($this->detailed_demographic) ? $this->detailed_demographic : '';
+        return $this->detailed_demographic ?? '';
     }
 
     public function hasDetailedDemographic()

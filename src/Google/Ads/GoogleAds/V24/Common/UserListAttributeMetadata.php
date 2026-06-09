@@ -57,7 +57,7 @@ class UserListAttributeMetadata extends \Google\Protobuf\Internal\Message
      */
     public function setUserListType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\UserListTypeEnum\UserListType::class);
+        GPBUtil::checkEnum($var);
         $this->user_list_type = $var;
 
         return $this;

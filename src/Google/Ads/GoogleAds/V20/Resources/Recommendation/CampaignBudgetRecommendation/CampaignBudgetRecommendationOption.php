@@ -55,7 +55,7 @@ class CampaignBudgetRecommendationOption extends \Google\Protobuf\Internal\Messa
      */
     public function getBudgetAmountMicros()
     {
-        return isset($this->budget_amount_micros) ? $this->budget_amount_micros : 0;
+        return $this->budget_amount_micros ?? 0;
     }
 
     public function hasBudgetAmountMicros()

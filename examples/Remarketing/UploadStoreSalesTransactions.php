@@ -723,4 +723,6 @@ class UploadStoreSalesTransactions
     }
 }
 
-UploadStoreSalesTransactions::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UploadStoreSalesTransactions::main();
+}

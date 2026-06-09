@@ -54,7 +54,7 @@ class MediaBundleAsset extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : '';
+        return $this->data ?? '';
     }
 
     public function hasData()

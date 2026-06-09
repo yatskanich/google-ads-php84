@@ -167,7 +167,7 @@ class GenerateImagesRequest extends \Google\Protobuf\Internal\Message
      */
     public function setAdvertisingChannelType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(2, $var);
 
         return $this;

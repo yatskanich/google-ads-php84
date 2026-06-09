@@ -45,7 +45,7 @@ class TravelCampaignSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTravelAccountId()
     {
-        return isset($this->travel_account_id) ? $this->travel_account_id : 0;
+        return $this->travel_account_id ?? 0;
     }
 
     public function hasTravelAccountId()

@@ -187,7 +187,7 @@ class GenerateKeywordIdeasRequest extends \Google\Protobuf\Internal\Message
      */
     public function getLanguage()
     {
-        return isset($this->language) ? $this->language : '';
+        return $this->language ?? '';
     }
 
     public function hasLanguage()
@@ -366,7 +366,7 @@ class GenerateKeywordIdeasRequest extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanNetwork($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\KeywordPlanNetworkEnum\KeywordPlanNetwork::class);
+        GPBUtil::checkEnum($var);
         $this->keyword_plan_network = $var;
 
         return $this;

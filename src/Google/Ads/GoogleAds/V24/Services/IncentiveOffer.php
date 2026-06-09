@@ -57,7 +57,7 @@ class IncentiveOffer extends \Google\Protobuf\Internal\Message
      */
     public function getType()
     {
-        return isset($this->type) ? $this->type : 0;
+        return $this->type ?? 0;
     }
 
     public function hasType()
@@ -79,7 +79,7 @@ class IncentiveOffer extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Services\IncentiveOffer\OfferType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -93,7 +93,7 @@ class IncentiveOffer extends \Google\Protobuf\Internal\Message
      */
     public function getConsolidatedTermsAndConditionsUrl()
     {
-        return isset($this->consolidated_terms_and_conditions_url) ? $this->consolidated_terms_and_conditions_url : '';
+        return $this->consolidated_terms_and_conditions_url ?? '';
     }
 
     public function hasConsolidatedTermsAndConditionsUrl()

@@ -46,7 +46,7 @@ class SimilarUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSeedUserList()
     {
-        return isset($this->seed_user_list) ? $this->seed_user_list : '';
+        return $this->seed_user_list ?? '';
     }
 
     public function hasSeedUserList()

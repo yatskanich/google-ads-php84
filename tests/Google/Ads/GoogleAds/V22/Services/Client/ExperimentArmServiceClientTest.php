@@ -74,7 +74,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateExperimentArms($request);
@@ -112,7 +112,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class ExperimentArmServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentArmsRequest())
+        $request = new MutateExperimentArmsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateExperimentArmsAsync($request)->wait();

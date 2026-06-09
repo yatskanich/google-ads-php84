@@ -1105,7 +1105,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityAccountId()
     {
-        return isset($this->activity_account_id) ? $this->activity_account_id : 0;
+        return $this->activity_account_id ?? 0;
     }
 
     public function hasActivityAccountId()
@@ -1141,7 +1141,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityCity()
     {
-        return isset($this->activity_city) ? $this->activity_city : '';
+        return $this->activity_city ?? '';
     }
 
     public function hasActivityCity()
@@ -1177,7 +1177,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityCountry()
     {
-        return isset($this->activity_country) ? $this->activity_country : '';
+        return $this->activity_country ?? '';
     }
 
     public function hasActivityCountry()
@@ -1213,7 +1213,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityRating()
     {
-        return isset($this->activity_rating) ? $this->activity_rating : 0;
+        return $this->activity_rating ?? 0;
     }
 
     public function hasActivityRating()
@@ -1249,7 +1249,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getActivityState()
     {
-        return isset($this->activity_state) ? $this->activity_state : '';
+        return $this->activity_state ?? '';
     }
 
     public function hasActivityState()
@@ -1285,7 +1285,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getExternalActivityId()
     {
-        return isset($this->external_activity_id) ? $this->external_activity_id : '';
+        return $this->external_activity_id ?? '';
     }
 
     public function hasExternalActivityId()
@@ -1333,7 +1333,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setAdDestinationType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdDestinationTypeEnum\AdDestinationType::class);
+        GPBUtil::checkEnum($var);
         $this->ad_destination_type = $var;
 
         return $this;
@@ -1359,7 +1359,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setAdFormatType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdFormatTypeEnum\AdFormatType::class);
+        GPBUtil::checkEnum($var);
         $this->ad_format_type = $var;
 
         return $this;
@@ -1385,7 +1385,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setAdNetworkType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdNetworkTypeEnum\AdNetworkType::class);
+        GPBUtil::checkEnum($var);
         $this->ad_network_type = $var;
 
         return $this;
@@ -1399,7 +1399,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -1435,7 +1435,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAssetGroup()
     {
-        return isset($this->asset_group) ? $this->asset_group : '';
+        return $this->asset_group ?? '';
     }
 
     public function hasAssetGroup()
@@ -1471,7 +1471,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getAuctionInsightDomain()
     {
-        return isset($this->auction_insight_domain) ? $this->auction_insight_domain : '';
+        return $this->auction_insight_domain ?? '';
     }
 
     public function hasAuctionInsightDomain()
@@ -1543,7 +1543,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -1591,7 +1591,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setClickType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ClickTypeEnum\ClickType::class);
+        GPBUtil::checkEnum($var);
         $this->click_type = $var;
 
         return $this;
@@ -1605,7 +1605,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAction()
     {
-        return isset($this->conversion_action) ? $this->conversion_action : '';
+        return $this->conversion_action ?? '';
     }
 
     public function hasConversionAction()
@@ -1653,7 +1653,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setConversionActionCategory($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionActionCategoryEnum\ConversionActionCategory::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_action_category = $var;
 
         return $this;
@@ -1667,7 +1667,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionActionName()
     {
-        return isset($this->conversion_action_name) ? $this->conversion_action_name : '';
+        return $this->conversion_action_name ?? '';
     }
 
     public function hasConversionActionName()
@@ -1707,7 +1707,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getConversionAdjustment()
     {
-        return isset($this->conversion_adjustment) ? $this->conversion_adjustment : false;
+        return $this->conversion_adjustment ?? false;
     }
 
     public function hasConversionAdjustment()
@@ -1759,7 +1759,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setConversionAttributionEventType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionAttributionEventTypeEnum\ConversionAttributionEventType::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_attribution_event_type = $var;
 
         return $this;
@@ -1787,7 +1787,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setConversionLagBucket($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionLagBucketEnum\ConversionLagBucket::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_lag_bucket = $var;
 
         return $this;
@@ -1815,7 +1815,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setConversionOrAdjustmentLagBucket($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionOrAdjustmentLagBucketEnum\ConversionOrAdjustmentLagBucket::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_or_adjustment_lag_bucket = $var;
 
         return $this;
@@ -1830,7 +1830,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getDate()
     {
-        return isset($this->date) ? $this->date : '';
+        return $this->date ?? '';
     }
 
     public function hasDate()
@@ -1879,7 +1879,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setDayOfWeek($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\DayOfWeekEnum\DayOfWeek::class);
+        GPBUtil::checkEnum($var);
         $this->day_of_week = $var;
 
         return $this;
@@ -1905,7 +1905,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setDevice($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\DeviceEnum\Device::class);
+        GPBUtil::checkEnum($var);
         $this->device = $var;
 
         return $this;
@@ -1931,7 +1931,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setExternalConversionSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ExternalConversionSourceEnum\ExternalConversionSource::class);
+        GPBUtil::checkEnum($var);
         $this->external_conversion_source = $var;
 
         return $this;
@@ -1945,7 +1945,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetAirport()
     {
-        return isset($this->geo_target_airport) ? $this->geo_target_airport : '';
+        return $this->geo_target_airport ?? '';
     }
 
     public function hasGeoTargetAirport()
@@ -1981,7 +1981,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCanton()
     {
-        return isset($this->geo_target_canton) ? $this->geo_target_canton : '';
+        return $this->geo_target_canton ?? '';
     }
 
     public function hasGeoTargetCanton()
@@ -2017,7 +2017,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCity()
     {
-        return isset($this->geo_target_city) ? $this->geo_target_city : '';
+        return $this->geo_target_city ?? '';
     }
 
     public function hasGeoTargetCity()
@@ -2053,7 +2053,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCountry()
     {
-        return isset($this->geo_target_country) ? $this->geo_target_country : '';
+        return $this->geo_target_country ?? '';
     }
 
     public function hasGeoTargetCountry()
@@ -2089,7 +2089,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetCounty()
     {
-        return isset($this->geo_target_county) ? $this->geo_target_county : '';
+        return $this->geo_target_county ?? '';
     }
 
     public function hasGeoTargetCounty()
@@ -2125,7 +2125,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetDistrict()
     {
-        return isset($this->geo_target_district) ? $this->geo_target_district : '';
+        return $this->geo_target_district ?? '';
     }
 
     public function hasGeoTargetDistrict()
@@ -2161,7 +2161,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetMetro()
     {
-        return isset($this->geo_target_metro) ? $this->geo_target_metro : '';
+        return $this->geo_target_metro ?? '';
     }
 
     public function hasGeoTargetMetro()
@@ -2198,7 +2198,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetMostSpecificLocation()
     {
-        return isset($this->geo_target_most_specific_location) ? $this->geo_target_most_specific_location : '';
+        return $this->geo_target_most_specific_location ?? '';
     }
 
     public function hasGeoTargetMostSpecificLocation()
@@ -2235,7 +2235,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetPostalCode()
     {
-        return isset($this->geo_target_postal_code) ? $this->geo_target_postal_code : '';
+        return $this->geo_target_postal_code ?? '';
     }
 
     public function hasGeoTargetPostalCode()
@@ -2271,7 +2271,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetProvince()
     {
-        return isset($this->geo_target_province) ? $this->geo_target_province : '';
+        return $this->geo_target_province ?? '';
     }
 
     public function hasGeoTargetProvince()
@@ -2307,7 +2307,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetRegion()
     {
-        return isset($this->geo_target_region) ? $this->geo_target_region : '';
+        return $this->geo_target_region ?? '';
     }
 
     public function hasGeoTargetRegion()
@@ -2343,7 +2343,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetState()
     {
-        return isset($this->geo_target_state) ? $this->geo_target_state : '';
+        return $this->geo_target_state ?? '';
     }
 
     public function hasGeoTargetState()
@@ -2379,7 +2379,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelBookingWindowDays()
     {
-        return isset($this->hotel_booking_window_days) ? $this->hotel_booking_window_days : 0;
+        return $this->hotel_booking_window_days ?? 0;
     }
 
     public function hasHotelBookingWindowDays()
@@ -2415,7 +2415,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
+        return $this->hotel_center_id ?? 0;
     }
 
     public function hasHotelCenterId()
@@ -2451,7 +2451,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCheckInDate()
     {
-        return isset($this->hotel_check_in_date) ? $this->hotel_check_in_date : '';
+        return $this->hotel_check_in_date ?? '';
     }
 
     public function hasHotelCheckInDate()
@@ -2499,7 +2499,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setHotelCheckInDayOfWeek($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\DayOfWeekEnum\DayOfWeek::class);
+        GPBUtil::checkEnum($var);
         $this->hotel_check_in_day_of_week = $var;
 
         return $this;
@@ -2513,7 +2513,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCity()
     {
-        return isset($this->hotel_city) ? $this->hotel_city : '';
+        return $this->hotel_city ?? '';
     }
 
     public function hasHotelCity()
@@ -2549,7 +2549,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelClass()
     {
-        return isset($this->hotel_class) ? $this->hotel_class : 0;
+        return $this->hotel_class ?? 0;
     }
 
     public function hasHotelClass()
@@ -2585,7 +2585,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCountry()
     {
-        return isset($this->hotel_country) ? $this->hotel_country : '';
+        return $this->hotel_country ?? '';
     }
 
     public function hasHotelCountry()
@@ -2633,7 +2633,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setHotelDateSelectionType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\HotelDateSelectionTypeEnum\HotelDateSelectionType::class);
+        GPBUtil::checkEnum($var);
         $this->hotel_date_selection_type = $var;
 
         return $this;
@@ -2647,7 +2647,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelLengthOfStay()
     {
-        return isset($this->hotel_length_of_stay) ? $this->hotel_length_of_stay : 0;
+        return $this->hotel_length_of_stay ?? 0;
     }
 
     public function hasHotelLengthOfStay()
@@ -2683,7 +2683,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelRateRuleId()
     {
-        return isset($this->hotel_rate_rule_id) ? $this->hotel_rate_rule_id : '';
+        return $this->hotel_rate_rule_id ?? '';
     }
 
     public function hasHotelRateRuleId()
@@ -2731,7 +2731,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setHotelRateType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\HotelRateTypeEnum\HotelRateType::class);
+        GPBUtil::checkEnum($var);
         $this->hotel_rate_type = $var;
 
         return $this;
@@ -2757,7 +2757,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setHotelPriceBucket($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\HotelPriceBucketEnum\HotelPriceBucket::class);
+        GPBUtil::checkEnum($var);
         $this->hotel_price_bucket = $var;
 
         return $this;
@@ -2771,7 +2771,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHotelState()
     {
-        return isset($this->hotel_state) ? $this->hotel_state : '';
+        return $this->hotel_state ?? '';
     }
 
     public function hasHotelState()
@@ -2807,7 +2807,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getHour()
     {
-        return isset($this->hour) ? $this->hour : 0;
+        return $this->hour ?? 0;
     }
 
     public function hasHour()
@@ -2845,7 +2845,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getInteractionOnThisExtension()
     {
-        return isset($this->interaction_on_this_extension) ? $this->interaction_on_this_extension : false;
+        return $this->interaction_on_this_extension ?? false;
     }
 
     public function hasInteractionOnThisExtension()
@@ -2931,7 +2931,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setLandingPageSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LandingPageSourceEnum\LandingPageSource::class);
+        GPBUtil::checkEnum($var);
         $this->landing_page_source = $var;
 
         return $this;
@@ -2946,7 +2946,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getMonth()
     {
-        return isset($this->month) ? $this->month : '';
+        return $this->month ?? '';
     }
 
     public function hasMonth()
@@ -2995,7 +2995,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setMonthOfYear($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\MonthOfYearEnum\MonthOfYear::class);
+        GPBUtil::checkEnum($var);
         $this->month_of_year = $var;
 
         return $this;
@@ -3009,7 +3009,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getPartnerHotelId()
     {
-        return isset($this->partner_hotel_id) ? $this->partner_hotel_id : '';
+        return $this->partner_hotel_id ?? '';
     }
 
     public function hasPartnerHotelId()
@@ -3045,7 +3045,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductAggregatorId()
     {
-        return isset($this->product_aggregator_id) ? $this->product_aggregator_id : 0;
+        return $this->product_aggregator_id ?? 0;
     }
 
     public function hasProductAggregatorId()
@@ -3081,7 +3081,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel1()
     {
-        return isset($this->product_category_level1) ? $this->product_category_level1 : '';
+        return $this->product_category_level1 ?? '';
     }
 
     public function hasProductCategoryLevel1()
@@ -3117,7 +3117,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel2()
     {
-        return isset($this->product_category_level2) ? $this->product_category_level2 : '';
+        return $this->product_category_level2 ?? '';
     }
 
     public function hasProductCategoryLevel2()
@@ -3153,7 +3153,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel3()
     {
-        return isset($this->product_category_level3) ? $this->product_category_level3 : '';
+        return $this->product_category_level3 ?? '';
     }
 
     public function hasProductCategoryLevel3()
@@ -3189,7 +3189,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel4()
     {
-        return isset($this->product_category_level4) ? $this->product_category_level4 : '';
+        return $this->product_category_level4 ?? '';
     }
 
     public function hasProductCategoryLevel4()
@@ -3225,7 +3225,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryLevel5()
     {
-        return isset($this->product_category_level5) ? $this->product_category_level5 : '';
+        return $this->product_category_level5 ?? '';
     }
 
     public function hasProductCategoryLevel5()
@@ -3261,7 +3261,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductBrand()
     {
-        return isset($this->product_brand) ? $this->product_brand : '';
+        return $this->product_brand ?? '';
     }
 
     public function hasProductBrand()
@@ -3309,7 +3309,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setProductChannel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductChannelEnum\ProductChannel::class);
+        GPBUtil::checkEnum($var);
         $this->product_channel = $var;
 
         return $this;
@@ -3335,7 +3335,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setProductChannelExclusivity($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductChannelExclusivityEnum\ProductChannelExclusivity::class);
+        GPBUtil::checkEnum($var);
         $this->product_channel_exclusivity = $var;
 
         return $this;
@@ -3361,7 +3361,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setProductCondition($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductConditionEnum\ProductCondition::class);
+        GPBUtil::checkEnum($var);
         $this->product_condition = $var;
 
         return $this;
@@ -3376,7 +3376,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCountry()
     {
-        return isset($this->product_country) ? $this->product_country : '';
+        return $this->product_country ?? '';
     }
 
     public function hasProductCountry()
@@ -3413,7 +3413,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute0()
     {
-        return isset($this->product_custom_attribute0) ? $this->product_custom_attribute0 : '';
+        return $this->product_custom_attribute0 ?? '';
     }
 
     public function hasProductCustomAttribute0()
@@ -3449,7 +3449,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute1()
     {
-        return isset($this->product_custom_attribute1) ? $this->product_custom_attribute1 : '';
+        return $this->product_custom_attribute1 ?? '';
     }
 
     public function hasProductCustomAttribute1()
@@ -3485,7 +3485,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute2()
     {
-        return isset($this->product_custom_attribute2) ? $this->product_custom_attribute2 : '';
+        return $this->product_custom_attribute2 ?? '';
     }
 
     public function hasProductCustomAttribute2()
@@ -3521,7 +3521,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute3()
     {
-        return isset($this->product_custom_attribute3) ? $this->product_custom_attribute3 : '';
+        return $this->product_custom_attribute3 ?? '';
     }
 
     public function hasProductCustomAttribute3()
@@ -3557,7 +3557,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductCustomAttribute4()
     {
-        return isset($this->product_custom_attribute4) ? $this->product_custom_attribute4 : '';
+        return $this->product_custom_attribute4 ?? '';
     }
 
     public function hasProductCustomAttribute4()
@@ -3593,7 +3593,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductFeedLabel()
     {
-        return isset($this->product_feed_label) ? $this->product_feed_label : '';
+        return $this->product_feed_label ?? '';
     }
 
     public function hasProductFeedLabel()
@@ -3629,7 +3629,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductItemId()
     {
-        return isset($this->product_item_id) ? $this->product_item_id : '';
+        return $this->product_item_id ?? '';
     }
 
     public function hasProductItemId()
@@ -3665,7 +3665,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductLanguage()
     {
-        return isset($this->product_language) ? $this->product_language : '';
+        return $this->product_language ?? '';
     }
 
     public function hasProductLanguage()
@@ -3701,7 +3701,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductMerchantId()
     {
-        return isset($this->product_merchant_id) ? $this->product_merchant_id : 0;
+        return $this->product_merchant_id ?? 0;
     }
 
     public function hasProductMerchantId()
@@ -3737,7 +3737,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductStoreId()
     {
-        return isset($this->product_store_id) ? $this->product_store_id : '';
+        return $this->product_store_id ?? '';
     }
 
     public function hasProductStoreId()
@@ -3773,7 +3773,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTitle()
     {
-        return isset($this->product_title) ? $this->product_title : '';
+        return $this->product_title ?? '';
     }
 
     public function hasProductTitle()
@@ -3809,7 +3809,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL1()
     {
-        return isset($this->product_type_l1) ? $this->product_type_l1 : '';
+        return $this->product_type_l1 ?? '';
     }
 
     public function hasProductTypeL1()
@@ -3845,7 +3845,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL2()
     {
-        return isset($this->product_type_l2) ? $this->product_type_l2 : '';
+        return $this->product_type_l2 ?? '';
     }
 
     public function hasProductTypeL2()
@@ -3881,7 +3881,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL3()
     {
-        return isset($this->product_type_l3) ? $this->product_type_l3 : '';
+        return $this->product_type_l3 ?? '';
     }
 
     public function hasProductTypeL3()
@@ -3917,7 +3917,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL4()
     {
-        return isset($this->product_type_l4) ? $this->product_type_l4 : '';
+        return $this->product_type_l4 ?? '';
     }
 
     public function hasProductTypeL4()
@@ -3953,7 +3953,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeL5()
     {
-        return isset($this->product_type_l5) ? $this->product_type_l5 : '';
+        return $this->product_type_l5 ?? '';
     }
 
     public function hasProductTypeL5()
@@ -3991,7 +3991,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getQuarter()
     {
-        return isset($this->quarter) ? $this->quarter : '';
+        return $this->quarter ?? '';
     }
 
     public function hasQuarter()
@@ -4029,7 +4029,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationCity()
     {
-        return isset($this->travel_destination_city) ? $this->travel_destination_city : '';
+        return $this->travel_destination_city ?? '';
     }
 
     public function hasTravelDestinationCity()
@@ -4065,7 +4065,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationCountry()
     {
-        return isset($this->travel_destination_country) ? $this->travel_destination_country : '';
+        return $this->travel_destination_country ?? '';
     }
 
     public function hasTravelDestinationCountry()
@@ -4101,7 +4101,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getTravelDestinationRegion()
     {
-        return isset($this->travel_destination_region) ? $this->travel_destination_region : '';
+        return $this->travel_destination_region ?? '';
     }
 
     public function hasTravelDestinationRegion()
@@ -4149,7 +4149,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setRecommendationType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\RecommendationTypeEnum\RecommendationType::class);
+        GPBUtil::checkEnum($var);
         $this->recommendation_type = $var;
 
         return $this;
@@ -4175,7 +4175,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSearchEngineResultsPageType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SearchEngineResultsPageTypeEnum\SearchEngineResultsPageType::class);
+        GPBUtil::checkEnum($var);
         $this->search_engine_results_page_type = $var;
 
         return $this;
@@ -4190,7 +4190,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSearchSubcategory()
     {
-        return isset($this->search_subcategory) ? $this->search_subcategory : '';
+        return $this->search_subcategory ?? '';
     }
 
     public function hasSearchSubcategory()
@@ -4227,7 +4227,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()
@@ -4281,7 +4281,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSearchTermMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SearchTermMatchTypeEnum\SearchTermMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->search_term_match_type = $var;
 
         return $this;
@@ -4313,7 +4313,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\MatchTypeEnum\MatchType::class);
+        GPBUtil::checkEnum($var);
         $this->match_type = $var;
 
         return $this;
@@ -4339,7 +4339,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSlot($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SlotEnum\Slot::class);
+        GPBUtil::checkEnum($var);
         $this->slot = $var;
 
         return $this;
@@ -4377,7 +4377,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setConversionValueRulePrimaryDimension($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConversionValueRulePrimaryDimensionEnum\ConversionValueRulePrimaryDimension::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_value_rule_primary_dimension = $var;
 
         return $this;
@@ -4391,7 +4391,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getWebpage()
     {
-        return isset($this->webpage) ? $this->webpage : '';
+        return $this->webpage ?? '';
     }
 
     public function hasWebpage()
@@ -4428,7 +4428,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getWeek()
     {
-        return isset($this->week) ? $this->week : '';
+        return $this->week ?? '';
     }
 
     public function hasWeek()
@@ -4465,7 +4465,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getYear()
     {
-        return isset($this->year) ? $this->year : 0;
+        return $this->year ?? 0;
     }
 
     public function hasYear()
@@ -4503,7 +4503,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkFineConversionValue()
     {
-        return isset($this->sk_ad_network_fine_conversion_value) ? $this->sk_ad_network_fine_conversion_value : 0;
+        return $this->sk_ad_network_fine_conversion_value ?? 0;
     }
 
     public function hasSkAdNetworkFineConversionValue()
@@ -4547,7 +4547,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkRedistributedFineConversionValue()
     {
-        return isset($this->sk_ad_network_redistributed_fine_conversion_value) ? $this->sk_ad_network_redistributed_fine_conversion_value : 0;
+        return $this->sk_ad_network_redistributed_fine_conversion_value ?? 0;
     }
 
     public function hasSkAdNetworkRedistributedFineConversionValue()
@@ -4601,7 +4601,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSkAdNetworkUserType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SkAdNetworkUserTypeEnum\SkAdNetworkUserType::class);
+        GPBUtil::checkEnum($var);
         $this->sk_ad_network_user_type = $var;
 
         return $this;
@@ -4627,7 +4627,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSkAdNetworkAdEventType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SkAdNetworkAdEventTypeEnum\SkAdNetworkAdEventType::class);
+        GPBUtil::checkEnum($var);
         $this->sk_ad_network_ad_event_type = $var;
 
         return $this;
@@ -4693,7 +4693,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSkAdNetworkAttributionCredit($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SkAdNetworkAttributionCreditEnum\SkAdNetworkAttributionCredit::class);
+        GPBUtil::checkEnum($var);
         $this->sk_ad_network_attribution_credit = $var;
 
         return $this;
@@ -4719,7 +4719,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSkAdNetworkCoarseConversionValue($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SkAdNetworkCoarseConversionValueEnum\SkAdNetworkCoarseConversionValue::class);
+        GPBUtil::checkEnum($var);
         $this->sk_ad_network_coarse_conversion_value = $var;
 
         return $this;
@@ -4735,7 +4735,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkSourceDomain()
     {
-        return isset($this->sk_ad_network_source_domain) ? $this->sk_ad_network_source_domain : '';
+        return $this->sk_ad_network_source_domain ?? '';
     }
 
     public function hasSkAdNetworkSourceDomain()
@@ -4791,7 +4791,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSkAdNetworkSourceType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SkAdNetworkSourceTypeEnum\SkAdNetworkSourceType::class);
+        GPBUtil::checkEnum($var);
         $this->sk_ad_network_source_type = $var;
 
         return $this;
@@ -4805,7 +4805,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkPostbackSequenceIndex()
     {
-        return isset($this->sk_ad_network_postback_sequence_index) ? $this->sk_ad_network_postback_sequence_index : 0;
+        return $this->sk_ad_network_postback_sequence_index ?? 0;
     }
 
     public function hasSkAdNetworkPostbackSequenceIndex()
@@ -4841,7 +4841,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkVersion()
     {
-        return isset($this->sk_ad_network_version) ? $this->sk_ad_network_version : '';
+        return $this->sk_ad_network_version ?? '';
     }
 
     public function hasSkAdNetworkVersion()
@@ -4947,7 +4947,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setNewVersusReturningCustomers($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ConvertingUserPriorEngagementTypeAndLtvBucketEnum\ConvertingUserPriorEngagementTypeAndLtvBucket::class);
+        GPBUtil::checkEnum($var);
         $this->new_versus_returning_customers = $var;
 
         return $this;
@@ -4981,7 +4981,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setAdjustedAgeRange($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AgeRangeTypeEnum\AgeRangeType::class);
+        GPBUtil::checkEnum($var);
         $this->adjusted_age_range = $var;
 
         return $this;
@@ -5015,7 +5015,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setAdjustedGender($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\GenderTypeEnum\GenderType::class);
+        GPBUtil::checkEnum($var);
         $this->adjusted_gender = $var;
 
         return $this;
@@ -5047,7 +5047,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSearchTermMatchSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SearchTermMatchSourceEnum\SearchTermMatchSource::class);
+        GPBUtil::checkEnum($var);
         $this->search_term_match_source = $var;
 
         return $this;
@@ -5075,7 +5075,7 @@ class Segments extends \Google\Protobuf\Internal\Message
      */
     public function setSearchTermTargetingStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\SearchTermTargetingStatusEnum\SearchTermTargetingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->search_term_targeting_status = $var;
 
         return $this;

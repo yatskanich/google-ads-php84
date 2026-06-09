@@ -65,7 +65,7 @@ class ValueRuleAction extends \Google\Protobuf\Internal\Message
      */
     public function setOperation($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ValueRuleOperationEnum\ValueRuleOperation::class);
+        GPBUtil::checkEnum($var);
         $this->operation = $var;
 
         return $this;

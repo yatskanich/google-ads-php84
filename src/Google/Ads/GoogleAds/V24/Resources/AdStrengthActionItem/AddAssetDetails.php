@@ -79,7 +79,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function setAssetFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->asset_field_type = $var;
 
         return $this;
@@ -93,7 +93,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getAssetCount()
     {
-        return isset($this->asset_count) ? $this->asset_count : 0;
+        return $this->asset_count ?? 0;
     }
 
     public function hasAssetCount()
@@ -132,7 +132,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function getVideoAspectRatioRequirement()
     {
-        return isset($this->video_aspect_ratio_requirement) ? $this->video_aspect_ratio_requirement : 0;
+        return $this->video_aspect_ratio_requirement ?? 0;
     }
 
     public function hasVideoAspectRatioRequirement()
@@ -157,7 +157,7 @@ class AddAssetDetails extends \Google\Protobuf\Internal\Message
      */
     public function setVideoAspectRatioRequirement($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetCoverageVideoAspectRatioRequirementEnum\AssetCoverageVideoAspectRatioRequirement::class);
+        GPBUtil::checkEnum($var);
         $this->video_aspect_ratio_requirement = $var;
 
         return $this;

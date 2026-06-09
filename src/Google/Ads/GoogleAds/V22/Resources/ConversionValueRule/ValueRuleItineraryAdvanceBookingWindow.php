@@ -54,7 +54,7 @@ class ValueRuleItineraryAdvanceBookingWindow extends \Google\Protobuf\Internal\M
      */
     public function getMinDays()
     {
-        return isset($this->min_days) ? $this->min_days : 0;
+        return $this->min_days ?? 0;
     }
 
     public function hasMinDays()
@@ -90,7 +90,7 @@ class ValueRuleItineraryAdvanceBookingWindow extends \Google\Protobuf\Internal\M
      */
     public function getMaxDays()
     {
-        return isset($this->max_days) ? $this->max_days : 0;
+        return $this->max_days ?? 0;
     }
 
     public function hasMaxDays()

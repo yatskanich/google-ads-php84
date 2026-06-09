@@ -75,7 +75,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccessInvitation($request);
@@ -113,7 +113,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class CustomerUserAccessInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerUserAccessInvitationOperation();
-        $request = (new MutateCustomerUserAccessInvitationRequest())
+        $request = new MutateCustomerUserAccessInvitationRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerUserAccessInvitationAsync($request)->wait();

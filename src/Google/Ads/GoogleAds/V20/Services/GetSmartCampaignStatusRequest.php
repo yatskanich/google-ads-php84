@@ -34,7 +34,7 @@ class GetSmartCampaignStatusRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setResourceName($resourceName);
     }
 

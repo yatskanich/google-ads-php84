@@ -74,7 +74,7 @@ class AssetGroupSignalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupSignalsRequest())
+        $request = new MutateAssetGroupSignalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAssetGroupSignals($request);
@@ -112,7 +112,7 @@ class AssetGroupSignalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupSignalsRequest())
+        $request = new MutateAssetGroupSignalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class AssetGroupSignalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAssetGroupSignalsRequest())
+        $request = new MutateAssetGroupSignalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAssetGroupSignalsAsync($request)->wait();

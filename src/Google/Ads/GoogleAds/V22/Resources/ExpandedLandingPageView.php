@@ -88,7 +88,7 @@ class ExpandedLandingPageView extends \Google\Protobuf\Internal\Message
      */
     public function getExpandedFinalUrl()
     {
-        return isset($this->expanded_final_url) ? $this->expanded_final_url : '';
+        return $this->expanded_final_url ?? '';
     }
 
     public function hasExpandedFinalUrl()

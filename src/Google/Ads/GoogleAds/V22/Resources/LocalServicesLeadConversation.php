@@ -190,7 +190,7 @@ class LocalServicesLeadConversation extends \Google\Protobuf\Internal\Message
      */
     public function setConversationChannel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\LocalServicesLeadConversationTypeEnum\ConversationType::class);
+        GPBUtil::checkEnum($var);
         $this->conversation_channel = $var;
 
         return $this;
@@ -218,7 +218,7 @@ class LocalServicesLeadConversation extends \Google\Protobuf\Internal\Message
      */
     public function setParticipantType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\LocalServicesParticipantTypeEnum\ParticipantType::class);
+        GPBUtil::checkEnum($var);
         $this->participant_type = $var;
 
         return $this;

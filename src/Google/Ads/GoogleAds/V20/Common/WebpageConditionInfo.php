@@ -73,7 +73,7 @@ class WebpageConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOperand($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\WebpageConditionOperandEnum\WebpageConditionOperand::class);
+        GPBUtil::checkEnum($var);
         $this->operand = $var;
 
         return $this;
@@ -99,7 +99,7 @@ class WebpageConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\WebpageConditionOperatorEnum\WebpageConditionOperator::class);
+        GPBUtil::checkEnum($var);
         $this->operator = $var;
 
         return $this;
@@ -113,7 +113,7 @@ class WebpageConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getArgument()
     {
-        return isset($this->argument) ? $this->argument : '';
+        return $this->argument ?? '';
     }
 
     public function hasArgument()

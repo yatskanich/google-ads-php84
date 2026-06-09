@@ -152,7 +152,7 @@ class VideoEnhancement extends \Google\Protobuf\Internal\Message
      */
     public function setSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\VideoEnhancementSourceEnum\VideoEnhancementSource::class);
+        GPBUtil::checkEnum($var);
         $this->source = $var;
 
         return $this;

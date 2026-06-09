@@ -45,7 +45,7 @@ class TrackingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrl()
     {
-        return isset($this->tracking_url) ? $this->tracking_url : '';
+        return $this->tracking_url ?? '';
     }
 
     public function hasTrackingUrl()

@@ -78,7 +78,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDisplayName()
     {
-        return isset($this->display_name) ? $this->display_name : '';
+        return $this->display_name ?? '';
     }
 
     public function hasDisplayName()
@@ -114,7 +114,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getEntityId()
     {
-        return isset($this->entity_id) ? $this->entity_id : '';
+        return $this->entity_id ?? '';
     }
 
     public function hasEntityId()
@@ -150,7 +150,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPrimaryUrl()
     {
-        return isset($this->primary_url) ? $this->primary_url : '';
+        return $this->primary_url ?? '';
     }
 
     public function hasPrimaryUrl()
@@ -186,7 +186,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRejectionReason()
     {
-        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
+        return $this->rejection_reason ?? 0;
     }
 
     public function hasRejectionReason()
@@ -208,7 +208,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function setRejectionReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\BrandRequestRejectionReasonEnum\BrandRequestRejectionReason::class);
+        GPBUtil::checkEnum($var);
         $this->rejection_reason = $var;
 
         return $this;
@@ -222,7 +222,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStatus()
     {
-        return isset($this->status) ? $this->status : 0;
+        return $this->status ?? 0;
     }
 
     public function hasStatus()
@@ -244,7 +244,7 @@ class BrandInfo extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\BrandStateEnum\BrandState::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

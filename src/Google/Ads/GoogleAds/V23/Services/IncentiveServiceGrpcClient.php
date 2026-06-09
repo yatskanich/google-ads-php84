@@ -43,7 +43,7 @@ class IncentiveServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.IncentiveService/FetchIncentive',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\FetchIncentiveResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\FetchIncentiveResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -58,7 +58,7 @@ class IncentiveServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.IncentiveService/ApplyIncentive',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\ApplyIncentiveResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\ApplyIncentiveResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -52,7 +52,7 @@ class AdOptimizedBusinessProfileSetting extends \Google\Protobuf\Internal\Messag
      */
     public function getIncludeLeadForm()
     {
-        return isset($this->include_lead_form) ? $this->include_lead_form : false;
+        return $this->include_lead_form ?? false;
     }
 
     public function hasIncludeLeadForm()

@@ -63,7 +63,7 @@ class ListPlannableUserInterestsRequest extends \Google\Protobuf\Internal\Messag
      */
     public static function build(string $customerId): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId);
     }
 
@@ -165,7 +165,7 @@ class ListPlannableUserInterestsRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getNameQuery()
     {
-        return isset($this->name_query) ? $this->name_query : '';
+        return $this->name_query ?? '';
     }
 
     public function hasNameQuery()
@@ -205,7 +205,7 @@ class ListPlannableUserInterestsRequest extends \Google\Protobuf\Internal\Messag
      */
     public function getPathQuery()
     {
-        return isset($this->path_query) ? $this->path_query : '';
+        return $this->path_query ?? '';
     }
 
     public function hasPathQuery()

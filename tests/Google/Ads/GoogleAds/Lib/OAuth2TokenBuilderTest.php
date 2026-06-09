@@ -64,7 +64,7 @@ class OAuth2TokenBuilderTest extends TestCase
     {
         // Mock the EnvironmentalVariables to control the path.
         $environmentalVariablesMock = $this->createMock(EnvironmentalVariables::class);
-        
+
         // --- FIX: Use a UNIQUE temp directory instead of the shared fakeHome ---
         $tempDir = sys_get_temp_dir() . DIRECTORY_SEPARATOR . uniqid('google_ads_test_', true);
         mkdir($tempDir, 0777, true);
@@ -108,11 +108,11 @@ class OAuth2TokenBuilderTest extends TestCase
 
     public function testBuildWithWebOrInstalledAppFlowFromCustomDefaultFile()
     {
-        $environmentalVariablesMock = $this->createMock('Google\Ads\GoogleAds\Util\EnvironmentalVariables');
+        $environmentalVariablesMock = $this->createMock(\Google\Ads\GoogleAds\Util\EnvironmentalVariables::class);
 
         // --- FIX: Use a unique temporary file instead of the shared Provider path ---
         $tempIniPath = tempnam(sys_get_temp_dir(), 'google_ads_custom_ini_');
-        
+
         $environmentalVariablesMock
             ->method('get')
             ->with(GoogleAdsBuilder::DEFAULT_CONFIGURATION_FILENAME_ENVIRONMENT_VARIABLE_NAME)
@@ -132,7 +132,7 @@ class OAuth2TokenBuilderTest extends TestCase
             $configurationLoader,
             $environmentalVariablesMock
         );
-        
+
         $tokenFetcher = $oAuth2TokenBuilder
             ->fromFile()
             ->build();
@@ -271,7 +271,7 @@ class OAuth2TokenBuilderTest extends TestCase
 
     public function testBuildFailsWhenMissingRequiredValuesForServiceAccountFlow()
     {
-        $builder = (new OAuth2TokenBuilder())
+        $builder = new OAuth2TokenBuilder()
             ->withJsonKeyFilePath('path/to/mock/key.json');
 
         $builder->defaultOptionals();
@@ -306,7 +306,7 @@ class OAuth2TokenBuilderTest extends TestCase
     
     public function testBuildWithAdcFailure()
     {
-        $adcFetcher = function ($scopes) {
+        $adcFetcher = function ($scopes): void {
             // We throw a standard RuntimeException because CredentialsLoaderException is gone
             throw new \RuntimeException('Mocked ADC failure');
         };
@@ -327,7 +327,7 @@ class OAuth2TokenBuilderTest extends TestCase
     public function testBuildWithRefreshTokenBypassesAdc()
     {
         $adcFetcherCalled = false;
-        $adcFetcher = function ($scopes) use (&$adcFetcherCalled) {
+        $adcFetcher = function ($scopes) use (&$adcFetcherCalled): void {
             $adcFetcherCalled = true;
         };
 
@@ -345,7 +345,7 @@ class OAuth2TokenBuilderTest extends TestCase
     public function testBuildWithServiceAccountBypassesAdc()
     {
         $adcFetcherCalled = false;
-        $adcFetcher = function ($scopes) use (&$adcFetcherCalled) {
+        $adcFetcher = function ($scopes) use (&$adcFetcherCalled): void {
             $adcFetcherCalled = true;
         };
 

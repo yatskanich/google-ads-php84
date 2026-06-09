@@ -76,7 +76,7 @@ class CustomizerValue extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CustomizerAttributeTypeEnum\CustomizerAttributeType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

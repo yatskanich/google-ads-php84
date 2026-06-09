@@ -57,7 +57,7 @@ class OptimizeAssetsExperimentInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOptimizeAssetsExperimentSubtype($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\OptimizeAssetsExperimentSubtypeEnum\OptimizeAssetsExperimentSubtype::class);
+        GPBUtil::checkEnum($var);
         $this->optimize_assets_experiment_subtype = $var;
 
         return $this;

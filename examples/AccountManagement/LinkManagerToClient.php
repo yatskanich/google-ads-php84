@@ -292,4 +292,6 @@ class LinkManagerToClient
     }
 }
 
-LinkManagerToClient::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    LinkManagerToClient::main();
+}

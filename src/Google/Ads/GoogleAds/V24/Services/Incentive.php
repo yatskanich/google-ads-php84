@@ -78,7 +78,7 @@ class Incentive extends \Google\Protobuf\Internal\Message
      */
     public function getIncentiveId()
     {
-        return isset($this->incentive_id) ? $this->incentive_id : 0;
+        return $this->incentive_id ?? 0;
     }
 
     public function hasIncentiveId()
@@ -154,7 +154,7 @@ class Incentive extends \Google\Protobuf\Internal\Message
      */
     public function getIncentiveTermsAndConditionsUrl()
     {
-        return isset($this->incentive_terms_and_conditions_url) ? $this->incentive_terms_and_conditions_url : '';
+        return $this->incentive_terms_and_conditions_url ?? '';
     }
 
     public function hasIncentiveTermsAndConditionsUrl()
@@ -193,7 +193,7 @@ class Incentive extends \Google\Protobuf\Internal\Message
      */
     public function getType()
     {
-        return isset($this->type) ? $this->type : 0;
+        return $this->type ?? 0;
     }
 
     public function hasType()
@@ -215,7 +215,7 @@ class Incentive extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Services\FetchIncentiveRequest\IncentiveType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

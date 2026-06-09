@@ -227,4 +227,6 @@ class DetectAndApplyRecommendations
     // [END apply_recommendation]
 }
 
-DetectAndApplyRecommendations::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    DetectAndApplyRecommendations::main();
+}

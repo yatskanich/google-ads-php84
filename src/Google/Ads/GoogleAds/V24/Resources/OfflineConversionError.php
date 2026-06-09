@@ -75,7 +75,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setCollectionSizeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CollectionSizeErrorEnum\CollectionSizeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -106,7 +106,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setConversionAdjustmentUploadError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionAdjustmentUploadErrorEnum\ConversionAdjustmentUploadError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -137,7 +137,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setConversionUploadError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionUploadErrorEnum\ConversionUploadError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -168,7 +168,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setDateError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DateErrorEnum\DateError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -199,7 +199,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setDistinctError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DistinctErrorEnum\DistinctError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -230,7 +230,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setFieldError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FieldErrorEnum\FieldError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(6, $var);
 
         return $this;
@@ -261,7 +261,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setMutateError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MutateErrorEnum\MutateError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -292,7 +292,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setNotAllowlistedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\NotAllowlistedErrorEnum\NotAllowlistedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(8, $var);
 
         return $this;
@@ -323,7 +323,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setStringFormatError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\StringFormatErrorEnum\StringFormatError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -354,7 +354,7 @@ class OfflineConversionError extends \Google\Protobuf\Internal\Message
      */
     public function setStringLengthError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\StringLengthErrorEnum\StringLengthError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(10, $var);
 
         return $this;

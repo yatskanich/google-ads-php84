@@ -53,7 +53,7 @@ class DateRange extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return isset($this->start_date) ? $this->start_date : '';
+        return $this->start_date ?? '';
     }
 
     public function hasStartDate()
@@ -89,7 +89,7 @@ class DateRange extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->end_date) ? $this->end_date : '';
+        return $this->end_date ?? '';
     }
 
     public function hasEndDate()

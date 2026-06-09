@@ -94,7 +94,7 @@ class CrmBasedUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()
@@ -155,7 +155,7 @@ class CrmBasedUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function setUploadKeyType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CustomerMatchUploadKeyTypeEnum\CustomerMatchUploadKeyType::class);
+        GPBUtil::checkEnum($var);
         $this->upload_key_type = $var;
 
         return $this;
@@ -183,7 +183,7 @@ class CrmBasedUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function setDataSourceType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\UserListCrmDataSourceTypeEnum\UserListCrmDataSourceType::class);
+        GPBUtil::checkEnum($var);
         $this->data_source_type = $var;
 
         return $this;

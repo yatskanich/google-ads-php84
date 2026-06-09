@@ -52,7 +52,7 @@ class CustomerLifecycleGoalServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.CustomerLifecycleGoalService/ConfigureCustomerLifecycleGoals',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\ConfigureCustomerLifecycleGoalsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\ConfigureCustomerLifecycleGoalsResponse::class, 'decode'],
         $metadata, $options);
     }
 

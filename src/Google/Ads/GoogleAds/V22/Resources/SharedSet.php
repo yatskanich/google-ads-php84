@@ -142,7 +142,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -192,7 +192,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SharedSetTypeEnum\SharedSetType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -210,7 +210,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -262,7 +262,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SharedSetStatusEnum\SharedSetStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -277,7 +277,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getMemberCount()
     {
-        return isset($this->member_count) ? $this->member_count : 0;
+        return $this->member_count ?? 0;
     }
 
     public function hasMemberCount()
@@ -315,7 +315,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getReferenceCount()
     {
-        return isset($this->reference_count) ? $this->reference_count : 0;
+        return $this->reference_count ?? 0;
     }
 
     public function hasReferenceCount()

@@ -54,7 +54,7 @@ class AutomaticallyCreatedAssetRemovalServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.AutomaticallyCreatedAssetRemovalService/RemoveCampaignAutomaticallyCreatedAsset',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\RemoveCampaignAutomaticallyCreatedAssetResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\RemoveCampaignAutomaticallyCreatedAssetResponse::class, 'decode'],
         $metadata, $options);
     }
 

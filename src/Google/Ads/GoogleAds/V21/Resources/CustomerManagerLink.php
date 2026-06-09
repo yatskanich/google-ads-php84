@@ -103,7 +103,7 @@ class CustomerManagerLink extends \Google\Protobuf\Internal\Message
      */
     public function getManagerCustomer()
     {
-        return isset($this->manager_customer) ? $this->manager_customer : '';
+        return $this->manager_customer ?? '';
     }
 
     public function hasManagerCustomer()
@@ -139,7 +139,7 @@ class CustomerManagerLink extends \Google\Protobuf\Internal\Message
      */
     public function getManagerLinkId()
     {
-        return isset($this->manager_link_id) ? $this->manager_link_id : 0;
+        return $this->manager_link_id ?? 0;
     }
 
     public function hasManagerLinkId()
@@ -187,7 +187,7 @@ class CustomerManagerLink extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ManagerLinkStatusEnum\ManagerLinkStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

@@ -415,7 +415,7 @@ final class GoogleAdsClientBuilder extends AbstractGoogleAdsBuilder
         if (!empty($this->linkedCustomerId) && $this->linkedCustomerId < 0) {
             throw new InvalidArgumentException('The linked customer ID must be a positive number.');
         }
-        if (!empty($this->adsAssistant) && empty(trim($this->adsAssistant))) {
+        if (!empty($this->adsAssistant) && empty(trim((string) $this->adsAssistant))) {
             throw new InvalidArgumentException('The ads assistant metadata must not be empty.');
         }
 

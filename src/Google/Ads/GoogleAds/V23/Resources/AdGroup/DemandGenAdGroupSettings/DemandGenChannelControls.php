@@ -67,7 +67,7 @@ class DemandGenChannelControls extends \Google\Protobuf\Internal\Message
      */
     public function setChannelConfig($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\DemandGenChannelConfigEnum\DemandGenChannelConfig::class);
+        GPBUtil::checkEnum($var);
         $this->channel_config = $var;
 
         return $this;
@@ -98,7 +98,7 @@ class DemandGenChannelControls extends \Google\Protobuf\Internal\Message
      */
     public function setChannelStrategy($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\DemandGenChannelStrategyEnum\DemandGenChannelStrategy::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(2, $var);
 
         return $this;

@@ -347,7 +347,7 @@ class FieldValue extends \Google\Protobuf\Internal\Message
      */
     public function setResourceStatusValue($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\Util\FieldMasks\Proto\ResourceStatusEnum\ResourceStatus::class);
+        GPBUtil::checkEnum($var);
         $this->resource_status_value = $var;
 
         return $this;

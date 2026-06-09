@@ -159,7 +159,7 @@ class InFeedVideoAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function setThumbnail($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\VideoThumbnailEnum\VideoThumbnail::class);
+        GPBUtil::checkEnum($var);
         $this->thumbnail = $var;
 
         return $this;

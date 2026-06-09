@@ -66,7 +66,7 @@ class MutateCampaignBidModifiersRequest extends \Google\Protobuf\Internal\Messag
      */
     public static function build(string $customerId, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -239,7 +239,7 @@ class MutateCampaignBidModifiersRequest extends \Google\Protobuf\Internal\Messag
      */
     public function setResponseContentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\ResponseContentTypeEnum\ResponseContentType::class);
+        GPBUtil::checkEnum($var);
         $this->response_content_type = $var;
 
         return $this;

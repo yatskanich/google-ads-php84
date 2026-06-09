@@ -46,7 +46,7 @@ class AdGroupCriterionCustomizerServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.AdGroupCriterionCustomizerService/MutateAdGroupCriterionCustomizers',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\MutateAdGroupCriterionCustomizersResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\MutateAdGroupCriterionCustomizersResponse::class, 'decode'],
         $metadata, $options);
     }
 

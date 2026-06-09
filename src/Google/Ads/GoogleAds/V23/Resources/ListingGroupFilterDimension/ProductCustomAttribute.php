@@ -53,7 +53,7 @@ class ProductCustomAttribute extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()
@@ -101,7 +101,7 @@ class ProductCustomAttribute extends \Google\Protobuf\Internal\Message
      */
     public function setIndex($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\ListingGroupFilterCustomAttributeIndexEnum\ListingGroupFilterCustomAttributeIndex::class);
+        GPBUtil::checkEnum($var);
         $this->index = $var;
 
         return $this;

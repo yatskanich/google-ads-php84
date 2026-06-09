@@ -95,7 +95,7 @@ class Campaign extends \Google\Protobuf\Internal\Message
      */
     public function setRequestType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ReservationRequestTypeEnum\ReservationRequestType::class);
+        GPBUtil::checkEnum($var);
         $this->request_type = $var;
 
         return $this;

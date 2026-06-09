@@ -55,7 +55,7 @@ class SeedInfo extends \Google\Protobuf\Internal\Message
      */
     public function getUrlSeed()
     {
-        return isset($this->url_seed) ? $this->url_seed : '';
+        return $this->url_seed ?? '';
     }
 
     public function hasUrlSeed()

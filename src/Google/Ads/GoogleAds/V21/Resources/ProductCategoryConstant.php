@@ -153,7 +153,7 @@ class ProductCategoryConstant extends \Google\Protobuf\Internal\Message
      */
     public function getProductCategoryConstantParent()
     {
-        return isset($this->product_category_constant_parent) ? $this->product_category_constant_parent : '';
+        return $this->product_category_constant_parent ?? '';
     }
 
     public function hasProductCategoryConstantParent()
@@ -201,7 +201,7 @@ class ProductCategoryConstant extends \Google\Protobuf\Internal\Message
      */
     public function setLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductCategoryLevelEnum\ProductCategoryLevel::class);
+        GPBUtil::checkEnum($var);
         $this->level = $var;
 
         return $this;
@@ -227,7 +227,7 @@ class ProductCategoryConstant extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductCategoryStateEnum\ProductCategoryState::class);
+        GPBUtil::checkEnum($var);
         $this->state = $var;
 
         return $this;

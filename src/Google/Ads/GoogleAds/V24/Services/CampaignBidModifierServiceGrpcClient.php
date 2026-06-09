@@ -70,7 +70,7 @@ class CampaignBidModifierServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.CampaignBidModifierService/MutateCampaignBidModifiers',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\MutateCampaignBidModifiersResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\MutateCampaignBidModifiersResponse::class, 'decode'],
         $metadata, $options);
     }
 

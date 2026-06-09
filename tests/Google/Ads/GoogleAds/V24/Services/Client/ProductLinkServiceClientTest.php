@@ -79,7 +79,7 @@ class ProductLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLink = new ProductLink();
-        $request = (new CreateProductLinkRequest())
+        $request = new CreateProductLinkRequest()
             ->setCustomerId($customerId)
             ->setProductLink($productLink);
         $response = $gapicClient->createProductLink($request);
@@ -117,7 +117,7 @@ class ProductLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLink = new ProductLink();
-        $request = (new CreateProductLinkRequest())
+        $request = new CreateProductLinkRequest()
             ->setCustomerId($customerId)
             ->setProductLink($productLink);
         try {
@@ -149,7 +149,7 @@ class ProductLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->productLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]');
-        $request = (new RemoveProductLinkRequest())
+        $request = new RemoveProductLinkRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->removeProductLink($request);
@@ -187,7 +187,7 @@ class ProductLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->productLinkName('[CUSTOMER_ID]', '[PRODUCT_LINK_ID]');
-        $request = (new RemoveProductLinkRequest())
+        $request = new RemoveProductLinkRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         try {
@@ -219,7 +219,7 @@ class ProductLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLink = new ProductLink();
-        $request = (new CreateProductLinkRequest())
+        $request = new CreateProductLinkRequest()
             ->setCustomerId($customerId)
             ->setProductLink($productLink);
         $response = $gapicClient->createProductLinkAsync($request)->wait();

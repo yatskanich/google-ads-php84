@@ -145,7 +145,7 @@ class ConversionGoalCampaignConfig extends \Google\Protobuf\Internal\Message
      */
     public function setGoalConfigLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\GoalConfigLevelEnum\GoalConfigLevel::class);
+        GPBUtil::checkEnum($var);
         $this->goal_config_level = $var;
 
         return $this;

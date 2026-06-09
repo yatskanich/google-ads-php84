@@ -67,7 +67,7 @@ class Consent extends \Google\Protobuf\Internal\Message
      */
     public function setAdUserData($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ConsentStatusEnum\ConsentStatus::class);
+        GPBUtil::checkEnum($var);
         $this->ad_user_data = $var;
 
         return $this;
@@ -95,7 +95,7 @@ class Consent extends \Google\Protobuf\Internal\Message
      */
     public function setAdPersonalization($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ConsentStatusEnum\ConsentStatus::class);
+        GPBUtil::checkEnum($var);
         $this->ad_personalization = $var;
 
         return $this;

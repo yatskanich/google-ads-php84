@@ -57,7 +57,7 @@ class CustomerThirdPartyBrandSafetyIntegrationPartner extends \Google\Protobuf\I
      */
     public function setBrandSafetyIntegrationPartner($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ThirdPartyBrandSafetyIntegrationPartnerEnum\ThirdPartyBrandSafetyIntegrationPartner::class);
+        GPBUtil::checkEnum($var);
         $this->brand_safety_integration_partner = $var;
 
         return $this;

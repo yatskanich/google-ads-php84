@@ -46,7 +46,7 @@ class BusinessRegistrationNumber extends \Google\Protobuf\Internal\Message
      */
     public function getNumber()
     {
-        return isset($this->number) ? $this->number : '';
+        return $this->number ?? '';
     }
 
     public function hasNumber()

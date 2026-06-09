@@ -77,7 +77,7 @@ class UserListNumberRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\UserListNumberRuleItemOperatorEnum\UserListNumberRuleItemOperator::class);
+        GPBUtil::checkEnum($var);
         $this->operator = $var;
 
         return $this;
@@ -93,7 +93,7 @@ class UserListNumberRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : 0.0;
+        return $this->value ?? 0.0;
     }
 
     public function hasValue()

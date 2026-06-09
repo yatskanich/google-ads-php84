@@ -143,7 +143,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -179,7 +179,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -216,7 +216,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -253,7 +253,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getTargetType()
     {
-        return isset($this->target_type) ? $this->target_type : '';
+        return $this->target_type ?? '';
     }
 
     public function hasTargetType()
@@ -301,7 +301,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\GeoTargetConstantStatusEnum\GeoTargetConstantStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -316,7 +316,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getCanonicalName()
     {
-        return isset($this->canonical_name) ? $this->canonical_name : '';
+        return $this->canonical_name ?? '';
     }
 
     public function hasCanonicalName()
@@ -355,7 +355,7 @@ class GeoTargetConstant extends \Google\Protobuf\Internal\Message
      */
     public function getParentGeoTarget()
     {
-        return isset($this->parent_geo_target) ? $this->parent_geo_target : '';
+        return $this->parent_geo_target ?? '';
     }
 
     public function hasParentGeoTarget()

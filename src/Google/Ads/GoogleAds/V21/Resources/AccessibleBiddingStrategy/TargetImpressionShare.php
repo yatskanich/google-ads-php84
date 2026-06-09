@@ -81,7 +81,7 @@ class TargetImpressionShare extends \Google\Protobuf\Internal\Message
      */
     public function setLocation($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\TargetImpressionShareLocationEnum\TargetImpressionShareLocation::class);
+        GPBUtil::checkEnum($var);
         $this->location = $var;
 
         return $this;
@@ -96,7 +96,7 @@ class TargetImpressionShare extends \Google\Protobuf\Internal\Message
      */
     public function getLocationFractionMicros()
     {
-        return isset($this->location_fraction_micros) ? $this->location_fraction_micros : 0;
+        return $this->location_fraction_micros ?? 0;
     }
 
     public function hasLocationFractionMicros()
@@ -135,7 +135,7 @@ class TargetImpressionShare extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
+        return $this->cpc_bid_ceiling_micros ?? 0;
     }
 
     public function hasCpcBidCeilingMicros()

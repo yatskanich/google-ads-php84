@@ -654,4 +654,6 @@ class AddCustomerMatchUserList
     }
 }
 
-AddCustomerMatchUserList::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddCustomerMatchUserList::main();
+}

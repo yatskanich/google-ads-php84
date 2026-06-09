@@ -57,7 +57,7 @@ class CustomerClientLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.CustomerClientLinkService/MutateCustomerClientLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\MutateCustomerClientLinkResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\MutateCustomerClientLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 

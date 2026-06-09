@@ -88,7 +88,7 @@ class LandingPageView extends \Google\Protobuf\Internal\Message
      */
     public function getUnexpandedFinalUrl()
     {
-        return isset($this->unexpanded_final_url) ? $this->unexpanded_final_url : '';
+        return $this->unexpanded_final_url ?? '';
     }
 
     public function hasUnexpandedFinalUrl()

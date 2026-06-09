@@ -60,7 +60,7 @@ class BenchmarksSourceMetadata extends \Google\Protobuf\Internal\Message
      */
     public function setBenchmarksSourceType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\BenchmarksSourceTypeEnum\BenchmarksSourceType::class);
+        GPBUtil::checkEnum($var);
         $this->benchmarks_source_type = $var;
 
         return $this;

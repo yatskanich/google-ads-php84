@@ -69,7 +69,7 @@ class GetSmartCampaignStatusResponse extends \Google\Protobuf\Internal\Message
      */
     public function setSmartCampaignStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SmartCampaignStatusEnum\SmartCampaignStatus::class);
+        GPBUtil::checkEnum($var);
         $this->smart_campaign_status = $var;
 
         return $this;

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.AudienceInsightsService' => [
             'GenerateAudienceCompositionInsights' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateAudienceCompositionInsightsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateAudienceCompositionInsightsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'GenerateAudienceDefinition' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateAudienceDefinitionResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateAudienceDefinitionResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -49,7 +49,7 @@ return [
             ],
             'GenerateAudienceOverlapInsights' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateAudienceOverlapInsightsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateAudienceOverlapInsightsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -61,7 +61,7 @@ return [
             ],
             'GenerateInsightsFinderReport' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateInsightsFinderReportResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateInsightsFinderReportResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -73,7 +73,7 @@ return [
             ],
             'GenerateSuggestedTargetingInsights' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateSuggestedTargetingInsightsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateSuggestedTargetingInsightsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -85,7 +85,7 @@ return [
             ],
             'GenerateTargetingSuggestionMetrics' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\GenerateTargetingSuggestionMetricsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\GenerateTargetingSuggestionMetricsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -97,7 +97,7 @@ return [
             ],
             'ListAudienceInsightsAttributes' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListAudienceInsightsAttributesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListAudienceInsightsAttributesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -109,7 +109,7 @@ return [
             ],
             'ListInsightsEligibleDates' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\ListInsightsEligibleDatesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\ListInsightsEligibleDatesResponse::class,
             ],
         ],
     ],

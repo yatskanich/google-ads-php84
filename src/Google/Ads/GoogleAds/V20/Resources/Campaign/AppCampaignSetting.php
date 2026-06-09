@@ -77,7 +77,7 @@ class AppCampaignSetting extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingStrategyGoalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AppCampaignBiddingStrategyGoalTypeEnum\AppCampaignBiddingStrategyGoalType::class);
+        GPBUtil::checkEnum($var);
         $this->bidding_strategy_goal_type = $var;
 
         return $this;
@@ -91,7 +91,7 @@ class AppCampaignSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()
@@ -139,7 +139,7 @@ class AppCampaignSetting extends \Google\Protobuf\Internal\Message
      */
     public function setAppStore($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AppCampaignAppStoreEnum\AppCampaignAppStore::class);
+        GPBUtil::checkEnum($var);
         $this->app_store = $var;
 
         return $this;

@@ -105,7 +105,7 @@ class RuleBasedUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function setPrepopulationStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\UserListPrepopulationStatusEnum\UserListPrepopulationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->prepopulation_status = $var;
 
         return $this;

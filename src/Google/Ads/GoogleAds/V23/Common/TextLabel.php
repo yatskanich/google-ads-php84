@@ -61,7 +61,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getBackgroundColor()
     {
-        return isset($this->background_color) ? $this->background_color : '';
+        return $this->background_color ?? '';
     }
 
     public function hasBackgroundColor()
@@ -100,7 +100,7 @@ class TextLabel extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()

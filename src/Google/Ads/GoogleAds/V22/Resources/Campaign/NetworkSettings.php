@@ -97,7 +97,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetGoogleSearch()
     {
-        return isset($this->target_google_search) ? $this->target_google_search : false;
+        return $this->target_google_search ?? false;
     }
 
     public function hasTargetGoogleSearch()
@@ -134,7 +134,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetSearchNetwork()
     {
-        return isset($this->target_search_network) ? $this->target_search_network : false;
+        return $this->target_search_network ?? false;
     }
 
     public function hasTargetSearchNetwork()
@@ -172,7 +172,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetContentNetwork()
     {
-        return isset($this->target_content_network) ? $this->target_content_network : false;
+        return $this->target_content_network ?? false;
     }
 
     public function hasTargetContentNetwork()
@@ -213,7 +213,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetPartnerSearchNetwork()
     {
-        return isset($this->target_partner_search_network) ? $this->target_partner_search_network : false;
+        return $this->target_partner_search_network ?? false;
     }
 
     public function hasTargetPartnerSearchNetwork()
@@ -253,7 +253,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetYoutube()
     {
-        return isset($this->target_youtube) ? $this->target_youtube : false;
+        return $this->target_youtube ?? false;
     }
 
     public function hasTargetYoutube()
@@ -289,7 +289,7 @@ class NetworkSettings extends \Google\Protobuf\Internal\Message
      */
     public function getTargetGoogleTvNetwork()
     {
-        return isset($this->target_google_tv_network) ? $this->target_google_tv_network : false;
+        return $this->target_google_tv_network ?? false;
     }
 
     public function hasTargetGoogleTvNetwork()

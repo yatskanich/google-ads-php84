@@ -65,7 +65,7 @@ class TargetRestrictionOperation extends \Google\Protobuf\Internal\Message
      */
     public function setOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Common\TargetRestrictionOperation\Operator::class);
+        GPBUtil::checkEnum($var);
         $this->operator = $var;
 
         return $this;

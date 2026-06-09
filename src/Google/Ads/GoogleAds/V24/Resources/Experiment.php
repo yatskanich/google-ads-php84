@@ -219,7 +219,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getExperimentId()
     {
-        return isset($this->experiment_id) ? $this->experiment_id : 0;
+        return $this->experiment_id ?? 0;
     }
 
     public function hasExperimentId()
@@ -355,7 +355,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ExperimentTypeEnum\ExperimentType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -381,7 +381,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ExperimentStatusEnum\ExperimentStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -400,7 +400,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getStartDate()
     {
-        return isset($this->start_date) ? $this->start_date : '';
+        return $this->start_date ?? '';
     }
 
     public function hasStartDate()
@@ -445,7 +445,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getEndDate()
     {
-        return isset($this->end_date) ? $this->end_date : '';
+        return $this->end_date ?? '';
     }
 
     public function hasEndDate()
@@ -513,7 +513,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return isset($this->long_running_operation) ? $this->long_running_operation : '';
+        return $this->long_running_operation ?? '';
     }
 
     public function hasLongRunningOperation()
@@ -563,7 +563,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function setPromoteStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AsyncActionStatusEnum\AsyncActionStatus::class);
+        GPBUtil::checkEnum($var);
         $this->promote_status = $var;
 
         return $this;
@@ -579,7 +579,7 @@ class Experiment extends \Google\Protobuf\Internal\Message
      */
     public function getSyncEnabled()
     {
-        return isset($this->sync_enabled) ? $this->sync_enabled : false;
+        return $this->sync_enabled ?? false;
     }
 
     public function hasSyncEnabled()

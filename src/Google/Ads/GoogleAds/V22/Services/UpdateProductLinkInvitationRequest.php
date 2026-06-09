@@ -47,7 +47,7 @@ class UpdateProductLinkInvitationRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, int $productLinkInvitationStatus, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setProductLinkInvitationStatus($productLinkInvitationStatus)
             ->setResourceName($resourceName);
@@ -118,7 +118,7 @@ class UpdateProductLinkInvitationRequest extends \Google\Protobuf\Internal\Messa
      */
     public function setProductLinkInvitationStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ProductLinkInvitationStatusEnum\ProductLinkInvitationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->product_link_invitation_status = $var;
 
         return $this;

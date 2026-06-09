@@ -82,7 +82,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLinkInvitation = new ProductLinkInvitation();
-        $request = (new CreateProductLinkInvitationRequest())
+        $request = new CreateProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setProductLinkInvitation($productLinkInvitation);
         $response = $gapicClient->createProductLinkInvitation($request);
@@ -120,7 +120,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLinkInvitation = new ProductLinkInvitation();
-        $request = (new CreateProductLinkInvitationRequest())
+        $request = new CreateProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setProductLinkInvitation($productLinkInvitation);
         try {
@@ -152,7 +152,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->productLinkInvitationName('[CUSTOMER_ID]', '[CUSTOMER_INVITATION_ID]');
-        $request = (new RemoveProductLinkInvitationRequest())
+        $request = new RemoveProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->removeProductLinkInvitation($request);
@@ -190,7 +190,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $formattedResourceName = $gapicClient->productLinkInvitationName('[CUSTOMER_ID]', '[CUSTOMER_INVITATION_ID]');
-        $request = (new RemoveProductLinkInvitationRequest())
+        $request = new RemoveProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setResourceName($formattedResourceName);
         try {
@@ -223,7 +223,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $productLinkInvitationStatus = ProductLinkInvitationStatus::UNSPECIFIED;
         $formattedResourceName = $gapicClient->productLinkInvitationName('[CUSTOMER_ID]', '[CUSTOMER_INVITATION_ID]');
-        $request = (new UpdateProductLinkInvitationRequest())
+        $request = new UpdateProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setProductLinkInvitationStatus($productLinkInvitationStatus)
             ->setResourceName($formattedResourceName);
@@ -265,7 +265,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $productLinkInvitationStatus = ProductLinkInvitationStatus::UNSPECIFIED;
         $formattedResourceName = $gapicClient->productLinkInvitationName('[CUSTOMER_ID]', '[CUSTOMER_INVITATION_ID]');
-        $request = (new UpdateProductLinkInvitationRequest())
+        $request = new UpdateProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setProductLinkInvitationStatus($productLinkInvitationStatus)
             ->setResourceName($formattedResourceName);
@@ -298,7 +298,7 @@ class ProductLinkInvitationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $productLinkInvitation = new ProductLinkInvitation();
-        $request = (new CreateProductLinkInvitationRequest())
+        $request = new CreateProductLinkInvitationRequest()
             ->setCustomerId($customerId)
             ->setProductLinkInvitation($productLinkInvitation);
         $response = $gapicClient->createProductLinkInvitationAsync($request)->wait();

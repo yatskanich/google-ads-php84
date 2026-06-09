@@ -68,7 +68,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallReportingEnabled()
     {
-        return isset($this->call_reporting_enabled) ? $this->call_reporting_enabled : false;
+        return $this->call_reporting_enabled ?? false;
     }
 
     public function hasCallReportingEnabled()
@@ -105,7 +105,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionReportingEnabled()
     {
-        return isset($this->call_conversion_reporting_enabled) ? $this->call_conversion_reporting_enabled : false;
+        return $this->call_conversion_reporting_enabled ?? false;
     }
 
     public function hasCallConversionReportingEnabled()
@@ -143,7 +143,7 @@ class CallReportingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getCallConversionAction()
     {
-        return isset($this->call_conversion_action) ? $this->call_conversion_action : '';
+        return $this->call_conversion_action ?? '';
     }
 
     public function hasCallConversionAction()

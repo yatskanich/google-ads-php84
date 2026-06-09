@@ -45,7 +45,7 @@ class ManualCpc extends \Google\Protobuf\Internal\Message
      */
     public function getEnhancedCpcEnabled()
     {
-        return isset($this->enhanced_cpc_enabled) ? $this->enhanced_cpc_enabled : false;
+        return $this->enhanced_cpc_enabled ?? false;
     }
 
     public function hasEnhancedCpcEnabled()

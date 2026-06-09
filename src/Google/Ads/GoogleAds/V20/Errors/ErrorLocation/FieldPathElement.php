@@ -79,7 +79,7 @@ class FieldPathElement extends \Google\Protobuf\Internal\Message
      */
     public function getIndex()
     {
-        return isset($this->index) ? $this->index : 0;
+        return $this->index ?? 0;
     }
 
     public function hasIndex()

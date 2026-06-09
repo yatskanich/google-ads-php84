@@ -61,7 +61,7 @@ class TopicInfo extends \Google\Protobuf\Internal\Message
      */
     public function getTopicConstant()
     {
-        return isset($this->topic_constant) ? $this->topic_constant : '';
+        return $this->topic_constant ?? '';
     }
 
     public function hasTopicConstant()

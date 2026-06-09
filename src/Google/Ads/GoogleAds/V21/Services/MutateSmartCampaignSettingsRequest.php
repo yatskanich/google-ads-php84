@@ -66,7 +66,7 @@ class MutateSmartCampaignSettingsRequest extends \Google\Protobuf\Internal\Messa
      */
     public static function build(string $customerId, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }
@@ -239,7 +239,7 @@ class MutateSmartCampaignSettingsRequest extends \Google\Protobuf\Internal\Messa
      */
     public function setResponseContentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ResponseContentTypeEnum\ResponseContentType::class);
+        GPBUtil::checkEnum($var);
         $this->response_content_type = $var;
 
         return $this;

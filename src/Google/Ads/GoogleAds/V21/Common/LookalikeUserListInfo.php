@@ -102,7 +102,7 @@ class LookalikeUserListInfo extends \Google\Protobuf\Internal\Message
      */
     public function setExpansionLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LookalikeExpansionLevelEnum\LookalikeExpansionLevel::class);
+        GPBUtil::checkEnum($var);
         $this->expansion_level = $var;
 
         return $this;

@@ -44,7 +44,7 @@ class BiddingSeasonalityAdjustmentServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.BiddingSeasonalityAdjustmentService/MutateBiddingSeasonalityAdjustments',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\MutateBiddingSeasonalityAdjustmentsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\MutateBiddingSeasonalityAdjustmentsResponse::class, 'decode'],
         $metadata, $options);
     }
 

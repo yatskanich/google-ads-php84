@@ -153,7 +153,7 @@ class VideoAdSequenceStep extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdGroupTypeEnum\AdGroupType::class);
+        GPBUtil::checkEnum($var);
         $this->ad_group_type = $var;
 
         return $this;
@@ -213,7 +213,7 @@ class VideoAdSequenceStep extends \Google\Protobuf\Internal\Message
      */
     public function setPreviousStepInteractionType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\VideoAdSequenceInteractionTypeEnum\VideoAdSequenceInteractionType::class);
+        GPBUtil::checkEnum($var);
         $this->previous_step_interaction_type = $var;
 
         return $this;

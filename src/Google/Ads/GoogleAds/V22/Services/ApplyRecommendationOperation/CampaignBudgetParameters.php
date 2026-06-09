@@ -48,7 +48,7 @@ class CampaignBudgetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewBudgetAmountMicros()
     {
-        return isset($this->new_budget_amount_micros) ? $this->new_budget_amount_micros : 0;
+        return $this->new_budget_amount_micros ?? 0;
     }
 
     public function hasNewBudgetAmountMicros()

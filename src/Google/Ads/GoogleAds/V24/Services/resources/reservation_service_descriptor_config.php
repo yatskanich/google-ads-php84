@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.ReservationService' => [
             'BookCampaigns' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\BookCampaignsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\BookCampaignsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'QuoteCampaigns' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\QuoteCampaignsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\QuoteCampaignsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

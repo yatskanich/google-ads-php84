@@ -288,4 +288,6 @@ class GetChangeDetails
     // [END get_change_details]
 }
 
-GetChangeDetails::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    GetChangeDetails::main();
+}

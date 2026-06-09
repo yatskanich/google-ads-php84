@@ -119,7 +119,7 @@ class AiMaxSearchTermAdCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -156,7 +156,7 @@ class AiMaxSearchTermAdCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getSearchTerm()
     {
-        return isset($this->search_term) ? $this->search_term : '';
+        return $this->search_term ?? '';
     }
 
     public function hasSearchTerm()
@@ -194,7 +194,7 @@ class AiMaxSearchTermAdCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getLandingPage()
     {
-        return isset($this->landing_page) ? $this->landing_page : '';
+        return $this->landing_page ?? '';
     }
 
     public function hasLandingPage()
@@ -233,7 +233,7 @@ class AiMaxSearchTermAdCombinationView extends \Google\Protobuf\Internal\Message
      */
     public function getHeadline()
     {
-        return isset($this->headline) ? $this->headline : '';
+        return $this->headline ?? '';
     }
 
     public function hasHeadline()

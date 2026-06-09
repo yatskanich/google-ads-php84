@@ -77,7 +77,7 @@ class CampaignSummary extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignDescription()
     {
-        return isset($this->campaign_description) ? $this->campaign_description : '';
+        return $this->campaign_description ?? '';
     }
 
     public function hasCampaignDescription()
@@ -114,7 +114,7 @@ class CampaignSummary extends \Google\Protobuf\Internal\Message
      */
     public function getQuantity()
     {
-        return isset($this->quantity) ? $this->quantity : 0;
+        return $this->quantity ?? 0;
     }
 
     public function hasQuantity()
@@ -150,7 +150,7 @@ class CampaignSummary extends \Google\Protobuf\Internal\Message
      */
     public function getUnitOfMeasure()
     {
-        return isset($this->unit_of_measure) ? $this->unit_of_measure : 0;
+        return $this->unit_of_measure ?? 0;
     }
 
     public function hasUnitOfMeasure()
@@ -172,7 +172,7 @@ class CampaignSummary extends \Google\Protobuf\Internal\Message
      */
     public function setUnitOfMeasure($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\UnitOfMeasureEnum\UnitOfMeasure::class);
+        GPBUtil::checkEnum($var);
         $this->unit_of_measure = $var;
 
         return $this;
@@ -188,7 +188,7 @@ class CampaignSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()

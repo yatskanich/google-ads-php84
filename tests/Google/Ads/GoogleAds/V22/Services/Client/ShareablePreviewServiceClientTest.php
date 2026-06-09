@@ -74,7 +74,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         $response = $gapicClient->generateShareablePreviews($request);
@@ -112,7 +112,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         try {
@@ -142,7 +142,7 @@ class ShareablePreviewServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $shareablePreviews = [];
-        $request = (new GenerateShareablePreviewsRequest())
+        $request = new GenerateShareablePreviewsRequest()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
         $response = $gapicClient->generateShareablePreviewsAsync($request)->wait();

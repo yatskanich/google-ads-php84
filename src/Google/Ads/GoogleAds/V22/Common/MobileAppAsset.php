@@ -129,7 +129,7 @@ class MobileAppAsset extends \Google\Protobuf\Internal\Message
      */
     public function setAppStore($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\MobileAppVendorEnum\MobileAppVendor::class);
+        GPBUtil::checkEnum($var);
         $this->app_store = $var;
 
         return $this;

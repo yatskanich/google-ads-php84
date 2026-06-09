@@ -69,7 +69,7 @@ class PercentCpc extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
+        return $this->cpc_bid_ceiling_micros ?? 0;
     }
 
     public function hasCpcBidCeilingMicros()
@@ -111,7 +111,7 @@ class PercentCpc extends \Google\Protobuf\Internal\Message
      */
     public function getEnhancedCpcEnabled()
     {
-        return isset($this->enhanced_cpc_enabled) ? $this->enhanced_cpc_enabled : false;
+        return $this->enhanced_cpc_enabled ?? false;
     }
 
     public function hasEnhancedCpcEnabled()

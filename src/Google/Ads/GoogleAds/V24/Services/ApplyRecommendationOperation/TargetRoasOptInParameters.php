@@ -59,7 +59,7 @@ class TargetRoasOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return isset($this->target_roas) ? $this->target_roas : 0.0;
+        return $this->target_roas ?? 0.0;
     }
 
     public function hasTargetRoas()
@@ -97,7 +97,7 @@ class TargetRoasOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewCampaignBudgetAmountMicros()
     {
-        return isset($this->new_campaign_budget_amount_micros) ? $this->new_campaign_budget_amount_micros : 0;
+        return $this->new_campaign_budget_amount_micros ?? 0;
     }
 
     public function hasNewCampaignBudgetAmountMicros()

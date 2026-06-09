@@ -89,7 +89,7 @@ class GoogleAdsFieldServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->googleAdsFieldName('[GOOGLE_ADS_FIELD]');
-        $request = (new GetGoogleAdsFieldRequest())
+        $request = new GetGoogleAdsFieldRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->getGoogleAdsField($request);
         $this->assertEquals($expectedResponse, $response);
@@ -123,7 +123,7 @@ class GoogleAdsFieldServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->googleAdsFieldName('[GOOGLE_ADS_FIELD]');
-        $request = (new GetGoogleAdsFieldRequest())
+        $request = new GetGoogleAdsFieldRequest()
             ->setResourceName($formattedResourceName);
         try {
             $gapicClient->getGoogleAdsField($request);
@@ -160,7 +160,7 @@ class GoogleAdsFieldServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsFieldsRequest())
+        $request = new SearchGoogleAdsFieldsRequest()
             ->setQuery($query);
         $response = $gapicClient->searchGoogleAdsFields($request);
         $this->assertEquals($expectedResponse, $response->getPage()->getResponseObject());
@@ -197,7 +197,7 @@ class GoogleAdsFieldServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $query = 'query107944136';
-        $request = (new SearchGoogleAdsFieldsRequest())
+        $request = new SearchGoogleAdsFieldsRequest()
             ->setQuery($query);
         try {
             $gapicClient->searchGoogleAdsFields($request);
@@ -239,7 +239,7 @@ class GoogleAdsFieldServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->googleAdsFieldName('[GOOGLE_ADS_FIELD]');
-        $request = (new GetGoogleAdsFieldRequest())
+        $request = new GetGoogleAdsFieldRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->getGoogleAdsFieldAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

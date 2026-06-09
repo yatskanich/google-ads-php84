@@ -45,7 +45,7 @@ class OperatingSystemVersionInfo extends \Google\Protobuf\Internal\Message
      */
     public function getOperatingSystemVersionConstant()
     {
-        return isset($this->operating_system_version_constant) ? $this->operating_system_version_constant : '';
+        return $this->operating_system_version_constant ?? '';
     }
 
     public function hasOperatingSystemVersionConstant()

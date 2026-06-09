@@ -48,7 +48,7 @@ class SiteSeed extends \Google\Protobuf\Internal\Message
      */
     public function getSite()
     {
-        return isset($this->site) ? $this->site : '';
+        return $this->site ?? '';
     }
 
     public function hasSite()

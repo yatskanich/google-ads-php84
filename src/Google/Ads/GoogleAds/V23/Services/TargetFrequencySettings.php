@@ -69,7 +69,7 @@ class TargetFrequencySettings extends \Google\Protobuf\Internal\Message
      */
     public function setTimeUnit($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\TargetFrequencyTimeUnitEnum\TargetFrequencyTimeUnit::class);
+        GPBUtil::checkEnum($var);
         $this->time_unit = $var;
 
         return $this;

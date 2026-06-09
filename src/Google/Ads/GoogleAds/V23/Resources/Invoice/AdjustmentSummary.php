@@ -58,7 +58,7 @@ class AdjustmentSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAdjustmentDescription()
     {
-        return isset($this->adjustment_description) ? $this->adjustment_description : '';
+        return $this->adjustment_description ?? '';
     }
 
     public function hasAdjustmentDescription()
@@ -96,7 +96,7 @@ class AdjustmentSummary extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()

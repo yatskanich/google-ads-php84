@@ -375,7 +375,7 @@ class DemandGenMultiAssetAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBusinessName()
     {
-        return isset($this->business_name) ? $this->business_name : '';
+        return $this->business_name ?? '';
     }
 
     public function hasBusinessName()
@@ -411,7 +411,7 @@ class DemandGenMultiAssetAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCallToActionText()
     {
-        return isset($this->call_to_action_text) ? $this->call_to_action_text : '';
+        return $this->call_to_action_text ?? '';
     }
 
     public function hasCallToActionText()

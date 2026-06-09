@@ -77,7 +77,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -119,7 +119,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);
@@ -153,7 +153,7 @@ class ConversionAdjustmentUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $conversionAdjustments = [];
         $partialFailure = true;
-        $request = (new UploadConversionAdjustmentsRequest())
+        $request = new UploadConversionAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setConversionAdjustments($conversionAdjustments)
             ->setPartialFailure($partialFailure);

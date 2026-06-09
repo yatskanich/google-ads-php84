@@ -45,7 +45,7 @@ class KeywordPlanGeoTarget extends \Google\Protobuf\Internal\Message
      */
     public function getGeoTargetConstant()
     {
-        return isset($this->geo_target_constant) ? $this->geo_target_constant : '';
+        return $this->geo_target_constant ?? '';
     }
 
     public function hasGeoTargetConstant()

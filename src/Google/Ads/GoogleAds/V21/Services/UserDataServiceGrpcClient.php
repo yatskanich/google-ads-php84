@@ -63,7 +63,7 @@ class UserDataServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.UserDataService/UploadUserData',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\UploadUserDataResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\UploadUserDataResponse::class, 'decode'],
         $metadata, $options);
     }
 

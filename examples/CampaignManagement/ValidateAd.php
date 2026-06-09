@@ -209,4 +209,6 @@ class ValidateAd
     }
 }
 
-ValidateAd::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    ValidateAd::main();
+}

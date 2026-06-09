@@ -104,7 +104,7 @@ class AdditionalApplicationInfo extends \Google\Protobuf\Internal\Message
      */
     public function setApplicationInstance($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ApplicationInstanceEnum\ApplicationInstance::class);
+        GPBUtil::checkEnum($var);
         $this->application_instance = $var;
 
         return $this;

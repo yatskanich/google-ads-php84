@@ -65,7 +65,7 @@ class FixedCpm extends \Google\Protobuf\Internal\Message
      */
     public function setGoal($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\FixedCpmGoalEnum\FixedCpmGoal::class);
+        GPBUtil::checkEnum($var);
         $this->goal = $var;
 
         return $this;

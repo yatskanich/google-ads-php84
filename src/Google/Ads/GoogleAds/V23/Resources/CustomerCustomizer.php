@@ -148,7 +148,7 @@ class CustomerCustomizer extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CustomizerValueStatusEnum\CustomizerValueStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

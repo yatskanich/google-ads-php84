@@ -57,7 +57,7 @@ class PlannableUserListMetadata extends \Google\Protobuf\Internal\Message
      */
     public function setUserListCrmDataSourceType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\UserListCrmDataSourceTypeEnum\UserListCrmDataSourceType::class);
+        GPBUtil::checkEnum($var);
         $this->user_list_crm_data_source_type = $var;
 
         return $this;

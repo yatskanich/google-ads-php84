@@ -74,7 +74,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignSharedSets($request);
@@ -112,7 +112,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CampaignSharedSetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignSharedSetsRequest())
+        $request = new MutateCampaignSharedSetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignSharedSetsAsync($request)->wait();

@@ -293,7 +293,7 @@ class GenerateTextRequest extends \Google\Protobuf\Internal\Message
      */
     public function setAdvertisingChannelType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(4, $var);
 
         return $this;

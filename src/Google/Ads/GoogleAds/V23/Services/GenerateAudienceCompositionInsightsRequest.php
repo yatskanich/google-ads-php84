@@ -82,7 +82,7 @@ class GenerateAudienceCompositionInsightsRequest extends \Google\Protobuf\Intern
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V23\Services\InsightsAudience $audience, array $dimensions): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setAudience($audience)
             ->setDimensions($dimensions);

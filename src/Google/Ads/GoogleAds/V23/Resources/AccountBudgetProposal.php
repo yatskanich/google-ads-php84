@@ -219,7 +219,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -256,7 +256,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getBillingSetup()
     {
-        return isset($this->billing_setup) ? $this->billing_setup : '';
+        return $this->billing_setup ?? '';
     }
 
     public function hasBillingSetup()
@@ -294,7 +294,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getAccountBudget()
     {
-        return isset($this->account_budget) ? $this->account_budget : '';
+        return $this->account_budget ?? '';
     }
 
     public function hasAccountBudget()
@@ -345,7 +345,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setProposalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AccountBudgetProposalTypeEnum\AccountBudgetProposalType::class);
+        GPBUtil::checkEnum($var);
         $this->proposal_type = $var;
 
         return $this;
@@ -373,7 +373,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AccountBudgetProposalStatusEnum\AccountBudgetProposalStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -387,7 +387,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedName()
     {
-        return isset($this->proposed_name) ? $this->proposed_name : '';
+        return $this->proposed_name ?? '';
     }
 
     public function hasProposedName()
@@ -423,7 +423,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getApprovedStartDateTime()
     {
-        return isset($this->approved_start_date_time) ? $this->approved_start_date_time : '';
+        return $this->approved_start_date_time ?? '';
     }
 
     public function hasApprovedStartDateTime()
@@ -460,7 +460,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedPurchaseOrderNumber()
     {
-        return isset($this->proposed_purchase_order_number) ? $this->proposed_purchase_order_number : '';
+        return $this->proposed_purchase_order_number ?? '';
     }
 
     public function hasProposedPurchaseOrderNumber()
@@ -497,7 +497,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getProposedNotes()
     {
-        return isset($this->proposed_notes) ? $this->proposed_notes : '';
+        return $this->proposed_notes ?? '';
     }
 
     public function hasProposedNotes()
@@ -534,7 +534,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getCreationDateTime()
     {
-        return isset($this->creation_date_time) ? $this->creation_date_time : '';
+        return $this->creation_date_time ?? '';
     }
 
     public function hasCreationDateTime()
@@ -572,7 +572,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function getApprovalDateTime()
     {
-        return isset($this->approval_date_time) ? $this->approval_date_time : '';
+        return $this->approval_date_time ?? '';
     }
 
     public function hasApprovalDateTime()
@@ -659,7 +659,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setProposedStartTimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\TimeTypeEnum\TimeType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -723,7 +723,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setProposedEndTimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\TimeTypeEnum\TimeType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -787,7 +787,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setApprovedEndTimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\TimeTypeEnum\TimeType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(22, $var);
 
         return $this;
@@ -853,7 +853,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setProposedSpendingLimitType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SpendingLimitTypeEnum\SpendingLimitType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(11, $var);
 
         return $this;
@@ -919,7 +919,7 @@ class AccountBudgetProposal extends \Google\Protobuf\Internal\Message
      */
     public function setApprovedSpendingLimitType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SpendingLimitTypeEnum\SpendingLimitType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(24, $var);
 
         return $this;

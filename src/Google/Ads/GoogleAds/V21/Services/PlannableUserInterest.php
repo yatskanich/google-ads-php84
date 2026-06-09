@@ -124,7 +124,7 @@ class PlannableUserInterest extends \Google\Protobuf\Internal\Message
      */
     public function setUserInterestType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\UserInterestTaxonomyTypeEnum\UserInterestTaxonomyType::class);
+        GPBUtil::checkEnum($var);
         $this->user_interest_type = $var;
 
         return $this;

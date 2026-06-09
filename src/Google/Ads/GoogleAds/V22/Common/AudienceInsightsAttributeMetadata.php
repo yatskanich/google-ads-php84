@@ -141,7 +141,7 @@ class AudienceInsightsAttributeMetadata extends \Google\Protobuf\Internal\Messag
      */
     public function setDimension($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AudienceInsightsDimensionEnum\AudienceInsightsDimension::class);
+        GPBUtil::checkEnum($var);
         $this->dimension = $var;
 
         return $this;

@@ -57,7 +57,7 @@ class PaymentsAccountServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.PaymentsAccountService/ListPaymentsAccounts',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\ListPaymentsAccountsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\ListPaymentsAccountsResponse::class, 'decode'],
         $metadata, $options);
     }
 

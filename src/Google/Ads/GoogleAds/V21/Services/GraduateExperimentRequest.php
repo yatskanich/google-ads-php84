@@ -50,7 +50,7 @@ class GraduateExperimentRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $experiment, array $campaignBudgetMappings): self
     {
-        return (new self())
+        return new self()
             ->setExperiment($experiment)
             ->setCampaignBudgetMappings($campaignBudgetMappings);
     }

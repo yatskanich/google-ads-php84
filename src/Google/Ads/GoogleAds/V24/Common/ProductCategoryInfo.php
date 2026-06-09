@@ -59,7 +59,7 @@ class ProductCategoryInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return isset($this->category_id) ? $this->category_id : 0;
+        return $this->category_id ?? 0;
     }
 
     public function hasCategoryId()
@@ -109,7 +109,7 @@ class ProductCategoryInfo extends \Google\Protobuf\Internal\Message
      */
     public function setLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductCategoryLevelEnum\ProductCategoryLevel::class);
+        GPBUtil::checkEnum($var);
         $this->level = $var;
 
         return $this;

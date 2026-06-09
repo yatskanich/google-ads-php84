@@ -95,7 +95,7 @@ class AdGroupCriterionLabel extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
+        return $this->ad_group_criterion ?? '';
     }
 
     public function hasAdGroupCriterion()
@@ -131,7 +131,7 @@ class AdGroupCriterionLabel extends \Google\Protobuf\Internal\Message
      */
     public function getLabel()
     {
-        return isset($this->label) ? $this->label : '';
+        return $this->label ?? '';
     }
 
     public function hasLabel()

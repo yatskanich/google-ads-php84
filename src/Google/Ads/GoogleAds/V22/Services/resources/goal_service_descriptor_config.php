@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.GoalService' => [
             'MutateGoals' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateGoalsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateGoalsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

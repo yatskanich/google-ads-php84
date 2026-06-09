@@ -201,4 +201,6 @@ class GenerateKeywordIdeas
     // [END generate_keyword_ideas]
 }
 
-GenerateKeywordIdeas::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    GenerateKeywordIdeas::main();
+}

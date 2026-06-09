@@ -101,7 +101,7 @@ class AssetFieldTypeView extends \Google\Protobuf\Internal\Message
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;

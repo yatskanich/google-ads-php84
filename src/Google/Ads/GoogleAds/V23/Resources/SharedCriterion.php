@@ -134,7 +134,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getSharedSet()
     {
-        return isset($this->shared_set) ? $this->shared_set : '';
+        return $this->shared_set ?? '';
     }
 
     public function hasSharedSet()
@@ -171,7 +171,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionId()
     {
-        return isset($this->criterion_id) ? $this->criterion_id : 0;
+        return $this->criterion_id ?? 0;
     }
 
     public function hasCriterionId()
@@ -220,7 +220,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CriterionTypeEnum\CriterionType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -235,7 +235,7 @@ class SharedCriterion extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return isset($this->negative) ? $this->negative : false;
+        return $this->negative ?? false;
     }
 
     public function hasNegative()

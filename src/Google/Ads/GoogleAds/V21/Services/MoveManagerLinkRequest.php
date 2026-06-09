@@ -61,7 +61,7 @@ class MoveManagerLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $previousCustomerManagerLink, string $newManager): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setPreviousCustomerManagerLink($previousCustomerManagerLink)
             ->setNewManager($newManager);

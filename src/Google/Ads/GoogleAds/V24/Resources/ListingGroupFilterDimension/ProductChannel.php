@@ -57,7 +57,7 @@ class ProductChannel extends \Google\Protobuf\Internal\Message
      */
     public function setChannel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ListingGroupFilterProductChannelEnum\ListingGroupFilterProductChannel::class);
+        GPBUtil::checkEnum($var);
         $this->channel = $var;
 
         return $this;

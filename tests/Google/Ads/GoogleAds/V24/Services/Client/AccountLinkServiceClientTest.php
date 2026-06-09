@@ -80,7 +80,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         $response = $gapicClient->createAccountLink($request);
@@ -118,7 +118,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         try {
@@ -148,7 +148,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountLinkOperation();
-        $request = (new MutateAccountLinkRequest())
+        $request = new MutateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateAccountLink($request);
@@ -186,7 +186,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new AccountLinkOperation();
-        $request = (new MutateAccountLinkRequest())
+        $request = new MutateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -218,7 +218,7 @@ class AccountLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $accountLink = new AccountLink();
-        $request = (new CreateAccountLinkRequest())
+        $request = new CreateAccountLinkRequest()
             ->setCustomerId($customerId)
             ->setAccountLink($accountLink);
         $response = $gapicClient->createAccountLinkAsync($request)->wait();

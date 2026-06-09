@@ -45,7 +45,7 @@ class ReservationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.ReservationService/QuoteCampaigns',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\QuoteCampaignsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\QuoteCampaignsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -61,7 +61,7 @@ class ReservationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.ReservationService/BookCampaigns',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\BookCampaignsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\BookCampaignsResponse::class, 'decode'],
         $metadata, $options);
     }
 

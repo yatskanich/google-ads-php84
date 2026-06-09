@@ -56,7 +56,7 @@ class YoutubeVideoAsset extends \Google\Protobuf\Internal\Message
      */
     public function getYoutubeVideoId()
     {
-        return isset($this->youtube_video_id) ? $this->youtube_video_id : '';
+        return $this->youtube_video_id ?? '';
     }
 
     public function hasYoutubeVideoId()

@@ -65,7 +65,7 @@ class CustomerThirdPartyBrandLiftIntegrationPartner extends \Google\Protobuf\Int
      */
     public function setBrandLiftIntegrationPartner($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\ThirdPartyBrandLiftIntegrationPartnerEnum\ThirdPartyBrandLiftIntegrationPartner::class);
+        GPBUtil::checkEnum($var);
         $this->brand_lift_integration_partner = $var;
 
         return $this;

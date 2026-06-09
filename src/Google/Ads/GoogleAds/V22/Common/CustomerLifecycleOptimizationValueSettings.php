@@ -65,7 +65,7 @@ class CustomerLifecycleOptimizationValueSettings extends \Google\Protobuf\Intern
      */
     public function getAdditionalValue()
     {
-        return isset($this->additional_value) ? $this->additional_value : 0.0;
+        return $this->additional_value ?? 0.0;
     }
 
     public function hasAdditionalValue()
@@ -106,7 +106,7 @@ class CustomerLifecycleOptimizationValueSettings extends \Google\Protobuf\Intern
      */
     public function getAdditionalHighLifetimeValue()
     {
-        return isset($this->additional_high_lifetime_value) ? $this->additional_high_lifetime_value : 0.0;
+        return $this->additional_high_lifetime_value ?? 0.0;
     }
 
     public function hasAdditionalHighLifetimeValue()

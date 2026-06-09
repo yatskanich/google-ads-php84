@@ -75,7 +75,7 @@ class AutomaticallyCreatedAssetRemovalServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $operations = [];
         $partialFailure = true;
-        $request = (new RemoveCampaignAutomaticallyCreatedAssetRequest())
+        $request = new RemoveCampaignAutomaticallyCreatedAssetRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations)
             ->setPartialFailure($partialFailure);
@@ -117,7 +117,7 @@ class AutomaticallyCreatedAssetRemovalServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $operations = [];
         $partialFailure = true;
-        $request = (new RemoveCampaignAutomaticallyCreatedAssetRequest())
+        $request = new RemoveCampaignAutomaticallyCreatedAssetRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations)
             ->setPartialFailure($partialFailure);
@@ -149,7 +149,7 @@ class AutomaticallyCreatedAssetRemovalServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $operations = [];
         $partialFailure = true;
-        $request = (new RemoveCampaignAutomaticallyCreatedAssetRequest())
+        $request = new RemoveCampaignAutomaticallyCreatedAssetRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations)
             ->setPartialFailure($partialFailure);

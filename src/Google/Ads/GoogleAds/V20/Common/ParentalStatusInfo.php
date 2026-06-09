@@ -57,7 +57,7 @@ class ParentalStatusInfo extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ParentalStatusTypeEnum\ParentalStatusType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

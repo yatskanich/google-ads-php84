@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.ShareablePreviewService' => [
             'GenerateShareablePreviews' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\GenerateShareablePreviewsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\GenerateShareablePreviewsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

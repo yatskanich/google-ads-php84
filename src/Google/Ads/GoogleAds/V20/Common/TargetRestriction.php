@@ -77,7 +77,7 @@ class TargetRestriction extends \Google\Protobuf\Internal\Message
      */
     public function setTargetingDimension($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\TargetingDimensionEnum\TargetingDimension::class);
+        GPBUtil::checkEnum($var);
         $this->targeting_dimension = $var;
 
         return $this;
@@ -97,7 +97,7 @@ class TargetRestriction extends \Google\Protobuf\Internal\Message
      */
     public function getBidOnly()
     {
-        return isset($this->bid_only) ? $this->bid_only : false;
+        return $this->bid_only ?? false;
     }
 
     public function hasBidOnly()

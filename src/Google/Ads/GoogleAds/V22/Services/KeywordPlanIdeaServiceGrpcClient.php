@@ -55,7 +55,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.KeywordPlanIdeaService/GenerateKeywordIdeas',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateKeywordIdeaResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateKeywordIdeaResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -79,7 +79,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.KeywordPlanIdeaService/GenerateKeywordHistoricalMetrics',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateKeywordHistoricalMetricsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateKeywordHistoricalMetricsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -104,7 +104,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.KeywordPlanIdeaService/GenerateAdGroupThemes',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateAdGroupThemesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateAdGroupThemesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -129,7 +129,7 @@ class KeywordPlanIdeaServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.KeywordPlanIdeaService/GenerateKeywordForecastMetrics',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\GenerateKeywordForecastMetricsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\GenerateKeywordForecastMetricsResponse::class, 'decode'],
         $metadata, $options);
     }
 

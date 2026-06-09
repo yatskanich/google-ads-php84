@@ -161,7 +161,7 @@ class ProductLinkInvitation extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ProductLinkInvitationStatusEnum\ProductLinkInvitationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -191,7 +191,7 @@ class ProductLinkInvitation extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\LinkedProductTypeEnum\LinkedProductType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

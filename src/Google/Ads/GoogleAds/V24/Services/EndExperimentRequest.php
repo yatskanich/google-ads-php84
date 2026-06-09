@@ -39,7 +39,7 @@ class EndExperimentRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $experiment): self
     {
-        return (new self())
+        return new self()
             ->setExperiment($experiment);
     }
 

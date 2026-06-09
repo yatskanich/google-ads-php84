@@ -46,7 +46,7 @@ class ConfigureCustomerLifecycleGoalsRequest extends \Google\Protobuf\Internal\M
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V22\Services\CustomerLifecycleGoalOperation $operation): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperation($operation);
     }

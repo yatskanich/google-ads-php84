@@ -69,7 +69,7 @@ class CustomerThirdPartyViewabilityIntegrationPartner extends \Google\Protobuf\I
      */
     public function setViewabilityIntegrationPartner($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ThirdPartyViewabilityIntegrationPartnerEnum\ThirdPartyViewabilityIntegrationPartner::class);
+        GPBUtil::checkEnum($var);
         $this->viewability_integration_partner = $var;
 
         return $this;

@@ -213,4 +213,6 @@ class GenerateHistoricalMetrics
     // [END generate_historical_metrics]
 }
 
-GenerateHistoricalMetrics::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    GenerateHistoricalMetrics::main();
+}

@@ -239,4 +239,6 @@ class AddSitelinks
     }
 }
 
-AddSitelinks::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddSitelinks::main();
+}

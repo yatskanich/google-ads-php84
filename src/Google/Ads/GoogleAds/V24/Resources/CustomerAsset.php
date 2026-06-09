@@ -187,7 +187,7 @@ class CustomerAsset extends \Google\Protobuf\Internal\Message
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;
@@ -213,7 +213,7 @@ class CustomerAsset extends \Google\Protobuf\Internal\Message
      */
     public function setSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetSourceEnum\AssetSource::class);
+        GPBUtil::checkEnum($var);
         $this->source = $var;
 
         return $this;
@@ -239,7 +239,7 @@ class CustomerAsset extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetLinkStatusEnum\AssetLinkStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -275,7 +275,7 @@ class CustomerAsset extends \Google\Protobuf\Internal\Message
      */
     public function setPrimaryStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetLinkPrimaryStatusEnum\AssetLinkPrimaryStatus::class);
+        GPBUtil::checkEnum($var);
         $this->primary_status = $var;
 
         return $this;

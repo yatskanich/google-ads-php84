@@ -217,7 +217,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetReach()
     {
-        return isset($this->on_target_reach) ? $this->on_target_reach : 0;
+        return $this->on_target_reach ?? 0;
     }
 
     public function hasOnTargetReach()
@@ -265,7 +265,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalReach()
     {
-        return isset($this->total_reach) ? $this->total_reach : 0;
+        return $this->total_reach ?? 0;
     }
 
     public function hasTotalReach()
@@ -307,7 +307,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetImpressions()
     {
-        return isset($this->on_target_impressions) ? $this->on_target_impressions : 0;
+        return $this->on_target_impressions ?? 0;
     }
 
     public function hasOnTargetImpressions()
@@ -345,7 +345,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalImpressions()
     {
-        return isset($this->total_impressions) ? $this->total_impressions : 0;
+        return $this->total_impressions ?? 0;
     }
 
     public function hasTotalImpressions()
@@ -386,7 +386,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getViewableImpressions()
     {
-        return isset($this->viewable_impressions) ? $this->viewable_impressions : 0;
+        return $this->viewable_impressions ?? 0;
     }
 
     public function hasViewableImpressions()
@@ -458,7 +458,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetCoviewReach()
     {
-        return isset($this->on_target_coview_reach) ? $this->on_target_coview_reach : 0;
+        return $this->on_target_coview_reach ?? 0;
     }
 
     public function hasOnTargetCoviewReach()
@@ -496,7 +496,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalCoviewReach()
     {
-        return isset($this->total_coview_reach) ? $this->total_coview_reach : 0;
+        return $this->total_coview_reach ?? 0;
     }
 
     public function hasTotalCoviewReach()
@@ -534,7 +534,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetCoviewImpressions()
     {
-        return isset($this->on_target_coview_impressions) ? $this->on_target_coview_impressions : 0;
+        return $this->on_target_coview_impressions ?? 0;
     }
 
     public function hasOnTargetCoviewImpressions()
@@ -573,7 +573,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getTotalCoviewImpressions()
     {
-        return isset($this->total_coview_impressions) ? $this->total_coview_impressions : 0;
+        return $this->total_coview_impressions ?? 0;
     }
 
     public function hasTotalCoviewImpressions()
@@ -614,7 +614,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getConversions()
     {
-        return isset($this->conversions) ? $this->conversions : 0.0;
+        return $this->conversions ?? 0.0;
     }
 
     public function hasConversions()
@@ -657,7 +657,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getTrueviewViews()
     {
-        return isset($this->trueview_views) ? $this->trueview_views : 0;
+        return $this->trueview_views ?? 0;
     }
 
     public function hasTrueviewViews()
@@ -700,7 +700,7 @@ class Forecast extends \Google\Protobuf\Internal\Message
      */
     public function getClicks()
     {
-        return isset($this->clicks) ? $this->clicks : 0;
+        return $this->clicks ?? 0;
     }
 
     public function hasClicks()

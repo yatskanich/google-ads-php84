@@ -48,7 +48,7 @@ class GenerateAdGroupThemesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $keywords, array $adGroups): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setKeywords($keywords)
             ->setAdGroups($adGroups);

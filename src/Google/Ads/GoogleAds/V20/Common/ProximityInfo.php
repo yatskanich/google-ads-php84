@@ -111,7 +111,7 @@ class ProximityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getRadius()
     {
-        return isset($this->radius) ? $this->radius : 0.0;
+        return $this->radius ?? 0.0;
     }
 
     public function hasRadius()
@@ -159,7 +159,7 @@ class ProximityInfo extends \Google\Protobuf\Internal\Message
      */
     public function setRadiusUnits($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ProximityRadiusUnitsEnum\ProximityRadiusUnits::class);
+        GPBUtil::checkEnum($var);
         $this->radius_units = $var;
 
         return $this;

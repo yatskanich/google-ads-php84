@@ -491,7 +491,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -532,7 +532,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -585,7 +585,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdGroupStatusEnum\AdGroupStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -611,7 +611,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdGroupTypeEnum\AdGroupType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -637,7 +637,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setAdRotationMode($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdGroupAdRotationModeEnum\AdGroupAdRotationMode::class);
+        GPBUtil::checkEnum($var);
         $this->ad_rotation_mode = $var;
 
         return $this;
@@ -656,7 +656,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getBaseAdGroup()
     {
-        return isset($this->base_ad_group) ? $this->base_ad_group : '';
+        return $this->base_ad_group ?? '';
     }
 
     public function hasBaseAdGroup()
@@ -697,7 +697,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()
@@ -761,7 +761,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -800,7 +800,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
+        return $this->cpc_bid_micros ?? 0;
     }
 
     public function hasCpcBidMicros()
@@ -841,7 +841,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCpcBidMicros()
     {
-        return isset($this->effective_cpc_bid_micros) ? $this->effective_cpc_bid_micros : 0;
+        return $this->effective_cpc_bid_micros ?? 0;
     }
 
     public function hasEffectiveCpcBidMicros()
@@ -879,7 +879,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCpmBidMicros()
     {
-        return isset($this->cpm_bid_micros) ? $this->cpm_bid_micros : 0;
+        return $this->cpm_bid_micros ?? 0;
     }
 
     public function hasCpmBidMicros()
@@ -919,7 +919,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
+        return $this->target_cpa_micros ?? 0;
     }
 
     public function hasTargetCpaMicros()
@@ -959,7 +959,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getCpvBidMicros()
     {
-        return isset($this->cpv_bid_micros) ? $this->cpv_bid_micros : 0;
+        return $this->cpv_bid_micros ?? 0;
     }
 
     public function hasCpvBidMicros()
@@ -996,7 +996,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpmMicros()
     {
-        return isset($this->target_cpm_micros) ? $this->target_cpm_micros : 0;
+        return $this->target_cpm_micros ?? 0;
     }
 
     public function hasTargetCpmMicros()
@@ -1043,7 +1043,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoas()
     {
-        return isset($this->target_roas) ? $this->target_roas : 0.0;
+        return $this->target_roas ?? 0.0;
     }
 
     public function hasTargetRoas()
@@ -1091,7 +1091,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getPercentCpcBidMicros()
     {
-        return isset($this->percent_cpc_bid_micros) ? $this->percent_cpc_bid_micros : 0;
+        return $this->percent_cpc_bid_micros ?? 0;
     }
 
     public function hasPercentCpcBidMicros()
@@ -1130,7 +1130,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getFixedCpmMicros()
     {
-        return isset($this->fixed_cpm_micros) ? $this->fixed_cpm_micros : 0;
+        return $this->fixed_cpm_micros ?? 0;
     }
 
     public function hasFixedCpmMicros()
@@ -1168,7 +1168,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpvMicros()
     {
-        return isset($this->target_cpv_micros) ? $this->target_cpv_micros : 0;
+        return $this->target_cpv_micros ?? 0;
     }
 
     public function hasTargetCpvMicros()
@@ -1281,7 +1281,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setDisplayCustomBidDimension($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\TargetingDimensionEnum\TargetingDimension::class);
+        GPBUtil::checkEnum($var);
         $this->display_custom_bid_dimension = $var;
 
         return $this;
@@ -1295,7 +1295,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getFinalUrlSuffix()
     {
-        return isset($this->final_url_suffix) ? $this->final_url_suffix : '';
+        return $this->final_url_suffix ?? '';
     }
 
     public function hasFinalUrlSuffix()
@@ -1404,7 +1404,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveTargetCpaMicros()
     {
-        return isset($this->effective_target_cpa_micros) ? $this->effective_target_cpa_micros : 0;
+        return $this->effective_target_cpa_micros ?? 0;
     }
 
     public function hasEffectiveTargetCpaMicros()
@@ -1455,7 +1455,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setEffectiveTargetCpaSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\BiddingSourceEnum\BiddingSource::class);
+        GPBUtil::checkEnum($var);
         $this->effective_target_cpa_source = $var;
 
         return $this;
@@ -1470,7 +1470,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveTargetRoas()
     {
-        return isset($this->effective_target_roas) ? $this->effective_target_roas : 0.0;
+        return $this->effective_target_roas ?? 0.0;
     }
 
     public function hasEffectiveTargetRoas()
@@ -1521,7 +1521,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setEffectiveTargetRoasSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\BiddingSourceEnum\BiddingSource::class);
+        GPBUtil::checkEnum($var);
         $this->effective_target_roas_source = $var;
 
         return $this;
@@ -1649,7 +1649,7 @@ class AdGroup extends \Google\Protobuf\Internal\Message
      */
     public function setPrimaryStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdGroupPrimaryStatusEnum\AdGroupPrimaryStatus::class);
+        GPBUtil::checkEnum($var);
         $this->primary_status = $var;
 
         return $this;

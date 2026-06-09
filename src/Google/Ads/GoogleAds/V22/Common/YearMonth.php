@@ -91,7 +91,7 @@ class YearMonth extends \Google\Protobuf\Internal\Message
      */
     public function setMonth($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\MonthOfYearEnum\MonthOfYear::class);
+        GPBUtil::checkEnum($var);
         $this->month = $var;
 
         return $this;

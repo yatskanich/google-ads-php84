@@ -75,7 +75,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->configureCustomerLifecycleGoals($request);
@@ -113,7 +113,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class CustomerLifecycleGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerLifecycleGoalOperation();
-        $request = (new ConfigureCustomerLifecycleGoalsRequest())
+        $request = new ConfigureCustomerLifecycleGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->configureCustomerLifecycleGoalsAsync($request)->wait();

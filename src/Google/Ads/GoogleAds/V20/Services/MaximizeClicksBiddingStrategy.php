@@ -87,7 +87,7 @@ class MaximizeClicksBiddingStrategy extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidCeilingMicros()
     {
-        return isset($this->max_cpc_bid_ceiling_micros) ? $this->max_cpc_bid_ceiling_micros : 0;
+        return $this->max_cpc_bid_ceiling_micros ?? 0;
     }
 
     public function hasMaxCpcBidCeilingMicros()

@@ -58,7 +58,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/GenerateConversionRates',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\GenerateConversionRatesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\GenerateConversionRatesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -81,7 +81,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/ListPlannableLocations',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\ListPlannableLocationsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\ListPlannableLocationsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -105,7 +105,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/ListPlannableProducts',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\ListPlannableProductsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\ListPlannableProductsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -131,7 +131,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/GenerateReachForecast',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\GenerateReachForecastResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\GenerateReachForecastResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -161,7 +161,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/ListPlannableUserLists',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\ListPlannableUserListsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\ListPlannableUserListsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -190,7 +190,7 @@ class ReachPlanServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ReachPlanService/ListPlannableUserInterests',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\ListPlannableUserInterestsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\ListPlannableUserInterestsResponse::class, 'decode'],
         $metadata, $options);
     }
 

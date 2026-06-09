@@ -86,7 +86,7 @@ class BookingDetails extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\BookingStatusEnum\BookingStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

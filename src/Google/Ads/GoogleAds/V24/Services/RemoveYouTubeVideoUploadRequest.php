@@ -40,7 +40,7 @@ class RemoveYouTubeVideoUploadRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId);
     }
 

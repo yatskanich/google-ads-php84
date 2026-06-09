@@ -50,7 +50,7 @@ class RemoveCampaignAutomaticallyCreatedAssetRequest extends \Google\Protobuf\In
      */
     public static function build(string $customerId, array $operations, bool $partialFailure): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations)
             ->setPartialFailure($partialFailure);

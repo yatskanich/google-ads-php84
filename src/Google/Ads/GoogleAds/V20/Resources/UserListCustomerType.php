@@ -137,7 +137,7 @@ class UserListCustomerType extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerTypeCategory($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListCustomerTypeCategoryEnum\UserListCustomerTypeCategory::class);
+        GPBUtil::checkEnum($var);
         $this->customer_type_category = $var;
 
         return $this;

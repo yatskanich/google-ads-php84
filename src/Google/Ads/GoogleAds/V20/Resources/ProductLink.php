@@ -108,7 +108,7 @@ class ProductLink extends \Google\Protobuf\Internal\Message
      */
     public function getProductLinkId()
     {
-        return isset($this->product_link_id) ? $this->product_link_id : 0;
+        return $this->product_link_id ?? 0;
     }
 
     public function hasProductLinkId()
@@ -157,7 +157,7 @@ class ProductLink extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\LinkedProductTypeEnum\LinkedProductType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

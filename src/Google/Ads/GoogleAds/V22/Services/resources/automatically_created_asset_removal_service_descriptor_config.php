@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.AutomaticallyCreatedAssetRemovalService' => [
             'RemoveCampaignAutomaticallyCreatedAsset' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\RemoveCampaignAutomaticallyCreatedAssetResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\RemoveCampaignAutomaticallyCreatedAssetResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

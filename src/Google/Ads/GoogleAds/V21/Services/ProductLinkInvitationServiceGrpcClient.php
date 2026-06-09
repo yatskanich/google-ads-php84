@@ -44,7 +44,7 @@ class ProductLinkInvitationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ProductLinkInvitationService/CreateProductLinkInvitation',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\CreateProductLinkInvitationResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\CreateProductLinkInvitationResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -59,7 +59,7 @@ class ProductLinkInvitationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ProductLinkInvitationService/UpdateProductLinkInvitation',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\UpdateProductLinkInvitationResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\UpdateProductLinkInvitationResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -74,7 +74,7 @@ class ProductLinkInvitationServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ProductLinkInvitationService/RemoveProductLinkInvitation',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\RemoveProductLinkInvitationResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\RemoveProductLinkInvitationResponse::class, 'decode'],
         $metadata, $options);
     }
 

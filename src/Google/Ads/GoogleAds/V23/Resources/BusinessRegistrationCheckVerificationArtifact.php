@@ -69,7 +69,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getRegistrationType()
     {
-        return isset($this->registration_type) ? $this->registration_type : 0;
+        return $this->registration_type ?? 0;
     }
 
     public function hasRegistrationType()
@@ -91,7 +91,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function setRegistrationType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocalServicesBusinessRegistrationTypeEnum\LocalServicesBusinessRegistrationType::class);
+        GPBUtil::checkEnum($var);
         $this->registration_type = $var;
 
         return $this;
@@ -106,7 +106,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getCheckId()
     {
-        return isset($this->check_id) ? $this->check_id : '';
+        return $this->check_id ?? '';
     }
 
     public function hasCheckId()
@@ -143,7 +143,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function getRejectionReason()
     {
-        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
+        return $this->rejection_reason ?? 0;
     }
 
     public function hasRejectionReason()
@@ -165,7 +165,7 @@ class BusinessRegistrationCheckVerificationArtifact extends \Google\Protobuf\Int
      */
     public function setRejectionReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\LocalServicesBusinessRegistrationCheckRejectionReasonEnum\LocalServicesBusinessRegistrationCheckRejectionReason::class);
+        GPBUtil::checkEnum($var);
         $this->rejection_reason = $var;
 
         return $this;

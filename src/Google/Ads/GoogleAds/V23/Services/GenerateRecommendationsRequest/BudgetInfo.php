@@ -54,7 +54,7 @@ class BudgetInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentBudget()
     {
-        return isset($this->current_budget) ? $this->current_budget : 0;
+        return $this->current_budget ?? 0;
     }
 
     public function hasCurrentBudget()

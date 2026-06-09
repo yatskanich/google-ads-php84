@@ -260,4 +260,6 @@ class AddBillingSetup
     }
 }
 
-AddBillingSetup::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddBillingSetup::main();
+}

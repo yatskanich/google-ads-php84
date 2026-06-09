@@ -45,7 +45,7 @@ class LanguageInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageConstant()
     {
-        return isset($this->language_constant) ? $this->language_constant : '';
+        return $this->language_constant ?? '';
     }
 
     public function hasLanguageConstant()

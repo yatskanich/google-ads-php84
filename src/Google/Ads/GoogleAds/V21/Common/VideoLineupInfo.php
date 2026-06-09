@@ -48,7 +48,7 @@ class VideoLineupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getVideoLineupId()
     {
-        return isset($this->video_lineup_id) ? $this->video_lineup_id : 0;
+        return $this->video_lineup_id ?? 0;
     }
 
     public function hasVideoLineupId()

@@ -136,7 +136,7 @@ class ShoppingAddProductsToCampaignRecommendation extends \Google\Protobuf\Inter
      */
     public function setReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ShoppingAddProductsToCampaignRecommendationEnum\Reason::class);
+        GPBUtil::checkEnum($var);
         $this->reason = $var;
 
         return $this;

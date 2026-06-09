@@ -151,7 +151,7 @@ class PostbackMapping extends \Google\Protobuf\Internal\Message
      */
     public function setLockWindowCoarseConversionValue($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SkAdNetworkCoarseConversionValueEnum\SkAdNetworkCoarseConversionValue::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(3, $var);
 
         return $this;

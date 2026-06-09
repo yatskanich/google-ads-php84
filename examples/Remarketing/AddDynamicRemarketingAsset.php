@@ -313,4 +313,6 @@ class AddDynamicRemarketingAsset
     }
 }
 
-AddDynamicRemarketingAsset::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddDynamicRemarketingAsset::main();
+}

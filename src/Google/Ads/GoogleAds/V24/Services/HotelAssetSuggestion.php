@@ -183,7 +183,7 @@ class HotelAssetSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function setCallToAction($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\CallToActionTypeEnum\CallToActionType::class);
+        GPBUtil::checkEnum($var);
         $this->call_to_action = $var;
 
         return $this;
@@ -261,7 +261,7 @@ class HotelAssetSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\HotelAssetSuggestionStatusEnum\HotelAssetSuggestionStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

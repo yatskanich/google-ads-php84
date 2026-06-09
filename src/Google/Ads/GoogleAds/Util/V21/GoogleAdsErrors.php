@@ -25,7 +25,7 @@ use Google\Ads\GoogleAds\V21\Errors\ErrorLocation\FieldPathElement;
 
 final class GoogleAdsErrors
 {
-    private const SUPPORTED_FIELDS = [
+    private const array SUPPORTED_FIELDS = [
         'operations',
         'mutate_operations',
         'conversion_adjustments',

@@ -45,7 +45,7 @@ class ExtendedDemographicInfo extends \Google\Protobuf\Internal\Message
      */
     public function getExtendedDemographicId()
     {
-        return isset($this->extended_demographic_id) ? $this->extended_demographic_id : 0;
+        return $this->extended_demographic_id ?? 0;
     }
 
     public function hasExtendedDemographicId()

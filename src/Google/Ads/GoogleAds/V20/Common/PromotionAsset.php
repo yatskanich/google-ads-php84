@@ -178,7 +178,7 @@ class PromotionAsset extends \Google\Protobuf\Internal\Message
      */
     public function setDiscountModifier($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\PromotionExtensionDiscountModifierEnum\PromotionExtensionDiscountModifier::class);
+        GPBUtil::checkEnum($var);
         $this->discount_modifier = $var;
 
         return $this;
@@ -264,7 +264,7 @@ class PromotionAsset extends \Google\Protobuf\Internal\Message
      */
     public function setOccasion($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\PromotionExtensionOccasionEnum\PromotionExtensionOccasion::class);
+        GPBUtil::checkEnum($var);
         $this->occasion = $var;
 
         return $this;

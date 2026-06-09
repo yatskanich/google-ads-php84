@@ -85,7 +85,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedExperiment = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new EndExperimentRequest())
+        $request = new EndExperimentRequest()
             ->setExperiment($formattedExperiment);
         $gapicClient->endExperiment($request);
         $actualRequests = $transport->popReceivedCalls();
@@ -118,7 +118,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedExperiment = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new EndExperimentRequest())
+        $request = new EndExperimentRequest()
             ->setExperiment($formattedExperiment);
         try {
             $gapicClient->endExperiment($request);
@@ -147,7 +147,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         // Mock request
         $formattedExperiment = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
         $campaignBudgetMappings = [];
-        $request = (new GraduateExperimentRequest())
+        $request = new GraduateExperimentRequest()
             ->setExperiment($formattedExperiment)
             ->setCampaignBudgetMappings($campaignBudgetMappings);
         $gapicClient->graduateExperiment($request);
@@ -184,7 +184,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         // Mock request
         $formattedExperiment = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
         $campaignBudgetMappings = [];
-        $request = (new GraduateExperimentRequest())
+        $request = new GraduateExperimentRequest()
             ->setExperiment($formattedExperiment)
             ->setCampaignBudgetMappings($campaignBudgetMappings);
         try {
@@ -220,7 +220,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new ListExperimentAsyncErrorsRequest())
+        $request = new ListExperimentAsyncErrorsRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->listExperimentAsyncErrors($request);
         $this->assertEquals($expectedResponse, $response->getPage()->getResponseObject());
@@ -257,7 +257,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new ListExperimentAsyncErrorsRequest())
+        $request = new ListExperimentAsyncErrorsRequest()
             ->setResourceName($formattedResourceName);
         try {
             $gapicClient->listExperimentAsyncErrors($request);
@@ -286,7 +286,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentsRequest())
+        $request = new MutateExperimentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateExperiments($request);
@@ -324,7 +324,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateExperimentsRequest())
+        $request = new MutateExperimentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -371,7 +371,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse($completeOperation);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new PromoteExperimentRequest())
+        $request = new PromoteExperimentRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->promoteExperiment($request);
         $this->assertFalse($response->isDone());
@@ -437,7 +437,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new PromoteExperimentRequest())
+        $request = new PromoteExperimentRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->promoteExperiment($request);
         $this->assertFalse($response->isDone());
@@ -492,7 +492,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse($completeOperation);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new ScheduleExperimentRequest())
+        $request = new ScheduleExperimentRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->scheduleExperiment($request);
         $this->assertFalse($response->isDone());
@@ -558,7 +558,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new ScheduleExperimentRequest())
+        $request = new ScheduleExperimentRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->scheduleExperiment($request);
         $this->assertFalse($response->isDone());
@@ -595,7 +595,7 @@ class ExperimentServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedExperiment = $gapicClient->experimentName('[CUSTOMER_ID]', '[TRIAL_ID]');
-        $request = (new EndExperimentRequest())
+        $request = new EndExperimentRequest()
             ->setExperiment($formattedExperiment);
         $gapicClient->endExperimentAsync($request)->wait();
         $actualRequests = $transport->popReceivedCalls();

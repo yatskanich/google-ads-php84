@@ -119,7 +119,7 @@ class AdGroupCriterionCustomizer extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupCriterion()
     {
-        return isset($this->ad_group_criterion) ? $this->ad_group_criterion : '';
+        return $this->ad_group_criterion ?? '';
     }
 
     public function hasAdGroupCriterion()
@@ -196,7 +196,7 @@ class AdGroupCriterionCustomizer extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\CustomizerValueStatusEnum\CustomizerValueStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

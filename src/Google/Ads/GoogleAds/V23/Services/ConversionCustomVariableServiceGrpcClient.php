@@ -56,7 +56,7 @@ class ConversionCustomVariableServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.ConversionCustomVariableService/MutateConversionCustomVariables',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\MutateConversionCustomVariablesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\MutateConversionCustomVariablesResponse::class, 'decode'],
         $metadata, $options);
     }
 

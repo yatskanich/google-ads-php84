@@ -60,7 +60,7 @@ class ListBatchJobResultsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setResourceName($resourceName);
     }
 
@@ -210,7 +210,7 @@ class ListBatchJobResultsRequest extends \Google\Protobuf\Internal\Message
      */
     public function setResponseContentType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ResponseContentTypeEnum\ResponseContentType::class);
+        GPBUtil::checkEnum($var);
         $this->response_content_type = $var;
 
         return $this;

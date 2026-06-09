@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.CampaignLifecycleGoalService' => [
             'ConfigureCampaignLifecycleGoals' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ConfigureCampaignLifecycleGoalsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ConfigureCampaignLifecycleGoalsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

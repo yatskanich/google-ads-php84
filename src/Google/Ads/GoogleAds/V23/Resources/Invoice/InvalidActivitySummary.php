@@ -97,7 +97,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalMonthOfService()
     {
-        return isset($this->original_month_of_service) ? $this->original_month_of_service : 0;
+        return $this->original_month_of_service ?? 0;
     }
 
     public function hasOriginalMonthOfService()
@@ -120,7 +120,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function setOriginalMonthOfService($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\MonthOfYearEnum\MonthOfYear::class);
+        GPBUtil::checkEnum($var);
         $this->original_month_of_service = $var;
 
         return $this;
@@ -135,7 +135,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalYearOfService()
     {
-        return isset($this->original_year_of_service) ? $this->original_year_of_service : '';
+        return $this->original_year_of_service ?? '';
     }
 
     public function hasOriginalYearOfService()
@@ -173,7 +173,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalInvoiceId()
     {
-        return isset($this->original_invoice_id) ? $this->original_invoice_id : '';
+        return $this->original_invoice_id ?? '';
     }
 
     public function hasOriginalInvoiceId()
@@ -211,7 +211,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalAccountBudgetName()
     {
-        return isset($this->original_account_budget_name) ? $this->original_account_budget_name : '';
+        return $this->original_account_budget_name ?? '';
     }
 
     public function hasOriginalAccountBudgetName()
@@ -249,7 +249,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getOriginalPurchaseOrderNumber()
     {
-        return isset($this->original_purchase_order_number) ? $this->original_purchase_order_number : '';
+        return $this->original_purchase_order_number ?? '';
     }
 
     public function hasOriginalPurchaseOrderNumber()
@@ -286,7 +286,7 @@ class InvalidActivitySummary extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()

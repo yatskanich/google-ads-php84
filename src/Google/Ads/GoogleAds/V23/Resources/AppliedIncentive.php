@@ -197,7 +197,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getCouponCode()
     {
-        return isset($this->coupon_code) ? $this->coupon_code : '';
+        return $this->coupon_code ?? '';
     }
 
     public function hasCouponCode()
@@ -233,7 +233,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getIncentiveState()
     {
-        return isset($this->incentive_state) ? $this->incentive_state : 0;
+        return $this->incentive_state ?? 0;
     }
 
     public function hasIncentiveState()
@@ -255,7 +255,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function setIncentiveState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\IncentiveStateEnum\IncentiveState::class);
+        GPBUtil::checkEnum($var);
         $this->incentive_state = $var;
 
         return $this;
@@ -270,7 +270,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRedemptionDateTime()
     {
-        return isset($this->redemption_date_time) ? $this->redemption_date_time : '';
+        return $this->redemption_date_time ?? '';
     }
 
     public function hasRedemptionDateTime()
@@ -308,7 +308,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getFulfillmentExpirationDateTime()
     {
-        return isset($this->fulfillment_expiration_date_time) ? $this->fulfillment_expiration_date_time : '';
+        return $this->fulfillment_expiration_date_time ?? '';
     }
 
     public function hasFulfillmentExpirationDateTime()
@@ -346,7 +346,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRewardGrantDateTime()
     {
-        return isset($this->reward_grant_date_time) ? $this->reward_grant_date_time : '';
+        return $this->reward_grant_date_time ?? '';
     }
 
     public function hasRewardGrantDateTime()
@@ -385,7 +385,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRewardExpirationDateTime()
     {
-        return isset($this->reward_expiration_date_time) ? $this->reward_expiration_date_time : '';
+        return $this->reward_expiration_date_time ?? '';
     }
 
     public function hasRewardExpirationDateTime()
@@ -424,7 +424,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -462,7 +462,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRewardAmountMicros()
     {
-        return isset($this->reward_amount_micros) ? $this->reward_amount_micros : 0;
+        return $this->reward_amount_micros ?? 0;
     }
 
     public function hasRewardAmountMicros()
@@ -500,7 +500,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getGrantedAmountMicros()
     {
-        return isset($this->granted_amount_micros) ? $this->granted_amount_micros : 0;
+        return $this->granted_amount_micros ?? 0;
     }
 
     public function hasGrantedAmountMicros()
@@ -538,7 +538,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRequiredMinSpendMicros()
     {
-        return isset($this->required_min_spend_micros) ? $this->required_min_spend_micros : 0;
+        return $this->required_min_spend_micros ?? 0;
     }
 
     public function hasRequiredMinSpendMicros()
@@ -576,7 +576,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getCurrentSpendTowardsFulfillmentMicros()
     {
-        return isset($this->current_spend_towards_fulfillment_micros) ? $this->current_spend_towards_fulfillment_micros : 0;
+        return $this->current_spend_towards_fulfillment_micros ?? 0;
     }
 
     public function hasCurrentSpendTowardsFulfillmentMicros()
@@ -614,7 +614,7 @@ class AppliedIncentive extends \Google\Protobuf\Internal\Message
      */
     public function getRewardBalanceRemainingMicros()
     {
-        return isset($this->reward_balance_remaining_micros) ? $this->reward_balance_remaining_micros : 0;
+        return $this->reward_balance_remaining_micros ?? 0;
     }
 
     public function hasRewardBalanceRemainingMicros()

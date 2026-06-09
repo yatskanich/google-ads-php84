@@ -94,7 +94,7 @@ class FrequencyCapEntry extends \Google\Protobuf\Internal\Message
      */
     public function getCap()
     {
-        return isset($this->cap) ? $this->cap : 0;
+        return $this->cap ?? 0;
     }
 
     public function hasCap()

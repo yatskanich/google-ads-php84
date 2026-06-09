@@ -46,7 +46,7 @@ class CustomAffinityInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAffinity()
     {
-        return isset($this->custom_affinity) ? $this->custom_affinity : '';
+        return $this->custom_affinity ?? '';
     }
 
     public function hasCustomAffinity()

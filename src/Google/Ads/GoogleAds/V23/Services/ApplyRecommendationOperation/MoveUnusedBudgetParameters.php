@@ -48,7 +48,7 @@ class MoveUnusedBudgetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getBudgetMicrosToMove()
     {
-        return isset($this->budget_micros_to_move) ? $this->budget_micros_to_move : 0;
+        return $this->budget_micros_to_move ?? 0;
     }
 
     public function hasBudgetMicrosToMove()

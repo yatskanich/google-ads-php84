@@ -193,7 +193,7 @@ class PriceOffering extends \Google\Protobuf\Internal\Message
      */
     public function setUnit($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\PriceExtensionPriceUnitEnum\PriceExtensionPriceUnit::class);
+        GPBUtil::checkEnum($var);
         $this->unit = $var;
 
         return $this;

@@ -391,7 +391,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setRequestError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\RequestErrorEnum\RequestError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(1, $var);
 
         return $this;
@@ -422,7 +422,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingStrategyError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BiddingStrategyErrorEnum\BiddingStrategyError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(2, $var);
 
         return $this;
@@ -453,7 +453,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setUrlFieldError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\UrlFieldErrorEnum\UrlFieldError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(3, $var);
 
         return $this;
@@ -484,7 +484,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setListOperationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ListOperationErrorEnum\ListOperationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(4, $var);
 
         return $this;
@@ -515,7 +515,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setQueryError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\QueryErrorEnum\QueryError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(5, $var);
 
         return $this;
@@ -546,7 +546,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMutateError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MutateErrorEnum\MutateError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(7, $var);
 
         return $this;
@@ -577,7 +577,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFieldMaskError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FieldMaskErrorEnum\FieldMaskError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(8, $var);
 
         return $this;
@@ -608,7 +608,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAuthorizationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AuthorizationErrorEnum\AuthorizationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -639,7 +639,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setInternalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\InternalErrorEnum\InternalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(10, $var);
 
         return $this;
@@ -670,7 +670,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setQuotaError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\QuotaErrorEnum\QuotaError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(11, $var);
 
         return $this;
@@ -701,7 +701,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdErrorEnum\AdError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(12, $var);
 
         return $this;
@@ -732,7 +732,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupErrorEnum\AdGroupError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(13, $var);
 
         return $this;
@@ -763,7 +763,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignBudgetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignBudgetErrorEnum\CampaignBudgetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(14, $var);
 
         return $this;
@@ -794,7 +794,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignErrorEnum\CampaignError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(15, $var);
 
         return $this;
@@ -825,7 +825,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setVideoCampaignError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\VideoCampaignErrorEnum\VideoCampaignError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(182, $var);
 
         return $this;
@@ -856,7 +856,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAuthenticationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AuthenticationErrorEnum\AuthenticationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(17, $var);
 
         return $this;
@@ -887,7 +887,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setActionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ActionErrorEnum\ActionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(196, $var);
 
         return $this;
@@ -918,7 +918,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupCriterionCustomizerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupCriterionCustomizerErrorEnum\AdGroupCriterionCustomizerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(161, $var);
 
         return $this;
@@ -949,7 +949,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupCriterionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupCriterionErrorEnum\AdGroupCriterionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(18, $var);
 
         return $this;
@@ -980,7 +980,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupCustomizerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupCustomizerErrorEnum\AdGroupCustomizerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(159, $var);
 
         return $this;
@@ -1011,7 +1011,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdCustomizerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdCustomizerErrorEnum\AdCustomizerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(19, $var);
 
         return $this;
@@ -1042,7 +1042,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupAdError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupAdErrorEnum\AdGroupAdError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(21, $var);
 
         return $this;
@@ -1073,7 +1073,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdSharingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdSharingErrorEnum\AdSharingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(24, $var);
 
         return $this;
@@ -1104,7 +1104,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdxError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdxErrorEnum\AdxError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(25, $var);
 
         return $this;
@@ -1135,7 +1135,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetErrorEnum\AssetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(107, $var);
 
         return $this;
@@ -1166,7 +1166,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetGroupAssetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetGroupAssetErrorEnum\AssetGroupAssetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(149, $var);
 
         return $this;
@@ -1197,7 +1197,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetGroupListingGroupFilterError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetGroupListingGroupFilterErrorEnum\AssetGroupListingGroupFilterError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(155, $var);
 
         return $this;
@@ -1228,7 +1228,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetGroupError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetGroupErrorEnum\AssetGroupError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(148, $var);
 
         return $this;
@@ -1259,7 +1259,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetSetAssetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetSetAssetErrorEnum\AssetSetAssetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(153, $var);
 
         return $this;
@@ -1290,7 +1290,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetSetLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetSetLinkErrorEnum\AssetSetLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(154, $var);
 
         return $this;
@@ -1321,7 +1321,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetSetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetSetErrorEnum\AssetSetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(152, $var);
 
         return $this;
@@ -1352,7 +1352,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBiddingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BiddingErrorEnum\BiddingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(26, $var);
 
         return $this;
@@ -1383,7 +1383,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignCriterionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignCriterionErrorEnum\CampaignCriterionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(29, $var);
 
         return $this;
@@ -1414,7 +1414,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignConversionGoalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignConversionGoalErrorEnum\CampaignConversionGoalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(166, $var);
 
         return $this;
@@ -1445,7 +1445,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignCustomizerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignCustomizerErrorEnum\CampaignCustomizerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(160, $var);
 
         return $this;
@@ -1476,7 +1476,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCollectionSizeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CollectionSizeErrorEnum\CollectionSizeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(31, $var);
 
         return $this;
@@ -1507,7 +1507,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionGoalCampaignConfigError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionGoalCampaignConfigErrorEnum\ConversionGoalCampaignConfigError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(165, $var);
 
         return $this;
@@ -1538,7 +1538,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCountryCodeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CountryCodeErrorEnum\CountryCodeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(109, $var);
 
         return $this;
@@ -1569,7 +1569,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCriterionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CriterionErrorEnum\CriterionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(32, $var);
 
         return $this;
@@ -1600,7 +1600,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomConversionGoalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomConversionGoalErrorEnum\CustomConversionGoalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(150, $var);
 
         return $this;
@@ -1631,7 +1631,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerCustomizerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerCustomizerErrorEnum\CustomerCustomizerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(158, $var);
 
         return $this;
@@ -1662,7 +1662,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerErrorEnum\CustomerError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(90, $var);
 
         return $this;
@@ -1693,7 +1693,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomizerAttributeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomizerAttributeErrorEnum\CustomizerAttributeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(151, $var);
 
         return $this;
@@ -1724,7 +1724,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setDateError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DateErrorEnum\DateError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(33, $var);
 
         return $this;
@@ -1755,7 +1755,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setDateRangeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DateRangeErrorEnum\DateRangeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(34, $var);
 
         return $this;
@@ -1786,7 +1786,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setDistinctError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DistinctErrorEnum\DistinctError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(35, $var);
 
         return $this;
@@ -1817,7 +1817,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedAttributeReferenceError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedAttributeReferenceErrorEnum\FeedAttributeReferenceError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(36, $var);
 
         return $this;
@@ -1848,7 +1848,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFinalUrlExpansionAssetViewError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FinalUrlExpansionAssetViewErrorEnum\FinalUrlExpansionAssetViewError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(193, $var);
 
         return $this;
@@ -1879,7 +1879,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFunctionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FunctionErrorEnum\FunctionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(37, $var);
 
         return $this;
@@ -1910,7 +1910,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFunctionParsingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FunctionParsingErrorEnum\FunctionParsingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(38, $var);
 
         return $this;
@@ -1941,7 +1941,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setIdError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\IdErrorEnum\IdError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(39, $var);
 
         return $this;
@@ -1972,7 +1972,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setImageError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ImageErrorEnum\ImageError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(40, $var);
 
         return $this;
@@ -2003,7 +2003,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setLanguageCodeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\LanguageCodeErrorEnum\LanguageCodeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(110, $var);
 
         return $this;
@@ -2034,7 +2034,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMediaBundleError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MediaBundleErrorEnum\MediaBundleError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(42, $var);
 
         return $this;
@@ -2065,7 +2065,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMediaUploadError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MediaUploadErrorEnum\MediaUploadError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(116, $var);
 
         return $this;
@@ -2096,7 +2096,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMediaFileError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MediaFileErrorEnum\MediaFileError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(86, $var);
 
         return $this;
@@ -2127,7 +2127,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMerchantCenterError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MerchantCenterErrorEnum\MerchantCenterError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(162, $var);
 
         return $this;
@@ -2158,7 +2158,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setMultiplierError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\MultiplierErrorEnum\MultiplierError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(44, $var);
 
         return $this;
@@ -2189,7 +2189,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setNewResourceCreationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\NewResourceCreationErrorEnum\NewResourceCreationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(45, $var);
 
         return $this;
@@ -2220,7 +2220,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setNotEmptyError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\NotEmptyErrorEnum\NotEmptyError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(46, $var);
 
         return $this;
@@ -2251,7 +2251,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setNullError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\NullErrorEnum\NullError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(47, $var);
 
         return $this;
@@ -2282,7 +2282,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setOperatorError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\OperatorErrorEnum\OperatorError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(48, $var);
 
         return $this;
@@ -2313,7 +2313,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setRangeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\RangeErrorEnum\RangeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(49, $var);
 
         return $this;
@@ -2344,7 +2344,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setRecommendationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\RecommendationErrorEnum\RecommendationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(58, $var);
 
         return $this;
@@ -2375,7 +2375,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setRecommendationSubscriptionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\RecommendationSubscriptionErrorEnum\RecommendationSubscriptionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(180, $var);
 
         return $this;
@@ -2406,7 +2406,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setRegionCodeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\RegionCodeErrorEnum\RegionCodeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(51, $var);
 
         return $this;
@@ -2437,7 +2437,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSettingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SettingErrorEnum\SettingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(52, $var);
 
         return $this;
@@ -2468,7 +2468,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setStringFormatError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\StringFormatErrorEnum\StringFormatError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(53, $var);
 
         return $this;
@@ -2499,7 +2499,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setStringLengthError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\StringLengthErrorEnum\StringLengthError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(54, $var);
 
         return $this;
@@ -2530,7 +2530,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setOperationAccessDeniedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\OperationAccessDeniedErrorEnum\OperationAccessDeniedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(55, $var);
 
         return $this;
@@ -2561,7 +2561,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setResourceAccessDeniedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ResourceAccessDeniedErrorEnum\ResourceAccessDeniedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(56, $var);
 
         return $this;
@@ -2592,7 +2592,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setResourceCountLimitExceededError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ResourceCountLimitExceededErrorEnum\ResourceCountLimitExceededError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(57, $var);
 
         return $this;
@@ -2623,7 +2623,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setYoutubeVideoRegistrationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\YoutubeVideoRegistrationErrorEnum\YoutubeVideoRegistrationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(117, $var);
 
         return $this;
@@ -2654,7 +2654,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupBidModifierError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupBidModifierErrorEnum\AdGroupBidModifierError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(59, $var);
 
         return $this;
@@ -2685,7 +2685,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setContextError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ContextErrorEnum\ContextError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(60, $var);
 
         return $this;
@@ -2716,7 +2716,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFieldError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FieldErrorEnum\FieldError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(61, $var);
 
         return $this;
@@ -2747,7 +2747,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSharedSetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SharedSetErrorEnum\SharedSetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(62, $var);
 
         return $this;
@@ -2778,7 +2778,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSharedCriterionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SharedCriterionErrorEnum\SharedCriterionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(63, $var);
 
         return $this;
@@ -2809,7 +2809,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignSharedSetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignSharedSetErrorEnum\CampaignSharedSetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(64, $var);
 
         return $this;
@@ -2840,7 +2840,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionActionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionActionErrorEnum\ConversionActionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(65, $var);
 
         return $this;
@@ -2871,7 +2871,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionAdjustmentUploadError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionAdjustmentUploadErrorEnum\ConversionAdjustmentUploadError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(115, $var);
 
         return $this;
@@ -2902,7 +2902,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionCustomVariableError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionCustomVariableErrorEnum\ConversionCustomVariableError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(143, $var);
 
         return $this;
@@ -2933,7 +2933,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionUploadError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionUploadErrorEnum\ConversionUploadError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(111, $var);
 
         return $this;
@@ -2964,7 +2964,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionValueRuleError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionValueRuleErrorEnum\ConversionValueRuleError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(145, $var);
 
         return $this;
@@ -2995,7 +2995,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setConversionValueRuleSetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ConversionValueRuleSetErrorEnum\ConversionValueRuleSetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(146, $var);
 
         return $this;
@@ -3026,7 +3026,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setHeaderError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\HeaderErrorEnum\HeaderError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(66, $var);
 
         return $this;
@@ -3057,7 +3057,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setDatabaseError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DatabaseErrorEnum\DatabaseError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(67, $var);
 
         return $this;
@@ -3088,7 +3088,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setPolicyFindingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\PolicyFindingErrorEnum\PolicyFindingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(68, $var);
 
         return $this;
@@ -3119,7 +3119,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setEnumError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\EnumErrorEnum\EnumError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(70, $var);
 
         return $this;
@@ -3150,7 +3150,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanErrorEnum\KeywordPlanError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(71, $var);
 
         return $this;
@@ -3181,7 +3181,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanCampaignError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanCampaignErrorEnum\KeywordPlanCampaignError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(72, $var);
 
         return $this;
@@ -3212,7 +3212,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanCampaignKeywordError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanCampaignKeywordErrorEnum\KeywordPlanCampaignKeywordError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(132, $var);
 
         return $this;
@@ -3243,7 +3243,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanAdGroupError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanAdGroupErrorEnum\KeywordPlanAdGroupError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(74, $var);
 
         return $this;
@@ -3274,7 +3274,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanAdGroupKeywordError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanAdGroupKeywordErrorEnum\KeywordPlanAdGroupKeywordError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(133, $var);
 
         return $this;
@@ -3305,7 +3305,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanIdeaError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\KeywordPlanIdeaErrorEnum\KeywordPlanIdeaError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(76, $var);
 
         return $this;
@@ -3336,7 +3336,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAccountBudgetProposalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AccountBudgetProposalErrorEnum\AccountBudgetProposalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(77, $var);
 
         return $this;
@@ -3367,7 +3367,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setUserListError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\UserListErrorEnum\UserListError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(78, $var);
 
         return $this;
@@ -3398,7 +3398,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setChangeEventError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ChangeEventErrorEnum\ChangeEventError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(136, $var);
 
         return $this;
@@ -3429,7 +3429,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setChangeStatusError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ChangeStatusErrorEnum\ChangeStatusError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(79, $var);
 
         return $this;
@@ -3460,7 +3460,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedErrorEnum\FeedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(80, $var);
 
         return $this;
@@ -3491,7 +3491,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setGeoTargetConstantSuggestionError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\GeoTargetConstantSuggestionErrorEnum\GeoTargetConstantSuggestionError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(81, $var);
 
         return $this;
@@ -3522,7 +3522,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignDraftError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignDraftErrorEnum\CampaignDraftError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(82, $var);
 
         return $this;
@@ -3553,7 +3553,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedItemError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedItemErrorEnum\FeedItemError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(83, $var);
 
         return $this;
@@ -3584,7 +3584,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setLabelError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\LabelErrorEnum\LabelError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(84, $var);
 
         return $this;
@@ -3615,7 +3615,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBillingSetupError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BillingSetupErrorEnum\BillingSetupError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(87, $var);
 
         return $this;
@@ -3646,7 +3646,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerClientLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerClientLinkErrorEnum\CustomerClientLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(88, $var);
 
         return $this;
@@ -3677,7 +3677,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerManagerLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerManagerLinkErrorEnum\CustomerManagerLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(91, $var);
 
         return $this;
@@ -3708,7 +3708,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedMappingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedMappingErrorEnum\FeedMappingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(92, $var);
 
         return $this;
@@ -3739,7 +3739,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerFeedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerFeedErrorEnum\CustomerFeedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(93, $var);
 
         return $this;
@@ -3770,7 +3770,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupFeedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdGroupFeedErrorEnum\AdGroupFeedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(94, $var);
 
         return $this;
@@ -3801,7 +3801,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignFeedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignFeedErrorEnum\CampaignFeedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(96, $var);
 
         return $this;
@@ -3832,7 +3832,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomInterestError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomInterestErrorEnum\CustomInterestError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(97, $var);
 
         return $this;
@@ -3863,7 +3863,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignExperimentError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignExperimentErrorEnum\CampaignExperimentError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(98, $var);
 
         return $this;
@@ -3894,7 +3894,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setExtensionFeedItemError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ExtensionFeedItemErrorEnum\ExtensionFeedItemError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(100, $var);
 
         return $this;
@@ -3925,7 +3925,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAdParameterError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AdParameterErrorEnum\AdParameterError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(101, $var);
 
         return $this;
@@ -3956,7 +3956,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedItemValidationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedItemValidationErrorEnum\FeedItemValidationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(102, $var);
 
         return $this;
@@ -3987,7 +3987,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setExtensionSettingError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ExtensionSettingErrorEnum\ExtensionSettingError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(103, $var);
 
         return $this;
@@ -4018,7 +4018,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedItemSetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedItemSetErrorEnum\FeedItemSetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(140, $var);
 
         return $this;
@@ -4049,7 +4049,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedItemSetLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedItemSetLinkErrorEnum\FeedItemSetLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(141, $var);
 
         return $this;
@@ -4080,7 +4080,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setFeedItemTargetError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\FeedItemTargetErrorEnum\FeedItemTargetError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(104, $var);
 
         return $this;
@@ -4111,7 +4111,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setPolicyViolationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\PolicyViolationErrorEnum\PolicyViolationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(105, $var);
 
         return $this;
@@ -4142,7 +4142,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setPartialFailureError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\PartialFailureErrorEnum\PartialFailureError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(112, $var);
 
         return $this;
@@ -4173,7 +4173,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setClickViewError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ClickViewErrorEnum\ClickViewError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(113, $var);
 
         return $this;
@@ -4204,7 +4204,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setPolicyValidationParameterError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\PolicyValidationParameterErrorEnum\PolicyValidationParameterError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(114, $var);
 
         return $this;
@@ -4235,7 +4235,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSizeLimitError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SizeLimitErrorEnum\SizeLimitError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(118, $var);
 
         return $this;
@@ -4266,7 +4266,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setOfflineUserDataJobError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\OfflineUserDataJobErrorEnum\OfflineUserDataJobError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(119, $var);
 
         return $this;
@@ -4297,7 +4297,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setNotAllowlistedError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\NotAllowlistedErrorEnum\NotAllowlistedError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(137, $var);
 
         return $this;
@@ -4328,7 +4328,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setManagerLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ManagerLinkErrorEnum\ManagerLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(121, $var);
 
         return $this;
@@ -4359,7 +4359,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCurrencyCodeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CurrencyCodeErrorEnum\CurrencyCodeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(122, $var);
 
         return $this;
@@ -4390,7 +4390,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setExperimentError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ExperimentErrorEnum\ExperimentError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(123, $var);
 
         return $this;
@@ -4421,7 +4421,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAccessInvitationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AccessInvitationErrorEnum\AccessInvitationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(124, $var);
 
         return $this;
@@ -4452,7 +4452,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setReachPlanError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ReachPlanErrorEnum\ReachPlanError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(125, $var);
 
         return $this;
@@ -4483,7 +4483,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setInvoiceError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\InvoiceErrorEnum\InvoiceError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(126, $var);
 
         return $this;
@@ -4514,7 +4514,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setPaymentsAccountError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\PaymentsAccountErrorEnum\PaymentsAccountError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(127, $var);
 
         return $this;
@@ -4545,7 +4545,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setTimeZoneError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\TimeZoneErrorEnum\TimeZoneError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(128, $var);
 
         return $this;
@@ -4576,7 +4576,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetLinkErrorEnum\AssetLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(129, $var);
 
         return $this;
@@ -4607,7 +4607,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setUserDataError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\UserDataErrorEnum\UserDataError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(130, $var);
 
         return $this;
@@ -4638,7 +4638,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBatchJobError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BatchJobErrorEnum\BatchJobError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(131, $var);
 
         return $this;
@@ -4669,7 +4669,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAccountLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AccountLinkErrorEnum\AccountLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(134, $var);
 
         return $this;
@@ -4700,7 +4700,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setThirdPartyAppAnalyticsLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ThirdPartyAppAnalyticsLinkErrorEnum\ThirdPartyAppAnalyticsLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(135, $var);
 
         return $this;
@@ -4731,7 +4731,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerUserAccessError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerUserAccessErrorEnum\CustomerUserAccessError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(138, $var);
 
         return $this;
@@ -4762,7 +4762,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomAudienceError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomAudienceErrorEnum\CustomAudienceError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(139, $var);
 
         return $this;
@@ -4793,7 +4793,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAudienceError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AudienceErrorEnum\AudienceError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(164, $var);
 
         return $this;
@@ -4824,7 +4824,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSearchTermInsightError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SearchTermInsightErrorEnum\SearchTermInsightError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(174, $var);
 
         return $this;
@@ -4855,7 +4855,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setSmartCampaignError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\SmartCampaignErrorEnum\SmartCampaignError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(147, $var);
 
         return $this;
@@ -4886,7 +4886,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setExperimentArmError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ExperimentArmErrorEnum\ExperimentArmError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(156, $var);
 
         return $this;
@@ -4917,7 +4917,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAudienceInsightsError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AudienceInsightsErrorEnum\AudienceInsightsError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(167, $var);
 
         return $this;
@@ -4948,7 +4948,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setProductLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ProductLinkErrorEnum\ProductLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(169, $var);
 
         return $this;
@@ -4979,7 +4979,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setDataLinkError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\DataLinkErrorEnum\DataLinkError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(187, $var);
 
         return $this;
@@ -5010,7 +5010,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerSkAdNetworkConversionValueSchemaError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerSkAdNetworkConversionValueSchemaErrorEnum\CustomerSkAdNetworkConversionValueSchemaError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(170, $var);
 
         return $this;
@@ -5041,7 +5041,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCurrencyError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CurrencyErrorEnum\CurrencyError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(171, $var);
 
         return $this;
@@ -5072,7 +5072,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetGroupSignalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetGroupSignalErrorEnum\AssetGroupSignalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(176, $var);
 
         return $this;
@@ -5103,7 +5103,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setProductLinkInvitationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ProductLinkInvitationErrorEnum\ProductLinkInvitationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(177, $var);
 
         return $this;
@@ -5134,7 +5134,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCustomerLifecycleGoalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CustomerLifecycleGoalErrorEnum\CustomerLifecycleGoalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(178, $var);
 
         return $this;
@@ -5165,7 +5165,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignLifecycleGoalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignLifecycleGoalErrorEnum\CampaignLifecycleGoalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(179, $var);
 
         return $this;
@@ -5196,7 +5196,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setIdentityVerificationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\IdentityVerificationErrorEnum\IdentityVerificationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(181, $var);
 
         return $this;
@@ -5227,7 +5227,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setUserListCustomerTypeError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\UserListCustomerTypeErrorEnum\UserListCustomerTypeError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(183, $var);
 
         return $this;
@@ -5258,7 +5258,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setShoppingProductError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ShoppingProductErrorEnum\ShoppingProductError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(184, $var);
 
         return $this;
@@ -5289,7 +5289,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAutomaticallyCreatedAssetRemovalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AutomaticallyCreatedAssetRemovalErrorEnum\AutomaticallyCreatedAssetRemovalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(185, $var);
 
         return $this;
@@ -5320,7 +5320,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setShareablePreviewError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ShareablePreviewErrorEnum\ShareablePreviewError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(186, $var);
 
         return $this;
@@ -5351,7 +5351,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setCampaignGoalConfigError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\CampaignGoalConfigErrorEnum\CampaignGoalConfigError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(188, $var);
 
         return $this;
@@ -5382,7 +5382,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setGoalError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\GoalErrorEnum\GoalError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(189, $var);
 
         return $this;
@@ -5413,7 +5413,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBrandGuidelinesMigrationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BrandGuidelinesMigrationErrorEnum\BrandGuidelinesMigrationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(191, $var);
 
         return $this;
@@ -5444,7 +5444,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setAssetGenerationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\AssetGenerationErrorEnum\AssetGenerationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(194, $var);
 
         return $this;
@@ -5475,7 +5475,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setBenchmarksError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\BenchmarksErrorEnum\BenchmarksError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(195, $var);
 
         return $this;
@@ -5506,7 +5506,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setIncentiveError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\IncentiveErrorEnum\IncentiveError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(197, $var);
 
         return $this;
@@ -5537,7 +5537,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setContentCreatorInsightsError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\ContentCreatorInsightsErrorEnum\ContentCreatorInsightsError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(198, $var);
 
         return $this;
@@ -5568,7 +5568,7 @@ class ErrorCode extends \Google\Protobuf\Internal\Message
      */
     public function setVideoReservationError($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Errors\VideoReservationErrorEnum\VideoReservationError::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(199, $var);
 
         return $this;

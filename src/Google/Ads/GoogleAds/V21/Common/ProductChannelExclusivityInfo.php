@@ -57,7 +57,7 @@ class ProductChannelExclusivityInfo extends \Google\Protobuf\Internal\Message
      */
     public function setChannelExclusivity($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductChannelExclusivityEnum\ProductChannelExclusivity::class);
+        GPBUtil::checkEnum($var);
         $this->channel_exclusivity = $var;
 
         return $this;

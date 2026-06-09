@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.AccountBudgetProposalService' => [
             'MutateAccountBudgetProposal' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateAccountBudgetProposalResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateAccountBudgetProposalResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

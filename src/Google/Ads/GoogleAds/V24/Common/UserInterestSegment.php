@@ -45,7 +45,7 @@ class UserInterestSegment extends \Google\Protobuf\Internal\Message
      */
     public function getUserInterestCategory()
     {
-        return isset($this->user_interest_category) ? $this->user_interest_category : '';
+        return $this->user_interest_category ?? '';
     }
 
     public function hasUserInterestCategory()

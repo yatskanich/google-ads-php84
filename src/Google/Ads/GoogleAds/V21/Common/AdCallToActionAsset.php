@@ -45,7 +45,7 @@ class AdCallToActionAsset extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()

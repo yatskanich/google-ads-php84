@@ -65,7 +65,7 @@ class UnaryGoogleAdsExceptionMiddleware extends GoogleAdsMiddlewareAbstract
 
         return $promise->then(
             null,
-            function ($exception) {
+            function ($exception): void {
                 if ($exception instanceof ApiException) {
                     $this->throwGoogleAdsException($exception, $this->statusMetadataExtractor);
                 }

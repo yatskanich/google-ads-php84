@@ -66,7 +66,7 @@ class UserListLogicalRuleInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\UserListLogicalRuleOperatorEnum\UserListLogicalRuleOperator::class);
+        GPBUtil::checkEnum($var);
         $this->operator = $var;
 
         return $this;

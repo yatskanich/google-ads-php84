@@ -78,7 +78,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
         $countryLocations = [];
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup)
             ->setCountryLocations($countryLocations);
@@ -120,7 +120,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
         $countryLocations = [];
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup)
             ->setCountryLocations($countryLocations);
@@ -152,7 +152,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
         $countryLocation = new LocationInfo();
-        $request = (new GenerateTrendingInsightsRequest())
+        $request = new GenerateTrendingInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup)
             ->setCountryLocation($countryLocation);
@@ -194,7 +194,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
         $countryLocation = new LocationInfo();
-        $request = (new GenerateTrendingInsightsRequest())
+        $request = new GenerateTrendingInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup)
             ->setCountryLocation($countryLocation);
@@ -226,7 +226,7 @@ class ContentCreatorInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $customerInsightsGroup = 'customerInsightsGroup-244942948';
         $countryLocations = [];
-        $request = (new GenerateCreatorInsightsRequest())
+        $request = new GenerateCreatorInsightsRequest()
             ->setCustomerId($customerId)
             ->setCustomerInsightsGroup($customerInsightsGroup)
             ->setCountryLocations($countryLocations);

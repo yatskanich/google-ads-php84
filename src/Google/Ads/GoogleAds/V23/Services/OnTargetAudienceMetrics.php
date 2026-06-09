@@ -58,7 +58,7 @@ class OnTargetAudienceMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getYoutubeAudienceSize()
     {
-        return isset($this->youtube_audience_size) ? $this->youtube_audience_size : 0;
+        return $this->youtube_audience_size ?? 0;
     }
 
     public function hasYoutubeAudienceSize()
@@ -94,7 +94,7 @@ class OnTargetAudienceMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCensusAudienceSize()
     {
-        return isset($this->census_audience_size) ? $this->census_audience_size : 0;
+        return $this->census_audience_size ?? 0;
     }
 
     public function hasCensusAudienceSize()

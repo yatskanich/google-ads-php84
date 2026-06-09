@@ -208,7 +208,7 @@ class AssetGroupListingGroupFilter extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ListingGroupFilterTypeEnum\ListingGroupFilterType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -234,7 +234,7 @@ class AssetGroupListingGroupFilter extends \Google\Protobuf\Internal\Message
      */
     public function setListingSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ListingGroupFilterListingSourceEnum\ListingGroupFilterListingSource::class);
+        GPBUtil::checkEnum($var);
         $this->listing_source = $var;
 
         return $this;

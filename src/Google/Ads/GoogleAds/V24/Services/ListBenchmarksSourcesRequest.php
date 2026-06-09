@@ -41,7 +41,7 @@ class ListBenchmarksSourcesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(array $benchmarksSources): self
     {
-        return (new self())
+        return new self()
             ->setBenchmarksSources($benchmarksSources);
     }
 

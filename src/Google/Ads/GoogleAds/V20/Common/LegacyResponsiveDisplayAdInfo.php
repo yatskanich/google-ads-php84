@@ -176,7 +176,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getShortHeadline()
     {
-        return isset($this->short_headline) ? $this->short_headline : '';
+        return $this->short_headline ?? '';
     }
 
     public function hasShortHeadline()
@@ -212,7 +212,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLongHeadline()
     {
-        return isset($this->long_headline) ? $this->long_headline : '';
+        return $this->long_headline ?? '';
     }
 
     public function hasLongHeadline()
@@ -248,7 +248,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()
@@ -284,7 +284,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getBusinessName()
     {
-        return isset($this->business_name) ? $this->business_name : '';
+        return $this->business_name ?? '';
     }
 
     public function hasBusinessName()
@@ -324,7 +324,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAllowFlexibleColor()
     {
-        return isset($this->allow_flexible_color) ? $this->allow_flexible_color : false;
+        return $this->allow_flexible_color ?? false;
     }
 
     public function hasAllowFlexibleColor()
@@ -366,7 +366,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAccentColor()
     {
-        return isset($this->accent_color) ? $this->accent_color : '';
+        return $this->accent_color ?? '';
     }
 
     public function hasAccentColor()
@@ -406,7 +406,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMainColor()
     {
-        return isset($this->main_color) ? $this->main_color : '';
+        return $this->main_color ?? '';
     }
 
     public function hasMainColor()
@@ -444,7 +444,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCallToActionText()
     {
-        return isset($this->call_to_action_text) ? $this->call_to_action_text : '';
+        return $this->call_to_action_text ?? '';
     }
 
     public function hasCallToActionText()
@@ -480,7 +480,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLogoImage()
     {
-        return isset($this->logo_image) ? $this->logo_image : '';
+        return $this->logo_image ?? '';
     }
 
     public function hasLogoImage()
@@ -516,7 +516,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSquareLogoImage()
     {
-        return isset($this->square_logo_image) ? $this->square_logo_image : '';
+        return $this->square_logo_image ?? '';
     }
 
     public function hasSquareLogoImage()
@@ -552,7 +552,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getMarketingImage()
     {
-        return isset($this->marketing_image) ? $this->marketing_image : '';
+        return $this->marketing_image ?? '';
     }
 
     public function hasMarketingImage()
@@ -588,7 +588,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSquareMarketingImage()
     {
-        return isset($this->square_marketing_image) ? $this->square_marketing_image : '';
+        return $this->square_marketing_image ?? '';
     }
 
     public function hasSquareMarketingImage()
@@ -636,7 +636,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function setFormatSetting($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\DisplayAdFormatSettingEnum\DisplayAdFormatSetting::class);
+        GPBUtil::checkEnum($var);
         $this->format_setting = $var;
 
         return $this;
@@ -650,7 +650,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPricePrefix()
     {
-        return isset($this->price_prefix) ? $this->price_prefix : '';
+        return $this->price_prefix ?? '';
     }
 
     public function hasPricePrefix()
@@ -687,7 +687,7 @@ class LegacyResponsiveDisplayAdInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPromoText()
     {
-        return isset($this->promo_text) ? $this->promo_text : '';
+        return $this->promo_text ?? '';
     }
 
     public function hasPromoText()

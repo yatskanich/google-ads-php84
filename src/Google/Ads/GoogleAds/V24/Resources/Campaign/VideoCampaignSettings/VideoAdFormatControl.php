@@ -66,7 +66,7 @@ class VideoAdFormatControl extends \Google\Protobuf\Internal\Message
      */
     public function setFormatRestriction($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\VideoAdFormatRestrictionEnum\VideoAdFormatRestriction::class);
+        GPBUtil::checkEnum($var);
         $this->format_restriction = $var;
 
         return $this;

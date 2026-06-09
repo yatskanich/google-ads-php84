@@ -987,4 +987,6 @@ class AddPerformanceMaxForTravelGoalsCampaign
     }
 }
 
-AddPerformanceMaxForTravelGoalsCampaign::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddPerformanceMaxForTravelGoalsCampaign::main();
+}

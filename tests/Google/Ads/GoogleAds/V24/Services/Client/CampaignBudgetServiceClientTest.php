@@ -74,7 +74,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBudgets($request);
@@ -112,7 +112,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CampaignBudgetServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignBudgetsRequest())
+        $request = new MutateCampaignBudgetsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignBudgetsAsync($request)->wait();

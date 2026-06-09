@@ -101,7 +101,7 @@ class TravelFeedData extends \Google\Protobuf\Internal\Message
      */
     public function setTravelFeedVerticalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\VerticalAdsItemVerticalTypeEnum\VerticalAdsItemVerticalType::class);
+        GPBUtil::checkEnum($var);
         $this->travel_feed_vertical_type = $var;
 
         return $this;

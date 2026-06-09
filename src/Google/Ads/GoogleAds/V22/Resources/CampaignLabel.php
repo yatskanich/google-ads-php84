@@ -95,7 +95,7 @@ class CampaignLabel extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -131,7 +131,7 @@ class CampaignLabel extends \Google\Protobuf\Internal\Message
      */
     public function getLabel()
     {
-        return isset($this->label) ? $this->label : '';
+        return $this->label ?? '';
     }
 
     public function hasLabel()

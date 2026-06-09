@@ -192,7 +192,7 @@ class MaximizeConversionValue extends \Google\Protobuf\Internal\Message
      */
     public function getTargetRoasTolerancePercentMillis()
     {
-        return isset($this->target_roas_tolerance_percent_millis) ? $this->target_roas_tolerance_percent_millis : 0;
+        return $this->target_roas_tolerance_percent_millis ?? 0;
     }
 
     public function hasTargetRoasTolerancePercentMillis()

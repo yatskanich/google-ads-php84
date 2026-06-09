@@ -57,7 +57,7 @@ class VideoExperimentInfo extends \Google\Protobuf\Internal\Message
      */
     public function setVideoExperimentSubtype($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\VideoExperimentSubtypeEnum\VideoExperimentSubtype::class);
+        GPBUtil::checkEnum($var);
         $this->video_experiment_subtype = $var;
 
         return $this;

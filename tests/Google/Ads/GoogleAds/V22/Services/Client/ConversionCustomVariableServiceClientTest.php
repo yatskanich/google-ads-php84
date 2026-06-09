@@ -74,7 +74,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionCustomVariables($request);
@@ -112,7 +112,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class ConversionCustomVariableServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateConversionCustomVariablesRequest())
+        $request = new MutateConversionCustomVariablesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateConversionCustomVariablesAsync($request)->wait();

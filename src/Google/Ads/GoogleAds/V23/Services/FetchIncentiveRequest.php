@@ -90,7 +90,7 @@ class FetchIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getLanguageCode()
     {
-        return isset($this->language_code) ? $this->language_code : '';
+        return $this->language_code ?? '';
     }
 
     public function hasLanguageCode()
@@ -132,7 +132,7 @@ class FetchIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -173,7 +173,7 @@ class FetchIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getEmail()
     {
-        return isset($this->email) ? $this->email : '';
+        return $this->email ?? '';
     }
 
     public function hasEmail()
@@ -212,7 +212,7 @@ class FetchIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getType()
     {
-        return isset($this->type) ? $this->type : 0;
+        return $this->type ?? 0;
     }
 
     public function hasType()
@@ -235,7 +235,7 @@ class FetchIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Services\FetchIncentiveRequest\IncentiveType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

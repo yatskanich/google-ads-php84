@@ -143,7 +143,7 @@ class PlannableUserList extends \Google\Protobuf\Internal\Message
      */
     public function setUserListType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\UserListTypeEnum\UserListType::class);
+        GPBUtil::checkEnum($var);
         $this->user_list_type = $var;
 
         return $this;
@@ -169,7 +169,7 @@ class PlannableUserList extends \Google\Protobuf\Internal\Message
      */
     public function setPlannableStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ReachPlanPlannableUserListStatusEnum\ReachPlanPlannableUserListStatus::class);
+        GPBUtil::checkEnum($var);
         $this->plannable_status = $var;
 
         return $this;

@@ -96,7 +96,7 @@ class ProductMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getPlannableProductCode()
     {
-        return isset($this->plannable_product_code) ? $this->plannable_product_code : '';
+        return $this->plannable_product_code ?? '';
     }
 
     public function hasPlannableProductCode()
@@ -166,7 +166,7 @@ class ProductMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getPlannableProductDescription()
     {
-        return isset($this->plannable_product_description) ? $this->plannable_product_description : '';
+        return $this->plannable_product_description ?? '';
     }
 
     public function hasPlannableProductDescription()

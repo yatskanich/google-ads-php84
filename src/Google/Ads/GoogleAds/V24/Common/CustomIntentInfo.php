@@ -46,7 +46,7 @@ class CustomIntentInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCustomIntent()
     {
-        return isset($this->custom_intent) ? $this->custom_intent : '';
+        return $this->custom_intent ?? '';
     }
 
     public function hasCustomIntent()

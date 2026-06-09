@@ -159,4 +159,6 @@ class UpdateResponsiveSearchAd
     // [END update_responsive_search_ad]
 }
 
-UpdateResponsiveSearchAd::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UpdateResponsiveSearchAd::main();
+}

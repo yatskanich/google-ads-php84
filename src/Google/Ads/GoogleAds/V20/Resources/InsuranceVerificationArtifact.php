@@ -78,7 +78,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getAmountMicros()
     {
-        return isset($this->amount_micros) ? $this->amount_micros : 0;
+        return $this->amount_micros ?? 0;
     }
 
     public function hasAmountMicros()
@@ -115,7 +115,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getRejectionReason()
     {
-        return isset($this->rejection_reason) ? $this->rejection_reason : 0;
+        return $this->rejection_reason ?? 0;
     }
 
     public function hasRejectionReason()
@@ -137,7 +137,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function setRejectionReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\LocalServicesInsuranceRejectionReasonEnum\LocalServicesInsuranceRejectionReason::class);
+        GPBUtil::checkEnum($var);
         $this->rejection_reason = $var;
 
         return $this;
@@ -191,7 +191,7 @@ class InsuranceVerificationArtifact extends \Google\Protobuf\Internal\Message
      */
     public function getExpirationDateTime()
     {
-        return isset($this->expiration_date_time) ? $this->expiration_date_time : '';
+        return $this->expiration_date_time ?? '';
     }
 
     public function hasExpirationDateTime()

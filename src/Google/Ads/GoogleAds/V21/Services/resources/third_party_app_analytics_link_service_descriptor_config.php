@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.ThirdPartyAppAnalyticsLinkService' => [
             'RegenerateShareableLinkId' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\RegenerateShareableLinkIdResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\RegenerateShareableLinkIdResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'resource_name',

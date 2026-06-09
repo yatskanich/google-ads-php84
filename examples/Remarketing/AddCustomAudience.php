@@ -182,4 +182,6 @@ class AddCustomAudience
     }
 }
 
-AddCustomAudience::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddCustomAudience::main();
+}

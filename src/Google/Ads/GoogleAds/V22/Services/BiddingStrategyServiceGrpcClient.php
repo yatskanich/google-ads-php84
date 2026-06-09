@@ -74,7 +74,7 @@ class BiddingStrategyServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.BiddingStrategyService/MutateBiddingStrategies',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\MutateBiddingStrategiesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\MutateBiddingStrategiesResponse::class, 'decode'],
         $metadata, $options);
     }
 

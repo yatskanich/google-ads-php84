@@ -65,7 +65,7 @@ class CustomerAcquisitionGoalSettings extends \Google\Protobuf\Internal\Message
      */
     public function setOptimizationMode($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\CustomerAcquisitionOptimizationModeEnum\CustomerAcquisitionOptimizationMode::class);
+        GPBUtil::checkEnum($var);
         $this->optimization_mode = $var;
 
         return $this;

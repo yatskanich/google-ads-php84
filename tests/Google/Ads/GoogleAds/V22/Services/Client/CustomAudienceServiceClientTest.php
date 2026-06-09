@@ -74,7 +74,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomAudiences($request);
@@ -112,7 +112,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CustomAudienceServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomAudiencesRequest())
+        $request = new MutateCustomAudiencesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomAudiencesAsync($request)->wait();

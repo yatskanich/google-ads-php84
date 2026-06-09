@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.AssetGroupListingGroupFilterService' => [
             'MutateAssetGroupListingGroupFilters' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\MutateAssetGroupListingGroupFiltersResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\MutateAssetGroupListingGroupFiltersResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

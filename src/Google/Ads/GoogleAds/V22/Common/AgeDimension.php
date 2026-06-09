@@ -79,7 +79,7 @@ class AgeDimension extends \Google\Protobuf\Internal\Message
      */
     public function getIncludeUndetermined()
     {
-        return isset($this->include_undetermined) ? $this->include_undetermined : false;
+        return $this->include_undetermined ?? false;
     }
 
     public function hasIncludeUndetermined()

@@ -127,7 +127,7 @@ class KeywordRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function getRecommendedCpcBidMicros()
     {
-        return isset($this->recommended_cpc_bid_micros) ? $this->recommended_cpc_bid_micros : 0;
+        return $this->recommended_cpc_bid_micros ?? 0;
     }
 
     public function hasRecommendedCpcBidMicros()

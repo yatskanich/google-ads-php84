@@ -65,7 +65,7 @@ class GeoTargetTypeSetting extends \Google\Protobuf\Internal\Message
      */
     public function setPositiveGeoTargetType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\PositiveGeoTargetTypeEnum\PositiveGeoTargetType::class);
+        GPBUtil::checkEnum($var);
         $this->positive_geo_target_type = $var;
 
         return $this;
@@ -91,7 +91,7 @@ class GeoTargetTypeSetting extends \Google\Protobuf\Internal\Message
      */
     public function setNegativeGeoTargetType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\NegativeGeoTargetTypeEnum\NegativeGeoTargetType::class);
+        GPBUtil::checkEnum($var);
         $this->negative_geo_target_type = $var;
 
         return $this;

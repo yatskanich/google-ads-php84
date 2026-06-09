@@ -55,7 +55,7 @@ class BenchmarksServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.BenchmarksService/ListBenchmarksAvailableDates',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\ListBenchmarksAvailableDatesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\ListBenchmarksAvailableDatesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -80,7 +80,7 @@ class BenchmarksServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.BenchmarksService/ListBenchmarksLocations',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\ListBenchmarksLocationsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\ListBenchmarksLocationsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -104,7 +104,7 @@ class BenchmarksServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.BenchmarksService/ListBenchmarksProducts',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\ListBenchmarksProductsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\ListBenchmarksProductsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -128,7 +128,7 @@ class BenchmarksServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.BenchmarksService/ListBenchmarksSources',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\ListBenchmarksSourcesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\ListBenchmarksSourcesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -155,7 +155,7 @@ class BenchmarksServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.BenchmarksService/GenerateBenchmarksMetrics',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\GenerateBenchmarksMetricsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\GenerateBenchmarksMetricsResponse::class, 'decode'],
         $metadata, $options);
     }
 

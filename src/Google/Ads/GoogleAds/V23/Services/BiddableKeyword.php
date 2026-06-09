@@ -98,7 +98,7 @@ class BiddableKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getMaxCpcBidMicros()
     {
-        return isset($this->max_cpc_bid_micros) ? $this->max_cpc_bid_micros : 0;
+        return $this->max_cpc_bid_micros ?? 0;
     }
 
     public function hasMaxCpcBidMicros()

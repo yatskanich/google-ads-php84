@@ -53,7 +53,7 @@ class KeywordInfo extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return isset($this->text) ? $this->text : '';
+        return $this->text ?? '';
     }
 
     public function hasText()
@@ -101,7 +101,7 @@ class KeywordInfo extends \Google\Protobuf\Internal\Message
      */
     public function setMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\KeywordMatchTypeEnum\KeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->match_type = $var;
 
         return $this;

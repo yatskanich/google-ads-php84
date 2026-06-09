@@ -330,4 +330,6 @@ class UseCrossAccountBiddingStrategy
     // [END attach_strategy]
 }
 
-UseCrossAccountBiddingStrategy::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UseCrossAccountBiddingStrategy::main();
+}

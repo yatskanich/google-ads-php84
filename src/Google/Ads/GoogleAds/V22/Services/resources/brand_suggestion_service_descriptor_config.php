@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.BrandSuggestionService' => [
             'SuggestBrands' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\SuggestBrandsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\SuggestBrandsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

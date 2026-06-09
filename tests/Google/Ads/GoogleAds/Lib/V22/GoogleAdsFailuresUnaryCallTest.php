@@ -53,7 +53,7 @@ class GoogleAdsFailuresUnaryCallTest extends TestCase
         $googleAdsFailuresUnaryCallMock = $this->getMockBuilder(GoogleAdsFailuresUnaryCall::class)
             ->enableOriginalConstructor()
             ->setConstructorArgs([$forwardingCallMock])
-            ->setMethodsExcept(array('wait'))
+            ->setMethodsExcept(['wait'])
             ->getMock();
         $googleAdsFailuresUnaryCallMock
             ->expects($isInitializationExpected ? $this->once() : $this->never())

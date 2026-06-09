@@ -33,7 +33,7 @@ class ConfigurationLoaderTestProvider
      */
     public static function getFilePathForTestIniFile()
     {
-        return dirname(__FILE__) . DIRECTORY_SEPARATOR . 'google_ads_php.ini';
+        return __DIR__ . DIRECTORY_SEPARATOR . 'google_ads_php.ini';
     }
 
     /**
@@ -44,7 +44,7 @@ class ConfigurationLoaderTestProvider
      */
     public static function getFilePathToFakeHome()
     {
-        $path = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'fakehome';
+        $path = __DIR__ . DIRECTORY_SEPARATOR . 'fakehome';
         
         // Automatically create the directory if it doesn't exist
         if (!file_exists($path)) {

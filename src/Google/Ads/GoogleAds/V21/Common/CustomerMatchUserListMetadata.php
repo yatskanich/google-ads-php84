@@ -56,7 +56,7 @@ class CustomerMatchUserListMetadata extends \Google\Protobuf\Internal\Message
      */
     public function getUserList()
     {
-        return isset($this->user_list) ? $this->user_list : '';
+        return $this->user_list ?? '';
     }
 
     public function hasUserList()

@@ -46,7 +46,7 @@ class PlacementListInfo extends \Google\Protobuf\Internal\Message
      */
     public function getSharedSet()
     {
-        return isset($this->shared_set) ? $this->shared_set : '';
+        return $this->shared_set ?? '';
     }
 
     public function hasSharedSet()

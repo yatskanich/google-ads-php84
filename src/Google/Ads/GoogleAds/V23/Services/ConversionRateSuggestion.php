@@ -89,7 +89,7 @@ class ConversionRateSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function setConversionRateModel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\ReachPlanConversionRateModelEnum\ReachPlanConversionRateModel::class);
+        GPBUtil::checkEnum($var);
         $this->conversion_rate_model = $var;
 
         return $this;

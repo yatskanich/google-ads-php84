@@ -44,7 +44,7 @@ class StartIdentityVerificationRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, int $verificationProgram): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setVerificationProgram($verificationProgram);
     }
@@ -118,7 +118,7 @@ class StartIdentityVerificationRequest extends \Google\Protobuf\Internal\Message
      */
     public function setVerificationProgram($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\IdentityVerificationProgramEnum\IdentityVerificationProgram::class);
+        GPBUtil::checkEnum($var);
         $this->verification_program = $var;
 
         return $this;

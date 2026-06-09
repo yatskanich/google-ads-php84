@@ -48,7 +48,7 @@ class CalloutFeedItem extends \Google\Protobuf\Internal\Message
      */
     public function getCalloutText()
     {
-        return isset($this->callout_text) ? $this->callout_text : '';
+        return $this->callout_text ?? '';
     }
 
     public function hasCalloutText()

@@ -62,7 +62,7 @@ class GenerateAudienceDefinitionRequest extends \Google\Protobuf\Internal\Messag
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V24\Services\InsightsAudienceDescription $audienceDescription): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setAudienceDescription($audienceDescription);
     }

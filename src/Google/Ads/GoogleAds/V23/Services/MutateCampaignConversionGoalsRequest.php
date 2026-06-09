@@ -50,7 +50,7 @@ class MutateCampaignConversionGoalsRequest extends \Google\Protobuf\Internal\Mes
      */
     public static function build(string $customerId, array $operations): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setOperations($operations);
     }

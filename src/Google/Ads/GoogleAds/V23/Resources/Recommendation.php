@@ -323,7 +323,7 @@ class Recommendation extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\RecommendationTypeEnum\RecommendationType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -379,7 +379,7 @@ class Recommendation extends \Google\Protobuf\Internal\Message
      */
     public function getCampaignBudget()
     {
-        return isset($this->campaign_budget) ? $this->campaign_budget : '';
+        return $this->campaign_budget ?? '';
     }
 
     public function hasCampaignBudget()
@@ -438,7 +438,7 @@ class Recommendation extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -497,7 +497,7 @@ class Recommendation extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -537,7 +537,7 @@ class Recommendation extends \Google\Protobuf\Internal\Message
      */
     public function getDismissed()
     {
-        return isset($this->dismissed) ? $this->dismissed : false;
+        return $this->dismissed ?? false;
     }
 
     public function hasDismissed()

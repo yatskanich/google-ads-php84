@@ -145,7 +145,7 @@ class AdGroupKeywordSuggestion extends \Google\Protobuf\Internal\Message
      */
     public function setSuggestedMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\KeywordMatchTypeEnum\KeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->suggested_match_type = $var;
 
         return $this;

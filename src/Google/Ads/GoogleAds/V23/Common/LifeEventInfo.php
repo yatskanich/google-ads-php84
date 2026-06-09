@@ -45,7 +45,7 @@ class LifeEventInfo extends \Google\Protobuf\Internal\Message
      */
     public function getLifeEventId()
     {
-        return isset($this->life_event_id) ? $this->life_event_id : 0;
+        return $this->life_event_id ?? 0;
     }
 
     public function hasLifeEventId()

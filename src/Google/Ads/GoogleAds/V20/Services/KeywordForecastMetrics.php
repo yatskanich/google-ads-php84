@@ -101,7 +101,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getImpressions()
     {
-        return isset($this->impressions) ? $this->impressions : 0.0;
+        return $this->impressions ?? 0.0;
     }
 
     public function hasImpressions()
@@ -137,7 +137,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getClickThroughRate()
     {
-        return isset($this->click_through_rate) ? $this->click_through_rate : 0.0;
+        return $this->click_through_rate ?? 0.0;
     }
 
     public function hasClickThroughRate()
@@ -173,7 +173,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpcMicros()
     {
-        return isset($this->average_cpc_micros) ? $this->average_cpc_micros : 0;
+        return $this->average_cpc_micros ?? 0;
     }
 
     public function hasAverageCpcMicros()
@@ -209,7 +209,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getClicks()
     {
-        return isset($this->clicks) ? $this->clicks : 0.0;
+        return $this->clicks ?? 0.0;
     }
 
     public function hasClicks()
@@ -245,7 +245,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCostMicros()
     {
-        return isset($this->cost_micros) ? $this->cost_micros : 0;
+        return $this->cost_micros ?? 0;
     }
 
     public function hasCostMicros()
@@ -281,7 +281,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getConversions()
     {
-        return isset($this->conversions) ? $this->conversions : 0.0;
+        return $this->conversions ?? 0.0;
     }
 
     public function hasConversions()
@@ -317,7 +317,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getConversionRate()
     {
-        return isset($this->conversion_rate) ? $this->conversion_rate : 0.0;
+        return $this->conversion_rate ?? 0.0;
     }
 
     public function hasConversionRate()
@@ -353,7 +353,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpaMicros()
     {
-        return isset($this->average_cpa_micros) ? $this->average_cpa_micros : 0;
+        return $this->average_cpa_micros ?? 0;
     }
 
     public function hasAverageCpaMicros()

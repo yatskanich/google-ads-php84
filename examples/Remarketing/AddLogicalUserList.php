@@ -161,4 +161,6 @@ class AddLogicalUserList
     // [END add_logical_user_list]
 }
 
-AddLogicalUserList::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddLogicalUserList::main();
+}

@@ -53,7 +53,7 @@ class BudgetCampaignAssociationStatus extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -101,7 +101,7 @@ class BudgetCampaignAssociationStatus extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\BudgetCampaignAssociationStatusEnum\BudgetCampaignAssociationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

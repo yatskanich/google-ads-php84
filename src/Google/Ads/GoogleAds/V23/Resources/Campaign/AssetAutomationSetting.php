@@ -54,7 +54,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationType()
     {
-        return isset($this->asset_automation_type) ? $this->asset_automation_type : 0;
+        return $this->asset_automation_type ?? 0;
     }
 
     public function hasAssetAutomationType()
@@ -76,7 +76,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function setAssetAutomationType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AssetAutomationTypeEnum\AssetAutomationType::class);
+        GPBUtil::checkEnum($var);
         $this->asset_automation_type = $var;
 
         return $this;
@@ -90,7 +90,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function getAssetAutomationStatus()
     {
-        return isset($this->asset_automation_status) ? $this->asset_automation_status : 0;
+        return $this->asset_automation_status ?? 0;
     }
 
     public function hasAssetAutomationStatus()
@@ -112,7 +112,7 @@ class AssetAutomationSetting extends \Google\Protobuf\Internal\Message
      */
     public function setAssetAutomationStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AssetAutomationStatusEnum\AssetAutomationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->asset_automation_status = $var;
 
         return $this;

@@ -89,7 +89,7 @@ class UserListDateRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function setOperator($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListDateRuleItemOperatorEnum\UserListDateRuleItemOperator::class);
+        GPBUtil::checkEnum($var);
         $this->operator = $var;
 
         return $this;
@@ -105,7 +105,7 @@ class UserListDateRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()
@@ -145,7 +145,7 @@ class UserListDateRuleItemInfo extends \Google\Protobuf\Internal\Message
      */
     public function getOffsetInDays()
     {
-        return isset($this->offset_in_days) ? $this->offset_in_days : 0;
+        return $this->offset_in_days ?? 0;
     }
 
     public function hasOffsetInDays()

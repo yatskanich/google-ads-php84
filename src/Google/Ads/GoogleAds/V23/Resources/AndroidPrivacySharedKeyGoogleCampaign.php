@@ -157,7 +157,7 @@ class AndroidPrivacySharedKeyGoogleCampaign extends \Google\Protobuf\Internal\Me
      */
     public function setAndroidPrivacyInteractionType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AndroidPrivacyInteractionTypeEnum\AndroidPrivacyInteractionType::class);
+        GPBUtil::checkEnum($var);
         $this->android_privacy_interaction_type = $var;
 
         return $this;

@@ -45,7 +45,7 @@ class CarrierInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCarrierConstant()
     {
-        return isset($this->carrier_constant) ? $this->carrier_constant : '';
+        return $this->carrier_constant ?? '';
     }
 
     public function hasCarrierConstant()

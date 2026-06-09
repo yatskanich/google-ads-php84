@@ -177,7 +177,7 @@ class CampaignToForecast extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanNetwork($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\KeywordPlanNetworkEnum\KeywordPlanNetwork::class);
+        GPBUtil::checkEnum($var);
         $this->keyword_plan_network = $var;
 
         return $this;
@@ -258,7 +258,7 @@ class CampaignToForecast extends \Google\Protobuf\Internal\Message
      */
     public function getConversionRate()
     {
-        return isset($this->conversion_rate) ? $this->conversion_rate : 0.0;
+        return $this->conversion_rate ?? 0.0;
     }
 
     public function hasConversionRate()

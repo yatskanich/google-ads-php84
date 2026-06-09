@@ -70,7 +70,7 @@ class SharedSetServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.SharedSetService/MutateSharedSets',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\MutateSharedSetsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\MutateSharedSetsResponse::class, 'decode'],
         $metadata, $options);
     }
 

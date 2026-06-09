@@ -77,7 +77,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)
@@ -123,7 +123,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)
@@ -157,7 +157,7 @@ class InvoiceServiceClientTest extends GeneratedTest
         $billingSetup = 'billingSetup-1181632583';
         $issueYear = 'issueYear1443510243';
         $issueMonth = MonthOfYear::UNSPECIFIED;
-        $request = (new ListInvoicesRequest())
+        $request = new ListInvoicesRequest()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)

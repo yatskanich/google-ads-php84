@@ -193,7 +193,7 @@ class GroupContentSuitabilityPlacementView extends \Google\Protobuf\Internal\Mes
      */
     public function setPlacementType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\PlacementTypeEnum\PlacementType::class);
+        GPBUtil::checkEnum($var);
         $this->placement_type = $var;
 
         return $this;

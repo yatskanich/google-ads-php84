@@ -66,7 +66,7 @@ class SmartCampaignEligibleDetails extends \Google\Protobuf\Internal\Message
      */
     public function getLastImpressionDateTime()
     {
-        return isset($this->last_impression_date_time) ? $this->last_impression_date_time : '';
+        return $this->last_impression_date_time ?? '';
     }
 
     public function hasLastImpressionDateTime()
@@ -107,7 +107,7 @@ class SmartCampaignEligibleDetails extends \Google\Protobuf\Internal\Message
      */
     public function getEndDateTime()
     {
-        return isset($this->end_date_time) ? $this->end_date_time : '';
+        return $this->end_date_time ?? '';
     }
 
     public function hasEndDateTime()

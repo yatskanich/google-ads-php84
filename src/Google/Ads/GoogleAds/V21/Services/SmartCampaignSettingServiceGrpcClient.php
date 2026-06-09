@@ -45,7 +45,7 @@ class SmartCampaignSettingServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.SmartCampaignSettingService/GetSmartCampaignStatus',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\GetSmartCampaignStatusResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\GetSmartCampaignStatusResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -60,7 +60,7 @@ class SmartCampaignSettingServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.SmartCampaignSettingService/MutateSmartCampaignSettings',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\MutateSmartCampaignSettingsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\MutateSmartCampaignSettingsResponse::class, 'decode'],
         $metadata, $options);
     }
 

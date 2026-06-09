@@ -75,7 +75,7 @@ class AssetGenerationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateImagesRequest())
+        $request = new GenerateImagesRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->generateImages($request);
         $this->assertEquals($expectedResponse, $response);
@@ -109,7 +109,7 @@ class AssetGenerationServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateImagesRequest())
+        $request = new GenerateImagesRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->generateImages($request);
@@ -138,7 +138,7 @@ class AssetGenerationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $assetFieldTypes = [];
-        $request = (new GenerateTextRequest())
+        $request = new GenerateTextRequest()
             ->setCustomerId($customerId)
             ->setAssetFieldTypes($assetFieldTypes);
         $response = $gapicClient->generateText($request);
@@ -176,7 +176,7 @@ class AssetGenerationServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $assetFieldTypes = [];
-        $request = (new GenerateTextRequest())
+        $request = new GenerateTextRequest()
             ->setCustomerId($customerId)
             ->setAssetFieldTypes($assetFieldTypes);
         try {
@@ -205,7 +205,7 @@ class AssetGenerationServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateImagesRequest())
+        $request = new GenerateImagesRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->generateImagesAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response);

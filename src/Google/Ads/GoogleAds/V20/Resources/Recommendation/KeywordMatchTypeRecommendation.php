@@ -105,7 +105,7 @@ class KeywordMatchTypeRecommendation extends \Google\Protobuf\Internal\Message
      */
     public function setRecommendedMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\KeywordMatchTypeEnum\KeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->recommended_match_type = $var;
 
         return $this;

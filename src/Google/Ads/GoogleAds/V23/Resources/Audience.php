@@ -206,7 +206,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AudienceStatusEnum\AudienceStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -223,7 +223,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -368,7 +368,7 @@ class Audience extends \Google\Protobuf\Internal\Message
      */
     public function setScope($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\AudienceScopeEnum\AudienceScope::class);
+        GPBUtil::checkEnum($var);
         $this->scope = $var;
 
         return $this;

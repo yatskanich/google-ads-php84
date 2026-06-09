@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.IncentiveService' => [
             'ApplyIncentive' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\ApplyIncentiveResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\ApplyIncentiveResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -43,7 +43,7 @@ return [
             ],
             'FetchIncentive' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\FetchIncentiveResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\FetchIncentiveResponse::class,
             ],
         ],
     ],

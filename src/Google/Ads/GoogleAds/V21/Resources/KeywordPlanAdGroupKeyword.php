@@ -134,7 +134,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getKeywordPlanAdGroup()
     {
-        return isset($this->keyword_plan_ad_group) ? $this->keyword_plan_ad_group : '';
+        return $this->keyword_plan_ad_group ?? '';
     }
 
     public function hasKeywordPlanAdGroup()
@@ -170,7 +170,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -206,7 +206,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return isset($this->text) ? $this->text : '';
+        return $this->text ?? '';
     }
 
     public function hasText()
@@ -254,7 +254,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function setMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\KeywordMatchTypeEnum\KeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->match_type = $var;
 
         return $this;
@@ -271,7 +271,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
+        return $this->cpc_bid_micros ?? 0;
     }
 
     public function hasCpcBidMicros()
@@ -310,7 +310,7 @@ class KeywordPlanAdGroupKeyword extends \Google\Protobuf\Internal\Message
      */
     public function getNegative()
     {
-        return isset($this->negative) ? $this->negative : false;
+        return $this->negative ?? false;
     }
 
     public function hasNegative()

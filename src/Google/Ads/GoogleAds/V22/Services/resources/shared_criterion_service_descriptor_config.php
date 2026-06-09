@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.SharedCriterionService' => [
             'MutateSharedCriteria' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateSharedCriteriaResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateSharedCriteriaResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

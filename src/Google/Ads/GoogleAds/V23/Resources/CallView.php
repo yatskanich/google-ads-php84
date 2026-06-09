@@ -290,7 +290,7 @@ class CallView extends \Google\Protobuf\Internal\Message
      */
     public function setCallTrackingDisplayLocation($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CallTrackingDisplayLocationEnum\CallTrackingDisplayLocation::class);
+        GPBUtil::checkEnum($var);
         $this->call_tracking_display_location = $var;
 
         return $this;
@@ -316,7 +316,7 @@ class CallView extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\CallTypeEnum\CallType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -342,7 +342,7 @@ class CallView extends \Google\Protobuf\Internal\Message
      */
     public function setCallStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\GoogleVoiceCallStatusEnum\GoogleVoiceCallStatus::class);
+        GPBUtil::checkEnum($var);
         $this->call_status = $var;
 
         return $this;

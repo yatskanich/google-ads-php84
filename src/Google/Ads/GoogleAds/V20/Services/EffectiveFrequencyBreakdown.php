@@ -193,7 +193,7 @@ class EffectiveFrequencyBreakdown extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveCoviewReach()
     {
-        return isset($this->effective_coview_reach) ? $this->effective_coview_reach : 0;
+        return $this->effective_coview_reach ?? 0;
     }
 
     public function hasEffectiveCoviewReach()
@@ -231,7 +231,7 @@ class EffectiveFrequencyBreakdown extends \Google\Protobuf\Internal\Message
      */
     public function getOnTargetEffectiveCoviewReach()
     {
-        return isset($this->on_target_effective_coview_reach) ? $this->on_target_effective_coview_reach : 0;
+        return $this->on_target_effective_coview_reach ?? 0;
     }
 
     public function hasOnTargetEffectiveCoviewReach()

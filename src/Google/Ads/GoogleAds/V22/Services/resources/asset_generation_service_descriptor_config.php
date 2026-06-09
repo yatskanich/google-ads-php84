@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.AssetGenerationService' => [
             'GenerateImages' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\GenerateImagesResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\GenerateImagesResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',
@@ -37,7 +37,7 @@ return [
             ],
             'GenerateText' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\GenerateTextResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\GenerateTextResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

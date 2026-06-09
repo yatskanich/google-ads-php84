@@ -151,4 +151,6 @@ class AddDemographicTargetingCriteria
     }
 }
 
-AddDemographicTargetingCriteria::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddDemographicTargetingCriteria::main();
+}

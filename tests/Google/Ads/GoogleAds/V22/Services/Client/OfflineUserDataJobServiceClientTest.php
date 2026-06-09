@@ -83,7 +83,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->offlineUserDataJobName('[CUSTOMER_ID]', '[OFFLINE_USER_DATA_UPDATE_ID]');
         $operations = [];
-        $request = (new AddOfflineUserDataJobOperationsRequest())
+        $request = new AddOfflineUserDataJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setOperations($operations);
         $response = $gapicClient->addOfflineUserDataJobOperations($request);
@@ -121,7 +121,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->offlineUserDataJobName('[CUSTOMER_ID]', '[OFFLINE_USER_DATA_UPDATE_ID]');
         $operations = [];
-        $request = (new AddOfflineUserDataJobOperationsRequest())
+        $request = new AddOfflineUserDataJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setOperations($operations);
         try {
@@ -153,7 +153,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $job = new OfflineUserDataJob();
-        $request = (new CreateOfflineUserDataJobRequest())
+        $request = new CreateOfflineUserDataJobRequest()
             ->setCustomerId($customerId)
             ->setJob($job);
         $response = $gapicClient->createOfflineUserDataJob($request);
@@ -191,7 +191,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $job = new OfflineUserDataJob();
-        $request = (new CreateOfflineUserDataJobRequest())
+        $request = new CreateOfflineUserDataJobRequest()
             ->setCustomerId($customerId)
             ->setJob($job);
         try {
@@ -238,7 +238,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse($completeOperation);
         // Mock request
         $formattedResourceName = $gapicClient->offlineUserDataJobName('[CUSTOMER_ID]', '[OFFLINE_USER_DATA_UPDATE_ID]');
-        $request = (new RunOfflineUserDataJobRequest())
+        $request = new RunOfflineUserDataJobRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->runOfflineUserDataJob($request);
         $this->assertFalse($response->isDone());
@@ -304,7 +304,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->offlineUserDataJobName('[CUSTOMER_ID]', '[OFFLINE_USER_DATA_UPDATE_ID]');
-        $request = (new RunOfflineUserDataJobRequest())
+        $request = new RunOfflineUserDataJobRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->runOfflineUserDataJob($request);
         $this->assertFalse($response->isDone());
@@ -342,7 +342,7 @@ class OfflineUserDataJobServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->offlineUserDataJobName('[CUSTOMER_ID]', '[OFFLINE_USER_DATA_UPDATE_ID]');
         $operations = [];
-        $request = (new AddOfflineUserDataJobOperationsRequest())
+        $request = new AddOfflineUserDataJobOperationsRequest()
             ->setResourceName($formattedResourceName)
             ->setOperations($operations);
         $response = $gapicClient->addOfflineUserDataJobOperationsAsync($request)->wait();

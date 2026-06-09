@@ -296,4 +296,6 @@ class AddResponsiveSearchAdWithAdCustomizer
     // [END add_responsive_search_ad_with_ad_customizer_3]
 }
 
-AddResponsiveSearchAdWithAdCustomizer::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddResponsiveSearchAdWithAdCustomizer::main();
+}

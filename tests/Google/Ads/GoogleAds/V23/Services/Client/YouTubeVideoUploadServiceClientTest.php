@@ -82,7 +82,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $youTubeVideoUpload = new YouTubeVideoUpload();
-        $request = (new CreateYouTubeVideoUploadRequest())
+        $request = new CreateYouTubeVideoUploadRequest()
             ->setCustomerId($customerId)
             ->setYouTubeVideoUpload($youTubeVideoUpload);
         $response = $gapicClient->createYouTubeVideoUpload($request);
@@ -120,7 +120,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $youTubeVideoUpload = new YouTubeVideoUpload();
-        $request = (new CreateYouTubeVideoUploadRequest())
+        $request = new CreateYouTubeVideoUploadRequest()
             ->setCustomerId($customerId)
             ->setYouTubeVideoUpload($youTubeVideoUpload);
         try {
@@ -149,7 +149,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new RemoveYouTubeVideoUploadRequest())
+        $request = new RemoveYouTubeVideoUploadRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->removeYouTubeVideoUpload($request);
         $this->assertEquals($expectedResponse, $response);
@@ -183,7 +183,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new RemoveYouTubeVideoUploadRequest())
+        $request = new RemoveYouTubeVideoUploadRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->removeYouTubeVideoUpload($request);
@@ -215,7 +215,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $youTubeVideoUpload = new YouTubeVideoUpload();
         $updateMask = new FieldMask();
-        $request = (new UpdateYouTubeVideoUploadRequest())
+        $request = new UpdateYouTubeVideoUploadRequest()
             ->setCustomerId($customerId)
             ->setYouTubeVideoUpload($youTubeVideoUpload)
             ->setUpdateMask($updateMask);
@@ -257,7 +257,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $youTubeVideoUpload = new YouTubeVideoUpload();
         $updateMask = new FieldMask();
-        $request = (new UpdateYouTubeVideoUploadRequest())
+        $request = new UpdateYouTubeVideoUploadRequest()
             ->setCustomerId($customerId)
             ->setYouTubeVideoUpload($youTubeVideoUpload)
             ->setUpdateMask($updateMask);
@@ -290,7 +290,7 @@ class YouTubeVideoUploadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $youTubeVideoUpload = new YouTubeVideoUpload();
-        $request = (new CreateYouTubeVideoUploadRequest())
+        $request = new CreateYouTubeVideoUploadRequest()
             ->setCustomerId($customerId)
             ->setYouTubeVideoUpload($youTubeVideoUpload);
         $response = $gapicClient->createYouTubeVideoUploadAsync($request)->wait();

@@ -56,7 +56,7 @@ class ApplyIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $countryCode): self
     {
-        return (new self())
+        return new self()
             ->setCountryCode($countryCode);
     }
 
@@ -95,7 +95,7 @@ class ApplyIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getSelectedIncentiveId()
     {
-        return isset($this->selected_incentive_id) ? $this->selected_incentive_id : 0;
+        return $this->selected_incentive_id ?? 0;
     }
 
     public function hasSelectedIncentiveId()
@@ -132,7 +132,7 @@ class ApplyIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerId()
     {
-        return isset($this->customer_id) ? $this->customer_id : '';
+        return $this->customer_id ?? '';
     }
 
     public function hasCustomerId()
@@ -174,7 +174,7 @@ class ApplyIncentiveRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()

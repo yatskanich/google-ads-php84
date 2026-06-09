@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.BillingSetupService' => [
             'MutateBillingSetup' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\MutateBillingSetupResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\MutateBillingSetupResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

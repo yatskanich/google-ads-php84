@@ -62,7 +62,7 @@ class ProvideLeadFeedbackResponse extends \Google\Protobuf\Internal\Message
      */
     public function setCreditIssuanceDecision($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LocalServicesLeadCreditIssuanceDecisionEnum\CreditIssuanceDecision::class);
+        GPBUtil::checkEnum($var);
         $this->credit_issuance_decision = $var;
 
         return $this;

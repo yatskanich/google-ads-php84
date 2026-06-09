@@ -67,7 +67,7 @@ class ListInvoicesRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $billingSetup, string $issueYear, int $issueMonth): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setBillingSetup($billingSetup)
             ->setIssueYear($issueYear)
@@ -203,7 +203,7 @@ class ListInvoicesRequest extends \Google\Protobuf\Internal\Message
      */
     public function setIssueMonth($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\MonthOfYearEnum\MonthOfYear::class);
+        GPBUtil::checkEnum($var);
         $this->issue_month = $var;
 
         return $this;

@@ -45,7 +45,7 @@ class LifeEventSegment extends \Google\Protobuf\Internal\Message
      */
     public function getLifeEvent()
     {
-        return isset($this->life_event) ? $this->life_event : '';
+        return $this->life_event ?? '';
     }
 
     public function hasLifeEvent()

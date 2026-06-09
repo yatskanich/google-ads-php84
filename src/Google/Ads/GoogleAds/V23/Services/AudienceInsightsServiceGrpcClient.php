@@ -57,7 +57,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateInsightsFinderReport',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateInsightsFinderReportResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateInsightsFinderReportResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -82,7 +82,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/ListAudienceInsightsAttributes',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\ListAudienceInsightsAttributesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\ListAudienceInsightsAttributesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -107,7 +107,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/ListInsightsEligibleDates',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\ListInsightsEligibleDatesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\ListInsightsEligibleDatesResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -135,7 +135,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateAudienceCompositionInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateAudienceCompositionInsightsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateAudienceCompositionInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -161,7 +161,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateAudienceDefinition',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateAudienceDefinitionResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateAudienceDefinitionResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -188,7 +188,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateSuggestedTargetingInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateSuggestedTargetingInsightsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateSuggestedTargetingInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -216,7 +216,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateAudienceOverlapInsights',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateAudienceOverlapInsightsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateAudienceOverlapInsightsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -245,7 +245,7 @@ class AudienceInsightsServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.AudienceInsightsService/GenerateTargetingSuggestionMetrics',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\GenerateTargetingSuggestionMetricsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\GenerateTargetingSuggestionMetricsResponse::class, 'decode'],
         $metadata, $options);
     }
 

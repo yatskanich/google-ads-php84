@@ -45,7 +45,7 @@ class MediaAudio extends \Google\Protobuf\Internal\Message
      */
     public function getAdDurationMillis()
     {
-        return isset($this->ad_duration_millis) ? $this->ad_duration_millis : 0;
+        return $this->ad_duration_millis ?? 0;
     }
 
     public function hasAdDurationMillis()

@@ -55,7 +55,7 @@ class ProductLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ProductLinkService/CreateProductLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\CreateProductLinkResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\CreateProductLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -80,7 +80,7 @@ class ProductLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.ProductLinkService/RemoveProductLink',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\RemoveProductLinkResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\RemoveProductLinkResponse::class, 'decode'],
         $metadata, $options);
     }
 

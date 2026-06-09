@@ -45,7 +45,7 @@ class LocalServicesDocumentReadOnly extends \Google\Protobuf\Internal\Message
      */
     public function getDocumentUrl()
     {
-        return isset($this->document_url) ? $this->document_url : '';
+        return $this->document_url ?? '';
     }
 
     public function hasDocumentUrl()

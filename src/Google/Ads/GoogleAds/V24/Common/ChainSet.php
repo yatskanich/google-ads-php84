@@ -69,7 +69,7 @@ class ChainSet extends \Google\Protobuf\Internal\Message
      */
     public function setRelationshipType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ChainRelationshipTypeEnum\ChainRelationshipType::class);
+        GPBUtil::checkEnum($var);
         $this->relationship_type = $var;
 
         return $this;

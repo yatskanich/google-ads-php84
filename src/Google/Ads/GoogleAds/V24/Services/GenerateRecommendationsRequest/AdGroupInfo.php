@@ -72,7 +72,7 @@ class AdGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroupType()
     {
-        return isset($this->ad_group_type) ? $this->ad_group_type : 0;
+        return $this->ad_group_type ?? 0;
     }
 
     public function hasAdGroupType()
@@ -97,7 +97,7 @@ class AdGroupInfo extends \Google\Protobuf\Internal\Message
      */
     public function setAdGroupType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdGroupTypeEnum\AdGroupType::class);
+        GPBUtil::checkEnum($var);
         $this->ad_group_type = $var;
 
         return $this;

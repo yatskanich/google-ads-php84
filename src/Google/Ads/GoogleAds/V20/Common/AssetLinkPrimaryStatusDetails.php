@@ -62,7 +62,7 @@ class AssetLinkPrimaryStatusDetails extends \Google\Protobuf\Internal\Message
      */
     public function getReason()
     {
-        return isset($this->reason) ? $this->reason : 0;
+        return $this->reason ?? 0;
     }
 
     public function hasReason()
@@ -84,7 +84,7 @@ class AssetLinkPrimaryStatusDetails extends \Google\Protobuf\Internal\Message
      */
     public function setReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AssetLinkPrimaryStatusReasonEnum\AssetLinkPrimaryStatusReason::class);
+        GPBUtil::checkEnum($var);
         $this->reason = $var;
 
         return $this;
@@ -98,7 +98,7 @@ class AssetLinkPrimaryStatusDetails extends \Google\Protobuf\Internal\Message
      */
     public function getStatus()
     {
-        return isset($this->status) ? $this->status : 0;
+        return $this->status ?? 0;
     }
 
     public function hasStatus()
@@ -120,7 +120,7 @@ class AssetLinkPrimaryStatusDetails extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AssetLinkPrimaryStatusEnum\AssetLinkPrimaryStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

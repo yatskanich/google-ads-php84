@@ -45,7 +45,7 @@ class YouTubeVideoInfo extends \Google\Protobuf\Internal\Message
      */
     public function getVideoId()
     {
-        return isset($this->video_id) ? $this->video_id : '';
+        return $this->video_id ?? '';
     }
 
     public function hasVideoId()

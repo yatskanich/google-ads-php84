@@ -45,7 +45,7 @@ class HotelStateInfo extends \Google\Protobuf\Internal\Message
      */
     public function getStateCriterion()
     {
-        return isset($this->state_criterion) ? $this->state_criterion : '';
+        return $this->state_criterion ?? '';
     }
 
     public function hasStateCriterion()

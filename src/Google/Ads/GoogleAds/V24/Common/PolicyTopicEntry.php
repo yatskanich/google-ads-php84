@@ -88,7 +88,7 @@ class PolicyTopicEntry extends \Google\Protobuf\Internal\Message
      */
     public function getTopic()
     {
-        return isset($this->topic) ? $this->topic : '';
+        return $this->topic ?? '';
     }
 
     public function hasTopic()
@@ -139,7 +139,7 @@ class PolicyTopicEntry extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\PolicyTopicEntryTypeEnum\PolicyTopicEntryType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

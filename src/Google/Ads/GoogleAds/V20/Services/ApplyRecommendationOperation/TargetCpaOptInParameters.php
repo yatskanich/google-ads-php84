@@ -56,7 +56,7 @@ class TargetCpaOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
+        return $this->target_cpa_micros ?? 0;
     }
 
     public function hasTargetCpaMicros()
@@ -93,7 +93,7 @@ class TargetCpaOptInParameters extends \Google\Protobuf\Internal\Message
      */
     public function getNewCampaignBudgetAmountMicros()
     {
-        return isset($this->new_campaign_budget_amount_micros) ? $this->new_campaign_budget_amount_micros : 0;
+        return $this->new_campaign_budget_amount_micros ?? 0;
     }
 
     public function hasNewCampaignBudgetAmountMicros()

@@ -51,7 +51,7 @@ class AdvertisingPartnerLinkInvitationProperties extends \Google\Protobuf\Intern
      */
     public function getAllowedDomain()
     {
-        return isset($this->allowed_domain) ? $this->allowed_domain : '';
+        return $this->allowed_domain ?? '';
     }
 
     public function hasAllowedDomain()

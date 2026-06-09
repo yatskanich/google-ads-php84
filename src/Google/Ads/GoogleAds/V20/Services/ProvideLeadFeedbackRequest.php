@@ -101,7 +101,7 @@ class ProvideLeadFeedbackRequest extends \Google\Protobuf\Internal\Message
      */
     public function setSurveyAnswer($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\LocalServicesLeadSurveyAnswerEnum\SurveyAnswer::class);
+        GPBUtil::checkEnum($var);
         $this->survey_answer = $var;
 
         return $this;

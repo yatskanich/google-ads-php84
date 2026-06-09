@@ -61,7 +61,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getInstitutionName()
     {
-        return isset($this->institution_name) ? $this->institution_name : '';
+        return $this->institution_name ?? '';
     }
 
     public function hasInstitutionName()
@@ -97,7 +97,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getDegree()
     {
-        return isset($this->degree) ? $this->degree : '';
+        return $this->degree ?? '';
     }
 
     public function hasDegree()
@@ -133,7 +133,7 @@ class UniversityDegree extends \Google\Protobuf\Internal\Message
      */
     public function getGraduationYear()
     {
-        return isset($this->graduation_year) ? $this->graduation_year : 0;
+        return $this->graduation_year ?? 0;
     }
 
     public function hasGraduationYear()

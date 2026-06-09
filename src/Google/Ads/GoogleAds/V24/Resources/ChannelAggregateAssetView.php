@@ -112,7 +112,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAdvertisingChannelType()
     {
-        return isset($this->advertising_channel_type) ? $this->advertising_channel_type : 0;
+        return $this->advertising_channel_type ?? 0;
     }
 
     public function hasAdvertisingChannelType()
@@ -134,7 +134,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setAdvertisingChannelType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType::class);
+        GPBUtil::checkEnum($var);
         $this->advertising_channel_type = $var;
 
         return $this;
@@ -148,7 +148,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAsset()
     {
-        return isset($this->asset) ? $this->asset : '';
+        return $this->asset ?? '';
     }
 
     public function hasAsset()
@@ -184,7 +184,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getAssetSource()
     {
-        return isset($this->asset_source) ? $this->asset_source : 0;
+        return $this->asset_source ?? 0;
     }
 
     public function hasAssetSource()
@@ -206,7 +206,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setAssetSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetSourceEnum\AssetSource::class);
+        GPBUtil::checkEnum($var);
         $this->asset_source = $var;
 
         return $this;
@@ -220,7 +220,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function getFieldType()
     {
-        return isset($this->field_type) ? $this->field_type : 0;
+        return $this->field_type ?? 0;
     }
 
     public function hasFieldType()
@@ -242,7 +242,7 @@ class ChannelAggregateAssetView extends \Google\Protobuf\Internal\Message
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;

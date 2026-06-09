@@ -76,7 +76,7 @@ class BusinessMessageAsset extends \Google\Protobuf\Internal\Message
      */
     public function setMessageProvider($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\BusinessMessageProviderEnum\BusinessMessageProvider::class);
+        GPBUtil::checkEnum($var);
         $this->message_provider = $var;
 
         return $this;

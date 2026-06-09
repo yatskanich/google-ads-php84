@@ -94,7 +94,7 @@ class GenerateBenchmarksMetricsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V23\Common\LocationInfo $location, \Google\Ads\GoogleAds\V23\Services\BenchmarksSource $benchmarksSource, \Google\Ads\GoogleAds\V23\Services\ProductFilter $productFilter): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setLocation($location)
             ->setBenchmarksSource($benchmarksSource)

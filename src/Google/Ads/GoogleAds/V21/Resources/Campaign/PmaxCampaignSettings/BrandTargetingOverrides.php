@@ -45,7 +45,7 @@ class BrandTargetingOverrides extends \Google\Protobuf\Internal\Message
      */
     public function getIgnoreExclusionsForShoppingAds()
     {
-        return isset($this->ignore_exclusions_for_shopping_ads) ? $this->ignore_exclusions_for_shopping_ads : false;
+        return $this->ignore_exclusions_for_shopping_ads ?? false;
     }
 
     public function hasIgnoreExclusionsForShoppingAds()

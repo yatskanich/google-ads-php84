@@ -48,7 +48,7 @@ class AdvertisingPartnerLinkInvitationIdentifier extends \Google\Protobuf\Intern
      */
     public function getCustomer()
     {
-        return isset($this->customer) ? $this->customer : '';
+        return $this->customer ?? '';
     }
 
     public function hasCustomer()

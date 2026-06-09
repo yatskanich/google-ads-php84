@@ -89,7 +89,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->campaignDraftName('[CUSTOMER_ID]', '[BASE_CAMPAIGN_ID]', '[DRAFT_ID]');
-        $request = (new ListCampaignDraftAsyncErrorsRequest())
+        $request = new ListCampaignDraftAsyncErrorsRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->listCampaignDraftAsyncErrors($request);
         $this->assertEquals($expectedResponse, $response->getPage()->getResponseObject());
@@ -126,7 +126,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $formattedResourceName = $gapicClient->campaignDraftName('[CUSTOMER_ID]', '[BASE_CAMPAIGN_ID]', '[DRAFT_ID]');
-        $request = (new ListCampaignDraftAsyncErrorsRequest())
+        $request = new ListCampaignDraftAsyncErrorsRequest()
             ->setResourceName($formattedResourceName);
         try {
             $gapicClient->listCampaignDraftAsyncErrors($request);
@@ -155,7 +155,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignDraftsRequest())
+        $request = new MutateCampaignDraftsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignDrafts($request);
@@ -193,7 +193,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignDraftsRequest())
+        $request = new MutateCampaignDraftsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -240,7 +240,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse($completeOperation);
         // Mock request
         $formattedCampaignDraft = $gapicClient->campaignDraftName('[CUSTOMER_ID]', '[BASE_CAMPAIGN_ID]', '[DRAFT_ID]');
-        $request = (new PromoteCampaignDraftRequest())
+        $request = new PromoteCampaignDraftRequest()
             ->setCampaignDraft($formattedCampaignDraft);
         $response = $gapicClient->promoteCampaignDraft($request);
         $this->assertFalse($response->isDone());
@@ -306,7 +306,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         $operationsTransport->addResponse(null, $status);
         // Mock request
         $formattedCampaignDraft = $gapicClient->campaignDraftName('[CUSTOMER_ID]', '[BASE_CAMPAIGN_ID]', '[DRAFT_ID]');
-        $request = (new PromoteCampaignDraftRequest())
+        $request = new PromoteCampaignDraftRequest()
             ->setCampaignDraft($formattedCampaignDraft);
         $response = $gapicClient->promoteCampaignDraft($request);
         $this->assertFalse($response->isDone());
@@ -350,7 +350,7 @@ class CampaignDraftServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $formattedResourceName = $gapicClient->campaignDraftName('[CUSTOMER_ID]', '[BASE_CAMPAIGN_ID]', '[DRAFT_ID]');
-        $request = (new ListCampaignDraftAsyncErrorsRequest())
+        $request = new ListCampaignDraftAsyncErrorsRequest()
             ->setResourceName($formattedResourceName);
         $response = $gapicClient->listCampaignDraftAsyncErrorsAsync($request)->wait();
         $this->assertEquals($expectedResponse, $response->getPage()->getResponseObject());

@@ -247,7 +247,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -285,7 +285,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getBillingSetup()
     {
-        return isset($this->billing_setup) ? $this->billing_setup : '';
+        return $this->billing_setup ?? '';
     }
 
     public function hasBillingSetup()
@@ -335,7 +335,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AccountBudgetStatusEnum\AccountBudgetStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -349,7 +349,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -387,7 +387,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getProposedStartDateTime()
     {
-        return isset($this->proposed_start_date_time) ? $this->proposed_start_date_time : '';
+        return $this->proposed_start_date_time ?? '';
     }
 
     public function hasProposedStartDateTime()
@@ -428,7 +428,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getApprovedStartDateTime()
     {
-        return isset($this->approved_start_date_time) ? $this->approved_start_date_time : '';
+        return $this->approved_start_date_time ?? '';
     }
 
     public function hasApprovedStartDateTime()
@@ -526,7 +526,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getPurchaseOrderNumber()
     {
-        return isset($this->purchase_order_number) ? $this->purchase_order_number : '';
+        return $this->purchase_order_number ?? '';
     }
 
     public function hasPurchaseOrderNumber()
@@ -563,7 +563,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function getNotes()
     {
-        return isset($this->notes) ? $this->notes : '';
+        return $this->notes ?? '';
     }
 
     public function hasNotes()
@@ -685,7 +685,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setProposedEndTimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\TimeTypeEnum\TimeType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(9, $var);
 
         return $this;
@@ -749,7 +749,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setApprovedEndTimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\TimeTypeEnum\TimeType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(11, $var);
 
         return $this;
@@ -815,7 +815,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setProposedSpendingLimitType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SpendingLimitTypeEnum\SpendingLimitType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(13, $var);
 
         return $this;
@@ -887,7 +887,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setApprovedSpendingLimitType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SpendingLimitTypeEnum\SpendingLimitType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(15, $var);
 
         return $this;
@@ -971,7 +971,7 @@ class AccountBudget extends \Google\Protobuf\Internal\Message
      */
     public function setAdjustedSpendingLimitType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SpendingLimitTypeEnum\SpendingLimitType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(17, $var);
 
         return $this;

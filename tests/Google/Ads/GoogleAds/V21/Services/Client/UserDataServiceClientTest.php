@@ -78,7 +78,7 @@ class UserDataServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new UploadUserDataRequest())
+        $request = new UploadUserDataRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->uploadUserData($request);
@@ -116,7 +116,7 @@ class UserDataServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new UploadUserDataRequest())
+        $request = new UploadUserDataRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -150,7 +150,7 @@ class UserDataServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new UploadUserDataRequest())
+        $request = new UploadUserDataRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->uploadUserDataAsync($request)->wait();

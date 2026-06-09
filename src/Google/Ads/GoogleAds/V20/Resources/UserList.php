@@ -312,7 +312,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -351,7 +351,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getReadOnly()
     {
-        return isset($this->read_only) ? $this->read_only : false;
+        return $this->read_only ?? false;
     }
 
     public function hasReadOnly()
@@ -392,7 +392,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -430,7 +430,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getDescription()
     {
-        return isset($this->description) ? $this->description : '';
+        return $this->description ?? '';
     }
 
     public function hasDescription()
@@ -482,7 +482,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setMembershipStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListMembershipStatusEnum\UserListMembershipStatus::class);
+        GPBUtil::checkEnum($var);
         $this->membership_status = $var;
 
         return $this;
@@ -497,7 +497,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getIntegrationCode()
     {
-        return isset($this->integration_code) ? $this->integration_code : '';
+        return $this->integration_code ?? '';
     }
 
     public function hasIntegrationCode()
@@ -538,7 +538,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getMembershipLifeSpan()
     {
-        return isset($this->membership_life_span) ? $this->membership_life_span : 0;
+        return $this->membership_life_span ?? 0;
     }
 
     public function hasMembershipLifeSpan()
@@ -581,7 +581,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getSizeForDisplay()
     {
-        return isset($this->size_for_display) ? $this->size_for_display : 0;
+        return $this->size_for_display ?? 0;
     }
 
     public function hasSizeForDisplay()
@@ -636,7 +636,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setSizeRangeForDisplay($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListSizeRangeEnum\UserListSizeRange::class);
+        GPBUtil::checkEnum($var);
         $this->size_range_for_display = $var;
 
         return $this;
@@ -653,7 +653,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getSizeForSearch()
     {
-        return isset($this->size_for_search) ? $this->size_for_search : 0;
+        return $this->size_for_search ?? 0;
     }
 
     public function hasSizeForSearch()
@@ -708,7 +708,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setSizeRangeForSearch($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListSizeRangeEnum\UserListSizeRange::class);
+        GPBUtil::checkEnum($var);
         $this->size_range_for_search = $var;
 
         return $this;
@@ -736,7 +736,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListTypeEnum\UserListType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -766,7 +766,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setClosingReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListClosingReasonEnum\UserListClosingReason::class);
+        GPBUtil::checkEnum($var);
         $this->closing_reason = $var;
 
         return $this;
@@ -796,7 +796,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setAccessReason($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AccessReasonEnum\AccessReason::class);
+        GPBUtil::checkEnum($var);
         $this->access_reason = $var;
 
         return $this;
@@ -828,7 +828,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function setAccountUserListStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\UserListAccessStatusEnum\UserListAccessStatus::class);
+        GPBUtil::checkEnum($var);
         $this->account_user_list_status = $var;
 
         return $this;
@@ -842,7 +842,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getEligibleForSearch()
     {
-        return isset($this->eligible_for_search) ? $this->eligible_for_search : false;
+        return $this->eligible_for_search ?? false;
     }
 
     public function hasEligibleForSearch()
@@ -880,7 +880,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getEligibleForDisplay()
     {
-        return isset($this->eligible_for_display) ? $this->eligible_for_display : false;
+        return $this->eligible_for_display ?? false;
     }
 
     public function hasEligibleForDisplay()
@@ -921,7 +921,7 @@ class UserList extends \Google\Protobuf\Internal\Message
      */
     public function getMatchRatePercentage()
     {
-        return isset($this->match_rate_percentage) ? $this->match_rate_percentage : 0;
+        return $this->match_rate_percentage ?? 0;
     }
 
     public function hasMatchRatePercentage()

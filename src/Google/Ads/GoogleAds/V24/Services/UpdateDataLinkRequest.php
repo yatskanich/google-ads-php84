@@ -47,7 +47,7 @@ class UpdateDataLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, int $dataLinkStatus, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setDataLinkStatus($dataLinkStatus)
             ->setResourceName($resourceName);
@@ -118,7 +118,7 @@ class UpdateDataLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public function setDataLinkStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\DataLinkStatusEnum\DataLinkStatus::class);
+        GPBUtil::checkEnum($var);
         $this->data_link_status = $var;
 
         return $this;

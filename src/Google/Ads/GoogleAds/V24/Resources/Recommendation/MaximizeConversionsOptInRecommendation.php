@@ -45,7 +45,7 @@ class MaximizeConversionsOptInRecommendation extends \Google\Protobuf\Internal\M
      */
     public function getRecommendedBudgetAmountMicros()
     {
-        return isset($this->recommended_budget_amount_micros) ? $this->recommended_budget_amount_micros : 0;
+        return $this->recommended_budget_amount_micros ?? 0;
     }
 
     public function hasRecommendedBudgetAmountMicros()

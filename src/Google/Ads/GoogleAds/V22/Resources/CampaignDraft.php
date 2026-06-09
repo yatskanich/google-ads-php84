@@ -158,7 +158,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getDraftId()
     {
-        return isset($this->draft_id) ? $this->draft_id : 0;
+        return $this->draft_id ?? 0;
     }
 
     public function hasDraftId()
@@ -195,7 +195,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getBaseCampaign()
     {
-        return isset($this->base_campaign) ? $this->base_campaign : '';
+        return $this->base_campaign ?? '';
     }
 
     public function hasBaseCampaign()
@@ -235,7 +235,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -277,7 +277,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getDraftCampaign()
     {
-        return isset($this->draft_campaign) ? $this->draft_campaign : '';
+        return $this->draft_campaign ?? '';
     }
 
     public function hasDraftCampaign()
@@ -329,7 +329,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\CampaignDraftStatusEnum\CampaignDraftStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -344,7 +344,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getHasExperimentRunning()
     {
-        return isset($this->has_experiment_running) ? $this->has_experiment_running : false;
+        return $this->has_experiment_running ?? false;
     }
 
     public function hasHasExperimentRunning()
@@ -383,7 +383,7 @@ class CampaignDraft extends \Google\Protobuf\Internal\Message
      */
     public function getLongRunningOperation()
     {
-        return isset($this->long_running_operation) ? $this->long_running_operation : '';
+        return $this->long_running_operation ?? '';
     }
 
     public function hasLongRunningOperation()

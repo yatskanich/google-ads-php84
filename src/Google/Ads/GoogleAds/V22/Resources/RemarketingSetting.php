@@ -45,7 +45,7 @@ class RemarketingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getGoogleGlobalSiteTag()
     {
-        return isset($this->google_global_site_tag) ? $this->google_global_site_tag : '';
+        return $this->google_global_site_tag ?? '';
     }
 
     public function hasGoogleGlobalSiteTag()

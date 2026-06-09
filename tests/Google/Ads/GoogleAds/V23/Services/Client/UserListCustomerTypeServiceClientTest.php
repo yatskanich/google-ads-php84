@@ -74,7 +74,7 @@ class UserListCustomerTypeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListCustomerTypesRequest())
+        $request = new MutateUserListCustomerTypesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateUserListCustomerTypes($request);
@@ -112,7 +112,7 @@ class UserListCustomerTypeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListCustomerTypesRequest())
+        $request = new MutateUserListCustomerTypesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class UserListCustomerTypeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateUserListCustomerTypesRequest())
+        $request = new MutateUserListCustomerTypesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateUserListCustomerTypesAsync($request)->wait();

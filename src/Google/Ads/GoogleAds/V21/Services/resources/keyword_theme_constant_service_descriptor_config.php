@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.KeywordThemeConstantService' => [
             'SuggestKeywordThemeConstants' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\SuggestKeywordThemeConstantsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\SuggestKeywordThemeConstantsResponse::class,
             ],
         ],
     ],

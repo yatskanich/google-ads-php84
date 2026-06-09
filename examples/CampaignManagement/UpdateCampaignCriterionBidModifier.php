@@ -150,4 +150,6 @@ class UpdateCampaignCriterionBidModifier
     }
 }
 
-UpdateCampaignCriterionBidModifier::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UpdateCampaignCriterionBidModifier::main();
+}

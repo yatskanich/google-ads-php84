@@ -43,9 +43,9 @@ final class GoogleAdsClientBuilder extends AbstractGoogleAdsBuilder
 {
     use GrpcSupportTrait;
 
-    private const DEFAULT_LOGGER_CHANNEL = 'google-ads';
-    private const DEFAULT_GRPC_CHANNEL_IS_SECURE = true;
-    private const DEFAULT_USE_CLOUD_ORG_FOR_API_ACCESS = false;
+    private const string DEFAULT_LOGGER_CHANNEL = 'google-ads';
+    private const bool DEFAULT_GRPC_CHANNEL_IS_SECURE = true;
+    private const bool DEFAULT_USE_CLOUD_ORG_FOR_API_ACCESS = false;
 
     private $loggerFactory;
 
@@ -70,8 +70,8 @@ final class GoogleAdsClientBuilder extends AbstractGoogleAdsBuilder
     private $adsAssistant;
 
     public function __construct(
-        ConfigurationLoader $configurationLoader = null,
-        EnvironmentalVariables $environmentalVariables = null
+        ?ConfigurationLoader $configurationLoader = null,
+        ?EnvironmentalVariables $environmentalVariables = null
     ) {
         parent::__construct($configurationLoader, $environmentalVariables);
         $this->loggerFactory = new LoggerFactory();
@@ -395,7 +395,7 @@ final class GoogleAdsClientBuilder extends AbstractGoogleAdsBuilder
      */
     public function defaultOptionals()
     {
-        $this->dependencies = $this->dependencies ?? new Dependencies();
+        $this->dependencies ??= new Dependencies();
     }
 
     /**
@@ -415,14 +415,14 @@ final class GoogleAdsClientBuilder extends AbstractGoogleAdsBuilder
         if (!empty($this->linkedCustomerId) && $this->linkedCustomerId < 0) {
             throw new InvalidArgumentException('The linked customer ID must be a positive number.');
         }
-        if (!empty($this->adsAssistant) && empty(trim($this->adsAssistant))) {
+        if (!empty($this->adsAssistant) && empty(trim((string) $this->adsAssistant))) {
             throw new InvalidArgumentException('The ads assistant metadata must not be empty.');
         }
 
         // Use parse_url instead of filter_var to do less restrict validation.
         // This is because we need to allow endpoint in the form of "googleads.googleapis.com",
         // but filter_var doesn't allow that.
-        if (!empty($this->endpoint) && parse_url($this->endpoint) === false) {
+        if (!empty($this->endpoint) && parse_url((string) $this->endpoint) === false) {
             throw new InvalidArgumentException('Endpoint must be a valid URL.');
         }
 

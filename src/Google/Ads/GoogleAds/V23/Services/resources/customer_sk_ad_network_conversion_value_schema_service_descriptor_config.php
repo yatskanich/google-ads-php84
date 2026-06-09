@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.CustomerSkAdNetworkConversionValueSchemaService' => [
             'MutateCustomerSkAdNetworkConversionValueSchema' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\MutateCustomerSkAdNetworkConversionValueSchemaResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\MutateCustomerSkAdNetworkConversionValueSchemaResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -223,4 +223,6 @@ class UploadCallConversion
     // [END upload_call_conversion]
 }
 
-UploadCallConversion::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UploadCallConversion::main();
+}

@@ -239,7 +239,7 @@ class YouTubeVideoUpload extends \Google\Protobuf\Internal\Message
      */
     public function setState($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\YouTubeVideoUploadStateEnum\YouTubeVideoUploadState::class);
+        GPBUtil::checkEnum($var);
         $this->state = $var;
 
         return $this;
@@ -327,7 +327,7 @@ class YouTubeVideoUpload extends \Google\Protobuf\Internal\Message
      */
     public function setVideoPrivacy($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\YouTubeVideoPrivacyEnum\YouTubeVideoPrivacy::class);
+        GPBUtil::checkEnum($var);
         $this->video_privacy = $var;
 
         return $this;

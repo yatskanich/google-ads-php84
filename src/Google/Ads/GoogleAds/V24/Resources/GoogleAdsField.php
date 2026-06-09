@@ -211,7 +211,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -259,7 +259,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function setCategory($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\GoogleAdsFieldCategoryEnum\GoogleAdsFieldCategory::class);
+        GPBUtil::checkEnum($var);
         $this->category = $var;
 
         return $this;
@@ -274,7 +274,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getSelectable()
     {
-        return isset($this->selectable) ? $this->selectable : false;
+        return $this->selectable ?? false;
     }
 
     public function hasSelectable()
@@ -312,7 +312,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getFilterable()
     {
-        return isset($this->filterable) ? $this->filterable : false;
+        return $this->filterable ?? false;
     }
 
     public function hasFilterable()
@@ -350,7 +350,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getSortable()
     {
-        return isset($this->sortable) ? $this->sortable : false;
+        return $this->sortable ?? false;
     }
 
     public function hasSortable()
@@ -551,7 +551,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function setDataType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\GoogleAdsFieldDataTypeEnum\GoogleAdsFieldDataType::class);
+        GPBUtil::checkEnum($var);
         $this->data_type = $var;
 
         return $this;
@@ -565,7 +565,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getTypeUrl()
     {
-        return isset($this->type_url) ? $this->type_url : '';
+        return $this->type_url ?? '';
     }
 
     public function hasTypeUrl()
@@ -601,7 +601,7 @@ class GoogleAdsField extends \Google\Protobuf\Internal\Message
      */
     public function getIsRepeated()
     {
-        return isset($this->is_repeated) ? $this->is_repeated : false;
+        return $this->is_repeated ?? false;
     }
 
     public function hasIsRepeated()

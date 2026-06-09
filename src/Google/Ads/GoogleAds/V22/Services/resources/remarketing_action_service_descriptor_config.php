@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.RemarketingActionService' => [
             'MutateRemarketingActions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateRemarketingActionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateRemarketingActionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

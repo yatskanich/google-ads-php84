@@ -495,7 +495,7 @@ class HotelReconciliation extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\HotelReconciliationStatusEnum\HotelReconciliationStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

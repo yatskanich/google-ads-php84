@@ -149,7 +149,7 @@ class AdAssetApplyParameters extends \Google\Protobuf\Internal\Message
      */
     public function setScope($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Services\ApplyRecommendationOperation\AdAssetApplyParameters\ApplyScope::class);
+        GPBUtil::checkEnum($var);
         $this->scope = $var;
 
         return $this;

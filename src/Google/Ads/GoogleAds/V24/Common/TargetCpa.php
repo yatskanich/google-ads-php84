@@ -76,7 +76,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaMicros()
     {
-        return isset($this->target_cpa_micros) ? $this->target_cpa_micros : 0;
+        return $this->target_cpa_micros ?? 0;
     }
 
     public function hasTargetCpaMicros()
@@ -116,7 +116,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidCeilingMicros()
     {
-        return isset($this->cpc_bid_ceiling_micros) ? $this->cpc_bid_ceiling_micros : 0;
+        return $this->cpc_bid_ceiling_micros ?? 0;
     }
 
     public function hasCpcBidCeilingMicros()
@@ -156,7 +156,7 @@ class TargetCpa extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidFloorMicros()
     {
-        return isset($this->cpc_bid_floor_micros) ? $this->cpc_bid_floor_micros : 0;
+        return $this->cpc_bid_floor_micros ?? 0;
     }
 
     public function hasCpcBidFloorMicros()

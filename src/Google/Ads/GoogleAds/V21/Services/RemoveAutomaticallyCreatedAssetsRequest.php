@@ -41,7 +41,7 @@ class RemoveAutomaticallyCreatedAssetsRequest extends \Google\Protobuf\Internal\
      */
     public static function build(string $adGroupAd, array $assetsWithFieldType): self
     {
-        return (new self())
+        return new self()
             ->setAdGroupAd($adGroupAd)
             ->setAssetsWithFieldType($assetsWithFieldType);
     }

@@ -30,9 +30,10 @@ class GoogleAdsFailuresUnaryCall extends ForwardingUnaryCall
     /**
      * {@inheritdoc}
      */
+    #[\Override]
     public function wait()
     {
-        list($response, $status) = parent::wait();
+        [$response, $status] = parent::wait();
 
         // Partial failures and batch job results can return objects that contain GoogleAdsFailure.
         // We need to make sure that the pool is aware of this class, in order to serialize the

@@ -250,7 +250,7 @@ class BiddingSeasonalityAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function setScope($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SeasonalityEventScopeEnum\SeasonalityEventScope::class);
+        GPBUtil::checkEnum($var);
         $this->scope = $var;
 
         return $this;
@@ -276,7 +276,7 @@ class BiddingSeasonalityAdjustment extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\SeasonalityEventStatusEnum\SeasonalityEventStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

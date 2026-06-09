@@ -39,7 +39,7 @@ class RemoveDataLinkRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, string $resourceName): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setResourceName($resourceName);
     }

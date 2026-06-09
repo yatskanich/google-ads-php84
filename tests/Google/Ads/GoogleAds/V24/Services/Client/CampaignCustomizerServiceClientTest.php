@@ -74,7 +74,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCustomizers($request);
@@ -112,7 +112,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CampaignCustomizerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCampaignCustomizersRequest())
+        $request = new MutateCampaignCustomizersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCampaignCustomizersAsync($request)->wait();

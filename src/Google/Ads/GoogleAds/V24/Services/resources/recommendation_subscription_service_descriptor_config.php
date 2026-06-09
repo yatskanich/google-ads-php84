@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.RecommendationSubscriptionService' => [
             'MutateRecommendationSubscription' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\MutateRecommendationSubscriptionResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\MutateRecommendationSubscriptionResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

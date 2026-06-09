@@ -191,7 +191,7 @@ class CampaignSimulation extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SimulationTypeEnum\SimulationType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -217,7 +217,7 @@ class CampaignSimulation extends \Google\Protobuf\Internal\Message
      */
     public function setModificationMethod($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SimulationModificationMethodEnum\SimulationModificationMethod::class);
+        GPBUtil::checkEnum($var);
         $this->modification_method = $var;
 
         return $this;

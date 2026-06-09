@@ -86,7 +86,7 @@ class CriterionBidModifier extends \Google\Protobuf\Internal\Message
      */
     public function getBidModifier()
     {
-        return isset($this->bid_modifier) ? $this->bid_modifier : 0.0;
+        return $this->bid_modifier ?? 0.0;
     }
 
     public function hasBidModifier()

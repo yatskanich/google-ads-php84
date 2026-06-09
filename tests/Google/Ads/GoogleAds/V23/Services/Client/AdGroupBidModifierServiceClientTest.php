@@ -74,7 +74,7 @@ class AdGroupBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupBidModifiersRequest())
+        $request = new MutateAdGroupBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupBidModifiers($request);
@@ -112,7 +112,7 @@ class AdGroupBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupBidModifiersRequest())
+        $request = new MutateAdGroupBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class AdGroupBidModifierServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateAdGroupBidModifiersRequest())
+        $request = new MutateAdGroupBidModifiersRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateAdGroupBidModifiersAsync($request)->wait();

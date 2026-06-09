@@ -72,7 +72,7 @@ class CustomAudienceMember extends \Google\Protobuf\Internal\Message
      */
     public function setMemberType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\CustomAudienceMemberTypeEnum\CustomAudienceMemberType::class);
+        GPBUtil::checkEnum($var);
         $this->member_type = $var;
 
         return $this;

@@ -49,7 +49,7 @@ class CountryConstraint extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCriterion()
     {
-        return isset($this->country_criterion) ? $this->country_criterion : '';
+        return $this->country_criterion ?? '';
     }
 
     public function hasCountryCriterion()

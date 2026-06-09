@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.TravelAssetSuggestionService' => [
             'SuggestTravelAssets' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\SuggestTravelAssetsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\SuggestTravelAssetsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v24.services.AdGroupLabelService' => [
             'MutateAdGroupLabels' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V24\Services\MutateAdGroupLabelsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V24\Services\MutateAdGroupLabelsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

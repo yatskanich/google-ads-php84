@@ -75,7 +75,7 @@ class AiMaxSetting extends \Google\Protobuf\Internal\Message
      */
     public function getEnableAiMax()
     {
-        return isset($this->enable_ai_max) ? $this->enable_ai_max : false;
+        return $this->enable_ai_max ?? false;
     }
 
     public function hasEnableAiMax()
@@ -119,7 +119,7 @@ class AiMaxSetting extends \Google\Protobuf\Internal\Message
      */
     public function getBundlingRequired()
     {
-        return isset($this->bundling_required) ? $this->bundling_required : 0;
+        return $this->bundling_required ?? 0;
     }
 
     public function hasBundlingRequired()
@@ -143,7 +143,7 @@ class AiMaxSetting extends \Google\Protobuf\Internal\Message
      */
     public function setBundlingRequired($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Resources\Campaign\AiMaxSetting\AiMaxBundlingRequired::class);
+        GPBUtil::checkEnum($var);
         $this->bundling_required = $var;
 
         return $this;

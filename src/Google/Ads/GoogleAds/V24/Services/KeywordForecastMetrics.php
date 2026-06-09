@@ -89,7 +89,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpcMicros()
     {
-        return isset($this->average_cpc_micros) ? $this->average_cpc_micros : 0;
+        return $this->average_cpc_micros ?? 0;
     }
 
     public function hasAverageCpcMicros()
@@ -129,7 +129,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getClicks()
     {
-        return isset($this->clicks) ? $this->clicks : 0.0;
+        return $this->clicks ?? 0.0;
     }
 
     public function hasClicks()
@@ -169,7 +169,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getCostMicros()
     {
-        return isset($this->cost_micros) ? $this->cost_micros : 0;
+        return $this->cost_micros ?? 0;
     }
 
     public function hasCostMicros()
@@ -207,7 +207,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getConversions()
     {
-        return isset($this->conversions) ? $this->conversions : 0.0;
+        return $this->conversions ?? 0.0;
     }
 
     public function hasConversions()
@@ -245,7 +245,7 @@ class KeywordForecastMetrics extends \Google\Protobuf\Internal\Message
      */
     public function getAverageCpaMicros()
     {
-        return isset($this->average_cpa_micros) ? $this->average_cpa_micros : 0;
+        return $this->average_cpa_micros ?? 0;
     }
 
     public function hasAverageCpaMicros()

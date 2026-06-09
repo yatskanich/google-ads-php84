@@ -263,4 +263,6 @@ class HandleResponsiveSearchAdPolicyViolations
     // [END handle_responsive_search_ad_policy_violations_1]
 }
 
-HandleResponsiveSearchAdPolicyViolations::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    HandleResponsiveSearchAdPolicyViolations::main();
+}

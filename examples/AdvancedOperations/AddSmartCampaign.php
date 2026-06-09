@@ -958,4 +958,6 @@ class AddSmartCampaign
     }
 }
 
-AddSmartCampaign::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddSmartCampaign::main();
+}

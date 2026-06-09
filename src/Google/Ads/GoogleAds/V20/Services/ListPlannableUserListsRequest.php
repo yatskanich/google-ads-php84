@@ -39,7 +39,7 @@ class ListPlannableUserListsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId);
     }
 
@@ -94,7 +94,7 @@ class ListPlannableUserListsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCustomerReachGroup()
     {
-        return isset($this->customer_reach_group) ? $this->customer_reach_group : '';
+        return $this->customer_reach_group ?? '';
     }
 
     public function hasCustomerReachGroup()

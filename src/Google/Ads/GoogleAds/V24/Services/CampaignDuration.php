@@ -64,7 +64,7 @@ class CampaignDuration extends \Google\Protobuf\Internal\Message
      */
     public function getDurationInDays()
     {
-        return isset($this->duration_in_days) ? $this->duration_in_days : 0;
+        return $this->duration_in_days ?? 0;
     }
 
     public function hasDurationInDays()

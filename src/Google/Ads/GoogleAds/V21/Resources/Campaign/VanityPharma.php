@@ -67,7 +67,7 @@ class VanityPharma extends \Google\Protobuf\Internal\Message
      */
     public function setVanityPharmaDisplayUrlMode($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\VanityPharmaDisplayUrlModeEnum\VanityPharmaDisplayUrlMode::class);
+        GPBUtil::checkEnum($var);
         $this->vanity_pharma_display_url_mode = $var;
 
         return $this;
@@ -95,7 +95,7 @@ class VanityPharma extends \Google\Protobuf\Internal\Message
      */
     public function setVanityPharmaText($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\VanityPharmaTextEnum\VanityPharmaText::class);
+        GPBUtil::checkEnum($var);
         $this->vanity_pharma_text = $var;
 
         return $this;

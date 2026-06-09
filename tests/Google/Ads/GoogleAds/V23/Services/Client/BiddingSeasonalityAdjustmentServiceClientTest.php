@@ -74,7 +74,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingSeasonalityAdjustments($request);
@@ -112,7 +112,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class BiddingSeasonalityAdjustmentServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingSeasonalityAdjustmentsRequest())
+        $request = new MutateBiddingSeasonalityAdjustmentsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingSeasonalityAdjustmentsAsync($request)->wait();

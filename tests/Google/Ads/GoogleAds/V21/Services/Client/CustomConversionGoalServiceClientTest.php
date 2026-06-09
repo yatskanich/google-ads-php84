@@ -74,7 +74,7 @@ class CustomConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomConversionGoalsRequest())
+        $request = new MutateCustomConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomConversionGoals($request);
@@ -112,7 +112,7 @@ class CustomConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomConversionGoalsRequest())
+        $request = new MutateCustomConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CustomConversionGoalServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomConversionGoalsRequest())
+        $request = new MutateCustomConversionGoalsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomConversionGoalsAsync($request)->wait();

@@ -51,7 +51,7 @@ class SmartCampaignRemovedDetails extends \Google\Protobuf\Internal\Message
      */
     public function getRemovedDateTime()
     {
-        return isset($this->removed_date_time) ? $this->removed_date_time : '';
+        return $this->removed_date_time ?? '';
     }
 
     public function hasRemovedDateTime()

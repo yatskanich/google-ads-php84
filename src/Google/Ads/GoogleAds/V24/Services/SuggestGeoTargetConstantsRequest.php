@@ -65,7 +65,7 @@ class SuggestGeoTargetConstantsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getLocale()
     {
-        return isset($this->locale) ? $this->locale : '';
+        return $this->locale ?? '';
     }
 
     public function hasLocale()
@@ -103,7 +103,7 @@ class SuggestGeoTargetConstantsRequest extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()

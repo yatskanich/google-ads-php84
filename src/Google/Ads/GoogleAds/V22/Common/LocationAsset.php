@@ -161,7 +161,7 @@ class LocationAsset extends \Google\Protobuf\Internal\Message
      */
     public function setLocationOwnershipType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\LocationOwnershipTypeEnum\LocationOwnershipType::class);
+        GPBUtil::checkEnum($var);
         $this->location_ownership_type = $var;
 
         return $this;

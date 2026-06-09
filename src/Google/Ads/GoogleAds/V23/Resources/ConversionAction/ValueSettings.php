@@ -76,7 +76,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getDefaultValue()
     {
-        return isset($this->default_value) ? $this->default_value : 0.0;
+        return $this->default_value ?? 0.0;
     }
 
     public function hasDefaultValue()
@@ -116,7 +116,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getDefaultCurrencyCode()
     {
-        return isset($this->default_currency_code) ? $this->default_currency_code : '';
+        return $this->default_currency_code ?? '';
     }
 
     public function hasDefaultCurrencyCode()
@@ -156,7 +156,7 @@ class ValueSettings extends \Google\Protobuf\Internal\Message
      */
     public function getAlwaysUseDefaultValue()
     {
-        return isset($this->always_use_default_value) ? $this->always_use_default_value : false;
+        return $this->always_use_default_value ?? false;
     }
 
     public function hasAlwaysUseDefaultValue()

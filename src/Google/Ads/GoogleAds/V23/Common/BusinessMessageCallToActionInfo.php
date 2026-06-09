@@ -69,7 +69,7 @@ class BusinessMessageCallToActionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setCallToActionSelection($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\BusinessMessageCallToActionTypeEnum\BusinessMessageCallToActionType::class);
+        GPBUtil::checkEnum($var);
         $this->call_to_action_selection = $var;
 
         return $this;

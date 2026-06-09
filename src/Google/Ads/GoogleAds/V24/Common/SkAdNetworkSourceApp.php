@@ -48,7 +48,7 @@ class SkAdNetworkSourceApp extends \Google\Protobuf\Internal\Message
      */
     public function getSkAdNetworkSourceAppId()
     {
-        return isset($this->sk_ad_network_source_app_id) ? $this->sk_ad_network_source_app_id : '';
+        return $this->sk_ad_network_source_app_id ?? '';
     }
 
     public function hasSkAdNetworkSourceAppId()

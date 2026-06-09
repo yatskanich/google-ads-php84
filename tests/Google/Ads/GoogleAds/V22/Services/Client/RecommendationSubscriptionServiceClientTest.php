@@ -74,7 +74,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRecommendationSubscription($request);
@@ -112,7 +112,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class RecommendationSubscriptionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateRecommendationSubscriptionRequest())
+        $request = new MutateRecommendationSubscriptionRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateRecommendationSubscriptionAsync($request)->wait();

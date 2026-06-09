@@ -63,7 +63,7 @@ class KeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()
@@ -111,7 +111,7 @@ class KeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function setMatchType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\KeywordMatchTypeEnum\KeywordMatchType::class);
+        GPBUtil::checkEnum($var);
         $this->match_type = $var;
 
         return $this;
@@ -126,7 +126,7 @@ class KeywordParameters extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
+        return $this->cpc_bid_micros ?? 0;
     }
 
     public function hasCpcBidMicros()

@@ -294,4 +294,6 @@ class ForecastReach
     // [END forecast_reach_3]
 }
 
-ForecastReach::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    ForecastReach::main();
+}

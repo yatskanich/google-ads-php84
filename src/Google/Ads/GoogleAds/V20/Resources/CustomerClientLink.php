@@ -115,7 +115,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getClientCustomer()
     {
-        return isset($this->client_customer) ? $this->client_customer : '';
+        return $this->client_customer ?? '';
     }
 
     public function hasClientCustomer()
@@ -151,7 +151,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getManagerLinkId()
     {
-        return isset($this->manager_link_id) ? $this->manager_link_id : 0;
+        return $this->manager_link_id ?? 0;
     }
 
     public function hasManagerLinkId()
@@ -199,7 +199,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\ManagerLinkStatusEnum\ManagerLinkStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -215,7 +215,7 @@ class CustomerClientLink extends \Google\Protobuf\Internal\Message
      */
     public function getHidden()
     {
-        return isset($this->hidden) ? $this->hidden : false;
+        return $this->hidden ?? false;
     }
 
     public function hasHidden()

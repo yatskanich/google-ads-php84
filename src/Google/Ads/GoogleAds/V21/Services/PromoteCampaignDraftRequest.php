@@ -39,7 +39,7 @@ class PromoteCampaignDraftRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $campaignDraft): self
     {
-        return (new self())
+        return new self()
             ->setCampaignDraft($campaignDraft);
     }
 

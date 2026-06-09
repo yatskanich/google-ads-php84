@@ -109,7 +109,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedFirstName()
     {
-        return isset($this->hashed_first_name) ? $this->hashed_first_name : '';
+        return $this->hashed_first_name ?? '';
     }
 
     public function hasHashedFirstName()
@@ -148,7 +148,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedLastName()
     {
-        return isset($this->hashed_last_name) ? $this->hashed_last_name : '';
+        return $this->hashed_last_name ?? '';
     }
 
     public function hasHashedLastName()
@@ -186,7 +186,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCity()
     {
-        return isset($this->city) ? $this->city : '';
+        return $this->city ?? '';
     }
 
     public function hasCity()
@@ -224,7 +224,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getState()
     {
-        return isset($this->state) ? $this->state : '';
+        return $this->state ?? '';
     }
 
     public function hasState()
@@ -261,7 +261,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCode()
     {
-        return isset($this->country_code) ? $this->country_code : '';
+        return $this->country_code ?? '';
     }
 
     public function hasCountryCode()
@@ -297,7 +297,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getPostalCode()
     {
-        return isset($this->postal_code) ? $this->postal_code : '';
+        return $this->postal_code ?? '';
     }
 
     public function hasPostalCode()
@@ -335,7 +335,7 @@ class OfflineUserAddressInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHashedStreetAddress()
     {
-        return isset($this->hashed_street_address) ? $this->hashed_street_address : '';
+        return $this->hashed_street_address ?? '';
     }
 
     public function hasHashedStreetAddress()

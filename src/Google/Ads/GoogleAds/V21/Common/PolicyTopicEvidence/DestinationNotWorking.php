@@ -71,7 +71,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getExpandedUrl()
     {
-        return isset($this->expanded_url) ? $this->expanded_url : '';
+        return $this->expanded_url ?? '';
     }
 
     public function hasExpandedUrl()
@@ -119,7 +119,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function setDevice($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\PolicyTopicEvidenceDestinationNotWorkingDeviceEnum\PolicyTopicEvidenceDestinationNotWorkingDevice::class);
+        GPBUtil::checkEnum($var);
         $this->device = $var;
 
         return $this;
@@ -135,7 +135,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function getLastCheckedDateTime()
     {
-        return isset($this->last_checked_date_time) ? $this->last_checked_date_time : '';
+        return $this->last_checked_date_time ?? '';
     }
 
     public function hasLastCheckedDateTime()
@@ -190,7 +190,7 @@ class DestinationNotWorking extends \Google\Protobuf\Internal\Message
      */
     public function setDnsErrorType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\PolicyTopicEvidenceDestinationNotWorkingDnsErrorTypeEnum\PolicyTopicEvidenceDestinationNotWorkingDnsErrorType::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(1, $var);
 
         return $this;

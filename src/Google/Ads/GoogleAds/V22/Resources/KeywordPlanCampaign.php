@@ -154,7 +154,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getKeywordPlan()
     {
-        return isset($this->keyword_plan) ? $this->keyword_plan : '';
+        return $this->keyword_plan ?? '';
     }
 
     public function hasKeywordPlan()
@@ -190,7 +190,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -228,7 +228,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -310,7 +310,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function setKeywordPlanNetwork($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\KeywordPlanNetworkEnum\KeywordPlanNetwork::class);
+        GPBUtil::checkEnum($var);
         $this->keyword_plan_network = $var;
 
         return $this;
@@ -327,7 +327,7 @@ class KeywordPlanCampaign extends \Google\Protobuf\Internal\Message
      */
     public function getCpcBidMicros()
     {
-        return isset($this->cpc_bid_micros) ? $this->cpc_bid_micros : 0;
+        return $this->cpc_bid_micros ?? 0;
     }
 
     public function hasCpcBidMicros()

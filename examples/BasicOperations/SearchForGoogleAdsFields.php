@@ -42,22 +42,22 @@ use Google\ApiCore\ApiException;
  */
 class SearchForGoogleAdsFields
 {
-    private const NAME_PREFIX = 'INSERT_NAME_PREFIX_HERE';
+    private const string NAME_PREFIX = 'INSERT_NAME_PREFIX_HERE';
 
     public static function main()
     {
         // Either pass the required parameters for this example on the command line, or insert them
         // into the constants above.
-        $options = (new ArgumentParser())->parseCommandArguments([
+        $options = new ArgumentParser()->parseCommandArguments([
             ArgumentNames::NAME_PREFIX => GetOpt::REQUIRED_ARGUMENT
         ]);
 
         // Generate a refreshable OAuth2 credential for authentication.
-        $oAuth2Credential = (new OAuth2TokenBuilder())->fromFile()->build();
+        $oAuth2Credential = new OAuth2TokenBuilder()->fromFile()->build();
 
         // Construct a Google Ads client configured from a properties file and the
         // OAuth2 credentials above.
-        $googleAdsClient = (new GoogleAdsClientBuilder())->fromFile()
+        $googleAdsClient = new GoogleAdsClientBuilder()->fromFile()
             ->withOAuth2Credential($oAuth2Credential)
             ->build();
 
@@ -175,4 +175,6 @@ class SearchForGoogleAdsFields
     }
 }
 
-SearchForGoogleAdsFields::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    SearchForGoogleAdsFields::main();
+}

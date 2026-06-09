@@ -45,7 +45,7 @@ class HotelSettingInfo extends \Google\Protobuf\Internal\Message
      */
     public function getHotelCenterId()
     {
-        return isset($this->hotel_center_id) ? $this->hotel_center_id : 0;
+        return $this->hotel_center_id ?? 0;
     }
 
     public function hasHotelCenterId()

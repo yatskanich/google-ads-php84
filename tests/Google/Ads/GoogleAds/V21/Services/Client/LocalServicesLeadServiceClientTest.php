@@ -77,7 +77,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversation($request);
@@ -115,7 +115,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         try {
@@ -145,7 +145,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->localServicesLeadName('[CUSTOMER_ID]', '[LOCAL_SERVICES_LEAD_ID]');
         $surveyAnswer = SurveyAnswer::UNSPECIFIED;
-        $request = (new ProvideLeadFeedbackRequest())
+        $request = new ProvideLeadFeedbackRequest()
             ->setResourceName($formattedResourceName)
             ->setSurveyAnswer($surveyAnswer);
         $response = $gapicClient->provideLeadFeedback($request);
@@ -183,7 +183,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $formattedResourceName = $gapicClient->localServicesLeadName('[CUSTOMER_ID]', '[LOCAL_SERVICES_LEAD_ID]');
         $surveyAnswer = SurveyAnswer::UNSPECIFIED;
-        $request = (new ProvideLeadFeedbackRequest())
+        $request = new ProvideLeadFeedbackRequest()
             ->setResourceName($formattedResourceName)
             ->setSurveyAnswer($surveyAnswer);
         try {
@@ -213,7 +213,7 @@ class LocalServicesLeadServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $conversations = [];
-        $request = (new AppendLeadConversationRequest())
+        $request = new AppendLeadConversationRequest()
             ->setCustomerId($customerId)
             ->setConversations($conversations);
         $response = $gapicClient->appendLeadConversationAsync($request)->wait();

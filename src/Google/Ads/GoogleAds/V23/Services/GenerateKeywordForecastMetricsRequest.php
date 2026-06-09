@@ -57,7 +57,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public static function build(\Google\Ads\GoogleAds\V23\Services\CampaignToForecast $campaign): self
     {
-        return (new self())
+        return new self()
             ->setCampaign($campaign);
     }
 
@@ -127,7 +127,7 @@ class GenerateKeywordForecastMetricsRequest extends \Google\Protobuf\Internal\Me
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()

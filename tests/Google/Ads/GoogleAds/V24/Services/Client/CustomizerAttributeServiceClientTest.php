@@ -74,7 +74,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomizerAttributes($request);
@@ -112,7 +112,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class CustomizerAttributeServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateCustomizerAttributesRequest())
+        $request = new MutateCustomizerAttributesRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateCustomizerAttributesAsync($request)->wait();

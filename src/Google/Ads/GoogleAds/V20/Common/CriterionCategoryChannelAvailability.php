@@ -108,7 +108,7 @@ class CriterionCategoryChannelAvailability extends \Google\Protobuf\Internal\Mes
      */
     public function setAvailabilityMode($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\CriterionCategoryChannelAvailabilityModeEnum\CriterionCategoryChannelAvailabilityMode::class);
+        GPBUtil::checkEnum($var);
         $this->availability_mode = $var;
 
         return $this;
@@ -134,7 +134,7 @@ class CriterionCategoryChannelAvailability extends \Google\Protobuf\Internal\Mes
      */
     public function setAdvertisingChannelType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AdvertisingChannelTypeEnum\AdvertisingChannelType::class);
+        GPBUtil::checkEnum($var);
         $this->advertising_channel_type = $var;
 
         return $this;
@@ -177,7 +177,7 @@ class CriterionCategoryChannelAvailability extends \Google\Protobuf\Internal\Mes
      */
     public function getIncludeDefaultChannelSubType()
     {
-        return isset($this->include_default_channel_sub_type) ? $this->include_default_channel_sub_type : false;
+        return $this->include_default_channel_sub_type ?? false;
     }
 
     public function hasIncludeDefaultChannelSubType()

@@ -53,7 +53,7 @@ class ThirdPartyAppAnalyticsSettings extends \Google\Protobuf\Internal\Message
      */
     public function getEventName()
     {
-        return isset($this->event_name) ? $this->event_name : '';
+        return $this->event_name ?? '';
     }
 
     public function hasEventName()

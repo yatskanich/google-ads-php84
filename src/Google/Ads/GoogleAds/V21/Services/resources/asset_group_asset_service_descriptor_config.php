@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v21.services.AssetGroupAssetService' => [
             'MutateAssetGroupAssets' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V21\Services\MutateAssetGroupAssetsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V21\Services\MutateAssetGroupAssetsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

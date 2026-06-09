@@ -57,7 +57,7 @@ class CustomerAssetServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.CustomerAssetService/MutateCustomerAssets',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\MutateCustomerAssetsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\MutateCustomerAssetsResponse::class, 'decode'],
         $metadata, $options);
     }
 

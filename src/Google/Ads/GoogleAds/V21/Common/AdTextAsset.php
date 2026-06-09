@@ -75,7 +75,7 @@ class AdTextAsset extends \Google\Protobuf\Internal\Message
      */
     public function getText()
     {
-        return isset($this->text) ? $this->text : '';
+        return $this->text ?? '';
     }
 
     public function hasText()
@@ -129,7 +129,7 @@ class AdTextAsset extends \Google\Protobuf\Internal\Message
      */
     public function setPinnedField($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ServedAssetFieldTypeEnum\ServedAssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->pinned_field = $var;
 
         return $this;
@@ -155,7 +155,7 @@ class AdTextAsset extends \Google\Protobuf\Internal\Message
      */
     public function setAssetPerformanceLabel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AssetPerformanceLabelEnum\AssetPerformanceLabel::class);
+        GPBUtil::checkEnum($var);
         $this->asset_performance_label = $var;
 
         return $this;

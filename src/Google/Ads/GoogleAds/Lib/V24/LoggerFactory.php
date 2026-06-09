@@ -40,9 +40,9 @@ final class LoggerFactory
      */
     public function createLogger($channel, $stream = null, $level = null)
     {
-        $stream = $stream === null ? fopen('php://stderr', 'w') : $stream;
+        $stream ??= fopen('php://stderr', 'w');
         // Detailed message will be logged at one level finer than that specified by the user.
-        $level = $level !== null ? $level : Logger::DEBUG;
+        $level ??= Logger::DEBUG;
         $handler = new StreamHandler($stream, $level);
         $handler->getFormatter()->ignoreEmptyContextAndExtra();
         $handler->getFormatter()->allowInlineLineBreaks();

@@ -65,7 +65,7 @@ class MonthlySearchVolume extends \Google\Protobuf\Internal\Message
      */
     public function getYear()
     {
-        return isset($this->year) ? $this->year : 0;
+        return $this->year ?? 0;
     }
 
     public function hasYear()
@@ -113,7 +113,7 @@ class MonthlySearchVolume extends \Google\Protobuf\Internal\Message
      */
     public function setMonth($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\MonthOfYearEnum\MonthOfYear::class);
+        GPBUtil::checkEnum($var);
         $this->month = $var;
 
         return $this;
@@ -129,7 +129,7 @@ class MonthlySearchVolume extends \Google\Protobuf\Internal\Message
      */
     public function getMonthlySearches()
     {
-        return isset($this->monthly_searches) ? $this->monthly_searches : 0;
+        return $this->monthly_searches ?? 0;
     }
 
     public function hasMonthlySearches()

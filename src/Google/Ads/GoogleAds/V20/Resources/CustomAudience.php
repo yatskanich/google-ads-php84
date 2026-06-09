@@ -184,7 +184,7 @@ class CustomAudience extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\CustomAudienceStatusEnum\CustomAudienceStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -244,7 +244,7 @@ class CustomAudience extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\CustomAudienceTypeEnum\CustomAudienceType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;

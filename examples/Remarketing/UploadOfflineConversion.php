@@ -274,4 +274,6 @@ class UploadOfflineConversion
     // [END upload_offline_conversion]
 }
 
-UploadOfflineConversion::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    UploadOfflineConversion::main();
+}

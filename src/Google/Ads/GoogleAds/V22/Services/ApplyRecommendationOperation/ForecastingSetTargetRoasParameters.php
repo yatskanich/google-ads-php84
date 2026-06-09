@@ -60,7 +60,7 @@ class ForecastingSetTargetRoasParameters extends \Google\Protobuf\Internal\Messa
      */
     public function getTargetRoas()
     {
-        return isset($this->target_roas) ? $this->target_roas : 0.0;
+        return $this->target_roas ?? 0.0;
     }
 
     public function hasTargetRoas()
@@ -98,7 +98,7 @@ class ForecastingSetTargetRoasParameters extends \Google\Protobuf\Internal\Messa
      */
     public function getCampaignBudgetAmountMicros()
     {
-        return isset($this->campaign_budget_amount_micros) ? $this->campaign_budget_amount_micros : 0;
+        return $this->campaign_budget_amount_micros ?? 0;
     }
 
     public function hasCampaignBudgetAmountMicros()

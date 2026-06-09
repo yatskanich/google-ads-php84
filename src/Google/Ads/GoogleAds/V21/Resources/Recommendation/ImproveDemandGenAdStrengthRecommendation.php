@@ -99,7 +99,7 @@ class ImproveDemandGenAdStrengthRecommendation extends \Google\Protobuf\Internal
      */
     public function setAdStrength($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AdStrengthEnum\AdStrength::class);
+        GPBUtil::checkEnum($var);
         $this->ad_strength = $var;
 
         return $this;

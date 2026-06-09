@@ -57,7 +57,7 @@ class HotelCheckInDayInfo extends \Google\Protobuf\Internal\Message
      */
     public function setDayOfWeek($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\DayOfWeekEnum\DayOfWeek::class);
+        GPBUtil::checkEnum($var);
         $this->day_of_week = $var;
 
         return $this;

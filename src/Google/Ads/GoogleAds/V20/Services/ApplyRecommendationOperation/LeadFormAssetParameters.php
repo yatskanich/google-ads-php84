@@ -98,7 +98,7 @@ class LeadFormAssetParameters extends \Google\Protobuf\Internal\Message
      */
     public function getSetSubmitLeadFormAssetCampaignGoal()
     {
-        return isset($this->set_submit_lead_form_asset_campaign_goal) ? $this->set_submit_lead_form_asset_campaign_goal : false;
+        return $this->set_submit_lead_form_asset_campaign_goal ?? false;
     }
 
     public function hasSetSubmitLeadFormAssetCampaignGoal()

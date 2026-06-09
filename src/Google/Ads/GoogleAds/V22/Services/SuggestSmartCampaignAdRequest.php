@@ -45,7 +45,7 @@ class SuggestSmartCampaignAdRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V22\Services\SmartCampaignSuggestionInfo $suggestionInfo): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setSuggestionInfo($suggestionInfo);
     }

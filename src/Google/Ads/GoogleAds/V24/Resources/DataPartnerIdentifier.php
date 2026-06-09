@@ -54,7 +54,7 @@ class DataPartnerIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function getDataPartnerId()
     {
-        return isset($this->data_partner_id) ? $this->data_partner_id : 0;
+        return $this->data_partner_id ?? 0;
     }
 
     public function hasDataPartnerId()

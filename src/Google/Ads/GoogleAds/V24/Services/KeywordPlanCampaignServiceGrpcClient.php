@@ -63,7 +63,7 @@ class KeywordPlanCampaignServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.KeywordPlanCampaignService/MutateKeywordPlanCampaigns',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\MutateKeywordPlanCampaignsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\MutateKeywordPlanCampaignsResponse::class, 'decode'],
         $metadata, $options);
     }
 

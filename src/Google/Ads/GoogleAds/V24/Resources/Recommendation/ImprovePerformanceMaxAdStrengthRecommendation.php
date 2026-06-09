@@ -92,7 +92,7 @@ class ImprovePerformanceMaxAdStrengthRecommendation extends \Google\Protobuf\Int
      */
     public function setAdStrength($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AdStrengthEnum\AdStrength::class);
+        GPBUtil::checkEnum($var);
         $this->ad_strength = $var;
 
         return $this;

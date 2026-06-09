@@ -173,7 +173,7 @@ class AndroidPrivacySharedKeyGoogleAdGroup extends \Google\Protobuf\Internal\Mes
      */
     public function setAndroidPrivacyInteractionType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AndroidPrivacyInteractionTypeEnum\AndroidPrivacyInteractionType::class);
+        GPBUtil::checkEnum($var);
         $this->android_privacy_interaction_type = $var;
 
         return $this;
@@ -227,7 +227,7 @@ class AndroidPrivacySharedKeyGoogleAdGroup extends \Google\Protobuf\Internal\Mes
      */
     public function setAndroidPrivacyNetworkType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AndroidPrivacyNetworkTypeEnum\AndroidPrivacyNetworkType::class);
+        GPBUtil::checkEnum($var);
         $this->android_privacy_network_type = $var;
 
         return $this;

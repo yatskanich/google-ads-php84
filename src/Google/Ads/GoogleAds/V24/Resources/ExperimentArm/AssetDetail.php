@@ -102,7 +102,7 @@ class AssetDetail extends \Google\Protobuf\Internal\Message
      */
     public function setFieldType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\AssetFieldTypeEnum\AssetFieldType::class);
+        GPBUtil::checkEnum($var);
         $this->field_type = $var;
 
         return $this;
@@ -130,7 +130,7 @@ class AssetDetail extends \Google\Protobuf\Internal\Message
      */
     public function setAssetDetailOperation($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ExperimentAssetDetailOperationEnum\ExperimentAssetDetailOperation::class);
+        GPBUtil::checkEnum($var);
         $this->asset_detail_operation = $var;
 
         return $this;

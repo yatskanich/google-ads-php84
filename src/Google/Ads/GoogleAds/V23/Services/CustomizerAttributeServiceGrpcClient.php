@@ -46,7 +46,7 @@ class CustomizerAttributeServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v23.services.CustomizerAttributeService/MutateCustomizerAttributes',
         $argument,
-        ['\Google\Ads\GoogleAds\V23\Services\MutateCustomizerAttributesResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V23\Services\MutateCustomizerAttributesResponse::class, 'decode'],
         $metadata, $options);
     }
 

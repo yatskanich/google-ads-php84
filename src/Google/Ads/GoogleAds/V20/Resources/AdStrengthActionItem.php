@@ -60,7 +60,7 @@ class AdStrengthActionItem extends \Google\Protobuf\Internal\Message
      */
     public function setActionItemType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\AdStrengthActionItemTypeEnum\AdStrengthActionItemType::class);
+        GPBUtil::checkEnum($var);
         $this->action_item_type = $var;
 
         return $this;

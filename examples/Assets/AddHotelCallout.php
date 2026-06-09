@@ -203,4 +203,6 @@ class AddHotelCallout
     }
 }
 
-AddHotelCallout::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddHotelCallout::main();
+}

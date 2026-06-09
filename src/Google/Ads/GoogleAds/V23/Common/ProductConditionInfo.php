@@ -57,7 +57,7 @@ class ProductConditionInfo extends \Google\Protobuf\Internal\Message
      */
     public function setCondition($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\ProductConditionEnum\ProductCondition::class);
+        GPBUtil::checkEnum($var);
         $this->condition = $var;
 
         return $this;

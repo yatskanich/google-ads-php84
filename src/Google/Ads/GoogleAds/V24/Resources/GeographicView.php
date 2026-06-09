@@ -111,7 +111,7 @@ class GeographicView extends \Google\Protobuf\Internal\Message
      */
     public function setLocationType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\GeoTargetingTypeEnum\GeoTargetingType::class);
+        GPBUtil::checkEnum($var);
         $this->location_type = $var;
 
         return $this;
@@ -125,7 +125,7 @@ class GeographicView extends \Google\Protobuf\Internal\Message
      */
     public function getCountryCriterionId()
     {
-        return isset($this->country_criterion_id) ? $this->country_criterion_id : 0;
+        return $this->country_criterion_id ?? 0;
     }
 
     public function hasCountryCriterionId()

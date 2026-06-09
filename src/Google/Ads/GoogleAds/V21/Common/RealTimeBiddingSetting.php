@@ -46,7 +46,7 @@ class RealTimeBiddingSetting extends \Google\Protobuf\Internal\Message
      */
     public function getOptIn()
     {
-        return isset($this->opt_in) ? $this->opt_in : false;
+        return $this->opt_in ?? false;
     }
 
     public function hasOptIn()

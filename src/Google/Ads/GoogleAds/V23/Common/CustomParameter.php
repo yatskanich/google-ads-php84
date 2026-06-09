@@ -54,7 +54,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getKey()
     {
-        return isset($this->key) ? $this->key : '';
+        return $this->key ?? '';
     }
 
     public function hasKey()
@@ -90,7 +90,7 @@ class CustomParameter extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()

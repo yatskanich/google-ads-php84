@@ -168,7 +168,7 @@ class AssetSetAsset extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AssetSetAssetStatusEnum\AssetSetAssetStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

@@ -57,7 +57,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.OfflineUserDataJobService/CreateOfflineUserDataJob',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\CreateOfflineUserDataJobResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\CreateOfflineUserDataJobResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -84,7 +84,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.OfflineUserDataJobService/AddOfflineUserDataJobOperations',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\AddOfflineUserDataJobOperationsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\AddOfflineUserDataJobOperationsResponse::class, 'decode'],
         $metadata, $options);
     }
 
@@ -112,7 +112,7 @@ class OfflineUserDataJobServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.OfflineUserDataJobService/RunOfflineUserDataJob',
         $argument,
-        ['\Google\LongRunning\Operation', 'decode'],
+        [\Google\LongRunning\Operation::class, 'decode'],
         $metadata, $options);
     }
 

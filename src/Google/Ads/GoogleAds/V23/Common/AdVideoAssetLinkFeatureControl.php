@@ -48,7 +48,7 @@ class AdVideoAssetLinkFeatureControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowYoutubeComments()
     {
-        return isset($this->allow_youtube_comments) ? $this->allow_youtube_comments : false;
+        return $this->allow_youtube_comments ?? false;
     }
 
     public function hasAllowYoutubeComments()

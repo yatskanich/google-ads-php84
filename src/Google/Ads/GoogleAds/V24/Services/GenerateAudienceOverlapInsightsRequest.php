@@ -76,7 +76,7 @@ class GenerateAudienceOverlapInsightsRequest extends \Google\Protobuf\Internal\M
      */
     public static function build(string $customerId, \Google\Ads\GoogleAds\V24\Common\LocationInfo $countryLocation, \Google\Ads\GoogleAds\V24\Common\AudienceInsightsAttribute $primaryAttribute, array $dimensions): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setCountryLocation($countryLocation)
             ->setPrimaryAttribute($primaryAttribute)

@@ -347,4 +347,6 @@ class AddThingsToDoAd
     // [END add_things_to_do_ad_3]
 }
 
-AddThingsToDoAd::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddThingsToDoAd::main();
+}

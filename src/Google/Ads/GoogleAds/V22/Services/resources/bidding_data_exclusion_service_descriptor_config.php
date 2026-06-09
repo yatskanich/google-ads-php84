@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.BiddingDataExclusionService' => [
             'MutateBiddingDataExclusions' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\MutateBiddingDataExclusionsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\MutateBiddingDataExclusionsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

@@ -53,7 +53,7 @@ class ThirdPartyAppAnalyticsLinkServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v24.services.ThirdPartyAppAnalyticsLinkService/RegenerateShareableLinkId',
         $argument,
-        ['\Google\Ads\GoogleAds\V24\Services\RegenerateShareableLinkIdResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V24\Services\RegenerateShareableLinkIdResponse::class, 'decode'],
         $metadata, $options);
     }
 

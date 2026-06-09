@@ -70,7 +70,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryId()
     {
-        return isset($this->category_id) ? $this->category_id : '';
+        return $this->category_id ?? '';
     }
 
     public function hasCategoryId()
@@ -109,7 +109,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getManualCpaBidMicros()
     {
-        return isset($this->manual_cpa_bid_micros) ? $this->manual_cpa_bid_micros : 0;
+        return $this->manual_cpa_bid_micros ?? 0;
     }
 
     public function hasManualCpaBidMicros()
@@ -148,7 +148,7 @@ class CategoryBid extends \Google\Protobuf\Internal\Message
      */
     public function getTargetCpaBidMicros()
     {
-        return isset($this->target_cpa_bid_micros) ? $this->target_cpa_bid_micros : 0;
+        return $this->target_cpa_bid_micros ?? 0;
     }
 
     public function hasTargetCpaBidMicros()

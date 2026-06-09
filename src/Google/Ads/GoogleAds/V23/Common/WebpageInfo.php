@@ -99,7 +99,7 @@ class WebpageInfo extends \Google\Protobuf\Internal\Message
      */
     public function getCriterionName()
     {
-        return isset($this->criterion_name) ? $this->criterion_name : '';
+        return $this->criterion_name ?? '';
     }
 
     public function hasCriterionName()

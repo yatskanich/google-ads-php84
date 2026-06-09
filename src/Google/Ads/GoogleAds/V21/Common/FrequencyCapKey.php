@@ -86,7 +86,7 @@ class FrequencyCapKey extends \Google\Protobuf\Internal\Message
      */
     public function setLevel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\FrequencyCapLevelEnum\FrequencyCapLevel::class);
+        GPBUtil::checkEnum($var);
         $this->level = $var;
 
         return $this;
@@ -112,7 +112,7 @@ class FrequencyCapKey extends \Google\Protobuf\Internal\Message
      */
     public function setEventType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\FrequencyCapEventTypeEnum\FrequencyCapEventType::class);
+        GPBUtil::checkEnum($var);
         $this->event_type = $var;
 
         return $this;
@@ -138,7 +138,7 @@ class FrequencyCapKey extends \Google\Protobuf\Internal\Message
      */
     public function setTimeUnit($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\FrequencyCapTimeUnitEnum\FrequencyCapTimeUnit::class);
+        GPBUtil::checkEnum($var);
         $this->time_unit = $var;
 
         return $this;
@@ -152,7 +152,7 @@ class FrequencyCapKey extends \Google\Protobuf\Internal\Message
      */
     public function getTimeLength()
     {
-        return isset($this->time_length) ? $this->time_length : 0;
+        return $this->time_length ?? 0;
     }
 
     public function hasTimeLength()

@@ -61,7 +61,7 @@ class GclidDateTimePair extends \Google\Protobuf\Internal\Message
      */
     public function getGclid()
     {
-        return isset($this->gclid) ? $this->gclid : '';
+        return $this->gclid ?? '';
     }
 
     public function hasGclid()
@@ -100,7 +100,7 @@ class GclidDateTimePair extends \Google\Protobuf\Internal\Message
      */
     public function getConversionDateTime()
     {
-        return isset($this->conversion_date_time) ? $this->conversion_date_time : '';
+        return $this->conversion_date_time ?? '';
     }
 
     public function hasConversionDateTime()

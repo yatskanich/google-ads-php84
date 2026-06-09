@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v23.services.AdGroupCriterionLabelService' => [
             'MutateAdGroupCriterionLabels' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V23\Services\MutateAdGroupCriterionLabelsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V23\Services\MutateAdGroupCriterionLabelsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

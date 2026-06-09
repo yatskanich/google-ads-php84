@@ -74,7 +74,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingDataExclusions($request);
@@ -112,7 +112,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class BiddingDataExclusionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateBiddingDataExclusionsRequest())
+        $request = new MutateBiddingDataExclusionsRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateBiddingDataExclusionsAsync($request)->wait();

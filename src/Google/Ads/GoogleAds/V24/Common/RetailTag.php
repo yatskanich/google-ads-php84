@@ -64,7 +64,7 @@ class RetailTag extends \Google\Protobuf\Internal\Message
      */
     public function getValue()
     {
-        return isset($this->value) ? $this->value : '';
+        return $this->value ?? '';
     }
 
     public function hasValue()
@@ -104,7 +104,7 @@ class RetailTag extends \Google\Protobuf\Internal\Message
      */
     public function getExpressionName()
     {
-        return isset($this->expression_name) ? $this->expression_name : '';
+        return $this->expression_name ?? '';
     }
 
     public function hasExpressionName()

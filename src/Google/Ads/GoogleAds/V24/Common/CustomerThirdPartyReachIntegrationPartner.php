@@ -65,7 +65,7 @@ class CustomerThirdPartyReachIntegrationPartner extends \Google\Protobuf\Interna
      */
     public function setReachIntegrationPartner($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ThirdPartyReachIntegrationPartnerEnum\ThirdPartyReachIntegrationPartner::class);
+        GPBUtil::checkEnum($var);
         $this->reach_integration_partner = $var;
 
         return $this;

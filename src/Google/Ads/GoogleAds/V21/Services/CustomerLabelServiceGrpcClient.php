@@ -61,7 +61,7 @@ class CustomerLabelServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v21.services.CustomerLabelService/MutateCustomerLabels',
         $argument,
-        ['\Google\Ads\GoogleAds\V21\Services\MutateCustomerLabelsResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V21\Services\MutateCustomerLabelsResponse::class, 'decode'],
         $metadata, $options);
     }
 

@@ -73,7 +73,7 @@ class LeadFormField extends \Google\Protobuf\Internal\Message
      */
     public function setInputType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\LeadFormFieldUserInputTypeEnum\LeadFormFieldUserInputType::class);
+        GPBUtil::checkEnum($var);
         $this->input_type = $var;
 
         return $this;

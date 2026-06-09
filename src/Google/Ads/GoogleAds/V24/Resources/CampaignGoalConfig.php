@@ -170,7 +170,7 @@ class CampaignGoalConfig extends \Google\Protobuf\Internal\Message
      */
     public function setGoalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\GoalTypeEnum\GoalType::class);
+        GPBUtil::checkEnum($var);
         $this->goal_type = $var;
 
         return $this;

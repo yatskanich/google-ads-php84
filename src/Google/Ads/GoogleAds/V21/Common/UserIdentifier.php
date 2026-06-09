@@ -79,7 +79,7 @@ class UserIdentifier extends \Google\Protobuf\Internal\Message
      */
     public function setUserIdentifierSource($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\UserIdentifierSourceEnum\UserIdentifierSource::class);
+        GPBUtil::checkEnum($var);
         $this->user_identifier_source = $var;
 
         return $this;

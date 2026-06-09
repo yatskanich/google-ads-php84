@@ -135,7 +135,7 @@ class ProductIssue extends \Google\Protobuf\Internal\Message
      */
     public function setAdsSeverity($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ProductIssueSeverityEnum\ProductIssueSeverity::class);
+        GPBUtil::checkEnum($var);
         $this->ads_severity = $var;
 
         return $this;
@@ -150,7 +150,7 @@ class ProductIssue extends \Google\Protobuf\Internal\Message
      */
     public function getAttributeName()
     {
-        return isset($this->attribute_name) ? $this->attribute_name : '';
+        return $this->attribute_name ?? '';
     }
 
     public function hasAttributeName()

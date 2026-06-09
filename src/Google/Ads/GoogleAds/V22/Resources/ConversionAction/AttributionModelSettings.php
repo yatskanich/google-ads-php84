@@ -67,7 +67,7 @@ class AttributionModelSettings extends \Google\Protobuf\Internal\Message
      */
     public function setAttributionModel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\AttributionModelEnum\AttributionModel::class);
+        GPBUtil::checkEnum($var);
         $this->attribution_model = $var;
 
         return $this;
@@ -95,7 +95,7 @@ class AttributionModelSettings extends \Google\Protobuf\Internal\Message
      */
     public function setDataDrivenModelStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V22\Enums\DataDrivenModelStatusEnum\DataDrivenModelStatus::class);
+        GPBUtil::checkEnum($var);
         $this->data_driven_model_status = $var;
 
         return $this;

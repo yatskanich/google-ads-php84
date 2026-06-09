@@ -57,7 +57,7 @@ class CustomerNegativeCriterionServiceGrpcClient extends \Grpc\BaseStub {
       $metadata = [], $options = []) {
         return $this->_simpleRequest('/google.ads.googleads.v22.services.CustomerNegativeCriterionService/MutateCustomerNegativeCriteria',
         $argument,
-        ['\Google\Ads\GoogleAds\V22\Services\MutateCustomerNegativeCriteriaResponse', 'decode'],
+        [\Google\Ads\GoogleAds\V22\Services\MutateCustomerNegativeCriteriaResponse::class, 'decode'],
         $metadata, $options);
     }
 

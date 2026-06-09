@@ -77,7 +77,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowInStream()
     {
-        return isset($this->allow_in_stream) ? $this->allow_in_stream : false;
+        return $this->allow_in_stream ?? false;
     }
 
     public function hasAllowInStream()
@@ -113,7 +113,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowInFeed()
     {
-        return isset($this->allow_in_feed) ? $this->allow_in_feed : false;
+        return $this->allow_in_feed ?? false;
     }
 
     public function hasAllowInFeed()
@@ -149,7 +149,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowShorts()
     {
-        return isset($this->allow_shorts) ? $this->allow_shorts : false;
+        return $this->allow_shorts ?? false;
     }
 
     public function hasAllowShorts()
@@ -188,7 +188,7 @@ class VideoAdInventoryControl extends \Google\Protobuf\Internal\Message
      */
     public function getAllowNonSkippableInStream()
     {
-        return isset($this->allow_non_skippable_in_stream) ? $this->allow_non_skippable_in_stream : false;
+        return $this->allow_non_skippable_in_stream ?? false;
     }
 
     public function hasAllowNonSkippableInStream()

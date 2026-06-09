@@ -93,7 +93,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $audienceCountryLocations = [];
         $audience->setCountryLocations($audienceCountryLocations);
         $dimensions = [];
-        $request = (new GenerateAudienceCompositionInsightsRequest())
+        $request = new GenerateAudienceCompositionInsightsRequest()
             ->setCustomerId($customerId)
             ->setAudience($audience)
             ->setDimensions($dimensions);
@@ -137,7 +137,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $audienceCountryLocations = [];
         $audience->setCountryLocations($audienceCountryLocations);
         $dimensions = [];
-        $request = (new GenerateAudienceCompositionInsightsRequest())
+        $request = new GenerateAudienceCompositionInsightsRequest()
             ->setCustomerId($customerId)
             ->setAudience($audience)
             ->setDimensions($dimensions);
@@ -170,7 +170,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $countryLocation = new LocationInfo();
         $primaryAttribute = new AudienceInsightsAttribute();
         $dimensions = [];
-        $request = (new GenerateAudienceOverlapInsightsRequest())
+        $request = new GenerateAudienceOverlapInsightsRequest()
             ->setCustomerId($customerId)
             ->setCountryLocation($countryLocation)
             ->setPrimaryAttribute($primaryAttribute)
@@ -216,7 +216,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $countryLocation = new LocationInfo();
         $primaryAttribute = new AudienceInsightsAttribute();
         $dimensions = [];
-        $request = (new GenerateAudienceOverlapInsightsRequest())
+        $request = new GenerateAudienceOverlapInsightsRequest()
             ->setCustomerId($customerId)
             ->setCountryLocation($countryLocation)
             ->setPrimaryAttribute($primaryAttribute)
@@ -255,7 +255,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $specificAudience = new BasicInsightsAudience();
         $specificAudienceCountryLocation = [];
         $specificAudience->setCountryLocation($specificAudienceCountryLocation);
-        $request = (new GenerateInsightsFinderReportRequest())
+        $request = new GenerateInsightsFinderReportRequest()
             ->setCustomerId($customerId)
             ->setBaselineAudience($baselineAudience)
             ->setSpecificAudience($specificAudience);
@@ -301,7 +301,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $specificAudience = new BasicInsightsAudience();
         $specificAudienceCountryLocation = [];
         $specificAudience->setCountryLocation($specificAudienceCountryLocation);
-        $request = (new GenerateInsightsFinderReportRequest())
+        $request = new GenerateInsightsFinderReportRequest()
             ->setCustomerId($customerId)
             ->setBaselineAudience($baselineAudience)
             ->setSpecificAudience($specificAudience);
@@ -331,7 +331,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $transport->addResponse($expectedResponse);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateSuggestedTargetingInsightsRequest())
+        $request = new GenerateSuggestedTargetingInsightsRequest()
             ->setCustomerId($customerId);
         $response = $gapicClient->generateSuggestedTargetingInsights($request);
         $this->assertEquals($expectedResponse, $response);
@@ -365,7 +365,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $transport->addResponse(null, $status);
         // Mock request
         $customerId = 'customerId-1772061412';
-        $request = (new GenerateSuggestedTargetingInsightsRequest())
+        $request = new GenerateSuggestedTargetingInsightsRequest()
             ->setCustomerId($customerId);
         try {
             $gapicClient->generateSuggestedTargetingInsights($request);
@@ -394,7 +394,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $audiences = [];
-        $request = (new GenerateTargetingSuggestionMetricsRequest())
+        $request = new GenerateTargetingSuggestionMetricsRequest()
             ->setCustomerId($customerId)
             ->setAudiences($audiences);
         $response = $gapicClient->generateTargetingSuggestionMetrics($request);
@@ -432,7 +432,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $audiences = [];
-        $request = (new GenerateTargetingSuggestionMetricsRequest())
+        $request = new GenerateTargetingSuggestionMetricsRequest()
             ->setCustomerId($customerId)
             ->setAudiences($audiences);
         try {
@@ -463,7 +463,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $dimensions = [];
         $queryText = 'queryText-168156604';
-        $request = (new ListAudienceInsightsAttributesRequest())
+        $request = new ListAudienceInsightsAttributesRequest()
             ->setCustomerId($customerId)
             ->setDimensions($dimensions)
             ->setQueryText($queryText);
@@ -505,7 +505,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $customerId = 'customerId-1772061412';
         $dimensions = [];
         $queryText = 'queryText-168156604';
-        $request = (new ListAudienceInsightsAttributesRequest())
+        $request = new ListAudienceInsightsAttributesRequest()
             ->setCustomerId($customerId)
             ->setDimensions($dimensions)
             ->setQueryText($queryText);
@@ -593,7 +593,7 @@ class AudienceInsightsServiceClientTest extends GeneratedTest
         $audienceCountryLocations = [];
         $audience->setCountryLocations($audienceCountryLocations);
         $dimensions = [];
-        $request = (new GenerateAudienceCompositionInsightsRequest())
+        $request = new GenerateAudienceCompositionInsightsRequest()
             ->setCustomerId($customerId)
             ->setAudience($audience)
             ->setDimensions($dimensions);

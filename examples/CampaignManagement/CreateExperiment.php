@@ -262,4 +262,6 @@ class CreateExperiment
     }
 }
 
-CreateExperiment::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    CreateExperiment::main();
+}

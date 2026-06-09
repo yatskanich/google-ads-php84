@@ -63,7 +63,7 @@ class KeywordPlanForecastPeriod extends \Google\Protobuf\Internal\Message
      */
     public function setDateInterval($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\KeywordPlanForecastIntervalEnum\KeywordPlanForecastInterval::class);
+        GPBUtil::checkEnum($var);
         $this->writeOneof(1, $var);
 
         return $this;

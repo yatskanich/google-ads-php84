@@ -115,7 +115,7 @@ class Label extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -153,7 +153,7 @@ class Label extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -203,7 +203,7 @@ class Label extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V20\Enums\LabelStatusEnum\LabelStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

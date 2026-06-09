@@ -96,7 +96,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppAnalyticsProviderId()
     {
-        return isset($this->app_analytics_provider_id) ? $this->app_analytics_provider_id : 0;
+        return $this->app_analytics_provider_id ?? 0;
     }
 
     public function hasAppAnalyticsProviderId()
@@ -145,7 +145,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function getAppId()
     {
-        return isset($this->app_id) ? $this->app_id : '';
+        return $this->app_id ?? '';
     }
 
     public function hasAppId()
@@ -209,7 +209,7 @@ class ThirdPartyAppAnalyticsLinkIdentifier extends \Google\Protobuf\Internal\Mes
      */
     public function setAppVendor($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\MobileAppVendorEnum\MobileAppVendor::class);
+        GPBUtil::checkEnum($var);
         $this->app_vendor = $var;
 
         return $this;

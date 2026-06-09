@@ -138,7 +138,7 @@ class Targeting extends \Google\Protobuf\Internal\Message
      */
     public function getPlannableLocationId()
     {
-        return isset($this->plannable_location_id) ? $this->plannable_location_id : '';
+        return $this->plannable_location_id ?? '';
     }
 
     public function hasPlannableLocationId()
@@ -231,7 +231,7 @@ class Targeting extends \Google\Protobuf\Internal\Message
      */
     public function setAgeRange($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ReachPlanAgeRangeEnum\ReachPlanAgeRange::class);
+        GPBUtil::checkEnum($var);
         $this->age_range = $var;
 
         return $this;
@@ -323,7 +323,7 @@ class Targeting extends \Google\Protobuf\Internal\Message
      */
     public function setNetwork($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\ReachPlanNetworkEnum\ReachPlanNetwork::class);
+        GPBUtil::checkEnum($var);
         $this->network = $var;
 
         return $this;

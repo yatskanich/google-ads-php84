@@ -69,7 +69,7 @@ class UrlCollection extends \Google\Protobuf\Internal\Message
      */
     public function getUrlCollectionId()
     {
-        return isset($this->url_collection_id) ? $this->url_collection_id : '';
+        return $this->url_collection_id ?? '';
     }
 
     public function hasUrlCollectionId()
@@ -157,7 +157,7 @@ class UrlCollection extends \Google\Protobuf\Internal\Message
      */
     public function getTrackingUrlTemplate()
     {
-        return isset($this->tracking_url_template) ? $this->tracking_url_template : '';
+        return $this->tracking_url_template ?? '';
     }
 
     public function hasTrackingUrlTemplate()

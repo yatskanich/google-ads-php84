@@ -39,7 +39,7 @@ class GenerateShareablePreviewsRequest extends \Google\Protobuf\Internal\Message
      */
     public static function build(string $customerId, array $shareablePreviews): self
     {
-        return (new self())
+        return new self()
             ->setCustomerId($customerId)
             ->setShareablePreviews($shareablePreviews);
     }

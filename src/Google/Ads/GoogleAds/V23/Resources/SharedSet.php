@@ -156,7 +156,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getId()
     {
-        return isset($this->id) ? $this->id : 0;
+        return $this->id ?? 0;
     }
 
     public function hasId()
@@ -206,7 +206,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SharedSetTypeEnum\SharedSetType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -224,7 +224,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getName()
     {
-        return isset($this->name) ? $this->name : '';
+        return $this->name ?? '';
     }
 
     public function hasName()
@@ -276,7 +276,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\SharedSetStatusEnum\SharedSetStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -291,7 +291,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getMemberCount()
     {
-        return isset($this->member_count) ? $this->member_count : 0;
+        return $this->member_count ?? 0;
     }
 
     public function hasMemberCount()
@@ -329,7 +329,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getReferenceCount()
     {
-        return isset($this->reference_count) ? $this->reference_count : 0;
+        return $this->reference_count ?? 0;
     }
 
     public function hasReferenceCount()
@@ -369,7 +369,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getVerticalAdsItemVerticalType()
     {
-        return isset($this->vertical_ads_item_vertical_type) ? $this->vertical_ads_item_vertical_type : 0;
+        return $this->vertical_ads_item_vertical_type ?? 0;
     }
 
     public function hasVerticalAdsItemVerticalType()
@@ -394,7 +394,7 @@ class SharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setVerticalAdsItemVerticalType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\VerticalAdsItemVerticalTypeEnum\VerticalAdsItemVerticalType::class);
+        GPBUtil::checkEnum($var);
         $this->vertical_ads_item_vertical_type = $var;
 
         return $this;

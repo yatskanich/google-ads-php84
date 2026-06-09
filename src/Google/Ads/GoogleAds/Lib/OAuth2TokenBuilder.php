@@ -34,7 +34,7 @@ use Google\Ads\GoogleAds\Util\EnvironmentalVariables;
  */
 final class OAuth2TokenBuilder extends AbstractGoogleAdsBuilder
 {
-    private const DEFAULT_SCOPE = 'https://www.googleapis.com/auth/adwords';
+    private const string DEFAULT_SCOPE = 'https://www.googleapis.com/auth/adwords';
 
     private $jsonKeyFilePath;
     private $scopes;
@@ -47,11 +47,11 @@ final class OAuth2TokenBuilder extends AbstractGoogleAdsBuilder
     private $adcFetcher;
 
     public function __construct(
-        ConfigurationLoader $configurationLoader = null,
+        ?ConfigurationLoader $configurationLoader = null,
         ?EnvironmentalVariables $environmentalVariables = null,
     ) {
         parent::__construct($configurationLoader, $environmentalVariables);
-        $this->adcFetcher = [ApplicationDefaultCredentials::class, 'getCredentials'];
+        $this->adcFetcher = ApplicationDefaultCredentials::getCredentials(...);
     }
 
     /**

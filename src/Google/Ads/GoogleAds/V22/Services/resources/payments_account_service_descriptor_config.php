@@ -25,7 +25,7 @@ return [
         'google.ads.googleads.v22.services.PaymentsAccountService' => [
             'ListPaymentsAccounts' => [
                 'callType' => \Google\ApiCore\Call::UNARY_CALL,
-                'responseType' => 'Google\Ads\GoogleAds\V22\Services\ListPaymentsAccountsResponse',
+                'responseType' => \Google\Ads\GoogleAds\V22\Services\ListPaymentsAccountsResponse::class,
                 'headerParams' => [
                     [
                         'keyName' => 'customer_id',

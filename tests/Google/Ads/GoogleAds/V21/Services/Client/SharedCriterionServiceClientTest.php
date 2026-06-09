@@ -74,7 +74,7 @@ class SharedCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateSharedCriteriaRequest())
+        $request = new MutateSharedCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateSharedCriteria($request);
@@ -112,7 +112,7 @@ class SharedCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateSharedCriteriaRequest())
+        $request = new MutateSharedCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         try {
@@ -142,7 +142,7 @@ class SharedCriterionServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operations = [];
-        $request = (new MutateSharedCriteriaRequest())
+        $request = new MutateSharedCriteriaRequest()
             ->setCustomerId($customerId)
             ->setOperations($operations);
         $response = $gapicClient->mutateSharedCriteriaAsync($request)->wait();

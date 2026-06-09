@@ -157,4 +157,6 @@ class AddAccountBudgetProposal
     // [END add_account_budget_proposal]
 }
 
-AddAccountBudgetProposal::main();
+if (basename(__FILE__) === basename($_SERVER['PHP_SELF'])) {
+    AddAccountBudgetProposal::main();
+}

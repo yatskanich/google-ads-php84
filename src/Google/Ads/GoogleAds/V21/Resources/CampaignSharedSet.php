@@ -114,7 +114,7 @@ class CampaignSharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -155,7 +155,7 @@ class CampaignSharedSet extends \Google\Protobuf\Internal\Message
      */
     public function getSharedSet()
     {
-        return isset($this->shared_set) ? $this->shared_set : '';
+        return $this->shared_set ?? '';
     }
 
     public function hasSharedSet()
@@ -208,7 +208,7 @@ class CampaignSharedSet extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\CampaignSharedSetStatusEnum\CampaignSharedSetStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

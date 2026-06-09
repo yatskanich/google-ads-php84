@@ -84,7 +84,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         $response = $gapicClient->createCustomerClient($request);
@@ -122,7 +122,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         try {
@@ -206,7 +206,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerOperation();
-        $request = (new MutateCustomerRequest())
+        $request = new MutateCustomerRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomer($request);
@@ -244,7 +244,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerOperation();
-        $request = (new MutateCustomerRequest())
+        $request = new MutateCustomerRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -278,7 +278,7 @@ class CustomerServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $customerClient = new Customer();
-        $request = (new CreateCustomerClientRequest())
+        $request = new CreateCustomerClientRequest()
             ->setCustomerId($customerId)
             ->setCustomerClient($customerClient);
         $response = $gapicClient->createCustomerClientAsync($request)->wait();

@@ -170,7 +170,7 @@ class AssetGroupSignal extends \Google\Protobuf\Internal\Message
      */
     public function setApprovalStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\AssetGroupSignalApprovalStatusEnum\AssetGroupSignalApprovalStatus::class);
+        GPBUtil::checkEnum($var);
         $this->approval_status = $var;
 
         return $this;

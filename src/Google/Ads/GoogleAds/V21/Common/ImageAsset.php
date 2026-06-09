@@ -69,7 +69,7 @@ class ImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function getData()
     {
-        return isset($this->data) ? $this->data : '';
+        return $this->data ?? '';
     }
 
     public function hasData()
@@ -105,7 +105,7 @@ class ImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function getFileSize()
     {
-        return isset($this->file_size) ? $this->file_size : 0;
+        return $this->file_size ?? 0;
     }
 
     public function hasFileSize()
@@ -153,7 +153,7 @@ class ImageAsset extends \Google\Protobuf\Internal\Message
      */
     public function setMimeType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V21\Enums\MimeTypeEnum\MimeType::class);
+        GPBUtil::checkEnum($var);
         $this->mime_type = $var;
 
         return $this;

@@ -75,7 +75,7 @@ class CustomerClientLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerClientLinkOperation();
-        $request = (new MutateCustomerClientLinkRequest())
+        $request = new MutateCustomerClientLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerClientLink($request);
@@ -113,7 +113,7 @@ class CustomerClientLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerClientLinkOperation();
-        $request = (new MutateCustomerClientLinkRequest())
+        $request = new MutateCustomerClientLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         try {
@@ -143,7 +143,7 @@ class CustomerClientLinkServiceClientTest extends GeneratedTest
         // Mock request
         $customerId = 'customerId-1772061412';
         $operation = new CustomerClientLinkOperation();
-        $request = (new MutateCustomerClientLinkRequest())
+        $request = new MutateCustomerClientLinkRequest()
             ->setCustomerId($customerId)
             ->setOperation($operation);
         $response = $gapicClient->mutateCustomerClientLinkAsync($request)->wait();

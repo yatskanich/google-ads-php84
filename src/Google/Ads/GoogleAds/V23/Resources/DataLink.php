@@ -120,7 +120,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function getProductLinkId()
     {
-        return isset($this->product_link_id) ? $this->product_link_id : 0;
+        return $this->product_link_id ?? 0;
     }
 
     public function hasProductLinkId()
@@ -158,7 +158,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function getDataLinkId()
     {
-        return isset($this->data_link_id) ? $this->data_link_id : 0;
+        return $this->data_link_id ?? 0;
     }
 
     public function hasDataLinkId()
@@ -207,7 +207,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function setType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\DataLinkTypeEnum\DataLinkType::class);
+        GPBUtil::checkEnum($var);
         $this->type = $var;
 
         return $this;
@@ -233,7 +233,7 @@ class DataLink extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V23\Enums\DataLinkStatusEnum\DataLinkStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;

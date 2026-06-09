@@ -334,7 +334,7 @@ class LocalServicesLead extends \Google\Protobuf\Internal\Message
      */
     public function setLeadType($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\LocalServicesLeadTypeEnum\LeadType::class);
+        GPBUtil::checkEnum($var);
         $this->lead_type = $var;
 
         return $this;
@@ -360,7 +360,7 @@ class LocalServicesLead extends \Google\Protobuf\Internal\Message
      */
     public function setLeadStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\LocalServicesLeadStatusEnum\LeadStatus::class);
+        GPBUtil::checkEnum($var);
         $this->lead_status = $var;
 
         return $this;

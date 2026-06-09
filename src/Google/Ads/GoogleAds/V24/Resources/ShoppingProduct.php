@@ -486,7 +486,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function setChannel($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductChannelEnum\ProductChannel::class);
+        GPBUtil::checkEnum($var);
         $this->channel = $var;
 
         return $this;
@@ -581,7 +581,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getMultiClientAccountId()
     {
-        return isset($this->multi_client_account_id) ? $this->multi_client_account_id : 0;
+        return $this->multi_client_account_id ?? 0;
     }
 
     public function hasMultiClientAccountId()
@@ -618,7 +618,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getTitle()
     {
-        return isset($this->title) ? $this->title : '';
+        return $this->title ?? '';
     }
 
     public function hasTitle()
@@ -654,7 +654,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getBrand()
     {
-        return isset($this->brand) ? $this->brand : '';
+        return $this->brand ?? '';
     }
 
     public function hasBrand()
@@ -690,7 +690,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductImageUri()
     {
-        return isset($this->product_image_uri) ? $this->product_image_uri : '';
+        return $this->product_image_uri ?? '';
     }
 
     public function hasProductImageUri()
@@ -728,7 +728,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getPriceMicros()
     {
-        return isset($this->price_micros) ? $this->price_micros : 0;
+        return $this->price_micros ?? 0;
     }
 
     public function hasPriceMicros()
@@ -767,7 +767,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCurrencyCode()
     {
-        return isset($this->currency_code) ? $this->currency_code : '';
+        return $this->currency_code ?? '';
     }
 
     public function hasCurrencyCode()
@@ -805,7 +805,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getChannelExclusivity()
     {
-        return isset($this->channel_exclusivity) ? $this->channel_exclusivity : 0;
+        return $this->channel_exclusivity ?? 0;
     }
 
     public function hasChannelExclusivity()
@@ -828,7 +828,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function setChannelExclusivity($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductChannelExclusivityEnum\ProductChannelExclusivity::class);
+        GPBUtil::checkEnum($var);
         $this->channel_exclusivity = $var;
 
         return $this;
@@ -842,7 +842,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCondition()
     {
-        return isset($this->condition) ? $this->condition : 0;
+        return $this->condition ?? 0;
     }
 
     public function hasCondition()
@@ -864,7 +864,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function setCondition($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductConditionEnum\ProductCondition::class);
+        GPBUtil::checkEnum($var);
         $this->condition = $var;
 
         return $this;
@@ -878,7 +878,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getAvailability()
     {
-        return isset($this->availability) ? $this->availability : 0;
+        return $this->availability ?? 0;
     }
 
     public function hasAvailability()
@@ -900,7 +900,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function setAvailability($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductAvailabilityEnum\ProductAvailability::class);
+        GPBUtil::checkEnum($var);
         $this->availability = $var;
 
         return $this;
@@ -943,7 +943,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute0()
     {
-        return isset($this->custom_attribute0) ? $this->custom_attribute0 : '';
+        return $this->custom_attribute0 ?? '';
     }
 
     public function hasCustomAttribute0()
@@ -981,7 +981,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute1()
     {
-        return isset($this->custom_attribute1) ? $this->custom_attribute1 : '';
+        return $this->custom_attribute1 ?? '';
     }
 
     public function hasCustomAttribute1()
@@ -1019,7 +1019,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute2()
     {
-        return isset($this->custom_attribute2) ? $this->custom_attribute2 : '';
+        return $this->custom_attribute2 ?? '';
     }
 
     public function hasCustomAttribute2()
@@ -1057,7 +1057,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute3()
     {
-        return isset($this->custom_attribute3) ? $this->custom_attribute3 : '';
+        return $this->custom_attribute3 ?? '';
     }
 
     public function hasCustomAttribute3()
@@ -1095,7 +1095,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCustomAttribute4()
     {
-        return isset($this->custom_attribute4) ? $this->custom_attribute4 : '';
+        return $this->custom_attribute4 ?? '';
     }
 
     public function hasCustomAttribute4()
@@ -1132,7 +1132,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel1()
     {
-        return isset($this->category_level1) ? $this->category_level1 : '';
+        return $this->category_level1 ?? '';
     }
 
     public function hasCategoryLevel1()
@@ -1168,7 +1168,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel2()
     {
-        return isset($this->category_level2) ? $this->category_level2 : '';
+        return $this->category_level2 ?? '';
     }
 
     public function hasCategoryLevel2()
@@ -1204,7 +1204,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel3()
     {
-        return isset($this->category_level3) ? $this->category_level3 : '';
+        return $this->category_level3 ?? '';
     }
 
     public function hasCategoryLevel3()
@@ -1240,7 +1240,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel4()
     {
-        return isset($this->category_level4) ? $this->category_level4 : '';
+        return $this->category_level4 ?? '';
     }
 
     public function hasCategoryLevel4()
@@ -1276,7 +1276,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCategoryLevel5()
     {
-        return isset($this->category_level5) ? $this->category_level5 : '';
+        return $this->category_level5 ?? '';
     }
 
     public function hasCategoryLevel5()
@@ -1312,7 +1312,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel1()
     {
-        return isset($this->product_type_level1) ? $this->product_type_level1 : '';
+        return $this->product_type_level1 ?? '';
     }
 
     public function hasProductTypeLevel1()
@@ -1348,7 +1348,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel2()
     {
-        return isset($this->product_type_level2) ? $this->product_type_level2 : '';
+        return $this->product_type_level2 ?? '';
     }
 
     public function hasProductTypeLevel2()
@@ -1384,7 +1384,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel3()
     {
-        return isset($this->product_type_level3) ? $this->product_type_level3 : '';
+        return $this->product_type_level3 ?? '';
     }
 
     public function hasProductTypeLevel3()
@@ -1420,7 +1420,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel4()
     {
-        return isset($this->product_type_level4) ? $this->product_type_level4 : '';
+        return $this->product_type_level4 ?? '';
     }
 
     public function hasProductTypeLevel4()
@@ -1456,7 +1456,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getProductTypeLevel5()
     {
-        return isset($this->product_type_level5) ? $this->product_type_level5 : '';
+        return $this->product_type_level5 ?? '';
     }
 
     public function hasProductTypeLevel5()
@@ -1497,7 +1497,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getEffectiveMaxCpcMicros()
     {
-        return isset($this->effective_max_cpc_micros) ? $this->effective_max_cpc_micros : 0;
+        return $this->effective_max_cpc_micros ?? 0;
     }
 
     public function hasEffectiveMaxCpcMicros()
@@ -1558,7 +1558,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function setStatus($var)
     {
-        GPBUtil::checkEnum($var, \Google\Ads\GoogleAds\V24\Enums\ProductStatusEnum\ProductStatus::class);
+        GPBUtil::checkEnum($var);
         $this->status = $var;
 
         return $this;
@@ -1606,7 +1606,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getCampaign()
     {
-        return isset($this->campaign) ? $this->campaign : '';
+        return $this->campaign ?? '';
     }
 
     public function hasCampaign()
@@ -1646,7 +1646,7 @@ class ShoppingProduct extends \Google\Protobuf\Internal\Message
      */
     public function getAdGroup()
     {
-        return isset($this->ad_group) ? $this->ad_group : '';
+        return $this->ad_group ?? '';
     }
 
     public function hasAdGroup()

@@ -51,7 +51,7 @@ class AiMaxAdGroupSetting extends \Google\Protobuf\Internal\Message
      */
     public function getDisableSearchTermMatching()
     {
-        return isset($this->disable_search_term_matching) ? $this->disable_search_term_matching : false;
+        return $this->disable_search_term_matching ?? false;
     }
 
     public function hasDisableSearchTermMatching()
